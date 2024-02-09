@@ -1,0 +1,172 @@
+
+```{r setup71, include=FALSE}
+source("_setupAll.R")
+```
+
+# Colour {#secColour}
+
+> "I found I could say things with color and shapes that I couldn't say any other way - things I had no words for."
+
+> `r quote_footer('--- Georgia O\'Keeffe')`
+
+## Theory and implementation {#secColour1}
+Colour\index{colour|(} is a complex topic.  There has been considerable progress made in our understanding of representing colour, even if that has led to a plethora of systems, be it HCL, HLS, HSV, LAB, LUV, RGB, XYZ or whatever.  A valuable reference is @zeil:2020 and the accompanying \textsf{R} package **colorspace**\index{R packages!colorspace}.  
+
+\textsf{R} software has kept pace, and there are many packages offering colour palettes and ways of creating new ones.  There are qualitative palettes for different groups or categories, sequential palettes for different values of the same variable, and diverging palettes for variables with a critical point such as zero between profit and loss.  In addition, palettes have been designed to counteract colour blindness.  There are \textsf{R} packages for generating colour palettes from images, and even a package with palettes inspired by Wes Anderson movies.
+
+Many software defaults are effective and do not need to be changed.  Colour defaults generally do need to be changed, as will be apparent from the examples.  The illustrations used are smaller versions of graphics occurring elsewhere in the book.
+
+## Perception of colour {#secColour2}
+How colours are perceived depends on an individual's eyesight and experience and on the ambient lighting.  Human perception varies.  In 2015 a photograph of a dress became a big topic online as people disagreed whether it was blue and black or white and gold ("the dress").  Some people are better at discriminating between colours than others.  There is some suggestion that women are able to identify more colours than men, seeing different shades where men see a single colour.  Some people have strong associations with particular colours.  The scene in "The Devil Wears Prada"\index{Films!The Devil Wears Prada} where Meryl Streep takes Anne Hathaway to task for saying two belts look the same is a good example (and can be found on YouTube as the cerulean scene).  A more academic reference is @mohammad:2011.
+
+Colour perception changes depending on surrounding colours and can change over time.  Solving a jigsaw puzzle is one example.\index{jigsaw puzzles}  At first the pieces may be sorted by major colours.  Later on, various light blues of the sky may be almost as easily sorted, when these are the only pieces left.
+
+The medium with which colours are viewed is also influential.  A display on one computer screen may look different on another, and look different again in print.  Ambient conditions, especially lighting, are important.  All these factors can have unpredictable effects, yet there is still plenty of good advice to follow.
+
+## Value of colour {#secColour3}
+Colour can make images more effective, if you know what effect you want to achieve.  There are several ways colour works, and colour schemes accentuate (or play down) particular features.  There are many aspects to the use of colour and care must be exercised, default palettes may not work well.  Sometimes graphics drawn in colour will be reproduced without colour, another factor to have to take into account.
+
+### Colours distinguish
+The colour scheme in Figure \@ref(fig:swM50a), repeated here in a smaller form as Figure \@ref(fig:swims4), emphasises the four different strokes in swimming\index{datasets!swimming times}.  The colours work because there is no overlapping.  If there was overlapping, facets with ghostplotting\index{ghostplotting} could be used.
+
+```{r swims4, fig.asp=0.7, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Male swimmer best times for four different strokes'}
+swM5x
+```
+
+In Chapter \@ref(secLightS) there are three separate scatterplots using colour, each with different aims, each coloured differently.  Figure \@ref(fig:michNcol)\index{scatterplot}\index{datasets!speed of light} shows them: Stigler's\index{people!Stigler@Stephen Stigler} division of Michelson's data into five groups (Figure \@ref(fig:ptmich)); Michelson's grouping the data by three times of day (Figure \@ref(fig:michT)); Newcomb's data including the responsible observers (Figure \@ref(fig:newct2X)).  In the first plot the colours show the arbitrariness of the division into groups.  In the second plot the morning and afternoon cases are obvious, but the single night-time observation is not (the legend was ordered to help with this).  Colour is effective in the third plot, because Holcombe and Newcomb observed on different days.  Different colour schemes were used to discourage viewers assuming colours meant the same thing in all plots.
+
+```{r michNcol, out.width="30%", fig.show="hold", fig.cap = 'Three speed of light plots with three different colour schemes because they represent three different situations'}
+ptmichY
+michTY
+newct2XY
+```
+
+\newpage
+
+### Colours highlight
+Colouring individual outlying points draws more attention to them, whether they are boxplot outliers or unusual values in scatterplots.  The boxplot\index{boxplot} of Newcomb's measurements of the speed of light\index{datasets!speed of light} in §\@ref(secLightS2) is one example of highlighting outliers (Figure \@ref(fig:boxnewcX)).
+
+```{r boxLS, fig.asp=0.25, out.width="60%", fig.width=6.5*0.6, fig.cap = 'Speed of light measurements by Newcomb'}
+boxnewcXX
+```
+
+The boxplots of chess players' ratings by age in §\@ref(secChess4) is another example, (Figure \@ref(fig:ratAge15b) repeated as Figure \@ref(fig:boxChess)).\index{datasets!chess ratings}\index{boxplot}
+
+```{r boxChess, fig.asp=0.7, out.width="60%", fig.width=6.5*0.6, fig.cap = 'Boxplots of ratings for each age for active chess players in 2015'}
+ratAX
+```
+
+The scatterplot of chess ratings by age in Figure \@ref(fig:ratAge15alph), repeated as Figure \@ref(fig:scatChess), uses red to pick out the players with the highest ratings and alpha transparency to downplay the others.\index{scatterplot}\index{alpha transparency}
+
+```{r scatChess, fig.asp=0.7, out.width="70%", fig.width=6.5*0.7, fig.cap = 'Rating by age for active players in 2015.  Players with ratings over 2700 have been coloured red.  An alpha value of 0.01 has been used for the other players.'}
+ratAY
+```
+
+In Figure \@ref(fig:socHAt) colour is used to pick out English football teams with extreme proportions of points won at home in their leagues.  Those `r dim(HA3y1)[1] + dim(HA3y2)[1]` points are also drawn slightly bigger than the other `r dim(HA3y)[1] - dim(HA3y1)[1] - dim(HA3y2)[1]` points.\index{datasets!league football} 
+
+```{r HiLoOuts, fig.width=6*0.8, fig.asp=0.7, out.width="80%", fig.cap = 'Individual home away points ratios for every English football team for every season'}
+socHX
+```
+
+Highlighting some aspects can be achieved by playing down others.  Some faceted plots have been drawn in the book with the complete dataset in the background of each facet drawn in a discreet grey rather than a default black, ghostplotting, to give context.\index{ghostplotting}  Examples include Figures \@ref(fig:flightn), \@ref(fig:snodPCP), and \@ref(fig:scatH).
+
+\newpage
+
+###  Colours connect
+Using the same colours consistently for the same dataset underscores connections.  If there are several displays involving the same data, then colouring by a grouping should be the same for all.   In §\@ref(secFinches1) five species of Darwin's finches\index{datasets!Darwin's finches} are displayed in a barchart\index{barchart}, two boxplots\index{boxplot}, a scatterplot\index{scatterplot}, and a parallel coordinate plot\index{parallel coordinate plot}.  The first four plots are redrawn in miniature here (Figure \@ref(fig:finchIs)).
+
+```{r finchIs, out.width="30%", fig.show="hold", fig.cap = 'Plots of five species of Darwin\'s finches'}
+finch1X
+finch2X
+finch3X
+```
+
+Consistent use of colours in the same circumstances can be useful too.  Throughout the book there are many datasets grouped by sex: Olympic sports\index{datasets!Olympic Games}, chess players\index{datasets!chess ratings}, survey respondents\index{datasets!Annenberg election survey 2004}, spaceflights\index{datasets!astronauts}, marathon runners\index{datasets!Comrades Marathon}, Titanic passengers\index{datasets!Titanic}.  A purple colour has been used for females and a green for males.
+
+###  Colours separate
+Different groupings should use different colours.  In §\@ref(secPalmerPen1) three plot ensembles have the same form, but with different subgroups selected, so different colours are employed (Figures \@ref(fig:PalEns1), \@ref(fig:PalEns2), and \@ref(fig:PalEns3)).\index{datasets!Palmer penguins}\index{ensemble of graphics}
+
+```{r palmerGs, out.width="30%", fig.show="hold", fig.cap = 'Plot ensembles for different groups of Penguins (using different colours for the selections)'}
+palens1X
+palens2X
+palens3X
+```
+
+With interactive graphics\index{interactive graphics} the same highlighting colour is always used for selected cases, because selection is temporary.  The chosen colour defines the current interactive selection.  Colours that separate are needed for static presentation graphics. 
+
+\newpage
+
+###  Colours signify
+Colours should match known associations.  If certain colours are associated with political parties, countries or international football teams, then consider using those colours in statistical displays.
+
+In Chapter \@ref(secBTwahl) the German political parties have been represented by their own colours, as in Figure \@ref(fig:btwMapE), shown here as Figure \@ref(fig:btwMapEm).\index{datasets!Bundestagswahl}
+
+```{r btwMapEm, out.width="40%", fig.cap = 'Winners of seats by political party in Germany'}
+btwMX
+```
+
+Whether this is effective or not may depend on the type of plot. The Gapminder dataset\index{datasets!Gapminder} discussed in Chapter \@ref(secGapm) splits the world into four regions and colours those regions consistently.  Using that colour scheme for the time series in Figure \@ref(fig:LEr4) is not effective, although it is fine for the associated faceted plot and barcharts.
+
+This may not always work as expected.  In the 2022 FA Cup Final at Wembley, Chelsea played in yellow against Liverpool instead of their normal blue, possibly because they had lost the 2022 Carabao Cup Final against the same opponents wearing blue earlier in the year.  It was striking to see their fans wearing blue when the team were wearing yellow (and did not need to).  Chelsea lost again.
+
+Different countries have different associations with different colours, as can be seen in the Colours in Culture poster that looks at colour associations for 84 concepts in 10 populations around the world (@mccand:2022).  It is too difficult to cope with all possible associations in an international context, but it is worth bearing in mind.  There are many stories and traditions linked to colours, as is entertainingly described in @stclair:2016.  Amongst other thought-provoking comments, she points out that the colours pink for a girl and blue for a boy are a mid twentieth-century development.  Formerly, it was common to associate pink with boys and blue with girls.
+
+###  Colours attract
+Well chosen colours can turn a mundane, grey graphic into an attractive and pleasing picture that is a pleasure to work with.  Studying a succession of similar, dry graphics can be disheartening and discouraging.  A restrained use of colour is an advantage.  Not all plots of the same type have to look the same.  As Bertin\index{people!Bertin@Jacques Bertin} writes of colour (@bertin:2010 Chapter II.C.2): "It captures and holds attention, multiplies the number of readers, assures better retention of the information, and, in short, increases the scope of the message."
+
+## Choice of colour {#secColour4}
+There is a huge range of colours and colour palettes to chose from, and plenty of advice on which to use.  That does not make choosing any easier.  Similarly, there is a great deal of advice on fashion and on what to wear, but not everyone is well dressed. 
+
+### Colour blind palettes help\index{colour blind palettes}
+Colour blind people are more the exception than the rule, but that is no excuse for ignoring their needs, particularly as graphics are being increasingly used.  Various sources offer colour palettes that are readable for the colour blind and using these or subsets of them is worthwhile.  Free software is available that enables designers to check how their graphics would look to viewers with different kinds of colour blindness.
+
+The same colour blind palette has been used in several figures in the book for datasets as diverse as a gay rights survey\index{datasets!Annenberg election survey 2004}, electric car charging\index{datasets!electric car charging}, penguin species\index{datasets!Palmer penguins}, swimmers' nationalities\index{datasets!swimming times}, and groups of marathon runners\index{datasets!Comrades Marathon}.  Three examples, Figures \@ref(fig:gayFS), \@ref(fig:Palpcp2), and \@ref(fig:comCats), are shown together in Figure \@ref(fig:colBlind).
+
+```{r colBlind, out.width="30%", fig.show="hold", fig.cap = 'Three uses of a colour blind palette'}
+FSx
+PalX
+comX
+```
+
+### Palette order counts
+In §\@ref(secAstro1) spaceflights\index{datasets!astronauts} are coloured by the space station program they joined, if any (Figure \@ref(fig:flighttc), redrawn as Figure \@ref(fig:astro4)).  The default ordering of the colour blind palette from the \textsf{R} package **ggthemes** was changed to make the Skylab station that was only used briefly in 1973-4 more visible and to keep similar colours apart.
+
+```{r astro4, fig.asp=0.7, out.width="60%", fig.width=6.5*0.6, fig.cap = 'Spaceflight mission times coloured by space station programme'}
+astroF
+```
+
+### There may not be enough colours
+Sometimes there are too many groups.  Gapminder countries\index{datasets!Gapminder}, football shirts of teams playing at Euro2020\index{datasets!Euros teams}, nationalities of passengers on the Titanic\index{datasets!Titanic} are all too numerous to be assigned different, distinguishable colours.
+
+Sometimes there are too many different groupings.  In Chapter \@ref(secGapm) colours are used for three Scandinavian countries, for four world regions, and for the six most populous countries.\index{datasets!Gapminder}  In Chapter \@ref(secAstro) colours are used for sex, space station programmes, and nationalities.\index{datasets!astronauts}
+
+### Avoid using the same colours for different datasets
+Colour schemes stand out.  If the same palettes are used for different examples, readers may mistakenly assume they are looking at the same dataset.  Figure \@ref(fig:michNcol) shows an example.
+
+\newpage
+
+### Avoid overlapping colours, use faceting
+A display with several groups or time series may be hard to disentangle and decode.  An alternative is to plot each subset individually in its own facet, together with the rest of the data underneath in a light grey (ghostplotting)\index{ghostplotting}.  At the end of §\@ref(secFinches1) there is a faceted parallel coordinate plot, Figure \@ref(fig:snodPCP), redrawn here as Figure \@ref(fig:finchNine).  If it was drawn as a single plot with all 9 species, it would be much more difficult to read.\index{datasets!Darwin's finches}\index{parallel coordinate plot}
+
+```{r finchNine, out.width="70%", fig.width=6.5*0.7, fig.cap = 'Nine measurements of 9 species on Isabela Island'}
+sxpcp
+```
+
+### Backgrounds matter
+Finally, take the colour scheme of background and surroundings into account.  Individual media outlets usually have a house style, as do firms and organisations.  A particular display may be perceived quite differently, if presented otherwise unchanged.
+
+In this book the default **ggplot2**\index{R packages!ggplot2} background has often be used.  This does not work well for maps, mosaicplots, and parallel coordinate plots, where scales and gridlines are not appropriate.  Figures \@ref(fig:Bertagp)\index{datasets!Bertin's French workforce data}\index{map}, \@ref(fig:titanCrew)\index{datasets!Titanic}\index{doubledecker plot}, and \@ref(fig:finchPCP)\index{datasets!Darwin's finches}\index{parallel coordinate plot} have been drawn with plain backgrounds.  Other plots might benefit from a change of background too.
+
+```{r backs, out.width="30%", fig.show="hold", fig.cap = 'Graphics drawn with plain backgrounds'}
+bertX
+titanCX
+finchpcpX
+```
+
+At art exhibitions in the past the walls were covered with paintings.  There are etchings showing this by Pietro Antonio Martini of the French Academy's Salon exhibitions of 1785 and 1787 at the Louvre and of the English Royal Academy's exhibition of 1788.  Reproductions can be found on the web.  In the nineteenth century.  Manet thought about how his pictures might stand out in such collections, if they were accepted by the annual Salon.  Drawers of graphics should think about the likely surroundings of their plots too.\index{colour|)}
+
+### Main points {-}
+* There are many colours and many colour systems.  Colour is not simple.
+* Colours distinguish, highlight, connect, separate, signify.  Think about why colour is used.
+* Choosing effective colours is important and difficult.  Others may perceive colours differently.
+* Ghostplotting gives context.

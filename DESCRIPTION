@@ -1,0 +1,60 @@
+Package: GmooG-book
+Title: Getting (more out of) Graphics
+Version: 1.0
+Authors@R: 
+    c(person(given = "Antony",
+             family = "Unwin",
+             role = c("aut", "cre"),
+             email = "unwin@uni-a.de"))
+URL: https://github.com/antonr4/GmooG-book
+Depends: 
+    R (>= 3.5.0)
+Imports:
+	cartogram,
+	ComradesM,
+	ChessGmooG,
+	cowplot,
+	dichromat,
+	engsoccerdata,
+	extracat,
+	feasts,
+	Films22GmooG,
+	GGally,
+	ggmosaic,
+	ggpcp,
+	ggrepel,
+	ggridges,
+	ggthemes,
+	GmooG,
+	grid,
+	gt,
+	gtable,
+	knitr,
+	lubridate,
+	lvplot,
+	palmerpenguins,
+	parlitools,
+	patchwork,
+	RColorBrewer,
+	readxl,
+	scales,
+	sf,
+	tidygeocoder,
+	tidyverse,
+	tmap,
+	tmaptools,
+	tsibble,
+	tufte,
+	UpAndDownPlots,
+	USAboundaries,
+	viridis
+Remotes:
+	jalapic/engsoccerdata,
+	heike/extracat,
+	antonr4/UpAndDownPlots,
+	antonr4/ChessGmooG,
+	antonr4/ComradesM,
+	antonr4/Films22GmooG,
+	antonr4/GmooG,
+	antonr4/UpAndDownPlots
+Encoding: UTF-8

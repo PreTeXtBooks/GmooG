@@ -1,0 +1,32 @@
+
+# Preface {-}
+
+> "Have no fear of perfection; you'll never reach it."
+
+> `r tufte::quote_footer('--- Marie Curie')`
+
+Data graphics are used extensively to present information.  They can also be used to uncover information.  We need to 'get' graphics, to understand them and to learn from them.  This will only work if the graphics are good in the first place.  It is possible to learn from bad graphics, but it may be hard work and you may learn things that are unhelpful.  This book concentrates on 'getting' good graphics.
+
+Becoming familiar with graphics and how to get the most from them is one goal.  The other is the design and drawing of good graphics.  `Getting' good graphics in the sense of producing good graphics and getting to good graphics is important.  Principles that help in drawing good graphics are also a help in interpreting graphics.
+
+Why not 'great' graphics?  This is a practical book written with real applications in mind.  Everyone may aspire to design and draw 'great' graphics, but it will be sufficient to draw good graphics and be satisfied with that.  'Great' graphics like Minard's display of Napoleon's Russian campaign of 1812 and more modern examples from sources such as the New York Times are excellent.  It is not necessary to reach that standard every time to carry out valuable work.
+
+Readers may be data scientists, statisticians or people who want to become more visually literate.   A knowledge of Statistics is not required, just an interest in data graphics and some experience of working with data.  It will help if you know something of basic graphic forms such as barcharts, histograms, and scatterplots.  It will also be a help if you have software you know well for drawing graphics.  Trying ideas out is much more effective than just reading about them.
+
+Understanding graphics is a lot about understanding the data represented by the graphics, having a feel not just for the numbers themselves, the reliability and uncertainty associated with them, but also for what they mean.  Looking at graphics to learn from them involves looking into the data underlying the graphics and knowing the context.
+
+The quality of reproduction of graphics has improved enormously.  Better computer representations of graphics have changed what can be seen and done.  Drawing and redrawing have become simpler, faster, and more flexible.  It is easy to draw lots of graphics, getting many different views of data.  Graphics can be varied, adjusted, and rearranged quickly to best advantage.  All this has to be taken more into consideration in discussing graphics.
+
+There is a range of different software systems for drawing graphics and everyone has to decide for themselves which one(s) they want to use.  Getting details right may be easy with one software and difficult with another.  New software releases may provide new options and sometimes substantial improvements.  How exactly the graphics are drawn is not important, what the graphics look like and whether they achieve the aims they are intended to is.  This book is primarily about how to interpret graphics, not so much about how to draw them.
+
+The graphics in this book have all been drawn with R.  Other software could be used to draw the same or similar graphics; in some cases it might be easier, in others harder.  Use the software that suits you best.
+
+There are many data displays in this book and a great deal can be learned from studying them.  Even more can be learned by looking closely at the graphics around you---in newspapers and other publications, on the web, on television.  Developing skills in graphics requires experience and that can only be gained through practice.  Look at graphics and talk about what can be seen in them.  Imagine trying to explain to someone who cannot see the graphic what information might be in it and why that is so.  Consider ways of checking\index{checking} the information by other means, be it finding out more about the data, drawing other graphics, carrying out additional calculations or collecting further data.
+
+The book can be read from beginning to end---if you really want to.  Hopefully, it is also a book you can open at any page and get something out of it.  The case studies are intended to be self-contained and instructive in their own right.
+
+Different graphics books emphasise different aspects of graphics.  "Getting \small (more out of) \normalsize Graphics" emphasises the importance of background knowledge and context in any application, the need to be concerned with the origins and quality of underlying data, the value of drawing many graphics, the necessity of checking any conclusions drawn (with more data, more graphics, statistics, and context), and the value of having statistical nous, a sense of how to interpret graphical features and numbers, especially in making comparisons.  Visualisations can show more than words, as the book's title illustrates.  The main message is 'Getting Graphics', while the secondary message is that more can be seen if we look more closely at the smaller details.
+
+### Acknowledgements {-}
+Thanks are due for help, discussion, and suggestions for improvement to Bill Venables, Nick Cox, Andreas Krause, Heike Hofmann, Isabel Meirelles, Peter Dirschedl, Christina Sanchez, Friedrich Pukelsheim, Pedro Valero, Sylvia Zimmer, Anatol Sargin, Matthias Reiss, Harry Unwin, Stephen Stigler, Kim Kleinman, Svetlana Komarova, Torsten Hothorn, Thomas Yee, Martijn Tennekes, Rob Hyndman, Roger Bivand, Tim Sands, Robert Erber, David Unwin, and James Curley.  Thanks also to the publisher's anonymous reviewers who made a number of constructive suggestions.  It was a pleasure to work with Lara Spieker of CRC Press, who took over the book after John Kimmel retired.  Both have been a great help.  Last but not least, it is essential to thank the developers and maintainers of R and its packages, in particular Hadley Wickham and Yihui Xie.  All of these people contributed positively to the book in one way or another in one place or another at one time or another.  Any remaining flaws and errors are mine and mine alone.
+

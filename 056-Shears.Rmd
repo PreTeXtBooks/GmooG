@@ -1,0 +1,94 @@
+
+```{r setup056, include=FALSE}
+source("_setupAll.R")
+library(ggpcp)
+library(gt)
+```
+
+# Distinguishing shearwaters {#secShears}
+
+> "There are approximately ten thousand species of birds on the planet and no single individual has seen them all."
+
+> `r quote_footer('--- Bernd Brunner')`
+
+**Background**  Comparison of three species of shearwater.
+
+**Questions**  How could the species be distinguished?  If there was no species information, what clusters might be found?
+
+**Sources**  *seabirds* dataset in the **CoModes** package (@marbac:2016)
+
+**Structure**  A list of two parts, a dataset of 153 birds with 5 variables and a separate classification variable.\index{datasets!shearwaters}
+
+## Distinguishing shearwaters and puffins {#secShears1}
+There are five pieces of morphological information on three species of seabird, Audubon's shearwater (*Puffinus lherminieri*), Galápagos shearwater (*Puffinus subalaris*), and Tropical shearwater (*Puffinus dichrous*).  In the **CoModes** package from which the dataset has been taken, the birds are described as puffins.  Part of the dataset has been used in some publications to illustrate clustering methods for the first two species, e.g., @lebret:2015 and @bouveyron:2019.  These data are available with varying variable coding labels in another three R packages, in all of which the birds are also called puffins.  The Latin name of the genus is *Puffinus*, which possibly led to this error.  Beautiful images of both puffins and shearwaters, illustrating how very different they are, can be found on the web (@ebird:2022).
+
+## Comparing two shearwater species (Audubon and Galápagos) {#secShears2}
+Figure \@ref(fig:puffBar) is an overview comparing two species on each of five variables.  Numeric codes have been replaced with text labels and variable categories ordered for better interpretation.  Vertical scales are the same, aiding comparison across graphics as well as within.\index{barchart}\index{ordering}\index{ensemble of graphics}\index{common scaling}
+
+```{r puffBar, fig.height=5, fig.cap = 'Barcharts of five variables comparing two species, with Audubon\'s shearwater in brown and Galápagos shearwater in dark blue'}
+data(SeaBirds)
+seaB <- SeaBirds %>% filter(!species=="Tropical")
+pu <- ggplot(seaB) + ylab(NULL) + ylim(0,40) + theme(legend.position="none") + scale_fill_manual(values=c("darkorange4", "steelblue4"))
+puG <- pu + geom_bar(aes(sex, fill=factor(species)), position = position_dodge2(preserve = "single"))
+puE <- pu + geom_bar(aes(eyebrows, fill=factor(species)), position = position_dodge2(preserve = "single")) + theme(axis.text.x=element_text(angle=-45, hjust=0.5, vjust=0.5))
+puC <- pu + geom_bar(aes(collar, fill=factor(species)), position = position_dodge2(preserve = "single")) + theme(axis.text.x=element_text(angle=-45, hjust=0.5, vjust=0.5))
+puS <- pu + geom_bar(aes(undertail, fill=factor(species)), position = position_dodge2(preserve = "single")) + theme(axis.text.x=element_text(angle=-45, hjust=0.5, vjust=0.5))
+puB <- pu + geom_bar(aes(border, fill=factor(species)), position = position_dodge2(preserve = "single"))
+(plot_spacer()+puG+plot_spacer()+puE+plot_spacer() + plot_layout(widths=c(1,4,1,4.5,1.5)))/(puC+puS+puB)
+```
+
+The data are fairly balanced on `sex`.  `eyebrows` are a distinguishing feature, with Galápagos shearwater having pronounced or very pronounced eyebrows.  `collar` is also a distinguishing feature with only a few Audubon's shearwater having no collar.  The variable `undertail` gives mixed results, although the single Galápagos shearwater with a Black & WHITE `undertail` looks suspicious.  `border` is similar for the two species with most birds having no border.
+
+A way of looking at several variables together is a parallel coordinate plot, as in Figure \@ref(fig:puffpcp1)\index{parallel coordinate plot}.  The variable `border` has been left out as it does not distinguish the species. The variable `undertail` has been reversed to reduce line crossings between the species.  The separation of Audubon and Galápagos by `collar` and `eyebrows` is clear.  The single unusual Galápagos case is emphasised, partly because it turns out to be one of the few birds with very pronounced eyebrows.
+
+```{r puffpcp1, fig.asp=0.6, fig.cap = 'Parallel coordinate plot for Audubon and Galápagos shearwaters with three descriptive variables'}
+seaB <- seaB %>% mutate(undertailR=fct_rev(undertail))
+seaB %>% pcp_select(species, collar, eyebrows, undertailR) %>% pcp_scale()  %>% pcp_arrange() %>% ggplot(aes_pcp()) + geom_pcp_axes(colour="white") + geom_pcp(aes(colour=species), alpha=0.8) + geom_pcp_boxes(fill="white", colour="black", linewidth=0.4) +
+geom_pcp_labels(fill="white") + ylab(NULL) + xlab(NULL) + theme(legend.position="bottom", legend.title=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) + scale_colour_manual(values=c("darkorange4", "steelblue4"))
+```
+
+A comparison of the species using `collar` and `eyebrows` is shown in Figure \@ref(fig:puffDD).\index{barchart}\index{faceting}  Using both variables together distinguishes the two species except for one bird, an Audubon's shearwater with no collar and pronounced eyebrows.
+
+```{r puffDD, fig.width=5, fig.asp=0.5, fig.cap = 'A comparison plot of Audubon and Galápagos shearwaters, using barcharts of `collar` faceted by `eyebrows`'}
+ggplot(seaB, aes(collar, fill=species)) + geom_bar() + facet_grid(rows=vars(species), cols=vars(eyebrows))  + scale_fill_manual(values=c("darkorange4", "steelblue4")) + ylab(NULL) + theme(legend.position="none", axis.text.x=element_text(angle=-45, hjust=0.5, vjust=0.5))
+```
+
+## Can the species be clustered? {#secShears3}
+If a clustering analysis of the data for the two species were carried out, the species information would not be used.  Figure \@ref(fig:puffmos) displays all combinations of the four descriptive variables (i.e., excluding `sex`) by the numbers of birds for each combination.  There are barcharts of `collar` faceted by `eyebrows` in the columns and by `border` and `undertail` in the rows.  Six of the twelve combinations of the latter two variables do not occur for the two species, so there are only six rows.
+
+```{r puffmos, fig.asp=1.1, fig.cap = 'Barcharts of collar faceted by eyebrows, border, and undertail for the Audubon and Galápagos shearwaters'}
+puffmosY <- ggplot(seaB, aes(collar)) + geom_bar(fill="red") + facet_grid(rows=vars(border, undertail), cols=vars(eyebrows))  + ylab(NULL) + theme(axis.text.x=element_text(angle=-45, hjust=0.5, vjust=0.5)) + xlab(NULL)
+puffmosY
+```
+
+Any clustering of these four variables would have to assign all 31 cases in the largest bar to the same cluster.  These cases have pronounced eyebrows, no collar, white undertail, and no border.  The case with pronounced eyebrows and a border value of many and the four cases with very pronounced eyebrows should probably be in that cluster too.  Putting the remaining cases all in a second cluster gives the following comparison table for the two species.
+
+```{r puffTab}
+seaB <- seaB %>% mutate(cluster=factor(ifelse(eyebrows=="Very pronounced"|(eyebrows=="Pronounced" & !collar=="Longdashed"), "clus1", "clus2")))
+seaB %>% count(species, cluster, .drop=FALSE) %>% pivot_wider(values_from="n", names_from="cluster") %>% gt()
+```
+
+The single misclassified bird is then an Audubon's shearwater with pronounced eyebrows, no collar, white undertail, and no border, also remarked on in Figure \@ref(fig:puffDD).  Most clustering methods should be able to separate the two species almost completely.
+
+A parallel coordinate plot\index{parallel coordinate plot} of the four variables without species information is not as effective for identifying possible clusters and is not shown here.
+
+\newpage
+
+The full version of the dataset includes an additional species, 84 Tropical shearwaters.  There is an extra collar category for two of the Tropical shearwaters, but with no description given.  Figure \@ref(fig:puffmos3) shows the data in the style of Figure \@ref(fig:puffmos), but with the bars coloured by species.\index{barchart}\index{faceting}
+
+```{r puffmos3, fig.asp=1.1, fig.cap = 'Barcharts of collar faceted by eyebrows, border, and undertail, coloured by species for the full dataset of three species'}
+ggplot(SeaBirds, aes(collar)) + geom_bar(aes(fill=species)) + facet_grid(rows=vars(border, undertail), cols=vars(eyebrows))  + ylab(NULL) + theme(axis.text.x=element_text(angle=-45, hjust=0), legend.title=element_blank(), legend.position="bottom") + xlab(NULL) + scale_fill_manual(values=c("darkorange4", "steelblue4", "springgreen4")) + scale_y_continuous(breaks=seq(0,30,15))
+```
+
+The Galápagos species is still partially separated from the others, but the Audubon and Tropical species overlap.  A cluster analysis is unlikely to be able to group the three species.
+
+\newpage
+
+**Answers**  It is possible to almost completely distinguish Audubon and Galápagos shearwaters using two morphological variables.  A faceted graphic of barcharts suggests that it should be possible to use clustering to produce groups closely matching the species.  A corresponding graphic for the three species, including Tropical shearwaters, suggests distinguishing or clustering them would be more difficult.
+
+**Further questions**  How well can Galápagos shearwaters be distinguished from Tropical shearwaters?  
+
+### Graphical takeaways {-}
+* Barcharts for the same dataset should have the same frequency scale for ease of comparison.\index{common scaling}  (Figure \@ref(fig:puffBar))
+* Ordering of categories in categorical variables and arrangement of faceting variables strongly influence how easy it is to read a plot.\index{ordering}  (Figures \@ref(fig:puffDD) and \@ref(fig:puffmos))
+* Faceted barcharts show where cases are in multivariate categorical data.\index{barchart}\index{faceting}  (Figures \@ref(fig:puffmos) and \@ref(fig:puffmos3))

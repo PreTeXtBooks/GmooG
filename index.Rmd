@@ -1,0 +1,27 @@
+--- 
+title: "\\huge Getting \\large (more out of) \\huge Graphics"
+author: "Antony Unwin"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    split_by: chapter
+    split_bib: false
+    pandoc_args: [ "--csl", "apa_pl.csl" ]
+    config:
+      toc:
+        collapse: section
+      search:
+        engine: lunr
+    code_folding: hide
+documentclass: book
+bibliography: gda.bib
+link-citations: yes
+fontsize: 12pt
+description: This is the html index file for my GG book
+---
+
+```{r setup, include=FALSE}
+source("_setupAll.R")
+
+```

@@ -1,0 +1,140 @@
+
+```{r setup57, include=FALSE}
+source("_setupAll.R")
+library(gtable)
+library(tsibble)
+library(feasts)
+library(ggrepel)
+library(scales)
+```
+
+# When do road accidents with deer happen in Bavaria? {#secDeer}
+
+> "But like other Bruegels, the painting is in part about details that hide in plain sight.  If you didn’t know the title, you might not notice Icarus at all."
+
+> `r quote_footer('--- E. H. Gombrich writing about \'Landscape with the Fall of Icarus\' (a painting formerly attributed to Bruegel)')`
+
+
+**Background**  In some parts of Europe vehicle accidents with deer are a serious problem.
+
+**Questions**  How many accidents with deer are there?  Is it roughly the same across the year?  At what times of day is the risk greatest?
+
+**Sources**  @hothorn:2020
+
+**Structure**  Two data frames, each of 172596 observations, giving the numbers of vehicle accidents every half hour in Bavaria, one for accidents involving deer and one for other accidents.\index{datasets!deer accidents}
+
+## Vehicle accidents involving deer {#secDeer1}
+Bavarian data of the numbers of vehicle accidents involving deer over the full ten years from 2002 to 2011 have been modelled in depth in @hothorn:2015.  The data were also used in @hothorn:2020 and are available in the supplementary material on the publishing journal's website.
+
+\newpage
+
+Figure \@ref(fig:deer1) shows a smoothed version of the daily number of vehicle accidents involving deer.  There was an increase of around 50\% over the ten years.\index{time series}\index{smooth}
+
+```{r deer1, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Smoothed numbers of deer-vehicle accidents per day in Bavaria over ten years from Jan 1st 2002 to Dec 31st 2011'}
+data(DVCdeer)
+d1 <- DVCdeer %>% mutate(date=ymd(day), time=hm(mins))
+d1s <- d1 %>% group_by(date) %>% summarise(N=sum(Freq))
+ggplot(d1s, aes(date, N)) + geom_smooth(se=FALSE, colour="brown4") + ylab(NULL) + xlab(NULL) + coord_cartesian(ylim=c(0,120))
+```
+
+In Figure \@ref(fig:deer1), and in all the plots in this chapter, the time axis labels are placed at the start of the labelled period.
+
+Figure \@ref(fig:deer2) shows an initial plot to explore monthly seasonality.  Each panel of the plot displays the aggregate data from that month for each year and the average for the month over the whole time series in blue.  Here the data are per month, which is the why the vertical scale is so different to that in Figure \@ref(fig:deer1).\index{seasonality}
+
+```{r deer2, fig.asp=0.4, fig.cap = 'Monthly numbers of deer-vehicle accidents across the ten years 2002 to 2011.'}
+d1sT <- as_tsibble(d1s, index=date)
+d1sTm <- d1sT %>% index_by(Year_Month = ~ yearmonth(.)) %>% summarise(nn=sum(N))
+d1sTm %>% gg_subseries(y=nn, colour="brown4") + xlab(NULL) + ylab(NULL) + scale_x_yearmonth(breaks = yearmonth(c("Jan 2002", "Dec 2011")), labels=c("", "")) + theme(axis.ticks.x=element_blank()) + ylim(0,NA)
+```
+
+There is an overall rise in each monthly series with some, occasionally dramatic, variation, and a possible seasonal pattern.  Summarising over months is a bit of an approximation, as the months are not all the same length.  An alternative is to fit another smooth across the data, rougher than the one in Figure \@ref(fig:deer1), and overlay the resulting individual annual series.  This has been done in Figure \@ref(fig:deer3).   An adaptive smooth has been used.\index{time series}\index{smooth}
+
+```{r deer3, fig.asp=0.6, fig.cap = 'Numbers of deer-vehicle accidents across all ten years overlaid from Jan 1st to Dec 31st'}
+g6 <- ggplot(d1s, aes(date, N)) + geom_smooth(formula = y ~ s(x, bs = "ad", k=60), se=FALSE, n=3652) + ylab(NULL) + xlab(NULL)
+lg6 <- layer_data(g6)
+d1s <- d1s %>% mutate(sm60=lg6$y)
+d1ss <- d1s %>% filter(month(date)==12 & day(date)==31)
+d1ss <- d1ss %>% mutate(id=factor(year(date))) %>% as_tibble()
+end <- as.Date("1974-01-10")
+as_tsibble(d1s %>% select(date, sm60)) %>% gg_season(y=sm60, period="year", labels="none") + ylab(NULL) + xlab(NULL) + scale_x_date(date_labels = "%b", date_breaks="1 month") + geom_text_repel(data=d1ss, aes(label=id, y=sm60, x=end), min.segment.length=2, nudge_x=5, direction="y") + guides(colour="none") + ylim(0,NA)
+```
+
+The plot shows a fairly regular pattern across the years with peaks in May-June and October-November and lower values in Spring and, to a lesser extent, Summer.  The highest numbers are about double the lowest ones.
+
+Given the differences in vehicle traffic between weekdays and weekends and public holidays, there could well be weekly patterns as well.  An initial analysis, without treating public holidays as similar to weekends is shown in Figure \@ref(fig:deer4).\index{time series}\index{smooth}\index{faceting}
+
+```{r deer4, fig.cap = 'Day of the week patterns in numbers of deer-vehicle accidents'}
+d1s <- d1s %>% mutate(year=year(date), month=month(date), day=day(date), wd = wday(date, label = TRUE))
+colblind3 <- colorblind_pal()(8)[c(1:4, 6:8)]
+ggplot(d1s, aes(date, N, group=wd)) + geom_smooth(method="gam", formula = y ~ s(x, bs = "cs", k=30), aes(colour=wd), se=FALSE) + ylab(NULL) + xlab(NULL) + facet_wrap(vars(wd)) + theme(legend.position="none") + scale_colour_manual(values=colblind3)
+```
+
+A few values of the smoothing parameter were tried and the rounded value leading to this display was chosen, as it suggested a clear differentiation between weekdays and weekends.  The peaks\index{peak} in summer and the troughs in winter stand out.  Presumably there is less vehicle traffic at weekends in winter and hence fewer accidents with deer then than in summer.  The lack of seasonality in the weekday plots offers supporting evidence.
+
+In the early days of time series analysis there were suggestions that time series could be decomposed into components of trend\index{trend}, seasonality\index{seasonality}, and noise.  Sometimes this works well, sometimes it is difficult to disentangle trend and seasonality.  That is to some extent the case here.
+
+The data available are more detailed than these graphics imply.  Numbers of accidents are reported for every half-hour of every day, i.e. there are 48 numbers per day.  Figures \@ref(fig:deer6) and \@ref(fig:deer7) investigate the monthly averages of these daily data across months by year and across years by month.  Unsurprisingly there are differences in the patterns by years, as the data are shifted for the individual months.  This is easier to see in Figure \@ref(fig:deer7), where the two peaks are further apart for the summer months and closer together for the winter months.  According to @hothorn:2015 the deer are on the move more around sunrise and after sunset, which explains these peaks and their pattern across the year.  In that paper, heat maps were used to display the daily data.
+
+Figures \@ref(fig:deer6) and \@ref(fig:deer7) are a good example of where the choice of which time variable to facet by is important.  Both plots convey the information, but the second one does it better.
+
+```{r deer6, fig.asp=0.5, fig.cap = 'Average daily patterns in numbers of deer-vehicle accidents by month (the coloured lines) and year'}
+d1 <- d1 %>% mutate(year=year(date), month=month(date, label=TRUE), day=day(date), wd = wday(date, label = TRUE))
+d1dms <- d1 %>% group_by(year, month, mins) %>% summarise(mu=mean(Freq))
+d1dms <- d1dms %>% mutate(tim=seq(0, 23.5, 0.5)) %>% ungroup()
+ggplot(d1dms, aes(tim, mu)) + geom_line(aes(colour=month)) + facet_wrap(vars(factor(year)), nrow=2) + theme(legend.position="none") + xlab(NULL) + ylab(NULL) + scale_x_continuous(breaks=seq(0,24,6))
+```
+
+```{r deer7, fig.asp=0.5, fig.cap = 'Daily patterns in numbers of deer-vehicle accidents by month across the years (the coloured lines)'}
+ggplot(d1dms, aes(tim, mu)) + geom_line(aes(colour=factor(year))) + facet_wrap(vars(month), nrow=2) + theme(legend.position="none") + xlab(NULL) + ylab(NULL) + scale_x_continuous(breaks=seq(0,24,6))
+```
+
+\newpage
+
+## What about vehicle accidents without deer? {#secDeer2}
+Data are available over the same period for vehicle accidents not involving deer and these are useful for comparison purposes, in particular for studying what features of the deer-vehicle accident data are not found in the data for other accidents.
+
+Figure \@ref(fig:veh1) shows a smoothed version of the daily number of vehicle accidents not involving deer, together with the comparable graph for deer-vehicle accidents.
+
+```{r veh1, fig.asp=0.5, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Smoothed number of non-deer-vehicle accidents (blue) and deer-vehicle accidents (brown) per day in Bavaria over ten years'}
+data(DVCnot)
+v1 <- DVCnot %>% mutate(date=ymd(day), time=hm(mins))
+v1s <- v1 %>% group_by(date) %>% summarise(N=sum(Freq))
+ggplot(v1s, aes(date, N)) + geom_smooth(se=FALSE) + ylab(NULL) + xlab(NULL) + coord_cartesian(ylim=c(0,300)) + geom_smooth(data=d1s, aes(date, N), se=FALSE, colour="brown4")
+```
+
+There is little change over the ten years in non-deer vehicle accidents, with a decline of around 5\%.  The overall level is over twice the level of accidents involving deer.   Graphics similar to Figures \@ref(fig:deer2) and \@ref(fig:deer3) can be drawn to show that there is a little seasonality in the data, but not nearly so much as in the deer-vehicle accident data.  A graphic like Figure \@ref(fig:deer4) would show that there is not much variation through the week either, apart from fewer accidents on a Sunday.  The daily pattern of non-deer accidents is shown in Figure \@ref(fig:veh2).
+
+```{r veh2, fig.asp=0.5, fig.cap = 'Daily patterns in numbers of non-deer-vehicle accidents by month across the years'}
+v1 <- v1 %>% mutate(year=year(date), month=month(date, label=TRUE), day=day(date), wd = wday(date, label = TRUE))
+v1dms <- v1 %>% group_by(year, month, mins) %>% summarise(mu=mean(Freq))
+v1dms <- v1dms %>% mutate(tim=seq(0, 23.5, 0.5)) %>% ungroup()
+ggplot(v1dms, aes(tim, mu)) + geom_line(aes(colour=factor(year))) + facet_wrap(vars(month), nrow=2) + theme(legend.position="none") + xlab(NULL) + ylab(NULL) + scale_x_continuous(breaks=seq(0,24,6))
+```
+
+Instead of morning and evening peaks, there are higher levels through the day and lower levels in the middle of the night.  Interestingly, the vertical scale is the same as that of Figure \@ref(fig:deer7).  In fact the half-hours with the highest average rates for deer accidents have slightly higher values than the half-hours with the highest average rates for accidents not involving deer, despite there being over twice as many non-deer accidents overall.
+
+The daily plots have a sawtooth pattern\index{sawtooth pattern} that can also be seen in Figure \@ref(fig:veh3) showing just the data for Tuesdays each year.\index{time series}\index{faceting}
+
+```{r veh3, fig.asp=0.5, fig.cap = 'Daily patterns for Tuesdays in numbers of non-deer-vehicle accidents across the years'}
+v1wws <- v1 %>% group_by(year, wd, mins) %>% summarise(mu=mean(Freq))
+v1wws <- v1wws %>% mutate(tim=seq(0, 23.5, 0.5)) %>% ungroup()
+ggplot(v1wws %>% filter(wd=="Tue"), aes(tim, mu)) + geom_line(aes(colour=factor(year))) + facet_wrap(vars(year), nrow=2) + theme(legend.position="none") + xlab(NULL) + ylab(NULL) + scale_x_continuous(breaks=seq(0,24,6))
+```
+
+Overlaying the Tuesday data for the three years 2008, 2009, 2010 gives Figure \@ref(fig:veh4).
+
+```{r veh4, fig.asp=0.5, fig.cap = 'Daily patterns for Tuesdays in numbers of non-deer-vehicle accidents for the years 2008, 2009, 2010'}
+ggplot(v1wws %>% filter(wd=="Tue", year %in% c("2008", "2009", "2010")), aes(tim, mu)) + geom_line(aes(colour=factor(year))) + theme(legend.position="none") + xlab(NULL) + ylab(NULL) + scale_x_continuous(breaks=seq(0,24,4)) + scale_colour_manual(values=hue_pal()(10)[c(7:9)])
+```
+
+The agreement across the three years is surprisingly close.  Possibly it has something to do with how the data were collected and stored.
+
+**Answers**  The numbers of vehicle-deer accidents in Bavaria increased over the ten years covered, while the numbers of other accidents went down slightly.  There are clear seasonal, weekly, and daily patterns in vehicle-deer accidents.  Drivers should be particularly careful in the months of May, June, November around sunrise and sunset.
+
+**Further questions**  Can reasons for the daily patterns in non-deer vehicle accidents be found?  
+
+### Graphical takeaways {-}
+* Axis labels for time series can be placed in different positions for the same data.  Whatever is done should be stated.  (Figure \@ref(fig:deer1))
+* Smoothing picks out trends in time series.\index{time series}\index{smooth}  (Figure \@ref(fig:deer3))
+* The choice of faceting variable is important.\index{faceting}  (Figures \@ref(fig:deer6) and  \@ref(fig:deer7)))
+* Overlaying time series is effective for checking how similar they are.  (Figure \@ref(fig:veh4))
