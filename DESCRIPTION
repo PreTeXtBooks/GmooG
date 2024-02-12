@@ -1,4 +1,4 @@
-Package: GmooG-book
+Package: GmooGbook
 Title: Getting (more out of) Graphics
 Version: 1.0
 Authors@R: 
@@ -18,7 +18,7 @@ Imports:
 	engsoccerdata,
 	extracat,
 	feasts,
-	Films22GmooG,
+	FilmsGmooG,
 	GGally,
 	ggmosaic,
 	ggpcp,
@@ -49,7 +49,8 @@ Imports:
 	USAboundaries,
 	viridis
 Remotes:
-	jalapic/engsoccerdata,
+  ropensci/USAboundaries,
+  jalapic/engsoccerdata,
 	heike/extracat,
 	antonr4/ChessGmooG,
 	antonr4/ComradesM,
