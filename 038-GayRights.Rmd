@@ -3,7 +3,6 @@
 source("_setupAll.R")
 library(scales)
 library(cartogram)
-library(USAboundaries)
 ```
 
 # Results from surveys on gay rights  {#secGayR}
@@ -59,52 +58,31 @@ It is possible to look at how rates of support vary by state and, unsurprisingly
 ```{r gayMap, fig.asp=0.6, fig.cap = 'Support for same-sex marriage at state level on a continuous colour scale from 10\\% to 70\\%'}
 naesSStx <- naesXz2 %>% filter(valS %in% c(1,2,3,4))
 naesZ <- naesSStx %>% group_by(State) %>% summarise(ProStateLaw=mean(proS), nS=n())
-usX <- us_states() %>% filter(!name %in% c("Alaska", "Hawaii", "Puerto Rico")) %>% arrange(stusps)
-USx <- st_sf(data.frame(usX, naesZ))
-gaym1 <- tm_shape(USx) + tm_polygons(col="ProStateLaw", breaks=seq(0.1,0.7,0.01), legend.show=FALSE)
+USpsl <- full_join(USregions, naesZ)
+gaym1 <- tm_shape(USpsl) + tm_polygons(col="ProStateLaw", breaks=seq(0.1,0.7,0.01), legend.show=FALSE)
 gaym1
 ```
 
 Some regional patterns are apparent, such as the higher support in New England and on the West Coast.  As always with choropleth maps, area does not reflect population.  There are several larger states with small populations and smaller states with larger populations.  This is also reflected in the numbers asked in each state.  Figure \@ref(fig:gayCIs) shows the estimates of proportions supporting a same-sex marriage law with 95% confidence intervals.  The longest interval is for Washington, DC, with only 31 asked and the shortest interval is for California with 1891 asked.  The states have been grouped by Census Bureau regions and ordered within region by percentage in favour.  The NorthEast states split into two groups with Pennsylvania and Maine having much lower levels of support.  The South also splits into two groups with Florida and the three small most northerly states having higher levels of support.  The MidWest states have fairly similar values.  Overall, very few states show a majority for same-sex marriage.
 
 ```{r gayCIs, fig.asp=1.15, fig.cap = 'Support for same-sex marriage by state with 95\\% confidence intervals, states grouped by region and ordered within region by estimated population proportion in favour'}
-data(state)
-USab <- data.frame(State=state.abb, Name=state.name)
-naesZall <- full_join(naesZ, USab)
-naesZall <- naesZall %>% filter(!State %in% c("AK", "HI")) %>% mutate(Name=ifelse(State=="DC", "Washington, DC", Name))
-naesZall <- naesZall %>% mutate(p1=ProStateLaw, hi=1.96*(p1*(1-p1)/nS)**0.5, low=p1-hi, upp=p1+hi)
-USpop <- read_csv("~/Desktop/UpAndDownR-f/USpop-f/nst-est2018-alldata.csv", show_col_types = FALSE)
-USr <- USpop %>% select(REGION, STATE, NAME)
-USr <- USr %>% filter(!(STATE=="00")) %>% select(-STATE)
-USr <- USr %>% filter(!(NAME %in% c("Alaska", "Hawaii", "Puerto Rico")))
-USr <- USr %>% mutate(Region=case_when(REGION=="1"~"NorthEast",                     REGION=="2"~"MidWest",
-REGION=="3"~"South",
-REGION=="4"~"West"))
-USr[8, "NAME"] <- "Washington, DC"
-naesZallr <- full_join(naesZall, USr, by=c("Name"="NAME"))
+USpsl <- USpsl %>% mutate(p1=ProStateLaw, hi=1.96*(p1*(1-p1)/nS)**0.5, low=p1-hi, upp=p1+hi)
 regnames4 <- c("NorthEast", "South", "MidWest", "West")
 colblindx <- colorblind_pal()(8)[1:4]
 names(colblindx) <- regnames4
-naesZallr <- naesZallr %>% mutate(Region=factor(Region, levels=c("NorthEast", "South", "MidWest", "West")))
-gayCIx <- ggplot(naesZallr, aes(fct_reorder(Name, p1), p1)) + geom_point(aes(colour=Region), size=2) + geom_errorbar(aes(ymin = low, ymax = upp), width = 0.2) + ylab(NULL) + xlab(NULL) + coord_flip() + facet_grid(rows=vars(Region), scales="free_y", space="free_y") + scale_y_continuous(expand = c(0,0), limits=c(0,1), labels=percent) + theme(strip.text.y.right = element_text(angle = 0), legend.position="none") + scale_colour_manual(values=colblindx)
+USpsl <- USpsl %>% mutate(Region=factor(Region, levels=c("NorthEast", "South", "MidWest", "West")))
+gayCIx <- ggplot(USpsl, aes(fct_reorder(NAME, p1), p1)) + geom_point(aes(colour=Region), size=2) + geom_errorbar(aes(ymin = low, ymax = upp), width = 0.2) + ylab(NULL) + xlab(NULL) + coord_flip() + facet_grid(rows=vars(Region), scales="free_y", space="free_y") + scale_y_continuous(expand = c(0,0), limits=c(0,1), labels=percent) + theme(strip.text.y.right = element_text(angle = 0), legend.position="none") + scale_colour_manual(values=colblindx)
 gayCIx
 ```
 
 Figure \@ref(fig:mapReg) shows a map of the regions.
 
 ```{r mapReg, fig.asp=0.6, fig.cap = 'The four US regions defined by the Census Bureau'}
-usX[7, "name"] <- "Washington, DC"
-USy <- full_join(USr, usX, by=c("NAME"="name"))
-USz <- st_sf(USy)
-regnames4 <- c("NorthEast", "South", "MidWest", "West")
-colblindx <- c(colorblind_pal()(8)[1:4])
-names(colblindx) <- regnames4
-USz <- USz %>% mutate(Region=factor(Region, levels=c("NorthEast", "South", "MidWest", "West")))
-tm_shape(USz) + tm_polygons(col="Region", palette=colblindx)
+tm_shape(USpsl) + tm_polygons(col="Region", palette=colblindx)
 ```
 
 ```{r gayMapC, fig.asp=0.5, fig.cap = 'Support for same-sex marriage at state level using a population cartogram'}
-USxt <- st_transform(USx, crs = 2163)
+USxt <- st_transform(USpsl, crs = 2163)
 USxC <- cartogram_cont(USxt, "nS")
 tm_shape(USxC) + tm_polygons(col="ProStateLaw", breaks=seq(0.1,0.7,0.01), legend.show=FALSE)
 ```
