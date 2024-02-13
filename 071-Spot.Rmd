@@ -157,7 +157,7 @@ Additionally a much fuller caption was used in the amended plot in Chapter \@re
 The choropleth map in Chapter \@ref(secGayR), Figure \@ref(fig:gayMap) gave an overview of the geographic distribution of support for same-sex marriage at state level.  Individual states have very different population sizes and the survey design reflected that.  A default plot of confidence intervals for the state estimates is shown here with the amended plot drawn in the chapter, Figure \@ref(fig:gayCIs), in Figure \@ref(fig:gayCIX).\index{datasets!Annenberg election survey 2004}
 
 ```{r gayCIX, fig.asp=1.2, fig.cap = 'Support for same-sex marriage by state with 95\\% confidence intervals'}
-gayCId <- ggplot(naesZallr, aes(Name, p1)) + geom_point() + geom_errorbar(aes(ymin = low, ymax = upp)) + coord_flip()
+gayCId <- ggplot(USpsl, aes(NAME, p1)) + geom_point() + geom_errorbar(aes(ymin = low, ymax = upp)) + coord_flip()
 gayCId + gayCIx
 ```
 

@@ -56,6 +56,7 @@ gayGR1
 It is possible to look at how rates of support vary by state and, unsurprisingly, there are substantial differences.  Figure \@ref(fig:gayMap) is a choropleth map\index{choropleth map} of the support for a state law permitting same-sex marriage in each state.  (Except that there is no information for Alaska and Hawaii as the survey was restricted to the 48 continental states and Washington D.C.)
 
 ```{r gayMap, fig.asp=0.6, fig.cap = 'Support for same-sex marriage at state level on a continuous colour scale from 10\\% to 70\\%'}
+data(USregions)
 naesSStx <- naesXz2 %>% filter(valS %in% c(1,2,3,4))
 naesZ <- naesSStx %>% group_by(State) %>% summarise(ProStateLaw=mean(proS), nS=n())
 USpsl <- full_join(USregions, naesZ)
