@@ -46,7 +46,8 @@ Imports:
 	tsibble,
 	tufte,
 	UpAndDownPlots,
-	viridis
+	viridis,
+	hypervolume
 Remotes:
   jalapic/engsoccerdata,
 	heike/extracat,
