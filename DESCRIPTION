@@ -46,10 +46,8 @@ Imports:
 	tsibble,
 	tufte,
 	UpAndDownPlots,
-	USAboundaries,
 	viridis
 Remotes:
-  ropensci/USAboundaries,
   jalapic/engsoccerdata,
 	heike/extracat,
 	antonr4/ChessGmooG,
