@@ -23,7 +23,7 @@
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-02-03" />
+<meta name="date" content="2024-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -844,7 +844,7 @@ Figure 33.8: When charging stations were used
 <h3><span class="header-section-number">33.3.4</span> Gay rights<a href="secPlot.html#gay-rights" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The choropleth map in Chapter <a href="secGayR.html#secGayR">9</a>, Figure <a href="secGayR.html#fig:gayMap">9.4</a> gave an overview of the geographic distribution of support for same-sex marriage at state level. Individual states have very different population sizes and the survey design reflected that. A default plot of confidence intervals for the state estimates is shown here with the amended plot drawn in the chapter, Figure <a href="secGayR.html#fig:gayCIs">9.5</a>, in Figure <a href="secPlot.html#fig:gayCIX">33.9</a>.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="secPlot.html#cb374-1" tabindex="-1"></a>gayCId <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(naesZallr, <span class="fu">aes</span>(Name, p1)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> low, <span class="at">ymax =</span> upp)) <span class="sc">+</span> <span class="fu">coord_flip</span>()</span>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="secPlot.html#cb374-1" tabindex="-1"></a>gayCId <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(USpsl, <span class="fu">aes</span>(NAME, p1)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> low, <span class="at">ymax =</span> upp)) <span class="sc">+</span> <span class="fu">coord_flip</span>()</span>
 <span id="cb374-2"><a href="secPlot.html#cb374-2" tabindex="-1"></a>gayCId <span class="sc">+</span> gayCIx</span></code></pre></div>
 </details>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:gayCIX"></span>
