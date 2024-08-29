@@ -47,8 +47,10 @@ Imports:
 	tufte,
 	UpAndDownPlots,
 	viridis,
-	hypervolume
+	hypervolume,
+	gclus
 Remotes:
   jalapic/engsoccerdata,
-	heike/extracat
+	heike/extracat,
+	evanodell/parlitools
 Encoding: UTF-8
