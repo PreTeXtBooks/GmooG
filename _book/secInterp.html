@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>32 What affects interpretation? | Getting (more out of) Graphics</title>
   <meta name="description" content="This is the html index file for my GG book" />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="32 What affects interpretation? | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-02-13" />
+<meta name="date" content="2024-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,7 +58,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -130,6 +130,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -680,9 +681,9 @@ breast pocket. l can't remember any more.”</p>
 <span id="cb350-2"><a href="secInterp.html#cb350-2" tabindex="-1"></a><span class="fu">ggplot</span>(body, <span class="fu">aes</span>(Biiliac, Biacrom)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">coord_fixed</span>()</span></code></pre></div>
 </details>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bibi1"></span>
-<img src="_main_files/figure-html/bibi1-1.png" alt="Scatterplot of Biacromial diameter against pelvic breadth (Biialic) for 507 adults." width="80%" />
+<img src="_main_files/figure-html/bibi1-1.png" alt="Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults." width="80%" />
 <p class="caption">
-Figure 32.1: Scatterplot of Biacromial diameter against pelvic breadth (Biialic) for 507 adults.
+Figure 32.1: Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults.
 </p>
 </div>
 <p>Does Figure <a href="secInterp.html#fig:bibi1">32.1</a> demand attention? Someone might glance at it and decide the scatterplot did not look interesting. Perhaps the measurements did not mean anything to them or perhaps they did, but the topic did not attract them. They might have been distracted by the cup of coffee they had just made, by an email or by a noise in the street. They might have been tired or bored. Or, perhaps, they devoted sustained and concentrated attention to Figure <a href="secInterp.html#fig:bibi1">32.1</a>. Graphics are often discussed objectively and yet there are many subjective factors affecting how they are viewed.</p>
@@ -693,9 +694,9 @@ Figure 32.1: Scatterplot of Biacromial diameter against pelvic breadth (Biialic)
 <span id="cb351-2"><a href="secInterp.html#cb351-2" tabindex="-1"></a><span class="fu">ggplot</span>(body, <span class="fu">aes</span>(Biiliac, Biacrom, <span class="at">colour=</span><span class="fu">factor</span>(Gender))) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;purple2&quot;</span>, <span class="st">&quot;springgreen3&quot;</span>)) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>, <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">coord_fixed</span>()</span></code></pre></div>
 </details>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bibi2"></span>
-<img src="_main_files/figure-html/bibi2-1.png" alt="Scatterplot of Biacromial diameter (shoulder width) against Biialic (pelvic breadth for 247 men (in green) and 260 women (in purple)." width="80%" />
+<img src="_main_files/figure-html/bibi2-1.png" alt="Scatterplot of Biacromial diameter (shoulder width) against Biiliac (pelvic breadth for 247 men (in green) and 260 women (in purple)." width="80%" />
 <p class="caption">
-Figure 32.2: Scatterplot of Biacromial diameter (shoulder width) against Biialic (pelvic breadth for 247 men (in green) and 260 women (in purple).
+Figure 32.2: Scatterplot of Biacromial diameter (shoulder width) against Biiliac (pelvic breadth for 247 men (in green) and 260 women (in purple).
 </p>
 </div>
 <p>Generally, women have about the same pelvic breath as men but narrower shoulder widths. The displays in Figures <a href="secInterp.html#fig:bibi1">32.1</a> and <a href="secInterp.html#fig:bibi2">32.2</a> use data collected around twenty years ago (<span class="citation">Heinz et al. (<a href="references.html#ref-heinz:2003">2003</a>)</span>). There are not many datasets of multivariate measurements of individuals and in working with this one, the authors’ proviso should be remembered that “the sample is not a representative sample from a well-defined population”. The R help file says it was men and women who were primarily in their twenties and thirties and who all exercised several hours a week, hardly typical of the general population.</p>

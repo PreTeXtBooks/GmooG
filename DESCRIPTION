@@ -50,10 +50,5 @@ Imports:
 	hypervolume
 Remotes:
   jalapic/engsoccerdata,
-	heike/extracat,
-	antonr4/ChessGmooG,
-	antonr4/ComradesM,
-	antonr4/FilmsGmooG,
-	antonr4/GmooG,
-	antonr4/UpAndDownPlots
+	heike/extracat
 Encoding: UTF-8

@@ -52,8 +52,8 @@ reg4X + reg4Y
 A common reason for reordering categories is to produce a recognisable and memorable pattern, for instance steadily increasing or decreasing.  Figure \@ref(fig:swSUV) shows sales of station wagons and SUVs by year.  The original plot is on the right of Figure \@ref(fig:swSUVx) and a plot using a default lexicographic ordering of the vehicle types is on the left.\index{datasets!car fuel efficiency}
 
 ```{r swSUVx, out.width="45%", fig.asp=1.4, fig.show="hold", fig.cap = 'Annual sales of station wagons and SUVs in default ordering (left) and revised ordering (right)'}
-Veh1gx <- Veh1g %>% group_by(VClass, year) %>% summarise(nn=n())
-ggplot(Veh1gx, aes(year, weight=nn)) + geom_bar(aes(fill=VClass)) + facet_grid(rows=vars(VClass)) + scale_fill_manual(values=swSUVpal) + ylab(NULL) + xlab(NULL) + theme(strip.text.y = element_text(angle = 0), legend.position="none") + scale_y_continuous(breaks = c(0, 150))
+Veh1Fx <- Veh1f %>% group_by(VClass, year) %>% summarise(nn=n())
+ggplot(Veh1Fx, aes(year, weight=nn)) + geom_bar() + facet_grid(rows=vars(VClass)) + ylab(NULL) + xlab(NULL) + theme(strip.text.y = element_text(angle = 0), legend.position="none") + scale_y_continuous(breaks = c(0, 150))
 vgf
 ```
 

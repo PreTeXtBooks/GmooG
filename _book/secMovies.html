@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Looking at the movies | Getting (more out of) Graphics</title>
   <meta name="description" content="This is the html index file for my GG book" />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Looking at the movies | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-02-13" />
+<meta name="date" content="2024-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,7 +58,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -130,6 +130,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -797,23 +798,23 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
 <span id="cb23-3"><a href="secMovies.html#cb23-3" tabindex="-1"></a>gX <span class="ot">&lt;-</span> gX <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">cumPerc=</span><span class="fu">round</span>(cp,<span class="dv">1</span>))</span>
 <span id="cb23-4"><a href="secMovies.html#cb23-4" tabindex="-1"></a>gX <span class="sc">%&gt;%</span> <span class="fu">slice_head</span>(<span class="at">n=</span><span class="dv">20</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(genres, cumPerc) <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code></pre></div>
 </details>
-<div id="prhlrsjqbg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#prhlrsjqbg table {
+<div id="jkzwavhlgv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jkzwavhlgv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#prhlrsjqbg thead, #prhlrsjqbg tbody, #prhlrsjqbg tfoot, #prhlrsjqbg tr, #prhlrsjqbg td, #prhlrsjqbg th {
+#jkzwavhlgv thead, #jkzwavhlgv tbody, #jkzwavhlgv tfoot, #jkzwavhlgv tr, #jkzwavhlgv td, #jkzwavhlgv th {
   border-style: none;
 }
 
-#prhlrsjqbg p {
+#jkzwavhlgv p {
   margin: 0;
   padding: 0;
 }
 
-#prhlrsjqbg .gt_table {
+#jkzwavhlgv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -839,12 +840,12 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-left-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_caption {
+#jkzwavhlgv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#prhlrsjqbg .gt_title {
+#jkzwavhlgv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -856,7 +857,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-width: 0;
 }
 
-#prhlrsjqbg .gt_subtitle {
+#jkzwavhlgv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -868,7 +869,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-top-width: 0;
 }
 
-#prhlrsjqbg .gt_heading {
+#jkzwavhlgv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -880,13 +881,13 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_bottom_border {
+#jkzwavhlgv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_col_headings {
+#jkzwavhlgv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -901,7 +902,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_col_heading {
+#jkzwavhlgv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -921,7 +922,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   overflow-x: hidden;
 }
 
-#prhlrsjqbg .gt_column_spanner_outer {
+#jkzwavhlgv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -933,15 +934,15 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 4px;
 }
 
-#prhlrsjqbg .gt_column_spanner_outer:first-child {
+#jkzwavhlgv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#prhlrsjqbg .gt_column_spanner_outer:last-child {
+#jkzwavhlgv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#prhlrsjqbg .gt_column_spanner {
+#jkzwavhlgv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -953,11 +954,11 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   width: 100%;
 }
 
-#prhlrsjqbg .gt_spanner_row {
+#jkzwavhlgv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#prhlrsjqbg .gt_group_heading {
+#jkzwavhlgv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -983,7 +984,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   text-align: left;
 }
 
-#prhlrsjqbg .gt_empty_group_heading {
+#jkzwavhlgv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -998,15 +999,15 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   vertical-align: middle;
 }
 
-#prhlrsjqbg .gt_from_md > :first-child {
+#jkzwavhlgv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#prhlrsjqbg .gt_from_md > :last-child {
+#jkzwavhlgv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#prhlrsjqbg .gt_row {
+#jkzwavhlgv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1025,7 +1026,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   overflow-x: hidden;
 }
 
-#prhlrsjqbg .gt_stub {
+#jkzwavhlgv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1038,7 +1039,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#prhlrsjqbg .gt_stub_row_group {
+#jkzwavhlgv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1052,15 +1053,15 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   vertical-align: top;
 }
 
-#prhlrsjqbg .gt_row_group_first td {
+#jkzwavhlgv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#prhlrsjqbg .gt_row_group_first th {
+#jkzwavhlgv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#prhlrsjqbg .gt_summary_row {
+#jkzwavhlgv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1070,16 +1071,16 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#prhlrsjqbg .gt_first_summary_row {
+#jkzwavhlgv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_first_summary_row.thick {
+#jkzwavhlgv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#prhlrsjqbg .gt_last_summary_row {
+#jkzwavhlgv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1089,7 +1090,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_grand_summary_row {
+#jkzwavhlgv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1099,7 +1100,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#prhlrsjqbg .gt_first_grand_summary_row {
+#jkzwavhlgv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1109,7 +1110,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-top-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_last_grand_summary_row_top {
+#jkzwavhlgv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1119,11 +1120,11 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_striped {
+#jkzwavhlgv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#prhlrsjqbg .gt_table_body {
+#jkzwavhlgv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1132,7 +1133,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_footnotes {
+#jkzwavhlgv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1146,7 +1147,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_footnote {
+#jkzwavhlgv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1155,7 +1156,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#prhlrsjqbg .gt_sourcenotes {
+#jkzwavhlgv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1169,7 +1170,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#prhlrsjqbg .gt_sourcenote {
+#jkzwavhlgv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1177,64 +1178,73 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#prhlrsjqbg .gt_left {
+#jkzwavhlgv .gt_left {
   text-align: left;
 }
 
-#prhlrsjqbg .gt_center {
+#jkzwavhlgv .gt_center {
   text-align: center;
 }
 
-#prhlrsjqbg .gt_right {
+#jkzwavhlgv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#prhlrsjqbg .gt_font_normal {
+#jkzwavhlgv .gt_font_normal {
   font-weight: normal;
 }
 
-#prhlrsjqbg .gt_font_bold {
+#jkzwavhlgv .gt_font_bold {
   font-weight: bold;
 }
 
-#prhlrsjqbg .gt_font_italic {
+#jkzwavhlgv .gt_font_italic {
   font-style: italic;
 }
 
-#prhlrsjqbg .gt_super {
+#jkzwavhlgv .gt_super {
   font-size: 65%;
 }
 
-#prhlrsjqbg .gt_footnote_marks {
+#jkzwavhlgv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#prhlrsjqbg .gt_asterisk {
+#jkzwavhlgv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#prhlrsjqbg .gt_indent_1 {
+#jkzwavhlgv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#prhlrsjqbg .gt_indent_2 {
+#jkzwavhlgv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#prhlrsjqbg .gt_indent_3 {
+#jkzwavhlgv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#prhlrsjqbg .gt_indent_4 {
+#jkzwavhlgv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#prhlrsjqbg .gt_indent_5 {
+#jkzwavhlgv .gt_indent_5 {
   text-indent: 25px;
+}
+
+#jkzwavhlgv .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jkzwavhlgv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">

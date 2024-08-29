@@ -1,5 +1,6 @@
 --- 
 title: "\\huge Getting \\large (more out of) \\huge Graphics"
+subtitle: "Practice and Principles of Data Visualisation"
 author: "Antony Unwin"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

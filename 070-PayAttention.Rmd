@@ -29,7 +29,7 @@ Graphics texts generally consider perception and interpretation, including optic
 
 \newpage
 
-```{r bibi1, fig.asp=1, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Scatterplot of Biacromial diameter against pelvic breadth (Biialic) for 507 adults.'}
+```{r bibi1, fig.asp=1, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults.'}
 data(body, package="gclus")
 ggplot(body, aes(Biiliac, Biacrom)) + geom_point() + theme(axis.title.y = element_text(angle = 0, vjust = 0.5)) + coord_fixed()
 ```
@@ -40,7 +40,7 @@ Biacromial diameter is a technical term for a measurement of the width between t
 
 A graphic without structure can be interesting because it was expected to have structure and did not or because there is more to it when additional information is included.  Figure \@ref(fig:bibi2) colours the points of the plot by sex.
 
-```{r bibi2, fig.asp=1, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Scatterplot of Biacromial diameter (shoulder width) against Biialic (pelvic breadth for 247 men (in green) and 260 women (in purple).'}
+```{r bibi2, fig.asp=1, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Scatterplot of Biacromial diameter (shoulder width) against Biiliac (pelvic breadth for 247 men (in green) and 260 women (in purple).'}
 data(body, package="gclus")
 ggplot(body, aes(Biiliac, Biacrom, colour=factor(Gender))) + geom_point() + scale_colour_manual(values=c("purple2", "springgreen3")) + theme(legend.position="none", axis.title.y = element_text(angle = 0, vjust = 0.5)) + coord_fixed()
 ```
