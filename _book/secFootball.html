@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>16 Watching soccer—the English leagues | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="16 Watching soccer—the English leagues | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="16 Watching soccer—the English leagues | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -755,23 +759,23 @@ Figure 16.4: Proportions of points won at home for every team for every season
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="secFootball.html#cb170-1" tabindex="-1"></a><span class="fu">data.frame</span>(HA3y1)</span></code></pre></div>
 </details>
-<pre><code>##   Season   tier               team away home HomeProportion
-## 1   1893 Tier 2 Northwich Victoria    0   12              1
-## 2   1894 Tier 2    Crewe Alexandra    0   13              1
-## 3   1899 Tier 2       Loughborough    0    9              1
-## 4   1904 Tier 2   Doncaster Rovers    0   11              1
-## 5   1930 Tier 3             Nelson    0   25              1
-## 6   1931 Tier 3      Wigan Borough    0   10              1</code></pre>
+<pre><code>  Season   tier               team away home HomeProportion
+1   1893 Tier 2 Northwich Victoria    0   12              1
+2   1894 Tier 2    Crewe Alexandra    0   13              1
+3   1899 Tier 2       Loughborough    0    9              1
+4   1904 Tier 2   Doncaster Rovers    0   11              1
+5   1930 Tier 3             Nelson    0   25              1
+6   1931 Tier 3      Wigan Borough    0   10              1</code></pre>
 <p>They all finished last except for Wigan Borough in 1931, who folded. In the first season after the Second World War Leeds United drew one away game and lost the other 20 in the first division (the top tier), although they managed six wins and five draws at home. (And yes, they finished last as well.)</p>
 <p>The teams with the worst relative home record (proportions less than 0.35) have been drawn bigger and coloured green. They were:</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="secFootball.html#cb172-1" tabindex="-1"></a><span class="fu">data.frame</span>(HA3y2)</span></code></pre></div>
 </details>
-<pre><code>##   Season   tier            team away home HomeProportion
-## 1   1966 Tier 1       Blackpool   19    8          0.296
-## 2   1997 Tier 1  Crystal Palace   22   11          0.333
-## 3   2013 Tier 2 Birmingham City   30   14          0.318
-## 4   2021 Tier 1         Watford   15    8          0.348</code></pre>
+<pre><code>  Season   tier            team away home HomeProportion
+1   1966 Tier 1       Blackpool   19    8          0.296
+2   1997 Tier 1  Crystal Palace   22   11          0.333
+3   2013 Tier 2 Birmingham City   30   14          0.318
+4   2021 Tier 1         Watford   15    8          0.348</code></pre>
 <p>All were relegated bar Birmingham, who survived on goal difference.</p>
 </div>
 <div id="secFootball4" class="section level2 hasAnchor" number="16.4">

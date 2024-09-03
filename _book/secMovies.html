@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Looking at the movies | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Looking at the movies | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="3 Looking at the movies | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -664,7 +668,7 @@ Two datasets were merged. One contained basic information on each film or show a
 <span id="cb12-3"><a href="secMovies.html#cb12-3" tabindex="-1"></a>films22 <span class="ot">&lt;-</span> films22 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">ng=</span><span class="fu">ifelse</span>(<span class="fu">is.na</span>(gen1), <span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(gen2), <span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(gen3), <span class="dv">0</span>, <span class="dv">1</span>))</span>
 <span id="cb12-4"><a href="secMovies.html#cb12-4" tabindex="-1"></a>films22 <span class="ot">&lt;-</span> films22 <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(genres) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">mm=</span><span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span></code></pre></div>
 </details>
-<p>Many people use IMDb ratings to help them decide what they would like to watch. The ratings are contributed by users of the site. This chapter studies the data on films for which ratings are available. There is a dataset of 58788 films scraped from IMDb several years ago that is available in the R package <strong>ggplot2movies</strong>. Nowadays IMDb makes regularly updated datasets available for download from their website. The one used here was downloaded in July 2022. There were 9033256 items and 1251317 had user ratings or votes. Excluding items labelled TV or video and restricting the data to movies and shorts that had more than 100 ratings left 124667 films.</p>
+<p>Many people use IMDb ratings to help them decide what they would like to watch. The ratings are contributed by users of the site. This chapter studies the data on films for which ratings are available. There is a dataset of 58,788 films scraped from IMDb several years ago that is available in the R package <strong>ggplot2movies</strong>. Nowadays IMDb makes regularly updated datasets available for download from their website. The one used here was downloaded in July 2022. There were 9,033,256 items and 1,251,317 had user ratings or votes. Excluding items labelled TV or video and restricting the data to movies and shorts that had more than 100 ratings left 124,667 films.</p>
 <div style="page-break-after: always;"></div>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="secMovies.html#cb13-1" tabindex="-1"></a><span class="fu">ggplot</span>(films22, <span class="fu">aes</span>(<span class="st">&quot;&quot;</span>, runtime<span class="sc">/</span><span class="dv">10080</span>)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">coord_flip</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.ticks.y=</span><span class="fu">element_blank</span>())</span></code></pre></div>
@@ -798,23 +802,23 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
 <span id="cb23-3"><a href="secMovies.html#cb23-3" tabindex="-1"></a>gX <span class="ot">&lt;-</span> gX <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">cumPerc=</span><span class="fu">round</span>(cp,<span class="dv">1</span>))</span>
 <span id="cb23-4"><a href="secMovies.html#cb23-4" tabindex="-1"></a>gX <span class="sc">%&gt;%</span> <span class="fu">slice_head</span>(<span class="at">n=</span><span class="dv">20</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(genres, cumPerc) <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code></pre></div>
 </details>
-<div id="jkzwavhlgv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jkzwavhlgv table {
+<div id="lcszauoeko" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lcszauoeko table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jkzwavhlgv thead, #jkzwavhlgv tbody, #jkzwavhlgv tfoot, #jkzwavhlgv tr, #jkzwavhlgv td, #jkzwavhlgv th {
+#lcszauoeko thead, #lcszauoeko tbody, #lcszauoeko tfoot, #lcszauoeko tr, #lcszauoeko td, #lcszauoeko th {
   border-style: none;
 }
 
-#jkzwavhlgv p {
+#lcszauoeko p {
   margin: 0;
   padding: 0;
 }
 
-#jkzwavhlgv .gt_table {
+#lcszauoeko .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -840,12 +844,12 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-left-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_caption {
+#lcszauoeko .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jkzwavhlgv .gt_title {
+#lcszauoeko .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -857,7 +861,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-width: 0;
 }
 
-#jkzwavhlgv .gt_subtitle {
+#lcszauoeko .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -869,7 +873,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-top-width: 0;
 }
 
-#jkzwavhlgv .gt_heading {
+#lcszauoeko .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -881,13 +885,13 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_bottom_border {
+#lcszauoeko .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_col_headings {
+#lcszauoeko .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -902,7 +906,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_col_heading {
+#lcszauoeko .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -922,7 +926,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   overflow-x: hidden;
 }
 
-#jkzwavhlgv .gt_column_spanner_outer {
+#lcszauoeko .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -934,15 +938,15 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 4px;
 }
 
-#jkzwavhlgv .gt_column_spanner_outer:first-child {
+#lcszauoeko .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jkzwavhlgv .gt_column_spanner_outer:last-child {
+#lcszauoeko .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jkzwavhlgv .gt_column_spanner {
+#lcszauoeko .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -954,11 +958,11 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   width: 100%;
 }
 
-#jkzwavhlgv .gt_spanner_row {
+#lcszauoeko .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jkzwavhlgv .gt_group_heading {
+#lcszauoeko .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -984,7 +988,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   text-align: left;
 }
 
-#jkzwavhlgv .gt_empty_group_heading {
+#lcszauoeko .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -999,15 +1003,15 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   vertical-align: middle;
 }
 
-#jkzwavhlgv .gt_from_md > :first-child {
+#lcszauoeko .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jkzwavhlgv .gt_from_md > :last-child {
+#lcszauoeko .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jkzwavhlgv .gt_row {
+#lcszauoeko .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1026,7 +1030,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   overflow-x: hidden;
 }
 
-#jkzwavhlgv .gt_stub {
+#lcszauoeko .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1039,7 +1043,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#jkzwavhlgv .gt_stub_row_group {
+#lcszauoeko .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1053,15 +1057,15 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   vertical-align: top;
 }
 
-#jkzwavhlgv .gt_row_group_first td {
+#lcszauoeko .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jkzwavhlgv .gt_row_group_first th {
+#lcszauoeko .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jkzwavhlgv .gt_summary_row {
+#lcszauoeko .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1071,16 +1075,16 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#jkzwavhlgv .gt_first_summary_row {
+#lcszauoeko .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_first_summary_row.thick {
+#lcszauoeko .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jkzwavhlgv .gt_last_summary_row {
+#lcszauoeko .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1090,7 +1094,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_grand_summary_row {
+#lcszauoeko .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1100,7 +1104,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#jkzwavhlgv .gt_first_grand_summary_row {
+#lcszauoeko .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1110,7 +1114,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-top-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_last_grand_summary_row_top {
+#lcszauoeko .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1120,11 +1124,11 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_striped {
+#lcszauoeko .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jkzwavhlgv .gt_table_body {
+#lcszauoeko .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1133,7 +1137,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-bottom-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_footnotes {
+#lcszauoeko .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1147,7 +1151,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_footnote {
+#lcszauoeko .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1156,7 +1160,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#jkzwavhlgv .gt_sourcenotes {
+#lcszauoeko .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1170,7 +1174,7 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   border-right-color: #D3D3D3;
 }
 
-#jkzwavhlgv .gt_sourcenote {
+#lcszauoeko .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1178,72 +1182,72 @@ Figure 3.10: User ratings by number of votes with features marked by boxes
   padding-right: 5px;
 }
 
-#jkzwavhlgv .gt_left {
+#lcszauoeko .gt_left {
   text-align: left;
 }
 
-#jkzwavhlgv .gt_center {
+#lcszauoeko .gt_center {
   text-align: center;
 }
 
-#jkzwavhlgv .gt_right {
+#lcszauoeko .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jkzwavhlgv .gt_font_normal {
+#lcszauoeko .gt_font_normal {
   font-weight: normal;
 }
 
-#jkzwavhlgv .gt_font_bold {
+#lcszauoeko .gt_font_bold {
   font-weight: bold;
 }
 
-#jkzwavhlgv .gt_font_italic {
+#lcszauoeko .gt_font_italic {
   font-style: italic;
 }
 
-#jkzwavhlgv .gt_super {
+#lcszauoeko .gt_super {
   font-size: 65%;
 }
 
-#jkzwavhlgv .gt_footnote_marks {
+#lcszauoeko .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jkzwavhlgv .gt_asterisk {
+#lcszauoeko .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jkzwavhlgv .gt_indent_1 {
+#lcszauoeko .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jkzwavhlgv .gt_indent_2 {
+#lcszauoeko .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jkzwavhlgv .gt_indent_3 {
+#lcszauoeko .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jkzwavhlgv .gt_indent_4 {
+#lcszauoeko .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jkzwavhlgv .gt_indent_5 {
+#lcszauoeko .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jkzwavhlgv .katex-display {
+#lcszauoeko .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jkzwavhlgv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lcszauoeko div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1358,7 +1362,7 @@ Figure 3.13: Number of films by year from 1901 to 2019, faceted by genre in orde
 </div>
 <div id="secMovies5" class="section level2 hasAnchor" number="3.6">
 <h2><span class="header-section-number">3.6</span> Comparing Raging Bull with Jane Austen<a href="secMovies.html#secMovies5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Every IMDb webpage for a film includes a barchart of individual ratings received by a film and average ratings and numbers of votes by sex and four age groups. Around 30% of users do not report their own sex and age It is not known how reliable the information from the other 70% might be.</p>
+<p>Every IMDb webpage for a film includes a barchart of individual ratings received by a film and average ratings and numbers of votes by sex and four age groups. Around 30% of users do not report their own sex and age. It is not known how reliable the information from the other 70% might be.</p>
 <p>Two films were chosen that would have different user responses, “Raging Bull”, the Robert De Niro boxing picture about Jake LaMotta, and “Sense and Sensibility”, the Emma Thompson version of Jane Austen’s novel. Figure <a href="secMovies.html#fig:RBjaB">3.14</a> shows barcharts of the rating distributions. The vertical scales are quite different, as there were around 115,000 ratings of “Sense and Sensibility” and just over three times as many of “Raging Bull”. The patterns are fairly similar, very few poor ratings and the most popular rating being 8 out of 10.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="secMovies.html#cb27-1" tabindex="-1"></a><span class="fu">data</span>(RBSS)</span>

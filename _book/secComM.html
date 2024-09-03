@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>21 Over 90 years running 90 km | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="21 Over 90 years running 90 km | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="21 Over 90 years running 90 km | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -659,7 +663,7 @@ div.csl-indent {
 <p>The data were scraped from the Marathon’s website (<span class="citation">Comrades Marathon Association (<a href="references.html#ref-CMA:2022">2022</a>)</span>) and made available on Kaggle. More detailed data, including runners’ ages and split times for the 2019 race, have been analysed elsewhere (<span class="citation">Collier (<a href="references.html#ref-collier:2019">2019</a>)</span>).</p>
 <p>The race was run for the first time in 1921 from Durban to Pietermaritzburg (“down”), with 16 runners finishing. In 1922 the race was run in the other direction (“up”). Mostly the directions alternated in successive years, but on three occasions they did not.</p>
 <div style="page-break-after: always;"></div>
-<p>Figure <a href="secComM.html#fig:comDir">21.1</a> shows the the numbers of finishers and the directions in each year. The race distance was not always the same and usually a little under 90 km.</p>
+<p>Figure <a href="secComM.html#fig:comDir">21.1</a> shows the numbers of finishers and the directions in each year. The race distance was not always the same and usually a little under 90 km.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="secComM.html#cb223-1" tabindex="-1"></a><span class="fu">data</span>(cmAll)</span>
 <span id="cb223-2"><a href="secComM.html#cb223-2" tabindex="-1"></a>cmAllD <span class="ot">&lt;-</span> cmAll <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Direction, Year) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">N=</span><span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span>

@@ -18,7 +18,7 @@ library(ggpcp)
 
 **Questions**  Which parties did well in the 2021 election?  Are there geographical patterns in party support?  What structural factors are linked to party support?  Are Erststimmen (votes for candidates) and Zweitstimmen (votes for parties) closely related?
 
-**Sources**  The Bundeswahlleiter (Federal Returning Officer) has a website (@bundesWL:2021) offering detailed election results in various forms, a dataset of demographic and structural data for each constituency, and maps of the constituencies.  UK election data is available in the \textsf{R} package **parlitools**\index{R packages!parlitools}.
+**Sources**  The Bundeswahlleiter (Federal Returning Officer) has a website (@bundesWL:2021) offering detailed election results in various forms, a dataset of demographic and structural data for each constituency, and maps of the constituencies.  UK election data is available in the R package **parlitools**\index{R packages!parlitools}.
 
 **Structure**  There were 299 constituencies in 16 Bundesländer (states), just over 61 million registered voters, almost 200 smaller parties or groups standing in one or more constituencies, and 7 larger parties each getting over 2 million votes.\index{datasets!Bundestagswahl}
 

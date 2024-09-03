@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>29 Colour | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="29 Colour | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="29 Colour | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -652,8 +656,8 @@ div.csl-indent {
 </blockquote>
 <div id="secColour1" class="section level2 hasAnchor" number="29.1">
 <h2><span class="header-section-number">29.1</span> Theory and implementation<a href="secColour.html#secColour1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Colour is a complex topic. There has been considerable progress made in our understanding of representing colour, even if that has led to a plethora of systems, be it HCL, HLS, HSV, LAB, LUV, RGB, XYZ or whatever. A valuable reference is <span class="citation">Zeileis et al. (<a href="references.html#ref-zeil:2020">2020</a>)</span> and the accompanying package <strong>colorspace</strong>.</p>
-<p> software has kept pace, and there are many packages offering colour palettes and ways of creating new ones. There are qualitative palettes for different groups or categories, sequential palettes for different values of the same variable, and diverging palettes for variables with a critical point such as zero between profit and loss. In addition, palettes have been designed to counteract colour blindness. There are packages for generating colour palettes from images, and even a package with palettes inspired by Wes Anderson movies.</p>
+<p>Colour is a complex topic. There has been considerable progress made in our understanding of representing colour, even if that has led to a plethora of systems, be it HCL, HLS, HSV, LAB, LUV, RGB, XYZ or whatever. A valuable reference is <span class="citation">Zeileis et al. (<a href="references.html#ref-zeil:2020">2020</a>)</span> and the accompanying R package <strong>colorspace</strong>.</p>
+<p>R software has kept pace, and there are many packages offering colour palettes and ways of creating new ones. There are qualitative palettes for different groups or categories, sequential palettes for different values of the same variable, and diverging palettes for variables with a critical point such as zero between profit and loss. In addition, palettes have been designed to counteract colour blindness. There are R packages for generating colour palettes from images, and even a package with palettes inspired by Wes Anderson movies.</p>
 <p>Many software defaults are effective and do not need to be changed. Colour defaults generally do need to be changed, as will be apparent from the examples. The illustrations used are smaller versions of graphics occurring elsewhere in the book.</p>
 </div>
 <div id="secColour2" class="section level2 hasAnchor" number="29.2">
@@ -812,7 +816,7 @@ Figure 29.10: Three uses of a colour blind palette
 </div>
 <div id="palette-order-counts" class="section level3 hasAnchor" number="29.4.2">
 <h3><span class="header-section-number">29.4.2</span> Palette order counts<a href="secColour.html#palette-order-counts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In §<a href="secAstro.html#secAstro1">10.1</a> spaceflights are coloured by the space station program they joined, if any (Figure <a href="secAstro.html#fig:flighttc">10.5</a>, redrawn as Figure <a href="secColour.html#fig:astro4">29.11</a>). The default ordering of the colour blind palette from the package <strong>ggthemes</strong> was changed to make the Skylab station that was only used briefly in 1973-4 more visible and to keep similar colours apart.</p>
+<p>In §<a href="secAstro.html#secAstro1">10.1</a> spaceflights are coloured by the space station program they joined, if any (Figure <a href="secAstro.html#fig:flighttc">10.5</a>, redrawn as Figure <a href="secColour.html#fig:astro4">29.11</a>). The default ordering of the colour blind palette from the R package <strong>ggthemes</strong> was changed to make the Skylab station that was only used briefly in 1973-4 more visible and to keep similar colours apart.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="secColour.html#cb318-1" tabindex="-1"></a>astroF</span></code></pre></div>
 </details>

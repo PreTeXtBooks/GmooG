@@ -21,7 +21,7 @@ library(palmerpenguins)
 **Structure**  One raw dataset of 344 penguins with 17 variables and one cleaned dataset with 8 variables.\index{datasets!Palmer penguins}
 
 ## Getting an overview of the penguin data {#secPalmerPen1}
-A good example of the LTER research can be found in @gorman:2014.  Some of the data have been made available in the **palmerpenguins** \textsf{R} package\index{R packages!palmerpenguins}, primarily size measurements and isotopic signature information for three species of penguin: Adélie, Chinstrap, and Gentoo.  Colour information is not included, but Gentoo penguins have a distinctive orange bill and white marking above the eyes, while Chinstrap penguins have a narrow black chinstrap.  Attractive drawings of the three species are shown on the **palmerpenguins** package webpage.
+A good example of the LTER research can be found in @gorman:2014.  Some of the data have been made available in the **palmerpenguins** R package\index{R packages!palmerpenguins}, primarily size measurements and isotopic signature information for three species of penguin: Adélie, Chinstrap, and Gentoo.  Colour information is not included, but Gentoo penguins have a distinctive orange bill and white marking above the eyes, while Chinstrap penguins have a narrow black chinstrap.  Attractive drawings of the three species are shown on the **palmerpenguins** package webpage.
 
 The Palmer Archipelago lies to the West of the Antarctic Peninsula, where warming linked to climate change has occurred very fast.  According to @fountain:2022 this is bad for Adélie penguins that do better to the East in the Weddell Sea where it is still cold.  Gentoo penguins are not so affected.
 

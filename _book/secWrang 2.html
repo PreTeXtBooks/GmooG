@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>28 Wrangling | Getting (more out of) Graphics</title>
+  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="28 Wrangling | Getting (more out of) Graphics" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="28 Wrangling | Getting (more out of) Graphics" />
+  
+  <meta name="twitter:description" content="This is the html index file for my GG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
+
+<meta name="author" content="Antony Unwin" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="secProvQ.html"/>
+<link rel="next" href="secColour.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/codefolding-lua-1.1/codefolding-lua.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-are-good-graphics"><i class="fa fa-check"></i><b>1.1</b> What are good graphics?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#graphics-examples"><i class="fa fa-check"></i><b>1.2</b> Graphics examples</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#writing-about-graphics"><i class="fa fa-check"></i><b>1.3</b> Writing about graphics</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#reading-about-graphics"><i class="fa fa-check"></i><b>1.4</b> Reading about graphics</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#books-and-articles-on-data-graphics"><i class="fa fa-check"></i><b>1.4.1</b> Books and articles on data graphics</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#websites-and-other-media"><i class="fa fa-check"></i><b>1.4.2</b> Websites and other media</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#software"><i class="fa fa-check"></i><b>1.5</b> Software</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#structure-of-the-book"><i class="fa fa-check"></i><b>1.6</b> Structure of the book</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#part-i-graphics-in-action"><i class="fa fa-check"></i><b>1.6.1</b> Part I Graphics in Action</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#part-ii-advice-on-graphics"><i class="fa fa-check"></i><b>1.6.2</b> Part II Advice on Graphics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#in-a-nutshell-tldr"><i class="fa fa-check"></i>In a nutshell (tl;dr)</a></li>
+</ul></li>
+<li class="part"><span><b>I Graphics in Action</b></span></li>
+<li class="chapter" data-level="2" data-path="secGapm.html"><a href="secGapm.html"><i class="fa fa-check"></i><b>2</b> Graphics and Gapminder</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="secGapm.html"><a href="secGapm.html#secGapm1"><i class="fa fa-check"></i><b>2.1</b> Gapminder and Hans Rosling</a></li>
+<li class="chapter" data-level="2.2" data-path="secGapm.html"><a href="secGapm.html#secGapm2"><i class="fa fa-check"></i><b>2.2</b> What else can be seen in Gapminder’s plots?</a></li>
+<li class="chapter" data-level="2.3" data-path="secGapm.html"><a href="secGapm.html#secGapm3"><i class="fa fa-check"></i><b>2.3</b> Analysis by regions of the world</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="secGapm.html"><a href="secGapm.html#taking-account-of-country-size"><i class="fa fa-check"></i><b>2.3.1</b> Taking account of country size</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="secGapm.html"><a href="secGapm.html#secGapm4"><i class="fa fa-check"></i><b>2.4</b> Checking what is in the data</a></li>
+<li class="chapter" data-level="2.5" data-path="secGapm.html"><a href="secGapm.html#secGapm5"><i class="fa fa-check"></i><b>2.5</b> The importance of data definitions</a></li>
+<li class="chapter" data-level="2.6" data-path="secGapm.html"><a href="secGapm.html#secGapm6"><i class="fa fa-check"></i><b>2.6</b> Discussion</a>
+<ul>
+<li class="chapter" data-level="" data-path="secGapm.html"><a href="secGapm.html#graphical-takeaways"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="secMovies.html"><a href="secMovies.html"><i class="fa fa-check"></i><b>3</b> Looking at the movies</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="secMovies.html"><a href="secMovies.html#secMovies1"><i class="fa fa-check"></i><b>3.1</b> Trailer</a></li>
+<li class="chapter" data-level="3.2" data-path="secMovies.html"><a href="secMovies.html#secMovies2"><i class="fa fa-check"></i><b>3.2</b> Movies in IMDb over the years</a></li>
+<li class="chapter" data-level="3.3" data-path="secMovies.html"><a href="secMovies.html#secMovies21"><i class="fa fa-check"></i><b>3.3</b> What might IMDb code numbers mean?</a></li>
+<li class="chapter" data-level="3.4" data-path="secMovies.html"><a href="secMovies.html#secMovies3"><i class="fa fa-check"></i><b>3.4</b> What ratings do people give films?</a></li>
+<li class="chapter" data-level="3.5" data-path="secMovies.html"><a href="secMovies.html#secMovies4"><i class="fa fa-check"></i><b>3.5</b> Genres from Rom-Com to Film Noir</a></li>
+<li class="chapter" data-level="3.6" data-path="secMovies.html"><a href="secMovies.html#secMovies5"><i class="fa fa-check"></i><b>3.6</b> Comparing Raging Bull with Jane Austen</a>
+<ul>
+<li class="chapter" data-level="" data-path="secMovies.html"><a href="secMovies.html#graphical-takeaways-1"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sec1912Dem.html"><a href="sec1912Dem.html"><i class="fa fa-check"></i><b>4</b> Voting 46 times to choose a Presidential candidate</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem1"><i class="fa fa-check"></i><b>4.1</b> A first look at the 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="4.2" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem2"><i class="fa fa-check"></i><b>4.2</b> The USA in 1912 and 2020</a></li>
+<li class="chapter" data-level="4.3" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem3"><i class="fa fa-check"></i><b>4.3</b> How the nomination contest unfolded</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#developments"><i class="fa fa-check"></i><b>4.3.1</b> Developments</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem4"><i class="fa fa-check"></i><b>4.4</b> When did the ballots actually take place?</a>
+<ul>
+<li class="chapter" data-level="" data-path="sec1912Dem.html"><a href="sec1912Dem.html#graphical-takeaways-2"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="secLightS.html"><a href="secLightS.html"><i class="fa fa-check"></i><b>5</b> Measuring the speed of light</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="secLightS.html"><a href="secLightS.html#secLightS1"><i class="fa fa-check"></i><b>5.1</b> Michelson, the Master of Light, and his data</a></li>
+<li class="chapter" data-level="5.2" data-path="secLightS.html"><a href="secLightS.html#secLightS2"><i class="fa fa-check"></i><b>5.2</b> Newcomb, self-educated polymath, and his data</a></li>
+<li class="chapter" data-level="5.3" data-path="secLightS.html"><a href="secLightS.html#secLightS3"><i class="fa fa-check"></i><b>5.3</b> Comparing the data of Michelson and Newcomb</a>
+<ul>
+<li class="chapter" data-level="" data-path="secLightS.html"><a href="secLightS.html#graphical-takeaways-3"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="secOlymps.html"><a href="secOlymps.html"><i class="fa fa-check"></i><b>6</b> The modern Olympic Games in numbers</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps1"><i class="fa fa-check"></i><b>6.1</b> How good are the data?</a></li>
+<li class="chapter" data-level="6.2" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps2"><i class="fa fa-check"></i><b>6.2</b> How much have performances improved?</a></li>
+<li class="chapter" data-level="6.3" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps3"><i class="fa fa-check"></i><b>6.3</b> How many countries and individuals competed?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secOlymps.html"><a href="secOlymps.html#graphical-takeaways-4"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="secBertin.html"><a href="secBertin.html"><i class="fa fa-check"></i><b>7</b> Re-viewing Bertin’s main example</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="secBertin.html"><a href="secBertin.html#secBertin1"><i class="fa fa-check"></i><b>7.1</b> Bertin’s classic book</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="secBertin.html"><a href="secBertin.html#a-first-map-agricultural-workers"><i class="fa fa-check"></i><b>7.1.1</b> A first map: agricultural workers</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="secBertin.html"><a href="secBertin.html#secBertin2"><i class="fa fa-check"></i><b>7.2</b> Bertin’s many graphics of the French workforce data</a></li>
+<li class="chapter" data-level="7.3" data-path="secBertin.html"><a href="secBertin.html#secBertin3"><i class="fa fa-check"></i><b>7.3</b> Viewing the data today</a></li>
+<li class="chapter" data-level="7.4" data-path="secBertin.html"><a href="secBertin.html#secBertin4"><i class="fa fa-check"></i><b>7.4</b> Are there other geographic patterns?</a></li>
+<li class="chapter" data-level="7.5" data-path="secBertin.html"><a href="secBertin.html#secBertin5"><i class="fa fa-check"></i><b>7.5</b> Density of the workforce by area</a></li>
+<li class="chapter" data-level="7.6" data-path="secBertin.html"><a href="secBertin.html#secBertin6"><i class="fa fa-check"></i><b>7.6</b> Comments on Bertin (with hindsight)</a>
+<ul>
+<li class="chapter" data-level="" data-path="secBertin.html"><a href="secBertin.html#graphical-takeaways-5"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="secChess.html"><a href="secChess.html"><i class="fa fa-check"></i><b>8</b> Comparing chess players across the board</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="secChess.html"><a href="secChess.html#secChess1"><i class="fa fa-check"></i><b>8.1</b> FIDE ratings of chess players</a></li>
+<li class="chapter" data-level="8.2" data-path="secChess.html"><a href="secChess.html#secChess2"><i class="fa fa-check"></i><b>8.2</b> Comparing chess players by age and sex</a></li>
+<li class="chapter" data-level="8.3" data-path="secChess.html"><a href="secChess.html#secChess3"><i class="fa fa-check"></i><b>8.3</b> Which nations have the best chess players?</a></li>
+<li class="chapter" data-level="8.4" data-path="secChess.html"><a href="secChess.html#secChess4"><i class="fa fa-check"></i><b>8.4</b> Ratings change over time</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="secChess.html"><a href="secChess.html#individual-players"><i class="fa fa-check"></i><b>8.4.1</b> Individual players</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="secChess.html"><a href="secChess.html#secChess5"><i class="fa fa-check"></i><b>8.5</b> Grandmasters and Masters</a>
+<ul>
+<li class="chapter" data-level="" data-path="secChess.html"><a href="secChess.html#graphical-takeaways-6"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="secGayR.html"><a href="secGayR.html"><i class="fa fa-check"></i><b>9</b> Results from surveys on gay rights</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="secGayR.html"><a href="secGayR.html#secGayR1"><i class="fa fa-check"></i><b>9.1</b> Survey results by age, sex, and race</a></li>
+<li class="chapter" data-level="9.2" data-path="secGayR.html"><a href="secGayR.html#secGayR2"><i class="fa fa-check"></i><b>9.2</b> Mapping the survey results</a></li>
+<li class="chapter" data-level="9.3" data-path="secGayR.html"><a href="secGayR.html#secGayR3"><i class="fa fa-check"></i><b>9.3</b> Comparing responses to related, but different questions</a>
+<ul>
+<li class="chapter" data-level="" data-path="secGayR.html"><a href="secGayR.html#graphical-takeaways-7"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="secAstro.html"><a href="secAstro.html"><i class="fa fa-check"></i><b>10</b> Who went up in space for how long?</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="secAstro.html"><a href="secAstro.html#secAstro1"><i class="fa fa-check"></i><b>10.1</b> What human spaceflights have there been?</a></li>
+<li class="chapter" data-level="10.2" data-path="secAstro.html"><a href="secAstro.html#secAstro1a"><i class="fa fa-check"></i><b>10.2</b> Mission times in space</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="secAstro.html"><a href="secAstro.html#secAstro2"><i class="fa fa-check"></i><b>10.2.1</b> Logging mission times</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="secAstro.html"><a href="secAstro.html#secAstro4"><i class="fa fa-check"></i><b>10.3</b> Checking the data with graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secAstro.html"><a href="secAstro.html#graphical-takeaways-8"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="secDiam.html"><a href="secDiam.html"><i class="fa fa-check"></i><b>11</b> Data in the sky at night</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="secDiam.html"><a href="secDiam.html#secDiam1"><i class="fa fa-check"></i><b>11.1</b> Data on diamonds for sale</a></li>
+<li class="chapter" data-level="11.2" data-path="secDiam.html"><a href="secDiam.html#secDiam2"><i class="fa fa-check"></i><b>11.2</b> Checking for outliers and unusual values</a></li>
+<li class="chapter" data-level="11.3" data-path="secDiam.html"><a href="secDiam.html#secDiam3"><i class="fa fa-check"></i><b>11.3</b> Intriguing features</a>
+<ul>
+<li class="chapter" data-level="" data-path="secDiam.html"><a href="secDiam.html#graphical-takeaways-9"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="secPsor.html"><a href="secPsor.html"><i class="fa fa-check"></i><b>12</b> Psoriasis and the Quality of Life</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="secPsor.html"><a href="secPsor.html#secPsor1"><i class="fa fa-check"></i><b>12.1</b> Comparing treatment and placebo groups</a></li>
+<li class="chapter" data-level="12.2" data-path="secPsor.html"><a href="secPsor.html#secPsor2"><i class="fa fa-check"></i><b>12.2</b> Examining responses to individual questions</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPsor.html"><a href="secPsor.html#graphical-takeaways-10"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="secElecC.html"><a href="secElecC.html"><i class="fa fa-check"></i><b>13</b> Charging electric cars</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="secElecC.html"><a href="secElecC.html#secElecC1"><i class="fa fa-check"></i><b>13.1</b> How was the study organised?</a></li>
+<li class="chapter" data-level="13.2" data-path="secElecC.html"><a href="secElecC.html#secElecC2"><i class="fa fa-check"></i><b>13.2</b> How long does charging cars take?</a></li>
+<li class="chapter" data-level="13.3" data-path="secElecC.html"><a href="secElecC.html#secElecC3"><i class="fa fa-check"></i><b>13.3</b> Charging patterns through the week</a>
+<ul>
+<li class="chapter" data-level="" data-path="secElecC.html"><a href="secElecC.html#graphical-takeaways-11"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="secFinches.html"><a href="secFinches.html"><i class="fa fa-check"></i><b>14</b> Darwin’s Finches</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="secFinches.html"><a href="secFinches.html#secFinches1"><i class="fa fa-check"></i><b>14.1</b> How do Darwin’s finches differ?</a></li>
+<li class="chapter" data-level="14.2" data-path="secFinches.html"><a href="secFinches.html#secFinches2"><i class="fa fa-check"></i><b>14.2</b> Do species vary across the Galápagos islands?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secFinches.html"><a href="secFinches.html#graphical-takeaways-12"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="secEuros.html"><a href="secEuros.html"><i class="fa fa-check"></i><b>15</b> Home or away: where do soccer players play?</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="secEuros.html"><a href="secEuros.html#secEuros1"><i class="fa fa-check"></i><b>15.1</b> The European Football Championship since 1960</a></li>
+<li class="chapter" data-level="15.2" data-path="secEuros.html"><a href="secEuros.html#secEuros2"><i class="fa fa-check"></i><b>15.2</b> Which leagues do international players play in?</a></li>
+<li class="chapter" data-level="15.3" data-path="secEuros.html"><a href="secEuros.html#secEuros3"><i class="fa fa-check"></i><b>15.3</b> How have countries changed?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secEuros.html"><a href="secEuros.html#graphical-takeaways-13"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="secFootball.html"><a href="secFootball.html"><i class="fa fa-check"></i><b>16</b> Watching soccer—the English leagues</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="secFootball.html"><a href="secFootball.html#secFootball1"><i class="fa fa-check"></i><b>16.1</b> History of the English football leagues since 1888</a></li>
+<li class="chapter" data-level="16.2" data-path="secFootball.html"><a href="secFootball.html#secFootball2"><i class="fa fa-check"></i><b>16.2</b> How have numbers of draws changed?</a></li>
+<li class="chapter" data-level="16.3" data-path="secFootball.html"><a href="secFootball.html#secFootball3"><i class="fa fa-check"></i><b>16.3</b> How big is home advantage?</a></li>
+<li class="chapter" data-level="16.4" data-path="secFootball.html"><a href="secFootball.html#secFootball4"><i class="fa fa-check"></i><b>16.4</b> Have the numbers of goals scored gone down?</a></li>
+<li class="chapter" data-level="16.5" data-path="secFootball.html"><a href="secFootball.html#secFootball5"><i class="fa fa-check"></i><b>16.5</b> How well have teams performed over the years?</a></li>
+<li class="chapter" data-level="16.6" data-path="secFootball.html"><a href="secFootball.html#secFootball6"><i class="fa fa-check"></i><b>16.6</b> Wormcharts show league progress over a season</a>
+<ul>
+<li class="chapter" data-level="16.6.1" data-path="secFootball.html"><a href="secFootball.html#leicester-city-are-champions-for-the-first-time"><i class="fa fa-check"></i><b>16.6.1</b> Leicester City are Champions for the first time!</a></li>
+<li class="chapter" data-level="16.6.2" data-path="secFootball.html"><a href="secFootball.html#the-1982-83-season-had-a-few-surprises"><i class="fa fa-check"></i><b>16.6.2</b> The 1982-83 season had a few surprises</a></li>
+<li class="chapter" data-level="16.6.3" data-path="secFootball.html"><a href="secFootball.html#the-most-equal-and-unequal-seasons"><i class="fa fa-check"></i><b>16.6.3</b> The most equal and unequal seasons</a></li>
+<li class="chapter" data-level="" data-path="secFootball.html"><a href="secFootball.html#graphical-takeaways-14"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="secVehicles.html"><a href="secVehicles.html"><i class="fa fa-check"></i><b>17</b> Fuel efficiency of cars in the USA</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles1"><i class="fa fa-check"></i><b>17.1</b> How efficient are different types of car?</a></li>
+<li class="chapter" data-level="17.2" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles2"><i class="fa fa-check"></i><b>17.2</b> Small (?) luxury cars</a></li>
+<li class="chapter" data-level="17.3" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles3"><i class="fa fa-check"></i><b>17.3</b> How many car models have been evaluated over the years?</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="secVehicles.html"><a href="secVehicles.html#station-wagons-and-suvs"><i class="fa fa-check"></i><b>17.3.1</b> Station wagons and SUVs</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles4"><i class="fa fa-check"></i><b>17.4</b> Comparing fuel efficiency of individual models over time</a>
+<ul>
+<li class="chapter" data-level="" data-path="secVehicles.html"><a href="secVehicles.html#graphical-takeaways-15"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="secPalmerPen.html"><a href="secPalmerPen.html"><i class="fa fa-check"></i><b>18</b> Differences amongst the Palmer penguins</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen1"><i class="fa fa-check"></i><b>18.1</b> Getting an overview of the penguin data</a></li>
+<li class="chapter" data-level="18.2" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen2"><i class="fa fa-check"></i><b>18.2</b> Looking at several variables in one plot</a></li>
+<li class="chapter" data-level="18.3" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen3"><i class="fa fa-check"></i><b>18.3</b> Using raw data to get more information</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPalmerPen.html"><a href="secPalmerPen.html#graphical-takeaways-16"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="secMalaria.html"><a href="secMalaria.html"><i class="fa fa-check"></i><b>19</b> Comparing tests for malaria</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria1"><i class="fa fa-check"></i><b>19.1</b> How much agreement is there between the four tests?</a></li>
+<li class="chapter" data-level="19.2" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria2"><i class="fa fa-check"></i><b>19.2</b> Additional analyses</a>
+<ul>
+<li class="chapter" data-level="" data-path="secMalaria.html"><a href="secMalaria.html#graphical-takeaways-17"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="secSwim.html"><a href="secSwim.html"><i class="fa fa-check"></i><b>20</b> Are swimmers swimming faster?</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="secSwim.html"><a href="secSwim.html#secSwim1"><i class="fa fa-check"></i><b>20.1</b> Best times for different strokes</a></li>
+<li class="chapter" data-level="20.2" data-path="secSwim.html"><a href="secSwim.html#secSwim2"><i class="fa fa-check"></i><b>20.2</b> How good are the best swimmers across multiple events?</a></li>
+<li class="chapter" data-level="20.3" data-path="secSwim.html"><a href="secSwim.html#secSwim3"><i class="fa fa-check"></i><b>20.3</b> Comparing events graphically</a></li>
+<li class="chapter" data-level="20.4" data-path="secSwim.html"><a href="secSwim.html#secSwim4"><i class="fa fa-check"></i><b>20.4</b> How do relay races compare with individual races?</a></li>
+<li class="chapter" data-level="20.5" data-path="secSwim.html"><a href="secSwim.html#secSwim5"><i class="fa fa-check"></i><b>20.5</b> How do countries compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secSwim.html"><a href="secSwim.html#graphical-takeaways-18"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="secComM.html"><a href="secComM.html"><i class="fa fa-check"></i><b>21</b> Over 90 years running 90 km</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="secComM.html"><a href="secComM.html#secComM1"><i class="fa fa-check"></i><b>21.1</b> How many run in the Comrades (Ultra)Marathon?</a></li>
+<li class="chapter" data-level="21.2" data-path="secComM.html"><a href="secComM.html#secComM2"><i class="fa fa-check"></i><b>21.2</b> Numbers by age and sex</a></li>
+<li class="chapter" data-level="21.3" data-path="secComM.html"><a href="secComM.html#secComM3"><i class="fa fa-check"></i><b>21.3</b> How long do runners take to finish?</a></li>
+<li class="chapter" data-level="21.4" data-path="secComM.html"><a href="secComM.html#secComM5"><i class="fa fa-check"></i><b>21.4</b> Comparing times for men and women</a>
+<ul>
+<li class="chapter" data-level="21.4.1" data-path="secComM.html"><a href="secComM.html#best-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.1</b> Best times for men and women</a></li>
+<li class="chapter" data-level="21.4.2" data-path="secComM.html"><a href="secComM.html#median-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.2</b> Median times for men and women</a></li>
+</ul></li>
+<li class="chapter" data-level="21.5" data-path="secComM.html"><a href="secComM.html#secComM6"><i class="fa fa-check"></i><b>21.5</b> How many runners get medals?</a></li>
+<li class="chapter" data-level="21.6" data-path="secComM.html"><a href="secComM.html#secComM4"><i class="fa fa-check"></i><b>21.6</b> How different are the “up” and “down” races?</a></li>
+<li class="chapter" data-level="21.7" data-path="secComM.html"><a href="secComM.html#secComM7"><i class="fa fa-check"></i><b>21.7</b> How do individual runners perform over the years?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secComM.html"><a href="secComM.html#graphical-takeaways-19"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="secFace.html"><a href="secFace.html"><i class="fa fa-check"></i><b>22</b> Comparing software for facial recognition</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="secFace.html"><a href="secFace.html#secFace1"><i class="fa fa-check"></i><b>22.1</b> How well do the softwares do?</a></li>
+<li class="chapter" data-level="22.2" data-path="secFace.html"><a href="secFace.html#secFace2"><i class="fa fa-check"></i><b>22.2</b> Are positive predictive values (PPV) a good criterion?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secFace.html"><a href="secFace.html#graphical-takeaways-20"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="secShears.html"><a href="secShears.html"><i class="fa fa-check"></i><b>23</b> Distinguishing shearwaters</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="secShears.html"><a href="secShears.html#secShears1"><i class="fa fa-check"></i><b>23.1</b> Distinguishing shearwaters and puffins</a></li>
+<li class="chapter" data-level="23.2" data-path="secShears.html"><a href="secShears.html#secShears2"><i class="fa fa-check"></i><b>23.2</b> Comparing two shearwater species (Audubon and Galápagos)</a></li>
+<li class="chapter" data-level="23.3" data-path="secShears.html"><a href="secShears.html#secShears3"><i class="fa fa-check"></i><b>23.3</b> Can the species be clustered?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secShears.html"><a href="secShears.html#graphical-takeaways-21"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="secDeer.html"><a href="secDeer.html"><i class="fa fa-check"></i><b>24</b> When do road accidents with deer happen in Bavaria?</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="secDeer.html"><a href="secDeer.html#secDeer1"><i class="fa fa-check"></i><b>24.1</b> Vehicle accidents involving deer</a></li>
+<li class="chapter" data-level="24.2" data-path="secDeer.html"><a href="secDeer.html#secDeer2"><i class="fa fa-check"></i><b>24.2</b> What about vehicle accidents without deer?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secDeer.html"><a href="secDeer.html#graphical-takeaways-22"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="secTitan.html"><a href="secTitan.html"><i class="fa fa-check"></i><b>25</b> The Titanic Disaster</a>
+<ul>
+<li class="chapter" data-level="25.1" data-path="secTitan.html"><a href="secTitan.html#secTitan1"><i class="fa fa-check"></i><b>25.1</b> Who travelled on the Titanic?</a></li>
+<li class="chapter" data-level="25.2" data-path="secTitan.html"><a href="secTitan.html#secTitan2"><i class="fa fa-check"></i><b>25.2</b> Which groups had high survival rates?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secTitan.html"><a href="secTitan.html#graphical-takeaways-23"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="secBTwahl.html"><a href="secBTwahl.html"><i class="fa fa-check"></i><b>26</b> German Election 2021—what happened?</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl1"><i class="fa fa-check"></i><b>26.1</b> Who won the 2021 election?</a></li>
+<li class="chapter" data-level="26.2" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl2"><i class="fa fa-check"></i><b>26.2</b> Are there geographic patterns?</a></li>
+<li class="chapter" data-level="26.3" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl3"><i class="fa fa-check"></i><b>26.3</b> Who won the first-past-the-post seats?</a></li>
+<li class="chapter" data-level="26.4" data-path="secBTwahl.html"><a href="secBTwahl.html#how-do-first-past-the-post-and-party-votes-compare"><i class="fa fa-check"></i><b>26.4</b> How do first-past-the-post and party votes compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secBTwahl.html"><a href="secBTwahl.html#graphical-takeaways-24"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Advice on Graphics</b></span></li>
+<li class="chapter" data-level="27" data-path="secProvQ.html"><a href="secProvQ.html"><i class="fa fa-check"></i><b>27</b> Provenance and quality</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="secProvQ.html"><a href="secProvQ.html#what-does-provenance-mean"><i class="fa fa-check"></i><b>27.1</b> What does provenance mean?</a></li>
+<li class="chapter" data-level="27.2" data-path="secProvQ.html"><a href="secProvQ.html#what-problems-arise-with-datasets"><i class="fa fa-check"></i><b>27.2</b> What problems arise with datasets?</a>
+<ul>
+<li class="chapter" data-level="27.2.1" data-path="secProvQ.html"><a href="secProvQ.html#data-definitions"><i class="fa fa-check"></i><b>27.2.1</b> Data definitions</a></li>
+<li class="chapter" data-level="27.2.2" data-path="secProvQ.html"><a href="secProvQ.html#data-collection"><i class="fa fa-check"></i><b>27.2.2</b> Data collection</a></li>
+<li class="chapter" data-level="27.2.3" data-path="secProvQ.html"><a href="secProvQ.html#data-availability"><i class="fa fa-check"></i><b>27.2.3</b> Data availability</a></li>
+</ul></li>
+<li class="chapter" data-level="27.3" data-path="secProvQ.html"><a href="secProvQ.html#the-provenance-of-datasets-used-in-the-book"><i class="fa fa-check"></i><b>27.3</b> The provenance of datasets used in the book</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="secProvQ.html"><a href="secProvQ.html#gapminder-chapter-refsecgapm"><i class="fa fa-check"></i><b>27.3.1</b> Gapminder (Chapter @ref(secGapm))</a></li>
+<li class="chapter" data-level="27.3.2" data-path="secProvQ.html"><a href="secProvQ.html#movies-chapter-refsecmovies"><i class="fa fa-check"></i><b>27.3.2</b> Movies (Chapter @ref(secMovies))</a></li>
+<li class="chapter" data-level="27.3.3" data-path="secProvQ.html"><a href="secProvQ.html#democratic-convention-1912-chapter-refsec1912dem"><i class="fa fa-check"></i><b>27.3.3</b> Democratic Convention 1912 (Chapter @ref(sec1912Dem))</a></li>
+<li class="chapter" data-level="27.3.4" data-path="secProvQ.html"><a href="secProvQ.html#speed-of-light-chapter-refseclights"><i class="fa fa-check"></i><b>27.3.4</b> Speed of light (Chapter @ref(secLightS))</a></li>
+<li class="chapter" data-level="27.3.5" data-path="secProvQ.html"><a href="secProvQ.html#olympic-games-chapter-refsecolymps"><i class="fa fa-check"></i><b>27.3.5</b> Olympic Games (Chapter @ref(secOlymps))</a></li>
+<li class="chapter" data-level="27.3.6" data-path="secProvQ.html"><a href="secProvQ.html#chess-ratings-chapter-refsecchess"><i class="fa fa-check"></i><b>27.3.6</b> Chess ratings (Chapter @ref(secChess))</a></li>
+<li class="chapter" data-level="27.3.7" data-path="secProvQ.html"><a href="secProvQ.html#attitudes-to-same-sex-marriage-chapter-refsecgayr"><i class="fa fa-check"></i><b>27.3.7</b> Attitudes to same-sex marriage (Chapter @ref(secGayR))</a></li>
+<li class="chapter" data-level="27.3.8" data-path="secProvQ.html"><a href="secProvQ.html#human-spaceflights-chapter-refsecastro"><i class="fa fa-check"></i><b>27.3.8</b> Human spaceflights (Chapter @ref(secAstro))</a></li>
+<li class="chapter" data-level="27.3.9" data-path="secProvQ.html"><a href="secProvQ.html#diamonds-chapter-refsecdiam"><i class="fa fa-check"></i><b>27.3.9</b> Diamonds (Chapter @ref(secDiam))</a></li>
+<li class="chapter" data-level="27.3.10" data-path="secProvQ.html"><a href="secProvQ.html#electric-car-charging-chapter-refsecelecc"><i class="fa fa-check"></i><b>27.3.10</b> Electric car charging (Chapter @ref(secElecC))</a></li>
+<li class="chapter" data-level="27.3.11" data-path="secProvQ.html"><a href="secProvQ.html#darwins-finches-chapter-refsecfinches"><i class="fa fa-check"></i><b>27.3.11</b> Darwin’s finches (Chapter @ref(secFinches))</a></li>
+<li class="chapter" data-level="27.3.12" data-path="secProvQ.html"><a href="secProvQ.html#vehicle-fuel-consumption-chapter-refsecvehicles"><i class="fa fa-check"></i><b>27.3.12</b> Vehicle fuel consumption (Chapter @ref(secVehicles))</a></li>
+<li class="chapter" data-level="27.3.13" data-path="secProvQ.html"><a href="secProvQ.html#comrades-marathon-chapter-refseccomm"><i class="fa fa-check"></i><b>27.3.13</b> Comrades Marathon (Chapter @ref(secComM))</a></li>
+<li class="chapter" data-level="27.3.14" data-path="secProvQ.html"><a href="secProvQ.html#shearwaters-chapter-refsecshears"><i class="fa fa-check"></i><b>27.3.14</b> Shearwaters (Chapter @ref(secShears))</a></li>
+<li class="chapter" data-level="27.3.15" data-path="secProvQ.html"><a href="secProvQ.html#titanic-chapter-refsectitan"><i class="fa fa-check"></i><b>27.3.15</b> Titanic (Chapter @ref(secTitan))</a></li>
+</ul></li>
+<li class="chapter" data-level="27.4" data-path="secProvQ.html"><a href="secProvQ.html#how-do-invented-simulated-and-real-datasets-compare"><i class="fa fa-check"></i><b>27.4</b> How do invented, simulated, and real datasets compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secProvQ.html"><a href="secProvQ.html#main-points"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="secWrang.html"><a href="secWrang.html"><i class="fa fa-check"></i><b>28</b> Wrangling</a>
+<ul>
+<li class="chapter" data-level="28.1" data-path="secWrang.html"><a href="secWrang.html#secWrang1"><i class="fa fa-check"></i><b>28.1</b> Data wrangling: what and why</a></li>
+<li class="chapter" data-level="28.2" data-path="secWrang.html"><a href="secWrang.html#secWrang2"><i class="fa fa-check"></i><b>28.2</b> Data cleaning and transforming</a>
+<ul>
+<li class="chapter" data-level="28.2.1" data-path="secWrang.html"><a href="secWrang.html#errors-typos-outliers-missing-values"><i class="fa fa-check"></i><b>28.2.1</b> Errors, typos, outliers, missing values</a></li>
+<li class="chapter" data-level="28.2.2" data-path="secWrang.html"><a href="secWrang.html#secWrang22"><i class="fa fa-check"></i><b>28.2.2</b> Transforming and combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="28.3" data-path="secWrang.html"><a href="secWrang.html#secWrang3"><i class="fa fa-check"></i><b>28.3</b> Restructuring: subsetting, grouping, aggregating</a></li>
+<li class="chapter" data-level="28.4" data-path="secWrang.html"><a href="secWrang.html#naming-renaming-and-reclassifying"><i class="fa fa-check"></i><b>28.4</b> Naming, renaming and reclassifying</a></li>
+<li class="chapter" data-level="28.5" data-path="secWrang.html"><a href="secWrang.html#secWrang4"><i class="fa fa-check"></i><b>28.5</b> Wrangling for layered graphics</a>
+<ul>
+<li class="chapter" data-level="28.5.1" data-path="secWrang.html"><a href="secWrang.html#types-of-layers"><i class="fa fa-check"></i><b>28.5.1</b> Types of layers</a></li>
+<li class="chapter" data-level="28.5.2" data-path="secWrang.html"><a href="secWrang.html#the-layers-of-a-league-wormchart"><i class="fa fa-check"></i><b>28.5.2</b> The layers of a league wormchart</a></li>
+</ul></li>
+<li class="chapter" data-level="28.6" data-path="secWrang.html"><a href="secWrang.html#secWrang5"><i class="fa fa-check"></i><b>28.6</b> Putting datasets together and reproducibility</a>
+<ul>
+<li class="chapter" data-level="28.6.1" data-path="secWrang.html"><a href="secWrang.html#reading-in-and-merging-datasets"><i class="fa fa-check"></i><b>28.6.1</b> Reading in and merging datasets</a></li>
+<li class="chapter" data-level="28.6.2" data-path="secWrang.html"><a href="secWrang.html#reproducibility"><i class="fa fa-check"></i><b>28.6.2</b> Reproducibility </a></li>
+<li class="chapter" data-level="" data-path="secWrang.html"><a href="secWrang.html#main-points-1"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="secColour.html"><a href="secColour.html"><i class="fa fa-check"></i><b>29</b> Colour</a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="secColour.html"><a href="secColour.html#secColour1"><i class="fa fa-check"></i><b>29.1</b> Theory and implementation</a></li>
+<li class="chapter" data-level="29.2" data-path="secColour.html"><a href="secColour.html#secColour2"><i class="fa fa-check"></i><b>29.2</b> Perception of colour</a></li>
+<li class="chapter" data-level="29.3" data-path="secColour.html"><a href="secColour.html#secColour3"><i class="fa fa-check"></i><b>29.3</b> Value of colour</a>
+<ul>
+<li class="chapter" data-level="29.3.1" data-path="secColour.html"><a href="secColour.html#colours-distinguish"><i class="fa fa-check"></i><b>29.3.1</b> Colours distinguish</a></li>
+<li class="chapter" data-level="29.3.2" data-path="secColour.html"><a href="secColour.html#colours-highlight"><i class="fa fa-check"></i><b>29.3.2</b> Colours highlight</a></li>
+<li class="chapter" data-level="29.3.3" data-path="secColour.html"><a href="secColour.html#colours-connect"><i class="fa fa-check"></i><b>29.3.3</b> Colours connect</a></li>
+<li class="chapter" data-level="29.3.4" data-path="secColour.html"><a href="secColour.html#colours-separate"><i class="fa fa-check"></i><b>29.3.4</b> Colours separate</a></li>
+<li class="chapter" data-level="29.3.5" data-path="secColour.html"><a href="secColour.html#colours-signify"><i class="fa fa-check"></i><b>29.3.5</b> Colours signify</a></li>
+<li class="chapter" data-level="29.3.6" data-path="secColour.html"><a href="secColour.html#colours-attract"><i class="fa fa-check"></i><b>29.3.6</b> Colours attract</a></li>
+</ul></li>
+<li class="chapter" data-level="29.4" data-path="secColour.html"><a href="secColour.html#secColour4"><i class="fa fa-check"></i><b>29.4</b> Choice of colour</a>
+<ul>
+<li class="chapter" data-level="29.4.1" data-path="secColour.html"><a href="secColour.html#colour-blind-palettes-help"><i class="fa fa-check"></i><b>29.4.1</b> Colour blind palettes help</a></li>
+<li class="chapter" data-level="29.4.2" data-path="secColour.html"><a href="secColour.html#palette-order-counts"><i class="fa fa-check"></i><b>29.4.2</b> Palette order counts</a></li>
+<li class="chapter" data-level="29.4.3" data-path="secColour.html"><a href="secColour.html#there-may-not-be-enough-colours"><i class="fa fa-check"></i><b>29.4.3</b> There may not be enough colours</a></li>
+<li class="chapter" data-level="29.4.4" data-path="secColour.html"><a href="secColour.html#avoid-using-the-same-colours-for-different-datasets"><i class="fa fa-check"></i><b>29.4.4</b> Avoid using the same colours for different datasets</a></li>
+<li class="chapter" data-level="29.4.5" data-path="secColour.html"><a href="secColour.html#avoid-overlapping-colours-use-faceting"><i class="fa fa-check"></i><b>29.4.5</b> Avoid overlapping colours, use faceting</a></li>
+<li class="chapter" data-level="29.4.6" data-path="secColour.html"><a href="secColour.html#backgrounds-matter"><i class="fa fa-check"></i><b>29.4.6</b> Backgrounds matter</a></li>
+<li class="chapter" data-level="" data-path="secColour.html"><a href="secColour.html#main-points-2"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="secScene.html"><a href="secScene.html"><i class="fa fa-check"></i><b>30</b> Setting the scene</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="secScene.html"><a href="secScene.html#secScene6"><i class="fa fa-check"></i><b>30.1</b> Scaling</a></li>
+<li class="chapter" data-level="30.2" data-path="secScene.html"><a href="secScene.html#secScene4"><i class="fa fa-check"></i><b>30.2</b> Formatting</a>
+<ul>
+<li class="chapter" data-level="30.2.1" data-path="secScene.html"><a href="secScene.html#points-areas-lines"><i class="fa fa-check"></i><b>30.2.1</b> Points, areas, lines, …</a></li>
+<li class="chapter" data-level="30.2.2" data-path="secScene.html"><a href="secScene.html#plot"><i class="fa fa-check"></i><b>30.2.2</b> Plot</a></li>
+<li class="chapter" data-level="30.2.3" data-path="secScene.html"><a href="secScene.html#position"><i class="fa fa-check"></i><b>30.2.3</b> Position</a></li>
+</ul></li>
+<li class="chapter" data-level="30.3" data-path="secScene.html"><a href="secScene.html#secScene3"><i class="fa fa-check"></i><b>30.3</b> Making space</a></li>
+<li class="chapter" data-level="30.4" data-path="secScene.html"><a href="secScene.html#secScene1"><i class="fa fa-check"></i><b>30.4</b> Layout</a></li>
+<li class="chapter" data-level="30.5" data-path="secScene.html"><a href="secScene.html#secScene2"><i class="fa fa-check"></i><b>30.5</b> Comparisons and graphics</a>
+<ul>
+<li class="chapter" data-level="30.5.1" data-path="secScene.html"><a href="secScene.html#types-of-comparison"><i class="fa fa-check"></i><b>30.5.1</b> Types of comparison</a></li>
+<li class="chapter" data-level="30.5.2" data-path="secScene.html"><a href="secScene.html#superposition-juxtaposition-and-faceting"><i class="fa fa-check"></i><b>30.5.2</b> Superposition, juxtaposition, and faceting</a></li>
+<li class="chapter" data-level="30.5.3" data-path="secScene.html"><a href="secScene.html#advice"><i class="fa fa-check"></i><b>30.5.3</b> Advice</a></li>
+</ul></li>
+<li class="chapter" data-level="30.6" data-path="secScene.html"><a href="secScene.html#secScene5"><i class="fa fa-check"></i><b>30.6</b> Defaults</a>
+<ul>
+<li class="chapter" data-level="" data-path="secScene.html"><a href="secScene.html#main-points-3"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="secOrder.html"><a href="secOrder.html"><i class="fa fa-check"></i><b>31</b> Ordering, sorting, and arranging</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="secOrder.html"><a href="secOrder.html#secOrder1"><i class="fa fa-check"></i><b>31.1</b> What gets ordered, sorted, arranged?</a>
+<ul>
+<li class="chapter" data-level="31.1.1" data-path="secOrder.html"><a href="secOrder.html#cases"><i class="fa fa-check"></i><b>31.1.1</b> Cases</a></li>
+<li class="chapter" data-level="31.1.2" data-path="secOrder.html"><a href="secOrder.html#levels-of-categorical-variables"><i class="fa fa-check"></i><b>31.1.2</b> Levels of categorical variables</a></li>
+<li class="chapter" data-level="31.1.3" data-path="secOrder.html"><a href="secOrder.html#variables"><i class="fa fa-check"></i><b>31.1.3</b> Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="31.2" data-path="secOrder.html"><a href="secOrder.html#secOrder2"><i class="fa fa-check"></i><b>31.2</b> Ordering and sorting within graphics</a>
+<ul>
+<li class="chapter" data-level="31.2.1" data-path="secOrder.html"><a href="secOrder.html#secBoxes"><i class="fa fa-check"></i><b>31.2.1</b> Boxplots</a></li>
+<li class="chapter" data-level="31.2.2" data-path="secOrder.html"><a href="secOrder.html#sorting-into-groups-and-faceting-plots"><i class="fa fa-check"></i><b>31.2.2</b> Sorting into groups and faceting plots</a></li>
+<li class="chapter" data-level="31.2.3" data-path="secOrder.html"><a href="secOrder.html#secMosps"><i class="fa fa-check"></i><b>31.2.3</b> Mosaicplots</a></li>
+<li class="chapter" data-level="31.2.4" data-path="secOrder.html"><a href="secOrder.html#secPCPs"><i class="fa fa-check"></i><b>31.2.4</b> Parallel coordinate plots</a></li>
+</ul></li>
+<li class="chapter" data-level="31.3" data-path="secOrder.html"><a href="secOrder.html#secOrder3"><i class="fa fa-check"></i><b>31.3</b> Numbers of orderings and sortings</a></li>
+<li class="chapter" data-level="31.4" data-path="secOrder.html"><a href="secOrder.html#secOrder4"><i class="fa fa-check"></i><b>31.4</b> Arranging graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secOrder.html"><a href="secOrder.html#main-points-4"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="secInterp.html"><a href="secInterp.html"><i class="fa fa-check"></i><b>32</b> What affects interpretation?</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="secInterp.html"><a href="secInterp.html#secAttention"><i class="fa fa-check"></i><b>32.1</b> Attention</a>
+<ul>
+<li class="chapter" data-level="32.1.1" data-path="secInterp.html"><a href="secInterp.html#types-of-attention"><i class="fa fa-check"></i><b>32.1.1</b> Types of attention</a></li>
+<li class="chapter" data-level="32.1.2" data-path="secInterp.html"><a href="secInterp.html#cognitive-load"><i class="fa fa-check"></i><b>32.1.2</b> Cognitive load</a></li>
+<li class="chapter" data-level="32.1.3" data-path="secInterp.html"><a href="secInterp.html#rewards-for-paying-attention"><i class="fa fa-check"></i><b>32.1.3</b> Rewards for paying attention</a></li>
+</ul></li>
+<li class="chapter" data-level="32.2" data-path="secInterp.html"><a href="secInterp.html#secUnderstand"><i class="fa fa-check"></i><b>32.2</b> Understanding</a>
+<ul>
+<li class="chapter" data-level="32.2.1" data-path="secInterp.html"><a href="secInterp.html#knowledge"><i class="fa fa-check"></i><b>32.2.1</b> Knowledge</a></li>
+<li class="chapter" data-level="32.2.2" data-path="secInterp.html"><a href="secInterp.html#experience"><i class="fa fa-check"></i><b>32.2.2</b> Experience</a></li>
+<li class="chapter" data-level="32.2.3" data-path="secInterp.html"><a href="secInterp.html#possible-cognitive-biases"><i class="fa fa-check"></i><b>32.2.3</b> Possible cognitive biases</a></li>
+</ul></li>
+<li class="chapter" data-level="32.3" data-path="secInterp.html"><a href="secInterp.html#secCheck"><i class="fa fa-check"></i><b>32.3</b> Checking</a>
+<ul>
+<li class="chapter" data-level="32.3.1" data-path="secInterp.html"><a href="secInterp.html#provenance"><i class="fa fa-check"></i><b>32.3.1</b> Provenance</a></li>
+<li class="chapter" data-level="32.3.2" data-path="secInterp.html"><a href="secInterp.html#looking-at-the-numbers"><i class="fa fa-check"></i><b>32.3.2</b> Looking at the numbers</a></li>
+<li class="chapter" data-level="32.3.3" data-path="secInterp.html"><a href="secInterp.html#varying-plots"><i class="fa fa-check"></i><b>32.3.3</b> Varying plots</a></li>
+<li class="chapter" data-level="32.3.4" data-path="secInterp.html"><a href="secInterp.html#varying-plot-forms"><i class="fa fa-check"></i><b>32.3.4</b> Varying plot forms</a></li>
+<li class="chapter" data-level="32.3.5" data-path="secInterp.html"><a href="secInterp.html#statistical-checks"><i class="fa fa-check"></i><b>32.3.5</b> Statistical checks</a></li>
+<li class="chapter" data-level="32.3.6" data-path="secInterp.html"><a href="secInterp.html#checking-consequences"><i class="fa fa-check"></i><b>32.3.6</b> Checking consequences</a></li>
+<li class="chapter" data-level="32.3.7" data-path="secInterp.html"><a href="secInterp.html#context"><i class="fa fa-check"></i><b>32.3.7</b> Context</a></li>
+<li class="chapter" data-level="32.3.8" data-path="secInterp.html"><a href="secInterp.html#discussing-with-others-especially-domain-experts"><i class="fa fa-check"></i><b>32.3.8</b> Discussing with others, especially domain experts</a></li>
+<li class="chapter" data-level="32.3.9" data-path="secInterp.html"><a href="secInterp.html#replicate"><i class="fa fa-check"></i><b>32.3.9</b> Replicate</a></li>
+<li class="chapter" data-level="32.3.10" data-path="secInterp.html"><a href="secInterp.html#example-of-checking"><i class="fa fa-check"></i><b>32.3.10</b> Example of checking</a></li>
+<li class="chapter" data-level="" data-path="secInterp.html"><a href="secInterp.html#main-points-5"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="secPlot.html"><a href="secPlot.html"><i class="fa fa-check"></i><b>33</b> Varieties of plots, developing plots</a>
+<ul>
+<li class="chapter" data-level="33.1" data-path="secPlot.html"><a href="secPlot.html#varying-various-plots"><i class="fa fa-check"></i><b>33.1</b> Varying various plots</a></li>
+<li class="chapter" data-level="33.2" data-path="secPlot.html"><a href="secPlot.html#ensembles-of-plots"><i class="fa fa-check"></i><b>33.2</b> Ensembles of plots</a></li>
+<li class="chapter" data-level="33.3" data-path="secPlot.html"><a href="secPlot.html#differences-between-early-drafts-and-later-graphics"><i class="fa fa-check"></i><b>33.3</b> Differences between early drafts and later graphics</a>
+<ul>
+<li class="chapter" data-level="33.3.1" data-path="secPlot.html"><a href="secPlot.html#democratic-convention"><i class="fa fa-check"></i><b>33.3.1</b> 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="33.3.2" data-path="secPlot.html"><a href="secPlot.html#gapminder-life-expectancies"><i class="fa fa-check"></i><b>33.3.2</b> Gapminder Life Expectancies</a></li>
+<li class="chapter" data-level="33.3.3" data-path="secPlot.html"><a href="secPlot.html#electric-car-charging"><i class="fa fa-check"></i><b>33.3.3</b> Electric car charging</a></li>
+<li class="chapter" data-level="33.3.4" data-path="secPlot.html"><a href="secPlot.html#gay-rights"><i class="fa fa-check"></i><b>33.3.4</b> Gay rights</a></li>
+<li class="chapter" data-level="33.3.5" data-path="secPlot.html"><a href="secPlot.html#human-space-flight"><i class="fa fa-check"></i><b>33.3.5</b> Human space flight</a></li>
+<li class="chapter" data-level="33.3.6" data-path="secPlot.html"><a href="secPlot.html#euro-2020"><i class="fa fa-check"></i><b>33.3.6</b> Euro 2020</a></li>
+<li class="chapter" data-level="33.3.7" data-path="secPlot.html"><a href="secPlot.html#characteristic-changes"><i class="fa fa-check"></i><b>33.3.7</b> Characteristic changes</a></li>
+</ul></li>
+<li class="chapter" data-level="33.4" data-path="secPlot.html"><a href="secPlot.html#classifying-graphics"><i class="fa fa-check"></i><b>33.4</b> Classifying graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPlot.html"><a href="secPlot.html#main-points-6"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="34" data-path="conclusions-and-recommendations.html"><a href="conclusions-and-recommendations.html"><i class="fa fa-check"></i><b>34</b> Conclusions and recommendations</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Getting (more out of) Graphics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="secWrang" class="section level1 hasAnchor" number="28">
+<h1><span class="header-section-number">28</span> Wrangling<a href="secWrang.html#secWrang" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p>“He did not arrive at this conclusion by the decent process of quiet, logical deduction, nor yet by the blinding flash of glorious intuition, but by the shoddy, untidy process halfway between the two by which one usually gets to know things.”</p>
+</blockquote>
+<blockquote>
+<footer>
+— Margery Allingham, ‘Death of a Ghost’
+</footer>
+</blockquote>
+<div id="secWrang1" class="section level2 hasAnchor" number="28.1">
+<h2><span class="header-section-number">28.1</span> Data wrangling: what and why<a href="secWrang.html#secWrang1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data wrangling covers all the work put into cleaning, organising, and restructuring data. Few datasets arrive perfectly formed in an ideal shape—other than datasets found in textbooks. They have to be checked (correcting or excluding cases) and reorganised (reformatting, transforming, and restructuring them). A detailed example is described in <span class="citation">Amaliah et al. (<a href="references.html#ref-amal:2022">2022</a>)</span>. In-depth studies require a range of analyses, involving grouping, subsetting, and aggregating datasets.</p>
+<p>Data wrangling takes time and effort. Every dataset with problems has different problems. Sometimes they are immediately obvious, sometimes they only become apparent during analysis. There are many, many ways of restructuring datasets. Some will be better than others. It will depend on the particular dataset and the reasons for analysing it.</p>
+</div>
+<div id="secWrang2" class="section level2 hasAnchor" number="28.2">
+<h2><span class="header-section-number">28.2</span> Data cleaning and transforming<a href="secWrang.html#secWrang2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="errors-typos-outliers-missing-values" class="section level3 hasAnchor" number="28.2.1">
+<h3><span class="header-section-number">28.2.1</span> Errors, typos, outliers, missing values<a href="secWrang.html#errors-typos-outliers-missing-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Some errors are obvious (e.g., impossible values like diamonds with zero dimensions in §<a href="secDiam.html#secDiam2">11.2</a>), some become visible thanks to graphics displays (such as the diamond outliers observed in Figure <a href="secDiam.html#fig:scatxyz">11.6</a>), some emerge after analyses. The Olympics dataset in Chapter <a href="secOlymps.html#secOlymps">6</a> had different names for the same event at different Olympic Games, as uncovered by Figure <a href="secOlymps.html#fig:olyEg">6.4</a>. The human spaceflight dataset in Chapter <a href="secAstro.html#secAstro">10</a> recorded different times for people on the same mission and had a few other data issues that are discussed in §<a href="secAstro.html#secAstro4">10.3</a>. Amongst the chess players with FIDE ratings in 2015 there were 15 supposedly born in 1900. These errors were doubtless due to a 00 coding used somewhere in the original data submission. The corresponding ages were marked as NA, a standard code for a missing value.</p>
+<p>Often errors can be corrected. Sometimes they can be discarded as definitely wrong. Ideally there are not many of them. Whether whole cases should be excluded if some data are in error or missing depends on how the data are used. For small datasets it can be important to have exactly the same cases in each plot; for larger datasets this is less critical.</p>
+<p>Missing values may be recorded with different codings. The Annenberg survey data in Chapter <a href="secGayR.html#secGayR">9</a> used “998” for “Don’t know” and “999” for “Refused”. In the movie dataset in Chapter <a href="secMovies.html#secMovies">3</a>, some missing values were recorded as “\N”.</p>
+</div>
+<div id="secWrang22" class="section level3 hasAnchor" number="28.2.2">
+<h3><span class="header-section-number">28.2.2</span> Transforming and combining variables<a href="secWrang.html#secWrang22" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Variable transformations can help to pick out individual data features. Standardising variables makes distributional comparisons across variables possible. Combining variables can reveal more complex structures.</p>
+<p>Variables may be transformed onto alternative scales or combined with other variables to form new ones. The boxplot of movie runtimes, Figure <a href="secMovies.html#fig:movieRunB">3.1</a>, is scaled in weeks instead of minutes to help viewers make sense of the extreme values. Who remembers that 50,000 minutes is around 5 weeks?</p>
+<p>Several transformations were used in Chapter <a href="secFootball.html#secFootball">16</a> about football leagues. The main ones were needed to convert game scores into tables of results and league tables. The wrangling was complicated by a number of changes over time: three points for a win instead of two, using goal difference instead of goal average, changes in divisional structure, and, most recently, an incomplete season for two divisions due to Covid. Other transformations included a square root transformation used in Figure <a href="secFootball.html#fig:teamBPSq">16.7</a> to emphasise higher league positions over lower ones. In the wormcharts of team performances across seasons (Figures <a href="secFootball.html#fig:worm15">16.8</a> to <a href="secFootball.html#fig:worm3768">16.10</a>), cumulative team points were transformed by subtracting the league average at the time to make it easier to compare teams’ performances.</p>
+<p>The mission times of individuals on spaceflights were initially plotted on a linear scale in Figure <a href="secAstro.html#fig:flightt">10.4</a>, shown again on the left of Figure <a href="secWrang.html#fig:flighttX">28.1</a>. Plotting mission times on a log scale in Figure <a href="secAstro.html#fig:flighttl">10.6</a>, repeated on the right of Figure <a href="secWrang.html#fig:flighttX">28.1</a>, provided a better view. It also led to adding a more informative vertical scale.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="secWrang.html#cb297-1" tabindex="-1"></a>fttX</span>
+<span id="cb297-2"><a href="secWrang.html#cb297-2" tabindex="-1"></a>ftlX</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:flighttX"></span>
+<img src="_main_files/figure-html/flighttX-1.png" alt="Individual spaceflight mission times over the years, plotted on a linear scale (left) and a logged scale (right)" width="45%" /><img src="_main_files/figure-html/flighttX-2.png" alt="Individual spaceflight mission times over the years, plotted on a linear scale (left) and a logged scale (right)" width="45%" />
+<p class="caption">
+Figure 28.1: Individual spaceflight mission times over the years, plotted on a linear scale (left) and a logged scale (right)
+</p>
+</div>
+<p>Transformations can be used to standardise data to make distributions for different groups or variables more comparable. In §<a href="secOlymps.html#secOlymps2">6.2</a> performance improvements in athletics events at the Olympic were compared over the years. Figure <a href="secOlymps.html#fig:olyA">6.7</a>, repeated in Figure <a href="secWrang.html#fig:olyAA">28.2</a>, shows the percentage changes for track and field events for men and women. Baselines were taken to be the average of gold medal performances at the Olympics from 1996 to 2016. For field events gold medal performances tended higher as winning distances became longer and winning heights became higher. For track events gold medal performances tended lower, as winning times got faster. An inverse transformation of the track events data could have been used to make their gold medal performances tend higher too.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="secWrang.html#cb298-1" tabindex="-1"></a>olyAX</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:olyAA"></span>
+<img src="_main_files/figure-html/olyAA-1.png" alt="Percentage differences in gold medal performances in athletics events compared with averages over the last six Games" width="70%" />
+<p class="caption">
+Figure 28.2: Percentage differences in gold medal performances in athletics events compared with averages over the last six Games
+</p>
+</div>
+<p>Variables in parallel coordinate plots almost always need to be standardised and there are several ways of doing it. Methods include putting variables individually onto [0,1] scales or normalising them by using the mean and standard deviation or by using robust statistics. There are examples in Chapter <a href="secFinches.html#secFinches">14</a> for Darwin’s finches and in Chapter <a href="secPalmerPen.html#secPalmerPen">18</a> for the Palmer penguins, where the transformations of the continuous variables are to [0,1] scales.</p>
+<p>The decathlon provides an example where special transformations are used. The current scoring system, introduced in 1984, converts performances in the ten events to points using a different three-parameter formula for each event (<span class="citation">IAAF (<a href="references.html#ref-IAAF:2001">2001</a>)</span>). As equal points are intended to reflect equal performances, no further standardisation is needed in principle. Figure <a href="secOrder.html#fig:pcp1">31.9</a> shows how that can work in practice.</p>
+<p>Categorical variables may be reported as numbers instead of text and it is worth making the effort to convert them to meaningful labels. Transforming the order of levels of a categorical variable from a default such as alphabetic is always sensible (and is discussed in Chapter <a href="secOrder.html#secOrder">31</a>). Occasionally numeric variables are assumed by software to be character variables, usually because the data file has a text error, and they have to be converted to numeric after fixing the text error. Software can often make good guesses about data characteristics, but you need to check.</p>
+<p>Date and time information need special handling in software and almost certainly have to be transformed first. Newcomb’s estimates of the speed of light are displayed by experimental order in Figure <a href="secLightS.html#fig:newct1X">5.6</a> and by date in Figure <a href="secLightS.html#fig:newct2X">5.7</a>. The differences are important for understanding the data. The two plots are shown again in Figure <a href="secWrang.html#fig:newctY">28.3</a> below. The dates taken as text are from Newcomb’s paper (<span class="citation">Newcomb (<a href="references.html#ref-newcomb:1891">1891</a>)</span>) and were transformed to a special date format so that the software could scale them appropriately.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="secWrang.html#cb299-1" tabindex="-1"></a>(newct1XX <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>)) <span class="sc">+</span> newct2XX</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:newctY"></span>
+<img src="_main_files/figure-html/newctY-1.png" alt="Newcomb's estimates of the speed of light, plotted in order (left) and by date (right)" width="672" />
+<p class="caption">
+Figure 28.3: Newcomb’s estimates of the speed of light, plotted in order (left) and by date (right)
+</p>
+</div>
+<p>In Chapter <a href="secDeer.html#secDeer">24</a> two datasets of half-hourly data over 10 years were analysed. Investigating patterns across days, months, and years required combining the textual date and time information and converting it into dates and times could deal with.</p>
+<p>Spatial datasets also require special treatment. They may be reported in any one of a large number of possible coordinate reference systems and it is essential in any study to convert all the spatial data to the same system. Much work has gone into transforming between these systems and the current state of play is summarised in <span class="citation">Bivand (<a href="references.html#ref-bivand:2020">2020</a>)</span>. One example here involved adding city locations to the maps of France in Figures <a href="secBertin.html#fig:Bertagp">7.1</a> and <a href="secBertin.html#fig:BertLine">7.4</a>. A further complication in Chapter <a href="secBertin.html#secBertin">7</a> was converting a modern shape file of the departments of France to one matching the form in 1954. Finally cartograms may be used to take account of differences between areas as in Figures <a href="secBertin.html#fig:BertCart">7.5</a> and <a href="secGayR.html#fig:gayMapC">9.7</a>. The spatial transformations applied require complex iterative methods.</p>
+</div>
+</div>
+<div id="secWrang3" class="section level2 hasAnchor" number="28.3">
+<h2><span class="header-section-number">28.3</span> Restructuring: subsetting, grouping, aggregating<a href="secWrang.html#secWrang3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some subsets are investigated more than others. It depends on the aims of the study. Subsetting involves selecting the relevant variables and cases. Large datasets can be heterogeneous with cases being of many distinct kinds that should be analysed separately. Subsetting overlaps with excluding errors, outliers or other problematic cases.</p>
+<p>In studying how gold medal performances had changed over the years at the Olympics, only the subset of athletics and swimming events were considered. Weightlifting events could have been studied too, but many Olympic disciplines—e.g., gymnastics, boxing, diving—are not readily comparable over time.</p>
+<p>Subsetting selects part of a dataset to be analysed. Grouping splits a dataset or subset into groups to be compared. In Chapter <a href="secPsor.html#secPsor">12</a> results for two groups, those getting a treatment for their psoriasis and those receiving a placebo, were compared. In Chapter <a href="secFinches.html#secFinches">14</a> species of Darwin’s finches were compared on one island, and one species was compared across different islands. In Chapter <a href="secPalmerPen.html#secPalmerPen">18</a> three species of Penguins were compared. In Chapter <a href="secSwim.html#secSwim">20</a> subsets of swimming performances were chosen and then compared by stroke, distance, and swimmer’s sex. In the Comrades Marathon dataset the numbers running were grouped by sex and age and compared over time in Figure <a href="secComM.html#fig:comCats">21.2</a>, shown here in reduced size as Figure <a href="secWrang.html#fig:comCatsX">28.4</a>.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="secWrang.html#cb300-1" tabindex="-1"></a>comX</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:comCatsX"></span>
+<img src="_main_files/figure-html/comCatsX-1.png" alt="Numbers of finishers of the Comrades Ultramarathon by age group and sex from 1975 to 2019" width="75%" />
+<p class="caption">
+Figure 28.4: Numbers of finishers of the Comrades Ultramarathon by age group and sex from 1975 to 2019
+</p>
+</div>
+<p>Statistics are summaries based on aggregations. They depend on how data have been subset, grouped or aggregated. In the analysis of the 2021 German election in Chapter <a href="secBTwahl.html#secBTwahl">26</a>, results could be studied by individual constituency, by Bundesland, by groups of Bundesländer (such as the former East and West), or by the whole country. It is relatively easy to keep track of such hierarchical or nested structures. If there are several categorical variables with no hierarchical structure, as in the study of fuel efficiency of cars in the US in Chapter <a href="secVehicles.html#secVehicles">17</a>, there are many possible summarising levels. Just considering two of the classifying variables could lead to statistics for vehicle classes within manufacturer or for manufacturers within vehicle class or for vehicle classes and manufacturers.</p>
+<p>Further flexibility arises when there are variables with many categories. Analyses may be simplified by combining smaller categories, as was done in Chapters <a href="secChess.html#secChess">8</a>, <a href="secEuros.html#secEuros">15</a>, <a href="secVehicles.html#secVehicles">17</a>, <a href="secTitan.html#secTitan">25</a>, and <a href="secBTwahl.html#secBTwahl">26</a>. Different analysts will have different opinions on how small small should be.</p>
+</div>
+<div id="naming-renaming-and-reclassifying" class="section level2 hasAnchor" number="28.4">
+<h2><span class="header-section-number">28.4</span> Naming, renaming and reclassifying<a href="secWrang.html#naming-renaming-and-reclassifying" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Datasets</em></p>
+<p>Merging, subsetting, grouping, aggregating all create new versions of a dataset. Transforming variables and creating new ones do too. It is helpful to name and store these new datasets if they are going to be used more than once. This can lead to a large number of stored objects (Chapter <a href="secFootball.html#secFootball">16</a> had over thirty), but provides structure for analyses—assuming supportive naming conventions are used.</p>
+<p><em>Variables and categories</em></p>
+<p>Variables may have abbreviated names when informative ones would be more helpful, for instance when software automatically uses names on plots and reports. Ideally, derived variables should be given names that reflect what they represent, so that it is easier to recognise what they measure. Software may classify numeric variables incorrectly if text is found amongst their values (perhaps notes or special codes like currency symbols). Exchanging data files between countries using decimal points and those using decimal commas also requires wrangling. It is common to have to reclassify variables as numeric after text has been replaced or removed.</p>
+<p>Levels of categorical variables may be provided as numbers. It is better they be given meaningful names (which also ensures that the variables are not classified as numeric).</p>
+</div>
+<div id="secWrang4" class="section level2 hasAnchor" number="28.5">
+<h2><span class="header-section-number">28.5</span> Wrangling for layered graphics<a href="secWrang.html#secWrang4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="citation">Wickham (<a href="references.html#ref-wickham:2016">2016</a>)</span> emphasised the advantages of thinking of data graphics as being built up of layers, one on top of the other, an idea that has been used in cartography for a long time. Sometimes the layers are all drawn using the same dataset, sometimes each layer is drawn with a different dataset. In the latter case, the datasets may be subsets, aggregations, or even models derived from one main dataset. Constructing them is part of data wrangling. A simple example plotting the distribution of bill lengths for the Adélie penguins shows the idea in Figure <a href="secWrang.html#fig:histlayers">28.5</a>.</p>
+<div style="page-break-after: always;"></div>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="secWrang.html#cb301-1" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb301-2"><a href="secWrang.html#cb301-2" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> penguins</span>
+<span id="cb301-3"><a href="secWrang.html#cb301-3" tabindex="-1"></a>p2a <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">&quot;Adelie&quot;</span>, <span class="sc">!</span>(<span class="fu">is.na</span>(bill_length_mm)))</span>
+<span id="cb301-4"><a href="secWrang.html#cb301-4" tabindex="-1"></a><span class="fu">names</span>(p2a)[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">&quot;bill length (mm)&quot;</span></span>
+<span id="cb301-5"><a href="secWrang.html#cb301-5" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb301-6"><a href="secWrang.html#cb301-6" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2a, <span class="fu">aes</span>(<span class="st">`</span><span class="at">bill length (mm)</span><span class="st">`</span>)) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">30</span>,<span class="dv">50</span>)</span>
+<span id="cb301-7"><a href="secWrang.html#cb301-7" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> g2 <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span><span class="fu">after_stat</span>(density)), <span class="at">boundary=</span><span class="dv">0</span>, <span class="at">binwidth=</span><span class="dv">1</span>, <span class="at">fill=</span><span class="st">&quot;grey80&quot;</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="fl">0.2</span>)</span>
+<span id="cb301-8"><a href="secWrang.html#cb301-8" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> g3 <span class="sc">+</span> <span class="fu">geom_density</span>(<span class="at">colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">linewidth=</span><span class="fl">1.25</span>, <span class="at">adjust=</span><span class="fl">1.5</span>)</span>
+<span id="cb301-9"><a href="secWrang.html#cb301-9" tabindex="-1"></a>g5 <span class="ot">&lt;-</span> g4 <span class="sc">+</span> <span class="fu">geom_density</span>(<span class="at">colour=</span><span class="st">&quot;blue&quot;</span>, <span class="at">linewidth=</span><span class="fl">1.25</span>, <span class="at">adjust=</span><span class="fl">0.5</span>)</span>
+<span id="cb301-10"><a href="secWrang.html#cb301-10" tabindex="-1"></a>Adelg6 <span class="ot">&lt;-</span> g5 <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Adelie penguin bill lengths&quot;</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">vjust=</span><span class="dv">2</span>))</span>
+<span id="cb301-11"><a href="secWrang.html#cb301-11" tabindex="-1"></a>(g1 <span class="sc">+</span> g2 <span class="sc">+</span> g3)<span class="sc">/</span>(g4 <span class="sc">+</span> g5 <span class="sc">+</span> Adelg6)</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histlayers"></span>
+<img src="_main_files/figure-html/histlayers-1.png" alt="Layers building up to a histogram of the bill lengths of Adelie penguins with two superimposed density estimates." width="672" />
+<p class="caption">
+Figure 28.5: Layers building up to a histogram of the bill lengths of Adelie penguins with two superimposed density estimates.
+</p>
+</div>
+<p>The first layer top left is the background colour. The second adds a scale and x-axis label for the variable to be plotted. A histogram layer is added top right with the corresponding vertical axis scale (a density, not a count, so estimates can be overlaid). The first two plots of the lower row add a first and then a second density estimate. The final plot adds the plot title.</p>
+<p>The advantages of a layered structure are that it is straightforward to add and remove layers to see what impact they have. It is clear where formatting options should be defined (such as binwidths for histograms or colours for points and lines). An additional advantage lies in being able to use different datasets in different layers. You might want to only use a subset in one layer, you might want to use data from a different year in another layer, you might want to use quite different, but related datasets. The only condition is that all fit in the scale limits of the plot. Layered structures offer flexible and explicit support.</p>
+<p>Decoding graphics is easier when layers are clearly and separately defined. You can examine each in turn to study how it might be interpreted and what it contributes to the plot. It might emphasise information already present or add additional information. Reading code for plots made by others is simpler, as the code can be deciphered one layer at a time.</p>
+<div id="types-of-layers" class="section level3 hasAnchor" number="28.5.1">
+<h3><span class="header-section-number">28.5.1</span> Types of layers<a href="secWrang.html#types-of-layers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A plot’s layers are of different types and the order the layers are drawn makes a difference to how a plot looks. Generally, the background layers are drawn first, then the data and summarising layers, and finally the guide and text layers. Filled areas, for instance with a histogram or a boxplot, should be drawn before points and lines to avoid hiding them. Using transparency can help. The effects of drawing colours on top of one another, when objects in one layer are directly above objects in another, has to be checked.</p>
+<p>In Figure <a href="secWrang.html#fig:histlayers">28.5</a> the two density estimates cover up the histogram details in the final plot (which suggests that they are a fairly good fit). Similarly, the second, rougher estimate covers up the first, although the differences can still be seen. A bigger version of the plot would be better, as in Figure <a href="secWrang.html#fig:histlayers2">28.6</a>. Now all the details can be seen. Graphics need to be large enough to display the information in them.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="secWrang.html#cb302-1" tabindex="-1"></a>Adelg6</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histlayers2"></span>
+<img src="_main_files/figure-html/histlayers2-1.png" alt="Histogram of the bill lengths of Adelie penguins with two superimposed density estimates" width="672" />
+<p class="caption">
+Figure 28.6: Histogram of the bill lengths of Adelie penguins with two superimposed density estimates
+</p>
+</div>
+<p><em>Background layers</em></p>
+<p>The background colour of graphics in the past was usually white, as if they were drawn on a blank page. Nowadays background shadings of your own choice can be used or even a mixture by drawing layers on top of one another. Combinations of colours, transparency, and shapes can produce distinctive and unique patterns—if that is what is wanted. One muted background layer may suffice.</p>
+<p>Axes, scales and gridlines frame the data. Axes and scales are almost always needed for data graphics (the main exception being network displays). When variables are specified, axes and their scales are drawn on top of any background colours and may include major and minor gridlines.</p>
+<p><em>Data layers</em></p>
+<p>Data layers are drawn on top of the background layers. They may use points or symbols, lines, bars or other area shapes. There are many variants and any software should offer a wide range. Amongst other options there are horizontal lines, vertical lines, lines connecting points directly, using a step or in a path. There can be multiple layers of data types. Figure <a href="sec1912Dem.html#fig:convt">4.7</a> and many others use separate layers of points and lines for the same data.</p>
+<p>There can also be multiple layers of data using different datasets. Figure <a href="secFootball.html#fig:socDf">16.2</a>, repeated here as Figure <a href="secWrang.html#fig:socDfX">28.7</a>, uses data from three different leagues over three overlapping but different time ranges. The scale limits must be set in the first data layer to ensure that all data are shown.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="secWrang.html#cb303-1" tabindex="-1"></a>drEIS</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:socDfX"></span>
+<img src="_main_files/figure-html/socDfX-1.png" alt="Rates of draws for the top tiers in Italy (dark blue) since 1934, England (light blue) since 1888, and Spain (red) since 1928" width="60%" />
+<p class="caption">
+Figure 28.7: Rates of draws for the top tiers in Italy (dark blue) since 1934, England (light blue) since 1888, and Spain (red) since 1928
+</p>
+</div>
+<p><em>Summarising, modelling, and uncertainty layers</em></p>
+<p>Data may be summarised using statistics or models. There could be several layers of such displays. On top of point data there might be a layer of group means and layers for linear fit and smoothed models. Data may be recorded as estimates with measures of variability. The corresponding uncertainty can be represented by error bars. Model uncertainty may be represented in a graphic by ribbons or bands around the model. Examples include chess ratings by age (Figure <a href="secChess.html#fig:AgeRatingScat">8.21</a>), age by year of mission of astronauts (Figure <a href="secAstro.html#fig:astg">10.2</a>, redrawn here as Figure <a href="secWrang.html#fig:astgY">28.8</a>), and Titanic survival rates (Figure <a href="secTitan.html#fig:titanAgeSC">25.12</a>).</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="secWrang.html#cb304-1" tabindex="-1"></a>astgB <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour=</span>sex), <span class="at">size=</span><span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">colour=</span>sex))</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:astgY"></span>
+<img src="_main_files/figure-html/astgY-1.png" alt="Scatterplot of age by year of space flight coloured by sex, with smooths and their confidence intervals" width="75%" />
+<p class="caption">
+Figure 28.8: Scatterplot of age by year of space flight coloured by sex, with smooths and their confidence intervals
+</p>
+</div>
+<p>Data layers and summarising layers overlap to some extent. Histograms and boxplots summarise data, but are best thought of as data layers.</p>
+<p><em>Guide and text layers</em></p>
+<p>Guides can be added in additional layers: boundary lines, borders separating groups, plot areas coloured to differentiate them (Figure <a href="sec1912Dem.html#fig:convt">4.7</a>), arrows to point to particular features. Text layers can be drawn to add titles, legends, annotations, labels for points or lines.</p>
+<p>Layering is effective for faceted data when the whole dataset is drawn in a muted colour in each facet first and each facet’s subset is drawn on top in colour, ghostplotting. Figure <a href="secAstro.html#fig:flightn">10.7</a> is an example, redrawn here as Figure <a href="secWrang.html#fig:flightX">28.9</a>:</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="secWrang.html#cb305-1" tabindex="-1"></a>flx</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:flightX"></span>
+<img src="_main_files/figure-html/flightX-1.png" alt="Logged spaceflight mission times of individuals by year of flight by nationality" width="672" />
+<p class="caption">
+Figure 28.9: Logged spaceflight mission times of individuals by year of flight by nationality
+</p>
+</div>
+</div>
+<div id="the-layers-of-a-league-wormchart" class="section level3 hasAnchor" number="28.5.2">
+<h3><span class="header-section-number">28.5.2</span> The layers of a league wormchart<a href="secWrang.html#the-layers-of-a-league-wormchart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Figure <a href="secWrang.html#fig:worm54">28.10</a> is a wormchart for the English League Championship of 1954-55, similar to the plots for other seasons in §<a href="secFootball.html#secFootball6">16.6</a>. There were 22 teams, each playing 42 games. There were just 2 points for a win and only two teams were relegated. Chelsea won with the low total of 54 points. At the half-way mark of 21 games, Chelsea were level on points with Cardiff City, who finished 20th. The bottom club, Sheffield Wednesday, had an appalling run in mid-season and would have finished much further adrift had they not surprisingly won three of their last four games.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="secWrang.html#cb306-1" tabindex="-1"></a><span class="fu">wormchart</span>(Zall, <span class="dv">1954</span>, <span class="dv">1</span>, <span class="dv">4</span>)</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:worm54"></span>
+<img src="_main_files/figure-html/worm54-1.png" alt="Wormchart for season 1954-55" width="672" />
+<p class="caption">
+Figure 28.10: Wormchart for season 1954-55
+</p>
+</div>
+<p>Figure <a href="secWrang.html#fig:worm54">28.10</a> has eight layers and uses four datasets. Figure <a href="secWrang.html#fig:wormlayers">28.11</a> shows the build-up. There are background layers of colour and axes; a line layer of team performances drawn lightly (using a dataset of all teams); a layer of coloured, thicker lines for the top four and bottom four teams (using the subset of those eight teams); a text layer with the names of all teams (using a subset based on the last day of the season to get the order right); a segment layer connecting each team’s name to the end of its line with dots; a coloured text layer for the top four and bottom four teams (using the relevant subset of the previous dataset); a title layer.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="secWrang.html#cb307-1" tabindex="-1"></a>Seax <span class="ot">&lt;-</span> <span class="dv">1954</span>; divx <span class="ot">&lt;-</span> <span class="dv">1</span>; nsel <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb307-2"><a href="secWrang.html#cb307-2" tabindex="-1"></a>SeasonX <span class="ot">&lt;-</span> Zall <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Season<span class="sc">==</span>Seax, division<span class="sc">==</span>divx)</span>
+<span id="cb307-3"><a href="secWrang.html#cb307-3" tabindex="-1"></a>SeasonX <span class="ot">&lt;-</span> SeasonX <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(gameno) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">meanP=</span><span class="fu">mean</span>(Cumpts))</span>
+<span id="cb307-4"><a href="secWrang.html#cb307-4" tabindex="-1"></a>nteams <span class="ot">&lt;-</span> <span class="fu">with</span>(SeasonX, <span class="fu">nlevels</span>(<span class="fu">factor</span>(team)))</span>
+<span id="cb307-5"><a href="secWrang.html#cb307-5" tabindex="-1"></a>ngames <span class="ot">&lt;-</span> <span class="fu">max</span>(SeasonX<span class="sc">$</span>gameno)</span>
+<span id="cb307-6"><a href="secWrang.html#cb307-6" tabindex="-1"></a>pal1 <span class="ot">&lt;-</span> <span class="fu">palette_pander</span>(<span class="dv">2</span><span class="sc">*</span>nsel)</span>
+<span id="cb307-7"><a href="secWrang.html#cb307-7" tabindex="-1"></a>ZY <span class="ot">&lt;-</span> SeasonX <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gameno<span class="sc">==</span>ngames)</span>
+<span id="cb307-8"><a href="secWrang.html#cb307-8" tabindex="-1"></a>SelTeam <span class="ot">&lt;-</span> ZY <span class="sc">%&gt;%</span> <span class="fu">filter</span>(drank <span class="sc">&lt;</span> (nsel<span class="sc">+</span><span class="dv">1</span>) <span class="sc">|</span> drank <span class="sc">&gt;</span> (nteams<span class="sc">-</span>nsel)) <span class="sc">%&gt;%</span></span>
+<span id="cb307-9"><a href="secWrang.html#cb307-9" tabindex="-1"></a><span class="fu">select</span>(team, drank)</span>
+<span id="cb307-10"><a href="secWrang.html#cb307-10" tabindex="-1"></a>Sx <span class="ot">&lt;-</span> SeasonX <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gameno <span class="sc">&lt;</span> (ngames <span class="sc">+</span> <span class="dv">1</span>))</span>
+<span id="cb307-11"><a href="secWrang.html#cb307-11" tabindex="-1"></a>Sy <span class="ot">&lt;-</span> Sx <span class="sc">%&gt;%</span> <span class="fu">filter</span>(team <span class="sc">%in%</span> SelTeam<span class="sc">$</span>team)</span>
+<span id="cb307-12"><a href="secWrang.html#cb307-12" tabindex="-1"></a>Sy <span class="ot">&lt;-</span> <span class="fu">within</span>(Sy, Team <span class="ot">&lt;-</span> <span class="fu">reorder</span>(team, <span class="sc">-</span>drank, last))</span>
+<span id="cb307-13"><a href="secWrang.html#cb307-13" tabindex="-1"></a>lS <span class="ot">&lt;-</span> ZY <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">ul=</span><span class="fu">ceiling</span>(<span class="fu">max</span>(Cumpts<span class="sc">-</span>meanP)), <span class="at">ll=</span><span class="fu">floor</span>(<span class="fu">min</span>(Cumpts<span class="sc">-</span>meanP)))</span>
+<span id="cb307-14"><a href="secWrang.html#cb307-14" tabindex="-1"></a>ZY <span class="ot">&lt;-</span> ZY <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">xx=</span>gameno<span class="sc">+</span><span class="dv">2</span>, <span class="at">yy=</span>lS<span class="sc">$</span>ul<span class="sc">-</span>(drank<span class="dv">-1</span>)<span class="sc">*</span>(lS<span class="sc">$</span>ul<span class="sc">-</span>lS<span class="sc">$</span>ll)<span class="sc">/</span>(nteams<span class="dv">-1</span>))</span>
+<span id="cb307-15"><a href="secWrang.html#cb307-15" tabindex="-1"></a>ZYt <span class="ot">&lt;-</span> ZY <span class="sc">%&gt;%</span> <span class="fu">filter</span>(team <span class="sc">%in%</span> SelTeam<span class="sc">$</span>team)</span>
+<span id="cb307-16"><a href="secWrang.html#cb307-16" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>()</span>
+<span id="cb307-17"><a href="secWrang.html#cb307-17" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Sx, <span class="fu">aes</span>(gameno, (Cumpts<span class="sc">-</span>meanP))) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&quot;Number of games&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">0</span>, ngames<span class="sc">+</span><span class="dv">16</span>)</span>
+<span id="cb307-18"><a href="secWrang.html#cb307-18" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> g2 <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group=</span>team), <span class="at">alpha=</span><span class="fl">0.1</span>)</span>
+<span id="cb307-19"><a href="secWrang.html#cb307-19" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> g3 <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="at">data=</span>Sy, <span class="fu">aes</span>(<span class="at">group=</span>Team, <span class="at">colour=</span>Team), <span class="at">linewidth=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb307-20"><a href="secWrang.html#cb307-20" tabindex="-1"></a><span class="fu">scale_colour_manual</span>(<span class="at">values=</span>pal1) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb307-21"><a href="secWrang.html#cb307-21" tabindex="-1"></a>g5 <span class="ot">&lt;-</span> g4 <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">data=</span>ZY, <span class="fu">aes</span>(xx<span class="sc">+</span><span class="dv">3</span>, yy, <span class="at">label=</span>team), <span class="at">size=</span><span class="dv">2</span>, <span class="at">hjust=</span><span class="dv">0</span>)</span>
+<span id="cb307-22"><a href="secWrang.html#cb307-22" tabindex="-1"></a>g6 <span class="ot">&lt;-</span> g5 <span class="sc">+</span> <span class="fu">geom_segment</span>(<span class="at">data=</span>ZY, <span class="fu">aes</span>(<span class="at">x=</span>gameno<span class="sc">+</span><span class="dv">1</span>, <span class="at">xend=</span>gameno<span class="sc">+</span><span class="dv">5</span>, <span class="at">y=</span>Cumpts<span class="sc">-</span>meanP, <span class="at">yend=</span>yy,</span>
+<span id="cb307-23"><a href="secWrang.html#cb307-23" tabindex="-1"></a><span class="at">group=</span>team), <span class="at">linetype=</span><span class="dv">3</span>)</span>
+<span id="cb307-24"><a href="secWrang.html#cb307-24" tabindex="-1"></a>g7 <span class="ot">&lt;-</span> g6 <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">data=</span>ZYt, <span class="fu">aes</span>(xx<span class="sc">+</span><span class="dv">3</span>, yy, <span class="at">label=</span>team, <span class="at">colour=</span>team), <span class="at">size=</span><span class="dv">2</span>, <span class="at">hjust=</span><span class="dv">0</span>)</span>
+<span id="cb307-25"><a href="secWrang.html#cb307-25" tabindex="-1"></a>g8 <span class="ot">&lt;-</span> g7 <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="fu">paste0</span>(<span class="st">&quot;English League Championship &quot;</span>,  SeasonX<span class="sc">$</span>Season,<span class="st">&quot;-&quot;</span>,SeasonX<span class="sc">$</span>Season <span class="sc">+</span><span class="dv">1</span>)) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">vjust =</span> <span class="dv">2</span>))</span>
+<span id="cb307-26"><a href="secWrang.html#cb307-26" tabindex="-1"></a>(g1<span class="sc">+</span>g2)<span class="sc">/</span>(g3<span class="sc">+</span>g4)<span class="sc">/</span>(g5<span class="sc">+</span>g6)<span class="sc">/</span>(g7<span class="sc">+</span>g8)</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:wormlayers"></span>
+<img src="_main_files/figure-html/wormlayers-1.png" alt="Layers building up to a wormchart for the 1954-55 English League Championship." width="672" />
+<p class="caption">
+Figure 28.11: Layers building up to a wormchart for the 1954-55 English League Championship.
+</p>
+</div>
+</div>
+</div>
+<div id="secWrang5" class="section level2 hasAnchor" number="28.6">
+<h2><span class="header-section-number">28.6</span> Putting datasets together and reproducibility<a href="secWrang.html#secWrang5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="reading-in-and-merging-datasets" class="section level3 hasAnchor" number="28.6.1">
+<h3><span class="header-section-number">28.6.1</span> Reading in and merging datasets<a href="secWrang.html#reading-in-and-merging-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Datasets come in different shapes, sizes, and formats. Modern software can usually read all of them, but some conversion may be necessary. Spreadsheets offer flexible structures with multiple sheets, and may include background information, annotations, and other non-standard structures. These need special treatment, as with the UN population dataset used in Chapter <a href="secChess.html#secChess">8</a>. Only the first and second sheets were required and the initial lines of the first had to be edited. Spreadsheets can be very useful for initial recording of data because of the notes and background information that can be included. Public organisations often distribute data in spreadsheet format. Journal authors sometimes make their data available in spreadsheets. There are disadvantages. Spreadsheets may include summary data along with case data. Additional text and multi-line headers may be employed. Different versions, subsets, aggregations of a dataset may be provided in individual sheets of a spreadsheet without being linked. In other words, if a data value were to be amended, it would have be be changed separately in each sheet in which it appeared (e.g., the spreadsheet used in Chapter <a href="secMalaria.html#secMalaria">19</a>).</p>
+<p>If data are needed from more then one dataset, the datasets must usually be merged. Chapter <a href="secChess.html#secChess">8</a> combined the chess ratings dataset with files for country populations, country codings, and regions. This increased the number of variables from 12 to 20, although many were unused and could have been dropped. The number of players included in this merged dataset dropped from 362502 to 191097, as only active players were considered. Finally the ratings data for two separate years were merged. The 2020 dataset had 362502 players and 12 variables, while the 2015 dataset had 227960 players and 12 variables. The merged dataset that included all players from both years had 364012 players.</p>
+<p>In Chapter <a href="sec1912Dem.html#sec1912Dem">4</a> the voting results file for the 1912 Democratic Primary was summarised by state and merged with files for the numbers of each state’s electoral votes in 1912 and 2020, and with a file for state populations in 2018. The unsummarised data file was also separately merged with a file of estimated times at which the ballots took place.</p>
+<p>Mapped data reveal spatial patterns. Shape files for areas can be merged with data files. This was done in Chapters <a href="secBertin.html#secBertin">7</a> (Bertin’s French workforce data), <a href="secGayR.html#secGayR">9</a> (Gay Rights survey), <a href="secTitan.html#secTitan">25</a> (Titanic), and <a href="secBTwahl.html#secBTwahl">26</a> (German election 2021).</p>
+</div>
+<div id="reproducibility" class="section level3 hasAnchor" number="28.6.2">
+<h3><span class="header-section-number">28.6.2</span> Reproducibility <a href="secWrang.html#reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For scientific publications it would be ideal to have authors provide code as well as data, both code for their data wrangling and for their analyses. Only base data would have to be made available, as other versions could be reconstructed with the code. This would improve the chances of being able to reproduce study results, providing a record of what had been done. Of course, that record would only be understandable to readers who could follow the coding language.</p>
+<p>Reproducing published work is easier than it was, but is still not satisfactory, as various surveys in different fields have pointed out (e.g., <span class="citation">Gabelica et al. (<a href="references.html#ref-gabelica:2022">2022</a>)</span>). Two examples arose in this book. In Chapter <a href="secFace.html#secFace">22</a> numerous tables of percentage success rates of facial recognition software were reported, but the raw data were not made available. Making the reasonable assumption that the underlying results must have been integers, it was possible to reconstruct much of the data from the percentages reported. In the supplementary material to the article on tests for malaria discussed in Chapter <a href="secMalaria.html#secMalaria">19</a>, there was a multi-sheet Excel spreadsheet giving the raw data and the data used in the article’s plots and tables. The sheets were not linked and formulae not reported. With a little work the connections could be reconstructed. With other datasets (that were not therefore not included in the book) insufficient information was provided or essential details were missing.</p>
+</div>
+<div id="main-points-1" class="section level3 unnumbered hasAnchor">
+<h3>Main points<a href="secWrang.html#main-points-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Data cleaning is a continuing process through all of an investigation.</li>
+<li>Datasets may be subset, grouped or aggregated in many different ways, providing many different views.</li>
+<li>Layers of related data structures are a good way of building graphics.</li>
+<li>Wrangling is an essential support for graphical analysis.</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="secProvQ.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="secColour.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

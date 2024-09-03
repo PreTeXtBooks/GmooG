@@ -7,7 +7,7 @@ source("_setupAll.R")
 
 > "I cannot imagine any condition which would cause a ship to founder. I cannot conceive of any vital disaster happening to this vessel. Modern shipbuilding has gone beyond that."
 
-> `r quote_footer('Captain Smith of the *Titanic*, talking of the *Adriatic* (1907)')`
+> `r quote_footer('Captain Smith of the *Titanic*, speaking of the *Adriatic* (1907)')`
 
 **Background**  The RMS Titanic sank in the North Atlantic on its maiden voyage in April 1912 with great loss of life, mainly because there were not enough lifeboats.
 
@@ -20,7 +20,7 @@ source("_setupAll.R")
 ## Who travelled on the Titanic? {#secTitan1}
 The tragic event of the sinking of the Titanic has been remembered in innumerable books, films, and articles, and there has always been interest in who survived and who did not.
 
-There are many datasets in circulation offering summary information on the Titanic, around fifteen or so in \textsf{R} and its packages.  Some have more data, some less, some use different variable names---it can be confusing.  Continuing effort by Titanic researchers has unearthed more detail and there are now lists of those on board available at Encyclopedia Titanica (@titanic:2021) giving full names and ages, as well as sex and passenger class or crew department.  Information on fares is also given, but is incomplete.  The dataset used here only includes passengers and crew who sailed for America.
+There are many datasets in circulation offering summary information on the Titanic, around fifteen or so in R and its packages.  Some have more data, some less, some use different variable names---it can be confusing.  Continuing effort by Titanic researchers has unearthed more detail and there are now lists of those on board available at Encyclopedia Titanica (@titanic:2021) giving full names and ages, as well as sex and passenger class or crew department.  Information on fares is also given, but is incomplete.  The dataset used here only includes passengers and crew who sailed for America.
 
 \newpage
 
@@ -57,7 +57,7 @@ Figure \@ref(fig:titanBcla) looks at differences in boarding patterns for passe
 ggplot(TitanMVy %>% filter(passCrew=="Passenger"), aes(Joined)) + geom_bar(aes(fill=sex)) + ylab(NULL) + xlab("Boarded") + facet_grid(cols=vars(sex), rows=vars(Group)) + scale_fill_manual(values=c("springgreen3", "purple2")) + guides(fill="none")
 ```
 
-There is information on passenger nationality and this is shown by port of boarding in Figure \@ref(fig:titanBn).  Any nationality with 25 or fewer passengers has been grouped together "Other".  Most of the Irish (and almost only Irish) boarded in Queenstown.\index{horizontal barcharts}  Americans boarded in Southampton and, to a lesser extent, in Cherbourg.  The Scandinavians (Swedes, Norwegians, Finns) almost all boarded in Southampton.  Most of the Syrian Lebanese group boarded in Cherbourg.  The relatively few French boarded in either Southampton or Cherbourg.  Possibly French people preferred to travel on a French liner across the Atlantic.
+There is information on passenger nationality and this is shown by port of boarding in Figure \@ref(fig:titanBn).  Any nationality with 25 or fewer passengers has been grouped together in "Other".  Most of the Irish (and almost only Irish) boarded in Queenstown.\index{horizontal barcharts}  Americans boarded in Southampton and, to a lesser extent, in Cherbourg.  The Scandinavians (Swedes, Norwegians, Finns) almost all boarded in Southampton.  Most of the Syrian Lebanese group boarded in Cherbourg.  The relatively few French boarded in either Southampton or Cherbourg.  Possibly French people preferred to travel on a French liner across the Atlantic.
 
 ```{r titanBn, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Nationality of passengers on the Titanic by port of boarding'}
 TitanMVp <- TitanMVy %>% filter(passCrew=="Passenger") %>% mutate(country=fct_lump_min(Nationality, 26))
@@ -73,7 +73,7 @@ ggplot(TitanMVp, aes(Area)) + geom_bar(aes(fill=country)) + facet_wrap(vars(coun
 Some of the passengers are reported as being from two countries, some countries have changed borders over the last 110 years, some of the data may be inaccurate.  Nevertheless the main conclusions remain.
 
 ## Which groups had high survival rates? {#secTitan2}
-Investigations of the earlier, less detailed datasets in \textsf{R} showed that survival rates were higher for women than men, that first class passengers had higher survival rates than second class, and that second class rates were higher than third class rates.  The survival rate for the crew was almost as high as the rate for third class and this was assumed to be partly because crew members were assigned to man the lifeboats.  This can be confirmed by the more detailed information now available.  Figure \@ref(fig:titanCrew) is a doubledecker plot of the survival rates for the different groups on board.\index{doubledecker plot}  The width of each bar is proportional to the number in that group.
+Investigations of the earlier, less detailed datasets in R showed that survival rates were higher for women than men, that first class passengers had higher survival rates than second class, and that second class rates were higher than third class rates.  The survival rate for the crew was almost as high as the rate for third class and this was assumed to be partly because crew members were assigned to man the lifeboats.  This can be confirmed by the more detailed information now available.  Figure \@ref(fig:titanCrew) is a doubledecker plot of the survival rates for the different groups on board.\index{doubledecker plot}  The width of each bar is proportional to the number in that group.
 
 ```{r titanCrew, fig.asp=0.65, fig.cap = 'Titanic survival rates by passenger class and crew department'}
 titanCX <- ggplot(data=TitanMVy) + geom_mosaic(aes(x = product(Area), fill=survived), divider=ddecker(), offset=0.0025) + theme(axis.ticks=element_blank(), legend.position="none", panel.background=element_blank()) + labs(x="", y="") + scale_fill_manual(values=c("red", "grey70")) + scale_x_productlist(expand = c(0, 0)) + theme(axis.text.x=element_text(angle=-60))

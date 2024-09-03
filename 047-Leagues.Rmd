@@ -102,13 +102,13 @@ socHX
 
 The overall trend is the same as in Figure \@ref(fig:socHA) (but the vertical scales are different as these are rates for individual teams not for averages).  There are some striking individual outliers\index{outliers}.  The four outliers in the early days of the second division with a home proportion of 1 (they got no points away from home), and the two from the third division later on, have been drawn bigger and coloured orange.  They were:
 
-```{r}
+```{r, comment=""}
 data.frame(HA3y1)
 ```
 They all finished last except for Wigan Borough in 1931, who folded.  In the first season after the Second World War Leeds United drew one away game and lost the other 20 in the first division (the top tier), although they managed six wins and five draws at home.  (And yes, they finished last as well.)
 
 The teams with the worst relative home record (proportions less than 0.35) have been drawn bigger and coloured green.  They were:
-```{r}
+```{r, comment=""}
 data.frame(HA3y2)
 ```
 All were relegated bar Birmingham, who survived on goal difference.\index{goal difference}

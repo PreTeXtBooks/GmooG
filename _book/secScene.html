@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>30 Setting the scene | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="30 Setting the scene | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="30 Setting the scene | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -758,8 +762,8 @@ Figure 30.4: Barcharts of population changes by region between 1956 and 2016, ab
 <p>If bars or rectangles are drawn for categorical variables as in barcharts and mosaicplots, then their width, their individual aspect ratios, and the space between them matter. For mosaicplots it is common practice to increase the space from the lowest level to the highest.</p>
 <p>If a plot is composed of different layers, as described in §<a href="secWrang.html#secWrang4">28.5</a>, then the order in which the layers are drawn will affect how the graphic looks. Alternative views can be offered by including or not including particular layers.</p>
 <p>Individual plots can be given titles and subtitles. If colours, shapes, or sizes vary, then legends are necessary to describe the options shown. Special features in a plot can be annotated. All these texts should be in the same typeface, but the font and size may differ to reflect the importance of the texts. Too much text may divert attention from the graphics themselves. Legends, labels, annotations can be like subtitles in a film: having them can be helpful, reading them may be distracting.</p>
-<p>These choices are part of a graphic’s setting, non-data formatting. They are incorporated in themes in the <strong>ggplot2</strong> package. It is relatively easy to ensure a common standard across plots by specifying the same theme for all.</p>
-<p>Four examples of well-known themes are shown in the next figure. They are distinctive and different, imitations of actual styles offered in the <strong>ggthemes</strong> package. Corresponding default colour palettes from the same package have been used. Experts from the organisations whose themes have been imitated would produce better displays using their own software.</p>
+<p>These choices are part of a graphic’s setting, non-data formatting. They are incorporated in themes in the <strong>ggplot2</strong> R package. It is relatively easy to ensure a common standard across plots by specifying the same theme for all.</p>
+<p>Four examples of well-known themes are shown in the next figure. They are distinctive and different, imitations of actual styles offered in the <strong>ggthemes</strong> R package. Corresponding default colour palettes from the same package have been used. Experts from the organisations whose themes have been imitated would produce better displays using their own software.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="secScene.html#cb325-1" tabindex="-1"></a>fr0 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pLES, <span class="fu">aes</span>(four_regions)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill=</span>four_regions, <span class="at">weight=</span>n)) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>)</span>
 <span id="cb325-2"><a href="secScene.html#cb325-2" tabindex="-1"></a>frEx <span class="ot">&lt;-</span> fr0 <span class="sc">+</span> <span class="fu">scale_fill_excel_new</span>() <span class="sc">+</span> <span class="fu">theme_excel_new</span>()</span>
@@ -968,7 +972,7 @@ Figure 30.16: Age distribution of active players by sex (left) and numbers of sp
 <div id="secScene5" class="section level2 hasAnchor" number="30.6">
 <h2><span class="header-section-number">30.6</span> Defaults<a href="secScene.html#secScene5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Software packages always offer default ways of drawing. With graphics there will be default sizes and aspect ratios, default point sizes and shapes, default scales, default axis and line thicknesses, default typefaces and fontsizes, default colour schemes. There are defaults of all kinds, many of which are rarely thought about—and may not need to be thought about often.</p>
-<p>Descriptions of how the graphics in this book were drawn refer to using the defaults offered by or to changing them to achieve a particular effect. Different softwares have different defaults. Organisations define their own defaults to provide a consistent and uniform design. A newspaper looks different to other newspapers because it has its own standard layout and uses a specific typeface. Its graphics look different because they are drawn in a particular, consistent style.</p>
+<p>Descriptions of how the graphics in this book were drawn refer to using the defaults offered by R or to changing them to achieve a particular effect. Different softwares have different defaults. Organisations define their own defaults to provide a consistent and uniform design. A newspaper looks different to other newspapers because it has its own standard layout and uses a specific typeface. Its graphics look different because they are drawn in a particular, consistent style.</p>
 <p>The look of a graphic can be changed considerably by changing the defaults. What is ideal for some purposes may be not so good for others. Sophisticated packages offer complete control and, consequently, can be complex to use. If many graphics are drawn quickly to explore data, the defaults should be sensible, so that time does not have to be spent making adjustments. Analysts should be able to concentrate on content, not on details of presentation.</p>
 <div style="page-break-after: always;"></div>
 <div id="main-points-3" class="section level3 unnumbered hasAnchor">

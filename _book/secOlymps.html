@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 The modern Olympic Games in numbers | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 The modern Olympic Games in numbers | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="6 The modern Olympic Games in numbers | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -766,7 +770,7 @@ Figure 6.6: Swimming events by Olympic year after amendments
 <h2><span class="header-section-number">6.2</span> How much have performances improved?<a href="secOlymps.html#secOlymps2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Performances in a few disciplines, such as in swimming and athletics, can be directly compared, although the continual improvements in technique, equipment, training, and support of all kinds, as well as the growing population of athletes have to be borne in mind. Rule changes can also have significant effects. Most other disciplines such as boxing, gymnastics or sailing are even harder to compare over time.</p>
 <p>Gold Medal performances are sometimes world records, more often not. The best performance in one Olympics may not be as good as the best performances in earlier Olympics. Athletes may miss out because of injury or ill health or because their country boycotts a Games (as happened for various reasons at the Games of 1976, 1980, 1984). In the early years travel time and costs limited participation. So Olympic performances are not ideal for studying developments over time. Nevertheless, the Olympic Games offer regular simultaneous checks on performance changes in many sporting events and that has its advantages too.</p>
-<p>There were a number of additional problems with the data. Some values were missing (e.g., several for the pole vault for men). The heptathlon and decathlon results were reported on quite different scales in different years. A few performances at some games were reported with a ‘w’ at the end signifying wind assistance. This means that there was a tail wind of more than 2 m/s, invalidating record attempts but not the result. It only applies to certain sprint races, the triple jump and long jump. Four 100 m races were affected and one complete long jump competition. Three triple jump gold medal performances were marked as wind-assisted. For jumps, it made no difference once the ‘w’ was removed. For 100 m races the times were in seconds instead of thousandths of seconds. This included times in Jesse Owens’ 100 m final at the 1936 Olympics in Berlin. There were other issues that had to be resolved. Only events that had taken place at least six Olympics were included.</p>
+<p>There were a number of additional problems with the data. Some values were missing (e.g., several for the pole vault for men). The heptathlon and decathlon results were reported on quite different scales in different years. A few performances at some games were reported with a ‘w’ at the end signifying wind assistance. This means that there was a tail wind of more than 2 m/s, invalidating record attempts but not the result. It only applies to certain sprint races, the triple jump and long jump. Four 100 m races were affected and one complete long jump competition. Three triple jump gold medal performances were marked as wind-assisted. For jumps, it made no difference once the ‘w’ was removed. For 100 m races the times were in seconds instead of thousandths of seconds. This included times in Jesse Owens’ 100 m final at the 1936 Olympics in Berlin. There were other issues that had to be resolved. Only events that had taken place at at least six Olympics were included.</p>
 <p>In the analysis carried out by the scrapers of the dataset the gold medal performances were standardised by calculating how much better or worse they were in percentage terms than the average of the gold medal winners over all the Games at which the event took place. For events that have been included in the Games a long time the overall average then tended to reflect a poorer performance than if results were only included from more recent games. The solution adopted here is to compare results with the average over the Olympics from 1996 to 2016.</p>
 <p>Figure <a href="secOlymps.html#fig:olyA">6.7</a> shows data for individual athletics events grouped by sex and whether they are a field event like the shot put (higher numbers are better) or a track event like the 100 m (faster times are better). The percentage differences between the gold medal performances at each Games and the averages of gold performances over the six Games from 1996 to 2016 are plotted against years to show the overall trends.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
@@ -871,7 +875,7 @@ Figure 6.12: Numbers competing at the Olympic Games over the years
 </p>
 </div>
 <p>More males compete as can be seen from Figure <a href="secOlymps.html#fig:olyGp">6.12</a> showing the numbers of participants by sex. While the number of female participants has risen relatively steadily, the numbers of male participants declined at Los Angeles in 1932 (because of the Depression), at Melbourne in 1956 (possibly because the Games were held in November and December, the Australian summer), and at Moscow in 1980 (because many countries did not take part). There was also something of a reduction in numbers of male participants between the peak of 8772 in 1996 at Atlanta and the low of 7105 at London in 2012.</p>
-<p>Looking at the time series for individual countries picks out a feature that is obvious with hindsight (Figure <a href="secOlymps.html#fig:olyGhs">6.13</a>), there are more participants from a country when it is the host. The early peaks of 1900 for France, 1904 for USA, 1908 for Great Britain, 1912 for Sweden, and 1920 for Belgium are unmistakable. Travel time and costs would have influenced the participation of other nations then. Also obvious are the peaks of 1968 for Mexico, 1976 for Germany, 2004 for Greece, 2008 for China, and 2016 for Brazil. Less obvious are 1896 for Greece, 1924 for France, 1936 for Germany, 1948 for Great Britain, 1952 for Finland, 1956 and 2000 for Australia, 1964 for Japan, 1988 for Korea, and 1992 for Spain. Other peaks may be due to (relative) geographic nearness, such as numbers of Korean and Australian participants at Tokyo in 1964.</p>
+<p>Looking at the time series for individual countries picks out a feature that is obvious with hindsight (Figure <a href="secOlymps.html#fig:olyGhs">6.13</a>), there are more participants from a country when it is the host. The early peaks of 1900 for France, 1904 for USA, 1908 for Great Britain, 1912 for Sweden, and 1920 for Belgium are unmistakable. Travel time and costs would have influenced the participation of other nations then. Also obvious are the peaks of 1968 for Mexico, 1972 for Germany, 2004 for Greece, 2008 for China, and 2016 for Brazil. Less obvious are 1896 for Greece, 1924 for France, 1936 for Germany, 1948 for Great Britain, 1952 for Finland, 1956 and 2000 for Australia, 1964 for Japan, 1988 for Korea, and 1992 for Spain. Other peaks may be due to (relative) geographic nearness, such as numbers of Korean and Australian participants at Tokyo in 1964.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="secOlymps.html#cb66-1" tabindex="-1"></a>OlympicPeople <span class="ot">&lt;-</span> OlympicPeople <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">NOC=</span><span class="fu">ifelse</span>(NOC <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;FRG&quot;</span>, <span class="st">&quot;GDR&quot;</span>), <span class="st">&quot;GER&quot;</span>, NOC))</span>
 <span id="cb66-2"><a href="secOlymps.html#cb66-2" tabindex="-1"></a>OlympicPeople <span class="ot">&lt;-</span> OlympicPeople <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">NOC=</span><span class="fu">ifelse</span>(NOC <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;EUN&quot;</span>, <span class="st">&quot;URS&quot;</span>), <span class="st">&quot;RUS&quot;</span>, NOC))</span>

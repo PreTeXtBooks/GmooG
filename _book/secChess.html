@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Comparing chess players across the board | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Comparing chess players across the board | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="8 Comparing chess players across the board | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -656,7 +660,7 @@ div.csl-indent {
 <p><strong>Structure</strong> The FIDE dataset for December 2020 includes 362502 players with their name, country, rating, and year of birth.</p>
 <div id="secChess1" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> FIDE ratings of chess players<a href="secChess.html#secChess1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>FIDE (the International Chess Federation) publishes ratings of chess players regularly and these are the ratings that will be discussed here. Like many sporting organisations they use a system based on Elo’s ideas (<span class="citation">Elo (<a href="references.html#ref-elo:1978">1978</a>)</span>). The main assumption is that the performance of a player is normally distributed the player’s current strength. A further assumption is that players’ performances in a game are independent of one another. Ratings are updated based on game results.
+<p>FIDE (the International Chess Federation) publishes ratings of chess players regularly and these are the ratings that will be discussed here. Like many sporting organisations they use a system based on Elo’s ideas (<span class="citation">Elo (<a href="references.html#ref-elo:1978">1978</a>)</span>). The main assumption is that the performance of a player is normally distributed about the player’s current strength. A further assumption is that players’ performances in a game are independent of one another. Ratings are updated based on game results.
 Ratings in the December 2020 dataset range from 1001 to 2862 (the then world champion, Magnus Carlsen).</p>
 <div style="page-break-after: always;"></div>
 <p>Figure <a href="secChess.html#fig:histElo">8.1</a> gives one view of the distribution of player ratings.</p>
@@ -784,7 +788,7 @@ Figure 8.10: Age distributions of active players (females in purple)
 </div>
 <div id="secChess3" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Which nations have the best chess players?<a href="secChess.html#secChess3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For much of the twentieth century, the USSR was the strongest chess nation. Over the last thirty years the game has become popular in other nations and it is surprising, which were the largest chess playing nations in December 2020, measured by the number of active rated players. Figure <a href="secChess.html#fig:nationB">8.11</a> shows the 30 chess federations with the highest numbers. The rest are combined into the group ‘Other’. Countries are coloured by region, using the classification and colours of the World Bank does (<span class="citation">Worldbank (<a href="references.html#ref-wb:2020">2020</a>)</span>).</p>
+<p>For much of the twentieth century, the USSR was the strongest chess nation. Over the last thirty years the game has become popular in other nations and it is surprising, which were the largest chess playing nations in December 2020, measured by the number of active rated players. Figure <a href="secChess.html#fig:nationB">8.11</a> shows the 30 chess federations with the highest numbers. The rest are combined into the group ‘Other’. Countries are coloured by region, using the classification and colours of the World Bank (<span class="citation">Worldbank (<a href="references.html#ref-wb:2020">2020</a>)</span>).</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="secChess.html#cb85-1" tabindex="-1"></a><span class="fu">data</span>(ChessCountries)</span>
 <span id="cb85-2"><a href="secChess.html#cb85-2" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rgb</span>(<span class="dv">224</span>, <span class="dv">148</span>, <span class="dv">92</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>), <span class="fu">rgb</span>(<span class="dv">209</span>, <span class="dv">65</span>, <span class="dv">106</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>), <span class="fu">rgb</span>(<span class="dv">92</span>, <span class="dv">160</span>, <span class="dv">93</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>), <span class="fu">rgb</span>(<span class="dv">149</span>, <span class="dv">99</span>, <span class="dv">152</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>), <span class="fu">rgb</span>(<span class="dv">116</span>, <span class="dv">116</span>, <span class="dv">117</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>), <span class="fu">rgb</span>(<span class="dv">75</span>, <span class="dv">142</span>, <span class="dv">187</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>), <span class="fu">rgb</span>(<span class="dv">249</span>, <span class="dv">207</span>, <span class="dv">84</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>))</span>
@@ -887,7 +891,7 @@ Figure 8.17: Rating by age for active players in 2015 (players with ratings over
 Figure 8.18: Rating by age for a 10% sample of active players in 2015 with a nonlinear smooth and confidence band
 </p>
 </div>
-<p>Another alternative, using the enforced discreteness of the age variable, would be to draw boxplots for each age (Figure <a href="secChess.html#fig:ratAge15b">8.19</a>).\index{boxplot The 38 players over 90 have been excluded as have the 2889 players whose year of birth is not known. The medians of the boxplots show the same pattern as the smooth in Figure <a href="secChess.html#fig:ratAge15s">8.18</a>, as do the upper and lower hinges of the boxplots, and the display gives a clear picture of where the middle 50% of the data lie at each age. The upper outliers are players who are exceptional for their age and the lower outliers are players who still compete although they are weak. The first lower outlier appears at age 23, perhaps an indication that many weaker players have given up by then.</p>
+<p>Another alternative, using the enforced discreteness of the age variable, would be to draw boxplots for each age (Figure <a href="secChess.html#fig:ratAge15b">8.19</a>). The 38 players over 90 have been excluded as have the 2889 players whose year of birth is not known. The medians of the boxplots show the same pattern as the smooth in Figure <a href="secChess.html#fig:ratAge15s">8.18</a>, as do the upper and lower hinges of the boxplots, and the display gives a clear picture of where the middle 50% of the data lie at each age. The upper outliers are players who are exceptional for their age and the lower outliers are players who still compete although they are weak. The first lower outlier appears at age 23, perhaps an indication that many weaker players have given up by then.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="secChess.html#cb94-1" tabindex="-1"></a>ratAX <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Chess2015A <span class="sc">%&gt;%</span> <span class="fu">filter</span>(AgeX<span class="sc">&lt;</span><span class="dv">91</span>, <span class="sc">!</span><span class="fu">is.na</span>(AgeX)), <span class="fu">aes</span>(AgeX, DEC15, <span class="at">group=</span>AgeX)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="at">outlier.colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">colour=</span><span class="st">&quot;darkorange&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&quot;Age&quot;</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">5</span>,<span class="dv">95</span>,<span class="dv">10</span>))</span>
 <span id="cb94-2"><a href="secChess.html#cb94-2" tabindex="-1"></a>ratAX</span></code></pre></div>

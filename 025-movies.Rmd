@@ -30,7 +30,7 @@ films22 <- films22 %>% mutate(ng=ifelse(is.na(gen1), 0, 1) + ifelse(is.na(gen2),
 films22 <- films22 %>% group_by(genres) %>% mutate(mm=n()) %>% ungroup()
 ```
 
-Many people use IMDb ratings to help them decide what they would like to watch.  The ratings are contributed by users of the site.  This chapter studies the data on films for which ratings are available.  There is a dataset of 58788 films scraped from IMDb\index{IMDb} several years ago that is available in the R package **ggplot2movies**\index{R packages!ggplot2movies}.  Nowadays IMDb makes regularly updated datasets available for download from their website.  The one used here was downloaded in July 2022.  There were 9033256 items and 1251317 had user ratings or votes.  Excluding items labelled TV or video and restricting the data to movies and shorts that had more than 100 ratings left 124667 films.
+Many people use IMDb ratings to help them decide what they would like to watch.  The ratings are contributed by users of the site.  This chapter studies the data on films for which ratings are available.  There is a dataset of 58,788 films scraped from IMDb\index{IMDb} several years ago that is available in the R package **ggplot2movies**\index{R packages!ggplot2movies}.  Nowadays IMDb makes regularly updated datasets available for download from their website.  The one used here was downloaded in July 2022.  There were 9,033,256 items and 1,251,317 had user ratings or votes.  Excluding items labelled TV or video and restricting the data to movies and shorts that had more than 100 ratings left 124,667 films.
 
 \newpage
 
@@ -173,7 +173,7 @@ gL1 + gL2 + gL3 + gL4 + gL5 + plot_layout(design = layout)
 ```
 
 ## Comparing Raging Bull with Jane Austen {#secMovies5}
-Every IMDb webpage for a film includes a barchart\index{barchart} of individual ratings received by a film and average ratings and numbers of votes by sex and four age groups.  Around 30% of users do not report their own sex and age  It is not known how reliable the information from the other 70% might be.
+Every IMDb webpage for a film includes a barchart\index{barchart} of individual ratings received by a film and average ratings and numbers of votes by sex and four age groups.  Around 30% of users do not report their own sex and age.  It is not known how reliable the information from the other 70% might be.
 
 Two films were chosen that would have different user responses, "Raging Bull"\index{Films!Raging Bull}, the Robert De Niro boxing picture about Jake LaMotta, and "Sense and Sensibility"\index{Films!Sense and Sensibility}, the Emma Thompson version of Jane Austen's novel.  Figure \@ref(fig:RBjaB) shows barcharts of the rating distributions\index{barchart}.  The vertical scales are quite different\index{scaling}\index{faceting}, as there were around 115,000 ratings of "Sense and Sensibility" and just over three times as many of "Raging Bull".  The patterns are fairly similar, very few poor ratings and the most popular rating being 8 out of 10.
 

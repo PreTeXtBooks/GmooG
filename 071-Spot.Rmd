@@ -49,7 +49,7 @@ fpy <- ggplot(mSH1, aes(species, BeakH)) + xlab(NULL) + ylab(NULL) + geom_boxplo
 fpx/fpy
 ```
 
-The individual graphics of Figures \@ref(fig:s100mScat) and \@ref(fig:finch2box) have purposely been drawn similarly.  In practice groups of graphics like this would be drawn distinctly.  For instance, whatever else one might think of them, the four graphics standardly produced by plotting a model in \textsf{R} are.  The danger lies more in glancing quickly at isolated, individual graphics and not checking\index{checking} what they display.
+The individual graphics of Figures \@ref(fig:s100mScat) and \@ref(fig:finch2box) have purposely been drawn similarly.  In practice groups of graphics like this would be drawn distinctly.  For instance, whatever else one might think of them, the four graphics standardly produced by plotting a model in R are.  The danger lies more in glancing quickly at isolated, individual graphics and not checking\index{checking} what they display.
 
 \newpage
 

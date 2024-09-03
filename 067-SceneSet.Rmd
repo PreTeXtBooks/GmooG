@@ -131,9 +131,9 @@ If a plot is composed of different layers, as described in §\@ref(secWrang4), t
 
 Individual plots can be given titles and subtitles. If colours, shapes, or sizes vary, then legends are necessary to describe the options shown.  Special features in a plot can be annotated.  All these texts should be in the same typeface, but the font and size may differ to reflect the importance of the texts.  Too much text may divert attention from the graphics themselves.  Legends, labels, annotations can be like subtitles in a film: having them can be helpful, reading them may be distracting.
 
-These choices are part of a graphic's setting, non-data formatting.  They are incorporated in themes in the **ggplot2**\index{R packages!ggplot2} \textsf{R} package.  It is relatively easy to ensure a common standard across plots by specifying the same theme for all.
+These choices are part of a graphic's setting, non-data formatting.  They are incorporated in themes in the **ggplot2**\index{R packages!ggplot2} R package.  It is relatively easy to ensure a common standard across plots by specifying the same theme for all.
 
-Four examples of well-known themes are shown in the next figure.  They are distinctive and different, imitations of actual styles offered in the **ggthemes** \textsf{R} package.  Corresponding default colour palettes from the same package have been used.  Experts from the organisations whose themes have been imitated would produce better displays using their own software.
+Four examples of well-known themes are shown in the next figure.  They are distinctive and different, imitations of actual styles offered in the **ggthemes** R package.  Corresponding default colour palettes from the same package have been used.  Experts from the organisations whose themes have been imitated would produce better displays using their own software.
 
 ```{r }
 fr0 <- ggplot(pLES, aes(four_regions)) + geom_bar(aes(fill=four_regions, weight=n)) + xlab(NULL) + ylab(NULL)
@@ -296,7 +296,7 @@ Alignment of axes and placing objects together makes comparisons easier.  The do
 ## Defaults {#secScene5}
 Software packages always offer default ways of drawing.  With graphics there will be default sizes and aspect ratios, default point sizes and shapes, default scales, default axis and line thicknesses, default typefaces and fontsizes, default colour schemes.  There are defaults of all kinds, many of which are rarely thought about---and may not need to be thought about often.
 
-Descriptions of how the graphics in this book were drawn refer to using the defaults offered by \textsf{R} or to changing them to achieve a particular effect.  Different softwares have different defaults.  Organisations define their own defaults to provide a consistent and uniform design.  A newspaper looks different to other newspapers because it has its own standard layout and uses a specific typeface.  Its graphics look different because they are drawn in a particular, consistent style.
+Descriptions of how the graphics in this book were drawn refer to using the defaults offered by R or to changing them to achieve a particular effect.  Different softwares have different defaults.  Organisations define their own defaults to provide a consistent and uniform design.  A newspaper looks different to other newspapers because it has its own standard layout and uses a specific typeface.  Its graphics look different because they are drawn in a particular, consistent style.
 
 The look of a graphic can be changed considerably by changing the defaults.  What is ideal for some purposes may be not so good for others.  Sophisticated packages offer complete control and, consequently, can be complex to use.  If many graphics are drawn quickly to explore data, the defaults should be sensible, so that time does not have to be spent making adjustments.  Analysts should be able to concentrate on content, not on details of presentation.
 

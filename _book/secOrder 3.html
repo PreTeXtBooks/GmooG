@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>31 Ordering, sorting, and arranging | Getting (more out of) Graphics</title>
+  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="31 Ordering, sorting, and arranging | Getting (more out of) Graphics" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="31 Ordering, sorting, and arranging | Getting (more out of) Graphics" />
+  
+  <meta name="twitter:description" content="This is the html index file for my GG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
+
+<meta name="author" content="Antony Unwin" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="secScene.html"/>
+<link rel="next" href="secInterp.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/codefolding-lua-1.1/codefolding-lua.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-are-good-graphics"><i class="fa fa-check"></i><b>1.1</b> What are good graphics?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#graphics-examples"><i class="fa fa-check"></i><b>1.2</b> Graphics examples</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#writing-about-graphics"><i class="fa fa-check"></i><b>1.3</b> Writing about graphics</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#reading-about-graphics"><i class="fa fa-check"></i><b>1.4</b> Reading about graphics</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#books-and-articles-on-data-graphics"><i class="fa fa-check"></i><b>1.4.1</b> Books and articles on data graphics</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#websites-and-other-media"><i class="fa fa-check"></i><b>1.4.2</b> Websites and other media</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#software"><i class="fa fa-check"></i><b>1.5</b> Software</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#structure-of-the-book"><i class="fa fa-check"></i><b>1.6</b> Structure of the book</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#part-i-graphics-in-action"><i class="fa fa-check"></i><b>1.6.1</b> Part I Graphics in Action</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#part-ii-advice-on-graphics"><i class="fa fa-check"></i><b>1.6.2</b> Part II Advice on Graphics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#in-a-nutshell-tldr"><i class="fa fa-check"></i>In a nutshell (tl;dr)</a></li>
+</ul></li>
+<li class="part"><span><b>I Graphics in Action</b></span></li>
+<li class="chapter" data-level="2" data-path="secGapm.html"><a href="secGapm.html"><i class="fa fa-check"></i><b>2</b> Graphics and Gapminder</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="secGapm.html"><a href="secGapm.html#secGapm1"><i class="fa fa-check"></i><b>2.1</b> Gapminder and Hans Rosling</a></li>
+<li class="chapter" data-level="2.2" data-path="secGapm.html"><a href="secGapm.html#secGapm2"><i class="fa fa-check"></i><b>2.2</b> What else can be seen in Gapminder’s plots?</a></li>
+<li class="chapter" data-level="2.3" data-path="secGapm.html"><a href="secGapm.html#secGapm3"><i class="fa fa-check"></i><b>2.3</b> Analysis by regions of the world</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="secGapm.html"><a href="secGapm.html#taking-account-of-country-size"><i class="fa fa-check"></i><b>2.3.1</b> Taking account of country size</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="secGapm.html"><a href="secGapm.html#secGapm4"><i class="fa fa-check"></i><b>2.4</b> Checking what is in the data</a></li>
+<li class="chapter" data-level="2.5" data-path="secGapm.html"><a href="secGapm.html#secGapm5"><i class="fa fa-check"></i><b>2.5</b> The importance of data definitions</a></li>
+<li class="chapter" data-level="2.6" data-path="secGapm.html"><a href="secGapm.html#secGapm6"><i class="fa fa-check"></i><b>2.6</b> Discussion</a>
+<ul>
+<li class="chapter" data-level="" data-path="secGapm.html"><a href="secGapm.html#graphical-takeaways"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="secMovies.html"><a href="secMovies.html"><i class="fa fa-check"></i><b>3</b> Looking at the movies</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="secMovies.html"><a href="secMovies.html#secMovies1"><i class="fa fa-check"></i><b>3.1</b> Trailer</a></li>
+<li class="chapter" data-level="3.2" data-path="secMovies.html"><a href="secMovies.html#secMovies2"><i class="fa fa-check"></i><b>3.2</b> Movies in IMDb over the years</a></li>
+<li class="chapter" data-level="3.3" data-path="secMovies.html"><a href="secMovies.html#secMovies21"><i class="fa fa-check"></i><b>3.3</b> What might IMDb code numbers mean?</a></li>
+<li class="chapter" data-level="3.4" data-path="secMovies.html"><a href="secMovies.html#secMovies3"><i class="fa fa-check"></i><b>3.4</b> What ratings do people give films?</a></li>
+<li class="chapter" data-level="3.5" data-path="secMovies.html"><a href="secMovies.html#secMovies4"><i class="fa fa-check"></i><b>3.5</b> Genres from Rom-Com to Film Noir</a></li>
+<li class="chapter" data-level="3.6" data-path="secMovies.html"><a href="secMovies.html#secMovies5"><i class="fa fa-check"></i><b>3.6</b> Comparing Raging Bull with Jane Austen</a>
+<ul>
+<li class="chapter" data-level="" data-path="secMovies.html"><a href="secMovies.html#graphical-takeaways-1"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sec1912Dem.html"><a href="sec1912Dem.html"><i class="fa fa-check"></i><b>4</b> Voting 46 times to choose a Presidential candidate</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem1"><i class="fa fa-check"></i><b>4.1</b> A first look at the 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="4.2" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem2"><i class="fa fa-check"></i><b>4.2</b> The USA in 1912 and 2020</a></li>
+<li class="chapter" data-level="4.3" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem3"><i class="fa fa-check"></i><b>4.3</b> How the nomination contest unfolded</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#developments"><i class="fa fa-check"></i><b>4.3.1</b> Developments</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem4"><i class="fa fa-check"></i><b>4.4</b> When did the ballots actually take place?</a>
+<ul>
+<li class="chapter" data-level="" data-path="sec1912Dem.html"><a href="sec1912Dem.html#graphical-takeaways-2"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="secLightS.html"><a href="secLightS.html"><i class="fa fa-check"></i><b>5</b> Measuring the speed of light</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="secLightS.html"><a href="secLightS.html#secLightS1"><i class="fa fa-check"></i><b>5.1</b> Michelson, the Master of Light, and his data</a></li>
+<li class="chapter" data-level="5.2" data-path="secLightS.html"><a href="secLightS.html#secLightS2"><i class="fa fa-check"></i><b>5.2</b> Newcomb, self-educated polymath, and his data</a></li>
+<li class="chapter" data-level="5.3" data-path="secLightS.html"><a href="secLightS.html#secLightS3"><i class="fa fa-check"></i><b>5.3</b> Comparing the data of Michelson and Newcomb</a>
+<ul>
+<li class="chapter" data-level="" data-path="secLightS.html"><a href="secLightS.html#graphical-takeaways-3"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="secOlymps.html"><a href="secOlymps.html"><i class="fa fa-check"></i><b>6</b> The modern Olympic Games in numbers</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps1"><i class="fa fa-check"></i><b>6.1</b> How good are the data?</a></li>
+<li class="chapter" data-level="6.2" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps2"><i class="fa fa-check"></i><b>6.2</b> How much have performances improved?</a></li>
+<li class="chapter" data-level="6.3" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps3"><i class="fa fa-check"></i><b>6.3</b> How many countries and individuals competed?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secOlymps.html"><a href="secOlymps.html#graphical-takeaways-4"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="secBertin.html"><a href="secBertin.html"><i class="fa fa-check"></i><b>7</b> Re-viewing Bertin’s main example</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="secBertin.html"><a href="secBertin.html#secBertin1"><i class="fa fa-check"></i><b>7.1</b> Bertin’s classic book</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="secBertin.html"><a href="secBertin.html#a-first-map-agricultural-workers"><i class="fa fa-check"></i><b>7.1.1</b> A first map: agricultural workers</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="secBertin.html"><a href="secBertin.html#secBertin2"><i class="fa fa-check"></i><b>7.2</b> Bertin’s many graphics of the French workforce data</a></li>
+<li class="chapter" data-level="7.3" data-path="secBertin.html"><a href="secBertin.html#secBertin3"><i class="fa fa-check"></i><b>7.3</b> Viewing the data today</a></li>
+<li class="chapter" data-level="7.4" data-path="secBertin.html"><a href="secBertin.html#secBertin4"><i class="fa fa-check"></i><b>7.4</b> Are there other geographic patterns?</a></li>
+<li class="chapter" data-level="7.5" data-path="secBertin.html"><a href="secBertin.html#secBertin5"><i class="fa fa-check"></i><b>7.5</b> Density of the workforce by area</a></li>
+<li class="chapter" data-level="7.6" data-path="secBertin.html"><a href="secBertin.html#secBertin6"><i class="fa fa-check"></i><b>7.6</b> Comments on Bertin (with hindsight)</a>
+<ul>
+<li class="chapter" data-level="" data-path="secBertin.html"><a href="secBertin.html#graphical-takeaways-5"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="secChess.html"><a href="secChess.html"><i class="fa fa-check"></i><b>8</b> Comparing chess players across the board</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="secChess.html"><a href="secChess.html#secChess1"><i class="fa fa-check"></i><b>8.1</b> FIDE ratings of chess players</a></li>
+<li class="chapter" data-level="8.2" data-path="secChess.html"><a href="secChess.html#secChess2"><i class="fa fa-check"></i><b>8.2</b> Comparing chess players by age and sex</a></li>
+<li class="chapter" data-level="8.3" data-path="secChess.html"><a href="secChess.html#secChess3"><i class="fa fa-check"></i><b>8.3</b> Which nations have the best chess players?</a></li>
+<li class="chapter" data-level="8.4" data-path="secChess.html"><a href="secChess.html#secChess4"><i class="fa fa-check"></i><b>8.4</b> Ratings change over time</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="secChess.html"><a href="secChess.html#individual-players"><i class="fa fa-check"></i><b>8.4.1</b> Individual players</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="secChess.html"><a href="secChess.html#secChess5"><i class="fa fa-check"></i><b>8.5</b> Grandmasters and Masters</a>
+<ul>
+<li class="chapter" data-level="" data-path="secChess.html"><a href="secChess.html#graphical-takeaways-6"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="secGayR.html"><a href="secGayR.html"><i class="fa fa-check"></i><b>9</b> Results from surveys on gay rights</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="secGayR.html"><a href="secGayR.html#secGayR1"><i class="fa fa-check"></i><b>9.1</b> Survey results by age, sex, and race</a></li>
+<li class="chapter" data-level="9.2" data-path="secGayR.html"><a href="secGayR.html#secGayR2"><i class="fa fa-check"></i><b>9.2</b> Mapping the survey results</a></li>
+<li class="chapter" data-level="9.3" data-path="secGayR.html"><a href="secGayR.html#secGayR3"><i class="fa fa-check"></i><b>9.3</b> Comparing responses to related, but different questions</a>
+<ul>
+<li class="chapter" data-level="" data-path="secGayR.html"><a href="secGayR.html#graphical-takeaways-7"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="secAstro.html"><a href="secAstro.html"><i class="fa fa-check"></i><b>10</b> Who went up in space for how long?</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="secAstro.html"><a href="secAstro.html#secAstro1"><i class="fa fa-check"></i><b>10.1</b> What human spaceflights have there been?</a></li>
+<li class="chapter" data-level="10.2" data-path="secAstro.html"><a href="secAstro.html#secAstro1a"><i class="fa fa-check"></i><b>10.2</b> Mission times in space</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="secAstro.html"><a href="secAstro.html#secAstro2"><i class="fa fa-check"></i><b>10.2.1</b> Logging mission times</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="secAstro.html"><a href="secAstro.html#secAstro4"><i class="fa fa-check"></i><b>10.3</b> Checking the data with graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secAstro.html"><a href="secAstro.html#graphical-takeaways-8"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="secDiam.html"><a href="secDiam.html"><i class="fa fa-check"></i><b>11</b> Data in the sky at night</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="secDiam.html"><a href="secDiam.html#secDiam1"><i class="fa fa-check"></i><b>11.1</b> Data on diamonds for sale</a></li>
+<li class="chapter" data-level="11.2" data-path="secDiam.html"><a href="secDiam.html#secDiam2"><i class="fa fa-check"></i><b>11.2</b> Checking for outliers and unusual values</a></li>
+<li class="chapter" data-level="11.3" data-path="secDiam.html"><a href="secDiam.html#secDiam3"><i class="fa fa-check"></i><b>11.3</b> Intriguing features</a>
+<ul>
+<li class="chapter" data-level="" data-path="secDiam.html"><a href="secDiam.html#graphical-takeaways-9"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="secPsor.html"><a href="secPsor.html"><i class="fa fa-check"></i><b>12</b> Psoriasis and the Quality of Life</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="secPsor.html"><a href="secPsor.html#secPsor1"><i class="fa fa-check"></i><b>12.1</b> Comparing treatment and placebo groups</a></li>
+<li class="chapter" data-level="12.2" data-path="secPsor.html"><a href="secPsor.html#secPsor2"><i class="fa fa-check"></i><b>12.2</b> Examining responses to individual questions</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPsor.html"><a href="secPsor.html#graphical-takeaways-10"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="secElecC.html"><a href="secElecC.html"><i class="fa fa-check"></i><b>13</b> Charging electric cars</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="secElecC.html"><a href="secElecC.html#secElecC1"><i class="fa fa-check"></i><b>13.1</b> How was the study organised?</a></li>
+<li class="chapter" data-level="13.2" data-path="secElecC.html"><a href="secElecC.html#secElecC2"><i class="fa fa-check"></i><b>13.2</b> How long does charging cars take?</a></li>
+<li class="chapter" data-level="13.3" data-path="secElecC.html"><a href="secElecC.html#secElecC3"><i class="fa fa-check"></i><b>13.3</b> Charging patterns through the week</a>
+<ul>
+<li class="chapter" data-level="" data-path="secElecC.html"><a href="secElecC.html#graphical-takeaways-11"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="secFinches.html"><a href="secFinches.html"><i class="fa fa-check"></i><b>14</b> Darwin’s Finches</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="secFinches.html"><a href="secFinches.html#secFinches1"><i class="fa fa-check"></i><b>14.1</b> How do Darwin’s finches differ?</a></li>
+<li class="chapter" data-level="14.2" data-path="secFinches.html"><a href="secFinches.html#secFinches2"><i class="fa fa-check"></i><b>14.2</b> Do species vary across the Galápagos islands?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secFinches.html"><a href="secFinches.html#graphical-takeaways-12"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="secEuros.html"><a href="secEuros.html"><i class="fa fa-check"></i><b>15</b> Home or away: where do soccer players play?</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="secEuros.html"><a href="secEuros.html#secEuros1"><i class="fa fa-check"></i><b>15.1</b> The European Football Championship since 1960</a></li>
+<li class="chapter" data-level="15.2" data-path="secEuros.html"><a href="secEuros.html#secEuros2"><i class="fa fa-check"></i><b>15.2</b> Which leagues do international players play in?</a></li>
+<li class="chapter" data-level="15.3" data-path="secEuros.html"><a href="secEuros.html#secEuros3"><i class="fa fa-check"></i><b>15.3</b> How have countries changed?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secEuros.html"><a href="secEuros.html#graphical-takeaways-13"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="secFootball.html"><a href="secFootball.html"><i class="fa fa-check"></i><b>16</b> Watching soccer—the English leagues</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="secFootball.html"><a href="secFootball.html#secFootball1"><i class="fa fa-check"></i><b>16.1</b> History of the English football leagues since 1888</a></li>
+<li class="chapter" data-level="16.2" data-path="secFootball.html"><a href="secFootball.html#secFootball2"><i class="fa fa-check"></i><b>16.2</b> How have numbers of draws changed?</a></li>
+<li class="chapter" data-level="16.3" data-path="secFootball.html"><a href="secFootball.html#secFootball3"><i class="fa fa-check"></i><b>16.3</b> How big is home advantage?</a></li>
+<li class="chapter" data-level="16.4" data-path="secFootball.html"><a href="secFootball.html#secFootball4"><i class="fa fa-check"></i><b>16.4</b> Have the numbers of goals scored gone down?</a></li>
+<li class="chapter" data-level="16.5" data-path="secFootball.html"><a href="secFootball.html#secFootball5"><i class="fa fa-check"></i><b>16.5</b> How well have teams performed over the years?</a></li>
+<li class="chapter" data-level="16.6" data-path="secFootball.html"><a href="secFootball.html#secFootball6"><i class="fa fa-check"></i><b>16.6</b> Wormcharts show league progress over a season</a>
+<ul>
+<li class="chapter" data-level="16.6.1" data-path="secFootball.html"><a href="secFootball.html#leicester-city-are-champions-for-the-first-time"><i class="fa fa-check"></i><b>16.6.1</b> Leicester City are Champions for the first time!</a></li>
+<li class="chapter" data-level="16.6.2" data-path="secFootball.html"><a href="secFootball.html#the-1982-83-season-had-a-few-surprises"><i class="fa fa-check"></i><b>16.6.2</b> The 1982-83 season had a few surprises</a></li>
+<li class="chapter" data-level="16.6.3" data-path="secFootball.html"><a href="secFootball.html#the-most-equal-and-unequal-seasons"><i class="fa fa-check"></i><b>16.6.3</b> The most equal and unequal seasons</a></li>
+<li class="chapter" data-level="" data-path="secFootball.html"><a href="secFootball.html#graphical-takeaways-14"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="secVehicles.html"><a href="secVehicles.html"><i class="fa fa-check"></i><b>17</b> Fuel efficiency of cars in the USA</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles1"><i class="fa fa-check"></i><b>17.1</b> How efficient are different types of car?</a></li>
+<li class="chapter" data-level="17.2" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles2"><i class="fa fa-check"></i><b>17.2</b> Small (?) luxury cars</a></li>
+<li class="chapter" data-level="17.3" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles3"><i class="fa fa-check"></i><b>17.3</b> How many car models have been evaluated over the years?</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="secVehicles.html"><a href="secVehicles.html#station-wagons-and-suvs"><i class="fa fa-check"></i><b>17.3.1</b> Station wagons and SUVs</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles4"><i class="fa fa-check"></i><b>17.4</b> Comparing fuel efficiency of individual models over time</a>
+<ul>
+<li class="chapter" data-level="" data-path="secVehicles.html"><a href="secVehicles.html#graphical-takeaways-15"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="secPalmerPen.html"><a href="secPalmerPen.html"><i class="fa fa-check"></i><b>18</b> Differences amongst the Palmer penguins</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen1"><i class="fa fa-check"></i><b>18.1</b> Getting an overview of the penguin data</a></li>
+<li class="chapter" data-level="18.2" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen2"><i class="fa fa-check"></i><b>18.2</b> Looking at several variables in one plot</a></li>
+<li class="chapter" data-level="18.3" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen3"><i class="fa fa-check"></i><b>18.3</b> Using raw data to get more information</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPalmerPen.html"><a href="secPalmerPen.html#graphical-takeaways-16"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="secMalaria.html"><a href="secMalaria.html"><i class="fa fa-check"></i><b>19</b> Comparing tests for malaria</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria1"><i class="fa fa-check"></i><b>19.1</b> How much agreement is there between the four tests?</a></li>
+<li class="chapter" data-level="19.2" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria2"><i class="fa fa-check"></i><b>19.2</b> Additional analyses</a>
+<ul>
+<li class="chapter" data-level="" data-path="secMalaria.html"><a href="secMalaria.html#graphical-takeaways-17"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="secSwim.html"><a href="secSwim.html"><i class="fa fa-check"></i><b>20</b> Are swimmers swimming faster?</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="secSwim.html"><a href="secSwim.html#secSwim1"><i class="fa fa-check"></i><b>20.1</b> Best times for different strokes</a></li>
+<li class="chapter" data-level="20.2" data-path="secSwim.html"><a href="secSwim.html#secSwim2"><i class="fa fa-check"></i><b>20.2</b> How good are the best swimmers across multiple events?</a></li>
+<li class="chapter" data-level="20.3" data-path="secSwim.html"><a href="secSwim.html#secSwim3"><i class="fa fa-check"></i><b>20.3</b> Comparing events graphically</a></li>
+<li class="chapter" data-level="20.4" data-path="secSwim.html"><a href="secSwim.html#secSwim4"><i class="fa fa-check"></i><b>20.4</b> How do relay races compare with individual races?</a></li>
+<li class="chapter" data-level="20.5" data-path="secSwim.html"><a href="secSwim.html#secSwim5"><i class="fa fa-check"></i><b>20.5</b> How do countries compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secSwim.html"><a href="secSwim.html#graphical-takeaways-18"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="secComM.html"><a href="secComM.html"><i class="fa fa-check"></i><b>21</b> Over 90 years running 90 km</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="secComM.html"><a href="secComM.html#secComM1"><i class="fa fa-check"></i><b>21.1</b> How many run in the Comrades (Ultra)Marathon?</a></li>
+<li class="chapter" data-level="21.2" data-path="secComM.html"><a href="secComM.html#secComM2"><i class="fa fa-check"></i><b>21.2</b> Numbers by age and sex</a></li>
+<li class="chapter" data-level="21.3" data-path="secComM.html"><a href="secComM.html#secComM3"><i class="fa fa-check"></i><b>21.3</b> How long do runners take to finish?</a></li>
+<li class="chapter" data-level="21.4" data-path="secComM.html"><a href="secComM.html#secComM5"><i class="fa fa-check"></i><b>21.4</b> Comparing times for men and women</a>
+<ul>
+<li class="chapter" data-level="21.4.1" data-path="secComM.html"><a href="secComM.html#best-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.1</b> Best times for men and women</a></li>
+<li class="chapter" data-level="21.4.2" data-path="secComM.html"><a href="secComM.html#median-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.2</b> Median times for men and women</a></li>
+</ul></li>
+<li class="chapter" data-level="21.5" data-path="secComM.html"><a href="secComM.html#secComM6"><i class="fa fa-check"></i><b>21.5</b> How many runners get medals?</a></li>
+<li class="chapter" data-level="21.6" data-path="secComM.html"><a href="secComM.html#secComM4"><i class="fa fa-check"></i><b>21.6</b> How different are the “up” and “down” races?</a></li>
+<li class="chapter" data-level="21.7" data-path="secComM.html"><a href="secComM.html#secComM7"><i class="fa fa-check"></i><b>21.7</b> How do individual runners perform over the years?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secComM.html"><a href="secComM.html#graphical-takeaways-19"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="secFace.html"><a href="secFace.html"><i class="fa fa-check"></i><b>22</b> Comparing software for facial recognition</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="secFace.html"><a href="secFace.html#secFace1"><i class="fa fa-check"></i><b>22.1</b> How well do the softwares do?</a></li>
+<li class="chapter" data-level="22.2" data-path="secFace.html"><a href="secFace.html#secFace2"><i class="fa fa-check"></i><b>22.2</b> Are positive predictive values (PPV) a good criterion?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secFace.html"><a href="secFace.html#graphical-takeaways-20"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="secShears.html"><a href="secShears.html"><i class="fa fa-check"></i><b>23</b> Distinguishing shearwaters</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="secShears.html"><a href="secShears.html#secShears1"><i class="fa fa-check"></i><b>23.1</b> Distinguishing shearwaters and puffins</a></li>
+<li class="chapter" data-level="23.2" data-path="secShears.html"><a href="secShears.html#secShears2"><i class="fa fa-check"></i><b>23.2</b> Comparing two shearwater species (Audubon and Galápagos)</a></li>
+<li class="chapter" data-level="23.3" data-path="secShears.html"><a href="secShears.html#secShears3"><i class="fa fa-check"></i><b>23.3</b> Can the species be clustered?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secShears.html"><a href="secShears.html#graphical-takeaways-21"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="secDeer.html"><a href="secDeer.html"><i class="fa fa-check"></i><b>24</b> When do road accidents with deer happen in Bavaria?</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="secDeer.html"><a href="secDeer.html#secDeer1"><i class="fa fa-check"></i><b>24.1</b> Vehicle accidents involving deer</a></li>
+<li class="chapter" data-level="24.2" data-path="secDeer.html"><a href="secDeer.html#secDeer2"><i class="fa fa-check"></i><b>24.2</b> What about vehicle accidents without deer?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secDeer.html"><a href="secDeer.html#graphical-takeaways-22"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="secTitan.html"><a href="secTitan.html"><i class="fa fa-check"></i><b>25</b> The Titanic Disaster</a>
+<ul>
+<li class="chapter" data-level="25.1" data-path="secTitan.html"><a href="secTitan.html#secTitan1"><i class="fa fa-check"></i><b>25.1</b> Who travelled on the Titanic?</a></li>
+<li class="chapter" data-level="25.2" data-path="secTitan.html"><a href="secTitan.html#secTitan2"><i class="fa fa-check"></i><b>25.2</b> Which groups had high survival rates?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secTitan.html"><a href="secTitan.html#graphical-takeaways-23"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="secBTwahl.html"><a href="secBTwahl.html"><i class="fa fa-check"></i><b>26</b> German Election 2021—what happened?</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl1"><i class="fa fa-check"></i><b>26.1</b> Who won the 2021 election?</a></li>
+<li class="chapter" data-level="26.2" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl2"><i class="fa fa-check"></i><b>26.2</b> Are there geographic patterns?</a></li>
+<li class="chapter" data-level="26.3" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl3"><i class="fa fa-check"></i><b>26.3</b> Who won the first-past-the-post seats?</a></li>
+<li class="chapter" data-level="26.4" data-path="secBTwahl.html"><a href="secBTwahl.html#how-do-first-past-the-post-and-party-votes-compare"><i class="fa fa-check"></i><b>26.4</b> How do first-past-the-post and party votes compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secBTwahl.html"><a href="secBTwahl.html#graphical-takeaways-24"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Advice on Graphics</b></span></li>
+<li class="chapter" data-level="27" data-path="secProvQ.html"><a href="secProvQ.html"><i class="fa fa-check"></i><b>27</b> Provenance and quality</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="secProvQ.html"><a href="secProvQ.html#what-does-provenance-mean"><i class="fa fa-check"></i><b>27.1</b> What does provenance mean?</a></li>
+<li class="chapter" data-level="27.2" data-path="secProvQ.html"><a href="secProvQ.html#what-problems-arise-with-datasets"><i class="fa fa-check"></i><b>27.2</b> What problems arise with datasets?</a>
+<ul>
+<li class="chapter" data-level="27.2.1" data-path="secProvQ.html"><a href="secProvQ.html#data-definitions"><i class="fa fa-check"></i><b>27.2.1</b> Data definitions</a></li>
+<li class="chapter" data-level="27.2.2" data-path="secProvQ.html"><a href="secProvQ.html#data-collection"><i class="fa fa-check"></i><b>27.2.2</b> Data collection</a></li>
+<li class="chapter" data-level="27.2.3" data-path="secProvQ.html"><a href="secProvQ.html#data-availability"><i class="fa fa-check"></i><b>27.2.3</b> Data availability</a></li>
+</ul></li>
+<li class="chapter" data-level="27.3" data-path="secProvQ.html"><a href="secProvQ.html#the-provenance-of-datasets-used-in-the-book"><i class="fa fa-check"></i><b>27.3</b> The provenance of datasets used in the book</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="secProvQ.html"><a href="secProvQ.html#gapminder-chapter-refsecgapm"><i class="fa fa-check"></i><b>27.3.1</b> Gapminder (Chapter @ref(secGapm))</a></li>
+<li class="chapter" data-level="27.3.2" data-path="secProvQ.html"><a href="secProvQ.html#movies-chapter-refsecmovies"><i class="fa fa-check"></i><b>27.3.2</b> Movies (Chapter @ref(secMovies))</a></li>
+<li class="chapter" data-level="27.3.3" data-path="secProvQ.html"><a href="secProvQ.html#democratic-convention-1912-chapter-refsec1912dem"><i class="fa fa-check"></i><b>27.3.3</b> Democratic Convention 1912 (Chapter @ref(sec1912Dem))</a></li>
+<li class="chapter" data-level="27.3.4" data-path="secProvQ.html"><a href="secProvQ.html#speed-of-light-chapter-refseclights"><i class="fa fa-check"></i><b>27.3.4</b> Speed of light (Chapter @ref(secLightS))</a></li>
+<li class="chapter" data-level="27.3.5" data-path="secProvQ.html"><a href="secProvQ.html#olympic-games-chapter-refsecolymps"><i class="fa fa-check"></i><b>27.3.5</b> Olympic Games (Chapter @ref(secOlymps))</a></li>
+<li class="chapter" data-level="27.3.6" data-path="secProvQ.html"><a href="secProvQ.html#chess-ratings-chapter-refsecchess"><i class="fa fa-check"></i><b>27.3.6</b> Chess ratings (Chapter @ref(secChess))</a></li>
+<li class="chapter" data-level="27.3.7" data-path="secProvQ.html"><a href="secProvQ.html#attitudes-to-same-sex-marriage-chapter-refsecgayr"><i class="fa fa-check"></i><b>27.3.7</b> Attitudes to same-sex marriage (Chapter @ref(secGayR))</a></li>
+<li class="chapter" data-level="27.3.8" data-path="secProvQ.html"><a href="secProvQ.html#human-spaceflights-chapter-refsecastro"><i class="fa fa-check"></i><b>27.3.8</b> Human spaceflights (Chapter @ref(secAstro))</a></li>
+<li class="chapter" data-level="27.3.9" data-path="secProvQ.html"><a href="secProvQ.html#diamonds-chapter-refsecdiam"><i class="fa fa-check"></i><b>27.3.9</b> Diamonds (Chapter @ref(secDiam))</a></li>
+<li class="chapter" data-level="27.3.10" data-path="secProvQ.html"><a href="secProvQ.html#electric-car-charging-chapter-refsecelecc"><i class="fa fa-check"></i><b>27.3.10</b> Electric car charging (Chapter @ref(secElecC))</a></li>
+<li class="chapter" data-level="27.3.11" data-path="secProvQ.html"><a href="secProvQ.html#darwins-finches-chapter-refsecfinches"><i class="fa fa-check"></i><b>27.3.11</b> Darwin’s finches (Chapter @ref(secFinches))</a></li>
+<li class="chapter" data-level="27.3.12" data-path="secProvQ.html"><a href="secProvQ.html#vehicle-fuel-consumption-chapter-refsecvehicles"><i class="fa fa-check"></i><b>27.3.12</b> Vehicle fuel consumption (Chapter @ref(secVehicles))</a></li>
+<li class="chapter" data-level="27.3.13" data-path="secProvQ.html"><a href="secProvQ.html#comrades-marathon-chapter-refseccomm"><i class="fa fa-check"></i><b>27.3.13</b> Comrades Marathon (Chapter @ref(secComM))</a></li>
+<li class="chapter" data-level="27.3.14" data-path="secProvQ.html"><a href="secProvQ.html#shearwaters-chapter-refsecshears"><i class="fa fa-check"></i><b>27.3.14</b> Shearwaters (Chapter @ref(secShears))</a></li>
+<li class="chapter" data-level="27.3.15" data-path="secProvQ.html"><a href="secProvQ.html#titanic-chapter-refsectitan"><i class="fa fa-check"></i><b>27.3.15</b> Titanic (Chapter @ref(secTitan))</a></li>
+</ul></li>
+<li class="chapter" data-level="27.4" data-path="secProvQ.html"><a href="secProvQ.html#how-do-invented-simulated-and-real-datasets-compare"><i class="fa fa-check"></i><b>27.4</b> How do invented, simulated, and real datasets compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secProvQ.html"><a href="secProvQ.html#main-points"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="secWrang.html"><a href="secWrang.html"><i class="fa fa-check"></i><b>28</b> Wrangling</a>
+<ul>
+<li class="chapter" data-level="28.1" data-path="secWrang.html"><a href="secWrang.html#secWrang1"><i class="fa fa-check"></i><b>28.1</b> Data wrangling: what and why</a></li>
+<li class="chapter" data-level="28.2" data-path="secWrang.html"><a href="secWrang.html#secWrang2"><i class="fa fa-check"></i><b>28.2</b> Data cleaning and transforming</a>
+<ul>
+<li class="chapter" data-level="28.2.1" data-path="secWrang.html"><a href="secWrang.html#errors-typos-outliers-missing-values"><i class="fa fa-check"></i><b>28.2.1</b> Errors, typos, outliers, missing values</a></li>
+<li class="chapter" data-level="28.2.2" data-path="secWrang.html"><a href="secWrang.html#secWrang22"><i class="fa fa-check"></i><b>28.2.2</b> Transforming and combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="28.3" data-path="secWrang.html"><a href="secWrang.html#secWrang3"><i class="fa fa-check"></i><b>28.3</b> Restructuring: subsetting, grouping, aggregating</a></li>
+<li class="chapter" data-level="28.4" data-path="secWrang.html"><a href="secWrang.html#naming-renaming-and-reclassifying"><i class="fa fa-check"></i><b>28.4</b> Naming, renaming and reclassifying</a></li>
+<li class="chapter" data-level="28.5" data-path="secWrang.html"><a href="secWrang.html#secWrang4"><i class="fa fa-check"></i><b>28.5</b> Wrangling for layered graphics</a>
+<ul>
+<li class="chapter" data-level="28.5.1" data-path="secWrang.html"><a href="secWrang.html#types-of-layers"><i class="fa fa-check"></i><b>28.5.1</b> Types of layers</a></li>
+<li class="chapter" data-level="28.5.2" data-path="secWrang.html"><a href="secWrang.html#the-layers-of-a-league-wormchart"><i class="fa fa-check"></i><b>28.5.2</b> The layers of a league wormchart</a></li>
+</ul></li>
+<li class="chapter" data-level="28.6" data-path="secWrang.html"><a href="secWrang.html#secWrang5"><i class="fa fa-check"></i><b>28.6</b> Putting datasets together and reproducibility</a>
+<ul>
+<li class="chapter" data-level="28.6.1" data-path="secWrang.html"><a href="secWrang.html#reading-in-and-merging-datasets"><i class="fa fa-check"></i><b>28.6.1</b> Reading in and merging datasets</a></li>
+<li class="chapter" data-level="28.6.2" data-path="secWrang.html"><a href="secWrang.html#reproducibility"><i class="fa fa-check"></i><b>28.6.2</b> Reproducibility </a></li>
+<li class="chapter" data-level="" data-path="secWrang.html"><a href="secWrang.html#main-points-1"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="secColour.html"><a href="secColour.html"><i class="fa fa-check"></i><b>29</b> Colour</a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="secColour.html"><a href="secColour.html#secColour1"><i class="fa fa-check"></i><b>29.1</b> Theory and implementation</a></li>
+<li class="chapter" data-level="29.2" data-path="secColour.html"><a href="secColour.html#secColour2"><i class="fa fa-check"></i><b>29.2</b> Perception of colour</a></li>
+<li class="chapter" data-level="29.3" data-path="secColour.html"><a href="secColour.html#secColour3"><i class="fa fa-check"></i><b>29.3</b> Value of colour</a>
+<ul>
+<li class="chapter" data-level="29.3.1" data-path="secColour.html"><a href="secColour.html#colours-distinguish"><i class="fa fa-check"></i><b>29.3.1</b> Colours distinguish</a></li>
+<li class="chapter" data-level="29.3.2" data-path="secColour.html"><a href="secColour.html#colours-highlight"><i class="fa fa-check"></i><b>29.3.2</b> Colours highlight</a></li>
+<li class="chapter" data-level="29.3.3" data-path="secColour.html"><a href="secColour.html#colours-connect"><i class="fa fa-check"></i><b>29.3.3</b> Colours connect</a></li>
+<li class="chapter" data-level="29.3.4" data-path="secColour.html"><a href="secColour.html#colours-separate"><i class="fa fa-check"></i><b>29.3.4</b> Colours separate</a></li>
+<li class="chapter" data-level="29.3.5" data-path="secColour.html"><a href="secColour.html#colours-signify"><i class="fa fa-check"></i><b>29.3.5</b> Colours signify</a></li>
+<li class="chapter" data-level="29.3.6" data-path="secColour.html"><a href="secColour.html#colours-attract"><i class="fa fa-check"></i><b>29.3.6</b> Colours attract</a></li>
+</ul></li>
+<li class="chapter" data-level="29.4" data-path="secColour.html"><a href="secColour.html#secColour4"><i class="fa fa-check"></i><b>29.4</b> Choice of colour</a>
+<ul>
+<li class="chapter" data-level="29.4.1" data-path="secColour.html"><a href="secColour.html#colour-blind-palettes-help"><i class="fa fa-check"></i><b>29.4.1</b> Colour blind palettes help</a></li>
+<li class="chapter" data-level="29.4.2" data-path="secColour.html"><a href="secColour.html#palette-order-counts"><i class="fa fa-check"></i><b>29.4.2</b> Palette order counts</a></li>
+<li class="chapter" data-level="29.4.3" data-path="secColour.html"><a href="secColour.html#there-may-not-be-enough-colours"><i class="fa fa-check"></i><b>29.4.3</b> There may not be enough colours</a></li>
+<li class="chapter" data-level="29.4.4" data-path="secColour.html"><a href="secColour.html#avoid-using-the-same-colours-for-different-datasets"><i class="fa fa-check"></i><b>29.4.4</b> Avoid using the same colours for different datasets</a></li>
+<li class="chapter" data-level="29.4.5" data-path="secColour.html"><a href="secColour.html#avoid-overlapping-colours-use-faceting"><i class="fa fa-check"></i><b>29.4.5</b> Avoid overlapping colours, use faceting</a></li>
+<li class="chapter" data-level="29.4.6" data-path="secColour.html"><a href="secColour.html#backgrounds-matter"><i class="fa fa-check"></i><b>29.4.6</b> Backgrounds matter</a></li>
+<li class="chapter" data-level="" data-path="secColour.html"><a href="secColour.html#main-points-2"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="secScene.html"><a href="secScene.html"><i class="fa fa-check"></i><b>30</b> Setting the scene</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="secScene.html"><a href="secScene.html#secScene6"><i class="fa fa-check"></i><b>30.1</b> Scaling</a></li>
+<li class="chapter" data-level="30.2" data-path="secScene.html"><a href="secScene.html#secScene4"><i class="fa fa-check"></i><b>30.2</b> Formatting</a>
+<ul>
+<li class="chapter" data-level="30.2.1" data-path="secScene.html"><a href="secScene.html#points-areas-lines"><i class="fa fa-check"></i><b>30.2.1</b> Points, areas, lines, …</a></li>
+<li class="chapter" data-level="30.2.2" data-path="secScene.html"><a href="secScene.html#plot"><i class="fa fa-check"></i><b>30.2.2</b> Plot</a></li>
+<li class="chapter" data-level="30.2.3" data-path="secScene.html"><a href="secScene.html#position"><i class="fa fa-check"></i><b>30.2.3</b> Position</a></li>
+</ul></li>
+<li class="chapter" data-level="30.3" data-path="secScene.html"><a href="secScene.html#secScene3"><i class="fa fa-check"></i><b>30.3</b> Making space</a></li>
+<li class="chapter" data-level="30.4" data-path="secScene.html"><a href="secScene.html#secScene1"><i class="fa fa-check"></i><b>30.4</b> Layout</a></li>
+<li class="chapter" data-level="30.5" data-path="secScene.html"><a href="secScene.html#secScene2"><i class="fa fa-check"></i><b>30.5</b> Comparisons and graphics</a>
+<ul>
+<li class="chapter" data-level="30.5.1" data-path="secScene.html"><a href="secScene.html#types-of-comparison"><i class="fa fa-check"></i><b>30.5.1</b> Types of comparison</a></li>
+<li class="chapter" data-level="30.5.2" data-path="secScene.html"><a href="secScene.html#superposition-juxtaposition-and-faceting"><i class="fa fa-check"></i><b>30.5.2</b> Superposition, juxtaposition, and faceting</a></li>
+<li class="chapter" data-level="30.5.3" data-path="secScene.html"><a href="secScene.html#advice"><i class="fa fa-check"></i><b>30.5.3</b> Advice</a></li>
+</ul></li>
+<li class="chapter" data-level="30.6" data-path="secScene.html"><a href="secScene.html#secScene5"><i class="fa fa-check"></i><b>30.6</b> Defaults</a>
+<ul>
+<li class="chapter" data-level="" data-path="secScene.html"><a href="secScene.html#main-points-3"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="secOrder.html"><a href="secOrder.html"><i class="fa fa-check"></i><b>31</b> Ordering, sorting, and arranging</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="secOrder.html"><a href="secOrder.html#secOrder1"><i class="fa fa-check"></i><b>31.1</b> What gets ordered, sorted, arranged?</a>
+<ul>
+<li class="chapter" data-level="31.1.1" data-path="secOrder.html"><a href="secOrder.html#cases"><i class="fa fa-check"></i><b>31.1.1</b> Cases</a></li>
+<li class="chapter" data-level="31.1.2" data-path="secOrder.html"><a href="secOrder.html#levels-of-categorical-variables"><i class="fa fa-check"></i><b>31.1.2</b> Levels of categorical variables</a></li>
+<li class="chapter" data-level="31.1.3" data-path="secOrder.html"><a href="secOrder.html#variables"><i class="fa fa-check"></i><b>31.1.3</b> Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="31.2" data-path="secOrder.html"><a href="secOrder.html#secOrder2"><i class="fa fa-check"></i><b>31.2</b> Ordering and sorting within graphics</a>
+<ul>
+<li class="chapter" data-level="31.2.1" data-path="secOrder.html"><a href="secOrder.html#secBoxes"><i class="fa fa-check"></i><b>31.2.1</b> Boxplots</a></li>
+<li class="chapter" data-level="31.2.2" data-path="secOrder.html"><a href="secOrder.html#sorting-into-groups-and-faceting-plots"><i class="fa fa-check"></i><b>31.2.2</b> Sorting into groups and faceting plots</a></li>
+<li class="chapter" data-level="31.2.3" data-path="secOrder.html"><a href="secOrder.html#secMosps"><i class="fa fa-check"></i><b>31.2.3</b> Mosaicplots</a></li>
+<li class="chapter" data-level="31.2.4" data-path="secOrder.html"><a href="secOrder.html#secPCPs"><i class="fa fa-check"></i><b>31.2.4</b> Parallel coordinate plots</a></li>
+</ul></li>
+<li class="chapter" data-level="31.3" data-path="secOrder.html"><a href="secOrder.html#secOrder3"><i class="fa fa-check"></i><b>31.3</b> Numbers of orderings and sortings</a></li>
+<li class="chapter" data-level="31.4" data-path="secOrder.html"><a href="secOrder.html#secOrder4"><i class="fa fa-check"></i><b>31.4</b> Arranging graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secOrder.html"><a href="secOrder.html#main-points-4"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="secInterp.html"><a href="secInterp.html"><i class="fa fa-check"></i><b>32</b> What affects interpretation?</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="secInterp.html"><a href="secInterp.html#secAttention"><i class="fa fa-check"></i><b>32.1</b> Attention</a>
+<ul>
+<li class="chapter" data-level="32.1.1" data-path="secInterp.html"><a href="secInterp.html#types-of-attention"><i class="fa fa-check"></i><b>32.1.1</b> Types of attention</a></li>
+<li class="chapter" data-level="32.1.2" data-path="secInterp.html"><a href="secInterp.html#cognitive-load"><i class="fa fa-check"></i><b>32.1.2</b> Cognitive load</a></li>
+<li class="chapter" data-level="32.1.3" data-path="secInterp.html"><a href="secInterp.html#rewards-for-paying-attention"><i class="fa fa-check"></i><b>32.1.3</b> Rewards for paying attention</a></li>
+</ul></li>
+<li class="chapter" data-level="32.2" data-path="secInterp.html"><a href="secInterp.html#secUnderstand"><i class="fa fa-check"></i><b>32.2</b> Understanding</a>
+<ul>
+<li class="chapter" data-level="32.2.1" data-path="secInterp.html"><a href="secInterp.html#knowledge"><i class="fa fa-check"></i><b>32.2.1</b> Knowledge</a></li>
+<li class="chapter" data-level="32.2.2" data-path="secInterp.html"><a href="secInterp.html#experience"><i class="fa fa-check"></i><b>32.2.2</b> Experience</a></li>
+<li class="chapter" data-level="32.2.3" data-path="secInterp.html"><a href="secInterp.html#possible-cognitive-biases"><i class="fa fa-check"></i><b>32.2.3</b> Possible cognitive biases</a></li>
+</ul></li>
+<li class="chapter" data-level="32.3" data-path="secInterp.html"><a href="secInterp.html#secCheck"><i class="fa fa-check"></i><b>32.3</b> Checking</a>
+<ul>
+<li class="chapter" data-level="32.3.1" data-path="secInterp.html"><a href="secInterp.html#provenance"><i class="fa fa-check"></i><b>32.3.1</b> Provenance</a></li>
+<li class="chapter" data-level="32.3.2" data-path="secInterp.html"><a href="secInterp.html#looking-at-the-numbers"><i class="fa fa-check"></i><b>32.3.2</b> Looking at the numbers</a></li>
+<li class="chapter" data-level="32.3.3" data-path="secInterp.html"><a href="secInterp.html#varying-plots"><i class="fa fa-check"></i><b>32.3.3</b> Varying plots</a></li>
+<li class="chapter" data-level="32.3.4" data-path="secInterp.html"><a href="secInterp.html#varying-plot-forms"><i class="fa fa-check"></i><b>32.3.4</b> Varying plot forms</a></li>
+<li class="chapter" data-level="32.3.5" data-path="secInterp.html"><a href="secInterp.html#statistical-checks"><i class="fa fa-check"></i><b>32.3.5</b> Statistical checks</a></li>
+<li class="chapter" data-level="32.3.6" data-path="secInterp.html"><a href="secInterp.html#checking-consequences"><i class="fa fa-check"></i><b>32.3.6</b> Checking consequences</a></li>
+<li class="chapter" data-level="32.3.7" data-path="secInterp.html"><a href="secInterp.html#context"><i class="fa fa-check"></i><b>32.3.7</b> Context</a></li>
+<li class="chapter" data-level="32.3.8" data-path="secInterp.html"><a href="secInterp.html#discussing-with-others-especially-domain-experts"><i class="fa fa-check"></i><b>32.3.8</b> Discussing with others, especially domain experts</a></li>
+<li class="chapter" data-level="32.3.9" data-path="secInterp.html"><a href="secInterp.html#replicate"><i class="fa fa-check"></i><b>32.3.9</b> Replicate</a></li>
+<li class="chapter" data-level="32.3.10" data-path="secInterp.html"><a href="secInterp.html#example-of-checking"><i class="fa fa-check"></i><b>32.3.10</b> Example of checking</a></li>
+<li class="chapter" data-level="" data-path="secInterp.html"><a href="secInterp.html#main-points-5"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="secPlot.html"><a href="secPlot.html"><i class="fa fa-check"></i><b>33</b> Varieties of plots, developing plots</a>
+<ul>
+<li class="chapter" data-level="33.1" data-path="secPlot.html"><a href="secPlot.html#varying-various-plots"><i class="fa fa-check"></i><b>33.1</b> Varying various plots</a></li>
+<li class="chapter" data-level="33.2" data-path="secPlot.html"><a href="secPlot.html#ensembles-of-plots"><i class="fa fa-check"></i><b>33.2</b> Ensembles of plots</a></li>
+<li class="chapter" data-level="33.3" data-path="secPlot.html"><a href="secPlot.html#differences-between-early-drafts-and-later-graphics"><i class="fa fa-check"></i><b>33.3</b> Differences between early drafts and later graphics</a>
+<ul>
+<li class="chapter" data-level="33.3.1" data-path="secPlot.html"><a href="secPlot.html#democratic-convention"><i class="fa fa-check"></i><b>33.3.1</b> 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="33.3.2" data-path="secPlot.html"><a href="secPlot.html#gapminder-life-expectancies"><i class="fa fa-check"></i><b>33.3.2</b> Gapminder Life Expectancies</a></li>
+<li class="chapter" data-level="33.3.3" data-path="secPlot.html"><a href="secPlot.html#electric-car-charging"><i class="fa fa-check"></i><b>33.3.3</b> Electric car charging</a></li>
+<li class="chapter" data-level="33.3.4" data-path="secPlot.html"><a href="secPlot.html#gay-rights"><i class="fa fa-check"></i><b>33.3.4</b> Gay rights</a></li>
+<li class="chapter" data-level="33.3.5" data-path="secPlot.html"><a href="secPlot.html#human-space-flight"><i class="fa fa-check"></i><b>33.3.5</b> Human space flight</a></li>
+<li class="chapter" data-level="33.3.6" data-path="secPlot.html"><a href="secPlot.html#euro-2020"><i class="fa fa-check"></i><b>33.3.6</b> Euro 2020</a></li>
+<li class="chapter" data-level="33.3.7" data-path="secPlot.html"><a href="secPlot.html#characteristic-changes"><i class="fa fa-check"></i><b>33.3.7</b> Characteristic changes</a></li>
+</ul></li>
+<li class="chapter" data-level="33.4" data-path="secPlot.html"><a href="secPlot.html#classifying-graphics"><i class="fa fa-check"></i><b>33.4</b> Classifying graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPlot.html"><a href="secPlot.html#main-points-6"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="34" data-path="conclusions-and-recommendations.html"><a href="conclusions-and-recommendations.html"><i class="fa fa-check"></i><b>34</b> Conclusions and recommendations</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Getting (more out of) Graphics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="secOrder" class="section level1 hasAnchor" number="31">
+<h1><span class="header-section-number">31</span> Ordering, sorting, and arranging<a href="secOrder.html#secOrder" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p>“When Laura was here I had the records arranged alphabetically; before that I had them filed in chronological order. . . Tonight, though I fancy something different, so I try to remember the order I bought them in:”</p>
+</blockquote>
+<blockquote>
+<footer>
+— Rob in Nick Hornby’s ‘High Fidelity’
+</footer>
+</blockquote>
+<p>Ordering items means using a numeric or lexicographic criterion to rank them and having a rule for handling ties. Sorting items places them in groups and may include ordering. Arranging items includes ordering and sorting, but may involve using a subjective criterion. Flowers could be ordered by height or sorted by colour. They might be arranged in quite different ways, depending on how well they then look to the person arranging them.</p>
+<div id="secOrder1" class="section level2 hasAnchor" number="31.1">
+<h2><span class="header-section-number">31.1</span> What gets ordered, sorted, arranged?<a href="secOrder.html#secOrder1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="cases" class="section level3 hasAnchor" number="31.1.1">
+<h3><span class="header-section-number">31.1.1</span> Cases<a href="secOrder.html#cases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Datasets can be sorted and ordered in many ways. The cases in the <em>astronauts</em> dataset on space travel (<span class="citation">rfordatascience (<a href="references.html#ref-tidyt:2020b">2020a</a>)</span>) could be sorted into groups by nationality or sex. They could be ordered by year of mission or by year of birth. They could be sorted and ordered by combinations of these variables, for instance, by year of birth within nationality. Grouping and ordering datasets often reveals structures that default orders—whether lexicographic, temporal or random—may not. Ordering and sorting cases can be useful for checking extreme or special cases quickly. If some text has crept into a numeric variable, sorting can often identify which values are in error.</p>
+<p>For sortings or orderings of the <em>astronauts</em> dataset there can be ties, cases that have the same values for the sorting variables, for example people born in the same year of the same nationality. These cases may be ordered randomly amongst themselves or in their original order (whatever that was) or in some other way. Ties would be much less likely if exact dates of birth and exact launch dates of missions were used, although even then pairs like the identical Kelly twins, two Americans, might cause difficulties. To ensure that a return to a particular ordering is always possible, it is essential to have a variable with a unique value for every case, possibly an ID variable constructed for just this reason. Being able to return to the initial order of a dataset is useful if something goes wrong (and something will).</p>
+<p>The ordering of cases can affect printing if cases or lines overlap, as the dataset is printed in order. The lines for the three football teams in Figure <a href="secFootball.html#fig:teamBPS">16.6</a> were drawn in alphabetic order, first Bournemouth, then Portsmouth, then Southampton, as can be seen by looking at where the lines cross. (The lines for the other teams in the leagues, drawn in light grey in the background, were drawn in a background layer first.) Figure <a href="secDiam.html#fig:bothDep">11.9</a> compares calculated values of diamond depth with the values given in the dataset. The data were ordered by the size of the absolute difference, so that the bigger differences, coloured red, were plotted last and hence on top.</p>
+<p>Chapter <a href="secComM.html#secComM">21</a> on the Comrades Marathon includes two plots of the performances of the Nurgalieva twins over the years, Figure <a href="secComM.html#fig:comNurg">21.13</a>, redrawn here as Figure <a href="secOrder.html#fig:comNurgX">31.1</a>. Elena ran every year from 2003 to 2015, while Olesya did not run in 2006 and 2012. In the plots, the line for Olesya is drawn on top. This works if it is remembered that Elena ran every year. If the line for Elena had been drawn on top, that would not have worked, even for the zoomed plot on the right.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="secOrder.html#cb339-1" tabindex="-1"></a>nurg12</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:comNurgX"></span>
+<img src="_main_files/figure-html/comNurgX-1.png" alt="Performances of the Nurgalieva identical twins in the Comrades Marathon races (same data, different vertical scales)" width="672" />
+<p class="caption">
+Figure 31.1: Performances of the Nurgalieva identical twins in the Comrades Marathon races (same data, different vertical scales)
+</p>
+</div>
+</div>
+<div id="levels-of-categorical-variables" class="section level3 hasAnchor" number="31.1.2">
+<h3><span class="header-section-number">31.1.2</span> Levels of categorical variables<a href="secOrder.html#levels-of-categorical-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Variables such as nationality and occupation each have two or more categories. If you draw up a summary table of counts or draw barcharts of them, the categories are likely to be ordered alphabetically by default. This has its advantages (it is easy to find a category in the table) and its disadvantages (categories with names early in the alphabet get more attention, categories you would like to compare may be far apart). Wainer calls this the “Alabama first” issue, as Alabama comes first alphabetically amongst the US States (<span class="citation">Wainer (<a href="references.html#ref-Wainer:1997">1997</a>)</span>). Categories may be ordered by counts, by weights, by proportions, by summary statistics on other variables. Comparisons for whatever statistic you order by become easier. Bars far apart must be different and you can tell which bars that are close together have higher or lower values by the order. More complex sortings, say countries within continents, are possible too.</p>
+<p>One example is the barchart of the numbers of passengers and crew who boarded the Titanic at the four different ports. Figure <a href="secOrder.html#fig:barBoard">31.2</a> shows a plot with the default alphabetic ordering on the left and the plot used in §<a href="secTitan.html#secTitan1">25.1</a> on the right, using the order the ship called at the ports. The great majority, including many crew, joined in Southampton.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="secOrder.html#cb340-1" tabindex="-1"></a>TitanicPassCrew <span class="ot">&lt;-</span> TitanicPassCrew <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">joined=</span><span class="fu">as.character</span>(Joined))</span>
+<span id="cb340-2"><a href="secOrder.html#cb340-2" tabindex="-1"></a>BSCP <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(TitanicPassCrew, <span class="fu">aes</span>(joined)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">fill=</span><span class="st">&quot;lightcoral&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>)</span>
+<span id="cb340-3"><a href="secOrder.html#cb340-3" tabindex="-1"></a>(BSCP <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>))) <span class="sc">+</span> (BSCQ <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>)))</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:barBoard"></span>
+<img src="_main_files/figure-html/barBoard-1.png" alt="Barcharts using the default alphabetic ordering and the order in which the Titanic visited the ports" width="672" />
+<p class="caption">
+Figure 31.2: Barcharts using the default alphabetic ordering and the order in which the Titanic visited the ports
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>In the Gapminder analysis, §<a href="secGapm.html#secGapm3">2.3</a>, there are two barcharts of the four regions, one for the number of countries in each region (Figure <a href="secGapm.html#fig:reg4">2.7</a>) and one for the total population (Figure <a href="secGapm.html#fig:reg4pop">2.8</a>), both ordered by bar heights. The two are shown again here in Figure <a href="secOrder.html#fig:reg4XY">31.3</a>. The first shows that Africa and Asia have more countries than Europe or the Americas, while the second shows that Asia has more of the world’s population than the other three regions put together.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb341-1"><a href="secOrder.html#cb341-1" tabindex="-1"></a>reg4X <span class="sc">+</span> reg4Y</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:reg4XY"></span>
+<img src="_main_files/figure-html/reg4XY-1.png" alt="Numbers of countries and total populations in the four Gapminder regions" width="672" />
+<p class="caption">
+Figure 31.3: Numbers of countries and total populations in the four Gapminder regions
+</p>
+</div>
+<p>A common reason for reordering categories is to produce a recognisable and memorable pattern, for instance steadily increasing or decreasing. Figure <a href="secVehicles.html#fig:swSUV">17.7</a> shows sales of station wagons and SUVs by year. The original plot is on the right of Figure <a href="secOrder.html#fig:swSUVx">31.4</a> and a plot using a default lexicographic ordering of the vehicle types is on the left.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="secOrder.html#cb342-1" tabindex="-1"></a>Veh1Fx <span class="ot">&lt;-</span> Veh1f <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(VClass, year) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">nn=</span><span class="fu">n</span>())</span>
+<span id="cb342-2"><a href="secOrder.html#cb342-2" tabindex="-1"></a><span class="fu">ggplot</span>(Veh1Fx, <span class="fu">aes</span>(year, <span class="at">weight=</span>nn)) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">facet_grid</span>(<span class="at">rows=</span><span class="fu">vars</span>(VClass)) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">strip.text.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>), <span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">150</span>))</span>
+<span id="cb342-3"><a href="secOrder.html#cb342-3" tabindex="-1"></a>vgf</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:swSUVx"></span>
+<img src="_main_files/figure-html/swSUVx-1.png" alt="Annual sales of station wagons and SUVs in default ordering (left) and revised ordering (right)" width="45%" /><img src="_main_files/figure-html/swSUVx-2.png" alt="Annual sales of station wagons and SUVs in default ordering (left) and revised ordering (right)" width="45%" />
+<p class="caption">
+Figure 31.4: Annual sales of station wagons and SUVs in default ordering (left) and revised ordering (right)
+</p>
+</div>
+<p>The ordering chosen put the station wagons first and then the SUVs. Within the station wagon group, the models were ordered by increasing size and earliest available production year. Within the SUV group, they were ordered by type using earliest available production year and within that by 2WD and 4WD (two-wheel and four-wheel drive). Multivariate ordering offers many different possibilities, especially when variables are not nested within one another.</p>
+</div>
+<div id="variables" class="section level3 hasAnchor" number="31.1.3">
+<h3><span class="header-section-number">31.1.3</span> Variables<a href="secOrder.html#variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Datasets come with a particular order of variables. There might be an ID variable, some demographic or structural variables, and then some measurements. All of these might be in a rational order, they might not. Datasets with large numbers of variables are easier to handle if the variables are grouped and ordered. The vehicles dataset made available by the US Department of Energy includes 83 pieces of information on 43516 vehicles. The first 65 variables are labelled alphabetically, so that three defining variables, <code>make</code>, <code>model</code>, and <code>year</code>, appear rather late and not together.</p>
+</div>
+</div>
+<div id="secOrder2" class="section level2 hasAnchor" number="31.2">
+<h2><span class="header-section-number">31.2</span> Ordering and sorting within graphics<a href="secOrder.html#secOrder2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="secBoxes" class="section level3 hasAnchor" number="31.2.1">
+<h3><span class="header-section-number">31.2.1</span> Boxplots<a href="secOrder.html#secBoxes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Boxplots by group are a space-efficient way of comparing distributions. The group ordering is sometimes given (e.g., in Figure <a href="secDiam.html#fig:clarityCarat">11.11</a> of carat by clarity from the <em>diamonds</em> dataset). If not, it is useful to look at different orderings, possibly by a statistic of the individual boxplots (e.g., median or maximum) or by using another dataset statistic associated with the group variable. In Figure <a href="secChess.html#fig:boxChessR">8.13</a> the rankings of chess players were displayed in boxplots for the countries with the most rated players, and the countries were ordered by their median player rating. As with bars in barcharts, the ordering of the boxplots will facilitate some paired comparisons more than others. The median ordering makes comparison of the medians easy by definition. An ordering by, say, maxima, would favour that comparison.</p>
+<div style="page-break-after: always;"></div>
+<p>Boxplots are handy for summarising decathlon data. Each competitor competes in ten track and field events. The results are converted to a points system to make them comparable and the winner is the person with the most points. Figure <a href="secOrder.html#fig:decBox1">31.5</a> shows the points scores for the 116 top-ranked decathletes in April 2021 (<span class="citation">Salmistu (<a href="references.html#ref-estDecath:2021">2021</a>)</span>).</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb343-1"><a href="secOrder.html#cb343-1" tabindex="-1"></a><span class="fu">data</span>(Decath21)</span>
+<span id="cb343-2"><a href="secOrder.html#cb343-2" tabindex="-1"></a>Decath21 <span class="ot">&lt;-</span> Decath21 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Run100m=</span>Run100m<span class="sc">/</span><span class="dv">100</span>, <span class="at">Run400m=</span>Run400m<span class="sc">/</span><span class="dv">100</span>, <span class="at">Hurdle110m=</span>Hurdle110m<span class="sc">/</span><span class="dv">100</span>, <span class="at">Run1500m=</span><span class="dv">60</span><span class="sc">*</span><span class="fu">floor</span>(Run1500m) <span class="sc">+</span> <span class="dv">100</span><span class="sc">*</span>(Run1500m<span class="sc">-</span><span class="fu">floor</span>(Run1500m)))</span>
+<span id="cb343-3"><a href="secOrder.html#cb343-3" tabindex="-1"></a>Decath21 <span class="ot">&lt;-</span> Decath21 <span class="sc">%&gt;%</span> <span class="fu">separate</span>(Venue, <span class="fu">c</span>(<span class="st">&quot;Location&quot;</span>, <span class="st">&quot;Year&quot;</span>), <span class="at">remove=</span><span class="cn">FALSE</span>, <span class="at">sep=</span><span class="sc">-</span><span class="dv">5</span>)</span>
+<span id="cb343-4"><a href="secOrder.html#cb343-4" tabindex="-1"></a>Decath21 <span class="ot">&lt;-</span> Decath21 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">100m</span><span class="st">`</span><span class="ot">=</span> <span class="fu">floor</span>(<span class="fl">25.437</span><span class="sc">*</span>(<span class="dv">18</span><span class="sc">-</span>Run100m)<span class="sc">**</span><span class="fl">1.81</span>), <span class="at">Longjump =</span> <span class="fu">floor</span>(<span class="fl">0.14354</span><span class="sc">*</span>(<span class="dv">100</span><span class="sc">*</span>LongJump<span class="dv">-220</span>)<span class="sc">**</span><span class="fl">1.4</span>), <span class="at">Shotput =</span> <span class="fu">floor</span>(<span class="fl">51.39</span><span class="sc">*</span>(ShotPut<span class="fl">-1.5</span>)<span class="sc">**</span><span class="fl">1.05</span>), <span class="at">Highjump =</span> <span class="fu">floor</span>(<span class="fl">0.8465</span><span class="sc">*</span>(<span class="dv">100</span><span class="sc">*</span>HighJump<span class="dv">-75</span>)<span class="sc">**</span><span class="fl">1.42</span>), <span class="st">`</span><span class="at">400m</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">floor</span>(<span class="fl">1.53775</span><span class="sc">*</span>(<span class="dv">82</span><span class="sc">-</span>Run400m)<span class="sc">**</span><span class="fl">1.81</span>), <span class="st">`</span><span class="at">110mHurdles</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">floor</span>(<span class="fl">5.74352</span><span class="sc">*</span>(<span class="fl">28.5</span><span class="sc">-</span>Hurdle110m)<span class="sc">**</span><span class="fl">1.92</span>), <span class="at">Polevault =</span> <span class="fu">floor</span>(<span class="fl">0.2797</span><span class="sc">*</span>(<span class="dv">100</span><span class="sc">*</span>PoleVault<span class="dv">-100</span>)<span class="sc">**</span><span class="fl">1.35</span>), <span class="at">Discus =</span> <span class="fu">floor</span>(<span class="fl">12.91</span><span class="sc">*</span>(DiscusD<span class="dv">-4</span>)<span class="sc">**</span><span class="fl">1.1</span>), <span class="at">Javelin =</span> <span class="fu">floor</span>(<span class="fl">10.14</span><span class="sc">*</span>(JavelinD<span class="dv">-7</span>)<span class="sc">**</span><span class="fl">1.08</span>), <span class="st">`</span><span class="at">1500m</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">floor</span>(<span class="fl">0.03768</span><span class="sc">*</span>(<span class="dv">480</span><span class="sc">-</span>Run1500m)<span class="sc">**</span><span class="fl">1.85</span>))</span>
+<span id="cb343-5"><a href="secOrder.html#cb343-5" tabindex="-1"></a>Decath21 <span class="ot">&lt;-</span> Decath21 <span class="sc">%&gt;%</span> <span class="fu">rowwise</span>(Rank) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">tot=</span><span class="fu">sum</span>(<span class="fu">c_across</span>(<span class="fu">c</span>(<span class="st">`</span><span class="at">100m</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">1500m</span><span class="st">`</span>)))) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span>
+<span id="cb343-6"><a href="secOrder.html#cb343-6" tabindex="-1"></a>Decath21b <span class="ot">&lt;-</span> Decath21 <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="st">`</span><span class="at">100m</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">1500m</span><span class="st">`</span>, <span class="at">names_to=</span><span class="st">&quot;Event&quot;</span>, <span class="at">values_to=</span><span class="st">&quot;Points&quot;</span>)</span>
+<span id="cb343-7"><a href="secOrder.html#cb343-7" tabindex="-1"></a>Decath21b <span class="ot">&lt;-</span> Decath21b <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">eventx=</span><span class="fu">factor</span>(Event, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;100m&quot;</span>, <span class="st">&quot;Longjump&quot;</span>, <span class="st">&quot;Shotput&quot;</span>, <span class="st">&quot;Highjump&quot;</span>, <span class="st">&quot;400m&quot;</span>, <span class="st">&quot;110mHurdles&quot;</span>, <span class="st">&quot;Discus&quot;</span>, <span class="st">&quot;Polevault&quot;</span>, <span class="st">&quot;Javelin&quot;</span>, <span class="st">&quot;1500m&quot;</span>)))</span>
+<span id="cb343-8"><a href="secOrder.html#cb343-8" tabindex="-1"></a><span class="fu">ggplot</span>(Decath21b, <span class="fu">aes</span>(eventx, Points)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>)</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:decBox1"></span>
+<img src="_main_files/figure-html/decBox1-1.png" alt="Boxplots for the points in the 10 decathlon events in the order they take place for the top 116 decathletes in April 2021" width="672" />
+<p class="caption">
+Figure 31.5: Boxplots for the points in the 10 decathlon events in the order they take place for the top 116 decathletes in April 2021
+</p>
+</div>
+<p>It is striking that, although the points are supposed to be comparable, more are awarded for some events than others. Long jump performances get the most points and performances in the 1500 metres the least. The javelin appears to have the most variability and the 400 metres stands out in including three high outliers. The 1500 metres is a special event for a number of reasons: it is a longer run than the other three running events, requiring different abilities; it is the last event at the end of the second day, so the athletes will be tired; the top decathletes in the competition after nine events run the 1500 metres together, so tactics may be more important than a fast time.</p>
+</div>
+<div id="sorting-into-groups-and-faceting-plots" class="section level3 hasAnchor" number="31.2.2">
+<h3><span class="header-section-number">31.2.2</span> Sorting into groups and faceting plots<a href="secOrder.html#sorting-into-groups-and-faceting-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Faceting displays data subgroups in the same graphical form, e.g., Figures <a href="secMovies.html#fig:movieTT2">3.6</a> and <a href="secOlymps.html#fig:olyEg">6.4</a>. The subgroups are defined by combinations of variables. If the graphical form can be internally ordered (e.g., the bars in a barchart, the boxplots in a group of boxplots or the dotplots in Figure <a href="secOlymps.html#fig:olyEg">6.4</a>) then you have what might be called zero order faceting.</p>
+<p>Sorting cases into groups is often carried out to display statistics, as was done in Figure <a href="secGayR.html#fig:gayCIs">9.5</a> grouping cases by states (and grouping the states by region), or to draw summary plots as in Figure <a href="secVehicles.html#fig:vehCn">17.1</a> grouping cars by class, drive type, and petrol.</p>
+<p>Sorting into groups was used in Chapter <a href="secGapm.html#secGapm">2</a> to draw countries in the same region together (Figure <a href="secGapm.html#fig:LEr4">2.5</a>), in Chapter <a href="secElecC.html#secElecC">13</a> to keep charging stations at the same location together and to colour locations by type, in Chapter <a href="secVehicles.html#secVehicles">17</a> to put what were thought to be similarly sized cars together, in Figure <a href="secSwim.html#fig:khLV">20.7</a>, shown again here as Figure <a href="secOrder.html#fig:khLVX">31.6</a>, to place events for the same swimming stroke together, and in Chapter <a href="secBTwahl.html#secBTwahl">26</a> to keep constituencies in the same Bundesland together and to display the spatial distributions of seat wins for the individual parties.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb344-1"><a href="secOrder.html#cb344-1" tabindex="-1"></a>KHa</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:khLVX"></span>
+<img src="_main_files/figure-html/khLVX-1.png" alt="Katinka Hosszu's best times by event (in purple) compared with the 200 best in each event, with events sorted by stroke and distance" width="672" />
+<p class="caption">
+Figure 31.6: Katinka Hosszu’s best times by event (in purple) compared with the 200 best in each event, with events sorted by stroke and distance
+</p>
+</div>
+<p>Figure <a href="secEuros.html#fig:uefa20">15.7</a> displays 24 barcharts, each with 17 bars. The facets are ordered by the percentage of squad players playing in their own country. The bars themselves are ordered by the numbers of players from a country’s league playing in EURO2020, except for the ‘Other’ category, which has been placed last. The aims are to put countries close together that are similar in home percentage value and to put leagues close together that have similar numbers at the tournament.</p>
+<p>Another example of arranging facets is shown in Figure <a href="secOlymps.html#fig:olyGhs">6.13</a> where the countries are put in order of the first time they hosted the Olympic Games. This matches the aim of the graphic better than a default alphabetic order.</p>
+<p>Sorting into groups gets complicated when there are several grouping variables. Variables may be nested in a hierarchy, such as constituencies within regions or they may have no such structure, such as type of car, manufacturer, type of fuel. Groupings need to be found that reflect the aims of the study.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="secMosps" class="section level3 hasAnchor" number="31.2.3">
+<h3><span class="header-section-number">31.2.3</span> Mosaicplots<a href="secOrder.html#secMosps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Mosaicplots offer a variety of ways of displaying multivariate categorical data. Both the order of the variables and the orders of the levels of the individual variables can have a big influence, as can the choice of mosaicplot form and whether variables are plotted horizontally or vertically (<span class="citation">Hofmann (<a href="references.html#ref-hofmann:2008">2008</a>)</span>).</p>
+<p>There are two mosaicplots in Chapter <a href="secTitan.html#secTitan">25</a> about the sinking of the Titanic, Figures <a href="secTitan.html#fig:titanCrew">25.8</a> and <a href="secTitan.html#fig:titanPass">25.9</a>, shown again in Figure <a href="secOrder.html#fig:titanBoth">31.7</a>. In the plot on the left the passenger classes have been drawn first in the natural order of first, second, third (alphabetic in English, but not in all languages), followed by the crew departments ordered by survival rates. This shows that survival rates declined by class and that the rates were lowest for the crew—excepting the small group of deck crew who would have manned the lifeboats. In the second plot on the right of only the passengers, sex has been drawn first with females to the left and males to the right, and class has been ordered within sex. Placing females first and then males means that there is a general decline in survival rate from left to right—apart from the low rate for males travelling second class.</p>
+<p>In both plots the numbers in each group are shown by the widths of the bars. This information can be seen in many other plots. Here in the first plot it shows how small the two groups with differing survival rates amongst the crew are. In the second one it reminds readers that there were more male than female passengers and that the largest group was third class males.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="secOrder.html#cb345-1" tabindex="-1"></a>titanCX <span class="sc">|</span> titanGPC</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:titanBoth"></span>
+<img src="_main_files/figure-html/titanBoth-1.png" alt="Mosaicplots of Titanic survival rates" width="672" />
+<p class="caption">
+Figure 31.7: Mosaicplots of Titanic survival rates
+</p>
+</div>
+<p>In the analysis of software for facial recognition in Chapter <a href="secFace.html#secFace">22</a> the plots are all drawn with males first and then females to emphasise the general error increase from left to right.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="secPCPs" class="section level3 hasAnchor" number="31.2.4">
+<h3><span class="header-section-number">31.2.4</span> Parallel coordinate plots<a href="secOrder.html#secPCPs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Parallel coordinate plots are drawn with one horizontal axis and many vertical axes, one for each variable drawn. The ordering of the axes makes a major difference to what information can be seen. Orderings can be based on a variety of variable statistics.</p>
+<p>Returning to the effect of decathlon events not being scored comparably, consider the differences in scores between competitors. Giving each competitor 50 points more in an event will not change overall rankings at all. Figure <a href="secOrder.html#fig:decRanks">31.8</a> is a parallel coordinate plot of points given to the top 79 ranked performances in the individual events with points for the 40th highest subtracted. Here the ranked values are joined by lines, not the individual competitors.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="secOrder.html#cb346-1" tabindex="-1"></a>Decath21bs <span class="ot">&lt;-</span> Decath21b <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Event) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">rEvent=</span><span class="fu">rank</span>(<span class="sc">-</span>Points)) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(Event,rEvent)</span>
+<span id="cb346-2"><a href="secOrder.html#cb346-2" tabindex="-1"></a>Decath21bs <span class="ot">&lt;-</span> Decath21bs <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">rrEvent=</span><span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">116</span>))</span>
+<span id="cb346-3"><a href="secOrder.html#cb346-3" tabindex="-1"></a>d21bsW <span class="ot">&lt;-</span> Decath21bs <span class="sc">%&gt;%</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols=</span>rrEvent, <span class="at">names_from=</span>Event, <span class="at">values_from=</span>Points)</span>
+<span id="cb346-4"><a href="secOrder.html#cb346-4" tabindex="-1"></a>d21bsW <span class="ot">&lt;-</span> d21bsW <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="st">`</span><span class="at">100m</span><span class="st">`</span><span class="sc">:</span>Shotput, <span class="sc">~</span>{.x <span class="sc">-</span><span class="fu">sort</span>(.x)[<span class="dv">77</span>]}))</span>
+<span id="cb346-5"><a href="secOrder.html#cb346-5" tabindex="-1"></a>Range <span class="ot">&lt;-</span> <span class="cf">function</span>(v1) {<span class="fu">max</span>(v1)<span class="sc">-</span><span class="fu">min</span>(v1)}</span>
+<span id="cb346-6"><a href="secOrder.html#cb346-6" tabindex="-1"></a>qn <span class="ot">&lt;-</span> d21bsW <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rrEvent <span class="sc">&lt;</span> <span class="dv">80</span>) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">c</span>(<span class="st">`</span><span class="at">100m</span><span class="st">`</span><span class="sc">:</span>Shotput), Range))</span>
+<span id="cb346-7"><a href="secOrder.html#cb346-7" tabindex="-1"></a>qn <span class="ot">&lt;-</span> qn <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="fu">everything</span>(), <span class="at">names_to=</span><span class="st">&quot;name&quot;</span>, <span class="at">values_to=</span><span class="st">&quot;Stat&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(Stat)</span>
+<span id="cb346-8"><a href="secOrder.html#cb346-8" tabindex="-1"></a>d21bsW <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rrEvent <span class="sc">&lt;</span> <span class="dv">80</span>) <span class="sc">%&gt;%</span> <span class="fu">pcp_select</span>(<span class="fu">all_of</span>(qn<span class="sc">$</span>name)) <span class="sc">%&gt;%</span> <span class="fu">pcp_scale</span>(<span class="at">method=</span><span class="st">&quot;raw&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes_pcp</span>()) <span class="sc">+</span> <span class="fu">geom_pcp_axes</span>() <span class="sc">+</span> <span class="fu">geom_pcp</span>(<span class="at">colour=</span><span class="st">&quot;grey70&quot;</span>) <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>, <span class="at">colour=</span><span class="st">&quot;brown4&quot;</span>, <span class="at">lwd=</span><span class="fl">1.5</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="sc">-</span><span class="dv">45</span>))</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:decRanks"></span>
+<img src="_main_files/figure-html/decRanks-1.png" alt="Parallel coordinate plot of the top 79 ranked scores for each decathlon event in April 2021" width="672" />
+<p class="caption">
+Figure 31.8: Parallel coordinate plot of the top 79 ranked scores for each decathlon event in April 2021
+</p>
+</div>
+<p>The nth highest polyline connects the nth best performance in each event. Subtracting the same statistic from the points score for each event makes the levels comparable while keeping the differences on the same scale. The zero line equivalent to the 40th best performance has been coloured brown. There is bigger variability above than below as the distributions are, of course, skewed. The events are not in the same order as in Figure <a href="secOrder.html#fig:decBox1">31.5</a>. They have been ordered by increasing range. The lines are close to parallel for the first few events, implying similar distributions, including for the long jump and the 1500 metres, the two most different events in terms of points awarded. The javelin has greater variability, as observed already. The discrete nature of the high jump and pole vault points is because the bars are set at certain fixed heights that competitors either clear or fail to clear.</p>
+<p>Parallel coordinates are excellent for studying the data from individual decathlon performances too. Now the polylines link performances of the same individual. The scales of the vertical axes are the same for each event and the same as in Figure <a href="secOrder.html#fig:decBox1">31.5</a>. The difference in Figure <a href="secOrder.html#fig:pcp1">31.9</a> is that the events are ordered by increasing median event points.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="secOrder.html#cb347-1" tabindex="-1"></a>Decath21p <span class="ot">&lt;-</span> Decath21 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Rankh=</span><span class="dv">117</span><span class="sc">-</span><span class="fu">rank</span>(tot), <span class="at">Hil=</span><span class="fu">ifelse</span>(Rankh<span class="sc">&lt;</span><span class="dv">5</span>, Rankh, <span class="dv">5</span>))</span>
+<span id="cb347-2"><a href="secOrder.html#cb347-2" tabindex="-1"></a>decNames <span class="ot">&lt;-</span> <span class="fu">c</span>(Decath21p<span class="sc">$</span>Decathlete[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="st">&quot;others (112)&quot;</span>)</span>
+<span id="cb347-3"><a href="secOrder.html#cb347-3" tabindex="-1"></a>decNames[<span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Roman Sebrle&quot;</span>, <span class="st">&quot;Tomas Dvorak&quot;</span>)</span>
+<span id="cb347-4"><a href="secOrder.html#cb347-4" tabindex="-1"></a>qn <span class="ot">&lt;-</span> Decath21p <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">c</span>(<span class="st">`</span><span class="at">100m</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">1500m</span><span class="st">`</span>), median))</span>
+<span id="cb347-5"><a href="secOrder.html#cb347-5" tabindex="-1"></a>qn <span class="ot">&lt;-</span> qn <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="fu">everything</span>(), <span class="at">names_to=</span><span class="st">&quot;name&quot;</span>, <span class="at">values_to=</span><span class="st">&quot;Stat&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(Stat)</span>
+<span id="cb347-6"><a href="secOrder.html#cb347-6" tabindex="-1"></a>dc21p <span class="ot">&lt;-</span> Decath21p <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="sc">-</span>Hil) <span class="sc">%&gt;%</span> <span class="fu">pcp_select</span>(<span class="fu">all_of</span>(qn<span class="sc">$</span>name)) <span class="sc">%&gt;%</span> <span class="fu">pcp_scale</span>(<span class="at">method=</span><span class="st">&quot;raw&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes_pcp</span>()) <span class="sc">+</span> <span class="fu">geom_pcp_axes</span>(<span class="at">colour=</span><span class="st">&quot;white&quot;</span>) <span class="sc">+</span> <span class="fu">geom_pcp</span>(<span class="at">overplot=</span><span class="st">&quot;none&quot;</span>, <span class="fu">aes</span>(<span class="at">colour=</span><span class="fu">as.factor</span>(Hil))) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="sc">-</span><span class="dv">45</span>), <span class="at">axis.ticks.y=</span><span class="fu">element_blank</span>(), <span class="at">axis.text.y=</span><span class="fu">element_blank</span>(), <span class="at">legend.title=</span><span class="fu">element_blank</span>(), <span class="at">legend.key.size =</span> <span class="fu">unit</span>(<span class="fl">0.5</span>, <span class="st">&quot;cm&quot;</span>)) <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;darkorchid3&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;brown&quot;</span>, <span class="st">&quot;grey85&quot;</span>), <span class="at">labels=</span>decNames)</span>
+<span id="cb347-7"><a href="secOrder.html#cb347-7" tabindex="-1"></a>dc21p</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pcp1"></span>
+<img src="_main_files/figure-html/pcp1-1.png" alt="Parallel coordinate plot of the 10 decathlon events" width="672" />
+<p class="caption">
+Figure 31.9: Parallel coordinate plot of the 10 decathlon events
+</p>
+</div>
+<p>The four best decathletes are listed in the legend in order of their total point scores. They have been highlighted in different colours and drawn last so that their lines appear on top. Mayer, the world record holder, is clearly better at the pole vault than the others highlighted. Eaton is strong in the four running events, particularly the 100 and 400 metres, where he is best of all the decathletes in the dataset. His weaknesses are the three throwing events.</p>
+<p>So ordering is not only relevant for the variables in a parallel coordinate plot, it is advantageous for ordering the cases when they are coloured by groups (cf. Figure <a href="secOrder.html#fig:pcp1">31.9</a>). The cases of most interest should always be drawn last, so that their polylines appear on top of the others. There are many other options influencing how parallel coordinate displays are drawn and all have to be considered together to get effective displays. Using more displays reveals more information.</p>
+<p>At a more complex level, generalised parallel coordinate plots that can handle both numeric and categorical variables, are affected by several orderings: the order of the variable axes across the plot, the orders of the levels of categorical variables, the orders of the cases within category levels, and the order of the cases in the dataset (as this determines the order the lines are drawn). The <strong>ggpcp</strong> package offers tools for including categorical variables in parallel coordinate plots (<span class="citation">Hofmann et al. (<a href="references.html#ref-hofmann:2022">2022</a>)</span>). Its key innovations are to draw each case individually and to order the cases within categories. These reduce the numbers of line crossings, make the display more readable, and make it possible to follow individual cases across the display.</p>
+<p>Figure <a href="secOrder.html#fig:palpcps">31.10</a> shows Figures <a href="secPalmerPen.html#fig:Palpcp1">18.7</a> and <a href="secPalmerPen.html#fig:Palpcp2">18.8</a> from §<a href="secPalmerPen.html#secPalmerPen2">18.2</a>. The reordered version on the right is easier to decode.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="secOrder.html#cb348-1" tabindex="-1"></a>PalX</span>
+<span id="cb348-2"><a href="secOrder.html#cb348-2" tabindex="-1"></a>PalY</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:palpcps"></span>
+<img src="_main_files/figure-html/palpcps-1.png" alt="Parallel coordinate plots of the Palmer Penguin data (initial and reordered)" width="45%" /><img src="_main_files/figure-html/palpcps-2.png" alt="Parallel coordinate plots of the Palmer Penguin data (initial and reordered)" width="45%" />
+<p class="caption">
+Figure 31.10: Parallel coordinate plots of the Palmer Penguin data (initial and reordered)
+</p>
+</div>
+</div>
+</div>
+<div id="secOrder3" class="section level2 hasAnchor" number="31.3">
+<h2><span class="header-section-number">31.3</span> Numbers of orderings and sortings<a href="secOrder.html#secOrder3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Often there are surprisingly many possible orderings. The basic Titanic dataset has 4 variables. The <code>Survived</code> variable should doubtless always be the final variable, but the other three variables, <code>Class</code>, <code>Age</code>, and <code>Sex</code> could be ordered in 3!=6 ways. The categories of the three binary variables could each be ordered in 2 ways, making 8 in all. The four categories of <code>Class</code> have a natural order, but could be reversed giving another two possibilities. Altogether that makes 96 orderings of variables and categories that might be considered.</p>
+<p>The letters of the word ‘sorting’ can be ordered themselves in 7! = 5040 ways, but only one other makes a common word, ‘storing’. A random ordering would have little chance of making sense, although some subsets of the letters, for instance “strong”, “ingots”, “string” or “grist”, would. Sortings and orderings in graphics have a better chance of conveying information, especially when guided by context and statistics. As always with graphics there is unlikely to be an ‘optimal’ solution, and so the task is more to find a set of informative sortings and orderings.</p>
+</div>
+<div id="secOrder4" class="section level2 hasAnchor" number="31.4">
+<h2><span class="header-section-number">31.4</span> Arranging graphics<a href="secOrder.html#secOrder4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ensembles of graphics are affected by how the individual graphics are arranged, as in Figure <a href="secElecC.html#fig:elecEns">13.1</a> and Figure <a href="secPsor.html#fig:qlEns">12.1</a>. Other arrangements might not have fitted together as well or given a different impression. It is worth trying more than one, however informative a first arrangement appears.</p>
+<p>Small multiples, named and popularised in <span class="citation">Tufte (<a href="references.html#ref-Tufte:1983">1983</a>)</span>, are displays of many graphics of the same type and may have a natural order. The boxplots of chess rankings by age in Figure <a href="secChess.html#fig:ratAge15b">8.19</a> are one example. Often there will be no such natural order, for instance in ordering variables in a scatterplot matrix. Grouping variables by type may be effective, as in §<a href="secDiam.html#secDiam2">11.2</a>, where two scatterplot matrices are drawn. The first one is for the three dimensions and carat and the second for carat and the remaining three continuous variables. Ordering by statistics of various kinds can be informative, the best strategy is to consider more than one ordering.</p>
+<p>The arrangement of graphics in a faceted display is determined by the faceting variables chosen for the rows and columns, their ordering within rows and within columns, and the ordering of their category levels. This is apparent in Figure <a href="secShears.html#fig:puffmos">23.4</a>, drawn here as Figure <a href="secOrder.html#fig:puffmosX">31.11</a>, showing groups across four shearwater measurements. The rows are arranged first by <code>border</code> and then by <code>undertail</code>, the columns are ordered by <code>eyebrows</code>, and the order of each of those three variables has been specifically chosen. Other orderings would have made it more difficult to interpret the structure.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="secOrder.html#cb349-1" tabindex="-1"></a>puffmosY</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:puffmosX"></span>
+<img src="_main_files/figure-html/puffmosX-1.png" alt="Barcharts of collar faceted by eyebrows, border, and undertail for the Audubon and Galápagos shearwaters" width="672" />
+<p class="caption">
+Figure 31.11: Barcharts of collar faceted by eyebrows, border, and undertail for the Audubon and Galápagos shearwaters
+</p>
+</div>
+<p>The 22 facets of Figure <a href="secMovies.html#fig:movieGF">3.13</a>, showing numbers of films of different genres over the years, could have been drawn all with the same vertical scale or all with individual vertical scales. It seems more helpful to display them in rows with different vertical scales, but with the same scale across each row.</p>
+<div id="main-points-4" class="section level3 unnumbered hasAnchor">
+<h3>Main points<a href="secOrder.html#main-points-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Cases, categorical variable levels, variables can all be sorted and ordered.</li>
+<li>The impact of boxplots, faceted plots, mosaicplots, and parallel coordinate plots is strongly influenced by the orderings within the plots.</li>
+<li>Ordering categories is better than leaving them in a default alphabetic order.</li>
+<li>There are no best sortings and orderings: there are very many of them. Different alternatives may reveal different information.</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="secScene.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="secInterp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

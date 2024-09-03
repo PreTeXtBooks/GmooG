@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>28 Wrangling | Getting (more out of) Graphics</title>
-  <meta name="description" content="This is the html index file for my GG book" />
+  <meta name="description" content="This is the html index file for my GmooG book" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="28 Wrangling | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is the html index file for my GG book" />
-  
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="28 Wrangling | Getting (more out of) Graphics" />
   
-  <meta name="twitter:description" content="This is the html index file for my GG book" />
-  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
 
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,10 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -692,7 +696,7 @@ Figure 28.2: Percentage differences in gold medal performances in athletics even
 <p>Variables in parallel coordinate plots almost always need to be standardised and there are several ways of doing it. Methods include putting variables individually onto [0,1] scales or normalising them by using the mean and standard deviation or by using robust statistics. There are examples in Chapter <a href="secFinches.html#secFinches">14</a> for Darwin’s finches and in Chapter <a href="secPalmerPen.html#secPalmerPen">18</a> for the Palmer penguins, where the transformations of the continuous variables are to [0,1] scales.</p>
 <p>The decathlon provides an example where special transformations are used. The current scoring system, introduced in 1984, converts performances in the ten events to points using a different three-parameter formula for each event (<span class="citation">IAAF (<a href="references.html#ref-IAAF:2001">2001</a>)</span>). As equal points are intended to reflect equal performances, no further standardisation is needed in principle. Figure <a href="secOrder.html#fig:pcp1">31.9</a> shows how that can work in practice.</p>
 <p>Categorical variables may be reported as numbers instead of text and it is worth making the effort to convert them to meaningful labels. Transforming the order of levels of a categorical variable from a default such as alphabetic is always sensible (and is discussed in Chapter <a href="secOrder.html#secOrder">31</a>). Occasionally numeric variables are assumed by software to be character variables, usually because the data file has a text error, and they have to be converted to numeric after fixing the text error. Software can often make good guesses about data characteristics, but you need to check.</p>
-<p>Date and time information need special handling in software and almost certainly have to be transformed first. Newcomb’s estimates of the speed of light are displayed by experimental order in Figure <a href="secLightS.html#fig:newct1X">5.6</a> and by date in Figure <a href="secLightS.html#fig:newct2X">5.7</a>. The differences are important for understanding the data. The two plots are shown again in Figure <a href="secWrang.html#fig:newctY">28.3</a> below. The dates taken as text are from Newcomb’s paper (<span class="citation">Newcomb (<a href="references.html#ref-newcomb:1891">1891</a>)</span>) and were transformed to a special date format so that the software could scale them appropriately.</p>
+<p>Date and time information need special handling in software and almost certainly have to be transformed first. Newcomb’s estimates of the speed of light are displayed by experimental order in Figure <a href="secLightS.html#fig:newct1X">5.6</a> and by date in Figure <a href="secLightS.html#fig:newct2X">5.7</a>. The differences are important for understanding the data. The two plots are shown again in Figure <a href="secWrang.html#fig:newctY">28.3</a> below. The dates taken as text are from Newcomb’s paper (<span class="citation">Newcomb (<a href="references.html#ref-newcomb:1891">1891</a>)</span>) and were transformed to a special date format so that the R software could scale them appropriately.</p>
 <details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
 <div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="secWrang.html#cb299-1" tabindex="-1"></a>(newct1XX <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>)) <span class="sc">+</span> newct2XX</span></code></pre></div>
 </details>
@@ -702,7 +706,7 @@ Figure 28.2: Percentage differences in gold medal performances in athletics even
 Figure 28.3: Newcomb’s estimates of the speed of light, plotted in order (left) and by date (right)
 </p>
 </div>
-<p>In Chapter <a href="secDeer.html#secDeer">24</a> two datasets of half-hourly data over 10 years were analysed. Investigating patterns across days, months, and years required combining the textual date and time information and converting it into dates and times could deal with.</p>
+<p>In Chapter <a href="secDeer.html#secDeer">24</a> two datasets of half-hourly data over 10 years were analysed. Investigating patterns across days, months, and years required combining the textual date and time information and converting it into dates and times R could deal with.</p>
 <p>Spatial datasets also require special treatment. They may be reported in any one of a large number of possible coordinate reference systems and it is essential in any study to convert all the spatial data to the same system. Much work has gone into transforming between these systems and the current state of play is summarised in <span class="citation">Bivand (<a href="references.html#ref-bivand:2020">2020</a>)</span>. One example here involved adding city locations to the maps of France in Figures <a href="secBertin.html#fig:Bertagp">7.1</a> and <a href="secBertin.html#fig:BertLine">7.4</a>. A further complication in Chapter <a href="secBertin.html#secBertin">7</a> was converting a modern shape file of the departments of France to one matching the form in 1954. Finally cartograms may be used to take account of differences between areas as in Figures <a href="secBertin.html#fig:BertCart">7.5</a> and <a href="secGayR.html#fig:gayMapC">9.7</a>. The spatial transformations applied require complex iterative methods.</p>
 </div>
 </div>

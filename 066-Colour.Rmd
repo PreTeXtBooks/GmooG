@@ -10,9 +10,9 @@ source("_setupAll.R")
 > `r quote_footer('--- Georgia O\'Keeffe')`
 
 ## Theory and implementation {#secColour1}
-Colour\index{colour|(} is a complex topic.  There has been considerable progress made in our understanding of representing colour, even if that has led to a plethora of systems, be it HCL, HLS, HSV, LAB, LUV, RGB, XYZ or whatever.  A valuable reference is @zeil:2020 and the accompanying \textsf{R} package **colorspace**\index{R packages!colorspace}.  
+Colour\index{colour|(} is a complex topic.  There has been considerable progress made in our understanding of representing colour, even if that has led to a plethora of systems, be it HCL, HLS, HSV, LAB, LUV, RGB, XYZ or whatever.  A valuable reference is @zeil:2020 and the accompanying R package **colorspace**\index{R packages!colorspace}.  
 
-\textsf{R} software has kept pace, and there are many packages offering colour palettes and ways of creating new ones.  There are qualitative palettes for different groups or categories, sequential palettes for different values of the same variable, and diverging palettes for variables with a critical point such as zero between profit and loss.  In addition, palettes have been designed to counteract colour blindness.  There are \textsf{R} packages for generating colour palettes from images, and even a package with palettes inspired by Wes Anderson movies.
+R software has kept pace, and there are many packages offering colour palettes and ways of creating new ones.  There are qualitative palettes for different groups or categories, sequential palettes for different values of the same variable, and diverging palettes for variables with a critical point such as zero between profit and loss.  In addition, palettes have been designed to counteract colour blindness.  There are R packages for generating colour palettes from images, and even a package with palettes inspired by Wes Anderson movies.
 
 Many software defaults are effective and do not need to be changed.  Colour defaults generally do need to be changed, as will be apparent from the examples.  The illustrations used are smaller versions of graphics occurring elsewhere in the book.
 
@@ -129,7 +129,7 @@ comX
 ```
 
 ### Palette order counts
-In §\@ref(secAstro1) spaceflights\index{datasets!astronauts} are coloured by the space station program they joined, if any (Figure \@ref(fig:flighttc), redrawn as Figure \@ref(fig:astro4)).  The default ordering of the colour blind palette from the \textsf{R} package **ggthemes** was changed to make the Skylab station that was only used briefly in 1973-4 more visible and to keep similar colours apart.
+In §\@ref(secAstro1) spaceflights\index{datasets!astronauts} are coloured by the space station program they joined, if any (Figure \@ref(fig:flighttc), redrawn as Figure \@ref(fig:astro4)).  The default ordering of the colour blind palette from the R package **ggthemes** was changed to make the Skylab station that was only used briefly in 1973-4 more visible and to keep similar colours apart.
 
 ```{r astro4, fig.asp=0.7, out.width="60%", fig.width=6.5*0.6, fig.cap = 'Spaceflight mission times coloured by space station programme'}
 astroF

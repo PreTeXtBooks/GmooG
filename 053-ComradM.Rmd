@@ -26,7 +26,7 @@ The race was run for the first time in 1921 from Durban to Pietermaritzburg ("do
 
 \newpage
 
-Figure \@ref(fig:comDir) shows the the numbers of finishers and the directions in each year.  The race distance was not always the same and usually a little under 90 km.
+Figure \@ref(fig:comDir) shows the numbers of finishers and the directions in each year.  The race distance was not always the same and usually a little under 90 km.
 
 ```{r comDir, fig.asp=0.8, fig.cap = 'Numbers of finishers of the Comrades Marathon and the race direction by year (dark orange is up, black is down).'}
 data(cmAll)
