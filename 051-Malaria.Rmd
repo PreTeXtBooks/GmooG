@@ -1,0 +1,92 @@
+
+```{r setup051, include=FALSE}
+source("_setupAll.R")
+library(extracat)
+```
+
+# Comparing tests for malaria {#secMalaria}
+
+> "There are more people dying of malaria than any specific cancer."
+
+> `r quote_footer('--- Bill Gates')`
+
+
+**Background**  The data come from an investigation of a new magneto-optical method, ROMD, of testing for malaria.   It could offer a swifter and cheaper approach than three other tests (PCR, RDT, LM).
+
+**Questions**  Do the results of the four tests agree?  On which cases do they differ?
+
+**Sources**  @arndt:2021
+
+**Structure** A dataset of 956 observations and 24 variables\index{datasets!malaria}
+
+## How much agreement is there between the four tests? {#secMalaria1}
+```{r }
+data(malaria)
+malaria <- malaria %>% mutate(RDT=RDT1+RDT2+RDTb)
+malaria <- malaria %>% mutate(PCR=ifelse(Pf>0|Pv>0, 1, 0))
+malaria <- malaria %>% mutate(LM=ifelse(((LM_Pf>0) + (LM_Pv>0) + (LM_Pfg>0) + (LM_Pvg>0) + (LM_Pm>0))>0, 1, 0))
+cuto <- 4.19
+malaria <- malaria %>% mutate(ROMD=ifelse((AveMO > cuto), 1, 0))
+malp <- malaria %>% filter(!is.na(PCR))
+malpT <- malp %>% summarise(RDTtest=sum(RDT), PCRtest=sum(PCR), LMtest=sum(LM), ROMDtest=sum(ROMD))
+malpTw <- malpT %>% pivot_longer(everything(), names_to="Test", values_to="Positives")  %>% mutate(p=100*Positives/dim(malp)[1])
+```
+
+Malaria is endemic in Papua New Guinea\index{Papua New Guinea}.  The authors of @arndt:2021 have made available the raw data of their study there, involving `r dim(malaria)[1]` individuals checked with four different tests, so that the methods could be compared.  Each test uses a different measure of the disease.   Eleven cases were excluded where there were missing values for two of the tests.
+
+\newpage
+
+Figure \@ref(fig:malTest) summarises the results for the remaining `r dim(malp)[1]` cases.\index{weighted barchart}
+
+```{r malTest, out.width="50%", fig.width=6.5*0.5, fig.asp=1, fig.cap = 'Percentages of positives for the four tests'}
+ggplot(malpTw, aes(Test, weight=Positives/dim(malp)[1])) + geom_bar(aes(fill=Test)) + xlab(NULL) + ylab(NULL) +  scale_fill_brewer(palette="Set3") + scale_y_continuous(labels = scales::percent, limits=c(0, 0.5)) + theme(legend.position="none")
+```
+
+The tests found between `r round(min(malpTw$p),1)`% and `r round(max(malpTw$p),1)`% positives with the new test reporting the most positives.  The authors believe that the new method may detect previous as well as current infections.  Figure \@ref(fig:malvis) displays how often the different combinations of test results arose.\index{matrix plot}\index{barchart}
+
+```{r malvis, fig.asp=0.5, fig.cap = 'Combinations of individual malaria test results (red rectangles are positives)'}
+malB <- malp %>% count(RDT, PCR, LM, ROMD)
+umalB <- untableSet(malB, freqvar="n")
+umalB <- umalB %>% mutate(across(everything(), as.numeric))
+visid(umalB,sort="b", col=c("grey80", "red"), pmax=0, tp=TRUE, opts=list(mar=c(0.025,0.4)))
+```
+
+The first column shows the cases in which all tests gave negative results for malaria (`r round(with(malp, 100*(sum(RDT+PCR+LM+ROMD<1)/dim(malp)[1])), 1)`%) and the second column all cases with positive results (`r round(with(malp, 100*(sum(RDT+PCR+LM+ROMD>3)/dim(malp)[1])), 1)`%). The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in @arndt:2021.  There was disagreement at one level or another for `r round(with(malp, 100*(sum(between(RDT+PCR+LM+ROMD, 1, 3))/dim(malp)[1])), 1)`% of the cases.  All 16 possible combinations of results are in evidence. 
+
+The next display shows that no one test dominates another.  The main diagonal elements in each subdisplay show the numbers of disagreements between those two tests.  In each case there are disagreements of both kinds, positive-negative and negative-positive.  Serious cases are presumably recognised by all methods.  Borderline cases may be recognised by some but not by others.
+
+```{r malpcp, fig.asp=0.8, fig.cap = 'Paired comparisons of the results of the four tests'}
+malT <- malp %>% select(RDT:ROMD)
+malT <- malT %>% mutate(across(RDT:ROMD, function(x) factor(x, labels =c("no", "yes"))))
+GGally::ggpairs(malT[, 1:4], mapping = ggplot2::aes(fill = "grey70"), diag=list(discrete="blankDiag"), lower="blank") + scale_fill_manual(values="grey70")
+```
+
+## Additional analyses {#secMalaria2}
+
+According to the paper, the LM test is the gold standard and it can be seen how the distribution of the new ROMD measurement differs according to cases testing negatively and positively on LM in Figure \@ref(fig:malLM)\index{histogram}\index{guideline}\index{transformation!log}.
+
+```{r malLM, fig.asp=0.5, fig.cap = 'Magneto-optical measurements on a log10 scale grouped by the corresponding LM test result'}
+ggplot(malaria %>% filter(!is.na(LM)), aes(AveMO)) + geom_histogram(aes(fill=factor(LM))) + facet_wrap(vars(LM), ncol=1, labeller=as_labeller(c(`0`="LM negative", `1`="LM positive"))) + scale_x_log10() + xlab("log(MO)") + ylab(NULL) + scale_fill_manual(values=c("grey80", "red")) + theme(legend.position="none") + geom_vline(xintercept=cuto, linetype="dotted")
+```
+
+Dashed lines have been drawn at the magneto-optical test cut-off. The log(MO) values are higher for the positive LM group, although there are some small values too. The same applies in reverse for the negative LM group. The choice of cut-off will depend on the numbers of 'errors' and on the relative importance assigned to false negatives and false positives.
+
+Some other information was available in the dataset, including the age, weight, and sex of those tested.  Figure \@ref(fig:malAW) plots weight by age for females and males separately\index{scatterplot}\index{faceting}.
+
+```{r malAW, fig.asp=0.6, fig.cap = 'Weight by age and sex of the people tested for malaria'}
+malaria <- malaria %>% mutate(sex=factor(Sex, levels=c("male", "female")))
+ggplot(malaria, aes(Age, Weight, colour=sex)) + geom_point() + facet_wrap(vars(sex)) + ylim(0,100) + theme(legend.position="none") + scale_colour_manual(values=c("springgreen3", "purple2"))
+```
+
+It is interesting to see how many young people were tested.  In general those tested do not seem particularly heavy.  There are a couple of low weights which look unusual and a few heavy younger women.
+
+\newpage
+
+**Answers**  The methods mostly agreed but disagreed on about one third of the cases.  ROMD, the proposed new method, identified more cases as having malaria than the other three methods.
+
+**Further questions**  How sensitive are the results to changing the ROMD cut-off?  Do any of the additional variables in the dataset provide information on the cases the methods differ on?
+
+### Graphical takeaways {-}
+* Matrix plots\index{matrix plot} display multivariate categorical data, treating each variable equally.  (Figure \@ref(fig:malvis))
+* If test results are quantitative, graphics show the effect of cut-off points.  (Figure \@ref(fig:malLM))
+* Scatterplots\index{scatterplot} summarise the association between two variables better than analytic methods.  (Figure \@ref(fig:malAW))

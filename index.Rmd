@@ -1,0 +1,43 @@
+--- 
+title: "Getting (more out of) Graphics"
+subtitle: "Practice and Principles of Data Visualisation"
+author: "Antony Unwin"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    split_by: chapter
+    split_bib: false
+    pandoc_args: [ "--csl", "apa_pl.csl" ]
+    config:
+      toc:
+        collapse: section
+      search:
+        engine: lunr
+    code_folding: hide
+documentclass: book
+bibliography: gda.bib
+biblio-style: apalike
+link-citations: yes
+fontsize: 12pt
+description: This is the html index file for my GmooG book
+github-repo: "antonr4/GmooG-book"
+cover-image: "images/GmooGcover.png"
+---
+
+# Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics{-}
+
+<a href="https://www.routledge.com/9781003131212"><img src="/images/GmooGcover.png" width="350" height="460" class="cover" /></a>
+
+This book is published by Chapman & Hall/CRC. The online version of this book is free to read here (thanks to Chapman & Hall/CRC), and licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/us/88x31.png" /></a>
+
+Visit the [GitHub repository for this site](https://github.com/antonr4/GmooG-book), find the book at [CRC Press](https://doi.org/10.1201/9781003131212), or [buy it on Amazon](https://www.amazon.com/Getting-more-out-Graphics-Visualisation/dp/0367673991/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.JICgOblFgztUKyKJO6zt5di3rFkbXuS28fsjvnPGv5jMeN2Rz5EbyTaWP1xVNPcKWqwmc1xGd3-3giXbQtqorw-5P2j5iVmdqLYYB__tYbCSMu2uOXINbjFQ54gGxCT6xOouDARipKyqCy-DISVg3cLw_j7BTAuMAAD0v-l8s6v-p4Vk9Y79OSpfTYd5oGU3Q--1qf9_H-vIBLAu1AVn1s_kVB8eRJucN-gK83b1pNw.yK6Nk23UoMKRDT57-Ie1MnfjGC_aYD2HyAVSjrC6yCc&qid=1725018223&sr=8-1).
+
+## Code {-}
+Code for individual graphics can be accessed by clicking on the code button beside the graphic.  Occasionally there are pieces of data wrangling code that are separate from graphics.  These are also marked by a code button.  Code in the chapters of Part I, the case studies, often depends on code earlier in the same chapter.  Many of the graphics in Part II are versions of graphics from Part I and some of the initial code required can be found there.  As it says in Chapter 1: "There is no claim that the R code accompanying the book is to be recommended, but it may be helpful."
+
+```{r setup, include=FALSE}
+source("_setupAll.R")
+
+```

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>18 Differences amongst the Palmer penguins | Getting (more out of) Graphics</title>
+  <meta name="description" content="This is the html index file for my GmooG book" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="18 Differences amongst the Palmer penguins | Getting (more out of) Graphics" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/GmooGcover.png" />
+  <meta property="og:description" content="This is the html index file for my GmooG book" />
+  <meta name="github-repo" content="antonr4/GmooG-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="18 Differences amongst the Palmer penguins | Getting (more out of) Graphics" />
+  
+  <meta name="twitter:description" content="This is the html index file for my GmooG book" />
+  <meta name="twitter:image" content="/images/GmooGcover.png" />
+
+<meta name="author" content="Antony Unwin" />
+
+
+<meta name="date" content="2024-09-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="secVehicles.html"/>
+<link rel="next" href="secMalaria.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/codefolding-lua-1.1/codefolding-lua.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-are-good-graphics"><i class="fa fa-check"></i><b>1.1</b> What are good graphics?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#graphics-examples"><i class="fa fa-check"></i><b>1.2</b> Graphics examples</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#writing-about-graphics"><i class="fa fa-check"></i><b>1.3</b> Writing about graphics</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#reading-about-graphics"><i class="fa fa-check"></i><b>1.4</b> Reading about graphics</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#books-and-articles-on-data-graphics"><i class="fa fa-check"></i><b>1.4.1</b> Books and articles on data graphics</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#websites-and-other-media"><i class="fa fa-check"></i><b>1.4.2</b> Websites and other media</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#software"><i class="fa fa-check"></i><b>1.5</b> Software</a></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#structure-of-the-book"><i class="fa fa-check"></i><b>1.6</b> Structure of the book</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#part-i-graphics-in-action"><i class="fa fa-check"></i><b>1.6.1</b> Part I Graphics in Action</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#part-ii-advice-on-graphics"><i class="fa fa-check"></i><b>1.6.2</b> Part II Advice on Graphics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#in-a-nutshell-tldr"><i class="fa fa-check"></i>In a nutshell (tl;dr)</a></li>
+</ul></li>
+<li class="part"><span><b>I Graphics in Action</b></span></li>
+<li class="chapter" data-level="2" data-path="secGapm.html"><a href="secGapm.html"><i class="fa fa-check"></i><b>2</b> Graphics and Gapminder</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="secGapm.html"><a href="secGapm.html#secGapm1"><i class="fa fa-check"></i><b>2.1</b> Gapminder and Hans Rosling</a></li>
+<li class="chapter" data-level="2.2" data-path="secGapm.html"><a href="secGapm.html#secGapm2"><i class="fa fa-check"></i><b>2.2</b> What else can be seen in Gapminder’s plots?</a></li>
+<li class="chapter" data-level="2.3" data-path="secGapm.html"><a href="secGapm.html#secGapm3"><i class="fa fa-check"></i><b>2.3</b> Analysis by regions of the world</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="secGapm.html"><a href="secGapm.html#taking-account-of-country-size"><i class="fa fa-check"></i><b>2.3.1</b> Taking account of country size</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="secGapm.html"><a href="secGapm.html#secGapm4"><i class="fa fa-check"></i><b>2.4</b> Checking what is in the data</a></li>
+<li class="chapter" data-level="2.5" data-path="secGapm.html"><a href="secGapm.html#secGapm5"><i class="fa fa-check"></i><b>2.5</b> The importance of data definitions</a></li>
+<li class="chapter" data-level="2.6" data-path="secGapm.html"><a href="secGapm.html#secGapm6"><i class="fa fa-check"></i><b>2.6</b> Discussion</a>
+<ul>
+<li class="chapter" data-level="" data-path="secGapm.html"><a href="secGapm.html#graphical-takeaways"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="secMovies.html"><a href="secMovies.html"><i class="fa fa-check"></i><b>3</b> Looking at the movies</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="secMovies.html"><a href="secMovies.html#secMovies1"><i class="fa fa-check"></i><b>3.1</b> Trailer</a></li>
+<li class="chapter" data-level="3.2" data-path="secMovies.html"><a href="secMovies.html#secMovies2"><i class="fa fa-check"></i><b>3.2</b> Movies in IMDb over the years</a></li>
+<li class="chapter" data-level="3.3" data-path="secMovies.html"><a href="secMovies.html#secMovies21"><i class="fa fa-check"></i><b>3.3</b> What might IMDb code numbers mean?</a></li>
+<li class="chapter" data-level="3.4" data-path="secMovies.html"><a href="secMovies.html#secMovies3"><i class="fa fa-check"></i><b>3.4</b> What ratings do people give films?</a></li>
+<li class="chapter" data-level="3.5" data-path="secMovies.html"><a href="secMovies.html#secMovies4"><i class="fa fa-check"></i><b>3.5</b> Genres from Rom-Com to Film Noir</a></li>
+<li class="chapter" data-level="3.6" data-path="secMovies.html"><a href="secMovies.html#secMovies5"><i class="fa fa-check"></i><b>3.6</b> Comparing Raging Bull with Jane Austen</a>
+<ul>
+<li class="chapter" data-level="" data-path="secMovies.html"><a href="secMovies.html#graphical-takeaways-1"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sec1912Dem.html"><a href="sec1912Dem.html"><i class="fa fa-check"></i><b>4</b> Voting 46 times to choose a Presidential candidate</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem1"><i class="fa fa-check"></i><b>4.1</b> A first look at the 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="4.2" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem2"><i class="fa fa-check"></i><b>4.2</b> The USA in 1912 and 2020</a></li>
+<li class="chapter" data-level="4.3" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem3"><i class="fa fa-check"></i><b>4.3</b> How the nomination contest unfolded</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#developments"><i class="fa fa-check"></i><b>4.3.1</b> Developments</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem4"><i class="fa fa-check"></i><b>4.4</b> When did the ballots actually take place?</a>
+<ul>
+<li class="chapter" data-level="" data-path="sec1912Dem.html"><a href="sec1912Dem.html#graphical-takeaways-2"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="secLightS.html"><a href="secLightS.html"><i class="fa fa-check"></i><b>5</b> Measuring the speed of light</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="secLightS.html"><a href="secLightS.html#secLightS1"><i class="fa fa-check"></i><b>5.1</b> Michelson, the Master of Light, and his data</a></li>
+<li class="chapter" data-level="5.2" data-path="secLightS.html"><a href="secLightS.html#secLightS2"><i class="fa fa-check"></i><b>5.2</b> Newcomb, self-educated polymath, and his data</a></li>
+<li class="chapter" data-level="5.3" data-path="secLightS.html"><a href="secLightS.html#secLightS3"><i class="fa fa-check"></i><b>5.3</b> Comparing the data of Michelson and Newcomb</a>
+<ul>
+<li class="chapter" data-level="" data-path="secLightS.html"><a href="secLightS.html#graphical-takeaways-3"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="secOlymps.html"><a href="secOlymps.html"><i class="fa fa-check"></i><b>6</b> The modern Olympic Games in numbers</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps1"><i class="fa fa-check"></i><b>6.1</b> How good are the data?</a></li>
+<li class="chapter" data-level="6.2" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps2"><i class="fa fa-check"></i><b>6.2</b> How much have performances improved?</a></li>
+<li class="chapter" data-level="6.3" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps3"><i class="fa fa-check"></i><b>6.3</b> How many countries and individuals competed?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secOlymps.html"><a href="secOlymps.html#graphical-takeaways-4"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="secBertin.html"><a href="secBertin.html"><i class="fa fa-check"></i><b>7</b> Re-viewing Bertin’s main example</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="secBertin.html"><a href="secBertin.html#secBertin1"><i class="fa fa-check"></i><b>7.1</b> Bertin’s classic book</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="secBertin.html"><a href="secBertin.html#a-first-map-agricultural-workers"><i class="fa fa-check"></i><b>7.1.1</b> A first map: agricultural workers</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="secBertin.html"><a href="secBertin.html#secBertin2"><i class="fa fa-check"></i><b>7.2</b> Bertin’s many graphics of the French workforce data</a></li>
+<li class="chapter" data-level="7.3" data-path="secBertin.html"><a href="secBertin.html#secBertin3"><i class="fa fa-check"></i><b>7.3</b> Viewing the data today</a></li>
+<li class="chapter" data-level="7.4" data-path="secBertin.html"><a href="secBertin.html#secBertin4"><i class="fa fa-check"></i><b>7.4</b> Are there other geographic patterns?</a></li>
+<li class="chapter" data-level="7.5" data-path="secBertin.html"><a href="secBertin.html#secBertin5"><i class="fa fa-check"></i><b>7.5</b> Density of the workforce by area</a></li>
+<li class="chapter" data-level="7.6" data-path="secBertin.html"><a href="secBertin.html#secBertin6"><i class="fa fa-check"></i><b>7.6</b> Comments on Bertin (with hindsight)</a>
+<ul>
+<li class="chapter" data-level="" data-path="secBertin.html"><a href="secBertin.html#graphical-takeaways-5"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="secChess.html"><a href="secChess.html"><i class="fa fa-check"></i><b>8</b> Comparing chess players across the board</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="secChess.html"><a href="secChess.html#secChess1"><i class="fa fa-check"></i><b>8.1</b> FIDE ratings of chess players</a></li>
+<li class="chapter" data-level="8.2" data-path="secChess.html"><a href="secChess.html#secChess2"><i class="fa fa-check"></i><b>8.2</b> Comparing chess players by age and sex</a></li>
+<li class="chapter" data-level="8.3" data-path="secChess.html"><a href="secChess.html#secChess3"><i class="fa fa-check"></i><b>8.3</b> Which nations have the best chess players?</a></li>
+<li class="chapter" data-level="8.4" data-path="secChess.html"><a href="secChess.html#secChess4"><i class="fa fa-check"></i><b>8.4</b> Ratings change over time</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="secChess.html"><a href="secChess.html#individual-players"><i class="fa fa-check"></i><b>8.4.1</b> Individual players</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="secChess.html"><a href="secChess.html#secChess5"><i class="fa fa-check"></i><b>8.5</b> Grandmasters and Masters</a>
+<ul>
+<li class="chapter" data-level="" data-path="secChess.html"><a href="secChess.html#graphical-takeaways-6"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="secGayR.html"><a href="secGayR.html"><i class="fa fa-check"></i><b>9</b> Results from surveys on gay rights</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="secGayR.html"><a href="secGayR.html#secGayR1"><i class="fa fa-check"></i><b>9.1</b> Survey results by age, sex, and race</a></li>
+<li class="chapter" data-level="9.2" data-path="secGayR.html"><a href="secGayR.html#secGayR2"><i class="fa fa-check"></i><b>9.2</b> Mapping the survey results</a></li>
+<li class="chapter" data-level="9.3" data-path="secGayR.html"><a href="secGayR.html#secGayR3"><i class="fa fa-check"></i><b>9.3</b> Comparing responses to related, but different questions</a>
+<ul>
+<li class="chapter" data-level="" data-path="secGayR.html"><a href="secGayR.html#graphical-takeaways-7"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="secAstro.html"><a href="secAstro.html"><i class="fa fa-check"></i><b>10</b> Who went up in space for how long?</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="secAstro.html"><a href="secAstro.html#secAstro1"><i class="fa fa-check"></i><b>10.1</b> What human spaceflights have there been?</a></li>
+<li class="chapter" data-level="10.2" data-path="secAstro.html"><a href="secAstro.html#secAstro1a"><i class="fa fa-check"></i><b>10.2</b> Mission times in space</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="secAstro.html"><a href="secAstro.html#secAstro2"><i class="fa fa-check"></i><b>10.2.1</b> Logging mission times</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="secAstro.html"><a href="secAstro.html#secAstro4"><i class="fa fa-check"></i><b>10.3</b> Checking the data with graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secAstro.html"><a href="secAstro.html#graphical-takeaways-8"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="secDiam.html"><a href="secDiam.html"><i class="fa fa-check"></i><b>11</b> Data in the sky at night</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="secDiam.html"><a href="secDiam.html#secDiam1"><i class="fa fa-check"></i><b>11.1</b> Data on diamonds for sale</a></li>
+<li class="chapter" data-level="11.2" data-path="secDiam.html"><a href="secDiam.html#secDiam2"><i class="fa fa-check"></i><b>11.2</b> Checking for outliers and unusual values</a></li>
+<li class="chapter" data-level="11.3" data-path="secDiam.html"><a href="secDiam.html#secDiam3"><i class="fa fa-check"></i><b>11.3</b> Intriguing features</a>
+<ul>
+<li class="chapter" data-level="" data-path="secDiam.html"><a href="secDiam.html#graphical-takeaways-9"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="secPsor.html"><a href="secPsor.html"><i class="fa fa-check"></i><b>12</b> Psoriasis and the Quality of Life</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="secPsor.html"><a href="secPsor.html#secPsor1"><i class="fa fa-check"></i><b>12.1</b> Comparing treatment and placebo groups</a></li>
+<li class="chapter" data-level="12.2" data-path="secPsor.html"><a href="secPsor.html#secPsor2"><i class="fa fa-check"></i><b>12.2</b> Examining responses to individual questions</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPsor.html"><a href="secPsor.html#graphical-takeaways-10"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="secElecC.html"><a href="secElecC.html"><i class="fa fa-check"></i><b>13</b> Charging electric cars</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="secElecC.html"><a href="secElecC.html#secElecC1"><i class="fa fa-check"></i><b>13.1</b> How was the study organised?</a></li>
+<li class="chapter" data-level="13.2" data-path="secElecC.html"><a href="secElecC.html#secElecC2"><i class="fa fa-check"></i><b>13.2</b> How long does charging cars take?</a></li>
+<li class="chapter" data-level="13.3" data-path="secElecC.html"><a href="secElecC.html#secElecC3"><i class="fa fa-check"></i><b>13.3</b> Charging patterns through the week</a>
+<ul>
+<li class="chapter" data-level="" data-path="secElecC.html"><a href="secElecC.html#graphical-takeaways-11"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="secFinches.html"><a href="secFinches.html"><i class="fa fa-check"></i><b>14</b> Darwin’s Finches</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="secFinches.html"><a href="secFinches.html#secFinches1"><i class="fa fa-check"></i><b>14.1</b> How do Darwin’s finches differ?</a></li>
+<li class="chapter" data-level="14.2" data-path="secFinches.html"><a href="secFinches.html#secFinches2"><i class="fa fa-check"></i><b>14.2</b> Do species vary across the Galápagos islands?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secFinches.html"><a href="secFinches.html#graphical-takeaways-12"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="secEuros.html"><a href="secEuros.html"><i class="fa fa-check"></i><b>15</b> Home or away: where do soccer players play?</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="secEuros.html"><a href="secEuros.html#secEuros1"><i class="fa fa-check"></i><b>15.1</b> The European Football Championship since 1960</a></li>
+<li class="chapter" data-level="15.2" data-path="secEuros.html"><a href="secEuros.html#secEuros2"><i class="fa fa-check"></i><b>15.2</b> Which leagues do international players play in?</a></li>
+<li class="chapter" data-level="15.3" data-path="secEuros.html"><a href="secEuros.html#secEuros3"><i class="fa fa-check"></i><b>15.3</b> How have countries changed?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secEuros.html"><a href="secEuros.html#graphical-takeaways-13"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="secFootball.html"><a href="secFootball.html"><i class="fa fa-check"></i><b>16</b> Watching soccer—the English leagues</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="secFootball.html"><a href="secFootball.html#secFootball1"><i class="fa fa-check"></i><b>16.1</b> History of the English football leagues since 1888</a></li>
+<li class="chapter" data-level="16.2" data-path="secFootball.html"><a href="secFootball.html#secFootball2"><i class="fa fa-check"></i><b>16.2</b> How have numbers of draws changed?</a></li>
+<li class="chapter" data-level="16.3" data-path="secFootball.html"><a href="secFootball.html#secFootball3"><i class="fa fa-check"></i><b>16.3</b> How big is home advantage?</a></li>
+<li class="chapter" data-level="16.4" data-path="secFootball.html"><a href="secFootball.html#secFootball4"><i class="fa fa-check"></i><b>16.4</b> Have the numbers of goals scored gone down?</a></li>
+<li class="chapter" data-level="16.5" data-path="secFootball.html"><a href="secFootball.html#secFootball5"><i class="fa fa-check"></i><b>16.5</b> How well have teams performed over the years?</a></li>
+<li class="chapter" data-level="16.6" data-path="secFootball.html"><a href="secFootball.html#secFootball6"><i class="fa fa-check"></i><b>16.6</b> Wormcharts show league progress over a season</a>
+<ul>
+<li class="chapter" data-level="16.6.1" data-path="secFootball.html"><a href="secFootball.html#leicester-city-are-champions-for-the-first-time"><i class="fa fa-check"></i><b>16.6.1</b> Leicester City are Champions for the first time!</a></li>
+<li class="chapter" data-level="16.6.2" data-path="secFootball.html"><a href="secFootball.html#the-1982-83-season-had-a-few-surprises"><i class="fa fa-check"></i><b>16.6.2</b> The 1982-83 season had a few surprises</a></li>
+<li class="chapter" data-level="16.6.3" data-path="secFootball.html"><a href="secFootball.html#the-most-equal-and-unequal-seasons"><i class="fa fa-check"></i><b>16.6.3</b> The most equal and unequal seasons</a></li>
+<li class="chapter" data-level="" data-path="secFootball.html"><a href="secFootball.html#graphical-takeaways-14"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="secVehicles.html"><a href="secVehicles.html"><i class="fa fa-check"></i><b>17</b> Fuel efficiency of cars in the USA</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles1"><i class="fa fa-check"></i><b>17.1</b> How efficient are different types of car?</a></li>
+<li class="chapter" data-level="17.2" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles2"><i class="fa fa-check"></i><b>17.2</b> Small (?) luxury cars</a></li>
+<li class="chapter" data-level="17.3" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles3"><i class="fa fa-check"></i><b>17.3</b> How many car models have been evaluated over the years?</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="secVehicles.html"><a href="secVehicles.html#station-wagons-and-suvs"><i class="fa fa-check"></i><b>17.3.1</b> Station wagons and SUVs</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles4"><i class="fa fa-check"></i><b>17.4</b> Comparing fuel efficiency of individual models over time</a>
+<ul>
+<li class="chapter" data-level="" data-path="secVehicles.html"><a href="secVehicles.html#graphical-takeaways-15"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="secPalmerPen.html"><a href="secPalmerPen.html"><i class="fa fa-check"></i><b>18</b> Differences amongst the Palmer penguins</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen1"><i class="fa fa-check"></i><b>18.1</b> Getting an overview of the penguin data</a></li>
+<li class="chapter" data-level="18.2" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen2"><i class="fa fa-check"></i><b>18.2</b> Looking at several variables in one plot</a></li>
+<li class="chapter" data-level="18.3" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen3"><i class="fa fa-check"></i><b>18.3</b> Using raw data to get more information</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPalmerPen.html"><a href="secPalmerPen.html#graphical-takeaways-16"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="secMalaria.html"><a href="secMalaria.html"><i class="fa fa-check"></i><b>19</b> Comparing tests for malaria</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria1"><i class="fa fa-check"></i><b>19.1</b> How much agreement is there between the four tests?</a></li>
+<li class="chapter" data-level="19.2" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria2"><i class="fa fa-check"></i><b>19.2</b> Additional analyses</a>
+<ul>
+<li class="chapter" data-level="" data-path="secMalaria.html"><a href="secMalaria.html#graphical-takeaways-17"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="secSwim.html"><a href="secSwim.html"><i class="fa fa-check"></i><b>20</b> Are swimmers swimming faster?</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="secSwim.html"><a href="secSwim.html#secSwim1"><i class="fa fa-check"></i><b>20.1</b> Best times for different strokes</a></li>
+<li class="chapter" data-level="20.2" data-path="secSwim.html"><a href="secSwim.html#secSwim2"><i class="fa fa-check"></i><b>20.2</b> How good are the best swimmers across multiple events?</a></li>
+<li class="chapter" data-level="20.3" data-path="secSwim.html"><a href="secSwim.html#secSwim3"><i class="fa fa-check"></i><b>20.3</b> Comparing events graphically</a></li>
+<li class="chapter" data-level="20.4" data-path="secSwim.html"><a href="secSwim.html#secSwim4"><i class="fa fa-check"></i><b>20.4</b> How do relay races compare with individual races?</a></li>
+<li class="chapter" data-level="20.5" data-path="secSwim.html"><a href="secSwim.html#secSwim5"><i class="fa fa-check"></i><b>20.5</b> How do countries compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secSwim.html"><a href="secSwim.html#graphical-takeaways-18"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="secComM.html"><a href="secComM.html"><i class="fa fa-check"></i><b>21</b> Over 90 years running 90 km</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="secComM.html"><a href="secComM.html#secComM1"><i class="fa fa-check"></i><b>21.1</b> How many run in the Comrades (Ultra)Marathon?</a></li>
+<li class="chapter" data-level="21.2" data-path="secComM.html"><a href="secComM.html#secComM2"><i class="fa fa-check"></i><b>21.2</b> Numbers by age and sex</a></li>
+<li class="chapter" data-level="21.3" data-path="secComM.html"><a href="secComM.html#secComM3"><i class="fa fa-check"></i><b>21.3</b> How long do runners take to finish?</a></li>
+<li class="chapter" data-level="21.4" data-path="secComM.html"><a href="secComM.html#secComM5"><i class="fa fa-check"></i><b>21.4</b> Comparing times for men and women</a>
+<ul>
+<li class="chapter" data-level="21.4.1" data-path="secComM.html"><a href="secComM.html#best-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.1</b> Best times for men and women</a></li>
+<li class="chapter" data-level="21.4.2" data-path="secComM.html"><a href="secComM.html#median-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.2</b> Median times for men and women</a></li>
+</ul></li>
+<li class="chapter" data-level="21.5" data-path="secComM.html"><a href="secComM.html#secComM6"><i class="fa fa-check"></i><b>21.5</b> How many runners get medals?</a></li>
+<li class="chapter" data-level="21.6" data-path="secComM.html"><a href="secComM.html#secComM4"><i class="fa fa-check"></i><b>21.6</b> How different are the “up” and “down” races?</a></li>
+<li class="chapter" data-level="21.7" data-path="secComM.html"><a href="secComM.html#secComM7"><i class="fa fa-check"></i><b>21.7</b> How do individual runners perform over the years?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secComM.html"><a href="secComM.html#graphical-takeaways-19"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="secFace.html"><a href="secFace.html"><i class="fa fa-check"></i><b>22</b> Comparing software for facial recognition</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="secFace.html"><a href="secFace.html#secFace1"><i class="fa fa-check"></i><b>22.1</b> How well do the softwares do?</a></li>
+<li class="chapter" data-level="22.2" data-path="secFace.html"><a href="secFace.html#secFace2"><i class="fa fa-check"></i><b>22.2</b> Are positive predictive values (PPV) a good criterion?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secFace.html"><a href="secFace.html#graphical-takeaways-20"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="secShears.html"><a href="secShears.html"><i class="fa fa-check"></i><b>23</b> Distinguishing shearwaters</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="secShears.html"><a href="secShears.html#secShears1"><i class="fa fa-check"></i><b>23.1</b> Distinguishing shearwaters and puffins</a></li>
+<li class="chapter" data-level="23.2" data-path="secShears.html"><a href="secShears.html#secShears2"><i class="fa fa-check"></i><b>23.2</b> Comparing two shearwater species (Audubon and Galápagos)</a></li>
+<li class="chapter" data-level="23.3" data-path="secShears.html"><a href="secShears.html#secShears3"><i class="fa fa-check"></i><b>23.3</b> Can the species be clustered?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secShears.html"><a href="secShears.html#graphical-takeaways-21"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="secDeer.html"><a href="secDeer.html"><i class="fa fa-check"></i><b>24</b> When do road accidents with deer happen in Bavaria?</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="secDeer.html"><a href="secDeer.html#secDeer1"><i class="fa fa-check"></i><b>24.1</b> Vehicle accidents involving deer</a></li>
+<li class="chapter" data-level="24.2" data-path="secDeer.html"><a href="secDeer.html#secDeer2"><i class="fa fa-check"></i><b>24.2</b> What about vehicle accidents without deer?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secDeer.html"><a href="secDeer.html#graphical-takeaways-22"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="secTitan.html"><a href="secTitan.html"><i class="fa fa-check"></i><b>25</b> The Titanic Disaster</a>
+<ul>
+<li class="chapter" data-level="25.1" data-path="secTitan.html"><a href="secTitan.html#secTitan1"><i class="fa fa-check"></i><b>25.1</b> Who travelled on the Titanic?</a></li>
+<li class="chapter" data-level="25.2" data-path="secTitan.html"><a href="secTitan.html#secTitan2"><i class="fa fa-check"></i><b>25.2</b> Which groups had high survival rates?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secTitan.html"><a href="secTitan.html#graphical-takeaways-23"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="secBTwahl.html"><a href="secBTwahl.html"><i class="fa fa-check"></i><b>26</b> German Election 2021—what happened?</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl1"><i class="fa fa-check"></i><b>26.1</b> Who won the 2021 election?</a></li>
+<li class="chapter" data-level="26.2" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl2"><i class="fa fa-check"></i><b>26.2</b> Are there geographic patterns?</a></li>
+<li class="chapter" data-level="26.3" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl3"><i class="fa fa-check"></i><b>26.3</b> Who won the first-past-the-post seats?</a></li>
+<li class="chapter" data-level="26.4" data-path="secBTwahl.html"><a href="secBTwahl.html#how-do-first-past-the-post-and-party-votes-compare"><i class="fa fa-check"></i><b>26.4</b> How do first-past-the-post and party votes compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secBTwahl.html"><a href="secBTwahl.html#graphical-takeaways-24"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Advice on Graphics</b></span></li>
+<li class="chapter" data-level="27" data-path="secProvQ.html"><a href="secProvQ.html"><i class="fa fa-check"></i><b>27</b> Provenance and quality</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="secProvQ.html"><a href="secProvQ.html#what-does-provenance-mean"><i class="fa fa-check"></i><b>27.1</b> What does provenance mean?</a></li>
+<li class="chapter" data-level="27.2" data-path="secProvQ.html"><a href="secProvQ.html#what-problems-arise-with-datasets"><i class="fa fa-check"></i><b>27.2</b> What problems arise with datasets?</a>
+<ul>
+<li class="chapter" data-level="27.2.1" data-path="secProvQ.html"><a href="secProvQ.html#data-definitions"><i class="fa fa-check"></i><b>27.2.1</b> Data definitions</a></li>
+<li class="chapter" data-level="27.2.2" data-path="secProvQ.html"><a href="secProvQ.html#data-collection"><i class="fa fa-check"></i><b>27.2.2</b> Data collection</a></li>
+<li class="chapter" data-level="27.2.3" data-path="secProvQ.html"><a href="secProvQ.html#data-availability"><i class="fa fa-check"></i><b>27.2.3</b> Data availability</a></li>
+</ul></li>
+<li class="chapter" data-level="27.3" data-path="secProvQ.html"><a href="secProvQ.html#the-provenance-of-datasets-used-in-the-book"><i class="fa fa-check"></i><b>27.3</b> The provenance of datasets used in the book</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="secProvQ.html"><a href="secProvQ.html#gapminder-chapter-refsecgapm"><i class="fa fa-check"></i><b>27.3.1</b> Gapminder (Chapter @ref(secGapm))</a></li>
+<li class="chapter" data-level="27.3.2" data-path="secProvQ.html"><a href="secProvQ.html#movies-chapter-refsecmovies"><i class="fa fa-check"></i><b>27.3.2</b> Movies (Chapter @ref(secMovies))</a></li>
+<li class="chapter" data-level="27.3.3" data-path="secProvQ.html"><a href="secProvQ.html#democratic-convention-1912-chapter-refsec1912dem"><i class="fa fa-check"></i><b>27.3.3</b> Democratic Convention 1912 (Chapter @ref(sec1912Dem))</a></li>
+<li class="chapter" data-level="27.3.4" data-path="secProvQ.html"><a href="secProvQ.html#speed-of-light-chapter-refseclights"><i class="fa fa-check"></i><b>27.3.4</b> Speed of light (Chapter @ref(secLightS))</a></li>
+<li class="chapter" data-level="27.3.5" data-path="secProvQ.html"><a href="secProvQ.html#olympic-games-chapter-refsecolymps"><i class="fa fa-check"></i><b>27.3.5</b> Olympic Games (Chapter @ref(secOlymps))</a></li>
+<li class="chapter" data-level="27.3.6" data-path="secProvQ.html"><a href="secProvQ.html#chess-ratings-chapter-refsecchess"><i class="fa fa-check"></i><b>27.3.6</b> Chess ratings (Chapter @ref(secChess))</a></li>
+<li class="chapter" data-level="27.3.7" data-path="secProvQ.html"><a href="secProvQ.html#attitudes-to-same-sex-marriage-chapter-refsecgayr"><i class="fa fa-check"></i><b>27.3.7</b> Attitudes to same-sex marriage (Chapter @ref(secGayR))</a></li>
+<li class="chapter" data-level="27.3.8" data-path="secProvQ.html"><a href="secProvQ.html#human-spaceflights-chapter-refsecastro"><i class="fa fa-check"></i><b>27.3.8</b> Human spaceflights (Chapter @ref(secAstro))</a></li>
+<li class="chapter" data-level="27.3.9" data-path="secProvQ.html"><a href="secProvQ.html#diamonds-chapter-refsecdiam"><i class="fa fa-check"></i><b>27.3.9</b> Diamonds (Chapter @ref(secDiam))</a></li>
+<li class="chapter" data-level="27.3.10" data-path="secProvQ.html"><a href="secProvQ.html#electric-car-charging-chapter-refsecelecc"><i class="fa fa-check"></i><b>27.3.10</b> Electric car charging (Chapter @ref(secElecC))</a></li>
+<li class="chapter" data-level="27.3.11" data-path="secProvQ.html"><a href="secProvQ.html#darwins-finches-chapter-refsecfinches"><i class="fa fa-check"></i><b>27.3.11</b> Darwin’s finches (Chapter @ref(secFinches))</a></li>
+<li class="chapter" data-level="27.3.12" data-path="secProvQ.html"><a href="secProvQ.html#vehicle-fuel-consumption-chapter-refsecvehicles"><i class="fa fa-check"></i><b>27.3.12</b> Vehicle fuel consumption (Chapter @ref(secVehicles))</a></li>
+<li class="chapter" data-level="27.3.13" data-path="secProvQ.html"><a href="secProvQ.html#comrades-marathon-chapter-refseccomm"><i class="fa fa-check"></i><b>27.3.13</b> Comrades Marathon (Chapter @ref(secComM))</a></li>
+<li class="chapter" data-level="27.3.14" data-path="secProvQ.html"><a href="secProvQ.html#shearwaters-chapter-refsecshears"><i class="fa fa-check"></i><b>27.3.14</b> Shearwaters (Chapter @ref(secShears))</a></li>
+<li class="chapter" data-level="27.3.15" data-path="secProvQ.html"><a href="secProvQ.html#titanic-chapter-refsectitan"><i class="fa fa-check"></i><b>27.3.15</b> Titanic (Chapter @ref(secTitan))</a></li>
+</ul></li>
+<li class="chapter" data-level="27.4" data-path="secProvQ.html"><a href="secProvQ.html#how-do-invented-simulated-and-real-datasets-compare"><i class="fa fa-check"></i><b>27.4</b> How do invented, simulated, and real datasets compare?</a>
+<ul>
+<li class="chapter" data-level="" data-path="secProvQ.html"><a href="secProvQ.html#main-points"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="secWrang.html"><a href="secWrang.html"><i class="fa fa-check"></i><b>28</b> Wrangling</a>
+<ul>
+<li class="chapter" data-level="28.1" data-path="secWrang.html"><a href="secWrang.html#secWrang1"><i class="fa fa-check"></i><b>28.1</b> Data wrangling: what and why</a></li>
+<li class="chapter" data-level="28.2" data-path="secWrang.html"><a href="secWrang.html#secWrang2"><i class="fa fa-check"></i><b>28.2</b> Data cleaning and transforming</a>
+<ul>
+<li class="chapter" data-level="28.2.1" data-path="secWrang.html"><a href="secWrang.html#errors-typos-outliers-missing-values"><i class="fa fa-check"></i><b>28.2.1</b> Errors, typos, outliers, missing values</a></li>
+<li class="chapter" data-level="28.2.2" data-path="secWrang.html"><a href="secWrang.html#secWrang22"><i class="fa fa-check"></i><b>28.2.2</b> Transforming and combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="28.3" data-path="secWrang.html"><a href="secWrang.html#secWrang3"><i class="fa fa-check"></i><b>28.3</b> Restructuring: subsetting, grouping, aggregating</a></li>
+<li class="chapter" data-level="28.4" data-path="secWrang.html"><a href="secWrang.html#naming-renaming-and-reclassifying"><i class="fa fa-check"></i><b>28.4</b> Naming, renaming and reclassifying</a></li>
+<li class="chapter" data-level="28.5" data-path="secWrang.html"><a href="secWrang.html#secWrang4"><i class="fa fa-check"></i><b>28.5</b> Wrangling for layered graphics</a>
+<ul>
+<li class="chapter" data-level="28.5.1" data-path="secWrang.html"><a href="secWrang.html#types-of-layers"><i class="fa fa-check"></i><b>28.5.1</b> Types of layers</a></li>
+<li class="chapter" data-level="28.5.2" data-path="secWrang.html"><a href="secWrang.html#the-layers-of-a-league-wormchart"><i class="fa fa-check"></i><b>28.5.2</b> The layers of a league wormchart</a></li>
+</ul></li>
+<li class="chapter" data-level="28.6" data-path="secWrang.html"><a href="secWrang.html#secWrang5"><i class="fa fa-check"></i><b>28.6</b> Putting datasets together and reproducibility</a>
+<ul>
+<li class="chapter" data-level="28.6.1" data-path="secWrang.html"><a href="secWrang.html#reading-in-and-merging-datasets"><i class="fa fa-check"></i><b>28.6.1</b> Reading in and merging datasets</a></li>
+<li class="chapter" data-level="28.6.2" data-path="secWrang.html"><a href="secWrang.html#reproducibility"><i class="fa fa-check"></i><b>28.6.2</b> Reproducibility </a></li>
+<li class="chapter" data-level="" data-path="secWrang.html"><a href="secWrang.html#main-points-1"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="secColour.html"><a href="secColour.html"><i class="fa fa-check"></i><b>29</b> Colour</a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="secColour.html"><a href="secColour.html#secColour1"><i class="fa fa-check"></i><b>29.1</b> Theory and implementation</a></li>
+<li class="chapter" data-level="29.2" data-path="secColour.html"><a href="secColour.html#secColour2"><i class="fa fa-check"></i><b>29.2</b> Perception of colour</a></li>
+<li class="chapter" data-level="29.3" data-path="secColour.html"><a href="secColour.html#secColour3"><i class="fa fa-check"></i><b>29.3</b> Value of colour</a>
+<ul>
+<li class="chapter" data-level="29.3.1" data-path="secColour.html"><a href="secColour.html#colours-distinguish"><i class="fa fa-check"></i><b>29.3.1</b> Colours distinguish</a></li>
+<li class="chapter" data-level="29.3.2" data-path="secColour.html"><a href="secColour.html#colours-highlight"><i class="fa fa-check"></i><b>29.3.2</b> Colours highlight</a></li>
+<li class="chapter" data-level="29.3.3" data-path="secColour.html"><a href="secColour.html#colours-connect"><i class="fa fa-check"></i><b>29.3.3</b> Colours connect</a></li>
+<li class="chapter" data-level="29.3.4" data-path="secColour.html"><a href="secColour.html#colours-separate"><i class="fa fa-check"></i><b>29.3.4</b> Colours separate</a></li>
+<li class="chapter" data-level="29.3.5" data-path="secColour.html"><a href="secColour.html#colours-signify"><i class="fa fa-check"></i><b>29.3.5</b> Colours signify</a></li>
+<li class="chapter" data-level="29.3.6" data-path="secColour.html"><a href="secColour.html#colours-attract"><i class="fa fa-check"></i><b>29.3.6</b> Colours attract</a></li>
+</ul></li>
+<li class="chapter" data-level="29.4" data-path="secColour.html"><a href="secColour.html#secColour4"><i class="fa fa-check"></i><b>29.4</b> Choice of colour</a>
+<ul>
+<li class="chapter" data-level="29.4.1" data-path="secColour.html"><a href="secColour.html#colour-blind-palettes-help"><i class="fa fa-check"></i><b>29.4.1</b> Colour blind palettes help</a></li>
+<li class="chapter" data-level="29.4.2" data-path="secColour.html"><a href="secColour.html#palette-order-counts"><i class="fa fa-check"></i><b>29.4.2</b> Palette order counts</a></li>
+<li class="chapter" data-level="29.4.3" data-path="secColour.html"><a href="secColour.html#there-may-not-be-enough-colours"><i class="fa fa-check"></i><b>29.4.3</b> There may not be enough colours</a></li>
+<li class="chapter" data-level="29.4.4" data-path="secColour.html"><a href="secColour.html#avoid-using-the-same-colours-for-different-datasets"><i class="fa fa-check"></i><b>29.4.4</b> Avoid using the same colours for different datasets</a></li>
+<li class="chapter" data-level="29.4.5" data-path="secColour.html"><a href="secColour.html#avoid-overlapping-colours-use-faceting"><i class="fa fa-check"></i><b>29.4.5</b> Avoid overlapping colours, use faceting</a></li>
+<li class="chapter" data-level="29.4.6" data-path="secColour.html"><a href="secColour.html#backgrounds-matter"><i class="fa fa-check"></i><b>29.4.6</b> Backgrounds matter</a></li>
+<li class="chapter" data-level="" data-path="secColour.html"><a href="secColour.html#main-points-2"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="secScene.html"><a href="secScene.html"><i class="fa fa-check"></i><b>30</b> Setting the scene</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="secScene.html"><a href="secScene.html#secScene6"><i class="fa fa-check"></i><b>30.1</b> Scaling</a></li>
+<li class="chapter" data-level="30.2" data-path="secScene.html"><a href="secScene.html#secScene4"><i class="fa fa-check"></i><b>30.2</b> Formatting</a>
+<ul>
+<li class="chapter" data-level="30.2.1" data-path="secScene.html"><a href="secScene.html#points-areas-lines"><i class="fa fa-check"></i><b>30.2.1</b> Points, areas, lines, …</a></li>
+<li class="chapter" data-level="30.2.2" data-path="secScene.html"><a href="secScene.html#plot"><i class="fa fa-check"></i><b>30.2.2</b> Plot</a></li>
+<li class="chapter" data-level="30.2.3" data-path="secScene.html"><a href="secScene.html#position"><i class="fa fa-check"></i><b>30.2.3</b> Position</a></li>
+</ul></li>
+<li class="chapter" data-level="30.3" data-path="secScene.html"><a href="secScene.html#secScene3"><i class="fa fa-check"></i><b>30.3</b> Making space</a></li>
+<li class="chapter" data-level="30.4" data-path="secScene.html"><a href="secScene.html#secScene1"><i class="fa fa-check"></i><b>30.4</b> Layout</a></li>
+<li class="chapter" data-level="30.5" data-path="secScene.html"><a href="secScene.html#secScene2"><i class="fa fa-check"></i><b>30.5</b> Comparisons and graphics</a>
+<ul>
+<li class="chapter" data-level="30.5.1" data-path="secScene.html"><a href="secScene.html#types-of-comparison"><i class="fa fa-check"></i><b>30.5.1</b> Types of comparison</a></li>
+<li class="chapter" data-level="30.5.2" data-path="secScene.html"><a href="secScene.html#superposition-juxtaposition-and-faceting"><i class="fa fa-check"></i><b>30.5.2</b> Superposition, juxtaposition, and faceting</a></li>
+<li class="chapter" data-level="30.5.3" data-path="secScene.html"><a href="secScene.html#advice"><i class="fa fa-check"></i><b>30.5.3</b> Advice</a></li>
+</ul></li>
+<li class="chapter" data-level="30.6" data-path="secScene.html"><a href="secScene.html#secScene5"><i class="fa fa-check"></i><b>30.6</b> Defaults</a>
+<ul>
+<li class="chapter" data-level="" data-path="secScene.html"><a href="secScene.html#main-points-3"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="secOrder.html"><a href="secOrder.html"><i class="fa fa-check"></i><b>31</b> Ordering, sorting, and arranging</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="secOrder.html"><a href="secOrder.html#secOrder1"><i class="fa fa-check"></i><b>31.1</b> What gets ordered, sorted, arranged?</a>
+<ul>
+<li class="chapter" data-level="31.1.1" data-path="secOrder.html"><a href="secOrder.html#cases"><i class="fa fa-check"></i><b>31.1.1</b> Cases</a></li>
+<li class="chapter" data-level="31.1.2" data-path="secOrder.html"><a href="secOrder.html#levels-of-categorical-variables"><i class="fa fa-check"></i><b>31.1.2</b> Levels of categorical variables</a></li>
+<li class="chapter" data-level="31.1.3" data-path="secOrder.html"><a href="secOrder.html#variables"><i class="fa fa-check"></i><b>31.1.3</b> Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="31.2" data-path="secOrder.html"><a href="secOrder.html#secOrder2"><i class="fa fa-check"></i><b>31.2</b> Ordering and sorting within graphics</a>
+<ul>
+<li class="chapter" data-level="31.2.1" data-path="secOrder.html"><a href="secOrder.html#secBoxes"><i class="fa fa-check"></i><b>31.2.1</b> Boxplots</a></li>
+<li class="chapter" data-level="31.2.2" data-path="secOrder.html"><a href="secOrder.html#sorting-into-groups-and-faceting-plots"><i class="fa fa-check"></i><b>31.2.2</b> Sorting into groups and faceting plots</a></li>
+<li class="chapter" data-level="31.2.3" data-path="secOrder.html"><a href="secOrder.html#secMosps"><i class="fa fa-check"></i><b>31.2.3</b> Mosaicplots</a></li>
+<li class="chapter" data-level="31.2.4" data-path="secOrder.html"><a href="secOrder.html#secPCPs"><i class="fa fa-check"></i><b>31.2.4</b> Parallel coordinate plots</a></li>
+</ul></li>
+<li class="chapter" data-level="31.3" data-path="secOrder.html"><a href="secOrder.html#secOrder3"><i class="fa fa-check"></i><b>31.3</b> Numbers of orderings and sortings</a></li>
+<li class="chapter" data-level="31.4" data-path="secOrder.html"><a href="secOrder.html#secOrder4"><i class="fa fa-check"></i><b>31.4</b> Arranging graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secOrder.html"><a href="secOrder.html#main-points-4"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="secInterp.html"><a href="secInterp.html"><i class="fa fa-check"></i><b>32</b> What affects interpretation?</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="secInterp.html"><a href="secInterp.html#secAttention"><i class="fa fa-check"></i><b>32.1</b> Attention</a>
+<ul>
+<li class="chapter" data-level="32.1.1" data-path="secInterp.html"><a href="secInterp.html#types-of-attention"><i class="fa fa-check"></i><b>32.1.1</b> Types of attention</a></li>
+<li class="chapter" data-level="32.1.2" data-path="secInterp.html"><a href="secInterp.html#cognitive-load"><i class="fa fa-check"></i><b>32.1.2</b> Cognitive load</a></li>
+<li class="chapter" data-level="32.1.3" data-path="secInterp.html"><a href="secInterp.html#rewards-for-paying-attention"><i class="fa fa-check"></i><b>32.1.3</b> Rewards for paying attention</a></li>
+</ul></li>
+<li class="chapter" data-level="32.2" data-path="secInterp.html"><a href="secInterp.html#secUnderstand"><i class="fa fa-check"></i><b>32.2</b> Understanding</a>
+<ul>
+<li class="chapter" data-level="32.2.1" data-path="secInterp.html"><a href="secInterp.html#knowledge"><i class="fa fa-check"></i><b>32.2.1</b> Knowledge</a></li>
+<li class="chapter" data-level="32.2.2" data-path="secInterp.html"><a href="secInterp.html#experience"><i class="fa fa-check"></i><b>32.2.2</b> Experience</a></li>
+<li class="chapter" data-level="32.2.3" data-path="secInterp.html"><a href="secInterp.html#possible-cognitive-biases"><i class="fa fa-check"></i><b>32.2.3</b> Possible cognitive biases</a></li>
+</ul></li>
+<li class="chapter" data-level="32.3" data-path="secInterp.html"><a href="secInterp.html#secCheck"><i class="fa fa-check"></i><b>32.3</b> Checking</a>
+<ul>
+<li class="chapter" data-level="32.3.1" data-path="secInterp.html"><a href="secInterp.html#provenance"><i class="fa fa-check"></i><b>32.3.1</b> Provenance</a></li>
+<li class="chapter" data-level="32.3.2" data-path="secInterp.html"><a href="secInterp.html#looking-at-the-numbers"><i class="fa fa-check"></i><b>32.3.2</b> Looking at the numbers</a></li>
+<li class="chapter" data-level="32.3.3" data-path="secInterp.html"><a href="secInterp.html#varying-plots"><i class="fa fa-check"></i><b>32.3.3</b> Varying plots</a></li>
+<li class="chapter" data-level="32.3.4" data-path="secInterp.html"><a href="secInterp.html#varying-plot-forms"><i class="fa fa-check"></i><b>32.3.4</b> Varying plot forms</a></li>
+<li class="chapter" data-level="32.3.5" data-path="secInterp.html"><a href="secInterp.html#statistical-checks"><i class="fa fa-check"></i><b>32.3.5</b> Statistical checks</a></li>
+<li class="chapter" data-level="32.3.6" data-path="secInterp.html"><a href="secInterp.html#checking-consequences"><i class="fa fa-check"></i><b>32.3.6</b> Checking consequences</a></li>
+<li class="chapter" data-level="32.3.7" data-path="secInterp.html"><a href="secInterp.html#context"><i class="fa fa-check"></i><b>32.3.7</b> Context</a></li>
+<li class="chapter" data-level="32.3.8" data-path="secInterp.html"><a href="secInterp.html#discussing-with-others-especially-domain-experts"><i class="fa fa-check"></i><b>32.3.8</b> Discussing with others, especially domain experts</a></li>
+<li class="chapter" data-level="32.3.9" data-path="secInterp.html"><a href="secInterp.html#replicate"><i class="fa fa-check"></i><b>32.3.9</b> Replicate</a></li>
+<li class="chapter" data-level="32.3.10" data-path="secInterp.html"><a href="secInterp.html#example-of-checking"><i class="fa fa-check"></i><b>32.3.10</b> Example of checking</a></li>
+<li class="chapter" data-level="" data-path="secInterp.html"><a href="secInterp.html#main-points-5"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="secPlot.html"><a href="secPlot.html"><i class="fa fa-check"></i><b>33</b> Varieties of plots, developing plots</a>
+<ul>
+<li class="chapter" data-level="33.1" data-path="secPlot.html"><a href="secPlot.html#varying-various-plots"><i class="fa fa-check"></i><b>33.1</b> Varying various plots</a></li>
+<li class="chapter" data-level="33.2" data-path="secPlot.html"><a href="secPlot.html#ensembles-of-plots"><i class="fa fa-check"></i><b>33.2</b> Ensembles of plots</a></li>
+<li class="chapter" data-level="33.3" data-path="secPlot.html"><a href="secPlot.html#differences-between-early-drafts-and-later-graphics"><i class="fa fa-check"></i><b>33.3</b> Differences between early drafts and later graphics</a>
+<ul>
+<li class="chapter" data-level="33.3.1" data-path="secPlot.html"><a href="secPlot.html#democratic-convention"><i class="fa fa-check"></i><b>33.3.1</b> 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="33.3.2" data-path="secPlot.html"><a href="secPlot.html#gapminder-life-expectancies"><i class="fa fa-check"></i><b>33.3.2</b> Gapminder Life Expectancies</a></li>
+<li class="chapter" data-level="33.3.3" data-path="secPlot.html"><a href="secPlot.html#electric-car-charging"><i class="fa fa-check"></i><b>33.3.3</b> Electric car charging</a></li>
+<li class="chapter" data-level="33.3.4" data-path="secPlot.html"><a href="secPlot.html#gay-rights"><i class="fa fa-check"></i><b>33.3.4</b> Gay rights</a></li>
+<li class="chapter" data-level="33.3.5" data-path="secPlot.html"><a href="secPlot.html#human-space-flight"><i class="fa fa-check"></i><b>33.3.5</b> Human space flight</a></li>
+<li class="chapter" data-level="33.3.6" data-path="secPlot.html"><a href="secPlot.html#euro-2020"><i class="fa fa-check"></i><b>33.3.6</b> Euro 2020</a></li>
+<li class="chapter" data-level="33.3.7" data-path="secPlot.html"><a href="secPlot.html#characteristic-changes"><i class="fa fa-check"></i><b>33.3.7</b> Characteristic changes</a></li>
+</ul></li>
+<li class="chapter" data-level="33.4" data-path="secPlot.html"><a href="secPlot.html#classifying-graphics"><i class="fa fa-check"></i><b>33.4</b> Classifying graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="secPlot.html"><a href="secPlot.html#main-points-6"><i class="fa fa-check"></i>Main points</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="34" data-path="conclusions-and-recommendations.html"><a href="conclusions-and-recommendations.html"><i class="fa fa-check"></i><b>34</b> Conclusions and recommendations</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Getting (more out of) Graphics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="secPalmerPen" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">18</span> Differences amongst the Palmer penguins<a href="secPalmerPen.html#secPalmerPen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p>“One can’t be angry when one looks at a penguin.”</p>
+</blockquote>
+<blockquote>
+<footer>
+— John Ruskin
+</footer>
+</blockquote>
+<p><strong>Background</strong> The Long Term Ecological Research Network (LTER) (<span class="citation">National Science Foundation (<a href="references.html#ref-ltern:2022">2022</a>)</span>) carries out research at Palmer station, Antarctica. Their work includes studying different species of penguins on islands in the Palmer Archipelago.</p>
+<p><strong>Questions</strong> How do the species differ? How do the penguin populations on the three islands studied differ?</p>
+<p><strong>Sources</strong> <span class="citation">Horst et al. (<a href="references.html#ref-horst:2020">2020</a>)</span></p>
+<p><strong>Structure</strong> One raw dataset of 344 penguins with 17 variables and one cleaned dataset with 8 variables.</p>
+<div id="secPalmerPen1" class="section level2 hasAnchor" number="18.1">
+<h2><span class="header-section-number">18.1</span> Getting an overview of the penguin data<a href="secPalmerPen.html#secPalmerPen1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A good example of the LTER research can be found in <span class="citation">Gorman et al. (<a href="references.html#ref-gorman:2014">2014</a>)</span>. Some of the data have been made available in the <strong>palmerpenguins</strong> R package, primarily size measurements and isotopic signature information for three species of penguin: Adélie, Chinstrap, and Gentoo. Colour information is not included, but Gentoo penguins have a distinctive orange bill and white marking above the eyes, while Chinstrap penguins have a narrow black chinstrap. Attractive drawings of the three species are shown on the <strong>palmerpenguins</strong> package webpage.</p>
+<p>The Palmer Archipelago lies to the West of the Antarctic Peninsula, where warming linked to climate change has occurred very fast. According to <span class="citation">Fountain (<a href="references.html#ref-fountain:2022">2022</a>)</span> this is bad for Adélie penguins that do better to the East in the Weddell Sea where it is still cold. Gentoo penguins are not so affected.</p>
+<div style="page-break-after: always;"></div>
+<p>Figure <a href="secPalmerPen.html#fig:PalEns0">18.1</a> shows four plots of the dataset. There are barcharts for the three species and the three islands, a histogram of penguin body mass, and a scatterplot of flipper length against body mass.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="secPalmerPen.html#cb190-1" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> penguins</span>
+<span id="cb190-2"><a href="secPalmerPen.html#cb190-2" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">species=</span><span class="fu">fct_recode</span>(species, Adélie<span class="ot">=</span><span class="st">&quot;Adelie&quot;</span>))</span>
+<span id="cb190-3"><a href="secPalmerPen.html#cb190-3" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2, <span class="fu">aes</span>(species)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">fill=</span><span class="st">&quot;grey70&quot;</span>, <span class="at">width=</span><span class="fl">0.75</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">200</span>)</span>
+<span id="cb190-4"><a href="secPalmerPen.html#cb190-4" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2, <span class="fu">aes</span>(island)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">fill=</span><span class="st">&quot;grey70&quot;</span>, <span class="at">width=</span><span class="fl">0.75</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">200</span>)</span>
+<span id="cb190-5"><a href="secPalmerPen.html#cb190-5" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2, <span class="fu">aes</span>(body_mass_g)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">boundary=</span><span class="dv">0</span>, <span class="at">binwidth=</span><span class="dv">250</span>, <span class="at">fill=</span><span class="st">&quot;grey70&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">2500</span>, <span class="dv">6500</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>)</span>
+<span id="cb190-6"><a href="secPalmerPen.html#cb190-6" tabindex="-1"></a>g4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2, <span class="fu">aes</span>(body_mass_g, flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">colour=</span><span class="st">&quot;grey70&quot;</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">2500</span>, <span class="dv">6500</span>)</span>
+<span id="cb190-7"><a href="secPalmerPen.html#cb190-7" tabindex="-1"></a>(g1<span class="sc">/</span>g2<span class="sc">|</span>g3<span class="sc">/</span>g4) <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PalEns0"></span>
+<img src="_main_files/figure-html/PalEns0-1.png" alt="Four plots of the Palmer penguin dataset" width="672" />
+<p class="caption">
+Figure 18.1: Four plots of the Palmer penguin dataset
+</p>
+</div>
+<p>There are fewer Chinstrap penguins and fewer penguins from Torgersen Island. The distribution of body mass may have that skewed shape because it is a mixture of the body mass distributions of three separate species. Flipper length and body mass are highly positively correlated.</p>
+<p>Different subsets can be selected and highlighted to look for patterns. Figures <a href="secPalmerPen.html#fig:PalEns1">18.2</a> and <a href="secPalmerPen.html#fig:PalEns2">18.3</a> show examples of selecting a species or an island across these plots. Gentoo penguins were only sampled on Biscoe Island, and they are generally heavier with longer flippers than the other two species. Dream Island has all the Chinstrap penguins and some Adélie penguins. The penguins on Dream Island have smaller body mass and flipper length.</p>
+<p>The penguins in this dataset were nesting pairs that had at least one egg. The sampling procedure is described in <span class="citation">Gorman et al. (<a href="references.html#ref-gorman:2014">2014</a>)</span>. Detailed information on estimated total penguin numbers at Antarctic sites over the years is available on the MAPPPD website described in <span class="citation">Humphries et al. (<a href="references.html#ref-humphries:2017">2017</a>)</span>.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="secPalmerPen.html#cb191-1" tabindex="-1"></a>p2g <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">&quot;Gentoo&quot;</span>)</span>
+<span id="cb191-2"><a href="secPalmerPen.html#cb191-2" tabindex="-1"></a>blueGentoo <span class="ot">&lt;-</span> <span class="fu">colorblind_pal</span>()(<span class="dv">3</span>)[<span class="dv">3</span>]</span>
+<span id="cb191-3"><a href="secPalmerPen.html#cb191-3" tabindex="-1"></a>g1x <span class="ot">&lt;-</span> g1 <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">data=</span>p2g, <span class="at">fill=</span>blueGentoo, <span class="at">width=</span><span class="fl">0.75</span>)</span>
+<span id="cb191-4"><a href="secPalmerPen.html#cb191-4" tabindex="-1"></a>g2x <span class="ot">&lt;-</span> g2 <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">data=</span>p2g, <span class="at">fill=</span>blueGentoo, <span class="at">width=</span><span class="fl">0.75</span>)</span>
+<span id="cb191-5"><a href="secPalmerPen.html#cb191-5" tabindex="-1"></a>g3x <span class="ot">&lt;-</span> g3 <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">data=</span>p2g, <span class="at">boundary=</span><span class="dv">0</span>, <span class="at">binwidth=</span><span class="dv">250</span>, <span class="at">fill=</span>blueGentoo)</span>
+<span id="cb191-6"><a href="secPalmerPen.html#cb191-6" tabindex="-1"></a>g4x <span class="ot">&lt;-</span> g4 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">data=</span>p2g, <span class="at">colour=</span>blueGentoo)</span>
+<span id="cb191-7"><a href="secPalmerPen.html#cb191-7" tabindex="-1"></a>gu1 <span class="ot">&lt;-</span> (g1x<span class="sc">/</span>g2x<span class="sc">|</span>g3x<span class="sc">/</span>g4x)</span>
+<span id="cb191-8"><a href="secPalmerPen.html#cb191-8" tabindex="-1"></a>palens1X <span class="ot">&lt;-</span> gu1 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb191-9"><a href="secPalmerPen.html#cb191-9" tabindex="-1"></a>palens1X</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PalEns1"></span>
+<img src="_main_files/figure-html/PalEns1-1.png" alt="Gentoo penguins highlighted in all plots" width="672" />
+<p class="caption">
+Figure 18.2: Gentoo penguins highlighted in all plots
+</p>
+</div>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="secPalmerPen.html#cb192-1" tabindex="-1"></a>p2d <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(island<span class="sc">==</span><span class="st">&quot;Dream&quot;</span>)</span>
+<span id="cb192-2"><a href="secPalmerPen.html#cb192-2" tabindex="-1"></a>g1y <span class="ot">&lt;-</span> g1 <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">data=</span>p2d, <span class="at">fill=</span><span class="st">&quot;red&quot;</span>, <span class="at">width=</span><span class="fl">0.75</span>)</span>
+<span id="cb192-3"><a href="secPalmerPen.html#cb192-3" tabindex="-1"></a>g2y <span class="ot">&lt;-</span> g2 <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">data=</span>p2d, <span class="at">fill=</span><span class="st">&quot;red&quot;</span>, <span class="at">width=</span><span class="fl">0.75</span>)</span>
+<span id="cb192-4"><a href="secPalmerPen.html#cb192-4" tabindex="-1"></a>g3y <span class="ot">&lt;-</span> g3 <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">data=</span>p2d, <span class="at">boundary=</span><span class="dv">0</span>, <span class="at">binwidth=</span><span class="dv">250</span>, <span class="at">fill=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb192-5"><a href="secPalmerPen.html#cb192-5" tabindex="-1"></a>g4y <span class="ot">&lt;-</span> g4 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">data=</span>p2d, <span class="at">colour=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb192-6"><a href="secPalmerPen.html#cb192-6" tabindex="-1"></a>gu2 <span class="ot">&lt;-</span> (g1y<span class="sc">/</span>g2y<span class="sc">|</span>g3y<span class="sc">/</span>g4y)</span>
+<span id="cb192-7"><a href="secPalmerPen.html#cb192-7" tabindex="-1"></a>palens2X <span class="ot">&lt;-</span> gu2 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb192-8"><a href="secPalmerPen.html#cb192-8" tabindex="-1"></a>palens2X</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PalEns2"></span>
+<img src="_main_files/figure-html/PalEns2-1.png" alt="Dream Island penguins highlighted in all plots" width="672" />
+<p class="caption">
+Figure 18.3: Dream Island penguins highlighted in all plots
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Groups of cases defined in other ways could also be highlighted. Figure <a href="secPalmerPen.html#fig:PalEns3">18.4</a> highlights the penguins weighing no more than 3 kg. As was already known from Figure <a href="secPalmerPen.html#fig:PalEns1">18.2</a>, the penguins are either Adélie or Chinstrap. Interestingly, there are examples of the lightest penguins on all three islands.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="secPalmerPen.html#cb193-1" tabindex="-1"></a>p2w <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(body_mass_g <span class="sc">&lt;</span> <span class="dv">3010</span>)</span>
+<span id="cb193-2"><a href="secPalmerPen.html#cb193-2" tabindex="-1"></a>g1z <span class="ot">&lt;-</span> g1 <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">data=</span>p2w, <span class="at">fill=</span><span class="st">&quot;chocolate3&quot;</span>, <span class="at">width=</span><span class="fl">0.75</span>)</span>
+<span id="cb193-3"><a href="secPalmerPen.html#cb193-3" tabindex="-1"></a>g2z <span class="ot">&lt;-</span> g2 <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">data=</span>p2w, <span class="at">fill=</span><span class="st">&quot;chocolate3&quot;</span>, <span class="at">width=</span><span class="fl">0.75</span>)</span>
+<span id="cb193-4"><a href="secPalmerPen.html#cb193-4" tabindex="-1"></a>g3z <span class="ot">&lt;-</span> g3 <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">data=</span>p2w, <span class="at">boundary=</span><span class="dv">0</span>, <span class="at">binwidth=</span><span class="dv">250</span>, <span class="at">fill=</span><span class="st">&quot;chocolate3&quot;</span>)</span>
+<span id="cb193-5"><a href="secPalmerPen.html#cb193-5" tabindex="-1"></a>g4z <span class="ot">&lt;-</span> g4 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">data=</span>p2w, <span class="at">colour=</span><span class="st">&quot;chocolate3&quot;</span>)</span>
+<span id="cb193-6"><a href="secPalmerPen.html#cb193-6" tabindex="-1"></a>gu3 <span class="ot">&lt;-</span> (g1z<span class="sc">/</span>g2z<span class="sc">|</span>g3z<span class="sc">/</span>g4z)</span>
+<span id="cb193-7"><a href="secPalmerPen.html#cb193-7" tabindex="-1"></a>palens3X <span class="ot">&lt;-</span> gu3 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">widths =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb193-8"><a href="secPalmerPen.html#cb193-8" tabindex="-1"></a>palens3X</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PalEns3"></span>
+<img src="_main_files/figure-html/PalEns3-1.png" alt="Penguins weighing no more than 3 kg highlighted in all plots" width="672" />
+<p class="caption">
+Figure 18.4: Penguins weighing no more than 3 kg highlighted in all plots
+</p>
+</div>
+<p>At this stage, it could be worth investigating what values these subsets have for other variables. This could be done by drawing the additional plots with the appropriate subset layer. Figure <a href="secPalmerPen.html#fig:PalEns5">18.5</a> shows boxplots for bill length and depth with the lightest penguins drawn in separate boxplots in brown beside boxplots for the rest of the data. With two exceptions, the light penguins have shorter bills than most other penguins. Their bill depths are about the same.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="secPalmerPen.html#cb194-1" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">wt=</span><span class="fu">ifelse</span>(body_mass_g <span class="sc">&lt;</span> <span class="dv">3010</span>, <span class="st">&quot;light&quot;</span>, <span class="st">&quot;others&quot;</span>))</span>
+<span id="cb194-2"><a href="secPalmerPen.html#cb194-2" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(wt)))) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">coord_flip</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;chocolate3&quot;</span>, <span class="st">&quot;grey70&quot;</span>))</span>
+<span id="cb194-3"><a href="secPalmerPen.html#cb194-3" tabindex="-1"></a>c1y <span class="ot">&lt;-</span> cc  <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(wt, bill_length_mm, <span class="at">colour=</span>wt), <span class="at">varwidth=</span><span class="cn">TRUE</span>)</span>
+<span id="cb194-4"><a href="secPalmerPen.html#cb194-4" tabindex="-1"></a>c2y <span class="ot">&lt;-</span> cc <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(wt, bill_depth_mm, <span class="at">colour=</span>wt), <span class="at">varwidth=</span><span class="cn">TRUE</span>)</span>
+<span id="cb194-5"><a href="secPalmerPen.html#cb194-5" tabindex="-1"></a>c1y<span class="sc">/</span>c2y</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PalEns5"></span>
+<img src="_main_files/figure-html/PalEns5-1.png" alt="Penguins weighing no more than 3 kg plotted beside the rest, comparing bill lengths and bill depths" width="672" />
+<p class="caption">
+Figure 18.5: Penguins weighing no more than 3 kg plotted beside the rest, comparing bill lengths and bill depths
+</p>
+</div>
+<p>The boxplots have been drawn with widths proportional to the square roots of the numbers in the groups (331 and 11). The effect may be dramatic, but it emphasises how small the selected group is. By contrast consider boxplots of the same two bill measurements comparing Dream Island penguins to the rest. Bill lengths are about the same, while bill depths are larger.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="secPalmerPen.html#cb195-1" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">DreamI=</span><span class="fu">ifelse</span>(island<span class="sc">==</span><span class="st">&quot;Dream&quot;</span>, <span class="st">&quot;Dream&quot;</span>, <span class="st">&quot;Other&quot;</span>))</span>
+<span id="cb195-2"><a href="secPalmerPen.html#cb195-2" tabindex="-1"></a>dd <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(<span class="fu">is.na</span>(wt)))) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">coord_flip</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey70&quot;</span>))</span>
+<span id="cb195-3"><a href="secPalmerPen.html#cb195-3" tabindex="-1"></a>d1y <span class="ot">&lt;-</span> dd  <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(DreamI, bill_length_mm, <span class="at">colour=</span>DreamI), <span class="at">varwidth=</span><span class="cn">TRUE</span>)</span>
+<span id="cb195-4"><a href="secPalmerPen.html#cb195-4" tabindex="-1"></a>d2y <span class="ot">&lt;-</span> dd <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(DreamI, bill_depth_mm, <span class="at">colour=</span>DreamI), <span class="at">varwidth=</span><span class="cn">TRUE</span>)</span>
+<span id="cb195-5"><a href="secPalmerPen.html#cb195-5" tabindex="-1"></a>d1y<span class="sc">/</span>d2y</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PalEns6"></span>
+<img src="_main_files/figure-html/PalEns6-1.png" alt="Dream Island penguins plotted beside the rest, comparing bill lengths and bill depths" width="672" />
+<p class="caption">
+Figure 18.6: Dream Island penguins plotted beside the rest, comparing bill lengths and bill depths
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>Highlighting like this is a basic tool in interactive graphics where you select cases in one plot and they are then immediately highlighted in all other plots. Static versions, ghostplots, do not offer the same immediacy and flexibility, but can be drawn by creating a subset of just the selected cases. The plots required are drawn with the full dataset, using a muted colouring, and an additional layer is added to each plot using the subset. The selected objects are coloured more strongly, for instance in red or blue.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="secPalmerPen2" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Looking at several variables in one plot<a href="secPalmerPen.html#secPalmerPen2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Examining all variables together can be helpful in determining which differentiate between the species. Figure <a href="secPalmerPen.html#fig:Palpcp1">18.7</a> is a parallel coordinate plot of the data with the cases coloured by species.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="secPalmerPen.html#cb196-1" tabindex="-1"></a>PalX <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">pcp_select</span>(species<span class="sc">:</span>body_mass_g) <span class="sc">%&gt;%</span> <span class="fu">pcp_scale</span>() <span class="sc">%&gt;%</span> <span class="fu">pcp_arrange</span>() <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes_pcp</span>()) <span class="sc">+</span> <span class="fu">geom_pcp_axes</span>(<span class="at">colour=</span><span class="st">&quot;white&quot;</span>) <span class="sc">+</span> <span class="fu">geom_pcp</span>(<span class="fu">aes</span>(<span class="at">colour=</span>species)) <span class="sc">+</span> <span class="fu">geom_pcp_boxes</span>(<span class="at">fill=</span><span class="st">&quot;white&quot;</span>) <span class="sc">+</span><span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.y=</span><span class="fu">element_blank</span>(), <span class="at">axis.ticks.y=</span><span class="fu">element_blank</span>(), <span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span> <span class="fu">geom_pcp_labels</span>(<span class="at">fill=</span><span class="st">&quot;white&quot;</span>, <span class="at">alpha=</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_colour_colorblind</span>()</span>
+<span id="cb196-2"><a href="secPalmerPen.html#cb196-2" tabindex="-1"></a>PalX</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Palpcp1"></span>
+<img src="_main_files/figure-html/Palpcp1-1.png" alt="Parallel coordinate plot of the Palmer Penguin data" width="672" />
+<p class="caption">
+Figure 18.7: Parallel coordinate plot of the Palmer Penguin data
+</p>
+</div>
+<p>The first two axes show the information already seen in Figures <a href="secPalmerPen.html#fig:PalEns1">18.2</a> and <a href="secPalmerPen.html#fig:PalEns2">18.3</a> that Gentoo penguins are only to be found on Biscoe and Chinstrap penguins only on Dream. Other features can be seen too, such as the different patterns between bill length and bill depth for the species.</p>
+<p>Further features may be separated out better in a parallel coordinate plot by reordering categories and variables. Chinstrap are only on Dream Island, so those categories should be at the top or bottom, and Gentoo are only on Biscoe Island, so they should be at the other end. It also seems better to place island before species. Most measurements have higher values for Gentoo penguins, but bill depth has lower values, so it could be reversed to reduce the numbers of line crossings. Finally, bill length has a different pattern to the other measurement variables and so might be moved to the far right. Figure <a href="secPalmerPen.html#fig:Palpcp2">18.8</a> shows the data with the species and islands reordered, with bill depth reversed, and variables reordered.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="secPalmerPen.html#cb197-1" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Species=</span><span class="fu">factor</span>(species, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;Chinstrap&quot;</span>, <span class="st">&quot;Adélie&quot;</span>, <span class="st">&quot;Gentoo&quot;</span>)), <span class="at">Island=</span><span class="fu">factor</span>(island, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;Dream&quot;</span>, <span class="st">&quot;Torgersen&quot;</span>, <span class="st">&quot;Biscoe&quot;</span>)), <span class="at">r_bill_depth=</span><span class="dv">25</span><span class="sc">-</span>bill_depth_mm)</span>
+<span id="cb197-2"><a href="secPalmerPen.html#cb197-2" tabindex="-1"></a>colblindP <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">colorblind_pal</span>()(<span class="dv">3</span>)[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>)])</span>
+<span id="cb197-3"><a href="secPalmerPen.html#cb197-3" tabindex="-1"></a>PalY <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">pcp_select</span>(Island, Species, r_bill_depth, flipper_length_mm, body_mass_g, bill_length_mm) <span class="sc">%&gt;%</span> <span class="fu">pcp_scale</span>() <span class="sc">%&gt;%</span> <span class="fu">pcp_arrange</span>() <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes_pcp</span>()) <span class="sc">+</span> <span class="fu">geom_pcp_axes</span>(<span class="at">colour=</span><span class="st">&quot;white&quot;</span>) <span class="sc">+</span> <span class="fu">geom_pcp</span>(<span class="fu">aes</span>(<span class="at">colour=</span>Species)) <span class="sc">+</span> <span class="fu">geom_pcp_boxes</span>(<span class="at">fill=</span><span class="st">&quot;white&quot;</span>) <span class="sc">+</span><span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.y=</span><span class="fu">element_blank</span>(), <span class="at">axis.ticks.y=</span><span class="fu">element_blank</span>(), <span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span> <span class="fu">geom_pcp_labels</span>(<span class="at">fill=</span><span class="st">&quot;white&quot;</span>, <span class="at">alpha=</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span>colblindP)</span>
+<span id="cb197-4"><a href="secPalmerPen.html#cb197-4" tabindex="-1"></a>PalY</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Palpcp2"></span>
+<img src="_main_files/figure-html/Palpcp2-1.png" alt="Reordered parallel coordinate plot of the Palmer Penguin data" width="672" />
+<p class="caption">
+Figure 18.8: Reordered parallel coordinate plot of the Palmer Penguin data
+</p>
+</div>
+<p>In this display Chinstrap and Adélie penguins have similar measurement distributions, apart from bill length: Chinstrap penguins have longer bills. Gentoo penguins have higher values on several variables, except for bill depth—remember that this variable has been reversed in Figure <a href="secPalmerPen.html#fig:Palpcp2">18.8</a>. The fact that all blue (Gentoo) crossings between reversed bill depth and flipper length are above all other crossings between the two variables means that together they separate Gentoo from the other species.</p>
+<p>There may be a more effective reordering of the categories and variables. Minimising the total number of line crossings could be a goal or, given the aim of distinguishing between the species, minimising the number of line crossings of different species, but how would a search through the myriad options be carried out? There are 6!=720 orderings of the six variables, 3!=6 orderings of the islands, 3!=6 orderings of the species, and <span class="math inline">\(2^{4}\)</span>=16 ways of mapping the variables (each one can be plotted as is or inverted). Some of these are equivalent (a reverse ordering of the variables will give the same result as an unreversed ordering), but there does not appear to be an obvious search procedure.</p>
+<div style="page-break-after: always;"></div>
+<p>Bivariate associations seen in parallel coordinate plots can be examined more closely with scatterplots. Figure <a href="secPalmerPen.html#fig:Palscat3">18.9</a> confirms how bill length and bill depth combined separate the species (left) and how bill depth and flipper length combined separate Adélie penguins from the other two species (right).</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="secPalmerPen.html#cb198-1" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p2 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">SpeciesGCA=</span><span class="fu">factor</span>(species, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;Gentoo&quot;</span>, <span class="st">&quot;Chinstrap&quot;</span>, <span class="st">&quot;Adélie&quot;</span>)))</span>
+<span id="cb198-2"><a href="secPalmerPen.html#cb198-2" tabindex="-1"></a>colblindPgca <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">colorblind_pal</span>()(<span class="dv">3</span>)[<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>)])</span>
+<span id="cb198-3"><a href="secPalmerPen.html#cb198-3" tabindex="-1"></a>pscat1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2, <span class="fu">aes</span>(bill_depth_mm, bill_length_mm, <span class="at">colour=</span>SpeciesGCA)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span>colblindPgca) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>(), <span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</span>
+<span id="cb198-4"><a href="secPalmerPen.html#cb198-4" tabindex="-1"></a>pscat2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p2, <span class="fu">aes</span>(bill_depth_mm, flipper_length_mm, <span class="at">colour=</span>SpeciesGCA)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span>colblindPgca) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>(),  <span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</span>
+<span id="cb198-5"><a href="secPalmerPen.html#cb198-5" tabindex="-1"></a>pscat1 <span class="sc">+</span> pscat2</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Palscat3"></span>
+<img src="_main_files/figure-html/Palscat3-1.png" alt="Scatterplots of bill depth with bill length and flipper length" width="672" />
+<p class="caption">
+Figure 18.9: Scatterplots of bill depth with bill length and flipper length
+</p>
+</div>
+<p>Another way of exploring groups is to use facets. Figure <a href="secPalmerPen.html#fig:scatH">18.10</a> shows bill lengths and depths for each combination of species and island. To aid comparisons, the plot for all the penguins has been drawn in the background.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="secPalmerPen.html#cb199-1" tabindex="-1"></a><span class="fu">ggplot</span>(p2, <span class="fu">aes</span>(bill_depth_mm, bill_length_mm)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">data=</span>penguins <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>island, <span class="sc">-</span>species), <span class="at">colour=</span> <span class="fu">alpha</span>(<span class="st">&quot;black&quot;</span>, <span class="fl">0.05</span>)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour=</span>Species)) <span class="sc">+</span> <span class="fu">facet_grid</span>(<span class="at">rows=</span><span class="fu">vars</span>(Species), <span class="at">cols=</span><span class="fu">vars</span>(<span class="fu">fct_rev</span>(Island))) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span>colblindP)</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scatH"></span>
+<img src="_main_files/figure-html/scatH-1.png" alt="Scatterplots of bill lengths and depths of penguins by the three species and three islands" width="672" />
+<p class="caption">
+Figure 18.10: Scatterplots of bill lengths and depths of penguins by the three species and three islands
+</p>
+</div>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="secPalmerPen.html#cb200-1" tabindex="-1"></a>cM <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(species, island) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">cx=</span><span class="fu">cor</span>(bill_length_mm,bill_depth_mm, <span class="at">use=</span><span class="st">&quot;complete.obs&quot;</span>))</span>
+<span id="cb200-2"><a href="secPalmerPen.html#cb200-2" tabindex="-1"></a>cl <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">min</span>(cM<span class="sc">$</span>cx), <span class="dv">2</span>)</span>
+<span id="cb200-3"><a href="secPalmerPen.html#cb200-3" tabindex="-1"></a>cm <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">max</span>(cM<span class="sc">$</span>cx), <span class="dv">2</span>)</span></code></pre></div>
+</details>
+<p>Whichever graphics or tables are drawn to investigate this dataset, it is quickly clear that the Chinstrap penguins are only found on Dream Island and that the Gentoo penguins are only found on Biscoe Island. Fig <a href="secPalmerPen.html#fig:scatH">18.10</a> shows that the association between bill length and depth is positive for all species on any island they are found on. It also suggests, if you look at the subplots with no highlighted cases, that the association between bill length and depth for all penguins together is negative. The calculated correlation for the whole dataset is -0.24, while the correlations for the highlighted groups in the individual facets range from 0.25 to 0.65.</p>
+</div>
+<div id="secPalmerPen3" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> Using raw data to get more information<a href="secPalmerPen.html#secPalmerPen3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There is a second dataset with more variables in the <strong>palmerpenguins</strong> package called penguins_raw. This includes nesting observations and two isotope measurements. It provides enough information to compare the male and female in each nesting pair. The following set of scatterplots plots the four main measurements for the males against those of their female partners. In each plot the horizontal and vertical axes have identical scales.</p>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="secPalmerPen.html#cb201-1" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> penguins_raw</span>
+<span id="cb201-2"><a href="secPalmerPen.html#cb201-2" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> p1 <span class="sc">%&gt;%</span> <span class="fu">separate</span>(<span class="st">`</span><span class="at">Individual ID</span><span class="st">`</span>, <span class="fu">c</span>(<span class="st">&quot;PairID&quot;</span>, <span class="st">&quot;Gender&quot;</span>), <span class="at">sep=</span><span class="st">&quot;A&quot;</span>, <span class="at">remove=</span><span class="cn">FALSE</span>)</span>
+<span id="cb201-3"><a href="secPalmerPen.html#cb201-3" tabindex="-1"></a><span class="fu">names</span>(p1)[<span class="dv">12</span><span class="sc">:</span><span class="dv">15</span>] <span class="ot">&lt;-</span> <span class="fu">names</span>(p2)[<span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>]</span>
+<span id="cb201-4"><a href="secPalmerPen.html#cb201-4" tabindex="-1"></a>p1<span class="sc">$</span>species <span class="ot">&lt;-</span> p2<span class="sc">$</span>species</span>
+<span id="cb201-5"><a href="secPalmerPen.html#cb201-5" tabindex="-1"></a>p1w <span class="ot">&lt;-</span> p1 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="st">`</span><span class="at">Sample Number</span><span class="st">`</span>, <span class="sc">-</span><span class="st">`</span><span class="at">Individual ID</span><span class="st">`</span>, <span class="sc">-</span>Gender, <span class="sc">-</span>Comments) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Sex)) <span class="sc">%&gt;%</span> <span class="fu">pivot_wider</span>(<span class="at">names_from=</span><span class="st">&quot;Sex&quot;</span>, <span class="at">values_from=</span><span class="fu">c</span>(bill_length_mm<span class="sc">:</span>body_mass_g, <span class="st">`</span><span class="at">Delta 15 N (o/oo)</span><span class="st">`</span>, <span class="st">`</span><span class="at">Delta 13 C (o/oo)</span><span class="st">`</span>))</span>
+<span id="cb201-6"><a href="secPalmerPen.html#cb201-6" tabindex="-1"></a>sg0 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p1w, <span class="fu">aes</span>(<span class="at">colour=</span>species)) <span class="sc">+</span> <span class="fu">scale_colour_colorblind</span>() <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept=</span><span class="dv">0</span>, <span class="at">slope=</span><span class="dv">1</span>, <span class="at">colour=</span><span class="st">&quot;green&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span> (<span class="at">vjust =</span> <span class="dv">3</span>), <span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb201-7"><a href="secPalmerPen.html#cb201-7" tabindex="-1"></a>sg1 <span class="ot">&lt;-</span> sg0 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm_FEMALE, bill_length_mm_MALE)) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">30</span>,<span class="dv">60</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">30</span>,<span class="dv">60</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Bill length (mm)&quot;</span>)</span>
+<span id="cb201-8"><a href="secPalmerPen.html#cb201-8" tabindex="-1"></a>sg2 <span class="ot">&lt;-</span> sg0 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_depth_mm_FEMALE, bill_depth_mm_MALE)) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">13</span>,<span class="dv">23</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">13</span>,<span class="dv">23</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Bill depth (mm)&quot;</span>)</span>
+<span id="cb201-9"><a href="secPalmerPen.html#cb201-9" tabindex="-1"></a>sg3 <span class="ot">&lt;-</span> sg0 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(flipper_length_mm_FEMALE, flipper_length_mm_MALE)) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">170</span>,<span class="dv">240</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">170</span>,<span class="dv">240</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Flipper length (mm)&quot;</span>)</span>
+<span id="cb201-10"><a href="secPalmerPen.html#cb201-10" tabindex="-1"></a>sg4 <span class="ot">&lt;-</span> sg0 <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(body_mass_g_FEMALE, body_mass_g_MALE)) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">2500</span>,<span class="dv">6500</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">2500</span>,<span class="dv">6500</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Body mass (g)&quot;</span>)</span>
+<span id="cb201-11"><a href="secPalmerPen.html#cb201-11" tabindex="-1"></a>scatRy <span class="ot">&lt;-</span> (sg1<span class="sc">+</span>sg2)<span class="sc">/</span>(sg3<span class="sc">+</span>sg4) <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">guides =</span> <span class="st">&#39;collect&#39;</span>) <span class="sc">&amp;</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>, <span class="at">legend.direction =</span> <span class="st">&quot;horizontal&quot;</span>, <span class="at">legend.title=</span><span class="fu">element_blank</span>())</span>
+<span id="cb201-12"><a href="secPalmerPen.html#cb201-12" tabindex="-1"></a>scatRy</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scatR"></span>
+<img src="_main_files/figure-html/scatR-1.png" alt="Measurements of four variables for the male (vertical axes) and female (horizontal axes) in each pair (green lines mark where values would be equal)" width="672" />
+<p class="caption">
+Figure 18.11: Measurements of four variables for the male (vertical axes) and female (horizontal axes) in each pair (green lines mark where values would be equal)
+</p>
+</div>
+<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="secPalmerPen.html#cb202-1" tabindex="-1"></a>rg1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p1w, <span class="fu">aes</span>(bill_length_mm_FEMALE, bill_length_mm_MALE, <span class="at">colour=</span>species)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_colorblind</span>() <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">30</span>,<span class="dv">60</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">30</span>,<span class="dv">60</span>) <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept=</span><span class="dv">0</span>, <span class="at">slope=</span><span class="dv">1</span>, <span class="at">colour=</span><span class="st">&quot;green&quot;</span>)</span>
+<span id="cb202-2"><a href="secPalmerPen.html#cb202-2" tabindex="-1"></a>rg2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p1w, <span class="fu">aes</span>(bill_depth_mm_FEMALE, bill_depth_mm_MALE, <span class="at">colour=</span>species)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_colorblind</span>() <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">13</span>,<span class="dv">23</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">13</span>,<span class="dv">23</span>) <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept=</span><span class="dv">0</span>, <span class="at">slope=</span><span class="dv">1</span>, <span class="at">colour=</span><span class="st">&quot;green&quot;</span>)</span>
+<span id="cb202-3"><a href="secPalmerPen.html#cb202-3" tabindex="-1"></a>rg3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p1w, <span class="fu">aes</span>(flipper_length_mm_FEMALE, flipper_length_mm_MALE, <span class="at">colour=</span>species)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_colorblind</span>() <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">170</span>,<span class="dv">240</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">170</span>,<span class="dv">240</span>) <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept=</span><span class="dv">0</span>, <span class="at">slope=</span><span class="dv">1</span>, <span class="at">colour=</span><span class="st">&quot;green&quot;</span>)</span>
+<span id="cb202-4"><a href="secPalmerPen.html#cb202-4" tabindex="-1"></a>rg4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(p1w, <span class="fu">aes</span>(body_mass_g_FEMALE, body_mass_g_MALE, <span class="at">colour=</span>species)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_colorblind</span>() <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">2500</span>,<span class="dv">6500</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">2500</span>,<span class="dv">6500</span>) <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept=</span><span class="dv">0</span>, <span class="at">slope=</span><span class="dv">1</span>, <span class="at">colour=</span><span class="st">&quot;green&quot;</span>)</span>
+<span id="cb202-5"><a href="secPalmerPen.html#cb202-5" tabindex="-1"></a>scatRyO <span class="ot">&lt;-</span> (rg1<span class="sc">+</span>rg2)<span class="sc">/</span>(rg3<span class="sc">+</span>rg4) <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">guides =</span> <span class="st">&#39;collect&#39;</span>) <span class="sc">&amp;</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>, <span class="at">legend.direction =</span> <span class="st">&quot;horizontal&quot;</span>, <span class="at">legend.title=</span><span class="fu">element_blank</span>())</span></code></pre></div>
+</details>
+<p>As expected, the male in each pair is generally bigger than the female. One of the female Chinstrap penguins has a surprisingly long bill, possibly an error. Looking at the points as pairs combining the measurements of the male and the female from one nest, it can be seen that bill-depths, flipper lengths and body masses separate Gentoo pairs from the rest, while bill-lengths separate Adélie pairs from those of the other two species.</p>
+<p><strong>Answers</strong> Gentoo penguins are heavier with longer flippers and less deep bills and, of the islands studied, are only found on Biscoe Island. Adélie penguins have shorter bills. Chinstrap penguins are only found on Dream Island. Male penguins are usually bigger than their female partners.</p>
+<p><strong>Further questions</strong> Do the isotope measurements in the raw dataset differ for the species? The study was carried out over three years: Do results differ in any way across the years?</p>
+<div id="graphical-takeaways-16" class="section level3 unnumbered hasAnchor">
+<h3>Graphical takeaways<a href="secPalmerPen.html#graphical-takeaways-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Selection and highlighting are instructive for studying groups of cases across ensembles of graphics. (Figures <a href="secPalmerPen.html#fig:PalEns1">18.2</a> to <a href="secPalmerPen.html#fig:PalEns3">18.4</a>)</li>
+<li>Orderings of many kinds are crucial for getting the most out of parallel coordinate plots. (Figure <a href="secPalmerPen.html#fig:Palpcp2">18.8</a>)</li>
+<li>If data are paired, plotting the pairs in scatterplots provides more information. (Figure <a href="secPalmerPen.html#fig:scatR">18.11</a>)</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="secVehicles.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="secMalaria.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
