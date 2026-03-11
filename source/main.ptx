@@ -1,25 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pretext>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
   <book xml:id="gmoog-book">
     <title>Getting (more out of) Graphics</title>
-    <subtitle>PreTeXt Repository Starter</subtitle>
-
+    <subtitle>PreTeXt Skeleton</subtitle>
     <frontmatter>
-      <preface xml:id="preface">
-        <title>Preface</title>
-        <p>This repository was migrated from an R/bookdown source. This PreTeXt file is a starter skeleton for converting chapters into native PreTeXt XML.</p>
-      </preface>
+      <xi:include href="frontmatter/preface.ptx" />
     </frontmatter>
-
-    <chapter xml:id="ch-migration">
-      <title>Migration Notes</title>
-      <p>Primary author: Antony Unwin.</p>
-      <p>Original source chapters are currently in the repository root as R Markdown files.</p>
-      <p>Use PRETEXT-MIGRATION.md for the chapter-by-chapter migration checklist and repository workflow.</p>
-    </chapter>
-
+    <xi:include href="chapters/intro.ptx" />
+    <xi:include href="chapters/gapminder.ptx" />
+    <xi:include href="chapters/movies.ptx" />
+    <xi:include href="chapters/democrats-1912.ptx" />
+    <xi:include href="chapters/light-speed.ptx" />
+    <xi:include href="chapters/olympics.ptx" />
+    <xi:include href="chapters/bertin.ptx" />
+    <xi:include href="chapters/chess.ptx" />
+    <xi:include href="chapters/gay-rights.ptx" />
+    <xi:include href="chapters/astronauts.ptx" />
+    <xi:include href="chapters/diamonds.ptx" />
+    <xi:include href="chapters/psoriasis.ptx" />
+    <xi:include href="chapters/electric-cars.ptx" />
+    <xi:include href="chapters/darwin-finches.ptx" />
+    <xi:include href="chapters/euros.ptx" />
+    <xi:include href="chapters/leagues.ptx" />
+    <xi:include href="chapters/us-fuel.ptx" />
+    <xi:include href="chapters/palmer-penguins.ptx" />
+    <xi:include href="chapters/malaria.ptx" />
+    <xi:include href="chapters/swimming.ptx" />
+    <xi:include href="chapters/comrades-marathon.ptx" />
+    <xi:include href="chapters/facial-recognition.ptx" />
+    <xi:include href="chapters/shears.ptx" />
+    <xi:include href="chapters/deer.ptx" />
+    <xi:include href="chapters/titanic.ptx" />
+    <xi:include href="chapters/bundestag-election.ptx" />
+    <xi:include href="chapters/provenance.ptx" />
+    <xi:include href="chapters/wrangling.ptx" />
+    <xi:include href="chapters/colour.ptx" />
+    <xi:include href="chapters/scene-setting.ptx" />
+    <xi:include href="chapters/sort-order.ptx" />
+    <xi:include href="chapters/pay-attention.ptx" />
+    <xi:include href="chapters/spot-the-difference.ptx" />
+    <xi:include href="chapters/conclusions.ptx" />
     <backmatter>
-      <references xml:id="references"/>
+      <xi:include href="backmatter/references.ptx" />
     </backmatter>
   </book>
 </pretext>
