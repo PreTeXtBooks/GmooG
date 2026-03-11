@@ -122,4 +122,22 @@
 
   <!-- asensio:2021b -->
   <biblio xml:id="asensio-2021b" type="raw">Asensio, Omar, Apablaza, C., Lawson, M. Cade, and Walsh, S. Replication Data for: A Field Experiment on Workplace Norms and Electric Vehicle Charging Etiquette. 2021. <url href="https://doi.org/10.7910/DVN/NFPQLW"/>. (accessed 08.05.2021)</biblio>
+
+  <!-- blonder:2019 -->
+  <biblio xml:id="blonder-2019" type="raw">Blonder, B. <pubtitle>hypervolume</pubtitle>. R package version 2.0.12, 2019. <url href="https://CRAN.R-project.org/package=hypervolume"/></biblio>
+
+  <!-- snodgrass:1904 -->
+  <biblio xml:id="snodgrass-1904" type="raw">Snodgrass, Robert and Heller, Edmund. Papers from the Hopkins-Stanford Galapagos Expedition, 1898-99. XVI. Birds. <em>Proceedings of the Washington Academy of Sciences</em>, V:231&#8211;372, 1904.</biblio>
+
+  <!-- snodgrass:2008 -->
+  <biblio xml:id="snodgrass-2008" type="raw">Snodgrass, Robert and Heller, Edmund. Data from: Papers from the Hopkins-Stanford Galapagos Expedition, 1898-99. XVI. Birds. The Dryad Digital Repository, 2008. <url href="http://datadryad.org/resource/doi:10.5061/dryad.152"/>. (accessed 14.06.2021)</biblio>
+
+  <!-- grant:2014 -->
+  <biblio xml:id="grant-2014" type="raw">Grant, Peter and Grant, Rosemary. <pubtitle>40 Years of Evolution: Darwin's Finches on Daphne Major Island</pubtitle>. Princeton University Press, 2014.</biblio>
+
+  <!-- weiner:1994 -->
+  <biblio xml:id="weiner-1994" type="raw">Weiner, Jonathan. <pubtitle>The Beak of the Finch</pubtitle>. Jonathan Cape, 1994.</biblio>
+
+  <!-- abel:2021 -->
+  <biblio xml:id="abel-2021" type="raw">Abel, Guy. uefa-ec. 2021. <url href="https://github.com/guyabel/uefa-ec/"/>. (accessed 07.06.2021)</biblio>
 </references>
