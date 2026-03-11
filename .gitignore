@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 .DS_Store
+output/
+cli.log
+.error_schema.log
+.gitignore-*

@@ -31,6 +31,17 @@ This repository now includes a starter PreTeXt layout so it can be handed off as
 The current manuscript is still authored in R Markdown (`*.Rmd`) and bookdown outputs (`_book/`).
 Use `PRETEXT-MIGRATION.md` as the checklist for converting chapters into native PreTeXt XML.
 
+Minimal PreTeXt build workflow from repo root:
+
+```bash
+pretext -t
+pretext build web
+```
+
+Expected HTML output location:
+
+- `output/web`
+
 Git remotes are configured for transfer workflow:
 
 - `origin`: `https://github.com/PreTeXtBooks/GmooG.git`
