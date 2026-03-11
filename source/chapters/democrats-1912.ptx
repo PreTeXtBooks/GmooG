@@ -148,14 +148,14 @@
     </figure>
 
     <p>This picture makes a different impression.  Instead of a string of equally spaced events, there are bunches of ballots, separated by a number of breaks in the proceedings, especially that from midnight on the Saturday to 11am on the Monday.  There were no official meetings on the Sunday.  The crucial breakthrough for Wilson took place after the overnight break between Monday and Tuesday.  Discussions must have been taking place all through the convention.  Sometimes more than one plot is necessary to get the full picture.</p>
-  </section>
-
-  <section xml:id="sec-1912-discussion">
-    <title>Discussion</title>
+  
     <p><em>Answers.</em> Many ballots took place without any change in support for the various candidates.  There were up to six critical points that determined the result.</p>
     <p><em>Further questions.</em> Which states voted as one during the convention?  In which other years were there many ballots to select a candidate?</p>
+</section>
 
-    <p><em>Graphical takeaways.</em></p>
+  <section xml:id="sec-1912-discussion">
+    <title>Graphical takeaways</title>
+
     <ul>
       <li><p>Guidelines support reading of graphics. (<xref ref="fig-delscat"/> to <xref ref="fig-convt"/>)</p></li>
       <li><p>Time series with discrete jumps should be represented with steps. (<xref ref="fig-candvs2"/>)</p></li>
