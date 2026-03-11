@@ -57,6 +57,21 @@
   <!-- wikip:2020 -->
   <biblio xml:id="wikip-2020" type="raw">Wikipedia. The Blue Banana. 2020. <url href="https://en.wikipedia.org/wiki/Blue_Banana"/></biblio>
 
+  <!-- FIDE:2020 -->
+  <biblio xml:id="FIDE-2020" type="raw">FIDE. International Chess Federation Ratings. 2020. <url href="https://ratings.fide.com"/></biblio>
+
+  <!-- wb:2020 -->
+  <biblio xml:id="wb-2020" type="raw">World Bank. World Bank Open Data. 2020. <url href="https://data.worldbank.org"/></biblio>
+
+  <!-- elo:1978 -->
+  <biblio xml:id="elo-1978" type="raw">Elo, Arpad. <pubtitle>The Rating of Chess Players, Past and Present</pubtitle>. 1st ed. Arco, New York, 1978.</biblio>
+
+  <!-- bila:2009 -->
+  <biblio xml:id="bila-2009" type="raw">Bilalic, M., Smallbone, K., McLeod, P., and Gobet, F. Why are (the best) women so good at chess? Participation rates and gender differences in intellectual domains. <em>Proc. R. Soc. B</em>, 276:1161&#8211;1165, 2009.</biblio>
+
+  <!-- carr:1987 -->
+  <biblio xml:id="carr-1987" type="raw">Carr, Dan, Littlefield, Richard J., Nicholson, Wesley L., and Littlefield, J.S. Scatterplot Matrix Techniques for large N. <em>JASA</em>, 82(398):424&#8211;436, 1987.</biblio>
+
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
 
