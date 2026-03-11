@@ -111,6 +111,62 @@
   <!-- wickham:2019 -->
   <biblio xml:id="wickham-2019" type="raw">Wickham, Hadley. <pubtitle>tidyverse: Easily Install and Load the 'Tidyverse'</pubtitle>. R package version 1.3.0, 2019. <url href="https://CRAN.R-project.org/package=tidyverse"/></biblio>
 
+  <!-- PSI:2021a -->
+  <biblio xml:id="PSI-2021a" type="raw">PSI. Wonderful Wednesdays. 2021. <url href="https://www.psiweb.org/sigs-special-interest-groups/visualisation/welcome-to-wonderful-wednesdays"/>. (accessed 29.01.2021)</biblio>
+
+  <!-- PSI:2021b -->
+  <biblio xml:id="PSI-2021b" type="raw">PSI. DLQI. 2021. <url href="https://github.com/VIS-SIG/Wonderful-Wednesdays/tree/master/data/2021/2021-01-13"/>. (accessed 29.01.2021)</biblio>
+
+  <!-- asensio:2021b -->
+  <biblio xml:id="asensio-2021b" type="raw">Asensio, Omar, Apablaza, C., Lawson, M. Cade, and Walsh, S. Replication Data for: A Field Experiment on Workplace Norms and Electric Vehicle Charging Etiquette. 2021. <url href="https://doi.org/10.7910/DVN/NFPQLW"/>. (accessed 08.05.2021)</biblio>
+
+  <!-- blonder:2019 -->
+  <biblio xml:id="blonder-2019" type="raw">Blonder, B. <pubtitle>hypervolume</pubtitle>. R package version 2.0.12, 2019. <url href="https://CRAN.R-project.org/package=hypervolume"/></biblio>
+
+  <!-- snodgrass:1904 -->
+  <biblio xml:id="snodgrass-1904" type="raw">Snodgrass, Robert and Heller, Edmund. Papers from the Hopkins-Stanford Galapagos Expedition, 1898-99. XVI. Birds. <em>Proceedings of the Washington Academy of Sciences</em>, V:231&#8211;372, 1904.</biblio>
+
+  <!-- snodgrass:2008 -->
+  <biblio xml:id="snodgrass-2008" type="raw">Snodgrass, Robert and Heller, Edmund. Data from: Papers from the Hopkins-Stanford Galapagos Expedition, 1898-99. XVI. Birds. The Dryad Digital Repository, 2008. <url href="http://datadryad.org/resource/doi:10.5061/dryad.152"/>. (accessed 14.06.2021)</biblio>
+
+  <!-- grant:2014 -->
+  <biblio xml:id="grant-2014" type="raw">Grant, Peter and Grant, Rosemary. <pubtitle>40 Years of Evolution: Darwin's Finches on Daphne Major Island</pubtitle>. Princeton University Press, 2014.</biblio>
+
+  <!-- weiner:1994 -->
+  <biblio xml:id="weiner-1994" type="raw">Weiner, Jonathan. <pubtitle>The Beak of the Finch</pubtitle>. Jonathan Cape, 1994.</biblio>
+
+  <!-- abel:2021 -->
+  <biblio xml:id="abel-2021" type="raw">Abel, Guy. uefa-ec. 2021. <url href="https://github.com/guyabel/uefa-ec/"/>. (accessed 07.06.2021)</biblio>
+
+  <!-- curley:2016 -->
+  <biblio xml:id="curley-2016" type="raw">Curley, James. EnglishSoccer. 2016. <url href="http://fivethirtyeight.com/contributors/james-curley/"/>. (accessed 1.2.2022)</biblio>
+
+  <!-- curley:2022 -->
+  <biblio xml:id="curley-2022" type="raw">Curley, James. <pubtitle>engsoccerdata</pubtitle>. R package version 0.1.7, 2022. <url href="https://github.com/jalapic/engsoccerdata"/></biblio>
+
+  <!-- gomez:2022 -->
+  <biblio xml:id="gomez-2022" type="raw">Gómez-Ruano, Miguel, Pollard, Richard, and Lago-Peñas, Carlos. <pubtitle>Home Advantage in Sport</pubtitle>. Routledge, 2022.</biblio>
+
+  <!-- epa:2021 -->
+  <biblio xml:id="epa-2021" type="raw">Environmental Protection Agency. Fuel Economy. 2021. <url href="https://www.fueleconomy.gov"/>. (accessed 05.05.2021)</biblio>
+
+  <!-- ltern:2022 -->
+  <biblio xml:id="ltern-2022" type="raw">National Science Foundation. Long Term Ecological Research Network. 2022. <url href="https://lternet.edu"/>. (accessed 3.2.2022)</biblio>
+
+  <!-- horst:2020 -->
+  <biblio xml:id="horst-2020" type="raw">Horst, Allison, Hill, Alison, and Gorman, Kristen. <pubtitle>palmerpenguins</pubtitle>. R package version 0.1.0, 2020. <url href="https://allisonhorst.github.io/palmerpenguins/"/></biblio>
+
+  <!-- gorman:2014 -->
+  <biblio xml:id="gorman-2014" type="raw">Gorman, K., Williams, A., and Fraser, W. Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis). <em>PLoS ONE</em>, 9(3), 2014. <url href="https://doi.org/10.1371/journal.pone.0090081"/></biblio>
+
+  <!-- fountain:2022 -->
+  <biblio xml:id="fountain-2022" type="raw">Fountain, Henry. Where the Ice Is Still Abundant, These Penguins Are, Too. 2022. <url href="https://www.nytimes.com/2022/04/12/climate/antarctica-penguins.html"/>. (accessed 13.4.2022)</biblio>
+
+  <!-- humphries:2017 -->
+  <biblio xml:id="humphries-2017" type="raw">Humphries, G.R.W., Naveen, R., Schwaller, M., Che-Castaldo, C., McDowall, P., Schrimpf, M., and Lynch, H.J. Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): data and tools for dynamic management and decision support. <em>Polar Record</em>, 53(2):160&#8211;166, 2017.</biblio>
+
+  <!-- arndt:2021 -->
+  <biblio xml:id="arndt-2021" type="raw">Arndt, L., Koleala, T., and Orbán, Á. Magneto-optical diagnosis of symptomatic malaria in Papua New Guinea. <em>Nature Communications</em>, 12:969, 2021. <url href="https://doi.org/10.1038/s41467-021-21110-w"/></biblio>
   <!-- rosling:2009 -->
   <biblio xml:id="rosling-2009" type="raw">Rosling, Hans. The best stats you've ever seen. TED Talk. <url href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen"/>. 2009. (accessed 08.05.2020)</biblio>
 

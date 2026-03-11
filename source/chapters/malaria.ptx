@@ -9,33 +9,39 @@
     </blockquote>
     <p><em>Background.</em> The data come from an investigation of a new magneto-optical method, ROMD, of testing for malaria. It could offer a swifter and cheaper approach than three other tests (PCR, RDT, LM).</p>
     <p><em>Questions.</em> Do the results of the four tests agree? On which cases do they differ?</p>
-    <p><em>Sources.</em> @arndt:2021</p>
+    <p><em>Sources.</em> <xref ref="arndt-2021"/></p>
     <p><em>Structure.</em> A dataset of 956 observations and 24 variables.</p>
   </introduction>
 
   <section xml:id="sec-malaria-agreement">
     <title>How much agreement is there between the four tests?</title>
 
-    <p>Malaria is endemic in Papua New Guinea. The authors of @arndt:2021 have made available the raw data of their study there, involving individuals checked with four different tests, so that the methods could be compared. Each test uses a different measure of the disease. Eleven cases were excluded where there were missing values for two of the tests.</p>
+    <p>Malaria is endemic in Papua New Guinea. The authors of <xref ref="arndt-2021"/> have made available the raw data of their study there, involving individuals checked with four different tests, so that the methods could be compared. Each test uses a different measure of the disease. Eleven cases were excluded where there were missing values for two of the tests.</p>
 
     <figure xml:id="fig-maltest">
-      <image source="images/malTest-1.png"/>
+      <image source="images/malTest-1.png">
+        <description>A barchart showing the percentage of positive results for each of the four malaria tests (PCR, RDT, LM, ROMD), each in a different colour. The new ROMD test reports the highest percentage of positives.</description>
+      </image>
       <caption><p>Percentages of positives for the four tests.</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-maltest"/> summarises the results for the remaining cases. The tests found different percentages of positives, with the new test reporting the most positives. The authors believe that the new method may detect previous as well as current infections.</p>
+    <p>Figure <xref ref="fig-maltest"/> summarises the results for the remaining cases. The tests found different percentages of positives, with the new test reporting the most positives. The authors believe that the new method may detect previous as well as current infections. Figure <xref ref="fig-malvis"/> displays how often the different combinations of test results arose.</p>
 
     <figure xml:id="fig-malvis">
-      <image source="images/malvis-1.png"/>
+      <image source="images/malvis-1.png">
+        <description>A matrix plot showing all 16 combinations of positive (red rectangles) and negative results for the four malaria tests (PCR, RDT, LM, ROMD). Each column represents one combination pattern, with the first column showing all-negative cases and the second all-positive. A barchart at the foot shows how often each combination was observed. Most cases fall in the all-negative or near-all-negative columns.</description>
+      </image>
       <caption><p>Combinations of individual malaria test results (red rectangles are positives).</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-malvis"/> displays how often the different combinations of test results arose. The first column shows the cases in which all tests gave negative results for malaria and the second column all cases with positive results. The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in @arndt:2021. There was disagreement at one level or another for a substantial share of the cases. All 16 possible combinations of results are in evidence.</p>
+    <p>Figure <xref ref="fig-malvis"/> displays how often the different combinations of test results arose. The first column shows the cases in which all tests gave negative results for malaria and the second column all cases with positive results. The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in <xref ref="arndt-2021"/>. There was disagreement at one level or another for a substantial share of the cases. All 16 possible combinations of results are in evidence.</p>
 
     <p>The next display shows that no one test dominates another. The main diagonal elements in each subdisplay show the numbers of disagreements between those two tests. In each case there are disagreements of both kinds, positive-negative and negative-positive. Serious cases are presumably recognised by all methods. Borderline cases may be recognised by some but not by others.</p>
 
     <figure xml:id="fig-malpcp">
-      <image source="images/malpcp-1.png"/>
+      <image source="images/malpcp-1.png">
+        <description>A paired comparison matrix (upper triangle only) for the four malaria tests (PCR, RDT, LM, ROMD). Each subplot shows the frequency of each combination of results (positive/negative) between two tests. Disagreements appear in the off-diagonal cells. No single test consistently dominates another; all pairings show disagreements in both directions.</description>
+      </image>
       <caption><p>Paired comparisons of the results of the four tests.</p></caption>
     </figure>
   </section>
@@ -46,7 +52,9 @@
     <p>According to the paper, the LM test is the gold standard and it can be seen how the distribution of the new ROMD measurement differs according to cases testing negatively and positively on LM in Figure <xref ref="fig-mallm"/>.</p>
 
     <figure xml:id="fig-mallm">
-      <image source="images/malLM-1.png"/>
+      <image source="images/malLM-1.png">
+        <description>Two vertically stacked histograms of magneto-optical (AveMO) measurements on a log10 scale: top panel for LM-negative cases (grey) and bottom panel for LM-positive cases (red). A dotted vertical line marks the ROMD cut-off value. LM-positive cases tend to have higher log(MO) values, but there is substantial overlap between the two groups.</description>
+      </image>
       <caption><p>Magneto-optical measurements on a log10 scale grouped by the corresponding LM test result.</p></caption>
     </figure>
 
@@ -55,7 +63,9 @@
     <p>Some other information was available in the dataset, including the age, weight, and sex of those tested. Figure <xref ref="fig-malaw"/> plots weight by age for females and males separately.</p>
 
     <figure xml:id="fig-malaw">
-      <image source="images/malAW-1.png"/>
+      <image source="images/malAW-1.png">
+        <description>Two side-by-side scatterplots of weight (y-axis, 0–100 kg) by age (x-axis) for people tested for malaria, faceted by sex (male in green, female in purple). Many young people were tested. Most weights fall in a normal range, but there are a couple of unusually low weights and a few heavier younger women.</description>
+      </image>
       <caption><p>Weight by age and sex of the people tested for malaria.</p></caption>
     </figure>
 
