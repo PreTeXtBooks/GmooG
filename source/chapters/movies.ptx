@@ -25,7 +25,7 @@
       <caption><p>Movie runtimes in weeks.</p></caption>
     </figure>
 
-    <p>The film runtimes are shown in Figure <xref ref="fig-movierunb"/> in a boxplot&#8212;or rather a few outliers are visible.  The film lasting over 5 weeks (over 50,000 minutes), is called <q>Logistics</q> and records in reverse the journey of a pedometer from its production in China to its sale in Sweden.  To look at runtimes in more detail, the films longer than 3 hours were excluded.  Figure <xref ref="fig-movierunh"/> shows a histogram drawn with a binwidth of 1 minute, the level of resolution of the data.</p>
+    <p>The film runtimes are shown in <xref ref="fig-movierunb"/> in a boxplot&#8212;or rather a few outliers are visible.  The film lasting over 5 weeks (over 50,000 minutes), is called <q>Logistics</q> and records in reverse the journey of a pedometer from its production in China to its sale in Sweden.  To look at runtimes in more detail, the films longer than 3 hours were excluded.  <xref ref="fig-movierunh"/> shows a histogram drawn with a binwidth of 1 minute, the level of resolution of the data.</p>
 
     <figure xml:id="fig-movierunh">
       <image source="images/movieRunH-1.png">
@@ -39,7 +39,7 @@
 
   <section xml:id="sec-movies2">
     <title>Movies in IMDb over the years</title>
-    <p>Figure <xref ref="fig-movieruny"/> looks at whether movie runtimes changed over time.  Alpha transparency has been used to reduce the effect of overplotting and to show where there is a lot of data.</p>
+    <p><xref ref="fig-movieruny"/> looks at whether movie runtimes changed over time.  Alpha transparency has been used to reduce the effect of overplotting and to show where there is a lot of data.</p>
 
     <figure xml:id="fig-movieruny">
       <image source="images/movieRunY-1.png">
@@ -50,7 +50,7 @@
 
     <p>Early movies were short and later on there was a mixture of films and shorts.  The distribution of runtimes each year and the number of films each year are only hinted at in this scatterplot.  The following graphics use boxplots and a histogram to provide more informative views.</p>
 
-    <p>Figure <xref ref="fig-movierunyb"/> displays boxplots by year with a histogram of the number of movies in each year below.  The runtime distribution has been fairly constant for over 50 years.  The slight rise recently may reflect incomplete recording, as the lower plot shows fewer films produced in the latest three years included overall.  This is obvious for 2022, for which only the first six months could be covered.  The numbers for 2020 and 2021 suggest that it may take time for all films for a year to be added to the database.</p>
+    <p><xref ref="fig-movierunyb"/> displays boxplots by year with a histogram of the number of movies in each year below.  The runtime distribution has been fairly constant for over 50 years.  The slight rise recently may reflect incomplete recording, as the lower plot shows fewer films produced in the latest three years included overall.  This is obvious for 2022, for which only the first six months could be covered.  The numbers for 2020 and 2021 suggest that it may take time for all films for a year to be added to the database.</p>
 
     <figure xml:id="fig-movierunyb">
       <image source="images/movieRunYB-1.png">
@@ -58,13 +58,11 @@
       </image>
       <caption><p>Movie runtimes in minutes (above), number of movies by year (below) for films of 3 hours or under.</p></caption>
     </figure>
-
-    <p>Figure <xref ref="fig-movierunyb"/> displays boxplots by year with a histogram of the number of movies in each year below. The runtime distribution has been fairly constant for over 50 years. The slight rise recently may reflect incomplete recording, as the lower plot shows fewer films produced in the latest three years included overall. This is obvious for 2022, for which only the first six months could be covered. The numbers for 2020 and 2021 suggest that it may take time for all films for a year to be added to the database.</p>
   </section>
 
   <section xml:id="sec-movies21">
     <title>What might IMDb code numbers mean?</title>
-    <p>Every film has been given a code by IMDb, so merging their datasets is straightforward.  As the codes are all of the form <q>tt</q> followed by a number, those numbers were plotted against year to see if there were any patterns.  The resulting scatterplot is shown in Figure <xref ref="fig-moviett"/>.</p>
+    <p>Every film has been given a code by IMDb, so merging their datasets is straightforward.  As the codes are all of the form <q>tt</q> followed by a number, those numbers were plotted against year to see if there were any patterns.  The resulting scatterplot is shown in <xref ref="fig-moviett"/>.</p>
 
     <figure xml:id="fig-moviett">
       <image source="images/movieTT-1.png">
@@ -75,7 +73,7 @@
 
     <p>It looks as though most numbers were allocated in order of production year, but that some films were added to the database later.  This is particularly true of the very early films.  People might have thought that the Lumi&#232;re brothers' films of 1895 were the first, but there are recorded earlier, and it appears, judging by the numbering, these were initially not in the database.  The earliest film listed is <q>Passage de Venus</q> (Transit of Venus) from 1874, a few seconds recorded using a photographic revolver.  Several early films are by the extraordinary Eadweard Muybridge, the man who showed that all four hooves of a galloping horse are off the ground at the same time.</p>
 
-    <p>As Figure <xref ref="fig-moviett"/> only includes films and shorts that received at least 100 votes, it may be misleading.  The same plot was drawn for the over 1.25 million items with any ratings at all.  This suggested that there might be informative features for low code numbers.  Figure <xref ref="fig-moviett2"/> limits code numbers to less than 1,000,000 and facets by type of item.  The scatterplots imply that a set of code numbers between 500,000 and 750,000 was reserved for TV episodes.  The TV categories predominantly start in the 1950s and the video category in the 1960s.  Quite why the major categories appear to have a tail to the left is unclear.  All this may have little importance but is an example of what graphics may uncover that would be difficult to find in other ways.  There is an advantage in having something to talk about with domain experts, and it may lead to other, more pertinent, information emerging.</p>
+    <p>As <xref ref="fig-moviett"/> only includes films and shorts that received at least 100 votes, it may be misleading.  The same plot was drawn for the over 1.25 million items with any ratings at all.  This suggested that there might be informative features for low code numbers.  <xref ref="fig-moviett2"/> limits code numbers to less than 1,000,000 and facets by type of item.  The scatterplots imply that a set of code numbers between 500,000 and 750,000 was reserved for TV episodes.  The TV categories predominantly start in the 1950s and the video category in the 1960s.  Quite why the major categories appear to have a tail to the left is unclear.  All this may have little importance but is an example of what graphics may uncover that would be difficult to find in other ways.  There is an advantage in having something to talk about with domain experts, and it may lead to other, more pertinent, information emerging.</p>
 
     <figure xml:id="fig-moviett2">
       <image source="images/movieTT2.png">
@@ -87,7 +85,7 @@
 
   <section xml:id="sec-movies3">
     <title>What ratings do people give films?</title>
-    <p>Users can give films a rating from 1 to 10.  IMDb applies an unpublished algorithm to calculate a weighted average rating for every film.  The distribution of average ratings for films is shown in Figure <xref ref="fig-movierh"/>.</p>
+    <p>Users can give films a rating from 1 to 10.  IMDb applies an unpublished algorithm to calculate a weighted average rating for every film.  The distribution of average ratings for films is shown in <xref ref="fig-movierh"/>.</p>
 
     <figure xml:id="fig-movierh">
       <image source="images/movieRH-1.png">
@@ -98,7 +96,7 @@
 
     <p>These average user ratings are based on anything from 101 votes to over two and a half million.  Average ratings tend to be higher rather than lower.</p>
 
-    <p>The distribution of the number of ratings is skewed to the right, meaning that most films do not get many ratings and a few get a large number of ratings.  After taking logs to see more, the distribution is still skew, albeit less so, as is shown in Figure <xref ref="fig-movielv"/>.</p>
+    <p>The distribution of the number of ratings is skewed to the right, meaning that most films do not get many ratings and a few get a large number of ratings.  After taking logs to see more, the distribution is still skew, albeit less so, as is shown in <xref ref="fig-movielv"/>.</p>
 
     <figure xml:id="fig-movielv">
       <image source="images/movieLV-1.png">
@@ -107,7 +105,7 @@
       <caption><p>Numbers of votes for each movie on a log base 10 scale.</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-movievr"/> shows how the average rating for films relates to the number of ratings submitted.  This is a plot of films, so many of the points to the left represent a large number of films.  The points have been drawn relatively large and with no use of alpha transparency to ensure that high and outlying values can be seen.  As an example of the density of points with low numbers of ratings, there are films that were rated between 100 and 500 times and have an average rating of 6.3.  The plot has an unusual form, like a lower case r, with several features that are marked by boxes in Figure <xref ref="fig-movievr4"/>.</p>
+    <p><xref ref="fig-movievr"/> shows how the average rating for films relates to the number of ratings submitted.  This is a plot of films, so many of the points to the left represent a large number of films.  The points have been drawn relatively large and with no use of alpha transparency to ensure that high and outlying values can be seen.  As an example of the density of points with low numbers of ratings, there are films that were rated between 100 and 500 times and have an average rating of 6.3.  The plot has an unusual form, like a lower case r, with several features that are marked by boxes in <xref ref="fig-movievr4"/>.</p>
 
     <figure xml:id="fig-movievr">
       <image source="images/movieVR-1.png">
@@ -123,14 +121,47 @@
       <caption><p>User ratings by number of votes with features marked by boxes.</p></caption>
     </figure>
 
-    <p>There are no films with a low rating and many votes (the first plot of Figure <xref ref="fig-movievr4"/>).  The relatively few films rated by over a million users all have a high average rating (second plot of Figure <xref ref="fig-movievr4"/>).  However, the highest average ratings are achieved by films with much fewer votes (third plot of Figure <xref ref="fig-movievr4"/>)&#8212;possibly the support of family, friends, and colleagues?  A few films have low average ratings compared with other films receiving the same number of votes (fourth plot of Figure <xref ref="fig-movievr4"/>). <q>Batman &amp; Robin</q> (over 250,000 votes and an average rating of 3.7) and <q>Fifty Shades of Grey</q> (over 300,000 and 4.1) are two examples.</p>
+    <p>There are no films with a low rating and many votes (the first plot of <xref ref="fig-movievr4"/>).  The relatively few films rated by over a million users all have a high average rating (second plot of <xref ref="fig-movievr4"/>).  However, the highest average ratings are achieved by films with much fewer votes (third plot of <xref ref="fig-movievr4"/>)&#8212;possibly the support of family, friends, and colleagues?  A few films have low average ratings compared with other films receiving the same number of votes (fourth plot of <xref ref="fig-movievr4"/>). <q>Batman &amp; Robin</q> (over 250,000 votes and an average rating of 3.7) and <q>Fifty Shades of Grey</q> (over 300,000 and 4.1) are two examples.</p>
   </section>
 
   <section xml:id="sec-movies4">
     <title>Genres from Rom-Com to Film Noir</title>
-    <p>Films may be described as being of a type or genre.  There is no uniform way of doing this and IMDb uses descriptions of up to three genres for each film.  When there is more than one genre listed for a film, they are listed alphabetically.  In this dataset of films with more than 100 ratings there are almost 1250 different descriptions, i.e., combinations of up to three genres.</p>
+    <p>Films may be described as being of a type or genre.  There is no uniform way of doing this and IMDb uses descriptions of up to three genres for each film.  When there is more than one genre listed for a film, they are listed alphabetically.  In this dataset of films with more than 100 ratings there are almost 1250 different descriptions, i.e., combinations of up to three genres.
+ The top 20 combinations of up to three genre descriptors with cumulative percentages were:</p>
 
-    <p>Figure <xref ref="fig-moviepar"/> shows the corresponding cumulative distribution.</p>
+<table>
+  <tgroup cols="2">
+    <thead>
+      <row>
+        <cell>genres</cell>
+        <cell>cumPerc</cell>
+      </row>
+    </thead>
+    <tbody>
+      <row><cell>Drama</cell><cell>11.9</cell></row>
+      <row><cell>Comedy</cell><cell>18.8</cell></row>
+      <row><cell>Documentary</cell><cell>22.8</cell></row>
+      <row><cell>Comedy,Drama</cell><cell>26.7</cell></row>
+      <row><cell>Drama,Romance</cell><cell>30.1</cell></row>
+      <row><cell>Comedy,Romance</cell><cell>32.4</cell></row>
+      <row><cell>Comedy,Drama,Romance</cell><cell>34.7</cell></row>
+      <row><cell>Horror</cell><cell>36.9</cell></row>
+      <row><cell>Animation,Comedy,Family</cell><cell>38.6</cell></row>
+      <row><cell>Crime,Drama</cell><cell>40.0</cell></row>
+      <row><cell>Action,Crime,Drama</cell><cell>41.3</cell></row>
+      <row><cell>Drama,Thriller</cell><cell>42.6</cell></row>
+      <row><cell>Thriller</cell><cell>43.9</cell></row>
+      <row><cell>Horror,Thriller</cell><cell>45.0</cell></row>
+      <row><cell>Comedy,Short</cell><cell>46.1</cell></row>
+      <row><cell>Crime,Drama,Thriller</cell><cell>47.2</cell></row>
+      <row><cell>Short</cell><cell>48.1</cell></row>
+      <row><cell>Drama,Short</cell><cell>49.1</cell></row>
+      <row><cell>Western</cell><cell>50.1</cell></row>
+      <row><cell>Documentary,Short</cell><cell>51.0</cell></row>
+    </tbody>
+  </tgroup>
+</table>
+    <p><xref ref="fig-moviepar"/> shows the corresponding cumulative distribution.</p>
 
     <figure xml:id="fig-moviepar">
       <image source="images/moviePar-1.png">
@@ -141,7 +172,7 @@
 
     <p>There were 22 individual genre descriptors that are each mentioned over 3000 times in the dataset.  This excludes films with no description, Adult films, Film Noir, and four other minor categories.  Film Noir is a well-known term referring to cynical crime dramas filmed in black and white, but has not been used by IMDb for any film made after 1958.  The last Film Noir listed is the famous Orson Welles film <q>Touch of Evil</q>.</p>
 
-    <p>Another version of the dataset has been constructed with up to 3 records per film, listing the genres separately in the same column.  This allows grouping by genre, but means that some films may appear in up to 3 groups.  Figure <xref ref="fig-moviegt"/> plots time series of the percentages of films for which three particular genre descriptors were used.  In the silent era the descriptor Comedy was used a lot, but there were far fewer films and they were shorter.  Romance had a peak when sound came in.  Drama has been used the most for many years.  As on average around two descriptors were used for each film, the percentages for all would add up to about 200.</p>
+    <p>Another version of the dataset has been constructed with up to 3 records per film, listing the genres separately in the same column.  This allows grouping by genre, but means that some films may appear in up to 3 groups.  <xref ref="fig-moviegt"/> plots time series of the percentages of films for which three particular genre descriptors were used.  In the silent era the descriptor Comedy was used a lot, but there were far fewer films and they were shorter.  Romance had a peak when sound came in.  Drama has been used the most for many years.  As on average around two descriptors were used for each film, the percentages for all would add up to about 200.</p>
 
     <figure xml:id="fig-moviegt">
       <image source="images/movieGT-1.png">
@@ -150,7 +181,7 @@
       <caption><p>Percentages of films using the genre descriptors Drama, Comedy, Romance.</p></caption>
     </figure>
 
-    <p>Instead of calculating percentages on the total numbers of films, it could have been done on the total numbers of genre descriptors used.  As an alternative to percentages, the absolute numbers of films for which particular descriptors were used could be plotted, and this is done in Figure <xref ref="fig-moviegf"/> for the 22 main genres by year from 1901 to 2019.  The genres have been put into groups with roughly the same maximum number of films in a year.  Each group is plotted on a separate row with its own vertical scale, so that the top row has a range over ten times that of the bottom row.  Otherwise the Drama genre would determine the scale and the development over time of the other genres would hardly be visible.</p>
+    <p>Instead of calculating percentages on the total numbers of films, it could have been done on the total numbers of genre descriptors used.  As an alternative to percentages, the absolute numbers of films for which particular descriptors were used could be plotted, and this is done in <xref ref="fig-moviegf"/> for the 22 main genres by year from 1901 to 2019.  The genres have been put into groups with roughly the same maximum number of films in a year.  Each group is plotted on a separate row with its own vertical scale, so that the top row has a range over ten times that of the bottom row.  Otherwise the Drama genre would determine the scale and the development over time of the other genres would hardly be visible.</p>
 
     <p>Drama is the genre listed most often, whether alone or as one of two or one of three descriptors, and its number increased steadily until around the year 2000, when the increase became much more rapid.  The Comedy genre followed a related pattern, but with a slower increase since 2000.  Of the four genres in the second row, Action and Thriller rose earlier, and Horror even fell in the 1990s, while Documentary only took off after 2000.  All four are at about the same annual level in 2019.  In the third row, the peak in Romance films after sound films began stands out.  A related feature can be seen in the fourth row, where both the Family and Animation genres had peaks across the 1930s and 1940s.  The numbers for the genres in the fifth and final row are lower.  There were more musicals made shortly after sound was introduced than at any time afterwards.  War films peaked in World War II and Westerns had their last peak in the 1960s.</p>
 
@@ -170,7 +201,7 @@
     <title>Comparing Raging Bull with Jane Austen</title>
     <p>Every IMDb webpage for a film includes a barchart of individual ratings received by a film and average ratings and numbers of votes by sex and four age groups.  Around 30% of users do not report their own sex and age.  It is not known how reliable the information from the other 70% might be.</p>
 
-    <p>Two films were chosen that would have different user responses, <q>Raging Bull</q>, the Robert De Niro boxing picture about Jake LaMotta, and <q>Sense and Sensibility</q>, the Emma Thompson version of Jane Austen's novel.  Figure <xref ref="fig-rbjab"/> shows barcharts of the rating distributions.  The vertical scales are quite different, as there were around 115,000 ratings of <q>Sense and Sensibility</q> and just over three times as many of <q>Raging Bull</q>.  The patterns are fairly similar, very few poor ratings and the most popular rating being 8 out of 10.</p>
+    <p>Two films were chosen that would have different user responses, <q>Raging Bull</q>, the Robert De Niro boxing picture about Jake LaMotta, and <q>Sense and Sensibility</q>, the Emma Thompson version of Jane Austen's novel.  <xref ref="fig-rbjab"/> shows barcharts of the rating distributions.  The vertical scales are quite different, as there were around 115,000 ratings of <q>Sense and Sensibility</q> and just over three times as many of <q>Raging Bull</q>.  The patterns are fairly similar, very few poor ratings and the most popular rating being 8 out of 10.</p>
 
     <figure xml:id="fig-rbjab">
       <image source="images/RBjaB-1.png">
@@ -179,7 +210,7 @@
       <caption><p>User ratings of two films.</p></caption>
     </figure>
 
-    <p>Only average ratings are available for the demographic groups, but the number of users in each group is given.  Figure <xref ref="fig-rbjap"/> uses a bubble chart to show the results.</p>
+    <p>Only average ratings are available for the demographic groups, but the number of users in each group is given.  <xref ref="fig-rbjap"/> uses a bubble chart to show the results.</p>
 
     <figure xml:id="fig-rbjap">
       <image source="images/RBjaP-1.png">
@@ -200,10 +231,10 @@
 
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Data heaping is visible in histograms when the binwidth is equal to the data resolution. (Figure <xref ref="fig-movierunh"/>)</p></li>
-      <li><p>Alpha transparency shows where the data are in scatterplots. (Figure <xref ref="fig-movieruny"/>)</p></li>
-      <li><p>Faceting emphasises distinctive features of groups. (Figures <xref ref="fig-moviett2"/> and <xref ref="fig-moviegf"/>)</p></li>
-      <li><p>Scatterplots can display many different kinds of information. (Figure <xref ref="fig-movievr"/>)</p></li>
+      <li><p>Data heaping is visible in histograms when the binwidth is equal to the data resolution. (<xref ref="fig-movierunh"/>)</p></li>
+      <li><p>Alpha transparency shows where the data are in scatterplots. (<xref ref="fig-movieruny"/>)</p></li>
+      <li><p>Faceting emphasises distinctive features of groups. (<xref ref="fig-moviett2"/> and <xref ref="fig-moviegf"/>)</p></li>
+      <li><p>Scatterplots can display many different kinds of information. (<xref ref="fig-movievr"/>)</p></li>
     </ul>
   </section>
 </chapter>
