@@ -1,5 +1,95 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-light-speed">
-  <title>Light Speed</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Measuring the speed of light</title>
+
+  <introduction>
+    <p><q>Time flies. You can't. They fly too fast.</q> (Children's word puzzle)</p>
+    <p><em>Background.</em> The speed of light is a central physical constant. Several complex experiments were carried out in the second half of the nineteenth century to measure it, including Michelson's 100 measurements in 1879 and Newcomb's measurements from 1882.</p>
+    <p><em>Questions.</em> Are the estimates close to today's value? How did Michelson's and Newcomb's estimates compare? Can the results be treated as independent random samples?</p>
+    <p><em>Sources.</em> Michelson's 1880 report and Newcomb's 1891 paper.</p>
+    <p><em>Structure.</em> Michelson's 1879 data include date, time of day, temperature, and speed estimate. Newcomb's 1882 data include date, observation weights, observer name, and speed estimate.</p>
+  </introduction>
+
+  <section xml:id="sec-lightspeed-michelson">
+    <title>Michelson, the Master of Light, and his data</title>
+    <p>Michelson's 1879 data are frequently analyzed under simplified assumptions. A common convenience split into five sets of 20 observations does not reflect how measurements were actually scheduled. Dates and times in the original source show irregular spacing and differing day-level workloads.</p>
+
+    <figure xml:id="fig-ptmich">
+      <caption>Measurements of the speed of light in air by Michelson by date and time with dotted lines drawn to separate Stigler's artificial groupings. There is a limited amount of overplotting due to exact equality of measurements close together in time.</caption>
+      <image source="images/ptmich-1.png"/>
+    </figure>
+
+    <p>Michelson converted his average estimate from air to vacuum speed by adjustment for temperature and refraction. Relative to a transformed modern reference value in air, nearly all of Michelson's individual measurements are high.</p>
+
+    <figure xml:id="fig-micht">
+      <caption>Michelson's estimates of the speed of light in air by temperature, coloured by time of day.</caption>
+      <image source="images/michT-1.png"/>
+    </figure>
+
+    <p>Temperature varied substantially across experiments, but visual evidence suggests only a modest effect, consistent with Michelson's small temperature correction magnitude.</p>
+  </section>
+
+  <section xml:id="sec-lightspeed-newcomb">
+    <title>Newcomb, self-educated polymath, and his data</title>
+    <p>Newcomb ran multiple series and argued that his 1882 series should be decisive. The 1882 data include 66 timings over a fixed path length, from which speed estimates can be derived. The distribution shows one extreme and one moderate high-value case often discussed as outliers.</p>
+
+    <figure xml:id="fig-histnewcx">
+      <caption>Histogram of measurements of the speed of light by Newcomb.</caption>
+      <image source="images/histnewcX-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-boxnewcx">
+      <caption>Boxplot of measurements of the speed of light by Newcomb.</caption>
+      <image source="images/boxnewcX-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-densnewcx">
+      <caption>Density estimate of measurements of the speed of light by Newcomb excluding an outlier.</caption>
+      <image source="images/densnewcX-1.png"/>
+    </figure>
+
+    <p>Ordering by experiment sequence and then by actual dates adds context not visible in summary displays. Some values that appear isolated in one view are less unusual when embedded in local temporal clusters.</p>
+
+    <figure xml:id="fig-newct1x">
+      <caption>Measurements of the speed of light by Newcomb displayed in the order the experiments were carried out.</caption>
+      <image source="images/newct1X-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-newct2x">
+      <caption>Measurements of the speed of light by Newcomb in 1882 displayed by date, coloured by observer.</caption>
+      <image source="images/newct2X-1.png"/>
+    </figure>
+
+    <p>Newcomb also assigned quality weights, with one case weighted zero (the extreme outlier) and only one case weighted at the maximum.</p>
+
+    <figure xml:id="fig-newcwx">
+      <caption>Weights assigned to each observation by Newcomb.</caption>
+      <image source="images/newcwX-1.png"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-lightspeed-compare">
+    <title>Comparing the data of Michelson and Newcomb</title>
+    <p>Both scientists measured speed in air and converted final averages to vacuum speed using similar corrections. For direct comparison, speeds in air can be contrasted (excluding Newcomb's most extreme outlier).</p>
+
+    <figure xml:id="fig-michnew">
+      <caption>Boxplots and dotplots of estimates of the speed of light in air by Michelson in 1879 and by Newcomb in 1882 with the transformed value of today marked by a dashed blue line.</caption>
+      <image source="images/michnew-1.png"/>
+    </figure>
+
+    <p>Newcomb's estimates are generally closer to today's value than Michelson's. Later Michelson work with improved methods moved much closer to the modern accepted constant.</p>
+    <p>Reported uncertainty intervals in historical physical-constant studies often understate total uncertainty because systematic error can exceed random error.</p>
+  </section>
+
+  <section xml:id="sec-lightspeed-discussion">
+    <title>Discussion</title>
+    <p><em>Answers.</em> Newcomb's estimates were closer to today's value than Michelson's. In both studies, treating observations as independent random samples is only an approximation.</p>
+    <p><em>Further questions.</em> How have speed-of-light experiments evolved since Newcomb's era? How have estimates changed over time?</p>
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>Going back to original sources can reveal relevant information.</p></li>
+      <li><p>Graphics are useful for identifying outliers.</p></li>
+      <li><p>There is no one best display: different graphics offer alternative views.</p></li>
+    </ul>
+  </section>
 </chapter>
