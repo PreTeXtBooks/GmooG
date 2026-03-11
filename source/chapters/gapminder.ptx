@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-gapminder">
   <title>Graphics and Gapminder</title>
-
+  <introduction>
   <blockquote>
     <p>"The world cannot be understood without numbers. But the world cannot be understood with numbers alone."</p>
     <p>--- Hans Rosling</p>
@@ -12,6 +12,7 @@
   <p><em>Sources</em> Gapminder website (@rosling:2013)</p>
   <p><em>Structure</em> Life expectancy estimates for 187 countries from 1800 to 2016. There are also forecasts up to 2100 giving 301 data points per country in all.</p>
 
+  </introduction>
   <section xml:id="sec-gapm1">
     <title>Gapminder and Hans Rosling</title>
 
