@@ -130,14 +130,11 @@
  The top 20 combinations of up to three genre descriptors with cumulative percentages were:</p>
 
 <table>
-  <tgroup cols="2">
-    <thead>
-      <row>
+      <tabular>
+        <row header="yes">
         <cell>genres</cell>
         <cell>cumPerc</cell>
-      </row>
-    </thead>
-    <tbody>
+        </row>
       <row><cell>Drama</cell><cell>11.9</cell></row>
       <row><cell>Comedy</cell><cell>18.8</cell></row>
       <row><cell>Documentary</cell><cell>22.8</cell></row>
@@ -158,8 +155,7 @@
       <row><cell>Drama,Short</cell><cell>49.1</cell></row>
       <row><cell>Western</cell><cell>50.1</cell></row>
       <row><cell>Documentary,Short</cell><cell>51.0</cell></row>
-    </tbody>
-  </tgroup>
+    </tabular>
 </table>
     <p><xref ref="fig-moviepar"/> shows the corresponding cumulative distribution.</p>
 
