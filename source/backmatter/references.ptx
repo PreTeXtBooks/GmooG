@@ -206,4 +206,31 @@
 
   <!-- singervine:2020 -->
   <biblio xml:id="singervine-2020" type="raw">Singer-Vine, Jeremy. Data is Plural. <url href="https://tinyletter.com/data-is-plural"/>. 2020.</biblio>
+
+  <!-- amal:2022 -->
+  <biblio xml:id="amal-2022" type="raw">Amaliah, Dewi, Cook, Dianne, Tanaka, Emi, Hyde, Kate, and Tierney, Nicholas. A Journey from Wild to Textbook Data to Reproducibly Refresh the Wages Data from the National Longitudinal Survey of Youth Database. arXiv, 2022. <url href="https://arxiv.org/abs/2205.06417"/></biblio>
+
+  <!-- zeil:2020 -->
+  <biblio xml:id="zeil-2020" type="raw">Zeileis, Achim, Fisher, Jason, Hornik, Kurt, Ihaka, Ross, McWhite, Claire, Murrell, Paul, Stauffer, Reto, and Wilke, Claus. colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes. <em>Journal of Statistical Software</em>, 96(1), 2020.</biblio>
+
+  <!-- mohammad:2011 -->
+  <biblio xml:id="mohammad-2011" type="raw">Mohammad, Saif. Colourful Language: Measuring Word-Colour Associations. In <em>CMCL@ACL</em>, 2011.</biblio>
+
+  <!-- mccand:2022 -->
+  <biblio xml:id="mccand-2022" type="raw">McCandless, David. Colours in Culture. <url href="https://www.informationisbeautiful.net/visualizations/colours-in-cultures/"/>. 2022.</biblio>
+
+  <!-- stclair:2016 -->
+  <biblio xml:id="stclair-2016" type="raw">St Clair, Kassia. <pubtitle>The Secret Lives of Colour</pubtitle>. John Murray, London, 2016.</biblio>
+
+  <!-- gabelica:2022 -->
+  <biblio xml:id="gabelica-2022" type="raw">Gabelica, Mirko, Bojčić, Ružica, and Puljak, Livia. Many researchers were not compliant with their published data sharing statement: mixed-methods study. <em>Journal of Clinical Epidemiology</em>, 2022.</biblio>
+
+  <!-- newcomb:1891 -->
+  <biblio xml:id="newcomb-1891" type="raw">Newcomb, Simon. Measures of the velocity of light made under the direction of the Secretary of the Navy during the years 1880&#8211;1882. <em>Astronomical Papers</em>, 2:107&#8211;230, 1891.</biblio>
+
+  <!-- bivand:2020 -->
+  <biblio xml:id="bivand-2020" type="raw">Bivand, Roger. Why have CRS, projections and transformations changed? 2020. <url href="https://rgdal.r-forge.r-project.org/articles/CRS_projections_transformations.html"/></biblio>
+
+  <!-- IAAF:2001 -->
+  <biblio xml:id="IAAF-2001" type="raw">IAAF. <pubtitle>Scoring Tables for Combined Events</pubtitle>. IAAF, Monaco, 2001.</biblio>
 </references>
