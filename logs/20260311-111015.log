@@ -1,0 +1,37 @@
+INFO    : Building target html
+INFO    : XSL conversion of /home/runner/work/GmooG/GmooG/source/main.ptx by /home/runner/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/runner/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/runner/work/GmooG/GmooG/output/html.
+INFO    : discovering source file's directory name: /home/runner/work/GmooG/GmooG/source
+INFO    : verifying and expanding input directory: /home/runner/work/GmooG/GmooG/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/runner/work/GmooG/GmooG/generated-assets
+INFO    : verifying and expanding input directory: /home/runner/work/GmooG/GmooG/source/../assets
+INFO    : input directory expanded to absolute path: /home/runner/work/GmooG/GmooG/assets
+INFO    : discovering source file's directory name: /home/runner/work/GmooG/GmooG/source
+INFO    : XSL conversion of /home/runner/work/GmooG/GmooG/source/main.ptx by /home/runner/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/runner/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+WARNING : Could not download rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.  Using cached version instead.
+INFO    : Runestone Services via online CDN query: version 7.11.9
+INFO    : Downloading Runestone Services, version 7.11.9
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting /home/runner/work/GmooG/GmooG/source/main.ptx to HTML in /tmp/ptx-r_vd2gdb
+INFO    : XSL conversion of /home/runner/work/GmooG/GmooG/source/main.ptx by /home/runner/.ptx/2.36.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located within: "sec-finch-islands" (xml:id), "Do species vary across the Galapagos islands?" (title)
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /home/runner/.ptx/2.36.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /tmp/ptx-r_vd2gdb
+INFO    : Removing temporary directory /tmp/ptx-z8793myb
+INFO    : 
+Finished build for target html. Run `pretext view html` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

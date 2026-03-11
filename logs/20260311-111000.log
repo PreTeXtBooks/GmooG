@@ -1,0 +1,26 @@
+INFO    : Building target html
+INFO    : XSL conversion of /home/runner/work/GmooG/GmooG/source/main.ptx by /home/runner/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/runner/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/runner/work/GmooG/GmooG/output/html.
+INFO    : discovering source file's directory name: /home/runner/work/GmooG/GmooG/source
+INFO    : verifying and expanding input directory: /home/runner/work/GmooG/GmooG/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/runner/work/GmooG/GmooG/generated-assets
+INFO    : verifying and expanding input directory: /home/runner/work/GmooG/GmooG/source/../assets
+INFO    : input directory expanded to absolute path: /home/runner/work/GmooG/GmooG/assets
+INFO    : discovering source file's directory name: /home/runner/work/GmooG/GmooG/source
+INFO    : XSL conversion of /home/runner/work/GmooG/GmooG/source/main.ptx by /home/runner/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/runner/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+WARNING : Could not download rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.  Using cached version instead.
+CRITICAL: cannot access local variable 'services_xml' where it is not associated with a value
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------
