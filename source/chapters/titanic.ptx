@@ -18,7 +18,7 @@
       <em>Questions.</em> Who travelled on the Titanic? Did women and children have better chances of surviving?
       What about the crew? Why did so many die?
     </p>
-    <p><em>Sources.</em> Encyclopedia Titanica (@titanic:2021)</p>
+    <p><em>Sources.</em> Encyclopedia Titanica (<xref ref="titanic-2021"/>)</p>
     <p><em>Structure.</em> 2208 cases with 16 variables.</p>
   </introduction>
 
@@ -34,7 +34,7 @@
       There are many datasets in circulation offering summary information on the Titanic, around fifteen or so in R
       and its packages. Some have more data, some less, some use different variable names&#8212;it can be confusing.
       Continuing effort by Titanic researchers has unearthed more detail and there are now lists of those on board
-      available at Encyclopedia Titanica (@titanic:2021) giving full names and ages, as well as sex and passenger
+      available at Encyclopedia Titanica (<xref ref="titanic-2021"/>) giving full names and ages, as well as sex and passenger
       class or crew department. Information on fares is also given, but is incomplete. The dataset used here only
       includes passengers and crew who sailed for America.
     </p>
