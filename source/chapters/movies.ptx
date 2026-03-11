@@ -220,16 +220,16 @@
     </figure>
 
     <p>Few rating these films reported their age as under 18, so this age group has been left out.  A lot more men (around 230,000) than women (about 21,600) rated <q>Raging Bull</q> and the men rated the film more highly than the women on average.  More women (over 45,000) than men (about 38,800) rated <q>Sense and Sensibility</q>.  This is unusual on IMDb, as usually more men rate a film.  The women rated <q>Sense and Sensibility</q> more highly than the men on average.</p>
-  </section>
-
-  <section xml:id="sec-movies-discussion">
-    <title>Discussion</title>
+  
     <p><em>Answers.</em> There are a very few extraordinarily long films, but most are less than 3 hours.  Many have rounded runtimes, especially 90 minutes.  Runtimes have not changed much over the last 50 years.</p>
     <p>Most films get an average rating of between 5 and 7.5 out of 10.  Apart from a few films that are relatively rarely rated, the top-rated films have an average of just over 9.  Some of the most highly rated films have been rated over 1,000,000 times.</p>
     <p>The number of films produced in the last 20 years has increased sharply for most genres, at least for the films in the IMDb database.  War films, Westerns, and Musicals have not.</p>
     <p><em>Further questions.</em> How do ratings and numbers of votes change over time?  How do ratings vary by age and sex?  Are films from different countries rated differently?</p>
 
-    <p><em>Graphical takeaways.</em></p>
+  </section>
+
+  <section xml:id="sec-movies-discussion">
+    <title>Graphical takeaways</title>
     <ul>
       <li><p>Data heaping is visible in histograms when the binwidth is equal to the data resolution. (<xref ref="fig-movierunh"/>)</p></li>
       <li><p>Alpha transparency shows where the data are in scatterplots. (<xref ref="fig-movieruny"/>)</p></li>
