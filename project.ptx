@@ -1,40 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  This file contains project-level configuration for the PreTeXt-CLI.
-  It specifies targets for building the book in different formats.
+    This file provides the overall configuration for your PreTeXt
+    project. To edit the content of your document, open `source/main.ptx`
+    (default location).
 -->
-<project ptx-version="2">
+<project ptx-version="2" source="source" publication="publication" output-dir="output">
   <targets>
-    <!-- HTML target for web viewing -->
-    <target name="web">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <publication>source/publication/publication.ptx</publication>
-      <output-dir>output/web</output-dir>
-      <stringparam key="html.css.extra" value="custom-styles.css"/>
-    </target>
-    
-    <!-- PDF target via LaTeX -->
-    <target name="print">
-      <format>pdf</format>
-      <source>source/main.ptx</source>
-      <publication>source/publication/publication.ptx</publication>
-      <output-dir>output/print</output-dir>
-    </target>
-    
-    <!-- EPUB target for e-readers -->
-    <target name="epub">
-      <format>epub</format>
-      <source>source/main.ptx</source>
-      <publication>source/publication/publication.ptx</publication>
-      <output-dir>output/epub</output-dir>
-    </target>
+    <target name="html" format="html" />
+    <target name="pdf" format="pdf" />
+    <target name="web" format="html" deploy="yes" />
   </targets>
-  
-  <executables>
-    <!-- Specify paths to executables if needed, otherwise use system defaults -->
-    <!-- <latex>latex</latex> -->
-    <!-- <pdflatex>pdflatex</pdflatex> -->
-    <!-- <xelatex>xelatex</xelatex> -->
-  </executables>
 </project>
