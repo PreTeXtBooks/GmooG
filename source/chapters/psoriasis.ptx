@@ -1,5 +1,114 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-psoriasis">
-  <title>Psoriasis</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Psoriasis and the Quality of Life</title>
+
+  <introduction>
+    <blockquote>
+      <p>"The most important practical lesson that can be given to nurses is to teach them what to observe."</p>
+      <p>--- Florence Nightingale</p>
+    </blockquote>
+    <p>
+      Psoriasis is an unpleasant skin condition with no known cure. The data discussed here come from a phase 3
+      clinical trial of a possible treatment.
+    </p>
+    <p><em>Questions.</em> Is the treatment better than placebo? Does it show better results on all criteria?</p>
+    <p><em>Sources.</em> Wonderful Wednesdays data release by the Statisticians in the Pharmaceutical Industry group.</p>
+    <p>
+      <em>Structure.</em> Each of 450 patients has two records: quality-of-life assessment at the beginning of the
+      study and again at the end.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-psoriasis-groups">
+    <title>Comparing treatment and placebo groups</title>
+
+    <p>
+      The trial included 300 patients in treatment and 150 in placebo. PASI (Psoriasis Area and Severity Index)
+      was assessed at baseline. The DLQI questionnaire (Dermatology Life Quality Index) was administered at baseline
+      and again after 16 weeks for almost all participants.
+    </p>
+    <p>
+      The questionnaire has ten items, each scored 0 to 3, with 0 indicating no impact on quality of life and 3
+      indicating maximum impact.
+    </p>
+
+    <figure xml:id="fig-qlens">
+      <image source="images/qlEns-1.png"/>
+      <caption>
+        <p>
+          The spineplot (top left) shows treatment was much larger than placebo and dropout was small in both
+          groups. The baseline PASI-DLQI scatterplots (top right) show similar initial distributions. The lower
+          panel shows average item scores: both groups start similarly, placebo changes little at week 16, and the
+          treatment group improves substantially across all questions.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Inclusion criteria required a PASI baseline at or above a threshold; in this dataset the minimum is 12.
+      Only one participant had a baseline score above 50 (the scale maximum is 72).
+    </p>
+    <p>
+      Several DLQI items had higher average baseline burden than others, especially itch/pain, embarrassment,
+      and influence on clothing.
+    </p>
+  </section>
+
+  <section xml:id="sec-psoriasis-questions">
+    <title>Examining responses to individual questions</title>
+
+    <introduction>
+
+    <p>
+      Treatment improved averages on all questions, but these are ordered categorical responses and averaging is
+      only approximate, so individual question distributions are important.
+    </p>
+
+    <figure xml:id="fig-qlq1">
+      <image source="images/qlQ1-1.png"/>
+      <caption>
+        <p>
+          Distributions of answers to question 1 at the start of the trial (top) and at the end (bottom): quality
+          of life declines to the right.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      For question 1, placebo distributions are nearly unchanged, while the treatment distribution shifts left,
+      indicating broad improvement.
+    </p>
+    <p>
+      Group distributions do not show participant-level transitions directly.
+    </p>
+
+    <figure xml:id="fig-qlq1t">
+      <image source="images/qlQ1t-1.png"/>
+      <caption>
+        <p>Answers to question 1 at the start of the trial (rows) and at the end (columns within the groups).</p>
+      </caption>
+    </figure>
+
+    <p>
+      Participant-level transitions show that among those starting at severe response levels, most treatment
+      participants move to lower scores by week 16, while placebo participants are concentrated in little-change
+      categories.
+    </p>
+    <p>
+      <em>Answers.</em> The treatment group reported better quality of life on all criteria on average. Deeper
+      analysis of question 1 showed that most individuals improved.
+    </p>
+    <p>
+      <em>Further questions.</em> Do other questionnaire items show patterns similar to question 1?
+    </p>
+    </introduction>
+
+    <subsection xml:id="sec-psoriasis-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Ensembles of graphics can summarise the main features of a study succinctly.</p></li>
+        <li><p>Plotting individual scores is more informative than plotting totals alone.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>
