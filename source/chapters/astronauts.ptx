@@ -1,5 +1,180 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-astronauts">
-  <title>Astronauts</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Who went up in space for how long?</title>
+
+  <introduction>
+    <blockquote>
+      <p>"The sky's the limit." (Idiom)</p>
+    </blockquote>
+    <p>
+      Human space travel has captured the world's attention since the first spaceflight by Yuri Gagarin in
+      April 1961.
+    </p>
+    <p>
+      <em>Questions.</em> How many men and women have gone up in space? How long were they in space?
+      Which countries did they come from?
+    </p>
+    <p><em>Sources.</em> Tidytuesday astronauts data.</p>
+    <p><em>Structure.</em> 1,277 records each of 24 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-astro-flights">
+    <title>What human spaceflights have there been?</title>
+
+    <p>
+      The Tidytuesday project includes a new dataset each week. The astronauts dataset uploaded in July 2020
+      contained information on manned spaceflights up to the end of 2019. Each flight by each person is a separate
+      record, making 1,277 in all. Several individuals flew more than once and there are 565 different people in
+      the dataset.
+    </p>
+    <p>
+      Human spaceflight may be defined as reaching beyond 100 km from Earth. The Challenger mission of 1986 that
+      ended in disaster did not get that far but is included in the dataset; the non-fatal Soyuz mission of
+      September 1983 that failed before launch is not included.
+    </p>
+
+    <figure xml:id="fig-asty">
+      <image source="images/asty-1.png"/>
+      <caption><p>Numbers of people by year of flight.</p></caption>
+    </figure>
+
+    <p>
+      There are sharp drops in participant numbers after the Soyuz 1 crash in 1967, after the Challenger disaster
+      in 1986, and after the Columbia disaster in 2003.
+    </p>
+
+    <figure xml:id="fig-astg">
+      <image source="images/astg-1.png"/>
+      <caption>
+        <p>Scatterplot of age by year of flight coloured by sex, with smooths and their confidence intervals.</p>
+      </caption>
+    </figure>
+
+    <p>
+      Early participants were male and younger than later participants. Females were fewer and on average younger
+      than males. The vertical scale extends high because of John Glenn's third spaceflight at age 77 in 1998.
+    </p>
+
+    <figure xml:id="fig-astb">
+      <image source="images/astb-1.png"/>
+      <caption><p>Numbers of participants by decade and by sex.</p></caption>
+    </figure>
+
+    <p>
+      Barcharts by decade and sex show the rarity of female flights in earlier decades and the high volume of
+      flights in the 1990s.
+    </p>
+  </section>
+
+  <section xml:id="sec-astro-mission-times">
+    <title>Mission times in space</title>
+
+    <p>
+      Mission length from launch to return is a key variable. Most flights were relatively short, especially in the
+      1960s. Later years contain many short flights as well as a group of long flights near six months, plus a few
+      very long missions approaching or exceeding a year.
+    </p>
+
+    <figure xml:id="fig-flightt">
+      <image source="images/flightt-1.png"/>
+      <caption><p>Scatterplot of mission time in hours by year of flight.</p></caption>
+    </figure>
+
+    <p>
+      A key explanatory factor is whether a mission visited a space station and, if so, which programme.
+      Long flights are associated with station missions.
+    </p>
+
+    <figure xml:id="fig-flighttc">
+      <image source="images/flighttc-1.png"/>
+      <caption><p>Mission time in hours by year of flight coloured by space station programme.</p></caption>
+    </figure>
+
+    <p>
+      The code used to build this display also uncovered typos in station names, including misspellings of
+      "Salyut". Minor typos can be irritating or misleading and are often discovered through visualization.
+    </p>
+  </section>
+
+  <section xml:id="sec-astro-log-times">
+    <title>Logging mission times</title>
+
+    <p>
+      Because short mission times dominate, a log transformation reveals more structure and helps with
+      interpretation.
+    </p>
+
+    <figure xml:id="fig-flighttl">
+      <image source="images/flighttl-1.png"/>
+      <caption><p>Scatterplot of log mission time by year of flight coloured by space station programme.</p></caption>
+    </figure>
+
+    <p>
+      On the log scale the short and long mission groups appear less variable, and the decline in shorter missions
+      after 2010 becomes clearer. A few extreme low values correspond to zero or near-zero recorded mission times,
+      including entries related to disasters and aborted flights, exposing inconsistencies in the data.
+    </p>
+
+    <p>
+      Nationality is another major factor. Forty nationalities appear, but U.S. and U.S.S.R./Russia dominate.
+      Faceting with ghosted background points helps compare groups while retaining overall context.
+    </p>
+
+    <figure xml:id="fig-flightn">
+      <image source="images/flightn-1.png"/>
+      <caption><p>Scatterplots of log mission time by year of flight by nationality.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-astro-checking-data">
+    <title>Checking the data with graphics</title>
+
+    <introduction>
+      <p>
+        Checking whether crew members on the same mission had matching times uncovered many inconsistencies.
+        Grouping by mission descriptors finds many matches but not all, because spelling, case, punctuation,
+        and coding differences are present.
+      </p>
+
+      <figure xml:id="fig-difs">
+        <image source="images/difs-1.png"/>
+        <caption><p>Boxplot of biggest differences in times for (possibly) the same missions.</p></caption>
+      </figure>
+
+      <p>
+        The largest discrepancies include implausibly different times for astronauts who should be on the same
+        mission. The dataset illustrates why data checking is essential and why plots are effective for finding
+        anomalies.
+      </p>
+      <p>
+        Ideally, all typos and errors should be corrected. Even the first row raises concerns about internal
+        consistency for Yuri Gagarin's mission coding.
+      </p>
+      <p>
+        Exact mission dates would add precision beyond mission year and are available from external sources.
+        Despite individual errors, the dataset still supports informative analysis.
+      </p>
+
+      <p>
+        <em>Answers.</em> Many more men than women have gone up in space and men have been older on average.
+        Early flights were short. Since space station programmes began, much longer stays became common.
+        Most participants were Russians or Americans, though this is changing.
+      </p>
+      <p>
+        <em>Further questions.</em> How many flights has each person made? Are there differences between
+        U.S.S.R./Russian and American participants?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-astro-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Graphics uncover typos, errors, and deeper data-quality issues.</p></li>
+        <li><p>Scatterplots are excellent but should be complemented when duplicate values overlap.</p></li>
+        <li><p>Keep colours consistent for the same categories and vary palettes for different groupings.</p></li>
+        <li><p>Log transformations help with skewed distributions when axis labels remain interpretable.</p></li>
+        <li><p>Faceting disentangles overlapping groups in scatterplots.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>
