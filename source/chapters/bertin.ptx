@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-bertin">
   <title>Re-viewing Bertin&#8217;s main example</title>
-
+  <introduction>
   <epigraph>
     <q>How can you govern a country which has two hundred and forty-six varieties of cheese?</q>
     <attribution>Charles de Gaulle</attribution>
   </epigraph>
 
-  <introduction>
     <p><em>Background.</em> The famous Semiology of Graphics book (<xref ref="bertin-2010"/>) includes analysis of a dataset on the structure of the French workforce by administrative region (d&#233;partement) in 1954.</p>
     <p><em>Questions.</em> How were the workers distributed across the departments?  Which sector of the workforce employed the most?  Were there geographic patterns?</p>
     <p><em>Sources.</em> The table in Bertin&#8217;s book for the data, areas of the departments from the <em>Guerry</em> package and Wikipedia, and the Institut G&#233;ographique National for the map.</p>
@@ -27,7 +26,7 @@
 
     <p>Dedicated Geographic Information System (GIS) software includes ways of dealing with enclaves, parts of one area completely enclosed by another.  This was not expected to be an issue, but surprisingly it turned out that five departments have enclaves, amongst them, most notably, the Enclaves des Papes in Dr&#244;me, which is actually part of the department of Vaucluse.  Discovering such tidbits of information is one of the serendipitous pleasures of Exploratory Data Analysis: you end up learning more than just about the data to hand.</p>
 
-    <p>Figure <xref ref="fig-Bertagp"/> shows the 90 departments of France in 1954 with those highlighted in which agricultural workers made up at least 40% of the workforce.  There is a fairly clear division into East and West, something that is described in French texts under the heading of the Le Havre-Marseille line.  The line may have declined in importance over the last thirty years, but in 1954 it was still relevant.</p>
+    <p><xref ref="fig-Bertagp"/> shows the 90 departments of France in 1954 with those highlighted in which agricultural workers made up at least 40% of the workforce.  There is a fairly clear division into East and West, something that is described in French texts under the heading of the Le Havre-Marseille line.  The line may have declined in importance over the last thirty years, but in 1954 it was still relevant.</p>
 
     <figure xml:id="fig-Bertagp">
       <image source="images/Bertagp-1.png">
@@ -61,7 +60,7 @@
 
     <p>Bertin was a cartographer and geographer and was concerned with the individual values for the departments.  The first eleven maps on pp. 116&#8211;117 are maps of France for each of the four variables (the three sectors and totals) in terms of the absolute values, the densities per unit area, and the sector percentages, with the department boundaries marked and the values written in.  Presenting individual department values is important, especially as French readers would want to know the value for their own department, but it does not show us how those individual values stand in relation to the distributions of all values.  For instance, Gironde had 115000 working in Agriculture, 107000 working in Industry, and 170000 working in Commerce.  It was 6th biggest in Agriculture with 70% of the highest value, 16th biggest in Industry with 19% of the highest value, and 8th biggest in Commerce with 18% of the highest value.</p>
 
-    <p>The sorted barcharts drawn by Bertin provide some distributional information in terms of rankings, although histograms are better for studying distributions and that is what statisticians would draw, as in Figure <xref ref="fig-Berthists"/>.  The three plots have been drawn with common scales to make them directly comparable.</p>
+    <p>The sorted barcharts drawn by Bertin provide some distributional information in terms of rankings, although histograms are better for studying distributions and that is what statisticians would draw, as in <xref ref="fig-Berthists"/>.  The three plots have been drawn with common scales to make them directly comparable.</p>
 
     <figure xml:id="fig-Berthists">
       <image source="images/Berthists-1.png">
@@ -72,7 +71,7 @@
 
     <p>The total numbers of workers in the three sectors are of the same order.  The distributions for both Industry and Commerce are highly skewed due to a handful of big values in both, primarily Paris and Seine.  The distribution of agricultural workers is less skewed.</p>
 
-    <p>Histograms of percentage shares of the sectors by department or of logged values of the sectors (to counteract the skewness) can provide some additional information, but scatterplots are more informative.  Figure <xref ref="fig-Bertscats"/> shows scatterplots for the three pairs of sector variables.  Each variable has been scaled individually.  In particular, the agricultural numbers are much smaller than the numbers in the other sectors.</p>
+    <p>Histograms of percentage shares of the sectors by department or of logged values of the sectors (to counteract the skewness) can provide some additional information, but scatterplots are more informative.  <xref ref="fig-Bertscats"/> shows scatterplots for the three pairs of sector variables.  Each variable has been scaled individually.  In particular, the agricultural numbers are much smaller than the numbers in the other sectors.</p>
 
     <figure xml:id="fig-Bertscats">
       <image source="images/Bertscats-1.png">
@@ -98,11 +97,11 @@
       <caption>Choropleth map of percentage of agricultural workers in France in 1954.</caption>
     </figure>
 
-    <p>In Friendly&#8217;s revisiting of Guerry&#8217;s work (<xref ref="friendly-2007"/>), he refers to a line across France from Saint-Malo in the North-West to the Swiss border at Geneva in the South-East, which divided France into &#8216;France obscure&#8217; (the uneducated South-West) and &#8216;France &#233;clair&#233;e&#8217; (the educated North-East).  This is a famous line in French historical geography, first suggested by Dupin in 1828.  Judging by the results of a recent Google query, it still attracts attention, although for different reasons.  Looking at Figure <xref ref="fig-BertLine"/>, there seems to be some evidence for a similar geographic division in the 1950s.</p>
+    <p>In Friendly&#8217;s revisiting of Guerry&#8217;s work (<xref ref="friendly-2007"/>), he refers to a line across France from Saint-Malo in the North-West to the Swiss border at Geneva in the South-East, which divided France into &#8216;France obscure&#8217; (the uneducated South-West) and &#8216;France &#233;clair&#233;e&#8217; (the educated North-East).  This is a famous line in French historical geography, first suggested by Dupin in 1828.  Judging by the results of a recent Google query, it still attracts attention, although for different reasons.  Looking at <xref ref="fig-BertLine"/>, there seems to be some evidence for a similar geographic division in the 1950s.</p>
 
     <p>Apparently, there is a further region called the Blue Banana, a European corridor of urbanisation, running from Northern Italy through Switzerland, Germany, the North Eastern departments of France, Belgium and Holland, finishing in a broad path across the South East and Midlands of England (<xref ref="wikip-2020"/>).  That would imply lower levels of agricultural workers as in the plot.</p>
 
-    <p>As the areas with the highest workforces in and around Paris can barely be seen in the maps, a cartogram might be drawn.  A cartogram redraws regions to match population size or another quantitative measure instead of geographic area.  The regions are drawn to minimise distortion, but this is difficult, especially when regions of large area have small populations and vice versa.  A number of algorithms have been proposed.  Figure <xref ref="fig-BertCart"/> has been drawn using a rubber sheet distortion algorithm and is based on the total working population for each department.</p>
+    <p>As the areas with the highest workforces in and around Paris can barely be seen in the maps, a cartogram might be drawn.  A cartogram redraws regions to match population size or another quantitative measure instead of geographic area.  The regions are drawn to minimise distortion, but this is difficult, especially when regions of large area have small populations and vice versa.  A number of algorithms have been proposed.  <xref ref="fig-BertCart"/> has been drawn using a rubber sheet distortion algorithm and is based on the total working population for each department.</p>
 
     <figure xml:id="fig-BertCart">
       <image source="images/BertCart-1.png">
@@ -117,7 +116,7 @@
   <section xml:id="secBertin5">
     <title>Density of the workforce by area</title>
 
-    <p>Bertin included four maps of the density of the workforce by area, thousands per square kilometre, on p. 117 of his book.  Every department has the relevant value written in, apart from Seine (covering Paris as well) for which the value is written at the top of each map, as the corresponding area is so small.  He does not discuss what might be seen in the data although there are some unusual features.  Choropleth maps for densities of the total working population, both including Paris and Seine and excluding them, are shown in Figure <xref ref="fig-Bertdens"/>.</p>
+    <p>Bertin included four maps of the density of the workforce by area, thousands per square kilometre, on p. 117 of his book.  Every department has the relevant value written in, apart from Seine (covering Paris as well) for which the value is written at the top of each map, as the corresponding area is so small.  He does not discuss what might be seen in the data although there are some unusual features.  Choropleth maps for densities of the total working population, both including Paris and Seine and excluding them, are shown in <xref ref="fig-Bertdens"/>.</p>
 
     <figure xml:id="fig-Bertdens">
       <image source="images/Bertdens-1.png">
@@ -128,7 +127,7 @@
 
     <p>The values for Paris and Seine for total density are so high that no differences can be seen amongst the other departments in the first map.  Looking closely it is just about possible to see that Paris is coloured dark red.  The map on the right has a completely different scale (by a factor of 100) and shows that some of the departments with the otherwise highest densities were on the western edge of Seine.  Despite the dramatic change in scale, many of the departments are still in the lowest grouping.</p>
 
-    <p>An alternative that avoids excluding departments is to use natural logarithms of population density.  Figure <xref ref="fig-BertdensL"/> shows two versions, one using a default colour scale and one using a more detailed one.  The first puts most of France in the same group, emphasising the three departments with lowest density in the South and Southeast and the few high density departments.  The second suggests a difference in population density between the West and the Centre, apart from the departments with very high or low levels.</p>
+    <p>An alternative that avoids excluding departments is to use natural logarithms of population density.  <xref ref="fig-BertdensL"/> shows two versions, one using a default colour scale and one using a more detailed one.  The first puts most of France in the same group, emphasising the three departments with lowest density in the South and Southeast and the few high density departments.  The second suggests a difference in population density between the West and the Centre, apart from the departments with very high or low levels.</p>
 
     <figure xml:id="fig-BertdensL">
       <image source="images/BertdensL-1.png">
@@ -149,9 +148,9 @@
     <p><em>Further questions.</em> How have the numbers changed since 1954?  Are there other sectors which have become important?</p>
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Graphics are for showing structure more than for providing exact individual values. (Figures <xref ref="fig-Bertagp"/> to <xref ref="fig-Bertdens"/>)</p></li>
-      <li><p>Scatterplots show associations between two variables. (Figure <xref ref="fig-Bertscats"/>)</p></li>
-      <li><p>Drawing graphics without outliers or extreme values creates space for showing the main structure of the data. (Figure <xref ref="fig-Bertdens"/>)</p></li>
+      <li><p>Graphics are for showing structure more than for providing exact individual values. (<xref ref="fig-Bertagp"/> to <xref ref="fig-Bertdens"/>)</p></li>
+      <li><p>Scatterplots show associations between two variables. (<xref ref="fig-Bertscats"/>)</p></li>
+      <li><p>Drawing graphics without outliers or extreme values creates space for showing the main structure of the data. (<xref ref="fig-Bertdens"/>)</p></li>
     </ul>
   </section>
 </chapter>
