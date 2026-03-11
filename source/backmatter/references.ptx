@@ -116,4 +116,16 @@
 
   <!-- PPV:2021 -->
   <biblio xml:id="PPV-2021" type="raw">Wikipedia. Positive and negative predicted values. <url href="https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values"/>. 2021.</biblio>
+
+  <!-- marbac:2016 -->
+  <biblio xml:id="marbac-2016" type="raw">Marbac, Matthieu, Biernacki, Christophe, and Vandewalle, Vincent. <pubtitle>CoModes</pubtitle>. R package version 1.0.0, 2016. <url href="https://rdrr.io/rforge/CoModes/man/"/></biblio>
+
+  <!-- lebret:2015 -->
+  <biblio xml:id="lebret-2015" type="raw">Lebret, R&#233;mi, Iovleff, Serge, Langrognet, Florent, Biernacki, Christophe, Celeux, Gilles, and Govaert, G&#233;rard. Rmixmod: The R Package of the Model-Based Unsupervised, Supervised, and Semi-Supervised Classification Mixmod Library. <em>Journal of Statistical Software</em>, 67(6):1&#8211;29, 2015.</biblio>
+
+  <!-- bouveyron:2019 -->
+  <biblio xml:id="bouveyron-2019" type="raw">Bouveyron, Charles, Celeux, Gilles, Murphy, Brendan, and Raftery, Adrian. <pubtitle>Model-Based Clustering and Classification for Data Science: With Applications in R</pubtitle>. Cambridge University Press, 2019.</biblio>
+
+  <!-- ebird:2022 -->
+  <biblio xml:id="ebird-2022" type="raw">Cornell Lab of Ornithology. eBird. <url href="https://ebird.org"/>. 2022.</biblio>
 </references>
