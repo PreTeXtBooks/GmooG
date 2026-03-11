@@ -110,4 +110,10 @@
 
   <!-- wickham:2019 -->
   <biblio xml:id="wickham-2019" type="raw">Wickham, Hadley. <pubtitle>tidyverse: Easily Install and Load the 'Tidyverse'</pubtitle>. R package version 1.3.0, 2019. <url href="https://CRAN.R-project.org/package=tidyverse"/></biblio>
+
+  <!-- buol:2018 -->
+  <biblio xml:id="buol-2018" type="raw">Buolamwini, Joy and Gebru, Timnit. Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification. <em>Proceedings of Machine Learning Research</em>, 81:1&#8211;15, 2018.</biblio>
+
+  <!-- PPV:2021 -->
+  <biblio xml:id="PPV-2021" type="raw">Wikipedia. Positive and negative predicted values. <url href="https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values"/>. 2021.</biblio>
 </references>

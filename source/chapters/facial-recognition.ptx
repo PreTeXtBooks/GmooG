@@ -8,17 +8,17 @@
       <p>--- Humphrey Bogart to Ingrid Bergman in <em>Casablanca</em></p>
     </blockquote>
     <p>
-      <em>Background.</em> A key study evaluated how three facial-recognition systems performed across people with
-      different skin shades.
+      <em>Background.</em> @buol:2018 is an important paper studying how well three facial recognition softwares
+      performed in identifying people with different skin shades.
     </p>
     <p>
-      <em>Questions.</em> How do error rates vary by sex and skin colour? Are the patterns similar across the three
-      software systems?
+      <em>Questions.</em> How do the error rates vary by sex and skin colour? Are the error rates and patterns
+      similar for the three softwares?
     </p>
-    <p><em>Sources.</em> Buolamwini and Gebru study data and results.</p>
+    <p><em>Sources.</em> @buol:2018</p>
     <p>
-      <em>Structure.</em> Prediction counts for three software systems across 1,270 individuals and six skin-shade
-      groups.
+      <em>Structure.</em> Prediction numbers for three software packages predicting for sex across 1270 individuals
+      with six different skin shades.
     </p>
   </introduction>
 
@@ -26,45 +26,72 @@
     <title>How well do the softwares do?</title>
 
     <p>
-      The study dataset was balanced by sex and skin type, and the task was binary sex classification from images.
-      Published results showed much higher error rates for dark-skinned females than for light-skinned males.
+      The authors introduced a new facial analysis dataset, balanced by sex and skin type, that they used to test
+      three commercial facial recognition software packages. The study task was to determine the sex of a person
+      from a photograph. Results were that there was a high predictive error rate (&gt; 34%) for dark-skinned
+      females and an almost negligible error rate for light-skinned males (&lt; 1%). The authors concluded that
+      this unsatisfactory and uneven performance was due to the training databases the software systems used.
     </p>
 
     <p>
-      Summary counts were reconstructed from published percentages under integer-count constraints.
+      The summary data were reconstructed from the published paper by assuming that each percentage reported had
+      to produce an integer number when combined with the relevant total.
     </p>
 
     <figure xml:id="fig-facebar">
-      <image source="images/faceBar-1.png"/>
+      <image source="images/faceBar-1.png">
+        <description>A barchart showing the numbers of individuals in each of 12 groups defined by sex (male and female) and six skin tone levels. Males are more numerous overall, mainly in the second and sixth skin tone groups.</description>
+      </image>
       <caption><p>Numbers of different skin tones in the dataset for both sexes.</p></caption>
     </figure>
 
     <p>
-      Group sizes are broadly similar, though males are more numerous overall, especially in selected skin-tone
-      groups.
+      Figure <xref ref="fig-facebar"/> is a barchart of the numbers in each of the 12 groups (6 skin tones for
+      each sex). The patterns are similar, but there are more males overall, mainly in the second and sixth skin
+      tone groups.
     </p>
 
     <figure xml:id="fig-faceh">
-      <image source="images/faceh-1.png"/>
+      <image source="images/faceh-1.png">
+        <description>Three doubledecker plots shown side by side, one for each of Microsoft, Face++, and IBM. Each plot displays error rates by sex and skin colour, with males on the left and females on the right, and skin colour getting darker from left to right within sex. Bar widths are proportional to group sizes.</description>
+      </image>
       <caption>
         <p>
-          Error rates by sex and skin colour for the three software systems, shown side by side.
-        </p>
-      </caption>
-    </figure>
-
-    <figure xml:id="fig-face3">
-      <image source="images/face3-1.png"/>
-      <caption>
-        <p>
-          Error rates by sex and skin colour for each software system, stacked vertically for detailed comparison.
+          Error rates by sex and skin colour for three software systems drawn side by side. In each plot males are
+          to the left, females to the right, and skin colour gets darker from left to right within sex. The width
+          of each bar is proportional to the size of the group it represents.
         </p>
       </caption>
     </figure>
 
     <p>
-      Error rates are generally low for males, higher for females, and rise with darker skin shades. Microsoft tends
-      to perform best of the three, though all systems show substantial weaknesses in the hardest groups.
+      Figure <xref ref="fig-faceh"/> shows the error rates by sex and skin shade (see article for details) for
+      each of the three software systems tested using doubledecker plots of error rates side by side. Microsoft
+      had mostly the lowest error rates---by quite a lot for the group where all software packages performed
+      worst, the darker females.
+    </p>
+
+    <figure xml:id="fig-face3">
+      <image source="images/face3-1.png">
+        <description>Three doubledecker plots stacked vertically, one for each of Microsoft, Face++, and IBM. Each plot displays error rates by sex and skin colour. Males are on the left, females on the right, and skin colour gets darker from left to right within sex. Bar widths are proportional to group sizes.</description>
+      </image>
+      <caption>
+        <p>
+          Error rates by sex and skin colour for three separate software systems. Males are on the left, females
+          on the right, and skin colour gets darker from left to right within sex. The width of each bar is
+          proportional to the size of the group it represents.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Figure <xref ref="fig-face3"/> draws the doubledecker plots above one another to show more detail and
+      provide a better comparison of the distributions of error rates across sex and skin tones. The error rates
+      were low for males and high for females, and they also increased as skin tone got darker. Microsoft mostly
+      did better than Face++ and did better than IBM across the board. Males were put on the left, so that the
+      error rates generally rose from left to right. The softwares were ordered from overall best to worst
+      performing from top to bottom---although none did particularly well. The group widths are the same for each
+      software as they are proportional to the group sizes for this criterion.
     </p>
   </section>
 
@@ -72,45 +99,61 @@
     <title>Are positive predictive values (PPV) a good criterion?</title>
 
     <p>
-      Many binary-performance criteria are possible. Because PPV values are often high, plotting FDR = (1 - PPV) can
-      be more informative.
+      There are many different possible measures for assessing binary predictions and the paper also uses PPV
+      (Positive Predictive Value). PPV is the number of true positives divided by the total number of positives.
+      Ideally the predictions for each case should be compared directly, but only summary information is available.
+    </p>
+
+    <p>
+      PPV values tend to be high. The graphics can look more informative if (1-PPV) = FDR (False Discovery Rate)
+      is plotted instead. FDRs for each combination of sex and skin shade for each software are shown in Figure
+      <xref ref="fig-facefdr"/>. Whereas the bar widths in Figures <xref ref="fig-face3"/> and
+      <xref ref="fig-faceh"/> were the same for each software, being proportional to the number of cases in that
+      group, this is no longer true here. The bar widths are proportional to the number of predictions of that
+      group and that may be different for the different software systems.
     </p>
 
     <figure xml:id="fig-facefdr">
-      <image source="images/faceFDR-1.png"/>
+      <image source="images/faceFDR-1.png">
+        <description>Three doubledecker plots stacked vertically showing False Discovery Rates (FDRs) by sex and skin colour for Microsoft, Face++, and IBM. Males are on the left, females on the right, skin colour gets darker from left to right within sex. Bar widths reflect prediction totals, which differ across software systems.</description>
+      </image>
       <caption>
         <p>
-          FDRs by sex and skin colour for three software systems, with males on the left and females on the right.
+          FDRs by sex and skin colour for three separate software systems. Males are on the left, females on the
+          right, and skin colour gets darker from left to right within sex.
         </p>
       </caption>
     </figure>
 
     <p>
-      The FDR display shows low overall rates but also important structural differences. Prediction totals by sex can
-      differ from study totals, and darker skin groups still show the highest rates.
+      Figure <xref ref="fig-facefdr"/> displays low rates, as in Figure <xref ref="fig-face3"/>, but there are
+      important differences. More men are predicted than there are men in the study, in particular by Face++. The
+      FDR values are mostly higher for males than females. These two conclusions are related. If you predict more
+      males, then you will make fewer mistakes with your predictions of females. The higher FDR rates are for skin
+      shades V and VI, the darkest ones.
     </p>
 
     <p>
-      Across multiple criteria, the same substantive conclusion remains: the systems perform unevenly and worst on
-      dark-skinned females.
+      There are a number of other criteria that could be plotted and it is astonishing just how many there are,
+      including TPR, TNR, FPR, FNR, SPC, ACC, FOR, DOR, NPV (@PPV:2021). The ones shown seem quite sufficient
+      and the error rates show clearly that the three software systems are not good enough. The analysis also
+      shows where their weaknesses lie, with the highest error rates being for dark-skinned females.
     </p>
 
-    <introduction>
-      <p>
-        <em>Answers.</em> All three software packages had higher error rates for females than for males, and error
-        rates rose as skin shade darkened.
-      </p>
-      <p>
-        <em>Further questions.</em> With individual-level records, it would be informative to compare system
-        predictions case by case rather than only in grouped summaries.
-      </p>
-    </introduction>
+    <p>
+      <em>Answers.</em> All three software packages had higher error rates for females than for males and error
+      rates rose as skin shade darkened.
+    </p>
+    <p>
+      <em>Further questions.</em> If the individual data were made available, it would be informative to compare
+      predictions across individuals and not just in summary.
+    </p>
 
     <subsection xml:id="sec-face-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Graphics communicate overall pattern differences more effectively than percentage tables.</p></li>
-        <li><p>Doubledecker plots show why error-rate comparisons can be clearer than PPV comparisons.</p></li>
+        <li><p>Graphics are better than tables of percentages for displaying overall results. (Figures <xref ref="fig-face3"/> and <xref ref="fig-faceh"/>)</p></li>
+        <li><p>Doubledecker plots underline why error rates can better be compared across softwares than Positive Predictive Values. (Figures <xref ref="fig-face3"/> and <xref ref="fig-facefdr"/>)</p></li>
       </ul>
     </subsection>
   </section>
