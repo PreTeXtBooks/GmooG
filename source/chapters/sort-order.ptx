@@ -5,14 +5,18 @@
   <introduction>
     <blockquote>
       <p>
-        "When Laura was here I had the records arranged alphabetically; before that I had them filed in
-        chronological order."
+        &#8220;When Laura was here I had the records arranged alphabetically; before that I had them filed in
+        chronological order. . . Tonight, though I fancy something different, so I try to remember the order I
+        bought them in:&#8221;
       </p>
-      <p>--- Nick Hornby, <em>High Fidelity</em></p>
+      <attribution>Rob in Nick Hornby&#8217;s <em>High Fidelity</em></attribution>
     </blockquote>
     <p>
-      Ordering ranks items by a criterion, sorting groups items (often with ordering inside groups), and arranging
-      includes broader layout choices that may include subjective judgement.
+      Ordering items means using a numeric or lexicographic criterion to rank them and having a rule for handling
+      ties. Sorting items places them in groups and may include ordering. Arranging items includes ordering and
+      sorting, but may involve using a subjective criterion. Flowers could be ordered by height or sorted by
+      colour. They might be arranged in quite different ways, depending on how well they then look to the person
+      arranging them.
     </p>
   </introduction>
 
@@ -22,48 +26,143 @@
     <subsection xml:id="sec-order-cases">
       <title>Cases</title>
       <p>
-        Case order influences readability, overlap, and interpretation. Useful orderings include temporal, grouped,
-        and multivariate sorts, with explicit handling of ties and unique IDs for reproducibility.
+        Datasets can be sorted and ordered in many ways. The cases in the <em>astronauts</em> dataset on space
+        travel (<xref ref="tidyt-2020b"/>) could be sorted into groups by nationality or sex. They could be
+        ordered by year of mission or by year of birth. They could be sorted and ordered by combinations of these
+        variables, for instance, by year of birth within nationality. Grouping and ordering datasets often reveals
+        structures that default orders&#8212;whether lexicographic, temporal or random&#8212;may not. Ordering and
+        sorting cases can be useful for checking extreme or special cases quickly. If some text has crept into a
+        numeric variable, sorting can often identify which values are in error.
+      </p>
+      <p>
+        For sortings or orderings of the <em>astronauts</em> dataset there can be ties, cases that have the same
+        values for the sorting variables, for example people born in the same year of the same nationality. These
+        cases may be ordered randomly amongst themselves or in their original order (whatever that was) or in some
+        other way. Ties would be much less likely if exact dates of birth and exact launch dates of missions were
+        used, although even then pairs like the identical Kelly twins, two Americans, might cause difficulties. To
+        ensure that a return to a particular ordering is always possible, it is essential to have a variable with a
+        unique value for every case, possibly an ID variable constructed for just this reason. Being able to return
+        to the initial order of a dataset is useful if something goes wrong (and something will).
+      </p>
+      <p>
+        The ordering of cases can affect printing if cases or lines overlap, as the dataset is printed in order.
+        The lines for the three football teams in a football chart were drawn in alphabetic order, first
+        Bournemouth, then Portsmouth, then Southampton, as can be seen by looking at where the lines cross. (The
+        lines for the other teams in the leagues, drawn in light grey in the background, were drawn in a background
+        layer first.) A plot compares calculated values of diamond depth with the values given in the dataset. The
+        data were ordered by the size of the absolute difference, so that the bigger differences, coloured red,
+        were plotted last and hence on top.
+      </p>
+      <p>
+        The Comrades Marathon chapter includes two plots of the performances of the Nurgalieva twins over the
+        years, Figure <xref ref="fig-comnurgx"/>. Elena ran every year from 2003 to 2015, while Olesya did not
+        run in 2006 and 2012. In the plots, the line for Olesya is drawn on top. This works if it is remembered
+        that Elena ran every year. If the line for Elena had been drawn on top, that would not have worked, even
+        for the zoomed plot on the right.
       </p>
 
       <figure xml:id="fig-comnurgx">
-        <image source="images/comNurgX-1.png"/>
-        <caption><p>Nurgalieva twins' marathon performances on two y-scales.</p></caption>
+        <image source="images/comNurgX-1.png">
+          <description>Two line plots of the Nurgalieva twins' Comrades Marathon performances over the years,
+          shown at two different y-axis scales. The line for Olesya is drawn on top of the line for Elena.</description>
+        </image>
+        <caption><p>Two plots of the Nurgalieva twins' performances in the Comrades Marathon. The plot on the
+        right is zoomed in. The line for Olesya is drawn on top.</p></caption>
       </figure>
     </subsection>
 
     <subsection xml:id="sec-order-categorical-levels">
       <title>Levels of categorical variables</title>
       <p>
-        Default alphabetical order is rarely optimal for interpretation. Reordering categories by chronology, size, or
-        other meaningful criteria often makes patterns much easier to detect.
+        Variables such as nationality and occupation each have two or more categories. If you draw up a summary
+        table of counts or draw barcharts of them, the categories are likely to be ordered alphabetically by
+        default. This has its advantages (it is easy to find a category in the table) and its disadvantages
+        (categories with names early in the alphabet get more attention, categories you would like to compare may
+        be far apart). Wainer calls this the &#8220;Alabama first&#8221; issue, as Alabama comes first
+        alphabetically amongst the US States (<xref ref="Wainer-1997"/>). Categories may be ordered by counts, by
+        weights, by proportions, by summary statistics on other variables. Comparisons for whatever statistic you
+        order by become easier. Bars far apart must be different and you can tell which bars that are close
+        together have higher or lower values by the order. More complex sortings, say countries within continents,
+        are possible too.
+      </p>
+      <p>
+        One example is the barchart of the numbers of passengers and crew who boarded the Titanic at the four
+        different ports. Figure <xref ref="fig-barboard"/> shows a plot with the default alphabetic ordering on
+        the left and the plot used in the Titanic chapter on the right, using the order the ship called at the
+        ports. The great majority, including many crew, joined in Southampton.
       </p>
 
       <figure xml:id="fig-barboard">
-        <image source="images/barBoard-1.png"/>
-        <caption><p>Titanic boarding ports in default versus journey order.</p></caption>
+        <image source="images/barBoard-1.png">
+          <description>Two barcharts side by side showing the number of Titanic passengers and crew who boarded
+          at each port. The left chart uses default alphabetic ordering of ports; the right chart orders ports
+          by the ship's actual itinerary, with Southampton having by far the largest bar.</description>
+        </image>
+        <caption><p>Barcharts of Titanic boarding numbers by port. Left: default alphabetic ordering. Right:
+        ports ordered by the ship's itinerary.</p></caption>
       </figure>
+
+      <p>
+        In the Gapminder analysis, there are two barcharts of the four regions, one for the number of countries
+        in each region and one for the total population, both ordered by bar heights. The two are shown again here
+        in Figure <xref ref="fig-reg4xy"/>. The first shows that Africa and Asia have more countries than Europe
+        or the Americas, while the second shows that Asia has more of the world's population than the other three
+        regions put together.
+      </p>
 
       <figure xml:id="fig-reg4xy">
-        <image source="images/reg4XY-1.png"/>
-        <caption><p>Gapminder regions by country count and by population.</p></caption>
+        <image source="images/reg4XY-1.png">
+          <description>Two barcharts of four world regions ordered by bar height. The left chart shows number of
+          countries, with Africa and Asia having the most. The right chart shows total population, with Asia
+          having more than the other three regions combined.</description>
+        </image>
+        <caption><p>Barcharts of the four Gapminder regions ordered by bar height. Left: number of countries in
+        each region. Right: total population of each region.</p></caption>
       </figure>
 
+      <p>
+        A common reason for reordering categories is to produce a recognisable and memorable pattern, for instance
+        steadily increasing or decreasing. A plot shows sales of station wagons and SUVs by year. The original
+        plot is on the right of Figure <xref ref="fig-swsuvx-2"/> and a plot using a default lexicographic
+        ordering of the vehicle types is on the left in Figure <xref ref="fig-swsuvx-1"/>.
+      </p>
+
       <figure xml:id="fig-swsuvx-1">
-        <image source="images/swSUVx-1.png"/>
-        <caption><p>Vehicle categories in default order.</p></caption>
+        <image source="images/swSUVx-1.png">
+          <description>A plot of station wagon and SUV sales by year with vehicle types in default lexicographic
+          order, making trends harder to follow.</description>
+        </image>
+        <caption><p>Station wagon and SUV sales by year with vehicle types in default lexicographic
+        ordering.</p></caption>
       </figure>
+
       <figure xml:id="fig-swsuvx-2">
-        <image source="images/swSUVx-2.png"/>
-        <caption><p>Vehicle categories in revised informative order.</p></caption>
+        <image source="images/swSUVx-2.png">
+          <description>A plot of station wagon and SUV sales by year with vehicle types in a purposeful order:
+          station wagons by increasing size first, then SUVs by type and drive, revealing clear trends.</description>
+        </image>
+        <caption><p>Station wagon and SUV sales by year with vehicle types in a purposeful ordering: station
+        wagons first by increasing size, then SUVs by type and drive.</p></caption>
       </figure>
+
+      <p>
+        The ordering chosen put the station wagons first and then the SUVs. Within the station wagon group, the
+        models were ordered by increasing size and earliest available production year. Within the SUV group, they
+        were ordered by type using earliest available production year and within that by 2WD and 4WD (two-wheel
+        and four-wheel drive). Multivariate ordering offers many different possibilities, especially when variables
+        are not nested within one another.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-order-variables">
       <title>Variables</title>
       <p>
-        Variable order in datasets and displays affects attention and interpretation. Grouping related variables and
-        placing key identifiers prominently improves workflow and plot decoding.
+        Datasets come with a particular order of variables. There might be an ID variable, some demographic or
+        structural variables, and then some measurements. All of these might be in a rational order, they might
+        not. Datasets with large numbers of variables are easier to handle if the variables are grouped and
+        ordered. The vehicles dataset made available by the US Department of Energy includes 83 pieces of
+        information on 43516 vehicles. The first 65 variables are labelled alphabetically, so that three defining
+        variables, <c>make</c>, <c>model</c>, and <c>year</c>, appear rather late and not together.
       </p>
     </subsection>
   </section>
@@ -74,66 +173,234 @@
     <subsection xml:id="sec-order-boxplots">
       <title>Boxplots</title>
       <p>
-        Boxplot group order can be based on medians, maxima, or external criteria; each supports different
-        comparisons. Changing event order can reveal distributional differences more clearly.
+        Boxplots by group are a space-efficient way of comparing distributions. The group ordering is sometimes
+        given (e.g., in a plot of carat by clarity from the <em>diamonds</em> dataset). If not, it is useful to
+        look at different orderings, possibly by a statistic of the individual boxplots (e.g., median or maximum)
+        or by using another dataset statistic associated with the group variable. In the Chess chapter the
+        rankings of chess players were displayed in boxplots for the countries with the most rated players, and
+        the countries were ordered by their median player rating. As with bars in barcharts, the ordering of the
+        boxplots will facilitate some paired comparisons more than others. The median ordering makes comparison of
+        the medians easy by definition. An ordering by, say, maxima, would favour that comparison.
+      </p>
+      <p>
+        Boxplots are handy for summarising decathlon data. Each competitor competes in ten track and field events.
+        The results are converted to a points system to make them comparable and the winner is the person with the
+        most points. Figure <xref ref="fig-decbox1"/> shows the points scores for the 116 top-ranked decathletes
+        in April 2021 (<xref ref="estDecath-2021"/>).
       </p>
 
       <figure xml:id="fig-decbox1">
-        <image source="images/decBox1-1.png"/>
-        <caption><p>Decathlon event-point boxplots in event order.</p></caption>
+        <image source="images/decBox1-1.png">
+          <description>Boxplots of points scored in each of the ten decathlon events by the top 116 ranked
+          decathletes. Long jump shows the highest median points and 1500 metres the lowest. The javelin has the
+          greatest spread and the 400 metres has three high outliers.</description>
+        </image>
+        <caption><p>Boxplots of points scored in each decathlon event for the 116 top-ranked decathletes in
+        April 2021.</p></caption>
       </figure>
+
+      <p>
+        It is striking that, although the points are supposed to be comparable, more are awarded for some events
+        than others. Long jump performances get the most points and performances in the 1500 metres the least.
+        The javelin appears to have the most variability and the 400 metres stands out in including three high
+        outliers. The 1500 metres is a special event for a number of reasons: it is a longer run than the other
+        three running events, requiring different abilities; it is the last event at the end of the second day,
+        so the athletes will be tired; the top decathletes in the competition after nine events run the 1500
+        metres together, so tactics may be more important than a fast time.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-order-facets">
       <title>Sorting into groups and faceting plots</title>
       <p>
-        Faceting combines grouping and arrangement; ordering facet panels and internal bars together can make
-        multilevel structure much more legible.
+        Faceting displays data subgroups in the same graphical form. The subgroups are defined by combinations of
+        variables. If the graphical form can be internally ordered (e.g., the bars in a barchart, the boxplots in
+        a group of boxplots or the dotplots in a dotplot figure) then you have what might be called zero order
+        faceting.
+      </p>
+      <p>
+        Sorting cases into groups is often carried out to display statistics, as was done in a plot grouping cases
+        by states (and grouping the states by region), or to draw summary plots as in a car efficiency plot
+        grouping cars by class, drive type, and petrol.
+      </p>
+      <p>
+        Sorting into groups was used in the Gapminder chapter to draw countries in the same region together, in
+        the Electric Cars chapter to keep charging stations at the same location together and to colour locations
+        by type, in the US Fuel chapter to put what were thought to be similarly sized cars together, in Figure
+        <xref ref="fig-khlvx"/>, to place events for the same swimming stroke together, and in the German
+        Election chapter to keep constituencies in the same Bundesland together and to display the spatial
+        distributions of seat wins for the individual parties.
       </p>
 
       <figure xml:id="fig-khlvx">
-        <image source="images/khLVX-1.png"/>
-        <caption><p>Katinka Hosszu event profile with events ordered by stroke and distance.</p></caption>
+        <image source="images/khLVX-1.png">
+          <description>A plot of Katinka Hossz&#250;'s swimming performances with events grouped by stroke
+          and ordered by distance within each stroke group.</description>
+        </image>
+        <caption><p>Katinka Hossz&#250;'s swimming event performances with events placed in groups by stroke
+        and ordered by distance within each group.</p></caption>
       </figure>
+
+      <p>
+        A UEFA EURO 2020 plot displays 24 barcharts, each with 17 bars. The facets are ordered by the percentage
+        of squad players playing in their own country. The bars themselves are ordered by the numbers of players
+        from a country's league playing in EURO2020, except for the &#8216;Other&#8217; category, which has been
+        placed last. The aims are to put countries close together that are similar in home percentage value and to
+        put leagues close together that have similar numbers at the tournament.
+      </p>
+      <p>
+        Another example of arranging facets is shown in an Olympic Games plot where the countries are put in order
+        of the first time they hosted the Olympic Games. This matches the aim of the graphic better than a default
+        alphabetic order.
+      </p>
+      <p>
+        Sorting into groups gets complicated when there are several grouping variables. Variables may be nested in
+        a hierarchy, such as constituencies within regions or they may have no such structure, such as type of
+        car, manufacturer, type of fuel. Groupings need to be found that reflect the aims of the study.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-order-mosaicplots">
       <title>Mosaicplots</title>
       <p>
-        Variable order and level order strongly affect mosaic interpretation. Choosing an ordering that supports the
-        story can convert a difficult display into an informative one.
+        Mosaicplots offer a variety of ways of displaying multivariate categorical data. Both the order of the
+        variables and the orders of the levels of the individual variables can have a big influence, as can the
+        choice of mosaicplot form and whether variables are plotted horizontally or vertically
+        (<xref ref="hofmann-2008"/>).
+      </p>
+      <p>
+        There are two mosaicplots in the Titanic chapter, shown again in Figure <xref ref="fig-titanboth"/>. In
+        the plot on the left the passenger classes have been drawn first in the natural order of first, second,
+        third (alphabetic in English, but not in all languages), followed by the crew departments ordered by
+        survival rates. This shows that survival rates declined by class and that the rates were lowest for the
+        crew&#8212;excepting the small group of deck crew who would have manned the lifeboats. In the second plot
+        on the right of only the passengers, sex has been drawn first with females to the left and males to the
+        right, and class has been ordered within sex. Placing females first and then males means that there is a
+        general decline in survival rate from left to right&#8212;apart from the low rate for males travelling
+        second class.
+      </p>
+      <p>
+        In both plots the numbers in each group are shown by the widths of the bars. This information can be seen
+        in many other plots. Here in the first plot it shows how small the two groups with differing survival
+        rates amongst the crew are. In the second one it reminds readers that there were more male than female
+        passengers and that the largest group was third class males.
       </p>
 
       <figure xml:id="fig-titanboth">
-        <image source="images/titanBoth-1.png"/>
-        <caption><p>Titanic survival mosaicplots with purposeful ordering choices.</p></caption>
+        <image source="images/titanBoth-1.png">
+          <description>Two Titanic survival mosaicplots side by side. The left plot includes all passengers and
+          crew with class and department ordered by survival rate. The right plot shows only passengers with sex
+          drawn first and class ordered within sex, showing a general decline in survival from left to
+          right.</description>
+        </image>
+        <caption><p>Two mosaicplots of Titanic survival with purposefully chosen orderings of variables and
+        category levels.</p></caption>
       </figure>
+
+      <p>
+        In the analysis of software for facial recognition the plots are all drawn with males first and then
+        females to emphasise the general error increase from left to right.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-order-pcp">
       <title>Parallel coordinate plots</title>
       <p>
-        PCP readability depends heavily on axis order, category order, case order, and overplot strategy. Reordering
-        can dramatically reduce crossings and reveal structure.
+        Parallel coordinate plots are drawn with one horizontal axis and many vertical axes, one for each variable
+        drawn. The ordering of the axes makes a major difference to what information can be seen. Orderings can be
+        based on a variety of variable statistics.
+      </p>
+      <p>
+        Returning to the effect of decathlon events not being scored comparably, consider the differences in
+        scores between competitors. Giving each competitor 50 points more in an event will not change overall
+        rankings at all. Figure <xref ref="fig-decranks"/> is a parallel coordinate plot of points given to the
+        top 79 ranked performances in the individual events with points for the 40th highest subtracted. Here the
+        ranked values are joined by lines, not the individual competitors.
       </p>
 
       <figure xml:id="fig-decranks">
-        <image source="images/decRanks-1.png"/>
-        <caption><p>Decathlon event-rank score profiles with events ordered by range.</p></caption>
+        <image source="images/decRanks-1.png">
+          <description>A parallel coordinate plot showing ranked decathlon event performances with points
+          adjusted by subtracting the 40th best performance in each event. Events are ordered by increasing
+          range. A brown horizontal line marks the zero level. There is greater variability above than below
+          the line.</description>
+        </image>
+        <caption><p>Parallel coordinate plot of the top 79 ranked performances in decathlon events, with the
+        40th highest score subtracted from each event. Events are ordered by increasing range.</p></caption>
       </figure>
+
+      <p>
+        The nth highest polyline connects the nth best performance in each event. Subtracting the same statistic
+        from the points score for each event makes the levels comparable while keeping the differences on the
+        same scale. The zero line equivalent to the 40th best performance has been coloured brown. There is bigger
+        variability above than below as the distributions are, of course, skewed. The events are not in the same
+        order as in Figure <xref ref="fig-decbox1"/>. They have been ordered by increasing range. The lines are
+        close to parallel for the first few events, implying similar distributions, including for the long jump
+        and the 1500 metres, the two most different events in terms of points awarded. The javelin has greater
+        variability, as observed already. The discrete nature of the high jump and pole vault points is because
+        the bars are set at certain fixed heights that competitors either clear or fail to clear.
+      </p>
+      <p>
+        Parallel coordinates are excellent for studying the data from individual decathlon performances too. Now
+        the polylines link performances of the same individual. The scales of the vertical axes are the same for
+        each event and the same as in Figure <xref ref="fig-decbox1"/>. The difference in Figure
+        <xref ref="fig-pcp1"/> is that the events are ordered by increasing median event points.
+      </p>
 
       <figure xml:id="fig-pcp1">
-        <image source="images/pcp1-1.png"/>
-        <caption><p>Decathlon competitor PCP with events ordered by median points.</p></caption>
+        <image source="images/pcp1-1.png">
+          <description>A parallel coordinate plot of individual decathlon competitors' performances with events
+          ordered by increasing median points. Four top decathletes are highlighted in different colours and
+          drawn on top of the other lines.</description>
+        </image>
+        <caption><p>Parallel coordinate plot of decathlon competitors' performance profiles with events ordered
+        by increasing median event points. The four best decathletes are highlighted.</p></caption>
       </figure>
 
+      <p>
+        The four best decathletes are listed in the legend in order of their total point scores. They have been
+        highlighted in different colours and drawn last so that their lines appear on top. Mayer, the world
+        record holder, is clearly better at the pole vault than the others highlighted. Eaton is strong in the
+        four running events, particularly the 100 and 400 metres, where he is best of all the decathletes in the
+        dataset. His weaknesses are the three throwing events.
+      </p>
+      <p>
+        So ordering is not only relevant for the variables in a parallel coordinate plot, it is advantageous for
+        ordering the cases when they are coloured by groups. The cases of most interest should always be drawn
+        last, so that their polylines appear on top of the others. There are many other options influencing how
+        parallel coordinate displays are drawn and all have to be considered together to get effective displays.
+        Using more displays reveals more information.
+      </p>
+      <p>
+        At a more complex level, generalised parallel coordinate plots that can handle both numeric and categorical
+        variables, are affected by several orderings: the order of the variable axes across the plot, the orders
+        of the levels of categorical variables, the orders of the cases within category levels, and the order of
+        the cases in the dataset (as this determines the order the lines are drawn). The ggpcp package offers
+        tools for including categorical variables in parallel coordinate plots (<xref ref="hofmann-2022"/>). Its
+        key innovations are to draw each case individually and to order the cases within categories. These reduce
+        the numbers of line crossings, make the display more readable, and make it possible to follow individual
+        cases across the display.
+      </p>
+      <p>
+        Figure <xref ref="fig-palpcps-1"/> and Figure <xref ref="fig-palpcps-2"/> show the Palmer Penguin
+        parallel coordinate plots. The reordered version on the right is easier to decode.
+      </p>
+
       <figure xml:id="fig-palpcps-1">
-        <image source="images/palpcps-1.png"/>
-        <caption><p>Palmer penguin PCP before reordering.</p></caption>
+        <image source="images/palpcps-1.png">
+          <description>A parallel coordinate plot of the Palmer Penguins dataset before reordering of
+          categorical levels, showing many crossing lines that are difficult to interpret.</description>
+        </image>
+        <caption><p>Palmer Penguin parallel coordinate plot before reordering of categorical levels.</p></caption>
       </figure>
+
       <figure xml:id="fig-palpcps-2">
-        <image source="images/palpcps-2.png"/>
-        <caption><p>Palmer penguin PCP after reordering.</p></caption>
+        <image source="images/palpcps-2.png">
+          <description>A parallel coordinate plot of the Palmer Penguins dataset after reordering of categorical
+          levels, with fewer line crossings and a clearer structure that is easier to decode.</description>
+        </image>
+        <caption><p>Palmer Penguin parallel coordinate plot after reordering of categorical levels, which is
+        easier to decode.</p></caption>
       </figure>
     </subsection>
   </section>
@@ -142,8 +409,21 @@
     <title>Numbers of orderings and sortings</title>
 
     <p>
-      Even modest categorical structures generate many possible orderings. There is rarely a single best ordering;
-      informative alternatives should be explored.
+      Often there are surprisingly many possible orderings. The basic Titanic dataset has 4 variables. The
+      <c>Survived</c> variable should doubtless always be the final variable, but the other three variables,
+      <c>Class</c>, <c>Age</c>, and <c>Sex</c> could be ordered in 3!=6 ways. The categories of the three
+      binary variables could each be ordered in 2 ways, making 8 in all. The four categories of <c>Class</c>
+      have a natural order, but could be reversed giving another two possibilities. Altogether that makes 96
+      orderings of variables and categories that might be considered.
+    </p>
+    <p>
+      The letters of the word &#8216;sorting&#8217; can be ordered themselves in 7! = 5040 ways, but only one
+      other makes a common word, &#8216;storing&#8217;. A random ordering would have little chance of making
+      sense, although some subsets of the letters, for instance &#8220;strong&#8221;, &#8220;ingots&#8221;,
+      &#8220;string&#8221; or &#8220;grist&#8221;, would. Sortings and orderings in graphics have a better
+      chance of conveying information, especially when guided by context and statistics. As always with graphics
+      there is unlikely to be an &#8216;optimal&#8217; solution, and so the task is more to find a set of
+      informative sortings and orderings.
     </p>
   </section>
 
@@ -151,22 +431,54 @@
     <title>Arranging graphics</title>
 
     <p>
-      Arrangement in ensembles and facets is itself an analytical decision. Panel order, axis alignment, and
-      consistent scaling all influence what comparisons are easy to make.
+      Ensembles of graphics are affected by how the individual graphics are arranged. Other arrangements might not
+      have fitted together as well or given a different impression. It is worth trying more than one, however
+      informative a first arrangement appears.
+    </p>
+    <p>
+      Small multiples, named and popularised in <xref ref="Tufte-1983"/>, are displays of many graphics of the
+      same type and may have a natural order. The boxplots of chess rankings by age in a chess figure are one
+      example. Often there will be no such natural order, for instance in ordering variables in a scatterplot
+      matrix. Grouping variables by type may be effective, as in the Diamonds chapter, where two scatterplot
+      matrices are drawn. The first one is for the three dimensions and carat and the second for carat and the
+      remaining three continuous variables. Ordering by statistics of various kinds can be informative, the best
+      strategy is to consider more than one ordering.
+    </p>
+    <p>
+      The arrangement of graphics in a faceted display is determined by the faceting variables chosen for the
+      rows and columns, their ordering within rows and within columns, and the ordering of their category levels.
+      This is apparent in Figure <xref ref="fig-puffmosx"/>, showing groups across four shearwater measurements.
+      The rows are arranged first by <c>border</c> and then by <c>undertail</c>, the columns are ordered by
+      <c>eyebrows</c>, and the order of each of those three variables has been specifically chosen. Other
+      orderings would have made it more difficult to interpret the structure.
     </p>
 
     <figure xml:id="fig-puffmosx">
-      <image source="images/puffmosX-1.png"/>
-      <caption><p>Faceted shearwater barcharts with deliberate facet ordering.</p></caption>
+      <image source="images/puffmosX-1.png">
+        <description>A faceted plot of shearwater bird measurements with rows arranged first by border and then
+        by undertail, and columns ordered by eyebrows. The deliberate facet ordering reveals structure in the
+        data that other orderings would obscure.</description>
+      </image>
+      <caption><p>Faceted barcharts of shearwater measurements. Rows are arranged by <c>border</c> and then
+      <c>undertail</c>; columns are ordered by <c>eyebrows</c>. The orderings were specifically chosen to
+      reveal structure.</p></caption>
     </figure>
+
+    <p>
+      The 22 facets of a film genre figure, showing numbers of films of different genres over the years, could
+      have been drawn all with the same vertical scale or all with individual vertical scales. It seems more
+      helpful to display them in rows with different vertical scales, but with the same scale across each row.
+    </p>
 
     <subsection xml:id="sec-order-main-points">
       <title>Main points</title>
       <ul>
-        <li><p>Cases, categorical levels, and variables can all be ordered and sorted.</p></li>
-        <li><p>Ordering strongly affects boxplots, facets, mosaicplots, and PCPs.</p></li>
-        <li><p>Meaningful orderings generally outperform default alphabetical order.</p></li>
-        <li><p>No single best ordering exists; alternatives can reveal different information.</p></li>
+        <li><p>Cases, categorical variable levels, variables can all be sorted and ordered.</p></li>
+        <li><p>The impact of boxplots, faceted plots, mosaicplots, and parallel coordinate plots is strongly
+        influenced by the orderings within the plots.</p></li>
+        <li><p>Ordering categories is better than leaving them in a default alphabetic order.</p></li>
+        <li><p>There are no best sortings and orderings: there are very many of them. Different alternatives may
+        reveal different information.</p></li>
       </ul>
     </subsection>
   </section>

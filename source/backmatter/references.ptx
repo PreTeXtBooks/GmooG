@@ -9,6 +9,9 @@
   <!-- Tufte:1997 -->
   <biblio xml:id="Tufte-1997" type="raw">Tufte, Edward. <pubtitle>Visual Explanations</pubtitle>. Graphics Press, Cheshire, Connecticut, 1997.</biblio>
 
+  <!-- Tufte:1983 -->
+  <biblio xml:id="Tufte-1983" type="raw">Tufte, Edward. <pubtitle>The Visual Display of Quantitative Information</pubtitle>. Graphics Press, Cheshire, Connecticut, 1983.</biblio>
+
   <!-- Tufte:2001ip -->
   <biblio xml:id="Tufte-2001ip" type="raw">Tufte, Edward. <pubtitle>The Visual Display of Quantitative Information</pubtitle>. 2nd ed. Graphics Press, Cheshire, Connecticut, 2001.</biblio>
 
@@ -283,6 +286,12 @@
   <!-- imdb:2022 -->
   <biblio xml:id="imdb-2022" type="raw">IMDb. Internet Movie Database. <url href="https://datasets.imdbws.com"/>. 2022.</biblio>
 
+  <!-- hofmann:2008 -->
+  <biblio xml:id="hofmann-2008" type="raw">Hofmann, Heike. Mosaic plots and their variants. In Chen, C., H&#228;rdle, W., and Unwin, A., editors, <pubtitle>Handbook of Data Visualization</pubtitle>, pages 617&#8211;642. Springer, Heidelberg, 2008.</biblio>
+
+  <!-- hofmann:2022 -->
+  <biblio xml:id="hofmann-2022" type="raw">Hofmann, Heike, Cook, Dianne, and Kielian, Tyler. ggpcp: Parallel Coordinate Plots. R package version 0.2.0, 2022.</biblio>
+
   <!-- wickham:2011 -->
   <biblio xml:id="wickham-2011" type="raw">Wickham, Hadley, Cook, Di, Hofmann, Heike, and Buja, Andreas. Graphical inference for Infovis. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 16(6):973&#8211;979, 2011.</biblio>
 
@@ -315,6 +324,9 @@
 
   <!-- tidyt:2020b -->
   <biblio xml:id="tidyt-2020b" type="raw">rfordatascience. Astronaut Database. <url href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-07-14"/>. 2020.</biblio>
+
+  <!-- estDecath:2021 -->
+  <biblio xml:id="estDecath-2021" type="raw">WA (World Athletics). Decathlon Top List. <url href="https://www.worldathletics.org/records/toplists/combined/decathlon/outdoor/men/senior/2021"/>. 2021.</biblio>
 
   <!-- asensio:2021a -->
   <biblio xml:id="asensio-2021a" type="raw">Asensio, Omar, Apablaza, Camila, Lawson, M. Cade, and Walsh, Sarah. A field experiment on workplace norms and electric vehicle charging etiquette. <em>Journal of Industrial Ecology</em>, 2021.</biblio>
