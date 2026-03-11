@@ -116,4 +116,10 @@
 
   <!-- PSI:2021b -->
   <biblio xml:id="PSI-2021b" type="raw">PSI. DLQI. 2021. <url href="https://github.com/VIS-SIG/Wonderful-Wednesdays/tree/master/data/2021/2021-01-13"/>. (accessed 29.01.2021)</biblio>
+
+  <!-- asensio:2021a -->
+  <biblio xml:id="asensio-2021a" type="raw">Asensio, Omar, Apablaza, Camila, Lawson, M. Cade, and Walsh, Sarah. A field experiment on workplace norms and electric vehicle charging etiquette. <em>Journal of Industrial Ecology</em>, 2021. <url href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jiec.13116"/></biblio>
+
+  <!-- asensio:2021b -->
+  <biblio xml:id="asensio-2021b" type="raw">Asensio, Omar, Apablaza, C., Lawson, M. Cade, and Walsh, S. Replication Data for: A Field Experiment on Workplace Norms and Electric Vehicle Charging Etiquette. 2021. <url href="https://doi.org/10.7910/DVN/NFPQLW"/>. (accessed 08.05.2021)</biblio>
 </references>
