@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publication>
+  <title>GmooG Publication Settings</title>
+  <summary>This placeholder file is included so the repository has a standard publication location for PreTeXt workflows.</summary>
+  <note>Adjust publication targets according to your PreTeXt toolchain and deployment requirements.</note>
+</publication>

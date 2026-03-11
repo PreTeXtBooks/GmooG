@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext>
+  <book xml:id="gmoog-book">
+    <title>Getting (more out of) Graphics</title>
+    <subtitle>PreTeXt Repository Starter</subtitle>
+
+    <frontmatter>
+      <preface xml:id="preface">
+        <title>Preface</title>
+        <p>This repository was migrated from an R/bookdown source. This PreTeXt file is a starter skeleton for converting chapters into native PreTeXt XML.</p>
+      </preface>
+    </frontmatter>
+
+    <chapter xml:id="ch-migration">
+      <title>Migration Notes</title>
+      <p>Primary author: Antony Unwin.</p>
+      <p>Original source chapters are currently in the repository root as R Markdown files.</p>
+      <p>Use PRETEXT-MIGRATION.md for the chapter-by-chapter migration checklist and repository workflow.</p>
+    </chapter>
+
+    <backmatter>
+      <references xml:id="references"/>
+    </backmatter>
+  </book>
+</pretext>
