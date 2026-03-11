@@ -39,6 +39,9 @@
   <!-- bertin:2010 -->
   <biblio xml:id="bertin-2010" type="raw">Bertin, Jacques. <pubtitle>Semiology of Graphics</pubtitle>. Esri Press, Redlands, California, 2010.</biblio>
 
+  <!-- wilkinson:1999 -->
+  <biblio xml:id="wilkinson-1999" type="raw">Wilkinson, Leland. <pubtitle>The Grammar of Graphics</pubtitle>. 1st ed. Springer, New York, 1999.</biblio>
+
   <!-- wilkinson:2005 -->
   <biblio xml:id="wilkinson-2005" type="raw">Wilkinson, Leland. <pubtitle>The Grammar of Graphics</pubtitle>. 2nd ed. Springer, New York, 2005.</biblio>
 
@@ -50,6 +53,9 @@
 
   <!-- unwin:2015 -->
   <biblio xml:id="unwin-2015" type="raw">Unwin, Antony. <pubtitle>Graphical Data Analysis with R</pubtitle>. Chapman &amp; Hall/CRC, Boca Raton, Florida, 2015.</biblio>
+
+  <!-- unwin:2018 -->
+  <biblio xml:id="unwin-2018" type="raw">Unwin, Antony and Valero-Mora, Pedro. Ensemble Graphics. <em>Journal of Computational and Graphical Statistics</em>, 27(1):157&#8211;165, 2018.</biblio>
 
   <!-- munzner:2014 -->
   <biblio xml:id="munzner-2014" type="raw">Munzner, Tamara. <pubtitle>Visualization Analysis and Design</pubtitle>. CRC Press, 2014.</biblio>
@@ -390,4 +396,16 @@
 
   <!-- student:1931 -->
   <biblio xml:id="student-1931" type="raw">Student. The Lanarkshire Milk Experiment. <em>Biometrika</em>, 23(3/4):398&#8211;406, 1931.</biblio>
+
+  <!-- holtz:2018 -->
+  <biblio xml:id="holtz-2018" type="raw">Holtz, Yan. R Graph Gallery. 2018. <url href="https://r-graph-gallery.com"/></biblio>
+
+  <!-- schwab:2021 -->
+  <biblio xml:id="schwab-2021" type="raw">Schwabish, Jon. <pubtitle>Better Data Visualizations</pubtitle>. Columbia University Press, New York, 2021.</biblio>
+
+  <!-- becker:1996 -->
+  <biblio xml:id="becker-1996" type="raw">Becker, Richard A., Cleveland, William S., and Shyu, M. J. The Visual Design and Control of Trellis Display. <em>Journal of Computational and Graphical Statistics</em>, 5(2):123&#8211;155, 1996.</biblio>
+
+  <!-- sarkar:2008 -->
+  <biblio xml:id="sarkar-2008" type="raw">Sarkar, Deepayan. <pubtitle>Lattice: Multivariate Data Visualization with R</pubtitle>. Springer, New York, 2008.</biblio>
 </references>
