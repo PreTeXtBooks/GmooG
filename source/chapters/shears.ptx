@@ -15,7 +15,7 @@
       <em>Questions.</em> How could the species be distinguished? If there was no species information, what clusters
       might be found?
     </p>
-    <p><em>Sources.</em> <em>seabirds</em> dataset in the <c>CoModes</c> package (@marbac:2016)</p>
+    <p><em>Sources.</em> <em>seabirds</em> dataset in the <c>CoModes</c> package (<xref ref="marbac-2016"/>)</p>
     <p>
       <em>Structure.</em> A list of two parts, a dataset of 153 birds with 5 variables and a separate classification
       variable.
@@ -30,10 +30,10 @@
       (<em>Puffinus lherminieri</em>), Gal&#225;pagos shearwater (<em>Puffinus subalaris</em>), and Tropical
       shearwater (<em>Puffinus dichrous</em>). In the <c>CoModes</c> package from which the dataset has been taken,
       the birds are described as puffins. Part of the dataset has been used in some publications to illustrate
-      clustering methods for the first two species, e.g., @lebret:2015 and @bouveyron:2019. These data are available
+      clustering methods for the first two species, e.g., <xref ref="lebret-2015"/> and <xref ref="bouveyron-2019"/>. These data are available
       with varying variable coding labels in another three R packages, in all of which the birds are also called
       puffins. The Latin name of the genus is <em>Puffinus</em>, which possibly led to this error. Beautiful images
-      of both puffins and shearwaters, illustrating how very different they are, can be found on the web (@ebird:2022).
+      of both puffins and shearwaters, illustrating how very different they are, can be found on the web (<xref ref="ebird-2022"/>).
     </p>
   </section>
 
@@ -129,6 +129,26 @@
       be in that cluster too. Putting the remaining cases all in a second cluster gives the following comparison
       table for the two species.
     </p>
+
+    <table>
+      <tabular halign="left">
+        <row header="yes" bottom="major">
+          <cell>species</cell>
+          <cell>clus1</cell>
+          <cell>clus2</cell>
+        </row>
+        <row>
+          <cell>Audubon</cell>
+          <cell>1</cell>
+          <cell>33</cell>
+        </row>
+        <row bottom="major">
+          <cell>Gal&#225;pagos</cell>
+          <cell>35</cell>
+          <cell>0</cell>
+        </row>
+      </tabular>
+    </table>
 
     <p>
       The single misclassified bird is then an Audubon's shearwater with pronounced eyebrows, no collar, white
