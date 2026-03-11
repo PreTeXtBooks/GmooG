@@ -4,16 +4,16 @@
 
   <introduction>
     <blockquote>
-      <p>"Real evidence is usually vague and unsatisfactory. It has to be examined - sifted."</p>
-      <p>--- Agatha Christie, <em>The Mysterious Affair at Styles</em></p>
+      <p>"Real evidence is usually vague and unsatisfactory. It has to be examined&#8212;sifted."</p>
+      <p>--- Agatha Christie, <pubtitle>The Mysterious Affair at Styles</pubtitle></p>
     </blockquote>
     <p>
-      Graphics discover and communicate information, but the quality of that information depends on the quality and
-      provenance of the data. Elegant visual design cannot compensate for weak source data.
-    </p>
-    <p>
-      This chapter emphasizes checking origin, definitions, collection process, transformations, and downstream use so
-      that analyses are credible and reproducible.
+      Graphics can be used to discover and display information in data. If the data are poor, then the information
+      will be poor. If the source is unreliable, then the information will be unreliable. Data are often taken for
+      granted in data visualisation. The elegance and technical aspects of the visualisations are discussed more
+      than the quality and interpretation of the data. There is a telling remark of Peter Huber's: "Never
+      underestimate the rawness of raw data." There should be a complementary aphorism along the lines of "Don't
+      just look at the visualisation&#8212;look into the data."
     </p>
   </introduction>
 
@@ -21,13 +21,53 @@
     <title>What does provenance mean?</title>
 
     <p>
-      Provenance is the documented origin and history of data: where they came from, who handled them, how they were
-      collected, cleaned, transformed, and used. It is central to reproducibility and interpretation.
+      The word provenance has been used in the art world for a long time. The value of a work of art can depend on
+      its origins and history having been fully authenticated&#8212;whether anyone likes it or not. Other subject
+      areas have taken over the term and the provenance of datasets is talked about now too: their origin and
+      source, the people and organisations involved, how the data were collected, their reliability and quality,
+      and how they have been processed and used (cf. @meng:2021). This has become more important as the ease with
+      which data can be shared has increased. Lee Wilkinson told me that he included Anderson's iris dataset with
+      his Systat software in the early 1980s by copying it in by hand. Forty years on, hugely larger datasets can
+      be transferred across the web with a single click.
     </p>
 
     <p>
-      Datasets are not born analysis-ready. Editing, coding changes, weighting, exclusions, and derived variables all
-      affect conclusions and need explicit reporting.
+      Provenance is about establishing a dataset's credibility and is an essential support for being able to
+      reproduce results of others. Datasets do not emerge fully formed as they are collected. Checks are carried
+      out, corrections made, various weightings and transformations are applied, some data and variables may be
+      dropped and derived variables added. @hueb:2020 describes a review of how Initial Data Analysis (IDA) was
+      reported in 25 observational medical studies published by five medical journals in 2018. Their conclusion
+      was that reporting of IDA was sparse and unsystematic. The PISA studies comparing the performance of school
+      children in different countries are a different example. Complex weighting schemes are used to reflect the
+      sampling methods for each country to make results comparable. Without detailed help explaining how the data
+      were restructured it would be impossible to reproduce what has been done.
+    </p>
+
+    <p>
+      Data arise in many different ways, ranging from meticulously carried out scientific experiments to voluntary
+      online surveys. At the latter extreme, all sorts of fanciful statistics are generated that have little or no
+      meaning or value. At the former extreme it is still necessary to check how and under what conditions the
+      experiments were carried out and whether results may be generalised beyond the bounds of that particular
+      study. Testing a theory on a small group of students is at best an indication of more general validity,
+      however conscientiously the research is carried out.
+    </p>
+
+    <p>
+      @stigler:2019 discusses the importance of investigating the source and processing of classical datasets. A
+      classical dataset in his definition is one that "has been collected for some scientific or commercial purpose,
+      and has been employed for instruction or exposition by several people". There are a few used in this book and
+      the pre-checking carried out is described below. For around half the book's datasets users can download newer
+      data and carry out fresh analyses themselves. Recent data are both more useful and more motivating than old
+      data.
+    </p>
+
+    <p>
+      As an example of datasets collated and offered by public institutions, there is a valuable collection of
+      demographic data by country available on the Human Mortality database (@mpidr:2022). Data are provided for
+      many countries for many years, there are comments on the likely quality of the data for particular
+      country-year combinations and corresponding advice to use with care. The Gapminder Foundation provides
+      extensive data on many different countries over the years. For the life expectancy data used in Chapter 1
+      they provide accompanying information on how they estimated values for isolated calamitous years.
     </p>
   </section>
 
@@ -35,32 +75,115 @@
     <title>What problems arise with datasets?</title>
 
     <p>
-      Common issues include unclear definitions, awkward structure, missing or duplicated records, errors,
-      inconsistencies, and hidden uncertainty. Graphics often help detect these issues, even when they cannot fully
-      resolve them.
+      Real datasets bring real problems. The original sources may be unknown. It may be unclear how the data were
+      collected. The datasets may have unusual and awkward structures. They may be badly formatted. Variables may
+      be ambiguously or just poorly defined. There may be duplicate variables and cases. There may be missing
+      values, errors, inconsistencies, roundings, uncertainty.
+    </p>
+
+    <p>
+      Graphical displays can help identify many of these problems and sometimes, although not always, help to fix
+      them. That is one important reason for using real datasets for all examples in this book, rather than
+      invented or simulated datasets. Even if problems cannot be fixed, it is advantageous to be aware of them.
+      Interpretations of results have to be qualified by how reliable and sound the underlying data are judged to
+      be. Knowing the data and their possible weaknesses strengthens an analyst's position.
     </p>
 
     <subsection xml:id="sec-prov-definitions">
       <title>Data definitions</title>
       <p>
-        Variable meaning is not always obvious. Definitions differ across countries, institutions, and time, and those
-        differences can invalidate naive comparisons.
+        Sometimes the meaning of variables recorded is obvious, sometimes not. Sometimes the meaning seems
+        obvious, but turns out not to be. In most countries the number of votes won by a party in an election is
+        clear. In Germany everyone has two votes, the first for an individual, who is usually a member of a party,
+        and the second for a party. There is a complicated system of determining how many seats each party then
+        receives and there have been numerous attempts over the past few years to find a satisfactory solution that
+        does not involve the total number of seats increasing after each election. Ireland has an electoral system
+        based on proportional representation, so that you can talk about how many first preference votes a party
+        receives, but this may not match the number of seats the party wins.
+      </p>
+      <p>
+        German car sales data does not include details for models with less than 5 sales in a year unless they are
+        in the Luxury or Sportscar segments. Crime statistics cover reported crimes, but not all crimes. It is
+        always advisable to have precise definitions for variables in a dataset.
+      </p>
+      <p>
+        During the Covid pandemic it was difficult to compare the rates of illness and death in different countries
+        partly because of the difficulties in collecting the data and partly because of the different definitions
+        used.
+      </p>
+      <p>
+        In any dataset collected over time, definitions change. Rules of sporting events change, conditions change,
+        even countries change, as in the Olympics dataset.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-collection">
       <title>Data collection</title>
       <p>
-        Even clear definitions do not guarantee accurate measurement. Self-reported values, process drift, collection
-        incentives, and question wording can all bias data.
+        Even if definitions of variables are agreed upon and unproblematic, it may be impractical to collect the
+        information accurately. Much height and weight information is self-reported, as are eating habits and
+        exercising regimes.
+      </p>
+      <p>
+        A dataset that is designed for one purpose may not be suitable for another. The number of tickets sold for
+        a soccer game does not tell you how many people were there. Season ticket holders from far away may choose
+        to only go to the top games. The number of cars registered may not be the same as the number of cars sold,
+        as dealers may be encouraged to register more cars than they sell.
+      </p>
+      <p>
+        Data may have been collected at different times or by different people. Experimenters may improve their
+        technique as they gain experience with a new method. Both these factors are relevant in considering
+        Newcomb's data on the speed of light.
+      </p>
+      <p>
+        Car speedometers may or may not give accurate figures. To counteract possible complaints about the accuracy
+        of the estimates of speed made by police cameras in Germany, a figure of 3 km/hr is subtracted from the
+        actual estimate up to speeds of 100 km/hr and 3% is subtracted from higher speeds.
+      </p>
+      <p>
+        Results in clinical trials can be complicated by unexpected events (@sackett:1979). If someone in the
+        treatment arm of a trial for heart disease is run over by a bus, is that anything to do with the trial?
+      </p>
+      <p>
+        How questions are asked can influence answers to surveys (e.g., @thau:2021 and several of the papers cited
+        in it). In one of the episodes of the BBC comedy programme "Yes, Prime Minister", the civil servant, Sir
+        Humphrey Appleby gave an example of how opinion poll questions and their order may affect results (and can
+        be found on YouTube by searching for "yes prime minister opinion polls").
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-availability">
       <title>Data availability</title>
       <p>
-        Publicly available data often require major wrangling and restructuring. Keeping raw originals and retaining
-        all cleaning code are essential for auditability and reruns.
+        Many datasets are available in R or one of its associated packages. Most have been polished or prepared
+        before being published in R and while many were real datasets they were not as real as they might have
+        been. Sometimes the documentation available for them is vague and incomplete.
+      </p>
+      <p>
+        Big datasets need preparatory work. The stages of checking, editing, and reorganising data&#8212;getting
+        data ready for graphics and analysis&#8212;are discussed in more detail. The data wrangling code developed
+        for these tasks is also included on the book's webpage. Several datasets are being continually publicly
+        updated (e.g., Gapminder, movie ratings, fuel efficiency, the Comrades ultramarathon, chess ratings).
+        Readers can download more recent versions and use the code on the book's webpage, possibly with minor
+        amendments, to obtain new results. Estimates of how much of a project is spent in cleaning up data vary
+        considerably, but everyone agrees it takes a lot of time and effort. Knowing which graphics to draw and
+        how they can be drawn is not enough; the data must be prepared in an appropriate form. This involves data
+        restructuring on top of data cleaning.
+      </p>
+      <p>
+        Although much work may be needed to clean datasets, it is essential to keep a copy of the dataset in its
+        original form and keep all the coding used in cleaning. Auditors or others may have to be shown exactly
+        what was done and analysts need to be able to remind themselves some time later of what they did. Rerunning
+        cleaning code on the original dataset often takes little time, confirms that the original is being used,
+        removing the need to store intermediate versions of the data. New information may arise, invalidating some
+        of the data cleaning and requiring new approaches. Original datasets have to be kept available in their
+        original form.
+      </p>
+      <p>
+        Knowing why, how, and by whom datasets were collected is a key part of their value. Sources and contexts
+        should be included in supporting information and reviewed. Standards have become better in general in this
+        regard with Kevin Wright's R package <em>agridat</em> (@wright:2022) and Jeremy Singer-Vine's Data is
+        Plural collection (@singervine:2020) being positive examples. Yet there is always room for improvement.
       </p>
     </subsection>
   </section>
@@ -69,155 +192,346 @@
     <title>The provenance of datasets used in the book</title>
 
     <p>
-      The examples below illustrate why provenance checks matter in practice and how deeper source work can change
-      analysis quality.
+      Datasets may be made available as part of a public service, as many governmental organisations now do. They
+      may be provided as supplementary material to research publications, and some journals require that of
+      authors, even if not all authors satisfy the requirements. They may be analysed as illustrations in articles
+      or textbooks and made accessible on webpages. They may be included in software packages. Detailed background
+      information may or may not be provided. Even with extensive details of how data were collected and how
+      variables were defined, there may still be more to be found out. The following examples discuss datasets used
+      in the book to illustrate the issues and to show that it can be helpful to dig deeper.
     </p>
 
     <subsection xml:id="sec-prov-gapminder">
       <title>Gapminder</title>
       <p>
-        Gapminder provides extensive source and cleaning notes, but country-year quality is uneven and must still be
-        treated cautiously in comparisons.
+        The Gapminder website (@rosling:2013) provides substantial amounts of data on countries around the world
+        and gives extensive information on the sources of the data and on what data cleaning has been carried out.
+        Standards of data collection vary by country and over time and this has to be kept in mind in any
+        comparison of countries.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-movies">
       <title>Movies</title>
       <p>
-        IMDb-derived data are dynamic and heavily filtered before analysis. Genre coding, runtime variants, and user-
-        profile uncertainty all affect interpretation.
+        The movies dataset was downloaded from the IMDb website (@imdb:2022). Two of the files, one with runtimes
+        and one with average viewer ratings, were merged. Only the categories "movie" and "short" were kept and
+        only items which had over 100 ratings. As of the beginning of July 2022 these measures reduced the total
+        number of items in the dataset from just over 9 million to just under 125,000. The database is continually
+        updated with new films, more user ratings, and amended information.
+      </p>
+      <p>
+        IMDb report the genres classifying films using a maximum of three descriptors. The information is given in
+        a single column with the descriptors in alphabetic order, separated by commas. There is no standard
+        classification of films by genre, so other sources may use other classification schemes. (And you may
+        personally disagree with some of the individual classifications too.)
+      </p>
+      <p>
+        Movie lengths show two uncommon features. There are a few extraordinarily long films that are not errors,
+        but actual films, and there is heaping on rounded numbers of minutes, particularly at 90 minutes, the old
+        standard length. Checking running times of the films on their imdb.com technical specs webpages also
+        reveals that some films have been released in more than one version with different lengths.
+      </p>
+      <p>
+        Summary data on ratings of individual films by user age and sex are reported for the 70% or so of users
+        who provide this information. How truthful those users are in their self-description is not known (and it
+        is not known how truthful or reliable they are in their ratings either).
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-1912">
       <title>Democratic Convention 1912</title>
       <p>
-        Adding session-time context (beyond ballot order alone) revealed timing structure and likely influence of
-        informal between-session negotiations.
+        Initial analyses of the 46 ballots that took place at the 1912 Democratic Convention plotted results by
+        ballot number. Checking the official report of the Convention more closely supplied opening and closing
+        times for each session over the five days. These were used to produce estimates of when the ballots took
+        place and to plot results over time. This showed that the crucial change took place in the first ballot
+        after the last break, implying that the informal discussions that undoubtedly took place when the
+        Convention was not in session had an important influence.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-lightspeed">
       <title>Speed of light</title>
       <p>
-        Classical speed-of-light datasets are often simplified in teaching. Original experiment reports show procedural
-        changes that challenge assumptions such as i.i.d. sampling.
+        Elaborate experiments to determine the speed of light were carried out in the late nineteenth century.
+        They generally involved timing the passage of light between mirrors a large distance apart. Individual
+        readings were made a number of times over several days. One set of 100 readings reported by Michelson has
+        frequently been used as an example in Statistics since Stigler included the data in his 1977 paper on
+        robustness (@stigler:1977). The data are usually assumed to have been collected under similar conditions
+        and are described as being five sets of 20 readings. In fact, the splitting into five was an artefact
+        introduced by Stigler for testing purposes, as his article clearly states. Michelson's original paper
+        (@michelson:1880) gives an exhaustive description of his procedures and lists a number of changes and
+        alterations to the experiment that were made over the 100 experiments. Amongst other things he records
+        when the readings were taken and by whom. Treating the data as i.i.d. is statistically attractive, but
+        inappropriate in practice.
+      </p>
+      <p>
+        Newcomb also carried out experiments to determine the speed of light. Both Michelson and Newcomb provided
+        precise descriptions in their publications of how they converted their results to estimates of the speed of
+        light in a vacuum. This information is crucial for comparing results.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-olympics">
       <title>Olympic Games</title>
       <p>
-        Long historical spans introduce changing countries, event naming inconsistencies, and missing values that
-        require explicit harmonization decisions.
+        The two datasets cover the modern Olympics from 1896 to 2016 and countries have changed over that period.
+        Germany split for many years and was reunited. Imperial Russia became the Soviet Union and then Russia
+        again. The same country name may refer to different areas at different times. It is not easy to be
+        consistent and checks are needed. Defining the number of participants from Germany when the country was
+        split as the sum of the participants from East and West suggests higher numbers than would have been the
+        case if they had been a single competing country.
       </p>
       <figure xml:id="fig-olyamdx-prov">
-        <image source="images/olyAmdx-1.png"/>
-        <caption><p>Athletics field events for men: percentage differences in gold-medal performances.</p></caption>
+        <image source="images/olyAmdx-1.png">
+          <description>A time series plot showing percentage differences in gold-medal performances compared with averages over the last six Games for men's athletics field events. Missing values appear as gaps. A temporary decline in shot put performance is visible during periods when other events have missing values.</description>
+        </image>
+        <caption><p>Athletics field events for men: percentage differences in gold-medal performances compared with averages over the last six Games.</p></caption>
       </figure>
+      <p>
+        The first dataset had been scraped from the web. Some issues arose concerning the consistency of the names
+        used for events and there were some unexpected missing values. The above figure shows gaps (i.e. missing
+        values) in the gold medal performances for some men's field events. The temporary decline in shot put
+        performances at a time the results are missing for other events is suggestive.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-prov-chess">
       <title>Chess ratings</title>
       <p>
-        Multi-year federation files reveal format changes, coding changes, stale records, and category ambiguities
-        that demand careful cleaning and reconciliation.
+        FIDE used to provide their annual datasets in the old fixed width format that has no separators between
+        values. This required a bit of work to read (and care with format changes between datasets, often because
+        more information had been added in later datasets). A line of variable names had to be added. Another
+        issue with older datasets (and FIDE's oldest dataset in 2020 was one for 2001) can be encodings of
+        accents in names. Names may have been anglicised or standardised in some way.
+      </p>
+      <p>
+        Using datasets from different time points may mean that some information is inconsistent, because different
+        definitions are used. Comparing the ratings for 2015 and 2020, it turned out that the three-letter codings
+        for Lebanon and Singapore had changed.
+      </p>
+      <p>
+        Large datasets may have issues of consistency because the data come from independent sources, in this case
+        from different countries. More attention may be paid to some parts of the data than others. It is likely
+        that the information about the best chess players is more reliable than information about some of the
+        weakest.
+      </p>
+      <p>
+        The data included the year of birth of each player, but these data were incomplete. Sometimes they were
+        recorded as missing (e.g., as NA), sometimes other codes were used. In the December 2015 dataset there
+        were a few birth years with value 0, a lot with value 0000 (about 3.75% of the dataset), and a few with
+        1900. The latter may have been 00 during some phase of the data collection process and then inadvertently
+        been converted to 1900. Using birth year rather than age means that that variable never has to be updated,
+        but it is often more understandable to work with age as a variable and that is easy to calculate. It
+        turned out that some supposedly old players had actually died a few years before and that leaving the list
+        for any reason was not necessarily easy. This made clear how important the active/inactive classification
+        used in the dataset could be.
+      </p>
+      <p>
+        Categorical variables may usefully be simplified or amended. The variable 'Flag' was described as an
+        indicator of inactivity, but had 4 possible values, 'i' for inactive, 'wi' for female inactive, 'w' for
+        female, and NA. It made sense to simplify this to a new variable that merely recorded whether a player was
+        active or inactive as there was another variable recording sex.
+      </p>
+      <p>
+        Occasionally datasets have extra blanks at the beginning or end of inputs and these should be trimmed.
+        Character variables with values for males ('M') and females ('F') may otherwise have additional categories
+        such as 'M ' or ' F' (note the extra spaces). Numeric variables with extra blanks will not be recognised
+        as numeric.
+      </p>
+      <p>
+        Country population data for 2019 was taken from the World Bank (@wb:2020). Unfortunately, the three
+        letter country codes used by FIDE and the World Bank are not always the same. After joining the datasets
+        by code and then, for the rest, by name, little further editing was needed. For some sporting purposes,
+        including chess, the United Kingdom splits into three countries (England, Scotland, Wales) and Northern
+        Ireland is combined with Ireland. For others, such as soccer, Northern Ireland is treated as a separate
+        country. Populations for these countries were taken from Wikipedia.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-gayrights">
       <title>Attitudes to same-sex marriage</title>
       <p>
-        Question wording, answer coding, and subsampling design all influence conclusions; obtaining raw survey details
-        can materially change interpretation.
+        One of the datasets analysed in @gelman:2020 concerns how people in the United States responded to
+        questions on same-sex marriage. The book only looked at the issue of support for a law at state level, but
+        a question was also asked in the survey on whether a constitutional ban at federal level should be
+        introduced. The answers were different. One explanation could have been that the questions were asked in
+        different ways. Getting the full raw data from Annenberg who carried out the poll in 2003&#8211;4 added
+        more information. Only one third of the sample were asked the state question and there were slightly
+        different versions of both questions asked at different periods during the survey. More relevantly, the
+        state question was phrased so that "Strongly favor" meant for same-sex marriage, while the federal
+        question was the other way round. This had a curious side effect. The authors of @gelman:2020 simplified
+        the responses to "yes" (in favour) or "no" (against), and classified those who responded otherwise as
+        "no". This had different implications for the questions at federal and state levels. Fortunately, the
+        overall effect was small, as respondents tended to have strong views one way or the other, so the
+        difference in responses would have been mainly due to the difference between a state law and a
+        constitutional change. A comparison of the responses of those who were asked and answered both questions
+        is shown in Figure <xref ref="fig-gayfss"/>, a redrawing of an earlier figure. The key feature is the
+        bar lower right representing the group who strongly opposed a same-sex marriage law for their own state
+        while also strongly opposing a Constitutional Amendment banning same-sex marriage.
       </p>
       <figure xml:id="fig-gayfss">
-        <image source="images/gayFSs-1.png"/>
-        <caption><p>Responses on same-sex marriage at state level versus federal constitutional ban.</p></caption>
+        <image source="images/gayFSs-1.png">
+          <description>Multiple barcharts showing responses to supporting same-sex marriage at state level (rows) by responses to supporting a Constitutional Amendment banning it (columns). The key feature is the bar in the lower right representing the group who strongly opposed a same-sex marriage law for their own state while also strongly opposing a Constitutional Amendment banning same-sex marriage.</description>
+        </image>
+        <caption><p>Multiple barcharts of the responses to supporting same-sex marriage at state level by the responses to supporting a Constitutional Amendment banning it.</p></caption>
       </figure>
+      <p>
+        The handling of answers to surveys can be tricky. The precise wording of the questions and of the possible
+        answers has to be checked. Political polls are often reported ignoring the responses of those who refused
+        to answer or said they did not know. This can be deceptive.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-prov-astronauts">
       <title>Human spaceflights</title>
       <p>
-        Scraped datasets can contain inconsistencies and errors from unknown points in the pipeline; interesting data
-        still require rigorous checking.
+        This is an intriguing dataset with plenty of striking information. It was scraped from a number of sites
+        on the web as part of a study of data available on the health of space travellers (@corlett:2020). Others
+        then made a version of it available on the Tidy Tuesday project (@tidyt:2020b). There are a number of
+        inconsistencies and errors in this version and it is not obvious where they arose. There is plenty of
+        interesting information, but careful checking is needed, as described in the chapter.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-diamonds">
       <title>Diamonds</title>
       <p>
-        Convenience sampling, impossible values, gaps, and heaping all appear. These issues do not make data useless,
-        but they do constrain inference.
+        The diamonds dataset was scraped from a website selling diamonds. This makes it a convenience sample and
+        so any conclusions drawn should be treated cautiously. It contains missing values, zero values that cannot
+        be zero, a gap in the price data, some outliers that are obvious errors, and a likely upper limit on
+        price. There is clear evidence of heaping on rounded carat values that also affects the distribution
+        pattern of other variables. Some of these properties will affect analyses, some will not, they all
+        contribute to a better understanding of the dataset. Figure <xref ref="fig-histcarx"/>, a reproduction of
+        an earlier figure, shows the heaping. Other examples of heaping can be seen in the movies chapter for
+        movie runtimes and in the Comrades Marathon chapter for finishing times.
       </p>
       <figure xml:id="fig-histcarx">
-        <image source="images/histCarX-1.png"/>
-        <caption><p>Histogram of diamond carats (showing heaping).</p></caption>
+        <image source="images/histCarX-1.png">
+          <description>A histogram of diamond carat values showing clear heaping (spikes) at rounded values such as 0.5, 1.0, 1.5, and 2.0 carats. The distribution is otherwise roughly right-skewed.</description>
+        </image>
+        <caption><p>Histogram of diamond carats.</p></caption>
       </figure>
     </subsection>
 
     <subsection xml:id="sec-prov-electric">
       <title>Electric car charging</title>
       <p>
-        Timeline structure and staged infrastructure rollout are crucial context; early periods may be unsuitable as
-        stable baselines for behavior.
+        There is much interest in electric cars and how people use charging stations. The researchers wrote that
+        they had an initial period of three months for testing before analysis (@asensio:2021a). This would be
+        partly to let drivers acclimatise themselves to the new possibilities. However, as the following figure
+        shows, over half the locations had no charging stations in the test period and there had been little use
+        of some of the others by then.
       </p>
       <figure xml:id="fig-elecstat2x">
-        <image source="images/elecStat2x-1.png"/>
-        <caption><p>Use of charging stations grouped by location, with test-period endpoint marked.</p></caption>
+        <image source="images/elecStat2x-1.png">
+          <description>A display showing the use of electric vehicle charging stations coloured by type of facility, grouped by location, ordered by first installation at location and by first date of use. A red vertical line marks the end of the testing period. Over half the locations had no charging stations during the test period.</description>
+        </image>
+        <caption><p>Use of charging stations, coloured by the type of facility, grouped by location, ordered by first installation at location and by first date of use, with the end of the testing period marked in red.</p></caption>
       </figure>
+      <p>
+        The display provides an overall view of the study structure and suggests a number of questions on how it
+        developed.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-prov-finches">
       <title>Darwin's finches</title>
       <p>
-        Historical expeditions may not match modern standards, but can still provide strong species-separation signals
-        when interpreted with proper caveats.
+        Darwin's visit to the Gal&#225;pagos Islands as part of his voyage on the Beagle was short, but influential
+        on his thinking. Other researchers have visited the islands since, and a number of datasets are in the
+        public domain. The dataset used comes from the 1898&#8211;99 expedition and was chosen because it and the
+        expedition report were readily available. Whether the selection of birds and measurement methods would
+        match modern research standards is questionable. Nevertheless, the data still provide strong evidence for
+        species differences as the following figure shows.
       </p>
       <figure xml:id="fig-snodpcpx">
-        <image source="images/snodPCPx-1.png"/>
-        <caption><p>Parallel coordinate plot of Galapagos finch measurements.</p></caption>
+        <image source="images/snodPCPx-1.png">
+          <description>A parallel coordinate plot of nine measurements of nine Gal&#225;pagos finch species from Isabela Island. The parallel coordinate plot shows clear separation between most species across the nine measurement variables, providing strong evidence for species differences despite the age of the dataset.</description>
+        </image>
+        <caption><p>Parallel coordinate plot of nine measurements of nine Gal&#225;pagos finch species from Isabela Island.</p></caption>
       </figure>
     </subsection>
 
     <subsection xml:id="sec-prov-vehicles">
       <title>Vehicle fuel consumption</title>
       <p>
-        Class definitions may differ from intuition. Clarifying formal definitions with data providers can explain
-        apparently anomalous category assignments.
+        The U.S. Department of Energy's dataset on fuel consumption revealed that some compact and subcompact cars
+        performed very badly. The brands of cars involved were all from exclusive producers, such as Rolls Royce,
+        Maserati, and Ferrari. Contacting website support brought the prompt reply that the definitions stemmed
+        from the 1970s and were based on the total space for passengers and luggage. The Environmental Protection
+        Agency were well aware of the unsuitability of their classification of some models. Definitions are not
+        always quite what you think they ought to be and it is useful to check.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-comrades">
       <title>Comrades Marathon</title>
       <p>
-        Contextual race-profile information changes interpretation of "up" versus "down" runs and helps explain
-        persistent performance differences.
+        The data for this race over the years make a good impression. A key feature is that the direction of the
+        race generally alternates between 'up' and 'down'. The following figure shows how much difference that
+        makes. The difference in how much a runner would have to go 'up' and 'down' is striking.
       </p>
       <figure xml:id="fig-comprofx">
-        <image source="images/comProfX-1.png"/>
-        <caption><p>Profile plot for the planned 2020 down race.</p></caption>
+        <image source="images/comProfX-1.png">
+          <description>A profile plot for the planned down race starting at Pietermaritzburg on the left and finishing at Durban on the right in 2020. The profile shows the elevation changes along the route, demonstrating the considerable differences between an 'up' and 'down' race.</description>
+        </image>
+        <caption><p>A profile plot for the planned down race starting at Pietermaritzburg to the left, finishing at Durban to the right, in 2020.</p></caption>
       </figure>
     </subsection>
 
     <subsection xml:id="sec-prov-shearwaters">
       <title>Shearwaters</title>
       <p>
-        The same dataset appears under different labels and modified codings across packages, creating confusion and
-        highlighting the need for source verification.
+        This dataset was used in @bouveyron:2019 to illustrate model-based clustering. The description says it
+        concerns two types of puffin, <em>Puffinus lherminieri</em> and <em>Puffinus subalaris</em>. However,
+        these are both types of shearwater, a quite different bird from a puffin. The first is known as Audubon's
+        shearwater and the second as the Gal&#225;pagos shearwater. Surprisingly, @bouveyron:2019 labelled the
+        birds as <em>Borealis</em> and <em>Diomedea</em> in one of their graphics, i.e. Cory's shearwater and
+        Scopoli's shearwater.
+      </p>
+      <p>
+        The dataset has also been used as an example in @giordani:2020. It uses a version of the dataset called
+        <em>birds</em>, published in the R package <em>Rmixmod</em>, in which all values of <c>collar</c> that
+        are not equal to "none" are given the value "dotted". The class variable is missing but the authors
+        assume, correctly as it turns out, that the <em>Puffinus lherminieri</em> cases all come first. There is
+        a further version of the dataset in the R package <em>MixAll</em>. It differs from the <em>Rmixmod</em>
+        version for two cases of <c>undertail</c> (which it calls <c>sub-caudal</c>). Finally, the dataset used
+        in the book covers three species of shearwater, the two already mentioned plus Tropical shearwaters, and
+        is available in the package <em>CoModes</em>.
+      </p>
+      <p>
+        It is confusing when the same data are offered in different ways in different datasets. Unfortunately,
+        this is by no means an isolated example.
       </p>
     </subsection>
 
     <subsection xml:id="sec-prov-titanic">
       <title>Titanic</title>
       <p>
-        Multiple Titanic datasets differ in detail and quality. Modern curated sources provide richer crew and age
-        detail that materially changes subgroup survival analysis.
+        Data on the survival of passengers and crew from the sinking of the Titanic in 1912 have been analysed
+        and visualised very often. The dataset is included in many R packages under different names. Some of these
+        datasets have more data, some less, and many provide insufficient information about the origin of their
+        data, although most are probably based on the report of the British Board of Trade in 1912. The best
+        modern source appears to be @titanic:2021. It has coordinated the efforts of many individuals and has
+        steadily added to the information available on the sad fate of the Titanic. In particular, the knowledge
+        of which departments individual crew members belonged to has improved (leading to the survival-by-crew
+        figure), as has knowledge of the ages of the crew and passengers (leading to the age/sex/class survival
+        figure).
+      </p>
+      <p>
+        Figure <xref ref="fig-titandd"/> shows doubledecker plots of the survival rates by class and crew for
+        the dataset in R's <em>datasets</em> package and for the newer dataset used in the Titanic chapter. The
+        total numbers are only slightly different and so the class bars are pretty much identical. The big
+        difference is apparent from the detailed breakdown for the crew. Deck crew, who manned the lifeboats,
+        had a high survival rate. Other crew groups had lower survival rates, especially the restaurant crew.
       </p>
       <figure xml:id="fig-titandd">
-        <image source="images/titanDD-1.png"/>
-        <caption><p>Titanic survival by class/crew: older summary dataset versus newer detailed dataset.</p></caption>
+        <image source="images/titanDD-1.png">
+          <description>Two doubledecker plots side by side comparing Titanic survival rates by class and crew: the older R datasets package version on the left and the newer Encyclopedia Titanica dataset on the right. The class bars are very similar, but the newer dataset shows a detailed breakdown of crew departments, revealing that deck crew had high survival rates while restaurant crew had very low survival rates.</description>
+        </image>
+        <caption><p>Titanic survival rates by class and crew, older dataset on the left, newer on the right.</p></caption>
       </figure>
     </subsection>
   </section>
@@ -226,22 +540,74 @@
     <title>How do invented, simulated, and real datasets compare?</title>
 
     <p>
-      Invented and simulated datasets are useful in specific contexts, but real datasets better expose practical
-      issues, support contextual checking, and train defensible analysis habits.
+      Datasets can be invented, simulated or real. Invented datasets were very common in older textbooks before
+      many had access to computers. The datasets had to be small and the calculations simple, so that everything
+      could be done by hand or perhaps with the help of a calculator. Some researchers claimed this was a good
+      thing as students were closer to their data.
     </p>
 
     <p>
-      Real does not mean unquestionable. Datasets can be over-trusted or unfairly dismissed; both mistakes are
-      avoidable with careful provenance work.
+      Unfortunately, invented datasets are still found in some textbooks, sometimes with flippant background
+      descriptions. Attempting to make statistics attractive to students by using superficial examples with
+      supposedly amusing subjects will not necessarily encourage them to take actual statistics seriously.
+    </p>
+
+    <p>
+      Simulated datasets are often used in research to investigate the performance of methods on data with known
+      structure. That can be informative. Using simulated data for exercises is not so helpful. Simulated datasets
+      are just that&#8212;simulated&#8212;and rarely reflect the issues and problems that arise with real
+      datasets, be they missing values, outliers, inconsistencies, errors or whatever. More importantly, there is
+      no way to use context or additional data to check features discovered in simulated data. Simulated datasets
+      are used in graphical inference to produce line-ups for checking whether a particular graphic display from a
+      real dataset could reasonably be said to have the feature identified (@wickham:2011). This is an interesting
+      theoretical approach, requiring users to compare groups of similar graphics looking for one that may be
+      different.
+    </p>
+
+    <p>
+      Using real datasets means more work. You have to find out if you are permitted to use them, you have to
+      check them, and you have to understand them. And, of course, you should cite the source properly to give
+      credit where credit is due. It is a form of plagiarism to use data without acknowledgement. Many apparently
+      simple datasets have only been put together with enormous effort. Think of the experiments on the speed of
+      light by Newcomb and Michelson, think of the data on Darwin's finches collected by the Grants over many
+      years, think of the researchers measuring penguins on the Palmer Archipelago on the North of Antarctica.
+      Data collection may take a lot of time and effort, so may data preparation. This work should be
+      acknowledged.
+    </p>
+
+    <p>
+      What is real about real datasets can be an issue. Many datasets that are publicly available have been
+      cleaned, edited and filtered, even simplified. One example is the datasets on measurements of the speed of
+      light. Another is the Titanic dataset where there are many versions and most are rehashes of early
+      summaries. Modern research has provided more and better detail.
+    </p>
+
+    <p>
+      One of the most famous experiments in physics was Millikan's oil drop experiment to determine the charge on
+      an electron. Millikan carried out his experiments before the First World War and according to his notebooks
+      did not report all his results, excluding those where he believed the experiments to have been flawed in
+      some way (@holton:1978). At around the same time, Ehrenhaft carried out experiments with the same aim and,
+      in contrast to Millikan, found a broad range of electron charges (@ehrenhaft:1910). Ehrenhaft apparently
+      reported all his experimental results, but scientific opinion sided with Millikan. Not all data are equal
+      and you cannot treat all data equally.
+    </p>
+
+    <p>
+      Datasets are sometimes treated as objective truths and given too much respect. On the other hand, they are
+      sometimes unjustifiably maligned as unreliable and worthless. The fact that the phrase "the camera doesn't
+      lie" is not always true does not mean that all photographs are invalidated. It just means that you should
+      take into account the choice of subject, the point of view, the weather, the lighting, the colouring, the
+      lens and so on. A good dataset includes clearly defined variables, reliable data, and a verifiable
+      provenance. No dataset may be perfect, but many are informative.
     </p>
 
     <subsection xml:id="sec-prov-main-points">
       <title>Main points</title>
       <ul>
-        <li><p>Dataset provenance - source, edits, and processing history - is essential.</p></li>
-        <li><p>Large real datasets are increasingly available but require extensive checking.</p></li>
-        <li><p>Each dataset has unique issues; no single checklist solves everything.</p></li>
-        <li><p>Real datasets are generally preferable to invented or purely simulated examples for applied work.</p></li>
+        <li><p>It is essential to know the provenance of a dataset, its source, whether it has been edited and amended, and if so, how.</p></li>
+        <li><p>Large, documented datasets are much more readily available now than in the past. They require extensive checking.</p></li>
+        <li><p>Each dataset has its own issues. There is no uniform approach that will work for each one.</p></li>
+        <li><p>Real datasets are better than invented or simulated ones.</p></li>
       </ul>
     </subsection>
   </section>

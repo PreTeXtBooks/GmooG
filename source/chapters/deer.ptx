@@ -9,20 +9,20 @@
         the title, you might not notice Icarus at all."
       </p>
       <p>
-        --- E. H. Gombrich on <em>Landscape with the Fall of Icarus</em>
+        --- E. H. Gombrich writing about 'Landscape with the Fall of Icarus' (a painting formerly attributed to Bruegel)
       </p>
     </blockquote>
     <p>
-      <em>Background.</em> In parts of Europe, vehicle accidents involving deer are a serious road-safety issue.
+      <em>Background.</em> In some parts of Europe vehicle accidents with deer are a serious problem.
     </p>
     <p>
-      <em>Questions.</em> How many accidents involving deer occur? Are they evenly distributed through the year? At
-      what times of day is risk highest?
+      <em>Questions.</em> How many accidents with deer are there? Is it roughly the same across the year? At what
+      times of day is the risk greatest?
     </p>
-    <p><em>Sources.</em> Hothorn et al. data and analyses.</p>
+    <p><em>Sources.</em> @hothorn:2020</p>
     <p>
-      <em>Structure.</em> Two data frames of 172,596 observations each, with half-hourly accident counts in Bavaria:
-      one for deer-involved accidents and one for other accidents.
+      <em>Structure.</em> Two data frames, each of 172596 observations, giving the numbers of vehicle accidents
+      every half hour in Bavaria, one for accidents involving deer and one for other accidents.
     </p>
   </introduction>
 
@@ -30,122 +30,211 @@
     <title>Vehicle accidents involving deer</title>
 
     <p>
-      The deer-accident series spans 2002 to 2011. A smooth of daily counts shows a substantial long-run increase.
+      Bavarian data of the numbers of vehicle accidents involving deer over the full ten years from 2002 to 2011
+      have been modelled in depth in @hothorn:2015. The data were also used in @hothorn:2020 and are available in
+      the supplementary material on the publishing journal's website.
+    </p>
+
+    <p>
+      Figure <xref ref="fig-deer1"/> shows a smoothed version of the daily number of vehicle accidents involving
+      deer. There was an increase of around 50% over the ten years.
     </p>
 
     <figure xml:id="fig-deer1">
-      <image source="images/deer1-1.png"/>
-      <caption><p>Smoothed daily numbers of deer-vehicle accidents in Bavaria, 2002-2011.</p></caption>
+      <image source="images/deer1-1.png">
+        <description>A smooth line plot of the daily number of vehicle accidents involving deer in Bavaria from 2002 to 2011, showing an overall increase of around 50% over the ten years. The y-axis runs from 0 to about 120 accidents per day.</description>
+      </image>
+      <caption><p>Smoothed numbers of deer-vehicle accidents per day in Bavaria over ten years from Jan 1st 2002 to Dec 31st 2011.</p></caption>
     </figure>
 
     <p>
-      Monthly subseries displays indicate both an overall rise and possible seasonality.
+      In Figure <xref ref="fig-deer1"/>, and in all the plots in this chapter, the time axis labels are placed at
+      the start of the labelled period.
+    </p>
+
+    <p>
+      Figure <xref ref="fig-deer2"/> shows an initial plot to explore monthly seasonality. Each panel of the plot
+      displays the aggregate data from that month for each year and the average for the month over the whole time
+      series in blue. Here the data are per month, which is why the vertical scale is so different to that in
+      Figure <xref ref="fig-deer1"/>.
     </p>
 
     <figure xml:id="fig-deer2">
-      <image source="images/deer2-1.png"/>
-      <caption><p>Monthly deer-vehicle accident counts across the ten years.</p></caption>
+      <image source="images/deer2-1.png">
+        <description>A monthly subseries plot showing the aggregate deer-vehicle accident counts for each month across the ten years 2002 to 2011, with the overall monthly average shown in blue. Each panel represents one month of the year. There is an overall rise in each monthly series.</description>
+      </image>
+      <caption><p>Monthly numbers of deer-vehicle accidents across the ten years 2002 to 2011.</p></caption>
     </figure>
 
     <p>
-      Overlaying annual smooths reveals a recurring within-year pattern with two broad peaks.
+      There is an overall rise in each monthly series with some, occasionally dramatic, variation, and a possible
+      seasonal pattern. Summarising over months is a bit of an approximation, as the months are not all the same
+      length. An alternative is to fit another smooth across the data, rougher than the one in Figure
+      <xref ref="fig-deer1"/>, and overlay the resulting individual annual series. This has been done in Figure
+      <xref ref="fig-deer3"/>. An adaptive smooth has been used.
     </p>
 
     <figure xml:id="fig-deer3">
-      <image source="images/deer3-1.png"/>
-      <caption><p>Overlaid annual patterns of deer-vehicle accidents from January to December.</p></caption>
+      <image source="images/deer3-1.png">
+        <description>Annual deer-vehicle accident smooths overlaid from January to December for each of the ten years 2002 to 2011, labelled by year on the right. The lines show a fairly regular pattern with peaks in May-June and October-November and lower values in spring and, to a lesser extent, summer.</description>
+      </image>
+      <caption><p>Numbers of deer-vehicle accidents across all ten years overlaid from Jan 1st to Dec 31st.</p></caption>
     </figure>
 
     <p>
-      Weekly analysis suggests different seasonal behavior for weekdays versus weekends.
+      The plot shows a fairly regular pattern across the years with peaks in May-June and October-November and
+      lower values in Spring and, to a lesser extent, Summer. The highest numbers are about double the lowest ones.
+    </p>
+
+    <p>
+      Given the differences in vehicle traffic between weekdays and weekends and public holidays, there could well
+      be weekly patterns as well. An initial analysis, without treating public holidays as similar to weekends is
+      shown in Figure <xref ref="fig-deer4"/>.
     </p>
 
     <figure xml:id="fig-deer4">
-      <image source="images/deer4-1.png"/>
-      <caption><p>Day-of-week patterns in deer-vehicle accidents.</p></caption>
+      <image source="images/deer4-1.png">
+        <description>Smoothed day-of-week patterns in the number of deer-vehicle accidents, with separate panels for each day from Sunday to Saturday. Each panel shows the smooth over the ten-year period. Peaks in summer and troughs in winter are visible for all days, with weekends showing a more pronounced seasonal pattern than weekdays.</description>
+      </image>
+      <caption><p>Day of the week patterns in numbers of deer-vehicle accidents.</p></caption>
     </figure>
 
     <p>
-      Half-hourly data show strong daily structure whose shape varies through the year; sunrise and sunset movement
-      patterns align with the observed peaks.
+      A few values of the smoothing parameter were tried and the rounded value leading to this display was chosen,
+      as it suggested a clear differentiation between weekdays and weekends. The peaks in summer and the troughs
+      in winter stand out. Presumably there is less vehicle traffic at weekends in winter and hence fewer accidents
+      with deer then than in summer. The lack of seasonality in the weekday plots offers supporting evidence.
+    </p>
+
+    <p>
+      In the early days of time series analysis there were suggestions that time series could be decomposed into
+      components of trend, seasonality, and noise. Sometimes this works well, sometimes it is difficult to
+      disentangle trend and seasonality. That is to some extent the case here.
+    </p>
+
+    <p>
+      The data available are more detailed than these graphics imply. Numbers of accidents are reported for every
+      half-hour of every day, i.e. there are 48 numbers per day. Figures <xref ref="fig-deer6"/> and
+      <xref ref="fig-deer7"/> investigate the monthly averages of these daily data across months by year and
+      across years by month. Unsurprisingly there are differences in the patterns by years, as the data are
+      shifted for the individual months. This is easier to see in Figure <xref ref="fig-deer7"/>, where the two
+      peaks are further apart for the summer months and closer together for the winter months. According to
+      @hothorn:2015 the deer are on the move more around sunrise and after sunset, which explains these peaks
+      and their pattern across the year. In that paper, heat maps were used to display the daily data.
+    </p>
+
+    <p>
+      Figures <xref ref="fig-deer6"/> and <xref ref="fig-deer7"/> are a good example of where the choice of
+      which time variable to facet by is important. Both plots convey the information, but the second one does
+      it better.
     </p>
 
     <figure xml:id="fig-deer6">
-      <image source="images/deer6-1.png"/>
-      <caption><p>Average daily deer-accident patterns by month (coloured) and year.</p></caption>
+      <image source="images/deer6-1.png">
+        <description>Line plots showing average daily patterns of deer-vehicle accidents for each half-hour of the day, faceted by year (ten panels in two rows), with lines coloured by month. Each year shows two daily peaks corresponding to sunrise and sunset activity of deer, with the peaks further apart in summer months and closer together in winter months.</description>
+      </image>
+      <caption><p>Average daily patterns in numbers of deer-vehicle accidents by month (the coloured lines) and year.</p></caption>
     </figure>
 
     <figure xml:id="fig-deer7">
-      <image source="images/deer7-1.png"/>
-      <caption><p>Daily deer-accident patterns by month across years (coloured by year).</p></caption>
+      <image source="images/deer7-1.png">
+        <description>Line plots showing daily patterns of deer-vehicle accidents for each half-hour of the day, faceted by month (twelve panels in two rows), with lines coloured by year. The two daily peaks (sunrise and sunset) are further apart in summer months such as June and July, and closer together in winter months such as December and January.</description>
+      </image>
+      <caption><p>Daily patterns in numbers of deer-vehicle accidents by month across the years (the coloured lines).</p></caption>
     </figure>
-
-    <p>
-      Comparing facet choices shows the month-faceted form more clearly exposes shifts in peak spacing across seasons.
-    </p>
   </section>
 
   <section xml:id="sec-deer-nondeer">
     <title>What about vehicle accidents without deer?</title>
 
     <p>
-      Non-deer accident data over the same decade provide a useful baseline for identifying deer-specific temporal
-      features.
+      Data are available over the same period for vehicle accidents not involving deer and these are useful for
+      comparison purposes, in particular for studying what features of the deer-vehicle accident data are not
+      found in the data for other accidents.
+    </p>
+
+    <p>
+      Figure <xref ref="fig-veh1"/> shows a smoothed version of the daily number of vehicle accidents not
+      involving deer, together with the comparable graph for deer-vehicle accidents.
     </p>
 
     <figure xml:id="fig-veh1">
-      <image source="images/veh1-1.png"/>
-      <caption><p>Smoothed daily non-deer accidents (blue) and deer accidents (brown), 2002-2011.</p></caption>
+      <image source="images/veh1-1.png">
+        <description>A smooth line plot comparing the daily number of non-deer-vehicle accidents (blue) and deer-vehicle accidents (brown) in Bavaria from 2002 to 2011. Non-deer accidents are at a higher overall level (over twice as many) with little change over time, while deer accidents show the increasing trend seen in the earlier figure.</description>
+      </image>
+      <caption><p>Smoothed number of non-deer-vehicle accidents (blue) and deer-vehicle accidents (brown) per day in Bavaria over ten years.</p></caption>
     </figure>
 
     <p>
-      Non-deer accidents decline slightly overall and exhibit weaker seasonality and weekly variation than
-      deer-involved accidents.
+      There is little change over the ten years in non-deer vehicle accidents, with a decline of around 5%. The
+      overall level is over twice the level of accidents involving deer. Graphics similar to Figures
+      <xref ref="fig-deer2"/> and <xref ref="fig-deer3"/> can be drawn to show that there is a little seasonality
+      in the data, but not nearly so much as in the deer-vehicle accident data. A graphic like Figure
+      <xref ref="fig-deer4"/> would show that there is not much variation through the week either, apart from
+      fewer accidents on a Sunday. The daily pattern of non-deer accidents is shown in Figure
+      <xref ref="fig-veh2"/>.
     </p>
 
     <figure xml:id="fig-veh2">
-      <image source="images/veh2-1.png"/>
-      <caption><p>Daily non-deer accident patterns by month across years.</p></caption>
+      <image source="images/veh2-1.png">
+        <description>Line plots showing daily patterns of non-deer-vehicle accidents for each half-hour of the day, faceted by month (twelve panels in two rows), with lines coloured by year. Unlike deer accidents, there are higher levels through the day and lower levels in the middle of the night, without the strong dawn and dusk peaks seen in deer accidents.</description>
+      </image>
+      <caption><p>Daily patterns in numbers of non-deer-vehicle accidents by month across the years.</p></caption>
     </figure>
 
     <p>
-      The non-deer daily profile is characterized by elevated daytime levels and lower overnight levels rather than
-      strong dawn/dusk peaks.
+      Instead of morning and evening peaks, there are higher levels through the day and lower levels in the
+      middle of the night. Interestingly, the vertical scale is the same as that of Figure
+      <xref ref="fig-deer7"/>. In fact the half-hours with the highest average rates for deer accidents have
+      slightly higher values than the half-hours with the highest average rates for accidents not involving deer,
+      despite there being over twice as many non-deer accidents overall.
+    </p>
+
+    <p>
+      The daily plots have a sawtooth pattern that can also be seen in Figure <xref ref="fig-veh3"/> showing
+      just the data for Tuesdays each year.
     </p>
 
     <figure xml:id="fig-veh3">
-      <image source="images/veh3-1.png"/>
-      <caption><p>Tuesday-only daily non-deer accident patterns across years.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-veh4">
-      <image source="images/veh4-1.png"/>
-      <caption><p>Tuesday-only non-deer accident patterns for 2008, 2009, and 2010.</p></caption>
+      <image source="images/veh3-1.png">
+        <description>Line plots showing daily patterns of non-deer-vehicle accidents for Tuesdays only, faceted by year (ten panels in two rows). A sawtooth pattern in the half-hourly counts is visible in each year.</description>
+      </image>
+      <caption><p>Daily patterns for Tuesdays in numbers of non-deer-vehicle accidents across the years.</p></caption>
     </figure>
 
     <p>
-      Close overlap in selected years suggests stable within-day structure, possibly linked to data-generation or
-      reporting processes.
+      Overlaying the Tuesday data for the three years 2008, 2009, 2010 gives Figure <xref ref="fig-veh4"/>.
     </p>
 
-    <introduction>
-      <p>
-        <em>Answers.</em> Deer-vehicle accidents increased across the decade while other accidents declined slightly.
-        Deer accidents show clear seasonal, weekly, and daily structure, with elevated risk around sunrise and sunset,
-        especially in May, June, and November.
-      </p>
-      <p>
-        <em>Further questions.</em> What mechanisms explain the detailed daily pattern in non-deer accidents?
-      </p>
-    </introduction>
+    <figure xml:id="fig-veh4">
+      <image source="images/veh4-1.png">
+        <description>A line plot overlaying the Tuesday non-deer-vehicle accident daily patterns for the years 2008, 2009, and 2010. The three coloured lines show surprisingly close agreement in their sawtooth patterns across all half-hours of the day.</description>
+      </image>
+      <caption><p>Daily patterns for Tuesdays in numbers of non-deer-vehicle accidents for the years 2008, 2009, 2010.</p></caption>
+    </figure>
+
+    <p>
+      The agreement across the three years is surprisingly close. Possibly it has something to do with how the
+      data were collected and stored.
+    </p>
+
+    <p>
+      <em>Answers.</em> The numbers of vehicle-deer accidents in Bavaria increased over the ten years covered,
+      while the numbers of other accidents went down slightly. There are clear seasonal, weekly, and daily patterns
+      in vehicle-deer accidents. Drivers should be particularly careful in the months of May, June, November around
+      sunrise and sunset.
+    </p>
+    <p>
+      <em>Further questions.</em> Can reasons for the daily patterns in non-deer vehicle accidents be found?
+    </p>
 
     <subsection xml:id="sec-deer-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Time-axis label placement should be explicit and consistent in time-series displays.</p></li>
-        <li><p>Smoothing can effectively reveal trends and recurring temporal structure.</p></li>
-        <li><p>Facet-variable choice strongly affects interpretability.</p></li>
-        <li><p>Overlaying series is useful for assessing similarity and stability.</p></li>
+        <li><p>Axis labels for time series can be placed in different positions for the same data. Whatever is done should be stated. (Figure <xref ref="fig-deer1"/>)</p></li>
+        <li><p>Smoothing picks out trends in time series. (Figure <xref ref="fig-deer3"/>)</p></li>
+        <li><p>The choice of faceting variable is important. (Figures <xref ref="fig-deer6"/> and <xref ref="fig-deer7"/>)</p></li>
+        <li><p>Overlaying time series is effective for checking how similar they are. (Figure <xref ref="fig-veh4"/>)</p></li>
       </ul>
     </subsection>
   </section>

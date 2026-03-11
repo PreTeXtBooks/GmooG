@@ -8,134 +8,241 @@
         "I cannot imagine any condition which would cause a ship to founder. I cannot conceive of any vital disaster
         happening to this vessel. Modern shipbuilding has gone beyond that."
       </p>
-      <p>--- Captain Smith, speaking in 1907</p>
+      <p>--- Captain Smith of the <em>Titanic</em>, speaking of the <em>Adriatic</em> (1907)</p>
     </blockquote>
     <p>
-      <em>Background.</em> RMS Titanic sank in April 1912 on its maiden voyage with major loss of life, amplified by
-      insufficient lifeboat capacity.
+      <em>Background.</em> The RMS Titanic sank in the North Atlantic on its maiden voyage in April 1912 with great
+      loss of life, mainly because there were not enough lifeboats.
     </p>
     <p>
-      <em>Questions.</em> Who travelled on the Titanic? Did women and children have better survival chances? What
-      about the crew? Why did so many die?
+      <em>Questions.</em> Who travelled on the Titanic? Did women and children have better chances of surviving?
+      What about the crew? Why did so many die?
     </p>
-    <p><em>Sources.</em> Encyclopedia Titanica records.</p>
-    <p><em>Structure.</em> 2,208 cases with 16 variables.</p>
+    <p><em>Sources.</em> Encyclopedia Titanica (@titanic:2021)</p>
+    <p><em>Structure.</em> 2208 cases with 16 variables.</p>
   </introduction>
 
   <section xml:id="sec-titanic-travellers">
     <title>Who travelled on the Titanic?</title>
 
     <p>
-      The route ran Belfast-Southampton-Cherbourg-Queenstown before crossing the Atlantic. Richer modern records
-      include names, ages, sex, class/crew area, and partial fare information.
+      The tragic event of the sinking of the Titanic has been remembered in innumerable books, films, and articles,
+      and there has always been interest in who survived and who did not.
+    </p>
+
+    <p>
+      There are many datasets in circulation offering summary information on the Titanic, around fifteen or so in R
+      and its packages. Some have more data, some less, some use different variable names&#8212;it can be confusing.
+      Continuing effort by Titanic researchers has unearthed more detail and there are now lists of those on board
+      available at Encyclopedia Titanica (@titanic:2021) giving full names and ages, as well as sex and passenger
+      class or crew department. Information on fares is also given, but is incomplete. The dataset used here only
+      includes passengers and crew who sailed for America.
+    </p>
+
+    <p>
+      Before looking at survival rates, it is interesting to look at who actually travelled. The ship started in
+      Belfast, in the North of Ireland, where it had been built, sailed to Southampton, crossed the Channel to
+      Cherbourg in France, stopped off at Queenstown (now Cobh), Cork's harbour in the South of Ireland, and then
+      set off across the Atlantic.
     </p>
 
     <figure xml:id="fig-titanports">
-      <image source="../../pngImages/Tports.png"/>
-      <caption><p>Belfast to Southampton to Cherbourg to Queenstown route map.</p></caption>
+      <image source="images/Tports.png">
+        <description>A map showing the route of the Titanic from Belfast to Southampton to Cherbourg to Queenstown, plotted on a map of the British Isles and northwestern France.</description>
+      </image>
+      <caption><p>Belfast to Southampton to Cherbourg to Queenstown route map. Map: &#169; OpenStreetMap contributors.</p></caption>
     </figure>
 
     <figure xml:id="fig-titanboard">
-      <image source="images/titanBoard-1.png"/>
+      <image source="images/titanBoard-1.png">
+        <description>A barchart showing the numbers of people boarding the Titanic at each port. Southampton has by far the largest number, followed by Belfast, then Cherbourg, and Queenstown with the fewest.</description>
+      </image>
       <caption><p>Numbers boarding the Titanic by port.</p></caption>
     </figure>
 
+    <p>
+      The majority of passengers and crew joined the ship in Southampton and probably the people starting in Belfast
+      were crew. Figure <xref ref="fig-titanbg"/> shows where males and females boarded. No females joined the
+      Titanic in Belfast and the numbers of males and females who joined in Cherbourg and Queenstown look about
+      equal.
+    </p>
+
     <figure xml:id="fig-titanbg">
-      <image source="images/titanBG-1.png"/>
-      <caption><p>Numbers boarding at each port by sex.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-titanbc">
-      <image source="images/titanBC-1.png"/>
-      <caption><p>Numbers boarding by sex and passenger/crew status.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-titanbcla">
-      <image source="images/titanBcla-1.png"/>
-      <caption><p>Passenger boarding patterns by sex and class.</p></caption>
+      <image source="images/titanBG-1.png">
+        <description>Barcharts showing the numbers of males (green) and females (purple) boarding the Titanic at each port, with separate panels for each sex. No females boarded in Belfast, and the numbers of males and females who joined in Cherbourg and Queenstown look about equal.</description>
+      </image>
+      <caption><p>Numbers boarding the Titanic at each port by sex.</p></caption>
     </figure>
 
     <p>
-      Southampton dominated embarkation totals; Queenstown boarding was largely third-class and strongly Irish.
+      Figure <xref ref="fig-titanbc"/> shows the boarding patterns for passengers and crew by sex. The bulk of
+      the crew joined in Southampton as did many more male passengers than female passengers, unlike at Cherbourg
+      and Queenstown. There were even a very few passengers who boarded in Belfast, but, with one exception, these
+      were employees of Harland &amp; Wolff, the ship's builders.
+    </p>
+
+    <figure xml:id="fig-titanbc">
+      <image source="images/titanBC-1.png">
+        <description>Barcharts showing the numbers boarding the Titanic by sex and by passenger or crew status, with panels for each combination. The bulk of the crew joined in Southampton, as did many more male passengers than female passengers.</description>
+      </image>
+      <caption><p>Numbers boarding the Titanic by sex and by passenger or crew.</p></caption>
+    </figure>
+
+    <p>
+      Figure <xref ref="fig-titanbcla"/> looks at differences in boarding patterns for passengers by sex and
+      class. Almost all those who boarded in Ireland travelled third class. Of the first class passengers who
+      boarded in France there were more females than males.
+    </p>
+
+    <figure xml:id="fig-titanbcla">
+      <image source="images/titanBcla-1.png">
+        <description>Barcharts showing the numbers of passengers boarding the Titanic by sex and class, with panels for sex and class combinations. Almost all those who boarded in Ireland travelled third class, and of the first class passengers boarding in France, there were more females than males.</description>
+      </image>
+      <caption><p>Numbers of passengers boarding the Titanic by sex and class.</p></caption>
+    </figure>
+
+    <p>
+      There is information on passenger nationality and this is shown by port of boarding in Figure
+      <xref ref="fig-titanbn"/>. Any nationality with 25 or fewer passengers has been grouped together in "Other".
+      Most of the Irish (and almost only Irish) boarded in Queenstown. Americans boarded in Southampton and, to a
+      lesser extent, in Cherbourg. The Scandinavians (Swedes, Norwegians, Finns) almost all boarded in
+      Southampton. Most of the Syrian Lebanese group boarded in Cherbourg. The relatively few French boarded in
+      either Southampton or Cherbourg. Possibly French people preferred to travel on a French liner across the
+      Atlantic.
     </p>
 
     <figure xml:id="fig-titanbn">
-      <image source="images/titanBn-1.png"/>
-      <caption><p>Passenger nationality by port of boarding.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-titancln">
-      <image source="images/titanCln-1.png"/>
-      <caption><p>Passenger nationality by class.</p></caption>
+      <image source="images/titanBn-1.png">
+        <description>Horizontal barcharts showing the nationality of passengers on the Titanic by port of boarding, with separate panels for Southampton, Cherbourg, and Queenstown. Most of the Irish boarded in Queenstown, Americans mainly in Southampton and Cherbourg, Scandinavians almost entirely in Southampton, and most Syrian Lebanese in Cherbourg.</description>
+      </image>
+      <caption><p>Nationality of passengers on the Titanic by port of boarding.</p></caption>
     </figure>
 
     <p>
-      North Americans were concentrated in first class; several smaller nationality groups were concentrated in third
-      class, consistent with migration travel patterns.
+      Nationality and passenger class are related. Figure <xref ref="fig-titancln"/> shows the patterns. North
+      Americans from the US and Canada travelled mainly first class and made up the majority of passengers in first
+      class. A few English travelled first class, but almost half were in second class. Apart from a few French
+      people, the rest of first and second class were almost all from "Other" nationalities.
+    </p>
+
+    <figure xml:id="fig-titancln">
+      <image source="images/titanCln-1.png">
+        <description>Barcharts showing the nationality and class of passengers on the Titanic, with separate panels for each nationality group. North Americans made up the majority of first class passengers, while most smaller nationality groups were concentrated in third class, consistent with emigration patterns.</description>
+      </image>
+      <caption><p>Nationality and class of passengers on the Titanic.</p></caption>
+    </figure>
+
+    <p>
+      Some of the passengers are reported as being from two countries, some countries have changed borders over the
+      last 110 years, some of the data may be inaccurate. Nevertheless the main conclusions remain.
     </p>
   </section>
 
   <section xml:id="sec-titanic-survival">
     <title>Which groups had high survival rates?</title>
 
+    <p>
+      Investigations of the earlier, less detailed datasets in R showed that survival rates were higher for women
+      than men, that first class passengers had higher survival rates than second class, and that second class rates
+      were higher than third class rates. The survival rate for the crew was almost as high as the rate for third
+      class and this was assumed to be partly because crew members were assigned to man the lifeboats. This can be
+      confirmed by the more detailed information now available. Figure <xref ref="fig-titancrew"/> is a doubledecker
+      plot of the survival rates for the different groups on board. The width of each bar is proportional to the
+      number in that group.
+    </p>
+
     <figure xml:id="fig-titancrew">
-      <image source="images/titanCrew-1.png"/>
-      <caption><p>Survival rates by passenger class and crew department.</p></caption>
+      <image source="images/titanCrew-1.png">
+        <description>A doubledecker plot showing Titanic survival rates by passenger class and crew department. The width of each bar is proportional to the group size. Deck crew had the highest survival rate, even higher than first class passengers. Restaurant staff had the lowest survival rate among all groups.</description>
+      </image>
+      <caption><p>Titanic survival rates by passenger class and crew department.</p></caption>
     </figure>
 
     <p>
-      Deck crew had very high survival, consistent with lifeboat-assignment duties. Restaurant staff had especially
-      low survival.
+      Deck crew members had a higher survival rate than even first class passengers. They would have been the crew
+      assigned to the lifeboats. Survival rates for other crew members were lower than for third class passengers
+      and those working in the restaurant had a particularly low rate of survival.
+    </p>
+
+    <p>
+      Sex was an important factor as Figure <xref ref="fig-titanpass"/> shows. All female passenger groups had
+      higher survival rates than all male groups. Second class males had the worst survival rate of all passengers.
     </p>
 
     <figure xml:id="fig-titanpass">
-      <image source="images/titanPass-1.png"/>
-      <caption><p>Passenger survival rates by sex and class.</p></caption>
+      <image source="images/titanPass-1.png">
+        <description>A doubledecker plot showing Titanic survival rates by sex and passenger class. All female passenger groups had higher survival rates than all male groups, and second class males had the worst survival rate of all passengers.</description>
+      </image>
+      <caption><p>Survival rates by sex and class for the passengers.</p></caption>
     </figure>
 
     <p>
-      Female passenger groups outperformed male groups across classes; second-class males had especially low survival.
+      Additional information on the ages of those on board permits study of the possible influence of age. Age
+      distributions by class and crew are shown in Figure <xref ref="fig-titanage"/>. First Class passengers
+      tended to be older and there were few children amongst them. Most children travelled as Third Class
+      passengers and the Third Class passengers were generally younger. There were a couple of fourteen year-old
+      crew members, but most were aged between 20 and 50. A dotted line has been drawn at 14. This splits the ages
+      into "young" and "old", close to the numbers in the older, less detailed dataset. Age information is not
+      available for 4 adult passengers, three of whom did not survive.
     </p>
 
     <figure xml:id="fig-titanage">
-      <image source="images/titanAge-1.png"/>
-      <caption><p>Age density estimates by class/crew grouping.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-titanasurv">
-      <image source="images/titanASurv-1.png"/>
-      <caption><p>Survival rates by age.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-titanagesc">
-      <image source="images/titanAgeSC-1.png"/>
-      <caption><p>Survival rates by age, sex, and class/crew grouping.</p></caption>
+      <image source="images/titanAge-1.png">
+        <description>Density estimates of age for each class and crew grouping on the Titanic. First class passengers tended to be older with few children, most children were in third class, and most crew were aged between 20 and 50. A dotted brown line marks age 14.</description>
+      </image>
+      <caption><p>Density estimates of age by class on the Titanic.</p></caption>
     </figure>
 
     <p>
-      Age alone had limited effect apart from higher child survival; sex and class/crew role were much stronger
-      determinants.
+      The survival rates by age are shown in Figure <xref ref="fig-titanasurv"/>. The area of a point is
+      proportional to the number of that age.
     </p>
 
-    <introduction>
-      <p>
-        <em>Answers.</em> First class was heavily North American; many smaller-nationality groups travelled mainly
-        third class. Survival depended most on class/role and sex. Nearly all first-class women survived, and deck
-        crew had by far the best crew survival, reflecting lifeboat operations.
-      </p>
-      <p>
-        <em>Further questions.</em> How full were lifeboats? How many additional lives were possible with full
-        occupancy? Are comparable datasets available for other maritime disasters?
-      </p>
-    </introduction>
+    <figure xml:id="fig-titanasurv">
+      <image source="images/titanASurv-1.png">
+        <description>A bubble scatterplot with a smooth curve showing survival rates by age on the Titanic. The area of each point is proportional to the number of passengers at that age. Survival rates vary little with age overall, although children have higher survival rates and the very oldest passengers did not survive.</description>
+      </image>
+      <caption><p>Survival rates by age.</p></caption>
+    </figure>
+
+    <p>
+      Survival rates vary little with age, although the few children have higher survival rates and the small
+      number of the very oldest did not survive. Including the effects of sex and class or crew offers an in-depth
+      view, Figure <xref ref="fig-titanagesc"/>.
+    </p>
+
+    <figure xml:id="fig-titanagesc">
+      <image source="images/titanAgeSC-1.png">
+        <description>Bubble scatterplots with smooths showing survival rates by age, sex, and class or crew grouping. The plots are faceted by group (First Class, Second Class, Third Class, Crew) with males (green) and females (purple) shown separately. In all groups, females have higher survival rates across almost all ages, with particularly large differences in second class where few men survived.</description>
+      </image>
+      <caption><p>Survival rates by age, sex, and class or crew.</p></caption>
+    </figure>
+
+    <p>
+      In all groups the females have higher survival rates across (almost) all ages. The smooths at lower ages are
+      based on very little data. Differences are particularly large in the second class where few men survived.
+      Overall, apart from the survival rates of children, there is little difference in the survival rates by age.
+    </p>
+
+    <p>
+      <em>Answers.</em> The majority of first class passengers were North Americans, probably returning home after
+      a European trip. There were groups from smaller countries, travelling mainly in third class, who were
+      presumably emigrating. Survival turned out to depend primarily on passenger class and sex, with almost all
+      females travelling 1st class surviving. Amongst the crew, the deck crew who manned the lifeboats had the
+      highest rate of survival by far. The fact that there were nowhere near enough lifeboats was crucial.
+    </p>
+    <p>
+      <em>Further questions.</em> How full were the lifeboats? How many more could have survived if they had been
+      full? Are there related datasets for other maritime disasters that this one might be compared with?
+    </p>
 
     <subsection xml:id="sec-titanic-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Horizontal bar charts are essential with many categories and long labels.</p></li>
-        <li><p>Doubledecker plots compare rates effectively across groups of unequal size.</p></li>
-        <li><p>Density estimates work well for grouped distribution comparisons.</p></li>
-        <li><p>Smooths summarize irregular scatter patterns effectively.</p></li>
+        <li><p>Drawing barcharts horizontally is essential when there are many categories, and for making sure labels are readable. (Figure <xref ref="fig-titanbn"/>)</p></li>
+        <li><p>Doubledecker plots are excellent for comparing rates of groups of different sizes. (Figures <xref ref="fig-titancrew"/> and <xref ref="fig-titanpass"/>)</p></li>
+        <li><p>Density estimates work well for comparing distributions by group. (Figure <xref ref="fig-titanage"/>)</p></li>
+        <li><p>Smooths are valuable for summarising irregular scatterplot patterns. (Figures <xref ref="fig-titanasurv"/> and <xref ref="fig-titanagesc"/>)</p></li>
       </ul>
     </subsection>
   </section>
