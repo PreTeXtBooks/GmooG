@@ -131,4 +131,40 @@
 
   <!-- link:1947 -->
   <biblio xml:id="link-1947" type="raw">Link, Arthur. <pubtitle>Wilson, Vol I: The Road to the White House</pubtitle>. Princeton University Press, Princeton, New Jersey, 1947.</biblio>
+
+  <!-- michelson:1880 -->
+  <biblio xml:id="michelson-1880" type="raw">Michelson, Albert. Experimental Determination of the Velocity of Light made at the U.S. Naval Academy, Annapolis. <pubtitle>Astronomical Papers</pubtitle>, 1:109&#8211;145. U.S. Nautical Almanac Office, 1880.</biblio>
+
+  <!-- michelson:1927 -->
+  <biblio xml:id="michelson-1927" type="raw">Michelson, Albert. Measurement of the Velocity of Light between Mount Wilson and Mount San Antonio. <pubtitle>Astrophysical Journal</pubtitle>, LXV:1&#8211;22, 1927.</biblio>
+
+  <!-- newcomb:1891 -->
+  <biblio xml:id="newcomb-1891" type="raw">Newcomb, Simon. Measures of the velocity of light made under the direction of the Secretary of the Navy during the years 1880&#8211;1882. <pubtitle>Astronomical Papers</pubtitle>, 2:107&#8211;230, 1891.</biblio>
+
+  <!-- stigler:1977 -->
+  <biblio xml:id="stigler-1977" type="raw">Stigler, Stephen. Do Robust Estimators Work with Real Data? <pubtitle>Annals of Statistics</pubtitle>, 5(6):1055&#8211;1098, 1977.</biblio>
+
+  <!-- mackay:2000 -->
+  <biblio xml:id="mackay-2000" type="raw">MacKay, R. Jock and Oldford, Wayne. Scientific Method, Statistical Method and the Speed of Light. <pubtitle>Statistical Science</pubtitle>, 15(3):254&#8211;278, 2000.</biblio>
+
+  <!-- youden:1972 -->
+  <biblio xml:id="youden-1972" type="raw">Youden, William. Enduring Values. <pubtitle>Technometrics</pubtitle>, 14(1):1&#8211;11, 1972.</biblio>
+
+  <!-- olymp:2022 -->
+  <biblio xml:id="olymp-2022" type="raw">IOC. Olympic Games. <url href="https://olympics.com/en/"/>. 2022. (accessed 16.8.2022)</biblio>
+
+  <!-- griffin:2019 -->
+  <biblio xml:id="griffin-2019" type="raw">Griffin, Randi. Olympics. <url href="https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results"/>. 2019. (accessed 01.10.2019)</biblio>
+
+  <!-- english:2015 -->
+  <biblio xml:id="english-2015" type="raw">English, Colleen. &#8220;Not a Very Edifying Spectacle&#8221;: The Controversial Women&#8217;s 800-Meter Race in the 1928 Olympics. <url href="https://ussporthistory.com/2015/10/08/not-a-very-edifying-spectacle-the-controversial-womens-800-meter-race-in-the-1928-olympics/"/>. 2015. (accessed 28.08.2022)</biblio>
+
+  <!-- robinson:2012 -->
+  <biblio xml:id="robinson-2012" type="raw">Robinson, Roger. &#8220;Eleven Wretched Women.&#8221; <url href="https://www.runnersworld.com/advanced/a20802639/eleven-wretched-women/"/>. 2012. (accessed 28.08.2022)</biblio>
+
+  <!-- abbott:2012 -->
+  <biblio xml:id="abbott-2012" type="raw">Abbott, Karen. The 1904 Olympic marathon may have been the strangest ever. <url href="https://www.smithsonianmag.com/history/the-1904-olympic-marathon-may-have-been-the-strangest-ever-14910747/"/>. 2012. (accessed 18.3.2022)</biblio>
+
+  <!-- nicault:2021 -->
+  <biblio xml:id="nicault-2021" type="raw">Nicault, Christophe. History of National Olympic Committees participating in the Olympic Summer Games. <url href="https://www.christophenicault.com/pages/visualizations/"/>. 2021. (accessed 04.04.2022)</biblio>
 </references>
