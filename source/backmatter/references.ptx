@@ -39,8 +39,23 @@
   <!-- bertin:2010 -->
   <biblio xml:id="bertin-2010" type="raw">Bertin, Jacques. <pubtitle>Semiology of Graphics</pubtitle>. Esri Press, Redlands, California, 2010.</biblio>
 
+  <!-- Wainer:1997 -->
+  <biblio xml:id="Wainer-1997" type="raw">Wainer, Howard. <pubtitle>Visual Revelations</pubtitle>. Springer, New York, 1997.</biblio>
+
+  <!-- Wainer:2004 -->
+  <biblio xml:id="Wainer-2004" type="raw">Wainer, Howard. <pubtitle>Graphic Discovery: A Trout in the Milk and Other Visual Adventures</pubtitle>. Princeton University Press, Princeton, New Jersey, 2004.</biblio>
+
   <!-- wilkinson:2005 -->
   <biblio xml:id="wilkinson-2005" type="raw">Wilkinson, Leland. <pubtitle>The Grammar of Graphics</pubtitle>. 2nd ed. Springer, New York, 2005.</biblio>
+
+  <!-- coulmont:2010 -->
+  <biblio xml:id="coulmont-2010" type="raw">Coulmont, Baptiste. Cartographie avec R. 2010. <url href="http://coulmont.com/cartes/rcarto.pdf"/></biblio>
+
+  <!-- friendly:2007 -->
+  <biblio xml:id="friendly-2007" type="raw">Friendly, Michael. A.-M. Guerry's Moral Statistics of France: Challenges for Multivariable Spatial Analysis. <em>Statistical Science</em>, 22(3):368&#8211;399, 2007.</biblio>
+
+  <!-- wikip:2020 -->
+  <biblio xml:id="wikip-2020" type="raw">Wikipedia. The Blue Banana. 2020. <url href="https://en.wikipedia.org/wiki/Blue_Banana"/></biblio>
 
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
