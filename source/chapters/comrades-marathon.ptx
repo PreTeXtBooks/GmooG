@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-comrades-marathon">
   <title>Over 90 years running 90 km</title>
 
@@ -7,98 +7,69 @@
       <p>"Success supposes endeavour."</p>
       <p>--- Jane Austen</p>
     </blockquote>
-    <p>
-      <em>Background.</em> The Comrades Marathon between Durban and Pietermaritzburg has been run over ninety times
-      since 1921.
-    </p>
-    <p>
-      <em>Questions.</em> How many people take part? Who takes part and how has that changed? How long do the best and
-      typical runners take? Are men much faster than women? How do "up" and "down" races compare?
-    </p>
-    <p><em>Sources.</em> Data from Stratton with race-profile information from East.</p>
-    <p><em>Structure.</em> 445,129 participants' runs with 12 variables.</p>
+    <p><em>Background.</em> The Comrades Marathon in South Africa between Durban and Pietermaritzburg has been run over 90 times since 1921.</p>
+    <p><em>Questions.</em> How many people take part? Who takes part and how has that changed over the years? How long do the best runners take and how long do most runners take? Are men much faster than women? Is there a difference in times between the down runs starting in Pietermaritzburg and the up runs starting in Durban?</p>
+    <p><em>Sources.</em> Data from @stratton:2019, race profile information from @east:2022.</p>
+    <p><em>Structure.</em> Information on 445129 participants' runs in 12 variables.</p>
   </introduction>
 
   <section xml:id="sec-comm-entries">
     <title>How many run in the Comrades (Ultra)Marathon?</title>
 
-    <p>
-      The race began in 1921 with 16 finishers. Direction typically alternates by year: "down" (Durban to
-      Pietermaritzburg) and "up" (the reverse), with a few historical exceptions.
-    </p>
+    <p>The data were scraped from the Marathon's website (@CMA:2022) and made available on Kaggle. More detailed data, including runners' ages and split times for the 2019 race, have been analysed elsewhere (@collier:2019).</p>
+
+    <p>The race was run for the first time in 1921 from Durban to Pietermaritzburg (down), with 16 runners finishing. In 1922 the race was run in the other direction (up). Mostly the directions alternated in successive years, but on three occasions they did not.</p>
 
     <figure xml:id="fig-comdir">
       <image source="images/comDir-1.png"/>
-      <caption>
-        <p>Numbers of finishers and race direction by year (dark orange up, black down).</p>
-      </caption>
+      <caption><p>Numbers of finishers of the Comrades Marathon and the race direction by year (dark orange is up, black is down).</p></caption>
     </figure>
 
-    <p>
-      Participation stayed low until the 1960s, rose sharply in the 1970s and 1980s, and spiked in 2000 due to heavy
-      publicity and a one-year extension of the finishing limit from 11 to 12 hours.
-    </p>
+    <p>Numbers remained low until the 1960s and rose sharply in the 1970s and 1980s. No races took place from 1941 to 1945 during the Second World War. There was a sharp peak in the year 2000 when just over 20,000 finished, almost twice as many as in the surrounding years. It was the 75th running of the race and the finish limit was extended from 11 hours to 12 hours for that year. Detailed information can be found on the race website (@CMA:2022) and summary information on Wikipedia (@ComradesM:2022).</p>
   </section>
 
   <section xml:id="sec-comm-age-sex">
     <title>Numbers by age and sex</title>
 
-    <p>
-      Women and black runners were officially allowed from 1975, though notable earlier exceptions occurred. Runners
-      are grouped into age categories (senior, veteran, masters, grandmasters), enabling long-run composition trends.
-    </p>
+    <p>The race was originally only open to white males. In 1975 both women and blacks were allowed to enter officially for the first time, although there were earlier unofficial exceptions.</p>
+
+    <p>Runners have to be at least 20 and are divided into separate groups by age: SENIOR (20-39), VETERANS (40-49), MASTERS (50-59), and GRANDMASTERS (60+).</p>
 
     <figure xml:id="fig-comcats">
       <image source="images/comCats-1.png"/>
-      <caption>
-        <p>
-          Numbers of finishers by age group and sex from 1975 to 2019 (brown line indicates missing birth-year
-          category).
-        </p>
-      </caption>
+      <caption><p>Numbers of finishers by age group and sex from 1975 to 2019 (the brown line is for those whose birth year is not given).</p></caption>
     </figure>
 
-    <p>
-      Male seniors dominated for many years; in recent years male veterans have approached similar numbers. Smaller
-      groups generally increased, with visible peaks in 2000 and 2010.
-    </p>
+    <p>The male seniors group dominated until around 2000, apart from years in the 1980s when entrants with no birth year could not be assigned to a category. In recent years the number of male veterans has become larger and almost the same as the number of male seniors. Smaller groups follow a common pattern of general increase with peaks in 2000 and 2010.</p>
+
+    <p>The first foreign entrants were a group of four top runners from England in 1962 (@ComradesM:2022). Figure <xref ref="fig-wfnos"/> shows how numbers of female and foreign finishers have developed since 1975.</p>
 
     <figure xml:id="fig-wfnos">
       <image source="images/wfNos-1.png"/>
       <caption><p>Numbers of female (purple) and foreign (red) finishers since 1975.</p></caption>
     </figure>
 
-    <p>
-      Both female and foreign participation increased over time, with stronger variability in female counts.
-    </p>
+    <p>Both groups have grown over time, with foreign finishers increasing more slowly and with less variability. Female finishers peaked sharply in 2000 and 2010, and a new highest number was established in 2018.</p>
   </section>
 
   <section xml:id="sec-comm-finish-times">
     <title>How long do runners take to finish?</title>
 
-    <p>
-      Cross-year comparisons are affected by weather, route distance, race direction, and changing field sizes, along
-      with historical time-limit changes.
-    </p>
+    <p>The race was limited to 12 hours in the first few years until 1927. From 1928 to 2002 the limit was 11 hours, apart from 2000 when it was extended to 12 hours. Since 2003 the limit has been 12 hours again. Cross-year comparisons are difficult because of changing numbers, weather, race direction, and race distances.</p>
 
     <figure xml:id="fig-combox">
       <image source="images/comBox-1.png"/>
       <caption><p>Distributions of finishing times in hours by year.</p></caption>
     </figure>
 
-    <p>
-      The wartime gap (no races from 1941 to 1945) and the 11/12-hour limits are clear. Median finishing times
-      generally rose as participation increased; 2000 stands out with a higher median and spread.
-    </p>
+    <p>The wartime gap is obvious, and the 11-hour and 12-hour limits are visible. The best times improved from the early years, but very few runners took part then. The median finishing time has increased since 1975 as more runners participated. The year 2000 distribution differs from neighbouring years because of both the higher participant count and the extended limit.</p>
 
     <figure xml:id="fig-comstat">
       <image source="images/comStat-1.png"/>
-      <caption><p>Median times, best times, and numbers of finishers from 1946 to 2019.</p></caption>
+      <caption><p>Median times (red), best times (blue), and numbers of finishers (barchart) from 1946 to 2019.</p></caption>
     </figure>
 
-    <p>
-      Best times have remained relatively stable in recent decades, while median times increased.
-    </p>
+    <p>This confirms already-seen patterns while emphasising the huge differences in numbers finishing. Best times have been relatively stable in recent decades and median times have increased.</p>
   </section>
 
   <section xml:id="sec-comm-men-women">
@@ -107,23 +78,21 @@
     <subsection xml:id="sec-comm-best-mf">
       <title>Best times for men and women</title>
 
+      <p>Women have officially been allowed to run since 1975. At first few took part. Since 1980 over 30 women have finished each year, rising to over 3000 in 2019.</p>
+
       <figure xml:id="fig-commf">
         <image source="images/comMF-1.png"/>
         <caption><p>Best times for women (purple) and men (green) since 1980.</p></caption>
       </figure>
 
-      <p>
-        Men's best times are faster on average, and male finishers substantially outnumber female finishers.
-      </p>
+      <p>Between 2000 and 2019 the mean best time for men has been about 5.5 hours and for women about 6.25 hours. Over this period some four to five times as many men have finished each year as women. The women's record is still the 1989 time of 5:54:43 by Frith van der Merwe.</p>
 
       <figure xml:id="fig-comfperc">
         <image source="images/comFperc-1.png"/>
         <caption><p>Percentage of women participants since 1980.</p></caption>
       </figure>
 
-      <p>
-        The female participation share rose steadily to around 2010, then stabilized near one fifth.
-      </p>
+      <p>The proportion of women taking part rose fairly steadily from 1980 to 2010 and has remained at about 20% since.</p>
     </subsection>
 
     <subsection xml:id="sec-comm-median-mf">
@@ -131,18 +100,10 @@
 
       <figure xml:id="fig-commfmed">
         <image source="images/comMFmed-1.png"/>
-        <caption>
-          <p>
-            Median times for men and women for up (dark orange) and down (black) races since 1980, with numbers
-            finishing.
-          </p>
-        </caption>
+        <caption><p>Median times for men and women for up (dark orange) and down (black) races since 1980 and the numbers finishing.</p></caption>
       </figure>
 
-      <p>
-        Median times have generally increased (except the 2000 anomaly), and up races tend to be slightly slower than
-        down races.
-      </p>
+      <p>The medians have been increasing steadily, apart from the year 2000. The graph for up runs tends to be slightly higher than the graph for down runs. The average difference between male and female medians has been just over half an hour, while male participation is much larger.</p>
     </subsection>
   </section>
 
@@ -151,102 +112,68 @@
 
     <figure xml:id="fig-comtimes">
       <image source="images/comTimes-1.png"/>
-      <caption>
-        <p>
-          Finishing times in the 2019 race for women (top) and men (bottom), with dotted medal-threshold lines.
-        </p>
-      </caption>
+      <caption><p>Finishing times in the 2019 race for females (above) and males (below), dotted lines mark limits for awarding medals other than gold.</p></caption>
     </figure>
 
-    <p>
-      The distributions show boundary effects at key target times, consistent with runners pacing to medal and
-      cut-off thresholds.
-    </p>
+    <p>The vertical scales differ because fewer women took part. Similar intermediate boundary effects can be seen in both histograms, suggesting many runners target particular finish times. Medal rules and details can be found in @ComradesM:2022.</p>
   </section>
 
   <section xml:id="sec-comm-up-down">
     <title>How different are the up and down races?</title>
 
+    <p>As races take place in different years, over different distances, in different directions, comparisons are inexact.</p>
+
     <figure xml:id="fig-comud">
       <image source="images/comUD-1.png"/>
-      <caption><p>Comparisons of best times for up (dark orange) and down (black) races since 1921.</p></caption>
+      <caption><p>Comparisons of best times in hours for the up (dark orange) and down (black) races since 1921.</p></caption>
     </figure>
 
-    <p>
-      Best times in up races are typically slightly higher than nearby down-race best times.
-    </p>
+    <p>In general the best times for up races are slightly higher than those for the closest down races.</p>
 
     <figure xml:id="fig-comudp">
       <image source="images/comUDp-1.png"/>
-      <caption>
-        <p>
-          Average speed of fastest and median runners (km/hr) for up (dark orange) and down (black) races since
-          1970.
-        </p>
-      </caption>
+      <caption><p>Average speed of the fastest runners and of the median runners in km/hr for up and down races since 1970.</p></caption>
     </figure>
 
     <figure xml:id="fig-comdist">
       <image source="images/comDist-1.png"/>
-      <caption>
-        <p>
-          Distances for up and down races since 1970 and a planned 2020 down-race elevation profile.
-        </p>
-      </caption>
+      <caption><p>Distances in km for the up and down races since 1970 and a profile plot for the down race planned for 2020.</p></caption>
     </figure>
 
-    <p>
-      Down races are not continuously downhill and up races are not continuously uphill, but the net elevation
-      difference between cities is substantial.
-    </p>
+    <p>Speeds are generally faster for down races than up races. The down race is not all downhill and the up race is not all uphill, but there is an elevation difference of around 700 m between Pietermaritzburg and Durban, as the profile for the planned but cancelled 2020 race shows (@east:2022).</p>
   </section>
 
   <section xml:id="sec-comm-individuals">
     <title>How do individual runners perform over the years?</title>
 
-    <p>
-      Individual trajectories reveal both consistency and variability, including notable cases such as Elena and
-      Olesya Nurgalieva.
-    </p>
+    <p>Two of the best female runners are the identical twins Elena and Olesya Nurgalieva. Elena ran every year from 2003 to 2015, while Olesya missed 2006 and 2012.</p>
 
     <figure xml:id="fig-comnurg">
       <image source="images/comNurg-1.png"/>
       <caption><p>Performances of the Nurgalieva identical twins.</p></caption>
     </figure>
 
-    <p>
-      Their performances were very close across many years, with several races separated by only small margins.
-    </p>
+    <p>The sisters ran very similar times over the years, mostly within about two minutes. Elena had the best overall female time eight times and Olesya twice.</p>
 
     <figure xml:id="fig-commany">
       <image source="images/comMany-1.png"/>
-      <caption><p>Runners with more than 40 finishes, ordered by first year raced.</p></caption>
+      <caption><p>Runners who have finished more than 40 times, ordered by the first time they ran the race.</p></caption>
     </figure>
 
-    <p>
-      Many long-career runners show an improve-then-decline pattern with age, but individual variation is large.
-    </p>
+    <p>Some runners have isolated poor performances compared with their other results and some show more variability, but many display a decline in performance as they get older.</p>
 
     <introduction>
-      <p>
-        <em>Answers.</em> Participation has grown dramatically; female and international participation increased;
-        older-runner representation rose; best times improved then stabilized; median times rose with larger fields;
-        men's best times remain faster by roughly three quarters of an hour; and up-race best times are generally
-        slightly slower than down-race best times.
-      </p>
-      <p>
-        <em>Further questions.</em> How are age and performance related when full birth-year data are used? How do
-        patterns compare with other marathons that are shorter and newer?
-      </p>
+      <p><em>Answers.</em> Numbers of participants have increased enormously. Since the race was made open to all, many women now run. The proportion of older runners has increased and international participation has grown. The fastest time has dropped, but not noticeably in the last 20 years. Median times have tended to increase as more runners participate. Men's best times are quicker than women's best times, but there are far more male runners. Overall, best times for up races are generally slightly higher than best times for down races.</p>
+      <p><em>Further questions.</em> Birth years of runners are available on the Marathon website but were not scraped. How are age and performance related? Other marathons are newer and shorter: do their patterns differ substantially from those found for Comrades?</p>
     </introduction>
 
     <subsection xml:id="sec-comm-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Year-wise boxplots can convey rich distributional information compactly.</p></li>
-        <li><p>Axes need not start at zero when comparisons remain honest and clear.</p></li>
-        <li><p>Aligned time-series summaries plus counts are effective for historical context.</p></li>
-        <li><p>Related plots can use different scales to reveal different aspects of structure.</p></li>
+        <li><p>Boxplots by year provide a great deal of information. (Figure <xref ref="fig-combox"/>)</p></li>
+        <li><p>Scales do not always have to start at 0. (Figures <xref ref="fig-commf"/>, <xref ref="fig-comudp"/>, and <xref ref="fig-commany"/>)</p></li>
+        <li><p>Combining a time series of statistics with a barchart of numbers over time works well when time scales are aligned. (Figures <xref ref="fig-comstat"/> and <xref ref="fig-commfmed"/>)</p></li>
+        <li><p>Scaling of related data may vary across plots to get the most information from them. (Figures <xref ref="fig-comtimes"/> and <xref ref="fig-comnurg"/>)</p></li>
       </ul>
     </subsection>
   </section>

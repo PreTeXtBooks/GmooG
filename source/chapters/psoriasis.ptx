@@ -2,113 +2,57 @@
 <chapter xml:id="ch-psoriasis">
   <title>Psoriasis and the Quality of Life</title>
 
+  <epigraph>
+    <q>The most important practical lesson that can be given to nurses is to teach them what to observe.</q>
+    <attribution>Florence Nightingale</attribution>
+  </epigraph>
+
   <introduction>
-    <blockquote>
-      <p>"The most important practical lesson that can be given to nurses is to teach them what to observe."</p>
-      <p>--- Florence Nightingale</p>
-    </blockquote>
-    <p>
-      Psoriasis is an unpleasant skin condition with no known cure. The data discussed here come from a phase 3
-      clinical trial of a possible treatment.
-    </p>
-    <p><em>Questions.</em> Is the treatment better than placebo? Does it show better results on all criteria?</p>
-    <p><em>Sources.</em> Wonderful Wednesdays data release by the Statisticians in the Pharmaceutical Industry group.</p>
-    <p>
-      <em>Structure.</em> Each of 450 patients has two records: quality-of-life assessment at the beginning of the
-      study and again at the end.
-    </p>
+    <p><em>Background.</em> Psoriasis is an unpleasant skin condition and there is no known cure. The research data discussed here come from a phase 3 clinical trial of a possible treatment.</p>
+    <p><em>Questions.</em> Is the treatment better than the placebo? Does it show better results on all criteria?</p>
+    <p><em>Sources.</em> @PSI:2021a</p>
+    <p><em>Structure.</em> Each of the 450 patients involved has two records, one for their quality of life assessment at the beginning of the study and one for the same assessment at the end of the study.</p>
   </introduction>
 
-  <section xml:id="sec-psoriasis-groups">
+  <section xml:id="secPsor1">
     <title>Comparing treatment and placebo groups</title>
 
-    <p>
-      The trial included 300 patients in treatment and 150 in placebo. PASI (Psoriasis Area and Severity Index)
-      was assessed at baseline. The DLQI questionnaire (Dermatology Life Quality Index) was administered at baseline
-      and again after 16 weeks for almost all participants.
-    </p>
-    <p>
-      The questionnaire has ten items, each scored 0 to 3, with 0 indicating no impact on quality of life and 3
-      indicating maximum impact.
-    </p>
+    <p>As part of their Wonderful Wednesdays project (@PSI:2021b), the Statisticians in the Pharmaceutical Industry group made available a dataset of a treatment for psoriasis (@PSI:2021a). There was a treatment group of 300 patients and a placebo group of 150. The PASI score (Psoriasis Area and Severity Index) was assessed for each person at the start of the study. The DLQI questionnaire (Dermatology Life Quality Index) was administered to every patient at the start and to almost all patients after 16 weeks, with a few dropouts. The questionnaire has ten questions, each answered on a discrete scale of 0, 1, 2, 3, with 0 meaning no impact on quality of life and 3 meaning maximum impact. Figure <xref ref="fig-qlEns"/> is a display of three plots summarising the study.</p>
 
-    <figure xml:id="fig-qlens">
+    <figure xml:id="fig-qlEns">
+      <caption>The spineplot top left shows the treatment group was much bigger than the placebo group and the dropout rate was small for both groups. The scatterplots of PASI and DLQI scores at the start of the study top right show the two groups had similar initial distributions. The bottom plot shows that average initial scores on the 10 questions were similar for the groups (solid lines) and mostly slightly lower for the placebo group after 16 weeks (blue dashed line). For the treatment group average scores were substantially less on all questions after 16 weeks (dark orange dashed line).</caption>
       <image source="images/qlEns-1.png"/>
-      <caption>
-        <p>
-          The spineplot (top left) shows treatment was much larger than placebo and dropout was small in both
-          groups. The baseline PASI-DLQI scatterplots (top right) show similar initial distributions. The lower
-          panel shows average item scores: both groups start similarly, placebo changes little at week 16, and the
-          treatment group improves substantially across all questions.
-        </p>
-      </caption>
     </figure>
 
-    <p>
-      Inclusion criteria required a PASI baseline at or above a threshold; in this dataset the minimum is 12.
-      Only one participant had a baseline score above 50 (the scale maximum is 72).
-    </p>
-    <p>
-      Several DLQI items had higher average baseline burden than others, especially itch/pain, embarrassment,
-      and influence on clothing.
-    </p>
+    <p>To be included in the study patients had to have a PASI score of at least some level. In the dataset the minimum was 12. Only one participant had a score over 50, with the scale going up to 72. Some DLQI questions had higher averages than others, with questions 1, 2, and 4 having initial averages over 1.5. Other questions had initial averages less than 1 or only slightly over.</p>
   </section>
 
-  <section xml:id="sec-psoriasis-questions">
+  <section xml:id="secPsor2">
     <title>Examining responses to individual questions</title>
 
-    <introduction>
+    <p>Treatment led to improvements in averages for all individual questions. Since averaging ordered categorical responses is only an approximation, it is worthwhile to inspect separate questions. Figure <xref ref="fig-qlQ1"/> shows barcharts of responses to question 1 for the two groups at the end of the trial, compared with the start. The placebo distributions look almost identical, whereas the treatment distribution moved from right to left, indicating improvement for most patients.</p>
 
-    <p>
-      Treatment improved averages on all questions, but these are ordered categorical responses and averaging is
-      only approximate, so individual question distributions are important.
-    </p>
-
-    <figure xml:id="fig-qlq1">
+    <figure xml:id="fig-qlQ1">
+      <caption>Distributions of answers to question 1 at the start of the trial (top) and at the end (bottom): quality of life declines to the right.</caption>
       <image source="images/qlQ1-1.png"/>
-      <caption>
-        <p>
-          Distributions of answers to question 1 at the start of the trial (top) and at the end (bottom): quality
-          of life declines to the right.
-        </p>
-      </caption>
     </figure>
 
-    <p>
-      For question 1, placebo distributions are nearly unchanged, while the treatment distribution shifts left,
-      indicating broad improvement.
-    </p>
-    <p>
-      Group distributions do not show participant-level transitions directly.
-    </p>
+    <p>Figure <xref ref="fig-qlQ1"/> does not show individual changes, only group distributions. Figure <xref ref="fig-qlQ1t"/> does show individual changes. For those who answered 3 initially, most treatment patients answered 1 or 0 at week 16, while most placebo patients answered 3 or 2. For initial responses 1, 2, or 3 in the placebo group, the biggest bars are generally no-change bars, supporting little or no placebo effect.</p>
 
-    <figure xml:id="fig-qlq1t">
+    <figure xml:id="fig-qlQ1t">
+      <caption>Answers to question 1 at the start of the trial (rows) and at the end (columns within the groups).</caption>
       <image source="images/qlQ1t-1.png"/>
-      <caption>
-        <p>Answers to question 1 at the start of the trial (rows) and at the end (columns within the groups).</p>
-      </caption>
     </figure>
 
-    <p>
-      Participant-level transitions show that among those starting at severe response levels, most treatment
-      participants move to lower scores by week 16, while placebo participants are concentrated in little-change
-      categories.
-    </p>
-    <p>
-      <em>Answers.</em> The treatment group reported better quality of life on all criteria on average. Deeper
-      analysis of question 1 showed that most individuals improved.
-    </p>
-    <p>
-      <em>Further questions.</em> Do other questionnaire items show patterns similar to question 1?
-    </p>
-    </introduction>
+    <p>Figures <xref ref="fig-qlQ1"/> and <xref ref="fig-qlQ1t"/> have a similar form but different meaning, so they should be interpreted with care.</p>
 
-    <subsection xml:id="sec-psoriasis-takeaways">
-      <title>Graphical takeaways</title>
-      <ul>
-        <li><p>Ensembles of graphics can summarise the main features of a study succinctly.</p></li>
-        <li><p>Plotting individual scores is more informative than plotting totals alone.</p></li>
-      </ul>
-    </subsection>
+    <p><em>Answers.</em> The treatment group reported better quality of life on all criteria on average. Deeper analysis of question 1 showed that most individuals reported improvements in their quality of life.</p>
+    <p><em>Further questions.</em> Do the answers to the other questions display similar patterns to the answers to question 1?</p>
+
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>Ensembles of graphics can summarise the main features of a study succinctly. (Figure <xref ref="fig-qlEns"/>)</p></li>
+      <li><p>Plotting individual scores is more informative than plotting totals. (Figure <xref ref="fig-qlEns"/>)</p></li>
+    </ul>
   </section>
 </chapter>

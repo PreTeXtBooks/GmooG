@@ -1,175 +1,129 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-leagues">
   <title>Watching soccer---the English leagues</title>
 
+  <epigraph>
+    <q>Football: it's a funny old game.</q>
+    <attribution>Jimmy Greaves</attribution>
+  </epigraph>
+
   <introduction>
-    <blockquote>
-      <p>"Football: it's a funny old game."</p>
-      <p>--- Jimmy Greaves</p>
-    </blockquote>
-    <p>
-      The English soccer league, founded in 1888-89, is the oldest in the world and provides a long historical
-      record for studying competition trends.
-    </p>
-    <p>
-      <em>Questions.</em> Have draw rates changed? Has home advantage shifted? Are goals now rarer? How can team
-      histories and within-season progress be shown effectively?
-    </p>
-    <p><em>Sources.</em> The <c>engsoccerdata</c> package.</p>
-    <p><em>Structure.</em> Match results summarized in 12 variables.</p>
+    <p><em>Background.</em> The English soccer league is the oldest in the world, the first season being 1888-89.</p>
+    <p><em>Questions.</em> Are there more draws now than before? Has home advantage always been the same? Do teams score fewer goals now? Can we display team histories over years? How do teams perform over a season?</p>
+    <p><em>Sources.</em> The <em>engsoccerdata</em> package contains results for all English soccer games in the top four tiers from 1888-89 to 2021-22 (@curley:2022).</p>
+    <p><em>Structure.</em> Results of games summarised in 12 variables.</p>
   </introduction>
 
-  <section xml:id="sec-football-history">
+  <section xml:id="secFootball1">
     <title>History of the English football leagues since 1888</title>
 
-    <p>
-      The league evolved from one division to a four-tier structure with multiple reorganizations, including the
-      formation of the Premier League in 1992.
-    </p>
+    <p>The English league started with one division of 12 teams in 1888 and quickly added another in 1892. After World War I a third division started and then split North/South. In 1958 the two thirds were merged and split into national third and fourth tiers. In 1992 the old first division became the Premier League and other divisions were renamed too. For simplicity the four levels are called tiers.</p>
+
+    <p>Much historical detail is available on Wikipedia season pages. The package maintainer has also published insightful analyses (@curley:2016).</p>
   </section>
 
-  <section xml:id="sec-football-draws">
+  <section xml:id="secFootball2">
     <title>How have numbers of draws changed?</title>
 
-    <p>
-      In the top tier, draw rates rose early, stabilized for long periods, and then changed modestly after rules
-      awarding three points for a win were introduced.
-    </p>
-
-    <figure xml:id="fig-socd">
+    <figure xml:id="fig-socD">
+      <caption>Rate of draws over the years in the English league's top tier with a gam smooth.</caption>
       <image source="images/socD-1.png"/>
-      <caption><p>Rate of draws over the years in the English top tier with a GAM smooth.</p></caption>
     </figure>
 
-    <p>
-      Comparison with Italy and Spain shows distinct national trajectories and timing differences around points-rule
-      changes.
-    </p>
+    <p>The proportion of drawn games in the top tier climbed until World War I, stayed fairly constant for decades, rose again in the 1960s, and dipped slightly after 3 points for a win was introduced in 1981. Seasonal variability remained substantial.</p>
 
-    <figure xml:id="fig-socdf">
+    <figure xml:id="fig-socDf">
+      <caption>Smooths of the rates of draws for the top tiers in Italy (dark blue), England (light blue), and Spain (red).</caption>
       <image source="images/socDf-1.png"/>
-      <caption>
-        <p>Smooths of draw rates for top tiers in Italy (dark blue), England (light blue), and Spain (red).</p>
-      </caption>
     </figure>
+
+    <p>Rates in Italy and Spain differed markedly. Italy was higher in the 1970s and 1980s, while Spain was lower, then briefly higher than England, then lower again. In the most recent years shown, Spain has the highest draw rate of the three.</p>
   </section>
 
-  <section xml:id="sec-football-home-adv">
+  <section xml:id="secFootball3">
     <title>How big is home advantage?</title>
 
-    <p>
-      Home advantage can be measured as the share of points won at home. A consistent 3-points-for-win convention
-      enables comparisons through time.
-    </p>
+    <p>Home advantage is a common feature of team sports (@gomez:2022). One measure is the proportion of points won at home. Figure <xref ref="fig-socHA"/> uses a consistent 3-points-for-a-win convention across all years.</p>
 
-    <figure xml:id="fig-socha">
+    <figure xml:id="fig-socHA">
+      <caption>Proportions of points won at home over time in the various tiers of the English league.</caption>
       <image source="images/socHA-1.png"/>
-      <caption><p>Proportions of points won at home over time in the various tiers of the English league.</p></caption>
     </figure>
 
-    <p>
-      Lower tiers show long-run decline in home advantage. The 2020-21 top-tier drop aligns with pandemic-era games
-      played without fans.
-    </p>
+    <p>The lower three tiers show relatively steady decline since about 1980. In tier 1 there is a dramatic drop below 50% in 2020-21 when most games were played without fans due to Covid.</p>
 
-    <figure xml:id="fig-sochat">
+    <figure xml:id="fig-socHAt">
+      <caption>Proportions of points won at home for every team for every season.</caption>
       <image source="images/socHAt-1.png"/>
-      <caption><p>Proportions of points won at home for every team for every season.</p></caption>
     </figure>
 
-    <p>
-      Team-level results include striking outliers, including seasons with almost no away success and rare reverse
-      home/away patterns.
-    </p>
+    <p>Team-level points show striking outliers, including seasons with no away points and rare strongly negative home proportions. Several such teams were relegated.</p>
   </section>
 
-  <section xml:id="sec-football-goals">
+  <section xml:id="secFootball4">
     <title>Have the numbers of goals scored gone down?</title>
 
-    <p>
-      Goals per game were much higher in the earliest years, then declined sharply, with historical jumps around
-      rule changes and later stabilization near modern levels.
-    </p>
+    <p>Goals per game were very high in the first years, then declined quickly. The 1925 offside-law change caused a short-term surge. After a post-war rise peaking around 1960, scoring declined until about 1970 and then remained fairly stable near 2.5 goals per game.</p>
 
-    <figure xml:id="fig-socg">
+    <figure xml:id="fig-socG">
+      <caption>The numbers of goals per game for the four tiers of the English league (the change in the offside law is marked with a red dashed line).</caption>
       <image source="images/socG-1.png"/>
-      <caption>
-        <p>The numbers of goals per game for the four tiers (offside-law change marked with a red dashed line).</p>
-      </caption>
     </figure>
   </section>
 
-  <section xml:id="sec-football-teams">
+  <section xml:id="secFootball5">
     <title>How well have teams performed over the years?</title>
 
-    <p>
-      Overall season rankings across tiers support long-run team trajectory comparisons. Ghosted backgrounds with
-      highlighted teams help preserve context.
-    </p>
+    <p>League tables from all divisions can be combined into an overall seasonal ranking. Special handling is needed for periods with split third divisions and for the disrupted 2019-20 lower-tier season.</p>
 
-    <figure xml:id="fig-teambps">
+    <figure xml:id="fig-teamBPS">
+      <caption>Comparing the three South Coast teams: Bournemouth, Portsmouth, and Southampton.</caption>
       <image source="images/teamBPS-1.png"/>
-      <caption><p>Comparing the three South Coast teams: Bournemouth, Portsmouth, and Southampton.</p></caption>
     </figure>
 
-    <figure xml:id="fig-teambpsq">
+    <p>Portsmouth were strongest for a long period. Southampton were mostly strongest from the 1960s and briefly dropped to tier 3 before rebounding. Bournemouth were generally below the other two until recent years.</p>
+
+    <figure xml:id="fig-teamBPSq">
+      <caption>Comparing Bournemouth, Portsmouth, and Southampton on a square root scale.</caption>
       <image source="images/teamBPSq-1.png"/>
-      <caption><p>Comparing Bournemouth, Portsmouth, and Southampton on a square root scale.</p></caption>
     </figure>
 
-    <p>
-      The square-root rank scale emphasizes differences near the top of the pyramid more strongly than linear ranks.
-    </p>
+    <p>Using square-root transformed ranks emphasizes top-end differences more than linear ranks.</p>
   </section>
 
-  <section xml:id="sec-football-wormcharts">
+  <section xml:id="secFootball6">
     <title>Wormcharts show league progress over a season</title>
 
-    <introduction>
-      <p>
-        Wormcharts track cumulative points relative to season averages, revealing how teams separate during a
-        campaign and highlighting decisive phases.
-      </p>
+    <p>Wormcharts show how team positions evolve over a season by plotting cumulative points relative to the round-average. The 2015-16 chart shows Leicester's surprising title run and clear separation at top and bottom.</p>
 
-      <figure xml:id="fig-worm15">
-        <image source="images/worm15-1.png"/>
-        <caption><p>Team performances in points above/below average in 2015-16.</p></caption>
-      </figure>
+    <figure xml:id="fig-worm15">
+      <caption>Team performances in points above/below the average in 2015-16.</caption>
+      <image source="images/worm15-1.png"/>
+    </figure>
 
-      <figure xml:id="fig-worm82">
-        <image source="images/worm82-1.png"/>
-        <caption><p>Team performances in points above/below average in season 1982-83.</p></caption>
-      </figure>
+    <p>The 1982-83 chart highlights Liverpool's strong season and also notable late-season collapses and recoveries among relegation contenders.</p>
 
-      <figure xml:id="fig-worm3768">
-        <image source="images/worm3768-1.png"/>
-        <caption>
-          <p>
-            Wormcharts for the two seasons with extreme point ranges for the English 1st Division Championship with
-            22 teams and two points for a win between 1919-20 and 1980-81.
-          </p>
-        </caption>
-      </figure>
+    <figure xml:id="fig-worm82">
+      <caption>Team performances in points above/below the average in season 1982-83. There were 22 teams and each played 42 games.</caption>
+      <image source="images/worm82-1.png"/>
+    </figure>
 
-      <p>
-        <em>Answers.</em> Draw rates rose from very early low levels but changed little on average over the last
-        forty years. Home advantage has declined, especially in lower tiers. Goals per game have been fairly steady
-        for around fifty years. Wormcharts provide a clear season-level progression view.
-      </p>
-      <p>
-        <em>Further questions.</em> Would pre-1976 goal-difference ranking have changed outcomes? Which teams have
-        longest stays in each tier? Which move between tiers most often?
-      </p>
-    </introduction>
+    <p>Comparing the most equal and least equal seasons among 22-team, 2-points-for-win championships shows very different spread patterns.</p>
 
-    <subsection xml:id="sec-football-takeaways">
-      <title>Graphical takeaways</title>
-      <ul>
-        <li><p>Time-series graphics should mark major rule/context changes with guides.</p></li>
-        <li><p>Highlighting specific cases with size, colour, and layering is effective.</p></li>
-        <li><p>Transformations can emphasize different parts of a ranking scale.</p></li>
-        <li><p>Wormcharts are illuminating for league progress through a season.</p></li>
-      </ul>
-    </subsection>
+    <figure xml:id="fig-worm3768">
+      <caption>Wormcharts for the two seasons with extreme point ranges for the English 1st Division Championship with 22 teams and two points for a win between 1919-20 and 1980-81.</caption>
+      <image source="images/worm3768-1.png"/>
+    </figure>
+
+    <p><em>Answers.</em> Draw rates increased from very low initial values but have changed little on average in the last 40 years. Home advantage declined, especially in lower tiers. Goals per game have been fairly steady over the last 50 years. Wormcharts give clear seasonal progression views.</p>
+    <p><em>Further questions.</em> Would goal difference instead of goal average before 1976 have changed outcomes? Which teams spent longest in each tier? Which moved between tiers most often?</p>
+
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>Time-series graphics should mark rule or context changes, with guidelines where helpful. (Figures <xref ref="fig-socD"/>, <xref ref="fig-socDf"/>, and <xref ref="fig-socG"/>)</p></li>
+      <li><p>Drawing cases of interest bigger, in colour, and on top is effective highlighting. (Figure <xref ref="fig-socHAt"/>)</p></li>
+      <li><p>Transformations can emphasize different parts of a scale. (Figure <xref ref="fig-teamBPSq"/>)</p></li>
+      <li><p>Wormcharts illuminate how a league progresses over a season. (Figures <xref ref="fig-worm15"/> to <xref ref="fig-worm3768"/>)</p></li>
+    </ul>
   </section>
 </chapter>

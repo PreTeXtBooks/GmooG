@@ -2,202 +2,130 @@
 <chapter xml:id="ch-diamonds">
   <title>Data in the sky at night</title>
 
+  <epigraph>
+    <q>The proportions and relations of things are just as much facts as the things themselves.</q>
+    <attribution>Dorothy L. Sayers</attribution>
+  </epigraph>
+
   <introduction>
-    <blockquote>
-      <p>"The proportions and relations of things are just as much facts as the things themselves."</p>
-      <p>--- Dorothy L. Sayers</p>
-    </blockquote>
-    <p>
-      The <c>diamonds</c> dataset from the R package <c>ggplot2</c> contains records for almost 54,000 round
-      diamonds offered for sale.
-    </p>
-    <p>
-      <em>Questions.</em> Do the data need cleaning? How are the variables distributed? Are there special features?
-    </p>
-    <p>
-      <em>Sources.</em> The data were scraped from the web in 2007 by Hadley Wickham and made available in
-      <c>ggplot2</c>.
-    </p>
-    <p><em>Structure.</em> 53,940 round diamonds with information on price, dimensions, and quality.</p>
+    <p><em>Background.</em> The <em>diamonds</em> dataset from the R package <em>ggplot2</em> provides data on each of almost 54000 round diamonds that were offered for sale.</p>
+    <p><em>Questions.</em> Do the data need cleaning? How are the individual variables distributed? Are there any special features?</p>
+    <p><em>Sources.</em> The data were originally scraped from the web in 2007 by Hadley Wickham (@wickham:2007) and he made them available in his R package <em>ggplot2</em>. Many of the results in this chapter were found and written up by him then in an article that was rejected by a journal that should have known better.</p>
+    <p><em>Structure.</em> The dataset covers 53940 round diamonds with information on price, dimensions, and quality.</p>
   </introduction>
 
-  <section xml:id="sec-diamonds-data">
+  <section xml:id="secDiam1">
     <title>Data on diamonds for sale</title>
 
-    <p>
-      The first variables represent the four c's: carat, cut, colour, and clarity. Carat is weight; cut, colour,
-      and clarity are ordered grades. Three measurements are recorded: length (<c>x</c>), width (<c>y</c>), and
-      depth (<c>z</c>). Another variable called <c>depth</c> is actually percentage depth and is referred to here
-      as <c>depthp</c>.
-    </p>
-    <p>
-      A histogram of lengths suggests a tiny bar at zero and values extending beyond the central bulk. Boxplots are
-      often better for highlighting outliers and axis stretch caused by extreme values.
-    </p>
+    <p>Experts talk of the four c's of diamonds: carat, cut, colour, and clarity. These are the first four variables in the dataset. Carat is the weight of the stone, while the other three c's are ordered grades with 5, 7, and 8 levels respectively in this dataset. Three measurements are included: length, width, and depth. Confusingly there is another variable called depth that is total depth percentage and is referred to as depthp here.</p>
 
-    <figure xml:id="fig-histlen">
+    <p>A histogram of the lengths is shown in Figure <xref ref="fig-histLen"/>. With a sharp eye a bar might be seen at zero. Histograms of large datasets like this are not good at representing bars with only a few points. There must be at least one point with a length much above 9 too. Boxplots, as in Figure <xref ref="fig-boxLen"/>, are better for displaying possible outliers. The default scaling of a histogram includes enough axis to include all data, and the boxplot helps reveal where extremes sit.</p>
+
+    <figure xml:id="fig-histLen">
+      <caption>Histogram of diamond lengths (the bar at zero has been circled in green).</caption>
       <image source="images/histLen-1.png"/>
-      <caption><p>Histogram of diamond lengths (the bar at zero has been circled in green).</p></caption>
     </figure>
 
-    <figure xml:id="fig-boxlen">
+    <figure xml:id="fig-boxLen">
+      <caption>Boxplot of diamond lengths (outliers coloured red).</caption>
       <image source="images/boxLen-1.png"/>
-      <caption><p>Boxplot of diamond lengths (outliers coloured red).</p></caption>
     </figure>
 
-    <p>
-      The lowest values reveal eight zero-length diamonds. Zero values also appear for width and depth. A practical
-      cleaning step is to remove these clearly erroneous records when source correction is not available.
-    </p>
+    <p>The lowest length values were checked and there were 8 diamonds of zero length. There were also zero values reported for width and depth. The simplest solution was to remove these diamonds unless the original source could be checked. With a vertical scale up to over 8000 in Figure <xref ref="fig-histLen"/>, a bar of height 8 can be too small to see clearly.</p>
 
-    <figure xml:id="fig-histlen2">
+    <p>Boxplots can be good for identifying possible outliers. Histograms are good for shape, provided informative binwidths are chosen. Redrawing after removing zero-length diamonds and choosing binwidth 0.05 gives Figure <xref ref="fig-histLen2"/>.</p>
+
+    <figure xml:id="fig-histLen2">
+      <caption>Histogram of diamond lengths (without the zero-length diamonds).</caption>
       <image source="images/histLen2-1.png"/>
-      <caption><p>Histogram of diamond lengths (without the zero-length diamonds).</p></caption>
     </figure>
 
-    <p>
-      With cleaner data and finer binwidth, the distribution suggests mixtures of groups. Similar patterns occur for
-      width and depth, with related structure in carat values.
-    </p>
+    <p>It looks as if there is a mixture of groups of diamonds. Similar patterns appear for widths and depths while a related pattern appears for carats. The one-sided peaks suggest that far more diamonds of rounded carat values are offered for sale than diamonds just under those values.</p>
 
-    <figure xml:id="fig-histcar">
+    <figure xml:id="fig-histCar">
+      <caption>Histogram of diamond carats.</caption>
       <image source="images/histCar-1.png"/>
-      <caption><p>Histogram of diamond carats.</p></caption>
     </figure>
 
-    <p>
-      One-sided peaks suggest many more diamonds at rounded carat values than just below them. This likely reflects
-      market preferences and measurement granularity.
-    </p>
+    <p>The histogram binwidth was chosen to be the smallest possible, the same as data resolution. If there is any pattern in a large dataset, it is often visible at this level provided the plot is large enough. This works for price in Figure <xref ref="fig-histPrice"/> and reveals an unexpected gap around 1500 dollars.</p>
 
-    <figure xml:id="fig-histprice">
+    <figure xml:id="fig-histPrice">
+      <caption>Histogram of diamond prices.</caption>
       <image source="images/histPrice-1.png"/>
-      <caption><p>Histogram of diamond prices.</p></caption>
     </figure>
 
-    <p>
-      The price histogram also reveals an unexpected gap around $1500: no values between $1455 and $1545. This is
-      likely a scraping artifact.
-    </p>
+    <p>Apparently there was a scraping problem not noticed early enough. There are no prices between 1455 and 1545 dollars inclusive in the dataset. The adjective unexpected matters: features surprise us because they violate expectations.</p>
   </section>
 
-  <section xml:id="sec-diamonds-outliers">
+  <section xml:id="secDiam2">
     <title>Checking for outliers and unusual values</title>
 
-    <p>
-      There are 20 diamonds with zero values for length, width, or depth, clearly erroneous. After removing these,
-      three extreme high outliers remain for width and depth.
-    </p>
-    <p>
-      A scatterplot matrix of cleaned dimensions and cube-root carat shows high correlations with visible
-      two-dimensional outliers.
-    </p>
+    <p>In all there are 20 diamonds with zero values for length, width, or depth. All have zero depth, 8 have zero length, and of those 8 there are 6 with zero width. There are no other diamonds with zero width. These 20 are errors and might be identified as outliers. After removing the 20 zero cases there are still three extreme outliers, two with extremely high width and one with extremely high depth.</p>
+
+    <p>After removing those outliers, a scatterplot matrix of carat and the three dimensions identifies other possible outliers. Since carat is really a volume measurement, cube root of carat was used for more linear plots.</p>
 
     <figure xml:id="fig-scatxyz">
+      <caption>A scatterplot matrix of length, width, depth, and carats to the power one third for the dataset after removing the zero cases and three extreme high outliers.</caption>
       <image source="images/scatxyz-1.png"/>
-      <caption>
-        <p>
-          A scatterplot matrix of length, width, depth, and carats to the power one third for the dataset after
-          removing the zero cases and three extreme high outliers.
-        </p>
-      </caption>
     </figure>
 
-    <p>
-      Additional checks with carat, depth percentage, table, and price expose further unusual values and support
-      iterative cleaning.
-    </p>
+    <p>Correlations are all very high despite apparent variability. Most data are linearly related and hidden by overplotting. Several two-dimensional outliers are visible. Outliers on individual dimensions distort axis ranges and shrink space for the main body of data.</p>
 
-    <figure xml:id="fig-scatfour">
+    <p>Figure <xref ref="fig-scatFour"/> shows a scatterplot matrix of carat with depthp, table, and price after excluding one extreme table outlier. Some additional possible outliers appear. The density estimate for table looks odd. Checking frequencies in Figure <xref ref="fig-ecdfdot"/> shows most table values are integers.</p>
+
+    <figure xml:id="fig-scatFour">
+      <caption>A scatterplot matrix of carat, percentage depth, table, and price for the dataset after removing the zero cases and four extreme outliers.</caption>
       <image source="images/scatFour-1.png"/>
-      <caption>
-        <p>
-          A scatterplot matrix of carat, percentage depth, table, and price for the dataset after removing the zero
-          cases and four extreme outliers.
-        </p>
-      </caption>
     </figure>
 
     <figure xml:id="fig-ecdfdot">
+      <caption>A vertically jittered dotplot of diamond table, excluding 12 outlying values, showing heaping at integer values.</caption>
       <image source="images/ecdfdot-1.png"/>
-      <caption>
-        <p>
-          A vertically jittered dotplot of diamond table, excluding 12 outlying values, showing heaping at integer
-          values.
-        </p>
-      </caption>
     </figure>
 
-    <p>
-      Reported percentage depth can be compared to percentage depth recalculated from length, width, and depth.
-      Cases where differences exceed 1 indicate possible inconsistencies requiring deeper inspection.
-    </p>
+    <p>Figure <xref ref="fig-bothDep"/> compares reported percentage depth depthp and recalculated percentage depth from the dimensions. Some cases differ by more than 1 and need closer inspection of the four variables involved.</p>
 
-    <figure xml:id="fig-bothdep">
+    <figure xml:id="fig-bothDep">
+      <caption>A scatterplot of reported percentage depth (depthp) and percentage depth calculated from the data (after removing the zero cases and three extreme outliers). Cases where the difference is bigger than 1 have been coloured red and drawn last.</caption>
       <image source="images/bothDep-1.png"/>
-      <caption>
-        <p>
-          A scatterplot of reported percentage depth (<c>depthp</c>) and percentage depth calculated from the data
-          (after removing the zero cases and three extreme outliers). Cases where the difference is bigger than 1
-          have been coloured red and drawn last.
-        </p>
-      </caption>
     </figure>
   </section>
 
-  <section xml:id="sec-diamonds-intriguing">
+  <section xml:id="secDiam3">
     <title>Intriguing features</title>
 
-    <introduction>
-      <p>
-        Scatterplots of price appear bounded at the top. An enlarged price-carat plot with a guideline at $19,000
-        highlights this ceiling effect.
-      </p>
+    <p>The scatterplots of price in Figure <xref ref="fig-scatFour"/> look bounded at the top. Figure <xref ref="fig-scatPrice"/> shows an enlarged price-carat plot with the implied boundary line added.</p>
 
-      <figure xml:id="fig-scatprice">
-        <image source="images/scatPrice-1.png"/>
-        <caption>
-          <p>A scatterplot of price against carat with a red line at $19000, just above the maximum reported price.</p>
-        </caption>
-      </figure>
+    <figure xml:id="fig-scatPrice">
+      <caption>A scatterplot of price against carat with a red line at $19000, just above the maximum reported price.</caption>
+      <image source="images/scatPrice-1.png"/>
+    </figure>
 
-      <p>
-        This boundary may reflect how the dataset was collected or the exclusion of very high-value stones from the
-        source listings. Such truncation can bias models.
-      </p>
-      <p>
-        Associations of carat with categorical quality variables show systematic shifts in median carat by clarity,
-        colour, and cut.
-      </p>
+    <p>Given that data were scraped from a website selling diamonds, scraping may have been truncated or very expensive gems may simply not have been included. The boundary means there are few larger diamonds in the dataset and likely few smaller diamonds of very high quality. This kind of bias matters for modelling.</p>
 
-      <figure xml:id="fig-claritycarat">
-        <image source="images/clarityCarat-1.png"/>
-        <caption><p>Boxplots of carat by clarity and by colour.</p></caption>
-      </figure>
+    <p>It is worth looking at the three categorical variables cut, color, and clarity with carat. Figure <xref ref="fig-clarityCarat"/> suggests median carat decreases as clarity improves and increases as colour quality decreases.</p>
 
-      <figure xml:id="fig-cutcarat">
-        <image source="images/cutCarat-1.png"/>
-        <caption><p>Boxplots of carat by cut.</p></caption>
-      </figure>
+    <figure xml:id="fig-clarityCarat">
+      <caption>Boxplots of carat by clarity and by colour.</caption>
+      <image source="images/clarityCarat-1.png"/>
+    </figure>
 
-      <p>
-        <em>Answers.</em> The data have cleaning issues (zero values, outliers, and missing price ranges).
-        One-sided peaks in carat are a notable feature, and the apparent upper price limit affects inference.
-      </p>
-      <p>
-        <em>Further questions.</em> What are the distributions of colour, cut, and clarity? What influence do colour
-        and cut have on price?
-      </p>
-    </introduction>
+    <p>One explanation is marketability of larger diamonds at poorer clarity or colour. Another is the price boundary, where larger better-quality diamonds may be too expensive to appear. A similar though weaker effect appears for carat by cut in Figure <xref ref="fig-cutCarat"/>.</p>
 
-    <subsection xml:id="sec-diamonds-takeaways">
-      <title>Graphical takeaways</title>
-      <ul>
-        <li><p>For large datasets, very narrow histogram binwidths can reveal hidden structure.</p></li>
-        <li><p>Single-dimension outliers can distort higher-dimensional displays as well.</p></li>
-        <li><p>Surprising plot shapes often indicate real structure worth investigating.</p></li>
-        <li><p>Parallel boxplots are a quick and informative way to compare groups.</p></li>
-      </ul>
-    </subsection>
+    <figure xml:id="fig-cutCarat">
+      <caption>Boxplots of carat by cut.</caption>
+      <image source="images/cutCarat-1.png"/>
+    </figure>
+
+    <p><em>Answers.</em> There are several data-cleaning issues including impossible zero values, outliers, and missing price data in a range. One-sided peaks at rounded carat values are unusual. The apparent upper price limit will affect modelling.</p>
+    <p><em>Further questions.</em> What are the distributions of colour, cut, and clarity? What influence do colour and cut have on price?</p>
+
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>For large datasets choosing the narrowest histogram binwidth can reveal otherwise hidden information. (Figures <xref ref="fig-histCar"/> and <xref ref="fig-histPrice"/>)</p></li>
+      <li><p>Individual outliers on one dimension affect higher-dimensional plots as well, so it is worth redrawing without them. (Figures <xref ref="fig-scatxyz"/>, <xref ref="fig-scatFour"/>, and <xref ref="fig-bothDep"/>)</p></li>
+      <li><p>Surprising plot shapes usually mean there is structure to uncover. (Figure <xref ref="fig-scatFour"/>)</p></li>
+      <li><p>Parallel boxplots are a quick and informative way of comparing groups. (Figure <xref ref="fig-clarityCarat"/>)</p></li>
+    </ul>
   </section>
 </chapter>
