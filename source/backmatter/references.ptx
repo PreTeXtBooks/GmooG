@@ -110,4 +110,10 @@
 
   <!-- wickham:2019 -->
   <biblio xml:id="wickham-2019" type="raw">Wickham, Hadley. <pubtitle>tidyverse: Easily Install and Load the 'Tidyverse'</pubtitle>. R package version 1.3.0, 2019. <url href="https://CRAN.R-project.org/package=tidyverse"/></biblio>
+
+  <!-- PSI:2021a -->
+  <biblio xml:id="PSI-2021a" type="raw">PSI. Wonderful Wednesdays. 2021. <url href="https://www.psiweb.org/sigs-special-interest-groups/visualisation/welcome-to-wonderful-wednesdays"/>. (accessed 29.01.2021)</biblio>
+
+  <!-- PSI:2021b -->
+  <biblio xml:id="PSI-2021b" type="raw">PSI. DLQI. 2021. <url href="https://github.com/VIS-SIG/Wonderful-Wednesdays/tree/master/data/2021/2021-01-13"/>. (accessed 29.01.2021)</biblio>
 </references>
