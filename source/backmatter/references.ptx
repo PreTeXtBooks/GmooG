@@ -167,4 +167,34 @@
 
   <!-- nicault:2021 -->
   <biblio xml:id="nicault-2021" type="raw">Nicault, Christophe. History of National Olympic Committees participating in the Olympic Summer Games. <url href="https://www.christophenicault.com/pages/visualizations/"/>. 2021. (accessed 04.04.2022)</biblio>
+
+  <!-- Wainer:1997 -->
+  <biblio xml:id="Wainer-1997" type="raw">Wainer, Howard. <pubtitle>Visual Revelations</pubtitle>. Springer, New York, 1997.</biblio>
+
+  <!-- Wainer:2004 -->
+  <biblio xml:id="Wainer-2004" type="raw">Wainer, Howard. <pubtitle>Graphic Discovery: A Trout in the Milk and Other Visual Adventures</pubtitle>. Princeton University Press, Princeton, New Jersey, 2004.</biblio>
+
+  <!-- coulmont:2010 -->
+  <biblio xml:id="coulmont-2010" type="raw">Coulmont, Baptiste. Cartographie avec R. <url href="http://coulmont.com/cartes/rcarto.pdf"/>. 2010.</biblio>
+
+  <!-- friendly:2007 -->
+  <biblio xml:id="friendly-2007" type="raw">Friendly, Michael. A.-M. Guerry&#8217;s Moral Statistics of France: Challenges for Multivariable Spatial Analysis. <pubtitle>Statistical Science</pubtitle>, 22(3):368&#8211;399, 2007.</biblio>
+
+  <!-- wikip:2020 -->
+  <biblio xml:id="wikip-2020" type="raw">Wikipedia. The Blue Banana. <url href="https://en.wikipedia.org/wiki/Blue_Banana"/>. 2020.</biblio>
+
+  <!-- FIDE:2020 -->
+  <biblio xml:id="FIDE-2020" type="raw">FIDE. International Chess Federation Ratings. <url href="https://ratings.fide.com"/>. 2020. (accessed 28.01.2021)</biblio>
+
+  <!-- wb:2020 -->
+  <biblio xml:id="wb-2020" type="raw">Worldbank. World Bank Open Data. <url href="https://data.worldbank.org"/>. 2020. (accessed 28.01.2021)</biblio>
+
+  <!-- elo:1978 -->
+  <biblio xml:id="elo-1978" type="raw">Elo, Arpad. <pubtitle>The Rating of Chess Players, Past and Present</pubtitle>. 1st ed. Arco, New York, 1978.</biblio>
+
+  <!-- bila:2009 -->
+  <biblio xml:id="bila-2009" type="raw">Bilali&#263;, Merim and Smallbone, Kieran and McLeod, Peter and Gobet, Fernand. Why are (the best) women so good at chess? Participation rates and gender differences in intellectual domains. <pubtitle>Proc. R. Soc. B</pubtitle>, 276:1161&#8211;1165, 2009.</biblio>
+
+  <!-- carr:1987 -->
+  <biblio xml:id="carr-1987" type="raw">Carr, Dan and Littlefield, Richard J. and Nicholson, Wesley L. and Littlefield, J.S. Scatterplot Matrix Techniques for large N. <pubtitle>JASA</pubtitle>, 82(398):424&#8211;436, 1987.</biblio>
 </references>
