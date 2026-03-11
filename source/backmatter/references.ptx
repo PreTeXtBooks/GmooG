@@ -390,4 +390,19 @@
 
   <!-- student:1931 -->
   <biblio xml:id="student-1931" type="raw">Student. The Lanarkshire Milk Experiment. <em>Biometrika</em>, 23(3/4):398&#8211;406, 1931.</biblio>
+
+  <!-- stratton:2019 -->
+  <biblio xml:id="stratton-2019" type="raw">Stratton, K. Comrades Marathon. Kaggle, 2019. <url href="https://www.kaggle.com/suugaku/comrades-marathon-results/"/></biblio>
+
+  <!-- CMA:2022 -->
+  <biblio xml:id="CMA-2022" type="raw">Comrades Marathon Association. Comrades Marathon. 2022. <url href="https://www.comrades.com"/></biblio>
+
+  <!-- east:2022 -->
+  <biblio xml:id="east-2022" type="raw">28East. Comrades Marathon 2020 Interactive Map. 2022. <url href="https://comrades.28east.co.za/"/></biblio>
+
+  <!-- ComradesM:2022 -->
+  <biblio xml:id="ComradesM-2022" type="raw">Wikipedia. Comrades Marathon. 2022. <url href="https://en.wikipedia.org/wiki/Comrades_Marathon"/></biblio>
+
+  <!-- collier:2019 -->
+  <biblio xml:id="collier-2019" type="raw">Collier, Andrew. datawookie. 2019. <url href="https://datawookie.dev/"/></biblio>
 </references>
