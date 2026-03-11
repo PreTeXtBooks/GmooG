@@ -128,4 +128,13 @@
 
   <!-- ebird:2022 -->
   <biblio xml:id="ebird-2022" type="raw">Cornell Lab of Ornithology. eBird. <url href="https://ebird.org"/>. 2022.</biblio>
+
+  <!-- hothorn:2015 -->
+  <biblio xml:id="hothorn-2015" type="raw">Hothorn, Torsten, M&#252;ller, J., Held, L., M&#246;st, L., and Mysterud, A. Temporal patterns of deer&#8211;vehicle collisions consistent with deer activity pattern and density increase but not general accident risk. <em>Accident Analysis &amp; Prevention</em>, 81:143&#8211;152, 2015.</biblio>
+
+  <!-- hothorn:2020 -->
+  <biblio xml:id="hothorn-2020" type="raw">Hothorn, Torsten. Most Likely Transformations: The mlt Package. <em>Journal of Statistical Software</em>, 92(1):1&#8211;68, 2020. <url href="https://www.jstatsoft.org/article/view/v092i01"/></biblio>
+
+  <!-- titanic:2021 -->
+  <biblio xml:id="titanic-2021" type="raw">Encyclopedia Titanica. <url href="https://www.encyclopedia-titanica.org"/>. 2021.</biblio>
 </references>
