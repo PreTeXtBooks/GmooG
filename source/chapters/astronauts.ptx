@@ -24,9 +24,9 @@
       </image>
     </figure>
 
-    <p>The number of people each year is shown in Figure <xref ref="fig-asty"/>. There are sharp drops in numbers after the Soyuz 1 crash in 1967, after the Challenger disaster in 1986 and after the Columbia disaster in 2003. The deaths in Soyuz 11 in 1971 do not seem to have had such an effect, but may have curtailed existing plans of the time.</p>
+    <p>The number of people each year is shown in <xref ref="fig-asty"/>. There are sharp drops in numbers after the Soyuz 1 crash in 1967, after the Challenger disaster in 1986 and after the Columbia disaster in 2003. The deaths in Soyuz 11 in 1971 do not seem to have had such an effect, but may have curtailed existing plans of the time.</p>
 
-    <p>Early on, the participants were male and younger than later on. There have been fewer females and they were on average younger than the males. Figure <xref ref="fig-astg"/> is a scatterplot of age by year of mission with smooths plotted separately for males and females. Age has been calculated as the difference between year of mission and year of birth, so is not exact. The vertical scale is extended beyond most of the data because of the high outlier, John Glenn's third spaceflight at the age of 77 in 1998. The males have been drawn first and the females on top to emphasise the females.</p>
+    <p>Early on, the participants were male and younger than later on. There have been fewer females and they were on average younger than the males. <xref ref="fig-astg"/> is a scatterplot of age by year of mission with smooths plotted separately for males and females. Age has been calculated as the difference between year of mission and year of birth, so is not exact. The vertical scale is extended beyond most of the data because of the high outlier, John Glenn's third spaceflight at the age of 77 in 1998. The males have been drawn first and the females on top to emphasise the females.</p>
 
     <figure xml:id="fig-astg">
       <caption>Scatterplot of age by year of flight coloured by sex, with smooths and their confidence intervals.</caption>
@@ -35,7 +35,7 @@
       </image>
     </figure>
 
-    <p>Scatterplots with many points do not convey actual numbers in groups well. In this dataset there are 11 participants aged 41 who went up in space in 1997, 9 men and two women, including three who went up twice. All these 14 points are represented by the same single point in Figure <xref ref="fig-astg"/>, coloured female (because of the order of plotting), although they all contribute equally to their respective smoothed fit. Figure <xref ref="fig-astb"/> shows barcharts for males and females across the decades. There have been far fewer females and, in particular, the bar for the only female in the 1960s, Valentina Tereshkova, is barely visible. More went into space in the 1990s than in any other decade.</p>
+    <p>Scatterplots with many points do not convey actual numbers in groups well. In this dataset there are 11 participants aged 41 who went up in space in 1997, 9 men and two women, including three who went up twice. All these 14 points are represented by the same single point in <xref ref="fig-astg"/>, coloured female (because of the order of plotting), although they all contribute equally to their respective smoothed fit. <xref ref="fig-astb"/> shows barcharts for males and females across the decades. There have been far fewer females and, in particular, the bar for the only female in the 1960s, Valentina Tereshkova, is barely visible. More went into space in the 1990s than in any other decade.</p>
 
     <figure xml:id="fig-astb">
       <caption>Numbers of participants by decade and by sex.</caption>
@@ -48,7 +48,7 @@
   <section xml:id="secAstro1a">
     <title>Mission times in space</title>
 
-    <p>One important piece of information is the length of each mission, the time from launch until return to earth. Figure <xref ref="fig-flightt"/> shows a scatterplot of this time against flight year. Most flights were relatively short, especially in the 1960s and later on there were still many short flights of up to a few weeks, but also a group of longer ones, closer to six months, and a few very long ones of up to a year or more. Missions with more than one person are only plotted once if all those on the mission are recorded as having the same time, so this is not a plot of individual mission times. Missions with differing individual times are discussed later.</p>
+    <p>One important piece of information is the length of each mission, the time from launch until return to earth. <xref ref="fig-flightt"/> shows a scatterplot of this time against flight year. Most flights were relatively short, especially in the 1960s and later on there were still many short flights of up to a few weeks, but also a group of longer ones, closer to six months, and a few very long ones of up to a year or more. Missions with more than one person are only plotted once if all those on the mission are recorded as having the same time, so this is not a plot of individual mission times. Missions with differing individual times are discussed later.</p>
 
     <figure xml:id="fig-flightt">
       <caption>Scatterplot of mission time in hours by year of flight.</caption>
@@ -57,7 +57,7 @@
       </image>
     </figure>
 
-    <p>There is some information that might explain why flights are either short or longer, in particular whether the mission involved a visit to a space station. That is the reason as can be seen in Figure <xref ref="fig-flighttc"/>. A new variable has been created that records if a space station was visited and which programme it was part of: the initial U.S.S.R. Salyut programme, the US Skylab programme, the intermediate U.S.S.R. Mir programme or the ISS (International Space Station) programme. All the long flights are part of space station missions. The flight in 1980 marked as &#x201c;none&#x201d; was in fact a space station flight by the Cuban Arnaldo M&#xe8;ndez. This is a curious error as his mission time was also incorrectly reported, multiplied by 10 in the dataset. The case only stands out because both errors were made, otherwise it would not have been noticed.</p>
+    <p>There is some information that might explain why flights are either short or longer, in particular whether the mission involved a visit to a space station. That is the reason as can be seen in <xref ref="fig-flighttc"/>. A new variable has been created that records if a space station was visited and which programme it was part of: the initial U.S.S.R. Salyut programme, the US Skylab programme, the intermediate U.S.S.R. Mir programme or the ISS (International Space Station) programme. All the long flights are part of space station missions. The flight in 1980 marked as &#x201c;none&#x201d; was in fact a space station flight by the Cuban Arnaldo M&#xe8;ndez. This is a curious error as his mission time was also incorrectly reported, multiplied by 10 in the dataset. The case only stands out because both errors were made, otherwise it would not have been noticed.</p>
 
     <figure xml:id="fig-flighttc">
       <caption>Mission time in hours by year of flight coloured by space station programme.</caption>
@@ -67,12 +67,11 @@
     </figure>
 
     <p>The code for this plot converted two values of the variable <c>in_orbit</c> to <q>Salyut</q>, those with <q>Salyut</q> in them and those with the misspelling <q>Saluyt</q>. Minor typos like this can be irritating or seriously misleading. The problem was discovered when colouring the display.</p>
-  </section>
 
-  <section xml:id="secAstro2">
+  <subsection xml:id="secAstro2">
     <title>Logging mission times</title>
 
-    <p>As there are so many short mission times that cannot be distinguished, logarithms of the times could be used. Figure <xref ref="fig-flighttl"/> shows the result. The vertical scale has been manually constructed to offer interpretable tickmarks.</p>
+    <p>As there are so many short mission times that cannot be distinguished, logarithms of the times could be used. <xref ref="fig-flighttl"/> shows the result. The vertical scale has been manually constructed to offer interpretable tickmarks.</p>
 
     <figure xml:id="fig-flighttl">
       <caption>Scatterplot of log mission time by year of flight coloured by space station programme.</caption>
@@ -81,7 +80,7 @@
       </image>
     </figure>
 
-    <p>There are several striking features. The two groups of short and long missions look less variable than in Figure <xref ref="fig-flightt"/> and the number of shorter missions declines after 2010. The latter is a useful piece of information, as an earlier analysis concluded that mission times had increased in recent years without explaining why. The average time certainly increased, but the reason was the decline in flights that did not visit a space station.</p>
+    <p>There are several striking features. The two groups of short and long missions look less variable than in <xref ref="fig-flightt"/> and the number of shorter missions declines after 2010. The latter is a useful piece of information, as an earlier analysis concluded that mission times had increased in recent years without explaining why. The average time certainly increased, but the reason was the decline in flights that did not visit a space station.</p>
 
     <p>There are a few unexpected half points at the foot of the plot. These are mission times recorded as zero and hence logarithms of <m>-\infty</m>. Rather than just offering a warning message that they cannot be plotted (which <c>ggplot2</c> does in other circumstances), the semi-circles are drawn. The 1986 value is from the Challenger disaster and the 2018 and 2019 values are for the two on an aborted 2018 mission. For one of them, Ovchinin, the year of mission is incorrectly recorded as 2019.</p>
 
@@ -91,7 +90,7 @@
 
     <p>The other lowish value in 1986 was for Bill Nelson, who was on Columbia's STS-61-C mission. He was given a time of 6.03 hours, whereas five other crew members were given times of 146 hours, and one of 74 hours. Bill Nelson's Wikipedia page (<xref ref="wikiBN-2020"/>) said he was in space for 6d 02h 03m, so perhaps the error was a result of inaccurate webscraping. There are also three lowish values in 2005 and 2008. These were the first Chinese flights. Wikipedia records the first as having taken place in 2003.</p>
 
-    <p>Nationality is another factor to consider. Forty nationalities are included in all, but U.S. and U.S.S.R./Russia nationalities account for most of the participants, so a new variable has been created for these two with the rest categorised as &#x2018;Other&#x2019;. Plotting all the cases coloured by the new variable leads to some overplotting, so faceting has been used in Figure <xref ref="fig-flightn"/>. The whole dataset has been plotted first in grey and the groups coloured and plotted on top (ghostplotting). The Russians were first with longer flights, while the Americans took part in many more shorter flights in the 1980s and 1990s. Other nationalities flew for the first time at the tail end of the 1970s and had more short flights.</p>
+    <p>Nationality is another factor to consider. Forty nationalities are included in all, but U.S. and U.S.S.R./Russia nationalities account for most of the participants, so a new variable has been created for these two with the rest categorised as &#x2018;Other&#x2019;. Plotting all the cases coloured by the new variable leads to some overplotting, so faceting has been used in <xref ref="fig-flightn"/>. The whole dataset has been plotted first in grey and the groups coloured and plotted on top (ghostplotting). The Russians were first with longer flights, while the Americans took part in many more shorter flights in the 1980s and 1990s. Other nationalities flew for the first time at the tail end of the 1970s and had more short flights.</p>
 
     <figure xml:id="fig-flightn">
       <caption>Scatterplots of log mission time by year of flight by nationality.</caption>
@@ -99,12 +98,13 @@
         <description>Three faceted scatterplots of log mission time against year of flight, one panel each for U.S. (blue), U.S.S.R./Russia (red), and Other (light blue) nationalities. In each panel the full dataset is shown in grey as a ghost plot, with the relevant group coloured on top. Russians were first to achieve long-duration flights; Americans dominated shorter flights in the 1980s and 1990s; Other nationalities first appeared at the end of the 1970s.</description>
       </image>
     </figure>
+  </subsection>
   </section>
 
   <section xml:id="secAstro4">
     <title>Checking the data with graphics</title>
 
-    <p>Checking whether other missions had differing times for their crews in the dataset uncovered a number of inconsistencies. It was not enough to use the mission title, as sometimes these included multiple flights, so the dataset was grouped by the variables <c>mission_title</c>, <c>ascend_shuttle</c>, <c>in_orbit</c>, <c>descend_shuttle</c>, <c>year_of_mission</c>. This grouped together many correctly, but failed to group all missions properly as occasionally different codings (upper/lower case, hyphens or not) were used and there were errors. A boxplot of the biggest differences in mission times for the 538 groups found is displayed in Figure <xref ref="fig-difs"/>. There are four gross differences and plenty of smaller ones. The biggest difference concerns the American/Russian trio who went to the ISS in 2001. The time for Susan Helms is, correctly, over 160 days, while the time for James Voss is 163 hours. Yuri Usachyov gets a similar time to Susan Helms, but is not in the same group, as the dataset reports he returned on a different spacecraft.</p>
+    <p>Checking whether other missions had differing times for their crews in the dataset uncovered a number of inconsistencies. It was not enough to use the mission title, as sometimes these included multiple flights, so the dataset was grouped by the variables <c>mission_title</c>, <c>ascend_shuttle</c>, <c>in_orbit</c>, <c>descend_shuttle</c>, <c>year_of_mission</c>. This grouped together many correctly, but failed to group all missions properly as occasionally different codings (upper/lower case, hyphens or not) were used and there were errors. A boxplot of the biggest differences in mission times for the 538 groups found is displayed in <xref ref="fig-difs"/>. There are four gross differences and plenty of smaller ones. The biggest difference concerns the American/Russian trio who went to the ISS in 2001. The time for Susan Helms is, correctly, over 160 days, while the time for James Voss is 163 hours. Yuri Usachyov gets a similar time to Susan Helms, but is not in the same group, as the dataset reports he returned on a different spacecraft.</p>
 
     <figure xml:id="fig-difs">
       <caption>Boxplot of biggest differences in times for (possibly) the same missions.</caption>
@@ -122,11 +122,11 @@
 
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Graphics uncover problems in datasets, be they typos, errors or more serious issues. (Sections <xref ref="secAstro1a"/> and <xref ref="secAstro4"/>)</p></li>
-      <li><p>Scatterplots are excellent, but it is well to check for duplicate pairs of values and draw additional complementary plots. (Figure <xref ref="fig-astg"/>)</p></li>
-      <li><p>Colours should be used consistently for the same categories; different palettes should be used for other groupings to avoid confusion. (Figures <xref ref="fig-astg"/> and <xref ref="fig-astb"/> versus <xref ref="fig-flighttc"/> or <xref ref="fig-flightn"/>)</p></li>
-      <li><p>Log transformations are effective for skewed distributions, especially with interpretable scaling. (Figure <xref ref="fig-flighttl"/>)</p></li>
-      <li><p>Faceting disentangles overlapping groups in scatterplots. (Figure <xref ref="fig-flightn"/>)</p></li>
+      <li><p>Graphics uncover problems in datasets, be they typos, errors or more serious issues. (<xref ref="secAstro1a"/> and <xref ref="secAstro4"/>)</p></li>
+      <li><p>Scatterplots are excellent, but it is well to check for duplicate pairs of values and draw additional complementary plots. (<xref ref="fig-astg"/>)</p></li>
+      <li><p>Colours should be used consistently for the same categories; different palettes should be used for other groupings to avoid confusion. (<xref ref="fig-astg"/> and <xref ref="fig-astb"/> versus <xref ref="fig-flighttc"/> or <xref ref="fig-flightn"/>)</p></li>
+      <li><p>Log transformations are effective for skewed distributions, especially with interpretable scaling. (<xref ref="fig-flighttl"/>)</p></li>
+      <li><p>Faceting disentangles overlapping groups in scatterplots. (<xref ref="fig-flightn"/>)</p></li>
     </ul>
   </section>
 </chapter>
