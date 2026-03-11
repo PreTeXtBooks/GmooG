@@ -111,7 +111,7 @@
         Long historical spans introduce changing countries, event naming inconsistencies, and missing values that
         require explicit harmonization decisions.
       </p>
-      <figure xml:id="fig-olyamdx">
+      <figure xml:id="fig-olyamdx-prov">
         <image source="images/olyAmdx-1.png"/>
         <caption><p>Athletics field events for men: percentage differences in gold-medal performances.</p></caption>
       </figure>
