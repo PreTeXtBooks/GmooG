@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-bertin">
   <title>Re-viewing Bertin&#8217;s main example</title>
 
@@ -30,13 +30,13 @@
     <p>Figure <xref ref="fig-Bertagp"/> shows the 90 departments of France in 1954 with those highlighted in which agricultural workers made up at least 40% of the workforce.  There is a fairly clear division into East and West, something that is described in French texts under the heading of the Le Havre-Marseille line.  The line may have declined in importance over the last thirty years, but in 1954 it was still relevant.</p>
 
     <figure xml:id="fig-Bertagp">
-      <caption>Departments in France in 1954 where agricultural workers made up at least 40% of the workforce.</caption>
       <image source="images/Bertagp-1.png">
-        <description>Map of France showing the 90 departments in 1954. Departments where agricultural workers made up at least 40% of the workforce are shaded in orange; the rest are white. The shaded departments form a predominantly western region, with a fairly clear east-west divide approximately along the Le Havre-Marseille line. The cities of Paris, Le Havre, and Marseille are marked.</description>
+        <description>Map of France showing the 90 departments in 1954, with departments where agricultural workers made up at least 40% of the workforce highlighted in orange, showing a clear East-West division along the Le Havre-Marseille line.</description>
       </image>
+      <caption>Departments in France in 1954 where agricultural workers made up at least 40% of the workforce.</caption>
     </figure>
 
-    <p>Given the large number of maps that Bertin included, you would expect several geographic patterns to be identified and discussed, yet none are.  It is a puzzling omission.</p>
+    <p>Given the large number of maps that Bertin included, you would expect several geographic patterns to be identified and discussed, yet none are. It is a puzzling omission.</p>
   </section>
 
   <section xml:id="secBertin2">
@@ -64,10 +64,10 @@
     <p>The sorted barcharts drawn by Bertin provide some distributional information in terms of rankings, although histograms are better for studying distributions and that is what statisticians would draw, as in Figure <xref ref="fig-Berthists"/>.  The three plots have been drawn with common scales to make them directly comparable.</p>
 
     <figure xml:id="fig-Berthists">
-      <caption>Histograms of the numbers working in the three sectors in 1954.</caption>
       <image source="images/Berthists-1.png">
-        <description>Three histograms stacked vertically, each with a common x-axis scale from 0 to 1000 thousands of workers and y-axis showing numbers of departments (0 to 40). The top histogram (Agriculture, orange) is less skewed with most departments having moderate values. The middle histogram (Industry, orange-red) and bottom histogram (Commerce, cyan) are both highly right-skewed with most departments having low values and a small number of departments with very large values due to Paris and Seine.</description>
+        <description>Three histograms stacked vertically showing the distribution of numbers working in Agriculture (orange), Industry (red-orange), and Commerce (cyan) in France in 1954, all using a common scale from 0 to 1000 thousands of workers. Industry and Commerce distributions are highly right-skewed.</description>
       </image>
+      <caption>Histograms of the numbers working in the three sectors in 1954.</caption>
     </figure>
 
     <p>The total numbers of workers in the three sectors are of the same order.  The distributions for both Industry and Commerce are highly skewed due to a handful of big values in both, primarily Paris and Seine.  The distribution of agricultural workers is less skewed.</p>
@@ -75,10 +75,10 @@
     <p>Histograms of percentage shares of the sectors by department or of logged values of the sectors (to counteract the skewness) can provide some additional information, but scatterplots are more informative.  Figure <xref ref="fig-Bertscats"/> shows scatterplots for the three pairs of sector variables.  Each variable has been scaled individually.  In particular, the agricultural numbers are much smaller than the numbers in the other sectors.</p>
 
     <figure xml:id="fig-Bertscats">
-      <caption>Pairwise scatterplots of the numbers in thousands working in the three sectors in France in 1954.</caption>
       <image source="images/Bertscats-1.png">
-        <description>Three side-by-side scatterplots of the 90 French departments: Agriculture vs Industry (left), Agriculture vs Commerce (centre), and Industry vs Commerce (right). In the Agriculture vs Industry and Agriculture vs Commerce panels, there is no clear relationship. In the Industry vs Commerce panel, there is a strong positive relationship, with most points forming a tight cluster and one extreme outlier (Paris) far to the upper right.</description>
+        <description>Three pairwise scatterplots of workers in thousands in Agriculture vs. Industry, Agriculture vs. Commerce, and Industry vs. Commerce in France in 1954. The Industry-Commerce plot shows a strong positive correlation, while the Agriculture plots show little relationship with the other two sectors.</description>
       </image>
+      <caption>Pairwise scatterplots of the numbers in thousands working in the three sectors in France in 1954.</caption>
     </figure>
 
     <p>Bertin&#8217;s conclusion that Industry and Commerce values are strongly related is immediately clear, as is the lack of relationship between Agriculture and the other two sectors.  Identifying the highest values reveals that Paris has most workers in both Industry and Commerce and is out of line with the general Industry/Commerce relationship, having relatively more workers in Commerce.  One department, Nord, manages to have a high value for Industry and a relatively high value for Agriculture.</p>
@@ -92,10 +92,10 @@
     <p>There are a number of possible geographic patterns that might be found in mapped data, for example local clusters of related values, trends from North to South, similarities along coasts or borders.  This means that any pattern identified should be treated with caution, as it is almost certain that something will be found.  Nevertheless, geographic patterns discovered in the data may be useful in summarising information and in suggesting new ideas.  It may be possible to find supporting evidence elsewhere, once it is known what should be looked for.</p>
 
     <figure xml:id="fig-BertLine">
-      <caption>Choropleth map of percentage of agricultural workers in France in 1954.</caption>
       <image source="images/BertLine-1.png">
-        <description>Choropleth map of France showing the 90 departments shaded by percentage of agricultural workers in 1954, using a yellow-orange-brown colour scale. The western departments are more heavily shaded (higher agricultural percentage) and the eastern and northern industrial departments are lighter. The cities of Saint-Malo and Geneva are marked, approximately indicating the Saint-Malo to Geneva line dividing agricultural from industrial France.</description>
+        <description>Choropleth map of France showing the percentage of agricultural workers by department in 1954 using a yellow-brown colour scale, with Saint-Malo and Geneva marked as endpoints of the historical Dupin-Guerry line dividing "France obscure" from "France &#233;clair&#233;e".</description>
       </image>
+      <caption>Choropleth map of percentage of agricultural workers in France in 1954.</caption>
     </figure>
 
     <p>In Friendly&#8217;s revisiting of Guerry&#8217;s work (<xref ref="friendly-2007"/>), he refers to a line across France from Saint-Malo in the North-West to the Swiss border at Geneva in the South-East, which divided France into &#8216;France obscure&#8217; (the uneducated South-West) and &#8216;France &#233;clair&#233;e&#8217; (the educated North-East).  This is a famous line in French historical geography, first suggested by Dupin in 1828.  Judging by the results of a recent Google query, it still attracts attention, although for different reasons.  Looking at Figure <xref ref="fig-BertLine"/>, there seems to be some evidence for a similar geographic division in the 1950s.</p>
@@ -105,10 +105,10 @@
     <p>As the areas with the highest workforces in and around Paris can barely be seen in the maps, a cartogram might be drawn.  A cartogram redraws regions to match population size or another quantitative measure instead of geographic area.  The regions are drawn to minimise distortion, but this is difficult, especially when regions of large area have small populations and vice versa.  A number of algorithms have been proposed.  Figure <xref ref="fig-BertCart"/> has been drawn using a rubber sheet distortion algorithm and is based on the total working population for each department.</p>
 
     <figure xml:id="fig-BertCart">
-      <caption>Cartogram of working population size shaded by the percentage of agricultural workers in France in 1954.</caption>
       <image source="images/BertCart-1.png">
-        <description>Cartogram of France where each department&#8217;s area is distorted to be proportional to its total working population, shaded by percentage of agricultural workers (yellow-orange-brown scale). The Paris and Seine area and surrounding industrial departments are greatly enlarged, dominating the eastern half of the display. Western, more agricultural departments are reduced in size relative to the geographic map.</description>
+        <description>Cartogram of France where department sizes are proportional to their total working population, shaded by the percentage of agricultural workers. The Paris region and industrial northeast are enlarged, while rural agricultural areas in the west and south are reduced in size.</description>
       </image>
+      <caption>Cartogram of working population size shaded by the percentage of agricultural workers in France in 1954.</caption>
     </figure>
 
     <p>The major industrial and commercial areas, where there is little agriculture, dominate the eastern half of the country.  The Rh&#244;ne and Loire departments almost touch the departments around Paris.  Many different cartograms might be drawn, but they will all convey roughly the same message.</p>
@@ -120,10 +120,10 @@
     <p>Bertin included four maps of the density of the workforce by area, thousands per square kilometre, on p. 117 of his book.  Every department has the relevant value written in, apart from Seine (covering Paris as well) for which the value is written at the top of each map, as the corresponding area is so small.  He does not discuss what might be seen in the data although there are some unusual features.  Choropleth maps for densities of the total working population, both including Paris and Seine and excluding them, are shown in Figure <xref ref="fig-Bertdens"/>.</p>
 
     <figure xml:id="fig-Bertdens">
-      <caption>Maps of the density of the total working population in thousands per square kilometre in France in 1954, all departments (left), excluding Seine and Paris (right).</caption>
       <image source="images/Bertdens-1.png">
-        <description>Two side-by-side choropleth maps of France shaded by total workforce density (thousands per square km). The left map includes all departments with a scale from 0 to 15000; virtually all departments appear in the lightest shade except the tiny Seine/Paris area which is dark red, showing the extreme density there. The right map excludes Seine and Paris with a scale from 0 to 150, revealing more variation among the remaining departments, with the highest densities in departments on the western edge of Seine.</description>
+        <description>Two side-by-side choropleth maps of France showing total working population density per square kilometre in 1954. The left map includes all departments with Seine/Paris dominating in dark red; the right map excludes Seine and Paris, revealing more detail in the remaining departments.</description>
       </image>
+      <caption>Maps of the density of the total working population in thousands per square kilometre in France in 1954, all departments (left), excluding Seine and Paris (right).</caption>
     </figure>
 
     <p>The values for Paris and Seine for total density are so high that no differences can be seen amongst the other departments in the first map.  Looking closely it is just about possible to see that Paris is coloured dark red.  The map on the right has a completely different scale (by a factor of 100) and shows that some of the departments with the otherwise highest densities were on the western edge of Seine.  Despite the dramatic change in scale, many of the departments are still in the lowest grouping.</p>
@@ -131,13 +131,11 @@
     <p>An alternative that avoids excluding departments is to use natural logarithms of population density.  Figure <xref ref="fig-BertdensL"/> shows two versions, one using a default colour scale and one using a more detailed one.  The first puts most of France in the same group, emphasising the three departments with lowest density in the South and Southeast and the few high density departments.  The second suggests a difference in population density between the West and the Centre, apart from the departments with very high or low levels.</p>
 
     <figure xml:id="fig-BertdensL">
-      <caption>Maps of the log of population density of the total working population in thousands per square kilometre in France in 1954, default scale (left), more detailed scale (right).</caption>
       <image source="images/BertdensL-1.png">
-        <description>Two side-by-side choropleth maps of France shaded by the log of total workforce density. The left map uses a default scale that groups most of France together in a few shades, making the low-density southern departments and the high-density Paris region stand out. The right map uses a more detailed scale with narrower intervals, revealing additional variation between the western and central departments.</description>
+        <description>Two side-by-side choropleth maps of France showing log-transformed total working population density in 1954. The left map uses a default colour scale grouping most departments together; the right uses a more detailed scale revealing differences between western and central France.</description>
       </image>
+      <caption>Maps of the log of population density of the total working population in thousands per square kilometre in France in 1954, default scale (left), more detailed scale (right).</caption>
     </figure>
-
-    <p>Using logarithms of density gives a compromise that keeps all departments while still showing structure otherwise hidden by extremes.</p>
   </section>
 
   <section xml:id="secBertin6">

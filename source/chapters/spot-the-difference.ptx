@@ -7,16 +7,16 @@
       <p>"I repeat, as long as you have studied the theory hard enough."</p>
       <p>--- from <em>Harry Potter and the Order of the Phoenix</em></p>
     </blockquote>
+  </introduction>
+
+  <section xml:id="sec-varying-plots">
+    <title>Varying various plots</title>
     <p>
       There is a wide variety of plot types available (e.g., @holtz:2018 or @schwab:2021). Each plot type can also
       be drawn in many different ways: varying size, aspect ratio, scales, colour, symbols, styles, whatever. A key
       message is that drawing a variety of plots, and varying the plots drawn, can provide more insights than
       searching for a single "optimal" display.
     </p>
-  </introduction>
-
-  <section xml:id="sec-varying-plots">
-    <title>Varying various plots</title>
     <p>
       Approaches vary: some prefer to study one graphic deeply before moving on; others scan many graphics then return
       to selected ones. Being swamped by too many graphics can be as unsatisfactory as not having enough.
