@@ -7,3 +7,4 @@ output/
 cli.log
 .error_schema.log
 .gitignore-*
+logs/
