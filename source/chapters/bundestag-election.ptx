@@ -19,7 +19,7 @@
       Zweitstimmen (votes for parties) closely related?
     </p>
     <p>
-      <em>Sources.</em> The Bundeswahlleiter (Federal Returning Officer) has a website (@bundesWL:2021) offering
+      <em>Sources.</em> The Bundeswahlleiter (Federal Returning Officer) has a website (<xref ref="bundesWL-2021"/>) offering
       detailed election results in various forms, a dataset of demographic and structural data for each
       constituency, and maps of the constituencies. UK election data is available in the R package
       <em>parlitools</em>.
@@ -376,7 +376,7 @@
 
     <p>
       Figure <xref ref="fig-btwmapz"/> presents a more coherent pattern than Figure <xref ref="fig-btwmape"/>.
-      As has been pointed out on Fran&#231;ois Valentin's Twitter feed (@valentin:2022), the map's form is
+      As has been pointed out on Francois Valentin's Twitter feed (<xref ref="valentin-2022"/>), the map's form is
       reminiscent of how voting in Germany looked over a hundred years ago. The SPD won most votes in the area
       that was Prussia, the AfD won most votes in Saxony, and the CSU most in Bavaria.
     </p>

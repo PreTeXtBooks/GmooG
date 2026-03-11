@@ -12,6 +12,9 @@
   <!-- Tufte:2001ip -->
   <biblio xml:id="Tufte-2001ip" type="raw">Tufte, Edward. <pubtitle>The Visual Display of Quantitative Information</pubtitle>. 2nd ed. Graphics Press, Cheshire, Connecticut, 2001.</biblio>
 
+  <!-- cleveland:1987 -->
+  <biblio xml:id="cleveland-1987" type="raw">Cleveland, W.S. and McGill, R. Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods. <em>Journal of the American Statistical Association</em>, 82(398):531&#8211;554, 1987.</biblio>
+
   <!-- cleveland:1993 -->
   <biblio xml:id="cleveland-1993" type="raw">Cleveland, William S. <pubtitle>Visualizing Data</pubtitle>. Hobart Press, Summit, New Jersey, 1993.</biblio>
 
@@ -53,6 +56,9 @@
 
   <!-- unwin:2015 -->
   <biblio xml:id="unwin-2015" type="raw">Unwin, Antony. <pubtitle>Graphical Data Analysis with R</pubtitle>. Chapman &amp; Hall/CRC, Boca Raton, Florida, 2015.</biblio>
+
+  <!-- unwin:2018 -->
+  <biblio xml:id="unwin-2018" type="raw">Unwin, Antony. Me, Myself and I: Visualising Individual Longitudinal Data. <em>Journal of Biopharmaceutical Statistics</em>, 28(6):1003&#8211;1013, 2018.</biblio>
 
   <!-- munzner:2014 -->
   <biblio xml:id="munzner-2014" type="raw">Munzner, Tamara. <pubtitle>Visualization Analysis and Design</pubtitle>. CRC Press, 2014.</biblio>
@@ -286,6 +292,12 @@
   <!-- imdb:2022 -->
   <biblio xml:id="imdb-2022" type="raw">IMDb. Internet Movie Database. <url href="https://datasets.imdbws.com"/>. 2022.</biblio>
 
+  <!-- hofmann:2008 -->
+  <biblio xml:id="hofmann-2008" type="raw">Hofmann, Heike. Mosaic plots and their variants. In Chen, C., H&#228;rdle, W., and Unwin, A., editors, <pubtitle>Handbook of Data Visualization</pubtitle>, pages 617&#8211;642. Springer, Heidelberg, 2008.</biblio>
+
+  <!-- hofmann:2022 -->
+  <biblio xml:id="hofmann-2022" type="raw">Hofmann, Heike, Cook, Dianne, and Kielian, Tyler. ggpcp: Parallel Coordinate Plots. R package version 0.2.0, 2022.</biblio>
+
   <!-- wickham:2011 -->
   <biblio xml:id="wickham-2011" type="raw">Wickham, Hadley, Cook, Di, Hofmann, Heike, and Buja, Andreas. Graphical inference for Infovis. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 16(6):973&#8211;979, 2011.</biblio>
 
@@ -322,6 +334,8 @@
   <!-- tidyt:2020b -->
   <biblio xml:id="tidyt-2020b" type="raw">rfordatascience. Astronaut Database. <url href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-07-14"/>. 2020.</biblio>
 
+  <!-- estDecath:2021 -->
+  <biblio xml:id="estDecath-2021" type="raw">WA (World Athletics). Decathlon Top List. <url href="https://www.worldathletics.org/records/toplists/combined/decathlon/outdoor/men/senior/2021"/>. 2021.</biblio>
   <!-- wikiBN:2020 -->
   <biblio xml:id="wikiBN-2020" type="raw">Wikipedia. Bill Nelson. <url href="https://en.wikipedia.org/wiki/Bill_Nelson"/>. 2020.</biblio>
 
@@ -403,6 +417,29 @@
   <!-- student:1931 -->
   <biblio xml:id="student-1931" type="raw">Student. The Lanarkshire Milk Experiment. <em>Biometrika</em>, 23(3/4):398&#8211;406, 1931.</biblio>
 
+  <!-- stratton:2019 -->
+  <biblio xml:id="stratton-2019" type="raw">Stratton, K. Comrades Marathon. Kaggle, 2019. <url href="https://www.kaggle.com/suugaku/comrades-marathon-results/"/></biblio>
+
+  <!-- CMA:2022 -->
+  <biblio xml:id="CMA-2022" type="raw">Comrades Marathon Association. Comrades Marathon. 2022. <url href="https://www.comrades.com"/></biblio>
+
+  <!-- east:2022 -->
+  <biblio xml:id="east-2022" type="raw">28East. Comrades Marathon 2020 Interactive Map. 2022. <url href="https://comrades.28east.co.za/"/></biblio>
+
+  <!-- ComradesM:2022 -->
+  <biblio xml:id="ComradesM-2022" type="raw">Wikipedia. Comrades Marathon. 2022. <url href="https://en.wikipedia.org/wiki/Comrades_Marathon"/></biblio>
+
+  <!-- collier:2019 -->
+  <biblio xml:id="collier-2019" type="raw">Collier, Andrew. datawookie. 2019. <url href="https://datawookie.dev/"/></biblio>
+
+  <!-- ware:2020 -->
+  <biblio xml:id="ware-2020" type="raw">Ware, Colin. <pubtitle>Information Visualization: Perception for Design</pubtitle>. 4th ed. Morgan Kaufmann, 2020.</biblio>
+
+  <!-- wilson:2014 -->
+  <biblio xml:id="wilson-2014" type="raw">Wilson, Greg, Aruliah, D.A., Brown, C. Titus, Chue Hong, Neil P., Davis, Matt, Guy, Richard T., Haddock, Steven H.D., Huff, Kathryn D., Mitchell, Ian M., Plumbley, Mark D., Waugh, Ben, White, Ethan P., and Wilson, Paul. Best Practices for Scientific Computing. <em>PLOS Biology</em>, 12(1):e1001745, 2014.</biblio>
+
+  <!-- bialik:2008 -->
+  <biblio xml:id="bialik-2008" type="raw">Bialik, Carl. Starbucks: Counting Beverages. <em>The Wall Street Journal</em>, 2008.</biblio>
   <!-- fina:2021 -->
   <biblio xml:id="fina-2021" type="raw">FINA. F&#233;d&#233;ration Internationale de Natation. <url href="https://www.fina.org"/>. 2021. (accessed 24.02.2021)</biblio>
 
