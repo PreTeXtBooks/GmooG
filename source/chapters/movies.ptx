@@ -59,7 +59,7 @@
       <caption><p>Movie runtimes in minutes (above), number of movies by year (below) for films of 3 hours or under.</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-movieRunYB"/> displays boxplots by year with a histogram of the number of movies in each year below. The runtime distribution has been fairly constant for over 50 years. The slight rise recently may reflect incomplete recording, as the lower plot shows fewer films produced in the latest three years included overall. This is obvious for 2022, for which only the first six months could be covered. The numbers for 2020 and 2021 suggest that it may take time for all films for a year to be added to the database.</p>
+    <p>Figure <xref ref="fig-movierunyb"/> displays boxplots by year with a histogram of the number of movies in each year below. The runtime distribution has been fairly constant for over 50 years. The slight rise recently may reflect incomplete recording, as the lower plot shows fewer films produced in the latest three years included overall. This is obvious for 2022, for which only the first six months could be covered. The numbers for 2020 and 2021 suggest that it may take time for all films for a year to be added to the database.</p>
   </section>
 
   <section xml:id="sec-movies21">
@@ -161,7 +161,7 @@
       <caption><p>Number of films by year from 1901 to 2019, faceted by genre in order of highest number per year, a dotted line marks the introduction of sound in 1927 and vertical scales are different for each row.</p></caption>
     </figure>
 
-    <p>The increasing number of films in more recent years is probably due to the development of film industries in countries like India.  Lower numbers in earlier years may reflect the restriction to films having more than 100 ratings.  Comparing the old dataset referred to in <xref ref="sec-movies-trailer"/> with the new one, numbers of ratings have increased.  This is likely to have favoured newer films.  IMDb first moved to the web in 1993 and is relatively young compared to the film industry itself.  This doubtless also favours new films over old in terms of whether they are rated by someone.</p>
+    <p>The increasing number of films in more recent years is probably due to the development of film industries in countries like India.  Lower numbers in earlier years may reflect the restriction to films having more than 100 ratings.  Comparing the old dataset referred to in <xref ref="sec-movies2"/> with the new one, numbers of ratings have increased.  This is likely to have favoured newer films.  IMDb first moved to the web in 1993 and is relatively young compared to the film industry itself.  This doubtless also favours new films over old in terms of whether they are rated by someone.</p>
 
     <p>There are a large number of genres and combinations of genres.  The accuracy or otherwise of the classifications of films may be debatable, but, if nothing else, these kinds of graphics offer much opportunity for entertaining discussion.  Experts in film may be able to offer explanations for some of the features on view.  As always, good graphics can stimulate more involvement with the data than tables or text alone.</p>
   </section>
