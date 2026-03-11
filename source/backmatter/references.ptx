@@ -15,6 +15,9 @@
   <!-- Tufte:2001ip -->
   <biblio xml:id="Tufte-2001ip" type="raw">Tufte, Edward. <pubtitle>The Visual Display of Quantitative Information</pubtitle>. 2nd ed. Graphics Press, Cheshire, Connecticut, 2001.</biblio>
 
+  <!-- cleveland:1987 -->
+  <biblio xml:id="cleveland-1987" type="raw">Cleveland, W.S. and McGill, R. Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods. <em>Journal of the American Statistical Association</em>, 82(398):531&#8211;554, 1987.</biblio>
+
   <!-- cleveland:1993 -->
   <biblio xml:id="cleveland-1993" type="raw">Cleveland, William S. <pubtitle>Visualizing Data</pubtitle>. Hobart Press, Summit, New Jersey, 1993.</biblio>
 
@@ -48,11 +51,17 @@
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
 
+  <!-- wickham:2022 -->
+  <biblio xml:id="wickham-2022" type="raw">Wickham, Hadley, Chang, Winston, Henry, Lionel, Pedersen, Thomas Lin, Takahashi, Kohske, Wilke, Claus, Woo, Kara, Yutani, Hiroaki, and Dunnington, Dewey. <pubtitle>ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</pubtitle>. R package version 3.4.0, 2022. <url href="https://CRAN.R-project.org/package=ggplot2"/></biblio>
+
   <!-- wickham:2023g -->
   <biblio xml:id="wickham-2023g" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</pubtitle>. R package version 3.4.2, 2023. <url href="https://CRAN.R-project.org/package=ggplot2"/></biblio>
 
   <!-- unwin:2015 -->
   <biblio xml:id="unwin-2015" type="raw">Unwin, Antony. <pubtitle>Graphical Data Analysis with R</pubtitle>. Chapman &amp; Hall/CRC, Boca Raton, Florida, 2015.</biblio>
+
+  <!-- unwin:2018 -->
+  <biblio xml:id="unwin-2018" type="raw">Unwin, Antony. Me, Myself and I: Visualising Individual Longitudinal Data. <em>Journal of Biopharmaceutical Statistics</em>, 28(6):1003&#8211;1013, 2018.</biblio>
 
   <!-- munzner:2014 -->
   <biblio xml:id="munzner-2014" type="raw">Munzner, Tamara. <pubtitle>Visualization Analysis and Design</pubtitle>. CRC Press, 2014.</biblio>
@@ -417,4 +426,13 @@
 
   <!-- collier:2019 -->
   <biblio xml:id="collier-2019" type="raw">Collier, Andrew. datawookie. 2019. <url href="https://datawookie.dev/"/></biblio>
+
+  <!-- ware:2020 -->
+  <biblio xml:id="ware-2020" type="raw">Ware, Colin. <pubtitle>Information Visualization: Perception for Design</pubtitle>. 4th ed. Morgan Kaufmann, 2020.</biblio>
+
+  <!-- wilson:2014 -->
+  <biblio xml:id="wilson-2014" type="raw">Wilson, Greg, Aruliah, D.A., Brown, C. Titus, Chue Hong, Neil P., Davis, Matt, Guy, Richard T., Haddock, Steven H.D., Huff, Kathryn D., Mitchell, Ian M., Plumbley, Mark D., Waugh, Ben, White, Ethan P., and Wilson, Paul. Best Practices for Scientific Computing. <em>PLOS Biology</em>, 12(1):e1001745, 2014.</biblio>
+
+  <!-- bialik:2008 -->
+  <biblio xml:id="bialik-2008" type="raw">Bialik, Carl. Starbucks: Counting Beverages. <em>The Wall Street Journal</em>, 2008.</biblio>
 </references>
