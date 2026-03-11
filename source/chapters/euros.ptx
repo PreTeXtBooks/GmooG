@@ -1,5 +1,150 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-euros">
-  <title>Euros</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Home or away: where do soccer players play?</title>
+
+  <introduction>
+    <blockquote>
+      <p>"Milan or Madrid, as long as it's Italy."</p>
+      <p>--- Andy Moller, then of Dortmund</p>
+    </blockquote>
+    <p>
+      The European Football Championship has been held every four years since 1960 and has grown substantially in
+      size and influence.
+    </p>
+    <p>
+      <em>Questions.</em> Do players represent national teams while playing club football in their own country?
+      How has this changed over time?
+    </p>
+    <p><em>Sources.</em> EURO player dataset assembled by Abel.</p>
+    <p><em>Structure.</em> 4,012 players and 21 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-euros-history">
+    <title>The European Football Championship since 1960</title>
+
+    <p>
+      The finals expanded from 4 teams (1960) to 8 (1980), 16 (1996), and 24 (2016 onward). Squad sizes also grew
+      from 17 up to 26 players.
+    </p>
+
+    <figure xml:id="fig-uefatq">
+      <image source="images/uefaTQ-1.png"/>
+      <caption>
+        <p>
+          Numbers of teams (top) and squad sizes (bottom) over the 16 European Championships. Point area in the
+          lower plot is proportional to the number of countries with that value.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Early variation likely reflects looser squad regulations. Later tournaments mostly follow fixed limits, with
+      a few notable exceptions.
+    </p>
+
+    <figure xml:id="fig-uefaperc">
+      <image source="images/uefaPerc-1.png"/>
+      <caption>
+        <p>
+          Percentage of each nation's squad playing in that nation's own league across the 16 championships, with a
+          loess smooth and point areas proportional to country counts.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      The long-term trend is downward: over time, more players represent national teams while playing in foreign
+      leagues.
+    </p>
+  </section>
+
+  <section xml:id="sec-euros-leagues">
+    <title>Which leagues do international players play in?</title>
+
+    <p>
+      England, Germany, Italy, and Spain dominate as destinations for EURO players, with England becoming more
+      prominent in recent tournaments.
+    </p>
+
+    <figure xml:id="fig-uefanos">
+      <image source="images/uefaNos-1.png"/>
+      <caption><p>Numbers of players from four major leagues.</p></caption>
+    </figure>
+
+    <p>
+      For EURO 2020, bar charts reveal where players from all squads were based at club level.
+    </p>
+
+    <figure xml:id="fig-uefa20l">
+      <image source="images/uefa20L-1.png"/>
+      <caption><p>Numbers of EURO 2020 players playing in different European leagues.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-uefamap">
+      <image source="images/uefaMap.png"/>
+      <caption><p>Numbers of EURO 2020 players playing in various European national leagues.</p></caption>
+    </figure>
+
+    <p>
+      A few players were based outside Europe. Within Europe, player distribution across leagues is highly uneven.
+    </p>
+
+    <figure xml:id="fig-uefa20f">
+      <image source="images/uefa20f-1.png"/>
+      <caption><p>Numbers of Finland's EURO 2020 players by country of league.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-uefa20">
+      <image source="images/uefa20-1.png"/>
+      <caption><p>Numbers of EURO 2020 players of each team by country of league.</p></caption>
+    </figure>
+
+    <p>
+      Every team had players from multiple league countries. Some squads were highly concentrated in one domestic
+      league; others were widely distributed.
+    </p>
+  </section>
+
+  <section xml:id="sec-euros-change">
+    <title>How have countries changed?</title>
+
+    <introduction>
+      <p>
+        Long-term comparison is complicated by geopolitical changes, including country splits and reunifications,
+        plus the UK home nations competing separately.
+      </p>
+
+      <figure xml:id="fig-uefapercm">
+        <image source="images/uefaPercM-1.png"/>
+        <caption>
+          <p>
+            Percentages of home-league players for countries appearing most often in the 16 championship finals.
+          </p>
+        </caption>
+      </figure>
+
+      <p>
+        Patterns vary by country: some show gradual decline, some sharp transitions in specific years, and others a
+        return to high home-league shares.
+      </p>
+
+      <p>
+        <em>Answers.</em> Increasingly, international players play abroad. At EURO 2020, just over half of all
+        players were based in England, Germany, or Italy.
+      </p>
+      <p>
+        <em>Further questions.</em> Which team has the largest long-run variability in home-player share? Do World
+        Cup squads show similar patterns? Are club-squad nationality compositions available consistently?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-euros-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Aligned axes improve readability in ensembles of related graphics.</p></li>
+        <li><p>Smooths can be informative even for discrete-valued datasets.</p></li>
+        <li><p>Faceting scales well when comparing many groups.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>
