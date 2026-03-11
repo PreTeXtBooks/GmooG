@@ -436,7 +436,7 @@
       informative a first arrangement appears.
     </p>
     <p>
-      Small multiples, named and popularised in <xref ref="Tufte-1983"/>, are displays of many graphics of the
+      Small multiples, named and popularised in <xref ref="Tufte-2001ip"/>, are displays of many graphics of the
       same type and may have a natural order. The boxplots of chess rankings by age in a chess figure are one
       example. Often there will be no such natural order, for instance in ordering variables in a scatterplot
       matrix. Grouping variables by type may be effective, as in the Diamonds chapter, where two scatterplot

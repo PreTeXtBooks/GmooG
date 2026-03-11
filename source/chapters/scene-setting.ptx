@@ -96,7 +96,7 @@
 
     <p>There are so many formatting options for graphics that it can be difficult to see the wood for the trees.  In 2006 the coffee chain Starbucks claimed that, including all variations, it offered 87,000 different drinks (this has not been independently verified (<xref ref="bialik-2008"/>)).  Looking through long lists of graphics options that you have to decide on is not dissimilar.  It is more important to know the effect you want to achieve and how the options are structured.</p>
 
-    <p>Objects representing the content of a graphic, like points or bars, and components that are part of the setting of a graphic, like axes or legends, can both be reformatted.  Rather than content and setting, <xref ref="wickham-2022"/> uses the terms data and non-data parts of a plot.  Formatting can be structured in a number of ways.  The approach described here works up from details of data to an overall view: Points, Plot, Position.  Colour and ordering are especially important and are treated in detail in separate chapters.</p>
+    <p>Objects representing the content of a graphic, like points or bars, and components that are part of the setting of a graphic, like axes or legends, can both be reformatted.  Rather than content and setting, <xref ref="wickham-2023g"/> uses the terms data and non-data parts of a plot.  Formatting can be structured in a number of ways.  The approach described here works up from details of data to an overall view: Points, Plot, Position.  Colour and ordering are especially important and are treated in detail in separate chapters.</p>
 
     <subsection xml:id="sec-scene-formatting-points">
       <title>Points, areas, lines, ...</title>

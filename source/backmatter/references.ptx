@@ -9,9 +9,6 @@
   <!-- Tufte:1997 -->
   <biblio xml:id="Tufte-1997" type="raw">Tufte, Edward. <pubtitle>Visual Explanations</pubtitle>. Graphics Press, Cheshire, Connecticut, 1997.</biblio>
 
-  <!-- Tufte:1983 -->
-  <biblio xml:id="Tufte-1983" type="raw">Tufte, Edward. <pubtitle>The Visual Display of Quantitative Information</pubtitle>. Graphics Press, Cheshire, Connecticut, 1983.</biblio>
-
   <!-- Tufte:2001ip -->
   <biblio xml:id="Tufte-2001ip" type="raw">Tufte, Edward. <pubtitle>The Visual Display of Quantitative Information</pubtitle>. 2nd ed. Graphics Press, Cheshire, Connecticut, 2001.</biblio>
 
@@ -53,9 +50,6 @@
 
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
-
-  <!-- wickham:2022 -->
-  <biblio xml:id="wickham-2022" type="raw">Wickham, Hadley, Chang, Winston, Henry, Lionel, Pedersen, Thomas Lin, Takahashi, Kohske, Wilke, Claus, Woo, Kara, Yutani, Hiroaki, and Dunnington, Dewey. <pubtitle>ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</pubtitle>. R package version 3.4.0, 2022. <url href="https://CRAN.R-project.org/package=ggplot2"/></biblio>
 
   <!-- wickham:2023g -->
   <biblio xml:id="wickham-2023g" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</pubtitle>. R package version 3.4.2, 2023. <url href="https://CRAN.R-project.org/package=ggplot2"/></biblio>
