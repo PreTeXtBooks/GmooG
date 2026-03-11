@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-pay-attention">
   <title>What affects interpretation?</title>
 
@@ -24,144 +24,205 @@
         shoes, a tussle shirt... and a small blue handkerchief in her breast pocket. I can't remember any more."
       </p>
       <p>"You couldn't have been paying attention."</p>
-      <p>--- <em>The Lady Vanishes</em></p>
+      <p>--- Michael Redgrave questioning Margaret Lockwood in <em>The Lady Vanishes</em></p>
     </blockquote>
 
     <p>
       Graphics texts generally consider perception and interpretation, including optical illusions, but do not pay as
       much attention to attention. There is an implicit assumption that viewers who look at a graphic are giving it
-      their full attention. That seems as unrealistic as assuming all students attending a lecture are giving it their
-      undivided attention.
+      their full attention. That seems as unrealistic as assuming that all the students attending a lecture are giving
+      it their undivided attention.
     </p>
 
     <figure xml:id="fig-bibi1">
-      <image source="images/bibi1-1.png"/>
+      <image source="images/bibi1-1.png">
+        <description>Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults, showing a positive association between the two measurements with some low Biiliac outliers.</description>
+      </image>
       <caption><p>Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults.</p></caption>
     </figure>
 
     <p>
-      Does this display demand attention? Someone might glance at it and decide it does not look interesting. Perhaps
-      the measurements do not mean anything to them, or perhaps they do, but the topic does not attract them. They
-      might be distracted by coffee, email, noise, fatigue, or boredom. Or they might devote sustained and
-      concentrated attention to it. Graphics are often discussed objectively, yet there are many subjective factors
-      affecting how they are viewed.
+      Does <xref ref="fig-bibi1"/> demand attention? Someone might glance at it and decide the scatterplot did not
+      look interesting. Perhaps the measurements did not mean anything to them or perhaps they did, but the topic did
+      not attract them. They might have been distracted by the cup of coffee they had just made, by an email or by a
+      noise in the street. They might have been tired or bored. Or, perhaps, they devoted sustained and concentrated
+      attention to <xref ref="fig-bibi1"/>. Graphics are often discussed objectively and yet there are many
+      subjective factors affecting how they are viewed.
     </p>
 
     <p>
-      Biacromial diameter is a technical term for shoulder width, and Biiliac may be described as pelvic breadth.
-      Knowing that might make someone look more closely and wonder that the two measurements are not more correlated.
-      Many body measurements are. A few Biiliac values appear lower than the rest. It is curious that the highest
-      pelvic breadth value and two of the three lowest have about the same middling shoulder width.
+      Biacromial diameter is a technical term for a measurement of the width between the shoulders and Biiliac may
+      be described as "pelvic breadth". Knowing that might make someone look at the graphic more closely and think
+      that it is surprising the two measurements are not more correlated. Many body measurements are. There are a few
+      Biiliac values that appear lower than the rest. It is curious that the highest pelvic breadth value and two of
+      the three lowest have about the same middling shoulder width.
+    </p>
+
+    <p>
+      A graphic without structure can be interesting because it was expected to have structure and did not or because
+      there is more to it when additional information is included. <xref ref="fig-bibi2"/> colours the points of the
+      plot by sex.
     </p>
 
     <figure xml:id="fig-bibi2">
-      <image source="images/bibi2-1.png"/>
-      <caption><p>Scatterplot of shoulder width against pelvic breadth for men and women, coloured by sex.</p></caption>
+      <image source="images/bibi2-1.png">
+        <description>Scatterplot of Biacromial diameter (shoulder width) against Biiliac (pelvic breadth) for 247 men (in green) and 260 women (in purple), showing women generally have narrower shoulder widths but similar pelvic breadth.</description>
+      </image>
+      <caption><p>Scatterplot of Biacromial diameter (shoulder width) against Biiliac (pelvic breadth) for 247 men (in green) and 260 women (in purple).</p></caption>
     </figure>
 
     <p>
-      Generally, women have about the same pelvic breadth as men but narrower shoulder widths. These displays use data
-      collected around twenty years ago (@heinz:2003). The authors' proviso should be remembered: the sample is not a
-      representative sample from a well-defined population.
+      Generally, women have about the same pelvic breadth as men but narrower shoulder widths. The displays in
+      <xref ref="fig-bibi1"/> and <xref ref="fig-bibi2"/> use data collected around twenty years ago
+      (<xref ref="heinz-2003"/>). There are not many datasets of multivariate measurements of individuals and in
+      working with this one, the authors' proviso should be remembered that "the sample is not a representative
+      sample from a well-defined population". The R help file says it was men and women who were primarily in their
+      twenties and thirties and who all exercised several hours a week, hardly typical of the general population.
     </p>
 
     <p>
-      If information is to be gained from a graphic, it has to be paid some attention. How much attention is paid and
-      how that attention is paid are important. A quick scan can suggest graphic type and broad structure. More focused
-      attention may be needed to confirm first impressions, identify additional features, and decide what further
-      information is useful.
+      If information is to be gained from a graphic, it has to be paid some attention. How much attention is paid
+      and how that attention is paid are important. A quick scan of a display can suggest the type of graphic and
+      what the overall structure could be. More focused and concentrated attention may be needed to confirm first
+      impressions, to pick out additional features, and to consider what further information might be useful.
+      Background knowledge of what the variables mean and of how the data were collected are needed, as is
+      information about the quality of the data.
     </p>
 
     <p>
-      Inspecting a graphic once is rarely sufficient. The source should be checked and associated text reviewed.
-      Sometimes a graphic should be compared with related graphics; sometimes other questions should be investigated
-      before returning to the graphic itself. If a graphic is worth drawing, it should be worth careful and thorough
-      study.
+      Inspecting a graphic once is rarely sufficient. The source should be checked and any text associated with the
+      graphic reviewed. Sometimes a graphic can be compared with related graphics, sometimes there are other
+      questions that need to be investigated before returning to the graphic itself. If a graphic is worth drawing,
+      then it should be worth careful and thorough study. This involves not just the graphic itself, but also any
+      relevant associated information.
     </p>
 
     <p>
-      Initial impressions can be deceptive. Rather than fixating on one visible feature, it is more effective to
-      consciously look for others. Like brainstorming, it helps to generate several ideas before being too critical of
-      any of them.
+      Initial impressions can be deceptive. There may be several features that can be seen in a graphic and rather
+      than fixating on one, it is more effective to consciously look for others. Like brainstorming, it is helpful
+      to generate a number of ideas before being too critical of any of them. As always, varying the shape and size
+      of the display may help.
     </p>
 
     <p>
-      Expectations influence what is seen, either negatively or positively. If expectations are strong, viewers may
-      only seek corroborating evidence. If there are no expectations, viewers may simply accept what they see and lose
-      capacity for surprise. It helps to think in advance about what is likely to appear, then look more closely even
-      if expectations are met.
+      Expectations influence what is seen, either negatively or positively. If there are strong expectations of what
+      a graphic will show, viewers may only look for corroborating evidence. On the other hand, if there are no
+      expectations then they may simply accept what they see and lose the capacity to be surprised. It is best to
+      think in advance of what is likely to appear and to look more closely---even if expectations are met.
     </p>
 
     <subsection xml:id="sec-attention-types">
       <title>Types of attention</title>
       <p>
-        Before paying full attention, there is preattentive processing (although attention still plays a role,
-        @healey:2012). People can pick out two red dots in a cloud of blue dots without trying. They might then use
-        focused attention on those points and their neighbourhoods or distribute attention over the whole display.
+        Before paying full attention, there is what is referred to as preattentive processing (although attention
+        does play a role, <xref ref="healey-2012"/>). People can pick out 2 red dots in a cloud of blue dots
+        without even trying. They might then use focused attention to concentrate on those points and their
+        neighbourhoods or they might distribute their attention over the whole display looking for other features.
       </p>
       <p>
-        Something may catch a viewer's eye through peripheral vision. @potter:2014 concludes that in some
-        circumstances people can see meaning in a photograph within 13 ms. Even when graphics are studied more
-        closely, there is Barbara Tversky's fourth law of cognition (@tversky:2019): the mind can override
-        perception. These effects help explain why graphics are often poorly interpreted.
+        Sometimes something may catch a viewer's eye when they are not looking directly at it, thanks to their
+        peripheral vision. <xref ref="potter-2014"/> concludes that in certain circumstances people can see meaning
+        in a photograph within 13 ms. Perhaps that ability encourages them to only glance at graphics, and not try
+        to see more in them. Even if graphics are studied more closely, there is the effect that Barbara Tversky
+        calls the fourth law of cognition (<xref ref="tversky-2019"/>): The mind can override perception. She
+        writes: "We don't always look, even when the answer is right in front of our eyes. Memory overrides
+        perception." Both effects contribute to explaining why graphics are often poorly interpreted. The fourth law
+        of cognition may also underlie why some graphics are poorly described by their own authors. They may be
+        writing about what they wanted to present and not what can be seen in the graphic.
       </p>
 
       <figure xml:id="fig-btwmapex">
-        <image source="images/btwMapEX-1.png"/>
+        <image source="images/btwMapEX-1.png">
+          <description>Map of Germany showing winners of Erststimmen seats by political party in the 2021 federal election, with different colours for each party showing regional patterns.</description>
+        </image>
         <caption><p>Winners of Erststimmen seats by political party in Germany 2021.</p></caption>
       </figure>
 
       <p>
-        What attention is paid to may be goal-driven, stimulus-driven, or history-based. In this map, main party
-        regions stand out for goal-driven viewing; smaller urban successes and legend implications support
-        stimulus-driven viewing; and prior knowledge reminds us that political maps display area rather than population.
+        What attention is paid to may be goal-driven (top-down), stimulus-driven (bottom-up) or history-based
+        (depending on the viewer's experience). The goal of drawing the map of German election results in
+        <xref ref="fig-btwmapex"/> was to see if there were geographical patterns. The main ones for the CDU, CSU,
+        SPD, and AfD stand out (goal-driven). The smaller constituencies where the Greens did well imply that they
+        did well in urban areas and the fact that Die Linke party are in the legend means they must have won seats
+        somewhere (stimulus-driven). Political maps give poor representations of party support because they display
+        areas and not populations (history-based).
       </p>
 
       <p>
-        @theeuwes:2018 argues that stimulus-driven and history-based selection are effortless while goal-driven
-        selection requires effort. It is easier to respond to a strong feature or familiar pattern than to identify a
-        feature that may or may not serve a particular goal.
+        <xref ref="theeuwes-2018"/> claims that stimulus-driven and history-based attention selection are
+        effortless, while goal-driven requires effort. His research is related to dynamic situations, such as
+        driving, but is still relevant. It is easier to respond to a strong feature or recognise a familiar pattern
+        than to identify a feature that may or may not be associated with a particular goal. Having experience of
+        what types of feature a graphic can show is valuable.
       </p>
 
       <p>
-        Studying a display closely may reveal several features, yet later inspection may reveal others. It is useful to
-        revisit graphics afresh, changing size, aspect ratio, position, colour, symbols, and scales. The essential
-        principle is to regard graphics as doorways to information, not static pictures.
+        Studying a graphic display closely may reveal a number of features, yet frequently a later inspection of the
+        same graphic can reveal other features. It is useful to look at graphics afresh, to break the train of
+        thought. A graphic you have drawn yourself or is on the web can be varied by changing the size, the aspect
+        ratio or the position on screen. You can change the colours, the symbols and the scales in your own
+        graphics. You could zoom out to see where the data lie on some grander scale or you could zoom in to
+        investigate a small sector in detail. The more complex the plot, the more options there are. Multivariate
+        displays like parallel coordinate plots and mosaicplots have a particularly large number of alternative
+        options, especially the numbers of possible orderings. Different graphics can be used for the same data,
+        e.g., boxplots or density estimates instead of histograms for single continuous variables. Graphics for
+        related variables in the same dataset can be drawn. The essential principle is to regard graphics as
+        doorways to information, not as static pictures.
+      </p>
+
+      <p>
+        Presentation graphics are sometimes designed to attract attention to make them memorable, sometimes to
+        direct attention to a feature in them. It is easy to make a display memorable by adding an outlandish touch,
+        overly dramatic colours or exotic background pictures. Whether the graphic's information is then also
+        memorable is another question.
       </p>
     </subsection>
 
     <subsection xml:id="sec-attention-cognitive-load">
       <title>Cognitive load</title>
       <p>
-        Complex graphics can be difficult to study and understand. Sometimes this is because space is limited;
-        sometimes because data are genuinely complex. Anything that increases cognitive load should be avoided.
-      </p>
-
-      <p>
-        Having graphics and accompanying text on different pages demands extra effort. Poor labelling and awkward
-        scales make work. A poorly ordered legend does not help. Overlapping text and confusing colours require
-        disentangling. Comparisons become harder when scales that should match do not, or when graphics are not aligned
-        as they should be.
+        Complex graphics can be difficult to study and understand. Sometimes graphics in scientific articles are
+        complex and tightly packed with information because space is limited. Sometimes a complex graphic is just a
+        good summary of complex data, as with <xref ref="fig-palpcp2x"/>.
       </p>
 
       <figure xml:id="fig-palpcp2x">
-        <image source="images/Palpcp2X-1.png"/>
+        <image source="images/Palpcp2X-1.png">
+          <description>Reordered parallel coordinate plot of Palmer penguin data showing four measurements for three species, with lines coloured by species crossing the parallel axes.</description>
+        </image>
         <caption><p>Reordered parallel coordinate plot of Palmer penguin data.</p></caption>
       </figure>
+
+      <p>
+        Muddled graphics can be difficult to understand for other reasons. Anything that increases the cognitive
+        load or mental effort required to look at a graphic should be avoided. Having graphics and accompanying text
+        on different pages demands extra effort. Poor labelling and awkward scales make work. A poorly ordered and
+        positioned legend does not help. Overlapping text and confusing colours need to be disentangled. Data points
+        that are too close to axes or borders can be difficult to distinguish. Comparisons are made more difficult
+        if scales that should be the same are not or if graphics to be compared are not aligned as they should be.
+      </p>
     </subsection>
 
     <subsection xml:id="sec-attention-rewards">
       <title>Rewards for paying attention</title>
       <p>
-        Paying close attention to graphics can reveal much more information. Accepting a title or accompanying text may
-        not tell the full story. Graphics should be studied in context, and a closer look at underlying data is often
-        warranted.
+        Paying close attention to graphics can reveal much more information. The Gapminder life expectancy graphic
+        and the movie ratings graphic, both shown in <xref ref="fig-gapmovie"/>, are striking examples.
       </p>
 
       <figure xml:id="fig-gapmovie">
-        <image source="images/gapMovie-1.png"/>
+        <image source="images/gapMovie-1.png">
+          <description>Two side-by-side graphics: Gapminder life expectancy data on the left showing trends over time by country, and movie ratings on the right showing the distribution of ratings.</description>
+        </image>
         <caption><p>Gapminder life expectancy data (left) and movie ratings (right).</p></caption>
       </figure>
+
+      <p>
+        Accepting the title of a graphic or what other accompanying text says may not tell the full story. It is
+        worth paying graphics detailed attention. However, relying on graphics alone will not be sufficient.
+        Graphics have a background and context and need to be understood within that framework. A closer look at the
+        data underlying a graphic is warranted too.
+      </p>
     </subsection>
   </section>
 
@@ -170,50 +231,83 @@
 
     <blockquote>
       <p>"The more I practise, the luckier I get."</p>
-      <p>--- Gary Player</p>
+      <p>--- the golfer Gary Player</p>
     </blockquote>
 
     <subsection xml:id="sec-understanding-knowledge">
       <title>Knowledge</title>
       <p>
-        Knowledge of what graphic forms represent is necessary to understand what features might convey. Individual
-        graphics have a general structure with local details. Combined with other graphics they provide an overall
-        picture whose interpretation depends on context and background.
+        Knowledge of what graphic forms represent is necessary to understand what information features might convey.
+        Individual graphics have a general structure with local details that suggest additional information. Combined
+        with other graphics they provide an overall picture of the data whose interpretation will depend on the
+        context and background. Familiarity with what features may arise, and why, makes it easier to understand
+        what is being shown by the graphics for a new dataset.
       </p>
 
       <p>
-        Background knowledge is indispensable, whether your own or that of collaborating domain experts. With data by
-        country over time, knowing how countries have changed matters. With swimming, knowledge of rules and equipment
-        changes matters.
+        Some of the graphics literature is concerned with new, innovative graphics, emphasising novelty over
+        familiarity. The advantage is the novelty itself, the attraction to viewers of something unknown, possibly
+        striking. The disadvantage is viewers' lack of experience with the form. While new developments are welcome,
+        viewers will see more with graphics they are familiar with.
+      </p>
+
+      <p>
+        Background knowledge is also indispensable, whether your own or that of collaborating domain experts. With
+        data by country over time it was necessary to know how countries have changed. With swimming, information on
+        the rules for different strokes, on full body swimsuits, and on the introduction of the butterfly was
+        valuable. Another swimming example, <xref ref="fig-relay400x"/>, concerned the reasons why the best 200
+        times for individuals and relay teams were so different.
       </p>
 
       <figure xml:id="fig-relay400x">
-        <image source="images/relay400X-1.png"/>
-        <caption><p>Best times for 400 m freestyle events for men and women, individual and relay.</p></caption>
+        <image source="images/relay400X-1.png">
+          <description>Chart of best times for the 400 m freestyle events for men and women, comparing individual (red) and relay (blue) performances over time.</description>
+        </image>
+        <caption><p>Best times for the 400 m freestyle events for men and women, individual and relay.</p></caption>
       </figure>
 
       <p>
-        The web can help with context, but not always. Going back to original documentation can be valuable. Dataset
-        owners and maintainers are often very helpful.
+        Much can be found out about the Olympics on the web, such as stories surrounding particular events, how
+        times were measured, when rules were changed, but you have to look. The web is not always helpful. Going
+        back to original documentation can be, as with the articles by Michelson and Newcomb on their attempts to
+        measure the speed of light, and with getting the full survey from Annenberg that included the gay rights
+        questions. Often dataset owners/maintainers are very helpful.
       </p>
     </subsection>
 
     <subsection xml:id="sec-understanding-experience">
       <title>Experience</title>
       <p>
-        Experience changes what people notice. Motives, interest, background knowledge, education, and experience all
-        influence interpretation. It helps to study how to look at graphics and to look at many graphics. Just looking
-        is not enough.
+        What do people pay attention to when they visit a famous building? Architects will study the building.
+        Historians may study the symbolism, and locals will have their own ideas about what stands out. What can be
+        seen happening during a sporting event? Coaches will view it differently than fans, and with team games,
+        different sets of fans will see the same game very differently (<xref ref="hastorf-1954"/>). In these
+        situations it comes down to motives, interest and background knowledge, education, and experience. The same
+        goes for looking at graphics. Motives may vary between viewers, interest and background knowledge can
+        hopefully be assumed, but education and experience can not. It is helpful to study how to look at graphics
+        and to look at a lot of graphics to learn how to recognise what might be seen in them. Just looking is not
+        enough. Or as Spear put it: "there is quite a difference between simply looking at a chart and seeing it."
+        (<xref ref="spear-1969"/>).
       </p>
 
       <p>
-        Expertise research suggests that people with more experience recognise meaningful structure better. The same
-        likely applies to graphics: familiarity with forms and interpretation practices makes it easier to understand a
-        new dataset.
+        And what should be looked at in a graphic? If researchers have no experience, it is hard for them to know
+        what to look for. De Groot showed that international master chess players chose better moves than club
+        players because they recognised the structure of positions (<xref ref="deGroot-1978"/>, a second edition in
+        English of his Dutch thesis from 1946). The same doubtless applies to viewers studying graphics. If they
+        are familiar with data graphics and understanding and interpreting them, they will find it easier to
+        understand and interpret graphics from a new dataset.
+      </p>
+
+      <p>
+        The peaks in the finishing times for the Comrades marathon in <xref ref="fig-comtimesx"/> are an example.
+        Others have seen similar patterns in other marathon races (<xref ref="marastats-2019"/>).
       </p>
 
       <figure xml:id="fig-comtimesx">
-        <image source="images/comTimesX-1.png"/>
+        <image source="images/comTimesX-1.png">
+          <description>Density plots of finishing times in the 2019 Comrades race for females (above) and males (below), showing peaks at medal cut-off times marked by dotted lines.</description>
+        </image>
         <caption><p>Finishing times in the 2019 Comrades race for females and males.</p></caption>
       </figure>
     </subsection>
@@ -221,26 +315,42 @@
     <subsection xml:id="sec-understanding-biases">
       <title>Possible cognitive biases</title>
       <p>
-        Even if proper attention is paid, cognitive biases may hinder proper use of what is seen.
+        Even if you pay proper attention there may be influences hindering your making proper use of what you see.
+        Examples of forms of cognitive bias include
       </p>
 
       <ul>
         <li><p>Confirmation bias: look for information supporting prior beliefs.</p></li>
         <li><p>Hindsight bias: past events seem more likely than they were.</p></li>
-        <li><p>Recency bias: recent events are weighted more than older ones.</p></li>
-        <li><p>Anchoring bias: overemphasis on a reference point, often what is seen first.</p></li>
-        <li><p>Availability bias: rely too much on examples to hand.</p></li>
-        <li><p>Representativeness bias: ignore base rates and sample size.</p></li>
+        <li><p>Recency bias: recent events are more important than historic ones.</p></li>
+        <li>
+          <p>Anchoring bias: overemphasise the effect of some reference point. It can mean anchoring any thoughts
+          about a graphic to what is seen first. It is always sensible to look at the data in different ways,
+          developing alternative perspectives.</p>
+        </li>
+        <li>
+          <p>Availability bias: rely too much on examples to hand. Data are available on the web for Olympic results
+          that were missing in <xref ref="fig-olyamdx"/>, but discussing the problems is more instructive (and less
+          effort) than solving them in this case.</p>
+        </li>
+        <li><p>Representativeness bias: use particular examples without taking account of sample size and base rates.
+          Avoid by using spineplots for comparing rates and UpAndDown plots for comparing changes, as in
+          <xref ref="fig-btw23x"/>.</p>
+        </li>
         <li><p>Perceptual bias: we see what we want to see.</p></li>
       </ul>
 
       <figure xml:id="fig-olyamdx">
-        <image source="images/olyAmdx-1.png"/>
-        <caption><p>Athletics field events for men: percentage differences in gold performances compared with recent Games.</p></caption>
+        <image source="images/olyAmdx-1.png">
+          <description>Dot plot of athletics field events for men showing percentage differences in gold medal performances compared with averages over the last six Games, with missing data for some events.</description>
+        </image>
+        <caption><p>Athletics field events for men: percentage differences in gold performances compared with averages over the last six Games.</p></caption>
       </figure>
 
       <figure xml:id="fig-btw23x">
-        <image source="images/btw23X-1.png"/>
+        <image source="images/btw23X-1.png">
+          <description>UpAndDown plot showing absolute changes in party support between the last two German elections as area and relative changes as height, with party colours.</description>
+        </image>
         <caption><p>UpAndDown plot of absolute and relative changes in party support between two German elections.</p></caption>
       </figure>
     </subsection>
@@ -251,48 +361,65 @@
 
     <blockquote>
       <p>
-        "Aristotle maintained that women have fewer teeth than men ... it never occurred to him to verify this
-        statement by examining his wives' mouths."
+        "Aristotle maintained that women have fewer teeth than men; although he was twice married, it never occurred
+        to him to verify this statement by examining his wives' mouths."
       </p>
-      <p>--- Bertrand Russell</p>
+      <p>--- Bertrand Russell, <em>The Impact of Science on Society</em></p>
     </blockquote>
 
     <p>
-      Published graphics may appear polished, attractive, and convincing. Scepticism and thorough checking are called
-      for. It is often better to search for evidence that could refute impressions than to look only for support.
-      Several independent ways of checking features detected in graphics should be used.
+      Published graphics may appear polished, attractive, and convincing. Photographs prepared by estate agents for
+      houses they are selling may also be described that way. Many graphics were drawn first and discarded just as
+      many more photographs were taken than are used. Scepticism and thorough checking are called for. Popper's
+      concept of falsification suggests that it is better to search for evidence to refute your impressions than to
+      look for supporting evidence. As xkcd has pointed out (<xref ref="xkcd-2012"/>), with enough options you have
+      a good chance of finding something that looks significant that is not. Checking develops your own trust in
+      your conclusions and should help to convince others. There are several independent ways of checking features
+      detected in graphics.
     </p>
 
     <subsection xml:id="sec-checking-provenance">
       <title>Provenance</title>
       <p>
-        Are data from a reliable source? Is it known how they were collected, edited, and summarised? Are they precise
-        measurements or uncertain estimates? Do variables mean what you think they do?
+        Are the data from a reliable source? Is it known how they were collected, edited, and summarised? Are they
+        precise measurements or uncertain estimates? Do the variables mean what you think they do or have they been
+        defined or collected differently?
       </p>
     </subsection>
 
     <subsection xml:id="sec-checking-looking">
       <title>Looking at the numbers</title>
       <p>
-        Do scales look sensible? Perhaps minima or maxima look too extreme. Do data appear complete? Perhaps there are
-        gaps in time series or missing categories. Categories missing altogether can be difficult to spot. Sometimes
-        there is heaping at particular values due to rounding, sometimes particular values are never recorded, and
-        sometimes all data are rounded so a continuous measurement appears discrete.
+        Do the scales look sensible? Perhaps the minima or maxima look too extreme. Do the data appear to be
+        complete? Perhaps there are gaps in the data or missing categories. Categories that are missing altogether
+        can be difficult to spot. Maybe the data just look wrong.
+      </p>
+      <p>
+        Sometimes there is heaping at particular values, usually due to rounding, sometimes particular values are
+        never recorded. Sometimes all the data have been rounded, so that a continuous measurement appears to be
+        discrete. If you ask people what their height is they will report a rounded, possibly inaccurate number.
+        Better data would be obtained by measuring heights in a uniform way under identical conditions for all
+        (<xref ref="student-1931"/>).
       </p>
     </subsection>
 
     <subsection xml:id="sec-checking-varying-plots">
       <title>Varying plots</title>
       <p>
-        Graphics redrawn in different ways leave different impressions, emphasising different information. Size, aspect
-        ratio, and position can strongly influence what can be seen. Graphics can be resized, moved, and zoomed in or
-        out. Plot options can be varied: maxima and minima of scales, origin location, histogram bin widths, point
-        sizes, colours, and more. Whether one variation is "better" than another is less important than checking
-        several.
+        Graphics redrawn in different ways leave different impressions, emphasising different information. Size,
+        aspect ratio, and position can strongly influence what can be seen. Graphics can be resized, moved, and
+        zoomed in or out. Plot options can be changed: maxima and minima of scales, origin location, histogram
+        binwidths, point sizes, colours, and more. Whether some variations are better than others is neither here
+        nor there: the important principle is to check several. <xref ref="fig-movhists"/> displays a default
+        histogram for the movie runtimes and the one used in the chapter, including only films of 3 hours or under
+        and using a binwidth of 1 minute. Far more graphics were drawn for each case study than are included in the
+        book.
       </p>
 
       <figure xml:id="fig-movhists">
-        <image source="images/movHists-1.png"/>
+        <image source="images/movHists-1.png">
+          <description>Two histograms of movie runtimes side by side: the default histogram on the left with a wide range and large bins, and a varied one on the right showing only films up to 3 hours with 1-minute bins, revealing more detail.</description>
+        </image>
         <caption><p>Histograms of movie runtimes, the default on the left and a varied one on the right.</p></caption>
       </figure>
     </subsection>
@@ -300,111 +427,154 @@
     <subsection xml:id="sec-checking-varying-forms">
       <title>Varying plot forms</title>
       <p>
-        Drawing different kinds of plots of the same variable(s) can provide new insights: boxplots or density
-        estimates instead of histograms, scatterplots by group instead of a single scatterplot, or a doubledecker plot
-        instead of stacked barcharts.
+        Drawing different kinds of plots of the same variable(s) provides new insights: a boxplot or density
+        estimate instead of a histogram, scatterplots by group (faceting) instead of a single scatterplot, a
+        doubledecker plot instead of stacked barcharts.
       </p>
     </subsection>
 
     <subsection xml:id="sec-checking-statistical">
       <title>Statistical checks</title>
       <p>
-        Statistical models and graphics complement one another. There are often graphical ways to assess model results,
-        but not always statistical models for ideas suggested by graphics. If such models exist, they should be used.
+        Statistical models and graphics complement and augment one another, although it is an unbalanced
+        relationship. There are almost always graphical ways of visually assessing the results of statistical
+        models, but there are not always statistical models that can evaluate ideas derived from graphics. If there
+        are, they should be used. If it looks as if there is a nonlinear relationship between two variables in a
+        scatterplot, then a spline model could be fit. Both are drawn here again in <xref ref="fig-chesssocsm"/>.
       </p>
 
-      <figure xml:id="fig-chesssocsm-1">
-        <image source="images/ChessSocSm-1.png"/>
+      <figure xml:id="fig-chesssocsm">
+        <image source="images/ChessSocSm-1.png">
+          <description>Smooth trend line fitted to chess ratings over time, showing a nonlinear relationship between age and rating with a peak around mid-career.</description>
+        </image>
         <caption><p>Smooth of chess ratings.</p></caption>
       </figure>
 
       <figure xml:id="fig-chesssocsm-2">
-        <image source="images/ChessSocSm-2.png"/>
+        <image source="images/ChessSocSm-2.png">
+          <description>Smooth trend line fitted to football-league draw proportions over time, showing how the proportion of draws has changed across different leagues.</description>
+        </image>
         <caption><p>Smooth of football-league draw proportions.</p></caption>
       </figure>
 
       <p>
-        If a spineplot suggests non-independence, a chi-squared test could be used. More complicated data may need
-        logistic regression or other modelling approaches.
+        If a spineplot suggests two categorical variables are not independent, a chi-squared test could be used.
+        More complicated data could be examined using logistic regression.
       </p>
+      <p> Examples where statistical models are not so readily available include assessing possible outliers in a scatterplot and whether there are multiple modes in a histogram.</p>
     </subsection>
 
     <subsection xml:id="sec-checking-consequences">
       <title>Checking consequences</title>
       <p>
-        Internal checking asks whether patterns found across the whole dataset also occur in subgroups. External
-        checking compares with related datasets where relevant.
+        Internal checking asks whether patterns found across the whole dataset also occur in subgroups. The
+        surprising peak in the chess ratings at 2000 was explained by comparing ratings for active and inactive
+        players, shown here again as <xref ref="fig-histelox"/>.
       </p>
 
       <figure xml:id="fig-histelox">
-        <image source="images/histEloX-1.png"/>
+        <image source="images/histEloX-1.png">
+          <description>Overlapping density plots of chess ratings for active and inactive players in 2020, showing that the peak at 2000 is driven by inactive players.</description>
+        </image>
         <caption><p>Ratings of active and inactive chess players in 2020.</p></caption>
       </figure>
 
+     <p>The decline in survival rate across the Titanic’s three passenger classes applied to women, but not to men (Figures TODO). Conclusions might have implications for other variables and it is useful to see if patterns are consistent across a dataset.</p>
+
+      <p>
+        External checking compares with related datasets where relevant. If relevant data can be found, compare
+        results with other related datasets, as in <xref ref="fig-btwdotvx"/>.
+      </p>
+
       <figure xml:id="fig-btwdotvx">
-        <image source="../../pngImages/btwDotV-1.png"/>
+        <image source="../../pngImages/btwDotV-1.png">
+          <description>Dot plot comparing seat-winning percentages by party in Germany 2021 and the UK 2019, showing similarities and differences in proportional representation between the two electoral systems.</description>
+        </image>
         <caption><p>Seat-winning percentages by party in Germany 2021 and UK 2019.</p></caption>
       </figure>
 
-      <figure xml:id="fig-gaybx">
-        <image source="images/gayBX-1.png"/>
-        <caption><p>Support and opposition plots for same-sex marriage questions by age and sex.</p></caption>
-      </figure>
-
-      <figure xml:id="fig-ubhx">
-        <image source="images/ubHX-1.png"/>
-        <caption><p>Extra seats in German elections since 1949.</p></caption>
-      </figure>
-
-      <figure xml:id="fig-swim50200x">
-        <image source="images/swim50200X-1.png"/>
-        <caption><p>Best times in seconds for four 50 m events and four 200 m events by sex.</p></caption>
-      </figure>
     </subsection>
 
     <subsection xml:id="sec-checking-context">
       <title>Context</title>
       <p>
-        Results have to make sense and be interpreted in context. A point pattern in a scatterplot may be judged very
-        differently for different datasets or variables. Weekly reporting patterns, definition changes, and collection
-        conditions can all affect what is seen.
+        Results have to make sense and be interpreted in context. A pattern of points in a scatterplot will be judged in different ways for different datasets or different variables (Figure 33.1). Errors like negative heights or zero dimensions (Figure 11.1) are obvious. Weekly patterns in sightings by birdwatchers or in disease reporting may need to be checked. More birdwatchers may be out and about at weekends and reporting of diseases may be influenced by media attention. Differences in mortality rates between countries or over time may be due to definitions, conditions or treatments as Covid pandemic statistics have illustrated.
       </p>
+      <p>In comparing opinions on same-sex marriage from Figure 9.9, redrawn here as Figure 32.14, it is well to remember that the questions were about different situations, that they were framed differently, and that only a third of the sample were asked the state question.
+      </p>
+      <figure xml:id="fig-gaybx">
+        <image source="images/gayBX-1.png">
+          <description>Line plots showing support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent, with separate lines for males (green) and females (purple).</description>
+        </image>
+        <caption><p> Line plots of support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent by males (green) and females (purple)</p></caption>
+      </figure>
     </subsection>
 
     <subsection xml:id="sec-checking-discussion">
       <title>Discussing with others, especially domain experts</title>
       <p>
-        What one person sees in a graphic may not be what another person sees. Combining independent opinions is more
-        effective than relying on one person. Graphics analysts will not have full subject knowledge and should consult
-        domain experts.
+        What one person sees when they look at a graphic may not be what another person sees. Combining opinions is more effective than relying on one person’s views—provided that the opinions are independent. Graphics analysts will not have the subject knowledge of experts in the field and they should be consulted. Amongst other topics expertise was sought on chess ratings (Chapter 8), ornithology (Chapters 14, 18, and 23), swimming (Chapter 20), and German elections (Chapter 26). The role of Ausgleichsmandate in making the German parliament much larger than intended was important information gained. This was shown in <xref ref="fig-ubhx"/>.
       </p>
+
+      <figure xml:id="fig-ubhx">
+        <image source="images/ubHX-1.png">
+          <description>Time series plot of extra seats (Uberhangmandate and Ausgleichsmandate) in German elections since 1949, with dashed lines marking reunification and the introduction of Ausgleichsmandate.</description>
+        </image>
+        <caption><p>Extra seats in German elections since 1949. Each point marks the date of an election. The left dashed line marks the first election after reunification in October 1990. The right dashed line marks the first election with Ausgleichsmandate.</p></caption>
+      </figure>
     </subsection>
 
     <subsection xml:id="sec-checking-replicate">
       <title>Replicate</title>
       <p>
-        The ideal is independent replication. Full replication may be impractical for time, organisational, and
-        financial reasons, but it remains the target. Partial replication can be achieved by splitting large datasets
-        into independent groups or by checking consistency over time in regularly updated datasets.
+        All of the checks listed so far can be carried out relatively quickly. The ideal would be to attempt to
+        independently replicate results. Replication should be possible for scientific studies by having different
+        researchers carry out fresh studies in different environments. This may be impractical for reasons of time,
+        organisation, and finance, but is the ideal to aim for. Examples include estimating the speed of light (Chapter 5), evaluating treatment of psoriasis (Chapter 12), and distinguishing shearwaters (Chapter 23).
       </p>
+
+      <p>
+        If datasets are large, a partial replication can be achieved by splitting the dataset into independent
+        groups by sampling. Some datasets are regularly updated; results can then be checked for consistency over
+        time.
+      </p>
+
+      <p> Some datasets are regularly updated, e.g., movies (Chapter 3), fuel efficiency (Chapter 17), and elections (Chapter 26). Results can then be checked for consistency over time.</p>
     </subsection>
 
     <subsection xml:id="sec-checking-example">
       <title>Example of checking</title>
       <p>
-        In the swimming examples, initial visual impressions were checked across strokes and distances, alternative
-        displays were drawn, and source records were inspected. This uncovered both substantive explanations and a
-        classification error.
+        The best times for swimming events were studied in the swimming chapter. The form observed in the first plot
+        for the 100 m freestyle for men was checked by looking at other strokes and other distances. The possibility
+        of an overlap in times between female butterfly and freestyle swimmers was checked by drawing a different
+        display, multiple boxplots. This display was also drawn horizontally rather than vertically, to make better
+        use of space and to provide an alternative point of view. The data behind the outlier was checked and a
+        classification error was uncovered: it was a time for that swimmer at that competition, but in a different
+        event.
       </p>
+
+      <p>
+        The displays for 50 m races and 200 m for men and women were different in one important respect: the
+        backstroke swimmers caught up on the butterfly swimmers. Checking with swimming experts revealed the reason,
+        the different rules on turning between lengths for the events. The figures are shown again in
+        <xref ref="fig-swim50200x"/>. Note the different vertical scales of the left and right plots.
+      </p>
+
+      <figure xml:id="fig-swim50200x">
+        <image source="images/swim50200X-1.png">
+          <description>Two panel boxplot display of best times in seconds for four 50 m events (left) and four 200 m events (right) by sex, ordered by stroke from top: breaststroke, backstroke, butterfly, freestyle.</description>
+        </image>
+        <caption><p>Best times in seconds for the four 50 m (left) and four 200 m (right) swimming events achieved by men and women in the order breaststroke, backstroke, butterfly, freestyle from the top.</p></caption>
+      </figure>
     </subsection>
 
     <subsection xml:id="sec-pay-attention-main-points">
       <title>Main points</title>
       <ul>
-        <li><p>Attention varies with goals and conditions; cognitive load should be reduced where possible.</p></li>
-        <li><p>Understanding depends on graphic literacy, domain knowledge, and experience.</p></li>
-        <li><p>Cognitive biases can distort interpretation and must be actively countered.</p></li>
-        <li><p>Checking should combine multiple independent strategies, not just one.</p></li>
+        <li><p>Attention varies depending on goals and conditions. Excessive cognitive load should be avoided.</p></li>
+        <li><p>Successful understanding depends on knowledge, experience, and avoiding biases.</p></li>
+        <li><p>There are many ways to check ideas and all should be used.</p></li>
       </ul>
     </subsection>
   </section>

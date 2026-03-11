@@ -39,8 +39,38 @@
   <!-- bertin:2010 -->
   <biblio xml:id="bertin-2010" type="raw">Bertin, Jacques. <pubtitle>Semiology of Graphics</pubtitle>. Esri Press, Redlands, California, 2010.</biblio>
 
+  <!-- Wainer:1997 -->
+  <biblio xml:id="Wainer-1997" type="raw">Wainer, Howard. <pubtitle>Visual Revelations</pubtitle>. Springer, New York, 1997.</biblio>
+
+  <!-- Wainer:2004 -->
+  <biblio xml:id="Wainer-2004" type="raw">Wainer, Howard. <pubtitle>Graphic Discovery: A Trout in the Milk and Other Visual Adventures</pubtitle>. Princeton University Press, Princeton, New Jersey, 2004.</biblio>
+
   <!-- wilkinson:2005 -->
   <biblio xml:id="wilkinson-2005" type="raw">Wilkinson, Leland. <pubtitle>The Grammar of Graphics</pubtitle>. 2nd ed. Springer, New York, 2005.</biblio>
+
+  <!-- coulmont:2010 -->
+  <biblio xml:id="coulmont-2010" type="raw">Coulmont, Baptiste. Cartographie avec R. 2010. <url href="http://coulmont.com/cartes/rcarto.pdf"/></biblio>
+
+  <!-- friendly:2007 -->
+  <biblio xml:id="friendly-2007" type="raw">Friendly, Michael. A.-M. Guerry's Moral Statistics of France: Challenges for Multivariable Spatial Analysis. <em>Statistical Science</em>, 22(3):368&#8211;399, 2007.</biblio>
+
+  <!-- wikip:2020 -->
+  <biblio xml:id="wikip-2020" type="raw">Wikipedia. The Blue Banana. 2020. <url href="https://en.wikipedia.org/wiki/Blue_Banana"/></biblio>
+
+  <!-- FIDE:2020 -->
+  <biblio xml:id="FIDE-2020" type="raw">FIDE. International Chess Federation Ratings. 2020. <url href="https://ratings.fide.com"/></biblio>
+
+  <!-- wb:2020 -->
+  <biblio xml:id="wb-2020" type="raw">World Bank. World Bank Open Data. 2020. <url href="https://data.worldbank.org"/></biblio>
+
+  <!-- elo:1978 -->
+  <biblio xml:id="elo-1978" type="raw">Elo, Arpad. <pubtitle>The Rating of Chess Players, Past and Present</pubtitle>. 1st ed. Arco, New York, 1978.</biblio>
+
+  <!-- bila:2009 -->
+  <biblio xml:id="bila-2009" type="raw">Bilalic, M., Smallbone, K., McLeod, P., and Gobet, F. Why are (the best) women so good at chess? Participation rates and gender differences in intellectual domains. <em>Proc. R. Soc. B</em>, 276:1161&#8211;1165, 2009.</biblio>
+
+  <!-- carr:1987 -->
+  <biblio xml:id="carr-1987" type="raw">Carr, Dan, Littlefield, Richard J., Nicholson, Wesley L., and Littlefield, J.S. Scatterplot Matrix Techniques for large N. <em>JASA</em>, 82(398):424&#8211;436, 1987.</biblio>
 
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
@@ -111,6 +141,7 @@
   <!-- wickham:2019 -->
   <biblio xml:id="wickham-2019" type="raw">Wickham, Hadley. <pubtitle>tidyverse: Easily Install and Load the 'Tidyverse'</pubtitle>. R package version 1.3.0, 2019. <url href="https://CRAN.R-project.org/package=tidyverse"/></biblio>
 
+<<<<<<< copilot/fix-ch22-pretext-book
   <!-- buol:2018 -->
   <biblio xml:id="buol-2018" type="raw">Buolamwini, Joy and Gebru, Timnit. Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification. <em>Proceedings of Machine Learning Research</em>, 81:1&#8211;15, 2018.</biblio>
 
@@ -233,4 +264,38 @@
 
   <!-- IAAF:2001 -->
   <biblio xml:id="IAAF-2001" type="raw">IAAF. <pubtitle>Scoring Tables for Combined Events</pubtitle>. IAAF, Monaco, 2001.</biblio>
+=======
+  <!-- heinz:2003 -->
+  <biblio xml:id="heinz-2003" type="raw">Heinz, G., Peterson, L., Johnson, R., and Kerk, C. Exploring Relationships in Body Dimensions. <em>Journal of Statistics Education</em>, 11(2), 2003.</biblio>
+
+  <!-- healey:2012 -->
+  <biblio xml:id="healey-2012" type="raw">Healey, Christopher and Enns, James. Attention and Visual Memory in Visualization and Computer Graphics. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 18(7):1170&#8211;1188, 2012.</biblio>
+
+  <!-- potter:2014 -->
+  <biblio xml:id="potter-2014" type="raw">Potter, Mary, Wyble, Brad, Hagmann, Carl Erick, and McCourt, Emily. Detecting meaning in RSVP at 13 ms per picture. <em>Attention, Perception, and Psychophysics</em>, 76:270&#8211;279, 2014.</biblio>
+
+  <!-- tversky:2019 -->
+  <biblio xml:id="tversky-2019" type="raw">Tversky, Barbara. <pubtitle>Mind in Motion</pubtitle>. Basic Books, New York, 2019.</biblio>
+
+  <!-- theeuwes:2018 -->
+  <biblio xml:id="theeuwes-2018" type="raw">Theeuwes, Jan. Visual Selection: Usually Fast and Automatic; Seldom Slow and Volitional. <em>Journal of Cognition</em>, 1(1):1&#8211;15, 2018.</biblio>
+
+  <!-- spear:1969 -->
+  <biblio xml:id="spear-1969" type="raw">Spear, Mary E. <pubtitle>Practical Charting Techniques</pubtitle>. McGraw Hill, New York, 1969.</biblio>
+
+  <!-- hastorf:1954 -->
+  <biblio xml:id="hastorf-1954" type="raw">Hastorf, Albert and Cantril, Hadley. They saw a game. <em>Journal of Abnormal and Social Psychology</em>, 49:129&#8211;134, 1954.</biblio>
+
+  <!-- deGroot:1978 -->
+  <biblio xml:id="deGroot-1978" type="raw">de Groot, Adriaan. <pubtitle>Thought and choice in chess</pubtitle>. 2nd ed. Mouton, The Hague, 1978.</biblio>
+
+  <!-- marastats:2019 -->
+  <biblio xml:id="marastats-2019" type="raw">marastats. General Marathon Stats. 2019. <url href="https://marastats.com/marathon/"/></biblio>
+
+  <!-- xkcd:2012 -->
+  <biblio xml:id="xkcd-2012" type="raw">xkcd. Significant. 2012. <url href="https://xkcd.com/882/"/></biblio>
+
+  <!-- student:1931 -->
+  <biblio xml:id="student-1931" type="raw">Student. The Lanarkshire Milk Experiment. <em>Biometrika</em>, 23(3/4):398&#8211;406, 1931.</biblio>
+>>>>>>> main
 </references>
