@@ -26,6 +26,8 @@
 
     <p>Dedicated Geographic Information System (GIS) software includes ways of dealing with enclaves, parts of one area completely enclosed by another.  This was not expected to be an issue, but surprisingly it turned out that five departments have enclaves, amongst them, most notably, the Enclaves des Papes in Dr&#244;me, which is actually part of the department of Vaucluse.  Discovering such tidbits of information is one of the serendipitous pleasures of Exploratory Data Analysis: you end up learning more than just about the data to hand.</p>
 
+   <subsection>
+    <title>A first map: agricultural workers</title>
     <p><xref ref="fig-Bertagp"/> shows the 90 departments of France in 1954 with those highlighted in which agricultural workers made up at least 40% of the workforce.  There is a fairly clear division into East and West, something that is described in French texts under the heading of the Le Havre-Marseille line.  The line may have declined in importance over the last thirty years, but in 1954 it was still relevant.</p>
 
     <figure xml:id="fig-Bertagp">
@@ -36,7 +38,7 @@
     </figure>
 
     <p>Given the large number of maps that Bertin included, you would expect several geographic patterns to be identified and discussed, yet none are. It is a puzzling omission.</p>
-  </section>
+  </subsection></section>
 
   <section xml:id="secBertin2">
     <title>Bertin&#8217;s many graphics of the French workforce data</title>
