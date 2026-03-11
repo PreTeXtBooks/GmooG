@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-chess">
   <title>Comparing chess players across the board</title>
-
+  <introduction>
   <epigraph>
     <q>A strong memory, concentration, imagination, and a strong will is required to become a great chess player.</q>
     <attribution>Bobby Fischer</attribution>
   </epigraph>
 
-  <introduction>
     <p><em>Background.</em> FIDE (the International Chess Federation) has used an Elo system since 1970 to rate the relative strengths of chess players based on the results of all official individual games.</p>
     <p><em>Questions.</em> What is the distribution of ratings? How does rating change with age? How do the ratings of men and women compare? Which countries have the players with the highest ratings?</p>
     <p><em>Sources.</em> FIDE (the International Chess Federation) publishes rating lists of players every month (<xref ref="FIDE-2020"/>). Country population data for 2019 was taken from the World Bank website (<xref ref="wb-2020"/>).</p>
@@ -19,7 +18,7 @@
 
     <p>FIDE (the International Chess Federation) publishes ratings of chess players regularly and these are the ratings that will be discussed here. Like many sporting organisations they use a system based on Elo's ideas (<xref ref="elo-1978"/>). The main assumption is that the performance of a player is normally distributed about the player's current strength. A further assumption is that players' performances in a game are independent of one another. Ratings are updated based on game results. Ratings in the December 2020 dataset range from 1001 to 2862 (the then world champion, Magnus Carlsen).</p>
 
-    <p>Figure <xref ref="fig-histElo"/> gives one view of the distribution of player ratings.</p>
+    <p><xref ref="fig-histElo"/> gives one view of the distribution of player ratings.</p>
 
     <figure xml:id="fig-histElo">
       <image source="images/histElo-1.png">
@@ -30,7 +29,7 @@
 
     <p>There is certainly no sign of a normal distribution, but then that would not be expected. There is a sharp lower boundary, presumably because lower ratings are not included. The very best players are not visible, as the histogram bars where they would appear are too small. There is a suggestion of a one-sided peak at 2000. Perhaps players who reach this level stop playing to avoid the risk of falling below 2000. Making the binwidth of the chess ratings histogram narrower (10 rating points instead of the 25 points used in <xref ref="fig-histElo"/>), there are weak hints of one-sided peaks at 1250 and 1500, similar to the one at 2000.</p>
 
-    <p>The best performing players are of interest and they are not visible in <xref ref="fig-histElo"/>. A boxplot of the ratings data is shown in <xref ref="fig-boxElo"/> and now the best players stand out (individual outliers drawn in red). It is clear that there were some exceptional players with ratings over 2750.</p>
+    <p>The best performing players are of interest and they are not visible in <xref ref="fig-histElo"/>. A boxplot of the ratings data is shown in <xref ref="fig-boxElo"/> and now the best players stand out (individual outliers drawn in red). It is clear that there were some exceptional players with ratings over 2750. Going back to the data shows that there were of them.</p>
 
     <figure xml:id="fig-boxElo">
       <image source="images/boxElo-1.png">
@@ -70,7 +69,8 @@
       <caption>Density estimates of age distributions for active and inactive players.</caption>
     </figure>
 
-    <p>Far fewer women play chess than men. Figure <xref ref="fig-sexRating"/> compares the rating distributions for active male and female players.</p>
+    <p>Far fewer women play chess than men. In December 2020 women comprised of players with a rating. This dropped to amongst active players.
+       <xref ref="fig-sexRating"/> compares the rating distributions for active male and female players.</p>
 
     <figure xml:id="fig-sexRating">
       <image source="images/sexRating-1.png">
@@ -81,7 +81,7 @@
 
     <p>The female ratings are lower than the male ratings, mainly because far fewer females play. This was analysed in <xref ref="bila-2009"/> using only German ratings from 2008. The authors concluded that the difference in numbers playing explained about 96% of the rating differences between the sexes for the top 100 players of each sex.</p>
 
-    <p>Figure <xref ref="fig-sexDiff1"/> shows the data for the December 2020 FIDE ratings for the top 1000 active players of each sex. The male ratings are higher. At the very top the differences are smaller and then they get steadily bigger.</p>
+    <p><xref ref="fig-sexDiff1"/> shows the data for the December 2020 FIDE ratings for the top 1000 active players of each sex. The male ratings are higher. At the very top the differences are smaller and then they get steadily bigger.</p>
 
     <figure xml:id="fig-sexDiff1">
       <image source="images/sexDiff1-1.png">
@@ -90,14 +90,14 @@
       <caption>Ratings of the top 1000 male and top 1000 female players in December 2020 with line widths proportional to group sizes.</caption>
     </figure>
 
+    <p>The increasing differences can be seen directly in <xref ref="fig-sexDiff2"/>. This agrees with what <xref ref="bila-2009"/> found with their data and also with the theoretical expected values they calculated assuming underlying normal distributions of ratings. The FIDE ratings are not normally distributed, but the increasing differences between male and female ratings at these top levels is likely to be true in general for order statistics for groups of such different sizes.</p>
+
     <figure xml:id="fig-sexDiff2">
       <image source="images/sexDiff2-1.png">
         <description>Line plot of the differences between the ratings of the top 1000 male and top 1000 female FIDE-rated players in December 2020, showing a steadily increasing gap from near zero at the top to several hundred rating points further down the rankings.</description>
       </image>
       <caption>Differences between the ratings of the top 1000 male and top 1000 female players in December 2020.</caption>
     </figure>
-
-    <p>The increasing differences can be seen directly in <xref ref="fig-sexDiff2"/>. This agrees with what <xref ref="bila-2009"/> found with their data and also with the theoretical expected values they calculated assuming underlying normal distributions of ratings. The FIDE ratings are not normally distributed, but the increasing differences between male and female ratings at these top levels is likely to be true in general for order statistics for groups of such different sizes.</p>
 
     <p>Age also has an effect as <xref ref="fig-sexAge"/> suggests. Many teenagers of both sexes play, but the proportion of the young amongst female chess players is much higher than the proportion of the young amongst male chess players. Many young players will give up the game before reaching their full potential. Overall there are about nine times as many male players as female players. Looking at the data in another way, <xref ref="fig-sexAgeHist"/> shows the absolute numbers of active players by age and sex in December 2020.</p>
 
@@ -121,7 +121,7 @@
   <section xml:id="secChess3">
     <title>Which nations have the best chess players?</title>
 
-    <p>For much of the twentieth century, the USSR was the strongest chess nation. Over the last thirty years the game has become popular in other nations and it is surprising which were the largest chess playing nations in December 2020, measured by the number of active rated players. Figure <xref ref="fig-nationB"/> shows the 30 chess federations with the highest numbers. The rest are combined into the group 'Other'. Countries are coloured by region, using the classification and colours of the World Bank (<xref ref="wb-2020"/>).</p>
+    <p>For much of the twentieth century, the USSR was the strongest chess nation. Over the last thirty years the game has become popular in other nations and it is surprising which were the largest chess playing nations in December 2020, measured by the number of active rated players. <xref ref="fig-nationB"/> shows the 30 chess federations with the highest numbers. The rest are combined into the group 'Other'. Countries are coloured by region, using the classification and colours of the World Bank (<xref ref="wb-2020"/>).</p>
 
     <figure xml:id="fig-nationB">
       <image source="images/nationB-1.png">
@@ -132,7 +132,7 @@
 
     <p>Not only is Russia not the country with the most active rated players, there are four other countries with more: Spain, France, Germany, and India. The increased popularity of chess in India is surely due to Anand being undisputed World Chess Champion from 2007 to 2013. The United States is only 15th in the list and most of the top 30 countries are European. Iran stands out in 6th position. The fact that the 'Other' group is so large underlines the spread of the game across the world.</p>
 
-    <p>Countries are of very different population sizes and other ways of looking at chess-playing strength include the number of active rated players per million population and the number of active grandmasters per million population. These statistics tend to pick out countries with small populations. Instead we can look at how the number of Grandmasters is related to the number of players. Figure <xref ref="fig-nationC"/> plots both with bubbles drawn for each country proportional to their population sizes. Only countries with a population of at least one million are included. Russia is the country at the top with far more Grandmasters than any other. The other four countries to the right are India (large in blue), Germany, France, and Spain. China and the USA are the big countries to the left with many grandmasters and relatively few rated players.</p>
+    <p>Countries are of very different population sizes and other ways of looking at chess-playing strength include the number of active rated players per million population and the number of active grandmasters per million population. These statistics tend to pick out countries with small populations. Instead we can look at how the number of Grandmasters is related to the number of players. <xref ref="fig-nationC"/> plots both with bubbles drawn for each country proportional to their population sizes. Only countries with a population of at least one million are included. Russia is the country at the top with far more Grandmasters than any other. The other four countries to the right are India (large in blue), Germany, France, and Spain. China and the USA are the big countries to the left with many grandmasters and relatively few rated players.</p>
 
     <figure xml:id="fig-nationC">
       <image source="images/nationC-1.png">
@@ -141,7 +141,7 @@
       <caption>Grandmasters and active rated players per million population, where circle areas are proportional to country population sizes.</caption>
     </figure>
 
-    <p>Another approach is to look at rating distributions for individual countries. Figure <xref ref="fig-boxChessR"/> shows boxplots of ratings for all countries with more than 3000 active players ordered by their medians. Boxplot widths have been drawn related to numbers of players and the countries coloured again by region.</p>
+    <p>Another approach is to look at rating distributions for individual countries. <xref ref="fig-boxChessR"/> shows boxplots of ratings for all countries with more than 3000 active players ordered by their medians. Boxplot widths have been drawn related to numbers of players and the countries coloured again by region.</p>
 
     <figure xml:id="fig-boxChessR">
       <image source="images/boxChessR-1.png">
@@ -160,7 +160,7 @@
 
     <p>The January 2001 dataset only includes players with a rating of over 2000 and has just 36979 players, slightly over a tenth of the number for December 2020. The December 2015 list has no rating restriction, and there were about more players at the end of 2020, five years later. The proportion of players flagged as inactive has also gone up and that explains part of the difference in overall numbers.</p>
 
-    <p>Figure <xref ref="fig-dens1520Elo"/> compares the densities of the rating distributions of active players in December 2015 and December 2020. The difference in the distributions is striking and it might be that there was a higher proportion of young active players in 2020.</p>
+    <p><xref ref="fig-dens1520Elo"/> compares the densities of the rating distributions of active players in December 2015 and December 2020. The difference in the distributions is striking and it might be that there was a higher proportion of young active players in 2020.</p>
 
     <figure xml:id="fig-dens1520Elo">
       <image source="images/dens1520Elo-1.png">
@@ -169,7 +169,7 @@
       <caption>Density estimates of distributions of ratings in December 2015 and December 2020.</caption>
     </figure>
 
-    <p>Figure <xref ref="fig-AgeRating"/> compares density estimates of players' ages and confirms that there was a higher proportion of younger active players in 2020.</p>
+    <p><xref ref="fig-AgeRating"/> compares density estimates of players' ages and confirms that there was a higher proportion of younger active players in 2020.</p>
 
     <figure xml:id="fig-AgeRating">
       <image source="images/AgeRating-1.png">
@@ -178,7 +178,7 @@
       <caption>Density estimates of active players' ages in 2015 and 2020.</caption>
     </figure>
 
-    <p>Ratings can be plotted against age in a scatterplot to study how they depend on age. Usually statisticians want more data than they have, so that they can study their data in greater depth. With the chess ratings there is almost too much data! Figure <xref ref="fig-ratAge15"/> illustrates the problem for the December 2015 data. There are many overlapping points. An alpha value of 0.05 means that only locations where there are 20 or more points are completely black. This alpha value is too high where there is a lot of data (the very young) and too low where there is little data (the top rated players). Nevertheless we can see that there are no very young high-rated players and that there are relatively few low-rated players aged over 20 or so. There is a decline in the numbers of the very top-rated players with increasing age.</p>
+    <p>Ratings can be plotted against age in a scatterplot to study how they depend on age. Usually statisticians want more data than they have, so that they can study their data in greater depth. With the chess ratings there is almost too much data! <xref ref="fig-ratAge15"/> illustrates the problem for the December 2015 data. There are many overlapping points. An alpha value of 0.05 means that only locations where there are 20 or more points are completely black. This alpha value is too high where there is a lot of data (the very young) and too low where there is little data (the top rated players). Nevertheless we can see that there are no very young high-rated players and that there are relatively few low-rated players aged over 20 or so. There is a decline in the numbers of the very top-rated players with increasing age.</p>
 
     <figure xml:id="fig-ratAge15">
       <image source="images/ratAge15-1.png">
@@ -191,7 +191,7 @@
 
     <p>One approach would be a form of two-dimensional density estimation or hexagonal binning (<xref ref="carr-1987"/>), possibly including jittering of the age values. Since the dataset is a December one it can be safely assumed that almost all players are at least the calculated age, so that if jittering is carried out it should be by adding a jitter term from [0,1).</p>
 
-    <p>A way to both show the densest parts of the data and pick out the top-rated players would be to colour the points for those top players and use different alpha values for the two groups. Figure <xref ref="fig-ratAge15alph"/> uses an alpha of 0.01 for most of the data and an alpha of 1 for the players coloured red with ratings over 2700.</p>
+    <p>A way to both show the densest parts of the data and pick out the top-rated players would be to colour the points for those top players and use different alpha values for the two groups. <xref ref="fig-ratAge15alph"/> uses an alpha of 0.01 for most of the data and an alpha of 1 for the players coloured red with ratings over 2700.</p>
 
     <figure xml:id="fig-ratAge15alph">
       <image source="images/ratAge15alph-1.png">
@@ -200,7 +200,7 @@
       <caption>Rating by age for active players in 2015 (players with ratings over 2700 are coloured red and an alpha value of 0.01 has been used for the others).</caption>
     </figure>
 
-    <p>Simplest would be to take a random sample and this has been done in Figure <xref ref="fig-ratAge15s"/> using a 10% sample and alpha=0.1. The advantage of sampling from a large dataset is that even a much smaller sample than this 10% one would give an excellent estimate of the overall structure and it is not necessary to draw so many points for that purpose. To be on the safe side a second or even a third sample could be taken to check any results. The disadvantage is that anything rare, such as outliers or unusual cases, may not be included in the samples.</p>
+    <p>Simplest would be to take a random sample and this has been done in <xref ref="fig-ratAge15s"/> using a 10% sample and alpha=0.1. The advantage of sampling from a large dataset is that even a much smaller sample than this 10% one would give an excellent estimate of the overall structure and it is not necessary to draw so many points for that purpose. To be on the safe side a second or even a third sample could be taken to check any results. The disadvantage is that anything rare, such as outliers or unusual cases, may not be included in the samples.</p>
 
     <figure xml:id="fig-ratAge15s">
       <image source="images/ratAge15s-1.png">
@@ -218,7 +218,7 @@
       <caption>Boxplots of ratings by age for active players in 2015.</caption>
     </figure>
 
-    <p>The disadvantage of using boxplots is that they cannot show multimodality, if it exists. To check for multimodality, consider ridge plots, as in Figure <xref ref="fig-ratRidges"/>. Most of the ridges look close to unimodal, symmetric distributions. Ridges have only been drawn here for ages at every 5 years for the main part of the dataset from ages 15 to 65. While ridges are good for the central bulk of distributions they are not so good at the extremes where they may imply higher or lower values than are reasonable. As no players can have ratings less than 1000, an option has been chosen to set a boundary there. Similarly, the upper tails of the distributions have been bounded. Using ridgeplots and boxplots in combination is a promising solution.</p>
+    <p>The disadvantage of using boxplots is that they cannot show multimodality, if it exists. To check for multimodality, consider ridge plots, as in <xref ref="fig-ratRidges"/>. Most of the ridges look close to unimodal, symmetric distributions. Ridges have only been drawn here for ages at every 5 years for the main part of the dataset from ages 15 to 65. While ridges are good for the central bulk of distributions they are not so good at the extremes where they may imply higher or lower values than are reasonable. As no players can have ratings less than 1000, an option has been chosen to set a boundary there. Similarly, the upper tails of the distributions have been bounded. Using ridgeplots and boxplots in combination is a promising solution.</p>
 
     <figure xml:id="fig-ratRidges">
       <image source="images/ratRidges-1.png">
@@ -227,7 +227,7 @@
       <caption>Ridgeplots of ratings for active players in 2015 for ages from 15 to 65 in 5 year jumps.</caption>
     </figure>
 
-    <p>Returning to comparing the rating datasets in December 2015 and 2020, Figure <xref ref="fig-AgeRatingScat"/> shows two scatterplots of rating by age, one for the active players in the December 2015 dataset and one for the active players in the December 2020 dataset. Smooths have been drawn to show how rating varies with age.</p>
+    <p>Returning to comparing the rating datasets in December 2015 and 2020, <xref ref="fig-AgeRatingScat"/> shows two scatterplots of rating by age, one for the active players in the December 2015 dataset and one for the active players in the December 2020 dataset. Smooths have been drawn to show how rating varies with age.</p>
 
     <figure xml:id="fig-AgeRatingScat">
       <image source="images/AgeRatingScat-1.png">
@@ -253,7 +253,7 @@
 
     <p>There are four titles for chess players: candidate master (CM), FIDE master (FM), international master (IM) and grandmaster (GM). The history of the introduction of titles for players is not fully clear. The GM title started to be used informally just before the first World War and official international regulations for the award of the titles GM and IM were introduced by FIDE in 1950. There are a parallel set of titles for women (WCM to WGM), but the strongest women opt for the open titles. Titles are awarded based on performance as well as rating, and the regulations are relatively complex.</p>
 
-    <p>Figure <xref ref="fig-chessTitle"/> includes a barchart of the numbers of active players with different titles and scatterplots of the ratings of those players against their ages.</p>
+    <p><xref ref="fig-chessTitle"/> includes a barchart of the numbers of active players with different titles and scatterplots of the ratings of those players against their ages.</p>
 
     <figure xml:id="fig-chessTitle">
       <image source="images/chessTitle-1.png">
@@ -265,21 +265,19 @@
     <p>There are more players in each of the open categories than in any of the female categories, although the qualification levels for those are lower. This is another effect of far fewer women playing than men. There are more FIDE masters (FMs) than any other title.</p>
 
     <p>The point clouds rise as the title level rises, but there is quite a lot of overlap between titles. The highest ratings for each title drop with age, partly because players gain a higher title, partly because players' performance tends to decline with age. The levels for open titles are higher than the levels for women for each title. Some very young players with low ratings qualified as candidate masters. There are a few low outliers, presumably players who have lost form badly for one reason or another. There is a single upper outlier in the IM category, Igors Rausis, who admitted cheating and lost his grandmaster title in December 2019. As he immediately retired, he should be counted as inactive, but remained classified as active for a year under the special 2020 pandemic rule.</p>
-  </section>
-
-  <section xml:id="sec-chess-discussion">
-    <title>Discussion</title>
-
+ 
     <p><em>Answers.</em> Ratings have a skew distribution. More younger players have ratings than older players. Far fewer women play chess than men. Russia has the most grandmasters, while Spain and France had the most active rated players in 2020.</p>
 
     <p><em>Further questions.</em> How do the ratings of individual players develop over time? How have numbers of active players by country changed over time? FIDE now publishes ratings for Rapid and Blitz chess as well as Standard ratings. How do the three types of rating compare for the players?</p>
+</section>
 
-    <p><em>Graphical takeaways.</em></p>
+  <section xml:id="sec-chess-discussion">
+    <title>Graphical takeaways</title>
     <ul>
-      <li><p>Boxplots are good for extreme outliers in large populations. (Figures <xref ref="fig-boxElo"/>, <xref ref="fig-sexRating"/> and <xref ref="fig-ratAge15b"/>)</p></li>
-      <li><p>Density estimates are effective for comparing distributions. (Figures <xref ref="fig-densElo"/>, <xref ref="fig-densAge"/>, <xref ref="fig-dens1520Elo"/> and <xref ref="fig-AgeRating"/>)</p></li>
-      <li><p>Line widths proportional to group sizes work well when the sizes are very different. (Figures <xref ref="fig-sexDiff1"/> and <xref ref="fig-sexAge"/>)</p></li>
-      <li><p>Smooths summarise scatterplot relationships in large datasets. (Figures <xref ref="fig-AgeRatingSmooth"/> and <xref ref="fig-AgeRatingScat"/>)</p></li>
+      <li><p>Boxplots are good for extreme outliers in large populations. (<xref ref="fig-boxElo"/>, <xref ref="fig-sexRating"/> and <xref ref="fig-ratAge15b"/>)</p></li>
+      <li><p>Density estimates are effective for comparing distributions. (<xref ref="fig-densElo"/>, <xref ref="fig-densAge"/>, <xref ref="fig-dens1520Elo"/> and <xref ref="fig-AgeRating"/>)</p></li>
+      <li><p>Line widths proportional to group sizes work well when the sizes are very different. (<xref ref="fig-sexDiff1"/> and <xref ref="fig-sexAge"/>)</p></li>
+      <li><p>Smooths summarise scatterplot relationships in large datasets. (<xref ref="fig-AgeRatingSmooth"/> and <xref ref="fig-AgeRatingScat"/>)</p></li>
     </ul>
   </section>
 </chapter>
