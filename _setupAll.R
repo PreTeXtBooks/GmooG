@@ -1,5 +1,5 @@
 library(knitr)
-opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE, fig.align = "center")
+opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE, fig.align = "center")
 library(tidyverse)
 theme_set(theme(plot.title = element_text(hjust = 0.5)))
 library(ggthemes)

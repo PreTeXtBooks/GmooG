@@ -131,7 +131,7 @@ d21bsW <- d21bsW %>% mutate(across(`100m`:Shotput, ~{.x -sort(.x)[77]}))
 Range <- function(v1) {max(v1)-min(v1)}
 qn <- d21bsW %>% filter(rrEvent < 80) %>% summarise(across(c(`100m`:Shotput), Range))
 qn <- qn %>% pivot_longer(cols=everything(), names_to="name", values_to="Stat") %>% arrange(Stat)
-d21bsW %>% filter(rrEvent < 80) %>% pcp_select(all_of(qn$name)) %>% pcp_scale(method="raw") %>% ggplot(aes_pcp()) + geom_pcp_axes() + geom_pcp(colour="grey70") + geom_hline(yintercept=0, colour="brown4", lwd=1.5) + ylab(NULL) + xlab(NULL) + theme(axis.text.x=element_text(angle=-45))
+d21bsW %>% filter(rrEvent < 80) %>% pcp_select("110mHurdles", Longjump, Shotput, "100m", Highjump, "1500m", "400m", Polevault, Discus, Javelin) %>% pcp_scale(method="raw") %>% ggplot(aes_pcp()) + geom_pcp_axes() + geom_pcp(colour="grey70") + geom_hline(yintercept=0, colour="brown4", lwd=1.5) + ylab(NULL) + xlab(NULL) + theme(axis.text.x=element_text(angle=-45))
 ```
 
 The nth highest polyline connects the nth best performance in each event.  Subtracting the same statistic from the points score for each event makes the levels comparable while keeping the differences on the same scale.  The zero line equivalent to the 40th best performance has been coloured brown.  There is bigger variability above than below as the distributions are, of course, skewed\index{skewness}.  The events are not in the same order as in Figure \@ref(fig:decBox1). They have been ordered by increasing range.   The lines are close to parallel for the first few events, implying similar distributions, including for the long jump and the 1500 metres, the two most different events in terms of points awarded.  The javelin has greater variability, as observed already.  The discrete nature of the high jump and pole vault points is because the bars are set at certain fixed heights that competitors either clear or fail to clear.
@@ -144,7 +144,7 @@ decNames <- c(Decath21p$Decathlete[1:4], "others (112)")
 decNames[3:4] <- c("Roman Sebrle", "Tomas Dvorak")
 qn <- Decath21p %>% summarise(across(c(`100m`:`1500m`), median))
 qn <- qn %>% pivot_longer(cols=everything(), names_to="name", values_to="Stat") %>% arrange(Stat)
-dc21p <- Decath21p %>% arrange(-Hil) %>% pcp_select(all_of(qn$name)) %>% pcp_scale(method="raw") %>% ggplot(aes_pcp()) + geom_pcp_axes(colour="white") + geom_pcp(overplot="none", aes(colour=as.factor(Hil))) + ylab(NULL) + xlab(NULL) + theme(axis.text.x=element_text(angle=-45), axis.ticks.y=element_blank(), axis.text.y=element_blank(), legend.title=element_blank(), legend.key.size = unit(0.5, "cm")) + scale_colour_manual(values=c("red", "darkorchid3", "blue", "brown", "grey85"), labels=decNames)
+dc21p <- Decath21p %>% arrange(-Hil) %>% pcp_select("1500m", Discus, Shotput, Javelin, Highjump, "400m", "100m", Polevault, "110mHurdles", Longjump) %>% pcp_scale(method="raw") %>% ggplot(aes_pcp()) + geom_pcp_axes(colour="white") + geom_pcp(overplot="none", aes(colour=as.factor(Hil))) + ylab(NULL) + xlab(NULL) + theme(axis.text.x=element_text(angle=-45), axis.ticks.y=element_blank(), axis.text.y=element_blank(), legend.title=element_blank(), legend.key.size = unit(0.5, "cm")) + scale_colour_manual(values=c("red", "darkorchid3", "blue", "brown", "grey85"), labels=decNames)
 dc21p
 ```
 

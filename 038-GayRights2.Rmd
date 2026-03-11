@@ -1,0 +1,167 @@
+
+```{r setup038, include=FALSE}
+source("_setupAll.R")
+library(scales)
+library(cartogram)
+```
+
+# Results from surveys on gay rights  {#secGayR}
+
+> "Surveys show that surveys never lie."
+> `r quote_footer('--- Natalie Angier')`
+
+**Background**  Attitudes to same-sex marriage\index{same-sex marriage} have been surveyed over a number of years.  The survey discussed here was part of Annenberg's 2004 election year survey in the United States.
+
+**Questions**  How did people's opinions on same-sex marriage vary with age?  How did the opinions vary across the country?  Were there differences between people's opinions on a law at state level and their opinions on a Constitutional Amendment at federal level?
+
+**Sources**  The Annenberg Public Policy Center\index{Annenberg Public Policy Center} of the University of Pennsylvania
+
+**Structure**  There were 81422 people surveyed and 84 variables.\index{datasets!Annenberg election survey 2004}
+
+## Survey results by age, sex, and race  {#secGayR1}
+Annenberg carried out rolling cross-section surveys for the US presidential elections of 2000, 2004, and 2008.  The interviews for the 2004 National Annenberg Election survey were carried out between October 2003 and November 2004.  Questions were asked on a range of topics and the dataset includes responses to many, but not all.  Only a few questions are studied here.   A third of respondents were asked if they would favour or oppose a law allowing same-sex marriage in their state, while all respondents were asked if they were in favour of or opposed to introducing a Constitutional Amendment making same-sex marriage illegal.
+
+\newpage
+
+```{r}
+data(SurvGR)
+naesXz2 <- SurvGR %>% mutate(opF=ifelse(valF<5, valF, NA), opS=ifelse(valS<5, valS, NA))
+naesXz2 <- naesXz2 %>% mutate(Spro=ifelse(valS %in% c(1,2), "yes", "no"))
+naesXz2 <- naesXz2 %>% group_by(State) %>% mutate(nState=n(), proS=sum(Spro=="yes")/(sum(Spro=="yes")+sum(!is.na(opS) & Spro=="no"))) %>% ungroup() %>% mutate(pState=fct_reorder(State, proS, mean))
+```
+
+```{r gayS, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Support for same-sex marriage at state level by respondent age.  A red dotted line marks 50% support.  Cases with any values missing have been excluded and data for ages over 80 combined into one value at 81.  Point areas are proportional to the number of respondents of that age.'}
+naesSA <- naesXz2 %>% filter(age < 98) %>% mutate(age=ifelse(age>81, 81, age)) %>% group_by(age) %>% summarise(Spro=sum(valS %in% c(1,2)), Scon=sum(valS %in% c(3,4)), nn=Spro+Scon, Sfav=Spro/nn)
+ggplot(naesSA, aes(age, Sfav)) + geom_point(aes(size=nn), colour="dodgerblue3") + ylab(NULL) + xlab(NULL) + scale_y_continuous(labels = percent_format(), limits=c(0, 1), breaks=c(0, 0.25, 0.5, 0.75, 1)) + geom_hline(yintercept=0.5, linetype="dashed", colour="firebrick3") + theme(legend.position="none") + scale_size_area()
+```
+
+There is a fairly steady decline in support by age, starting with a few young ages with majority support for same-sex marriage (amongst those expressing an opinion, those responding "Don't know" or refusing to answer have been treated as missing).\index{scatterplot}\index{bubble chart}\index{guideline}  With increasing age it looks like a step function with about the same level of support between ages 40 and 55 and similarly between ages 62 and 77.  This was discussed in @gelman:2020 where they suggested and compared several nonlinear models.
+
+The dataset is large enough to look at opinions by age and sex together.  Figure \@ref(fig:gaySg) shows that females are more in favour than males at almost every age.\index{line plot}  The effect on these opinions of sex and race together can also be investigated.  Figure \@ref(fig:gayGR) shows a doubledecker\index{doubledecker plot} plot for this.  The patterns of support by race are the same for males and females, with female rates being higher.  Rates for blacks are lowest.
+
+```{r gaySg, out.width="80%", fig.width=6.5*0.8, fig.cap = 'Support for same-sex marriage at state level by age of respondent for females (purple) and males (green)'}
+naesSAG <- naesXz2 %>% filter(age < 98) %>% mutate(age=ifelse(age>81, 81, age)) %>% group_by(age, gender) %>% summarise(Spro=sum(valS %in% c(1,2)), Scon=sum(valS %in% c(3,4)), Sfav=Spro/(Spro+Scon), ns=Spro+Scon)
+ggplot(naesSAG, aes(age, Sfav)) + geom_line(aes(colour=gender)) + ylab(NULL) + xlab(NULL) + theme(legend.position="none") + scale_colour_manual(values=c("purple2", "springgreen3"))  + scale_y_continuous(labels = percent_format(), limits=c(0, 1), breaks=c(0, 0.25, 0.5, 0.75, 1)) + geom_hline(yintercept=0.5, linetype="dashed", colour="firebrick3")
+```
+
+```{r gayGR, fig.asp=0.5, fig.cap = 'Support for same-sex marriage at state level by sex and race'}
+naesXz2 <- naesXz2 %>% mutate(spro=fct_rev(Spro), Gender=factor(gender, levels=c("Male", "Female")))
+gayGR1 <- ggplot(naesXz2 %>% filter(!is.na(opS))) + geom_mosaic(aes(x=product(race, Gender), fill=spro), divider=ddecker(), offset=0.005) + xlab("") + ylab("") + theme(legend.position="none", axis.ticks=element_blank(),  panel.background=element_blank(), plot.margin=margin(0,0,0,0)) + scale_fill_manual(values=c("red", "grey80")) + 
+  scale_x_productlist(labels = paste0(rep(c("Bl", "Hisp", "Oth", "White"), 2), "\n", rep(c(" ", " ", "                    Male", " ", " ", " ", "                    Female", " "))), expand = c(0, 0)) + scale_y_productlist(expand = c(0, 0))
+gayGR1
+```
+
+## Mapping the survey results {#secGayR2}
+
+It is possible to look at how rates of support vary by state and, unsurprisingly, there are substantial differences.  Figure \@ref(fig:gayMap) is a choropleth map\index{choropleth map} of the support for a state law permitting same-sex marriage in each state.  (Except that there is no information for Alaska and Hawaii as the survey was restricted to the 48 continental states and Washington D.C.)
+
+```{r gayMap, fig.asp=0.6, fig.cap = 'Support for same-sex marriage at state level on a continuous colour scale from 10\\% to 70\\%'}
+data(USregions)
+naesSStx <- naesXz2 %>% filter(valS %in% c(1,2,3,4))
+naesZ <- naesSStx %>% group_by(State) %>% summarise(ProStateLaw=mean(proS), nS=n())
+USpsl <- full_join(USregions, naesZ)
+gaym1 <- tm_shape(USpsl) + tm_polygons(fill="ProStateLaw", fill.scale=tm_scale(breaks=seq(0.1,0.7,0.01), values="brewer.yl_or_br"), fill.legend = tm_legend_hide())
+gaym1
+```
+
+Some regional patterns are apparent, such as the higher support in New England and on the West Coast.  As always with choropleth maps, area does not reflect population.  There are several larger states with small populations and smaller states with larger populations.  This is also reflected in the numbers asked in each state.  Figure \@ref(fig:gayCIs) shows the estimates of proportions supporting a same-sex marriage law with 95% confidence intervals.  The longest interval is for Washington, DC, with only 31 asked and the shortest interval is for California with 1891 asked.  The states have been grouped by Census Bureau regions and ordered within region by percentage in favour.  The NorthEast states split into two groups with Pennsylvania and Maine having much lower levels of support.  The South also splits into two groups with Florida and the three small most northerly states having higher levels of support.  The MidWest states have fairly similar values.  Overall, very few states show a majority for same-sex marriage.
+
+```{r gayCIs, fig.asp=1.15, fig.cap = 'Support for same-sex marriage by state with 95\\% confidence intervals, states grouped by region and ordered within region by estimated population proportion in favour'}
+USpsl <- USpsl %>% mutate(p1=ProStateLaw, hi=1.96*(p1*(1-p1)/nS)**0.5, low=p1-hi, upp=p1+hi)
+regnames4 <- c("NorthEast", "South", "MidWest", "West")
+colblindx <- colorblind_pal()(8)[1:4]
+names(colblindx) <- regnames4
+USpsl <- USpsl %>% mutate(Region=factor(Region, levels=c("NorthEast", "South", "MidWest", "West")))
+gayCIx <- ggplot(USpsl, aes(fct_reorder(NAME, p1), p1)) + geom_point(aes(colour=Region), size=2) + geom_errorbar(aes(ymin = low, ymax = upp), width = 0.2) + ylab(NULL) + xlab(NULL) + coord_flip() + facet_grid(rows=vars(Region), scales="free_y", space="free_y") + scale_y_continuous(expand = c(0,0), limits=c(0,1), labels=percent) + theme(strip.text.y.right = element_text(angle = 0), legend.position="none") + scale_colour_manual(values=colblindx)
+gayCIx
+```
+
+Figure \@ref(fig:mapReg) shows a map of the regions.
+
+```{r mapReg, fig.asp=0.6, fig.cap = 'The four US regions defined by the Census Bureau'}
+tm_shape(USpsl) + tm_polygons(fill="Region", fill.scale =
+tm_scale(values=colblindx), fill.legend = tm_legend(position = c("left", "bottom")))
+```
+
+```{r gayMapC, fig.asp=0.5, fig.cap = 'Support for same-sex marriage at state level using a population cartogram'}
+USxt <- st_transform(USpsl, crs = 9311)
+USxC <- cartogram_cont(USxt, "nS")
+tm_shape(USxC) + tm_polygons(fill="ProStateLaw",  fill.scale=tm_scale(breaks=seq(0.1,0.7,0.01), values="brewer.yl_or_br"), fill.legend = tm_legend_hide())
+```
+
+Cartograms\index{cartogram} can be effective in getting round the population issue and Figure \@ref(fig:gayMapC) uses the number of respondents as a substitute for the state population.  It suggests the states separate into three main groups, the East, the West, and the centre.
+
+\newpage
+
+## Comparing responses to related, but different questions {#secGayR3}
+
+Another question about same-sex marriage was whether respondents were in favour of or opposed to introducing a Constitutional Amendment making same-sex marriage illegal.  All respondents were asked and the support shows a quite different pattern with age to that of Figure \@ref(fig:gayS), as can be seen in Figure \@ref(fig:gayF).\index{scatterplot}\index{guideline}
+
+```{r gayF, fig.asp=0.7, fig.cap = 'Scatterplot of opposition to a Constitutional Amendment making same-sex marriage illegal by age of respondent.   Cases with any values missing have been excluded and data for ages above 80 have been combined into one value at 81.  Point areas are proportional to the number of respondents of that age.'}
+naesFA <- naesXz2 %>% filter(age < 98) %>% mutate(age=ifelse(age>81, 81, age)) %>% group_by(age) %>% summarise(ns=n(), Fpro=sum(valF %in% c(3,4)), Fcon=sum(valF %in% c(1,2)), Ffav=Fpro/(Fpro+Fcon))
+ggplot(naesFA, aes(age, Ffav)) + geom_point(aes(size=ns), colour="gold3") + ylab(NULL) + xlab(NULL) + scale_y_continuous(labels = percent_format(), limits=c(0, 1), breaks=c(0, 0.25, 0.5, 0.75, 1)) + geom_hline(yintercept=0.5, linetype="dashed", colour="firebrick3") + theme(legend.position="none") + scale_size_area()
+```
+
+While there was a majority against same-sex marriage at state level for most ages except the youngest, there is a majority against a Constitutional Amendment at almost every age.  There is also little difference in opinion across the ages concerning a Constitutional Amendment. 
+
+\newpage
+
+Including the influence of sex and drawing the graphics for the two questions beside one another helps making comparisons.  Opposition to a Constitutional Amendment is higher for females than males at every age.\index{line plot}  The greater variability in the left graphic on state law is because only a third of the survey population was asked this question.
+
+```{r gayB, fig.asp=0.6, fig.cap = 'Line plots of support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent by males (green) and females (purple)'}
+state1 <- ggplot(naesSAG, aes(age, Sfav)) + geom_line(aes(colour=gender)) + ylab(NULL) + xlab(NULL) + theme(legend.position="none") + scale_colour_manual(values=c("purple2", "springgreen3")) + scale_y_continuous(labels = percent_format(), limits=c(0, 1), breaks=c(0, 0.25, 0.5, 0.75, 1)) + geom_hline(yintercept=0.5, linetype="dashed", colour="firebrick3")
+naesFG <- naesXz2 %>% filter(age < 98) %>% mutate(age=ifelse(age>81, 81, age)) %>% group_by(age, gender) %>% summarise(Fpro=sum(valF %in% c(3,4)), Fcon=sum(valF %in% c(1,2)), Ffav=Fpro/(Fpro+Fcon), ns=Fpro+Fcon)
+fed1 <- ggplot(naesFG, aes(age, Ffav)) + geom_line(aes(colour=gender)) + ylab(NULL) + xlab(NULL) + theme(legend.position="none") + scale_colour_manual(values=c("purple2", "springgreen3"))  + scale_y_continuous(labels = percent_format(), limits=c(0, 1), breaks=c(0, 0.25, 0.5, 0.75, 1)) + geom_hline(yintercept=0.5, linetype="dashed", colour="firebrick3")
+state1 + fed1
+```
+
+The differences between the graphics depend on the exact form of the questions asked.  Annenberg provide access to the full survey information on request.  There were two versions of the state question asked at different times in the 2004 survey and five versions of the federal question.  The differences within each group were slight, but there were major differences between the two groups.  For the state question, "in favour" meant in favour of same-sex marriage.  For the federal question, "in favour" meant in favour of a Constitutional Amendment banning same-sex marriage.  Respondents to this question were offered an additional possible answer of "Neither favor nor oppose".
+
+\newpage
+
+Figure \@ref(fig:gayFSbars) shows barcharts for the full sets of responses on both questions, excluding respondents who were not asked.\index{barchart}  Most people with opinions on the issues have strong opinions.  The different framings of the two questions were important.
+
+```{r gayFSbars, fig.asp=0.9, fig.cap = 'Barcharts of the full responses to the two questions'}
+naesXz2 <- naesXz2 %>% mutate(ValF=factor(valF, labels=c("Strongly favor", "Somewhat favor", "Somewhat oppose", "Strongly oppose", "Neither", "Don't know", "Refused")), ValS=factor(valS, labels=c("Strongly favor", "Somewhat favor", "Somewhat oppose", "Strongly oppose", "Don't know", "Refused")))
+gs1 <- ggplot(naesXz2 %>% filter(!is.na(ValS)), aes(ValS)) + geom_bar(aes(fill=ValS)) + ylab(NULL) + xlab(NULL) + ggtitle("For same-sex marriage in state") + theme(plot.title=element_text(hjust=0.5, vjust=3), legend.position="none", axis.text.x = element_text(angle = -45)) + scale_fill_manual(values=c(rep("dodgerblue3", 4), rep("grey70", 2)))
+gs2 <- ggplot(naesXz2, aes(ValF)) + geom_bar(aes(fill=ValF)) + ylab(NULL) + xlab(NULL) + ggtitle("For a Constitutional Amendment banning same-sex marriage") + theme(plot.title=element_text(hjust=0.5, vjust=3), legend.position="none", axis.text.x = element_text(angle = -45)) + scale_fill_manual(values=c(rep("gold3", 4), rep("grey70", 3)))
+gs1/gs2
+```
+
+There were small numbers of "Don't know" and "Refused", as well as some who were neither for nor against the Constitutional Amendment question.  Those who did not express opinions one way or the other have been coloured grey.  The vertical scales are quite different, as only one third were asked the state question.
+
+\newpage
+
+Figure \@ref(fig:gayFS) studies how those responded who gave their opinions on both questions, either strongly or just somewhat.  Comparing answers of individuals is more informative than comparing distributions of aggregated answers.\index{multiple barchart}
+
+```{r gayFS, out.width="85%", fig.width=6.5*0.85, fig.asp=1.2, fig.cap = 'Multiple barcharts of the responses to supporting same-sex marriage at state level by the responses to supporting a Constitutional Amendment banning it'}
+naesXz2 <- naesXz2 %>% mutate(OpF=factor(opF, labels=c("Strongly favor", "Somewhat favor", "Somewhat oppose", "Strongly oppose")), OpS=factor(opS, labels=c("Strongly favor", "Somewhat favor", "Somewhat oppose", "Strongly oppose")), OpFf=factor(opF, labels=c("VeryFor", "For", "Against", "VeryAgainst")), OpSs=factor(opS, labels=c("VeryFor", "For", "Against", "VeryAgainst")))
+colblindy <- c("red3", colorblind_pal()(8)[c(5,2,3)])
+FSx <- ggplot(data = naesXz2 %>% filter(!is.na(OpF), !is.na(OpS)), aes(OpS)) + geom_bar(aes(fill=OpF)) + facet_grid(rows=vars(OpF)) + ylab("Constitutional Amendment against same-sex marriage") + xlab("State same-sex marriage law") + theme(legend.position="none") + scale_fill_manual(values=colblindy)
+FSx
+FSxs <- ggplot(data = naesXz2 %>% filter(!is.na(OpFf), !is.na(OpSs)), aes(OpSs)) + geom_bar(aes(fill=OpFf)) + facet_grid(rows=vars(OpFf)) + ylab("Constitutional Amendment against same-sex marriage") + xlab("State same-sex marriage law") + theme(legend.position="none") + scale_fill_manual(values=colblindy)
+```
+
+The most interesting feature is the combination of strongly opposing a same-sex marriage law for your own state while also strongly opposing a Constitutional Amendment banning same-sex marriage (bar lower right).  This group is the main reason for the difference between the two graphics in Figure \@ref(fig:gayB).
+
+\newpage
+
+Responses to the two questions across the states can be compared by looking at the proportions who responded in favour of a state law for same-sex marriage and those who opposed a Constitutional Amendment making same-sex marriage illegal.  Figure \@ref(fig:gayByState) shows the result, with circle sizes proportional to numbers giving an opinion on the Constitutional Amendment question.\index{scatterplot}\index{bubble chart}\index{guideline}
+
+```{r gayByState, out.width="85%", fig.width=6*0.85, fig.cap = 'Scatterplot of responses to the two same-sex marriage questions by state (point areas are proportional to the number of respondents in that state)'}
+naesSST <- naesXz2 %>% group_by(State) %>% summarise(Spro=sum(valS %in% c(1,2)), Scon=sum(valS %in% c(3,4)), nn=Spro+Scon, Sfav=Spro/nn, Fpro=sum(valF %in% c(3,4)), Fcon=sum(valF %in% c(1,2)), mm=Fpro+Fcon, Ffav=Fpro/mm)
+FSfav <- ggplot(naesSST, aes(Ffav, Sfav)) + ylab("In favour at state level") + xlab("Against Constitutional Amendment") + geom_point(aes(size=mm), colour="coral3") + coord_fixed(xlim=c(0, 1), ylim=c(0, 1)) + geom_abline(intercept=0, slope=1, linetype="dotted", colour="firebrick3") + theme(legend.position="none", plot.title=element_text(hjust=0.5, vjust=2)) + ggtitle("Opinions on same-sex marriage by state") + scale_size_area()
+FSfav
+FSfavx <- ggplot(naesSST, aes(Ffav, Sfav)) + ylab("In favour at state level") + xlab("Against Constitutional Amendment") + geom_point(aes(size=mm), colour="coral3") + geom_abline(intercept=0, slope=1, linetype="dotted", colour="firebrick3") + theme(legend.position="none", plot.title=element_text(hjust=0.5, vjust=3)) + ggtitle("Opinions on same-sex marriage by state") + scale_size_area()
+```
+
+Opposition to the Constitutional Amendment making same-sex marriage illegal was much stronger than support for a state law permitting same-sex marriage in all states.  The two responses were highly correlated across the states with a slope greater than one, so as the federal variable rate increased, the state rate increased more.  Opinions on gay rights are a complicated matter and there were several other related questions asked in the Annenberg survey.  Much more analysis could be done.  That survey was carried out almost twenty years ago and more recent surveys suggest that the US population has become more favourably disposed towards same-sex marriage.
+
+**Answers**  Older people were more against a same-sex marriage law in their state.  Women were more in favour than men at all ages.  There was a majority at all ages against a Constitutional Amendment banning same-sex marriage.
+
+**Further questions**  Respondents were asked additional related questions: How did their responses to those relate to their responses on same-sex marriage?   What results do more recent surveys show?  How do people's opinions vary on other contentious issues in the survey?
+
+### Graphical takeaways {-}
+* Bubble charts show how much evidence underlies a particular point.\index{bubble chart}  (Figures \@ref(fig:gayS), \@ref(fig:gayF), and \@ref(fig:gayByState))
+* Doubledecker plots show both group rates and group sizes.\index{doubledecker plot}  (Figure \@ref(fig:gayGR))
+* For large numbers of categories it is helpful to sort them into groups first and then order them by value.\index{sorting}\index{ordering}  (Figure \@ref(fig:gayCIs))

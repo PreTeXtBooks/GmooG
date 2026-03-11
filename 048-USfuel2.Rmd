@@ -1,0 +1,137 @@
+
+```{r setup48, include=FALSE}
+source("_setupAll.R")
+library(dichromat)
+```
+
+# Fuel efficiency of cars in the USA {#secVehicles}
+
+> "It's ugly, but it gets you there."
+
+> `r quote_footer('--- Volkswagen advertisement 1969 at the time of the first moon landing')`
+
+**Background**  Fuel economy data for individual models of cars and trucks is made available by the US Department of Energy.
+
+**Questions**  Are cars more fuel efficient than in the past?  Which cars use the most fuel and which the least?  How have the available models changed over time? How has fuel efficiency changed over time for particular models?
+
+**Sources**  @epa:2021
+
+**Structure**  A dataset with 43516 cases and 83 variables covering vehicles introduced in the years from 1984 to 2021.\index{datasets!car fuel efficiency}
+
+## How efficient are different types of car? {#secVehicles1}
+The dataset includes vehicles over many model years.  The numbers refer to the numbers of models evaluated, not the numbers of vehicles on the road, so one Rolls Royce counts the same as one Toyota Corolla.  Only cars are considered here, also excluding cases with missing values and some specialist small groups.   There is information on the individual cars, the fuels used, fuel consumption under different conditions, and car emissions.  Only estimated average mpg (miles per gallon) figures have been used in this chapter, but the dataset contains much more detailed information.
+
+The various types of 4-Wheel and All-Wheel Drive cars have been combined in the All-Wheel category.
+
+\newpage
+
+```{r vehCn, fig.asp=0.9, fig.cap='Numbers of car models tested by the U.S. Environmental Protection Agency by fuel, drive type, and class'}
+data(VehEffUS)
+Veh1a <- VehEffUS %>% filter(fuelType1 %in% c("Diesel", "Premium Gasoline", "Regular Gasoline"))
+Veh1b <- Veh1a %>% filter(!is.na(drive), !is.na(displ), !is.na(trany), year < 2022)
+Veh1d <- Veh1b %>% filter(VClass %in% c("Compact Cars", "Large Cars", "Midsize Cars", "Minicompact Cars", "Subcompact Cars", "Two Seaters"))
+Veh1d <- Veh1d %>% mutate(vClass=factor(VClass, levels=c("Two Seaters", "Minicompact Cars", "Subcompact Cars", "Compact Cars", "Midsize Cars", "Large Cars")))
+Veh1e <- Veh1d %>% filter(!drive %in% c("2-Wheel Drive"))
+Veh1g <- Veh1e %>% mutate(Drive=fct_lump(drive, 2, other_level="All-Wheel"))
+Veh1h <- Veh1g %>% filter(!atvType %in% c("Bifuel (CNG)"))
+ggplot(Veh1h, aes(vClass)) + geom_bar(aes(fill=fuelType1)) + facet_grid(rows=vars(Drive), cols=vars(fuelType1)) + xlab(NULL) + ylab(NULL) + theme(strip.text.y = element_text(angle = 0), axis.text.x = element_text(angle = 45, hjust=1, vjust=1), legend.position="none") + scale_fill_manual(values=c("chocolate4", "darkgoldenrod1", "coral"))
+```
+
+\index{barchart}\index{ordering}\index{faceting}
+There were relatively few diesel cars ( out of cars in this display).  Front-Wheel Drive cars used mainly regular gasoline.  Rear-Wheel and All-Wheel Drive cars used mainly premium gasoline.
+
+Americans (and the British) measure fuel efficiency in mpg (miles per gallon).  Europeans would use an inverse measure, litres per 100 kilometres.  The dataset provides two estimates of fuel efficiency, one for city driving and one for highway driving, and these are combined in an overall figure that assumes 55% of driving distance is in city conditions.  There is an R package, **fueleconomy**\index{R packages!fueleconomy}, that makes the data available but only up to 2015.  Figure \@ref(fig:vehCf) uses boxplots to summarise mpg data for the two gasolines.\index{boxplot}\index{faceting}  There were some high outliers\index{outliers} amongst the Regular Gasoline cars with Front-Wheel Drive, i.e., they use far more fuel than other models in their class.
+
+```{r vehCf, fig.asp=1.3, fig.cap='Fuel efficiency of gasoline cars by fuel, drive type, and class'}
+ggplot(Veh1h %>% filter(!fuelType1 %in% c("Diesel")), aes(vClass, combined)) + geom_boxplot() + facet_grid(rows=vars(Drive), cols=vars(fuelType1)) + xlab(NULL) + ylab(NULL) + theme(strip.text.y = element_text(angle = 0), axis.text.x = element_text(angle = 45, hjust=1, vjust=1), legend.position="none")
+```
+
+\newpage
+
+Figure \@ref(fig:vehHyb) shows that these were mainly hybrid cars (including plug-in hybrids) and Figure \@ref(fig:vehYr) suggests a few more were cars of model year 1998 or earlier.\index{boxplot}\index{boxplot width}\index{rotated plot}
+
+```{r vehHyb, fig.asp=0.3, fig.cap='Fuel efficiency of hybrid cars compared with the rest (boxplot widths are proportional to the square roots of the group sizes)'}
+Veh1j <- Veh1h %>% mutate(Hybrid=ifelse(atvType %in% c("Hybrid", "Plug-in Hybrid"), "Yes", "No"))
+ggplot(Veh1j, aes(Hybrid, combined)) + geom_boxplot(varwidth=TRUE) + ylab(NULL) + theme(axis.title.y = element_text(angle=0, vjust=0.5)) + coord_flip()
+```
+
+```{r vehYr, fig.cap='Fuel efficiency of non-hybrid cars over the years'}
+Veh1i <- Veh1h %>% filter(!atvType %in% c("Hybrid", "Plug-in Hybrid"))
+ggplot(Veh1i, aes(factor(year), combined)) + geom_boxplot() + ylab(NULL) + xlab(NULL) + theme(axis.text.x = element_text(angle = -45, vjust = 0.5))
+```
+
+Figure \@ref(fig:vehYr) also shows that the worst mpg values were recorded over 15 years ago or more.  Testing procedures have changed over time and so like may not be being compared with like over such a long period.
+
+## Small (?) luxury cars {#secVehicles2}
+In Figure \@ref(fig:vehCf) there were some low outliers\index{outliers} for Rear-Wheel Drive cars, especially surprising for Minicompact and Subcompact Cars.  Ordering\index{ordering} the dataset in ascending order of mpg uncovers some unexpected classifications.  Who would have thought that Rolls-Royces, Aston Martins, and Ferraris would be classified that way?
+
+```{r luxVeh, fig.asp=1.2, outwidth="55%", fig.width=6.5*0.55, fig.cap='Numbers of cars by class for six car manufacturers'}
+Veh1l <- Veh1d %>% filter(make %in% c("Rolls-Royce", "Aston Martin", "Ferrari", "Bentley", "Maserati", "Lamborghini"))
+ggplot(Veh1l, aes(vClass)) + geom_bar(aes(fill=make)) + facet_grid(rows=vars(make)) + ylab(NULL) + xlab(NULL) + theme(strip.text.y = element_text(angle = 0), legend.position="none", axis.text.x=element_text(angle=-45, hjust=0.5, vjust=0.2)) + scale_y_continuous(breaks = c(0, 150)) + scale_fill_manual(values=c("seagreen1", "darkgreen", "red2", "deepskyblue4", "firebrick3", "slategray2"))
+```
+
+Lamborghini have only Two Seaters in the dataset and Ferrari mainly do.  Minicompact, Subcompact, and Compact models were relatively commonly produced by all of the six luxury manufacturers barring Lamborghini.
+
+According to the website maintainers: "The EPA classifies cars based on interior volume which is a combination of the passenger volume and luggage volume. The exterior dimensions or vehicle weight are not considered.  The system has been in place since the mid-1970s and sometimes those classifications produce unexpected results."
+
+## How many car models have been evaluated over the years? {#secVehicles3}
+```{r swClass, fig.cap='Numbers of models per year'}
+Veh1D <- Veh1b %>% filter(VClass %in% c("Compact Cars", "Large Cars", "Midsize Cars", "Minicompact Cars", "Subcompact Cars", "Two Seaters"))
+Veh1f <- Veh1b %>% filter(VClass %in% c("Small Sport Utility Vehicle 2WD", "Small Sport Utility Vehicle 4WD", "Sport Utility Vehicle - 2WD", "Sport Utility Vehicle - 4WD", "Standard Sport Utility Vehicle 2WD", "Standard Sport Utility Vehicle 4WD", "Small Station Wagons", "Midsize Station Wagons", "Midsize-Large Station Wagons"))
+Veh1x <- rbind(Veh1D, Veh1f)
+Veh1x <- Veh1x %>% mutate(vClass=factor(VClass, levels=c("Two Seaters", "Minicompact Cars", "Subcompact Cars", "Compact Cars", "Midsize Cars", "Large Cars", "Small Station Wagons", "Midsize Station Wagons", "Midsize-Large Station Wagons", "Sport Utility Vehicle - 2WD", "Small Sport Utility Vehicle 2WD",  "Standard Sport Utility Vehicle 2WD", "Sport Utility Vehicle - 4WD", "Small Sport Utility Vehicle 4WD", "Standard Sport Utility Vehicle 4WD")))
+levels(Veh1x$vClass) <- c("Two Seaters", "Minicompact Cars", "Subcompact Cars", "Compact Cars", "Midsize Cars", "Large Cars", "Small Station W", "Midsize Station W", "Midsize-Large SW", "SUV 2WD", "Small SUV 2WD",  "Standard SUV 2WD", "SUV 4WD", "Small SUV 4WD", "Standard SUV 4WD")
+sw15pal <- c("aquamarine", "chocolate1", "cyan2", "coral4", "dodgerblue", "firebrick3",  colorschemes$Categorical.12[c(1,6,2,7,9,10,8,11,12)])
+names(sw15pal) <- c("Two Seaters", "Minicompact Cars", "Subcompact Cars", "Compact Cars", "Midsize Cars", "Large Cars", "Small Station W", "Midsize Station W", "Midsize-Large SW", "SUV 2WD", "Small SUV 2WD",  "Standard SUV 2WD", "SUV 4WD", "Small SUV 4WD", "Standard SUV 4WD")
+xvc <- Veh1x %>% count(year, vClass)
+ggplot(xvc, aes(year, n, group=vClass, colour=vClass)) + geom_line(linewidth=1.25)  + scale_colour_manual(values=sw15pal) + theme(legend.position="none") + xlab(NULL) + ylab(NULL) + facet_wrap(vars(vClass), nrow=3, dir="v")
+```
+
+Figure \@ref(fig:swClass) shows a sharp decline in the number of Subcompact Cars, and an increase in the number of Large Cars.  The patterns amongst Station Wagons and Sport Utility Vehicles (SUVs) need a closer look.
+
+### Station wagons and SUVs
+There are three categories for station wagons and six for SUVs.  Nobody talks much about station wagons these days and the term SUV is relatively new.  Figure \@ref(fig:swSUV) displays barcharts of the numbers of each type for each year.\index{multiple barchart}\index{ordering}\index{arranging}
+
+```{r swSUV, fig.asp=1.3, fig.cap='Numbers of station wagon and SUV models by year with categories arranged by station wagons and SUVs and within those groupings by year and size'}
+swSUnames <- c("Small Station Wagons", "Midsize-Large Station Wagons", "Midsize Station Wagons", "Sport Utility Vehicle - 2WD", "Sport Utility Vehicle - 4WD", "Small Sport Utility Vehicle 2WD", "Small Sport Utility Vehicle 4WD", "Standard Sport Utility Vehicle 2WD", "Standard Sport Utility Vehicle 4WD")
+swSUVpal <- colorschemes$Categorical.12[c(1,2,6,7,8,9,10,11,12)]
+names(swSUVpal) <- swSUnames
+Veh1f <- Veh1f %>% mutate(vClass=factor(VClass, levels=swSUnames))
+Veh1fx <- Veh1f %>% group_by(vClass, year) %>% summarise(nn=n())
+vgf <- ggplot(Veh1fx, aes(year, weight=nn)) + geom_bar(aes(fill=vClass)) + facet_grid(rows=vars(vClass)) + scale_fill_manual(values=swSUVpal) + ylab(NULL) + xlab(NULL) + theme(strip.text.y = element_text(angle = 0), legend.position="none") + scale_y_continuous(breaks = c(0, 150))
+vgf
+```
+
+The patterns are clear.  The 'Large' in the category Midsize-Large Station Wagons was dropped after 1998.  SUV classifications were introduced in 1999 and further split in 2013.  The numbers of station wagon models were declining before SUVs were introduced.  After 2007 it appears that mainly small station wagons were produced.  Numbers of SUV models for 2WD (two-wheel-drive) and 4WD  (four-wheel-drive) followed similar patterns initially.  After the split into Small and Standard SUVs, only the number of 4WD ones increased.
+
+\newpage
+
+## Comparing fuel efficiency of individual models over time {#secVehicles4}
+Car models do not stay the same for long.  Manufacturers continually develop and change their cars.  By grouping on the characteristics of each model in the dataset, including number of gears and displacement (engine size in litres), those that have been tested in most years can be selected.  Two have been chosen here in both manual and automatic versions, the Toyota Corolla (1993-2016) and the Mazda MX-5 (2006-2021).  They are two very successful models in their respective classes.  Figure \@ref(fig:TCeff) shows the estimated city, highway, and combined mpg figures for the Toyota.  Note that the estimates are only reported in rounded integer values.  Unrounded values for all models are provided from 2011 on but have not been used here.
+
+```{r TCeff, fig.asp=0.6, fig.cap='Fuel efficiency of Toyota Corolla models for manual transmission (lines with points) and automatic (lines) transmission'}
+mmtoyC <- Veh1h %>% filter(model=="Corolla", trany %in% c("Manual 5-spd", "Automatic 4-spd"), displ=="1.8", is.na(atvType))
+mmtoyCL <- mmtoyC %>% pivot_longer(cols=city:combined, names_to="Type", values_to="Eff")
+ggplot(mmtoyCL %>% filter(trany %in% c("Manual 5-spd")), aes(year, Eff, group=Type, colour=Type)) + geom_point() + geom_line() + geom_line(data=mmtoyCL %>% filter(trany %in% c("Automatic 4-spd")), aes(year, Eff, group=Type, colour=Type)) + ylab("mpg  ") + xlab(NULL) + theme(axis.title.y=element_text(angle=0, vjust=0.5, hjust=0)) + guides(col=guide_legend(reverse = TRUE, title=NULL)) + scale_x_continuous(breaks=seq(1993, 2017, 2)) + ylim(20,40)
+```
+
+As expected, the highway mpg figures are better than the city figures.  Manual transmission is generally slightly more efficient than automatic transmission.  There were improvements in the first few years, then a level performance and then, surprisingly, a decline.  Perhaps the cars became heavier.  Unfortunately there is no information on car weights in the dataset.  Unsurprisingly, there is some variability in the EPA's estimates.  The introduction of new model versions in 1995, 2000, 2006, 2012 does not appear to have had immediate effects.  Additional changes may have been introduced in other years.
+
+The estimates for the Mazda MX-5 are shown in Figure \@ref(fig:MX5eff).
+
+```{r MX5eff, fig.asp=0.6, fig.cap='Fuel efficiency of Mazda MX-5 models for manual transmission (lines with points) and automatic (lines) transmission'}
+MX5C <- Veh1h %>% filter(model=="MX-5", trany %in% c("Manual 6-spd", "Automatic (S6)"))
+MX5CL <- MX5C %>% pivot_longer(cols=city:combined, names_to="Type", values_to="Eff")
+ggplot(MX5CL %>% filter(trany %in% c("Manual 6-spd")), aes(year, Eff, group=Type, colour=Type)) + geom_point() + geom_line() + geom_line(data=MX5CL %>% filter(trany %in% c("Automatic (S6)")), aes(year, Eff, group=Type, colour=Type)) + ylab("mpg  ") + xlab(NULL) + theme(axis.title.y=element_text(angle=0, vjust=0.5, hjust=0)) + guides(col=guide_legend(reverse = TRUE, title=NULL)) + scale_x_continuous(breaks=seq(2006, 2022, 2), limits=c(2006, 2022)) + ylim(20,40)
+```
+
+The MX-5 estimates are less variable than the Corolla ones.  The large jump in 2016 was due to the introduction of a new model.  The manual and automatic transmission models appear to achieve very similar fuel efficiency.  
+
+**Answers**  Small cars get higher mileage in general.  Hybrids and newer cars get better mileage than other cars.  Sector classifications give some surprising results for luxury cars.  SUVs have mostly replaced station wagons.
+
+**Further questions**  How does fuel efficiency vary between city and highway driving?  How does displacement influence fuel efficiency?
+
+### Graphical takeaways {-}
+* There are many different orderings in faceted displays.  Look for informative ones.\index{faceting}\index{ordering}  (Figures \@ref(fig:vehCn),  \@ref(fig:vehCf), and  \@ref(fig:swSUV))
+* Small numbers of boxplots are better horizontally.\index{boxplot}\index{rotated plot}  (Figure \@ref(fig:vehHyb))
+* Drawing (longer) labels at an angle improves readability.\index{angled labels} (Figures \@ref(fig:vehCn), \@ref(fig:vehCf), \@ref(fig:vehYr), and \@ref(fig:luxVeh))

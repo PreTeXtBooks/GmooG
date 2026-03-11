@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>32 What affects interpretation? | Getting (more out of) Graphics</title>
   <meta name="description" content="This is the html index file for my GmooG book" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46.2 and GitBook 2.6.7" />
 
   <meta property="og:title" content="32 What affects interpretation? | Getting (more out of) Graphics" />
   <meta property="og:type" content="book" />
@@ -23,15 +23,15 @@
 <meta name="author" content="Antony Unwin" />
 
 
-<meta name="date" content="2024-09-03" />
+<meta name="date" content="2026-01-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="secOrder.html"/>
-<link rel="next" href="secPlot.html"/>
+<link rel="prev" href="secOrder4.html"/>
+<link rel="next" href="secAttention.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,76 +50,11 @@
 
 
 
-<link href="libs/codefolding-lua-1.1/codefolding-lua.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -161,468 +96,465 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a>
-<ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code"><i class="fa fa-check"></i>Code</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Getting <span style="font-size: 60%;">(more out of)</span> Graphics</a></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-are-good-graphics"><i class="fa fa-check"></i><b>1.1</b> What are good graphics?</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#graphics-examples"><i class="fa fa-check"></i><b>1.2</b> Graphics examples</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#writing-about-graphics"><i class="fa fa-check"></i><b>1.3</b> Writing about graphics</a></li>
-<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#reading-about-graphics"><i class="fa fa-check"></i><b>1.4</b> Reading about graphics</a>
+<li class="chapter" data-level="1.1" data-path="what-are-good-graphics.html"><a href="what-are-good-graphics.html"><i class="fa fa-check"></i><b>1.1</b> What are good graphics?</a></li>
+<li class="chapter" data-level="1.2" data-path="graphics-examples.html"><a href="graphics-examples.html"><i class="fa fa-check"></i><b>1.2</b> Graphics examples</a></li>
+<li class="chapter" data-level="1.3" data-path="writing-about-graphics.html"><a href="writing-about-graphics.html"><i class="fa fa-check"></i><b>1.3</b> Writing about graphics</a></li>
+<li class="chapter" data-level="1.4" data-path="reading-about-graphics.html"><a href="reading-about-graphics.html"><i class="fa fa-check"></i><b>1.4</b> Reading about graphics</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#books-and-articles-on-data-graphics"><i class="fa fa-check"></i><b>1.4.1</b> Books and articles on data graphics</a></li>
-<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#websites-and-other-media"><i class="fa fa-check"></i><b>1.4.2</b> Websites and other media</a></li>
+<li class="chapter" data-level="1.4.1" data-path="reading-about-graphics.html"><a href="reading-about-graphics.html#books-and-articles-on-data-graphics"><i class="fa fa-check"></i><b>1.4.1</b> Books and articles on data graphics</a></li>
+<li class="chapter" data-level="1.4.2" data-path="reading-about-graphics.html"><a href="reading-about-graphics.html#websites-and-other-media"><i class="fa fa-check"></i><b>1.4.2</b> Websites and other media</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#software"><i class="fa fa-check"></i><b>1.5</b> Software</a></li>
-<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#structure-of-the-book"><i class="fa fa-check"></i><b>1.6</b> Structure of the book</a>
+<li class="chapter" data-level="1.5" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i><b>1.5</b> Software</a></li>
+<li class="chapter" data-level="1.6" data-path="structure-of-the-book.html"><a href="structure-of-the-book.html"><i class="fa fa-check"></i><b>1.6</b> Structure of the book</a>
 <ul>
-<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#part-i-graphics-in-action"><i class="fa fa-check"></i><b>1.6.1</b> Part I Graphics in Action</a></li>
-<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#part-ii-advice-on-graphics"><i class="fa fa-check"></i><b>1.6.2</b> Part II Advice on Graphics</a></li>
+<li class="chapter" data-level="1.6.1" data-path="structure-of-the-book.html"><a href="structure-of-the-book.html#part-i-graphics-in-action"><i class="fa fa-check"></i><b>1.6.1</b> Part I Graphics in Action</a></li>
+<li class="chapter" data-level="1.6.2" data-path="structure-of-the-book.html"><a href="structure-of-the-book.html#part-ii-advice-on-graphics"><i class="fa fa-check"></i><b>1.6.2</b> Part II Advice on Graphics</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#in-a-nutshell-tldr"><i class="fa fa-check"></i>In a nutshell (tl;dr)</a></li>
+<li class="chapter" data-level="" data-path="in-a-nutshell-tldr.html"><a href="in-a-nutshell-tldr.html"><i class="fa fa-check"></i>In a nutshell (tl;dr)</a></li>
 </ul></li>
 <li class="part"><span><b>I Graphics in Action</b></span></li>
 <li class="chapter" data-level="2" data-path="secGapm.html"><a href="secGapm.html"><i class="fa fa-check"></i><b>2</b> Graphics and Gapminder</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="secGapm.html"><a href="secGapm.html#secGapm1"><i class="fa fa-check"></i><b>2.1</b> Gapminder and Hans Rosling</a></li>
-<li class="chapter" data-level="2.2" data-path="secGapm.html"><a href="secGapm.html#secGapm2"><i class="fa fa-check"></i><b>2.2</b> What else can be seen in Gapminder’s plots?</a></li>
-<li class="chapter" data-level="2.3" data-path="secGapm.html"><a href="secGapm.html#secGapm3"><i class="fa fa-check"></i><b>2.3</b> Analysis by regions of the world</a>
+<li class="chapter" data-level="2.1" data-path="secGapm1.html"><a href="secGapm1.html"><i class="fa fa-check"></i><b>2.1</b> Gapminder and Hans Rosling</a></li>
+<li class="chapter" data-level="2.2" data-path="secGapm2.html"><a href="secGapm2.html"><i class="fa fa-check"></i><b>2.2</b> What else can be seen in Gapminder’s plots?</a></li>
+<li class="chapter" data-level="2.3" data-path="secGapm3.html"><a href="secGapm3.html"><i class="fa fa-check"></i><b>2.3</b> Analysis by regions of the world</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="secGapm.html"><a href="secGapm.html#taking-account-of-country-size"><i class="fa fa-check"></i><b>2.3.1</b> Taking account of country size</a></li>
+<li class="chapter" data-level="2.3.1" data-path="secGapm3.html"><a href="secGapm3.html#taking-account-of-country-size"><i class="fa fa-check"></i><b>2.3.1</b> Taking account of country size</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="secGapm.html"><a href="secGapm.html#secGapm4"><i class="fa fa-check"></i><b>2.4</b> Checking what is in the data</a></li>
-<li class="chapter" data-level="2.5" data-path="secGapm.html"><a href="secGapm.html#secGapm5"><i class="fa fa-check"></i><b>2.5</b> The importance of data definitions</a></li>
-<li class="chapter" data-level="2.6" data-path="secGapm.html"><a href="secGapm.html#secGapm6"><i class="fa fa-check"></i><b>2.6</b> Discussion</a>
+<li class="chapter" data-level="2.4" data-path="secGapm4.html"><a href="secGapm4.html"><i class="fa fa-check"></i><b>2.4</b> Checking what is in the data</a></li>
+<li class="chapter" data-level="2.5" data-path="secGapm5.html"><a href="secGapm5.html"><i class="fa fa-check"></i><b>2.5</b> The importance of data definitions</a></li>
+<li class="chapter" data-level="2.6" data-path="secGapm6.html"><a href="secGapm6.html"><i class="fa fa-check"></i><b>2.6</b> Discussion</a>
 <ul>
-<li class="chapter" data-level="" data-path="secGapm.html"><a href="secGapm.html#graphical-takeaways"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secGapm6.html"><a href="secGapm6.html#graphical-takeaways"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="secMovies.html"><a href="secMovies.html"><i class="fa fa-check"></i><b>3</b> Looking at the movies</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="secMovies.html"><a href="secMovies.html#secMovies1"><i class="fa fa-check"></i><b>3.1</b> Trailer</a></li>
-<li class="chapter" data-level="3.2" data-path="secMovies.html"><a href="secMovies.html#secMovies2"><i class="fa fa-check"></i><b>3.2</b> Movies in IMDb over the years</a></li>
-<li class="chapter" data-level="3.3" data-path="secMovies.html"><a href="secMovies.html#secMovies21"><i class="fa fa-check"></i><b>3.3</b> What might IMDb code numbers mean?</a></li>
-<li class="chapter" data-level="3.4" data-path="secMovies.html"><a href="secMovies.html#secMovies3"><i class="fa fa-check"></i><b>3.4</b> What ratings do people give films?</a></li>
-<li class="chapter" data-level="3.5" data-path="secMovies.html"><a href="secMovies.html#secMovies4"><i class="fa fa-check"></i><b>3.5</b> Genres from Rom-Com to Film Noir</a></li>
-<li class="chapter" data-level="3.6" data-path="secMovies.html"><a href="secMovies.html#secMovies5"><i class="fa fa-check"></i><b>3.6</b> Comparing Raging Bull with Jane Austen</a>
+<li class="chapter" data-level="3.1" data-path="secMovies1.html"><a href="secMovies1.html"><i class="fa fa-check"></i><b>3.1</b> Trailer</a></li>
+<li class="chapter" data-level="3.2" data-path="secMovies2.html"><a href="secMovies2.html"><i class="fa fa-check"></i><b>3.2</b> Movies in IMDb over the years</a></li>
+<li class="chapter" data-level="3.3" data-path="secMovies21.html"><a href="secMovies21.html"><i class="fa fa-check"></i><b>3.3</b> What might IMDb code numbers mean?</a></li>
+<li class="chapter" data-level="3.4" data-path="secMovies3.html"><a href="secMovies3.html"><i class="fa fa-check"></i><b>3.4</b> What ratings do people give films?</a></li>
+<li class="chapter" data-level="3.5" data-path="secMovies4.html"><a href="secMovies4.html"><i class="fa fa-check"></i><b>3.5</b> Genres from Rom-Com to Film Noir</a></li>
+<li class="chapter" data-level="3.6" data-path="secMovies5.html"><a href="secMovies5.html"><i class="fa fa-check"></i><b>3.6</b> Comparing Raging Bull with Jane Austen</a>
 <ul>
-<li class="chapter" data-level="" data-path="secMovies.html"><a href="secMovies.html#graphical-takeaways-1"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secMovies5.html"><a href="secMovies5.html#graphical-takeaways-1"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="sec1912Dem.html"><a href="sec1912Dem.html"><i class="fa fa-check"></i><b>4</b> Voting 46 times to choose a Presidential candidate</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem1"><i class="fa fa-check"></i><b>4.1</b> A first look at the 1912 Democratic Convention</a></li>
-<li class="chapter" data-level="4.2" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem2"><i class="fa fa-check"></i><b>4.2</b> The USA in 1912 and 2020</a></li>
-<li class="chapter" data-level="4.3" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem3"><i class="fa fa-check"></i><b>4.3</b> How the nomination contest unfolded</a>
+<li class="chapter" data-level="4.1" data-path="sec1912Dem1.html"><a href="sec1912Dem1.html"><i class="fa fa-check"></i><b>4.1</b> A first look at the 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="4.2" data-path="sec1912Dem2.html"><a href="sec1912Dem2.html"><i class="fa fa-check"></i><b>4.2</b> The USA in 1912 and 2020</a></li>
+<li class="chapter" data-level="4.3" data-path="sec1912Dem3.html"><a href="sec1912Dem3.html"><i class="fa fa-check"></i><b>4.3</b> How the nomination contest unfolded</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="sec1912Dem.html"><a href="sec1912Dem.html#developments"><i class="fa fa-check"></i><b>4.3.1</b> Developments</a></li>
+<li class="chapter" data-level="4.3.1" data-path="sec1912Dem3.html"><a href="sec1912Dem3.html#developments"><i class="fa fa-check"></i><b>4.3.1</b> Developments</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="sec1912Dem.html"><a href="sec1912Dem.html#sec1912Dem4"><i class="fa fa-check"></i><b>4.4</b> When did the ballots actually take place?</a>
+<li class="chapter" data-level="4.4" data-path="sec1912Dem4.html"><a href="sec1912Dem4.html"><i class="fa fa-check"></i><b>4.4</b> When did the ballots actually take place?</a>
 <ul>
-<li class="chapter" data-level="" data-path="sec1912Dem.html"><a href="sec1912Dem.html#graphical-takeaways-2"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="sec1912Dem4.html"><a href="sec1912Dem4.html#graphical-takeaways-2"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="secLightS.html"><a href="secLightS.html"><i class="fa fa-check"></i><b>5</b> Measuring the speed of light</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="secLightS.html"><a href="secLightS.html#secLightS1"><i class="fa fa-check"></i><b>5.1</b> Michelson, the Master of Light, and his data</a></li>
-<li class="chapter" data-level="5.2" data-path="secLightS.html"><a href="secLightS.html#secLightS2"><i class="fa fa-check"></i><b>5.2</b> Newcomb, self-educated polymath, and his data</a></li>
-<li class="chapter" data-level="5.3" data-path="secLightS.html"><a href="secLightS.html#secLightS3"><i class="fa fa-check"></i><b>5.3</b> Comparing the data of Michelson and Newcomb</a>
+<li class="chapter" data-level="5.1" data-path="secLightS1.html"><a href="secLightS1.html"><i class="fa fa-check"></i><b>5.1</b> Michelson, the Master of Light, and his data</a></li>
+<li class="chapter" data-level="5.2" data-path="secLightS2.html"><a href="secLightS2.html"><i class="fa fa-check"></i><b>5.2</b> Newcomb, self-educated polymath, and his data</a></li>
+<li class="chapter" data-level="5.3" data-path="secLightS3.html"><a href="secLightS3.html"><i class="fa fa-check"></i><b>5.3</b> Comparing the data of Michelson and Newcomb</a>
 <ul>
-<li class="chapter" data-level="" data-path="secLightS.html"><a href="secLightS.html#graphical-takeaways-3"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secLightS3.html"><a href="secLightS3.html#graphical-takeaways-3"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="secOlymps.html"><a href="secOlymps.html"><i class="fa fa-check"></i><b>6</b> The modern Olympic Games in numbers</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps1"><i class="fa fa-check"></i><b>6.1</b> How good are the data?</a></li>
-<li class="chapter" data-level="6.2" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps2"><i class="fa fa-check"></i><b>6.2</b> How much have performances improved?</a></li>
-<li class="chapter" data-level="6.3" data-path="secOlymps.html"><a href="secOlymps.html#secOlymps3"><i class="fa fa-check"></i><b>6.3</b> How many countries and individuals competed?</a>
+<li class="chapter" data-level="6.1" data-path="secOlymps1.html"><a href="secOlymps1.html"><i class="fa fa-check"></i><b>6.1</b> How good are the data?</a></li>
+<li class="chapter" data-level="6.2" data-path="secOlymps2.html"><a href="secOlymps2.html"><i class="fa fa-check"></i><b>6.2</b> How much have performances improved?</a></li>
+<li class="chapter" data-level="6.3" data-path="secOlymps3.html"><a href="secOlymps3.html"><i class="fa fa-check"></i><b>6.3</b> How many countries and individuals competed?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secOlymps.html"><a href="secOlymps.html#graphical-takeaways-4"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secOlymps3.html"><a href="secOlymps3.html#graphical-takeaways-4"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="secBertin.html"><a href="secBertin.html"><i class="fa fa-check"></i><b>7</b> Re-viewing Bertin’s main example</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="secBertin.html"><a href="secBertin.html#secBertin1"><i class="fa fa-check"></i><b>7.1</b> Bertin’s classic book</a>
+<li class="chapter" data-level="7.1" data-path="secBertin1.html"><a href="secBertin1.html"><i class="fa fa-check"></i><b>7.1</b> Bertin’s classic book</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="secBertin.html"><a href="secBertin.html#a-first-map-agricultural-workers"><i class="fa fa-check"></i><b>7.1.1</b> A first map: agricultural workers</a></li>
+<li class="chapter" data-level="7.1.1" data-path="secBertin1.html"><a href="secBertin1.html#a-first-map-agricultural-workers"><i class="fa fa-check"></i><b>7.1.1</b> A first map: agricultural workers</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="secBertin.html"><a href="secBertin.html#secBertin2"><i class="fa fa-check"></i><b>7.2</b> Bertin’s many graphics of the French workforce data</a></li>
-<li class="chapter" data-level="7.3" data-path="secBertin.html"><a href="secBertin.html#secBertin3"><i class="fa fa-check"></i><b>7.3</b> Viewing the data today</a></li>
-<li class="chapter" data-level="7.4" data-path="secBertin.html"><a href="secBertin.html#secBertin4"><i class="fa fa-check"></i><b>7.4</b> Are there other geographic patterns?</a></li>
-<li class="chapter" data-level="7.5" data-path="secBertin.html"><a href="secBertin.html#secBertin5"><i class="fa fa-check"></i><b>7.5</b> Density of the workforce by area</a></li>
-<li class="chapter" data-level="7.6" data-path="secBertin.html"><a href="secBertin.html#secBertin6"><i class="fa fa-check"></i><b>7.6</b> Comments on Bertin (with hindsight)</a>
+<li class="chapter" data-level="7.2" data-path="secBertin2.html"><a href="secBertin2.html"><i class="fa fa-check"></i><b>7.2</b> Bertin’s many graphics of the French workforce data</a></li>
+<li class="chapter" data-level="7.3" data-path="secBertin3.html"><a href="secBertin3.html"><i class="fa fa-check"></i><b>7.3</b> Viewing the data today</a></li>
+<li class="chapter" data-level="7.4" data-path="secBertin4.html"><a href="secBertin4.html"><i class="fa fa-check"></i><b>7.4</b> Are there other geographic patterns?</a></li>
+<li class="chapter" data-level="7.5" data-path="secBertin5.html"><a href="secBertin5.html"><i class="fa fa-check"></i><b>7.5</b> Density of the workforce by area</a></li>
+<li class="chapter" data-level="7.6" data-path="secBertin6.html"><a href="secBertin6.html"><i class="fa fa-check"></i><b>7.6</b> Comments on Bertin (with hindsight)</a>
 <ul>
-<li class="chapter" data-level="" data-path="secBertin.html"><a href="secBertin.html#graphical-takeaways-5"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secBertin6.html"><a href="secBertin6.html#graphical-takeaways-5"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="secChess.html"><a href="secChess.html"><i class="fa fa-check"></i><b>8</b> Comparing chess players across the board</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="secChess.html"><a href="secChess.html#secChess1"><i class="fa fa-check"></i><b>8.1</b> FIDE ratings of chess players</a></li>
-<li class="chapter" data-level="8.2" data-path="secChess.html"><a href="secChess.html#secChess2"><i class="fa fa-check"></i><b>8.2</b> Comparing chess players by age and sex</a></li>
-<li class="chapter" data-level="8.3" data-path="secChess.html"><a href="secChess.html#secChess3"><i class="fa fa-check"></i><b>8.3</b> Which nations have the best chess players?</a></li>
-<li class="chapter" data-level="8.4" data-path="secChess.html"><a href="secChess.html#secChess4"><i class="fa fa-check"></i><b>8.4</b> Ratings change over time</a>
+<li class="chapter" data-level="8.1" data-path="secChess1.html"><a href="secChess1.html"><i class="fa fa-check"></i><b>8.1</b> FIDE ratings of chess players</a></li>
+<li class="chapter" data-level="8.2" data-path="secChess2.html"><a href="secChess2.html"><i class="fa fa-check"></i><b>8.2</b> Comparing chess players by age and sex</a></li>
+<li class="chapter" data-level="8.3" data-path="secChess3.html"><a href="secChess3.html"><i class="fa fa-check"></i><b>8.3</b> Which nations have the best chess players?</a></li>
+<li class="chapter" data-level="8.4" data-path="secChess4.html"><a href="secChess4.html"><i class="fa fa-check"></i><b>8.4</b> Ratings change over time</a>
 <ul>
-<li class="chapter" data-level="8.4.1" data-path="secChess.html"><a href="secChess.html#individual-players"><i class="fa fa-check"></i><b>8.4.1</b> Individual players</a></li>
+<li class="chapter" data-level="8.4.1" data-path="secChess4.html"><a href="secChess4.html#individual-players"><i class="fa fa-check"></i><b>8.4.1</b> Individual players</a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="secChess.html"><a href="secChess.html#secChess5"><i class="fa fa-check"></i><b>8.5</b> Grandmasters and Masters</a>
+<li class="chapter" data-level="8.5" data-path="secChess5.html"><a href="secChess5.html"><i class="fa fa-check"></i><b>8.5</b> Grandmasters and Masters</a>
 <ul>
-<li class="chapter" data-level="" data-path="secChess.html"><a href="secChess.html#graphical-takeaways-6"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secChess5.html"><a href="secChess5.html#graphical-takeaways-6"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="secGayR.html"><a href="secGayR.html"><i class="fa fa-check"></i><b>9</b> Results from surveys on gay rights</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="secGayR.html"><a href="secGayR.html#secGayR1"><i class="fa fa-check"></i><b>9.1</b> Survey results by age, sex, and race</a></li>
-<li class="chapter" data-level="9.2" data-path="secGayR.html"><a href="secGayR.html#secGayR2"><i class="fa fa-check"></i><b>9.2</b> Mapping the survey results</a></li>
-<li class="chapter" data-level="9.3" data-path="secGayR.html"><a href="secGayR.html#secGayR3"><i class="fa fa-check"></i><b>9.3</b> Comparing responses to related, but different questions</a>
+<li class="chapter" data-level="9.1" data-path="secGayR1.html"><a href="secGayR1.html"><i class="fa fa-check"></i><b>9.1</b> Survey results by age, sex, and race</a></li>
+<li class="chapter" data-level="9.2" data-path="secGayR2.html"><a href="secGayR2.html"><i class="fa fa-check"></i><b>9.2</b> Mapping the survey results</a></li>
+<li class="chapter" data-level="9.3" data-path="secGayR3.html"><a href="secGayR3.html"><i class="fa fa-check"></i><b>9.3</b> Comparing responses to related, but different questions</a>
 <ul>
-<li class="chapter" data-level="" data-path="secGayR.html"><a href="secGayR.html#graphical-takeaways-7"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secGayR3.html"><a href="secGayR3.html#graphical-takeaways-7"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="secAstro.html"><a href="secAstro.html"><i class="fa fa-check"></i><b>10</b> Who went up in space for how long?</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="secAstro.html"><a href="secAstro.html#secAstro1"><i class="fa fa-check"></i><b>10.1</b> What human spaceflights have there been?</a></li>
-<li class="chapter" data-level="10.2" data-path="secAstro.html"><a href="secAstro.html#secAstro1a"><i class="fa fa-check"></i><b>10.2</b> Mission times in space</a>
+<li class="chapter" data-level="10.1" data-path="secAstro1.html"><a href="secAstro1.html"><i class="fa fa-check"></i><b>10.1</b> What human spaceflights have there been?</a></li>
+<li class="chapter" data-level="10.2" data-path="secAstro1a.html"><a href="secAstro1a.html"><i class="fa fa-check"></i><b>10.2</b> Mission times in space</a>
 <ul>
-<li class="chapter" data-level="10.2.1" data-path="secAstro.html"><a href="secAstro.html#secAstro2"><i class="fa fa-check"></i><b>10.2.1</b> Logging mission times</a></li>
+<li class="chapter" data-level="10.2.1" data-path="secAstro1a.html"><a href="secAstro1a.html#secAstro2"><i class="fa fa-check"></i><b>10.2.1</b> Logging mission times</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="secAstro.html"><a href="secAstro.html#secAstro4"><i class="fa fa-check"></i><b>10.3</b> Checking the data with graphics</a>
+<li class="chapter" data-level="10.3" data-path="secAstro4.html"><a href="secAstro4.html"><i class="fa fa-check"></i><b>10.3</b> Checking the data with graphics</a>
 <ul>
-<li class="chapter" data-level="" data-path="secAstro.html"><a href="secAstro.html#graphical-takeaways-8"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secAstro4.html"><a href="secAstro4.html#graphical-takeaways-8"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="secDiam.html"><a href="secDiam.html"><i class="fa fa-check"></i><b>11</b> Data in the sky at night</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="secDiam.html"><a href="secDiam.html#secDiam1"><i class="fa fa-check"></i><b>11.1</b> Data on diamonds for sale</a></li>
-<li class="chapter" data-level="11.2" data-path="secDiam.html"><a href="secDiam.html#secDiam2"><i class="fa fa-check"></i><b>11.2</b> Checking for outliers and unusual values</a></li>
-<li class="chapter" data-level="11.3" data-path="secDiam.html"><a href="secDiam.html#secDiam3"><i class="fa fa-check"></i><b>11.3</b> Intriguing features</a>
+<li class="chapter" data-level="11.1" data-path="secDiam1.html"><a href="secDiam1.html"><i class="fa fa-check"></i><b>11.1</b> Data on diamonds for sale</a></li>
+<li class="chapter" data-level="11.2" data-path="secDiam2.html"><a href="secDiam2.html"><i class="fa fa-check"></i><b>11.2</b> Checking for outliers and unusual values</a></li>
+<li class="chapter" data-level="11.3" data-path="secDiam3.html"><a href="secDiam3.html"><i class="fa fa-check"></i><b>11.3</b> Intriguing features</a>
 <ul>
-<li class="chapter" data-level="" data-path="secDiam.html"><a href="secDiam.html#graphical-takeaways-9"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secDiam3.html"><a href="secDiam3.html#graphical-takeaways-9"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="secPsor.html"><a href="secPsor.html"><i class="fa fa-check"></i><b>12</b> Psoriasis and the Quality of Life</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="secPsor.html"><a href="secPsor.html#secPsor1"><i class="fa fa-check"></i><b>12.1</b> Comparing treatment and placebo groups</a></li>
-<li class="chapter" data-level="12.2" data-path="secPsor.html"><a href="secPsor.html#secPsor2"><i class="fa fa-check"></i><b>12.2</b> Examining responses to individual questions</a>
+<li class="chapter" data-level="12.1" data-path="secPsor1.html"><a href="secPsor1.html"><i class="fa fa-check"></i><b>12.1</b> Comparing treatment and placebo groups</a></li>
+<li class="chapter" data-level="12.2" data-path="secPsor2.html"><a href="secPsor2.html"><i class="fa fa-check"></i><b>12.2</b> Examining responses to individual questions</a>
 <ul>
-<li class="chapter" data-level="" data-path="secPsor.html"><a href="secPsor.html#graphical-takeaways-10"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secPsor2.html"><a href="secPsor2.html#graphical-takeaways-10"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="secElecC.html"><a href="secElecC.html"><i class="fa fa-check"></i><b>13</b> Charging electric cars</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="secElecC.html"><a href="secElecC.html#secElecC1"><i class="fa fa-check"></i><b>13.1</b> How was the study organised?</a></li>
-<li class="chapter" data-level="13.2" data-path="secElecC.html"><a href="secElecC.html#secElecC2"><i class="fa fa-check"></i><b>13.2</b> How long does charging cars take?</a></li>
-<li class="chapter" data-level="13.3" data-path="secElecC.html"><a href="secElecC.html#secElecC3"><i class="fa fa-check"></i><b>13.3</b> Charging patterns through the week</a>
+<li class="chapter" data-level="13.1" data-path="secElecC1.html"><a href="secElecC1.html"><i class="fa fa-check"></i><b>13.1</b> How was the study organised?</a></li>
+<li class="chapter" data-level="13.2" data-path="secElecC2.html"><a href="secElecC2.html"><i class="fa fa-check"></i><b>13.2</b> How long does charging cars take?</a></li>
+<li class="chapter" data-level="13.3" data-path="secElecC3.html"><a href="secElecC3.html"><i class="fa fa-check"></i><b>13.3</b> Charging patterns through the week</a>
 <ul>
-<li class="chapter" data-level="" data-path="secElecC.html"><a href="secElecC.html#graphical-takeaways-11"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secElecC3.html"><a href="secElecC3.html#graphical-takeaways-11"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="secFinches.html"><a href="secFinches.html"><i class="fa fa-check"></i><b>14</b> Darwin’s Finches</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="secFinches.html"><a href="secFinches.html#secFinches1"><i class="fa fa-check"></i><b>14.1</b> How do Darwin’s finches differ?</a></li>
-<li class="chapter" data-level="14.2" data-path="secFinches.html"><a href="secFinches.html#secFinches2"><i class="fa fa-check"></i><b>14.2</b> Do species vary across the Galápagos islands?</a>
+<li class="chapter" data-level="14.1" data-path="secFinches1.html"><a href="secFinches1.html"><i class="fa fa-check"></i><b>14.1</b> How do Darwin’s finches differ?</a></li>
+<li class="chapter" data-level="14.2" data-path="secFinches2.html"><a href="secFinches2.html"><i class="fa fa-check"></i><b>14.2</b> Do species vary across the Galápagos islands?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secFinches.html"><a href="secFinches.html#graphical-takeaways-12"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secFinches2.html"><a href="secFinches2.html#graphical-takeaways-12"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="secEuros.html"><a href="secEuros.html"><i class="fa fa-check"></i><b>15</b> Home or away: where do soccer players play?</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="secEuros.html"><a href="secEuros.html#secEuros1"><i class="fa fa-check"></i><b>15.1</b> The European Football Championship since 1960</a></li>
-<li class="chapter" data-level="15.2" data-path="secEuros.html"><a href="secEuros.html#secEuros2"><i class="fa fa-check"></i><b>15.2</b> Which leagues do international players play in?</a></li>
-<li class="chapter" data-level="15.3" data-path="secEuros.html"><a href="secEuros.html#secEuros3"><i class="fa fa-check"></i><b>15.3</b> How have countries changed?</a>
+<li class="chapter" data-level="15.1" data-path="secEuros1.html"><a href="secEuros1.html"><i class="fa fa-check"></i><b>15.1</b> The European Football Championship since 1960</a></li>
+<li class="chapter" data-level="15.2" data-path="secEuros2.html"><a href="secEuros2.html"><i class="fa fa-check"></i><b>15.2</b> Which leagues do international players play in?</a></li>
+<li class="chapter" data-level="15.3" data-path="secEuros3.html"><a href="secEuros3.html"><i class="fa fa-check"></i><b>15.3</b> How have countries changed?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secEuros.html"><a href="secEuros.html#graphical-takeaways-13"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secEuros3.html"><a href="secEuros3.html#graphical-takeaways-13"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="secFootball.html"><a href="secFootball.html"><i class="fa fa-check"></i><b>16</b> Watching soccer—the English leagues</a>
 <ul>
-<li class="chapter" data-level="16.1" data-path="secFootball.html"><a href="secFootball.html#secFootball1"><i class="fa fa-check"></i><b>16.1</b> History of the English football leagues since 1888</a></li>
-<li class="chapter" data-level="16.2" data-path="secFootball.html"><a href="secFootball.html#secFootball2"><i class="fa fa-check"></i><b>16.2</b> How have numbers of draws changed?</a></li>
-<li class="chapter" data-level="16.3" data-path="secFootball.html"><a href="secFootball.html#secFootball3"><i class="fa fa-check"></i><b>16.3</b> How big is home advantage?</a></li>
-<li class="chapter" data-level="16.4" data-path="secFootball.html"><a href="secFootball.html#secFootball4"><i class="fa fa-check"></i><b>16.4</b> Have the numbers of goals scored gone down?</a></li>
-<li class="chapter" data-level="16.5" data-path="secFootball.html"><a href="secFootball.html#secFootball5"><i class="fa fa-check"></i><b>16.5</b> How well have teams performed over the years?</a></li>
-<li class="chapter" data-level="16.6" data-path="secFootball.html"><a href="secFootball.html#secFootball6"><i class="fa fa-check"></i><b>16.6</b> Wormcharts show league progress over a season</a>
+<li class="chapter" data-level="16.1" data-path="secFootball1.html"><a href="secFootball1.html"><i class="fa fa-check"></i><b>16.1</b> History of the English football leagues since 1888</a></li>
+<li class="chapter" data-level="16.2" data-path="secFootball2.html"><a href="secFootball2.html"><i class="fa fa-check"></i><b>16.2</b> How have numbers of draws changed?</a></li>
+<li class="chapter" data-level="16.3" data-path="secFootball3.html"><a href="secFootball3.html"><i class="fa fa-check"></i><b>16.3</b> How big is home advantage?</a></li>
+<li class="chapter" data-level="16.4" data-path="secFootball4.html"><a href="secFootball4.html"><i class="fa fa-check"></i><b>16.4</b> Have the numbers of goals scored gone down?</a></li>
+<li class="chapter" data-level="16.5" data-path="secFootball5.html"><a href="secFootball5.html"><i class="fa fa-check"></i><b>16.5</b> How well have teams performed over the years?</a></li>
+<li class="chapter" data-level="16.6" data-path="secFootball6.html"><a href="secFootball6.html"><i class="fa fa-check"></i><b>16.6</b> Wormcharts show league progress over a season</a>
 <ul>
-<li class="chapter" data-level="16.6.1" data-path="secFootball.html"><a href="secFootball.html#leicester-city-are-champions-for-the-first-time"><i class="fa fa-check"></i><b>16.6.1</b> Leicester City are Champions for the first time!</a></li>
-<li class="chapter" data-level="16.6.2" data-path="secFootball.html"><a href="secFootball.html#the-1982-83-season-had-a-few-surprises"><i class="fa fa-check"></i><b>16.6.2</b> The 1982-83 season had a few surprises</a></li>
-<li class="chapter" data-level="16.6.3" data-path="secFootball.html"><a href="secFootball.html#the-most-equal-and-unequal-seasons"><i class="fa fa-check"></i><b>16.6.3</b> The most equal and unequal seasons</a></li>
-<li class="chapter" data-level="" data-path="secFootball.html"><a href="secFootball.html#graphical-takeaways-14"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="16.6.1" data-path="secFootball6.html"><a href="secFootball6.html#leicester-city-are-champions-for-the-first-time"><i class="fa fa-check"></i><b>16.6.1</b> Leicester City are Champions for the first time!</a></li>
+<li class="chapter" data-level="16.6.2" data-path="secFootball6.html"><a href="secFootball6.html#the-1982-83-season-had-a-few-surprises"><i class="fa fa-check"></i><b>16.6.2</b> The 1982-83 season had a few surprises</a></li>
+<li class="chapter" data-level="16.6.3" data-path="secFootball6.html"><a href="secFootball6.html#the-most-equal-and-unequal-seasons"><i class="fa fa-check"></i><b>16.6.3</b> The most equal and unequal seasons</a></li>
+<li class="chapter" data-level="" data-path="secFootball6.html"><a href="secFootball6.html#graphical-takeaways-14"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="secVehicles.html"><a href="secVehicles.html"><i class="fa fa-check"></i><b>17</b> Fuel efficiency of cars in the USA</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles1"><i class="fa fa-check"></i><b>17.1</b> How efficient are different types of car?</a></li>
-<li class="chapter" data-level="17.2" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles2"><i class="fa fa-check"></i><b>17.2</b> Small (?) luxury cars</a></li>
-<li class="chapter" data-level="17.3" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles3"><i class="fa fa-check"></i><b>17.3</b> How many car models have been evaluated over the years?</a>
+<li class="chapter" data-level="17.1" data-path="secVehicles1.html"><a href="secVehicles1.html"><i class="fa fa-check"></i><b>17.1</b> How efficient are different types of car?</a></li>
+<li class="chapter" data-level="17.2" data-path="secVehicles2.html"><a href="secVehicles2.html"><i class="fa fa-check"></i><b>17.2</b> Small (?) luxury cars</a></li>
+<li class="chapter" data-level="17.3" data-path="secVehicles3.html"><a href="secVehicles3.html"><i class="fa fa-check"></i><b>17.3</b> How many car models have been evaluated over the years?</a>
 <ul>
-<li class="chapter" data-level="17.3.1" data-path="secVehicles.html"><a href="secVehicles.html#station-wagons-and-suvs"><i class="fa fa-check"></i><b>17.3.1</b> Station wagons and SUVs</a></li>
+<li class="chapter" data-level="17.3.1" data-path="secVehicles3.html"><a href="secVehicles3.html#station-wagons-and-suvs"><i class="fa fa-check"></i><b>17.3.1</b> Station wagons and SUVs</a></li>
 </ul></li>
-<li class="chapter" data-level="17.4" data-path="secVehicles.html"><a href="secVehicles.html#secVehicles4"><i class="fa fa-check"></i><b>17.4</b> Comparing fuel efficiency of individual models over time</a>
+<li class="chapter" data-level="17.4" data-path="secVehicles4.html"><a href="secVehicles4.html"><i class="fa fa-check"></i><b>17.4</b> Comparing fuel efficiency of individual models over time</a>
 <ul>
-<li class="chapter" data-level="" data-path="secVehicles.html"><a href="secVehicles.html#graphical-takeaways-15"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secVehicles4.html"><a href="secVehicles4.html#graphical-takeaways-15"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="secPalmerPen.html"><a href="secPalmerPen.html"><i class="fa fa-check"></i><b>18</b> Differences amongst the Palmer penguins</a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen1"><i class="fa fa-check"></i><b>18.1</b> Getting an overview of the penguin data</a></li>
-<li class="chapter" data-level="18.2" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen2"><i class="fa fa-check"></i><b>18.2</b> Looking at several variables in one plot</a></li>
-<li class="chapter" data-level="18.3" data-path="secPalmerPen.html"><a href="secPalmerPen.html#secPalmerPen3"><i class="fa fa-check"></i><b>18.3</b> Using raw data to get more information</a>
+<li class="chapter" data-level="18.1" data-path="secPalmerPen1.html"><a href="secPalmerPen1.html"><i class="fa fa-check"></i><b>18.1</b> Getting an overview of the penguin data</a></li>
+<li class="chapter" data-level="18.2" data-path="secPalmerPen2.html"><a href="secPalmerPen2.html"><i class="fa fa-check"></i><b>18.2</b> Looking at several variables in one plot</a></li>
+<li class="chapter" data-level="18.3" data-path="secPalmerPen3.html"><a href="secPalmerPen3.html"><i class="fa fa-check"></i><b>18.3</b> Using raw data to get more information</a>
 <ul>
-<li class="chapter" data-level="" data-path="secPalmerPen.html"><a href="secPalmerPen.html#graphical-takeaways-16"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secPalmerPen3.html"><a href="secPalmerPen3.html#graphical-takeaways-16"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="secMalaria.html"><a href="secMalaria.html"><i class="fa fa-check"></i><b>19</b> Comparing tests for malaria</a>
 <ul>
-<li class="chapter" data-level="19.1" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria1"><i class="fa fa-check"></i><b>19.1</b> How much agreement is there between the four tests?</a></li>
-<li class="chapter" data-level="19.2" data-path="secMalaria.html"><a href="secMalaria.html#secMalaria2"><i class="fa fa-check"></i><b>19.2</b> Additional analyses</a>
+<li class="chapter" data-level="19.1" data-path="secMalaria1.html"><a href="secMalaria1.html"><i class="fa fa-check"></i><b>19.1</b> How much agreement is there between the four tests?</a></li>
+<li class="chapter" data-level="19.2" data-path="secMalaria2.html"><a href="secMalaria2.html"><i class="fa fa-check"></i><b>19.2</b> Additional analyses</a>
 <ul>
-<li class="chapter" data-level="" data-path="secMalaria.html"><a href="secMalaria.html#graphical-takeaways-17"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secMalaria2.html"><a href="secMalaria2.html#graphical-takeaways-17"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="20" data-path="secSwim.html"><a href="secSwim.html"><i class="fa fa-check"></i><b>20</b> Are swimmers swimming faster?</a>
 <ul>
-<li class="chapter" data-level="20.1" data-path="secSwim.html"><a href="secSwim.html#secSwim1"><i class="fa fa-check"></i><b>20.1</b> Best times for different strokes</a></li>
-<li class="chapter" data-level="20.2" data-path="secSwim.html"><a href="secSwim.html#secSwim2"><i class="fa fa-check"></i><b>20.2</b> How good are the best swimmers across multiple events?</a></li>
-<li class="chapter" data-level="20.3" data-path="secSwim.html"><a href="secSwim.html#secSwim3"><i class="fa fa-check"></i><b>20.3</b> Comparing events graphically</a></li>
-<li class="chapter" data-level="20.4" data-path="secSwim.html"><a href="secSwim.html#secSwim4"><i class="fa fa-check"></i><b>20.4</b> How do relay races compare with individual races?</a></li>
-<li class="chapter" data-level="20.5" data-path="secSwim.html"><a href="secSwim.html#secSwim5"><i class="fa fa-check"></i><b>20.5</b> How do countries compare?</a>
+<li class="chapter" data-level="20.1" data-path="secSwim1.html"><a href="secSwim1.html"><i class="fa fa-check"></i><b>20.1</b> Best times for different strokes</a></li>
+<li class="chapter" data-level="20.2" data-path="secSwim2.html"><a href="secSwim2.html"><i class="fa fa-check"></i><b>20.2</b> How good are the best swimmers across multiple events?</a></li>
+<li class="chapter" data-level="20.3" data-path="secSwim3.html"><a href="secSwim3.html"><i class="fa fa-check"></i><b>20.3</b> Comparing events graphically</a></li>
+<li class="chapter" data-level="20.4" data-path="secSwim4.html"><a href="secSwim4.html"><i class="fa fa-check"></i><b>20.4</b> How do relay races compare with individual races?</a></li>
+<li class="chapter" data-level="20.5" data-path="secSwim5.html"><a href="secSwim5.html"><i class="fa fa-check"></i><b>20.5</b> How do countries compare?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secSwim.html"><a href="secSwim.html#graphical-takeaways-18"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secSwim5.html"><a href="secSwim5.html#graphical-takeaways-18"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="21" data-path="secComM.html"><a href="secComM.html"><i class="fa fa-check"></i><b>21</b> Over 90 years running 90 km</a>
 <ul>
-<li class="chapter" data-level="21.1" data-path="secComM.html"><a href="secComM.html#secComM1"><i class="fa fa-check"></i><b>21.1</b> How many run in the Comrades (Ultra)Marathon?</a></li>
-<li class="chapter" data-level="21.2" data-path="secComM.html"><a href="secComM.html#secComM2"><i class="fa fa-check"></i><b>21.2</b> Numbers by age and sex</a></li>
-<li class="chapter" data-level="21.3" data-path="secComM.html"><a href="secComM.html#secComM3"><i class="fa fa-check"></i><b>21.3</b> How long do runners take to finish?</a></li>
-<li class="chapter" data-level="21.4" data-path="secComM.html"><a href="secComM.html#secComM5"><i class="fa fa-check"></i><b>21.4</b> Comparing times for men and women</a>
+<li class="chapter" data-level="21.1" data-path="secComM1.html"><a href="secComM1.html"><i class="fa fa-check"></i><b>21.1</b> How many run in the Comrades (Ultra)Marathon?</a></li>
+<li class="chapter" data-level="21.2" data-path="secComM2.html"><a href="secComM2.html"><i class="fa fa-check"></i><b>21.2</b> Numbers by age and sex</a></li>
+<li class="chapter" data-level="21.3" data-path="secComM3.html"><a href="secComM3.html"><i class="fa fa-check"></i><b>21.3</b> How long do runners take to finish?</a></li>
+<li class="chapter" data-level="21.4" data-path="secComM5.html"><a href="secComM5.html"><i class="fa fa-check"></i><b>21.4</b> Comparing times for men and women</a>
 <ul>
-<li class="chapter" data-level="21.4.1" data-path="secComM.html"><a href="secComM.html#best-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.1</b> Best times for men and women</a></li>
-<li class="chapter" data-level="21.4.2" data-path="secComM.html"><a href="secComM.html#median-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.2</b> Median times for men and women</a></li>
+<li class="chapter" data-level="21.4.1" data-path="secComM5.html"><a href="secComM5.html#best-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.1</b> Best times for men and women</a></li>
+<li class="chapter" data-level="21.4.2" data-path="secComM5.html"><a href="secComM5.html#median-times-for-men-and-women"><i class="fa fa-check"></i><b>21.4.2</b> Median times for men and women</a></li>
 </ul></li>
-<li class="chapter" data-level="21.5" data-path="secComM.html"><a href="secComM.html#secComM6"><i class="fa fa-check"></i><b>21.5</b> How many runners get medals?</a></li>
-<li class="chapter" data-level="21.6" data-path="secComM.html"><a href="secComM.html#secComM4"><i class="fa fa-check"></i><b>21.6</b> How different are the “up” and “down” races?</a></li>
-<li class="chapter" data-level="21.7" data-path="secComM.html"><a href="secComM.html#secComM7"><i class="fa fa-check"></i><b>21.7</b> How do individual runners perform over the years?</a>
+<li class="chapter" data-level="21.5" data-path="secComM6.html"><a href="secComM6.html"><i class="fa fa-check"></i><b>21.5</b> How many runners get medals?</a></li>
+<li class="chapter" data-level="21.6" data-path="secComM4.html"><a href="secComM4.html"><i class="fa fa-check"></i><b>21.6</b> How different are the “up” and “down” races?</a></li>
+<li class="chapter" data-level="21.7" data-path="secComM7.html"><a href="secComM7.html"><i class="fa fa-check"></i><b>21.7</b> How do individual runners perform over the years?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secComM.html"><a href="secComM.html#graphical-takeaways-19"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secComM7.html"><a href="secComM7.html#graphical-takeaways-19"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="secFace.html"><a href="secFace.html"><i class="fa fa-check"></i><b>22</b> Comparing software for facial recognition</a>
 <ul>
-<li class="chapter" data-level="22.1" data-path="secFace.html"><a href="secFace.html#secFace1"><i class="fa fa-check"></i><b>22.1</b> How well do the softwares do?</a></li>
-<li class="chapter" data-level="22.2" data-path="secFace.html"><a href="secFace.html#secFace2"><i class="fa fa-check"></i><b>22.2</b> Are positive predictive values (PPV) a good criterion?</a>
+<li class="chapter" data-level="22.1" data-path="secFace1.html"><a href="secFace1.html"><i class="fa fa-check"></i><b>22.1</b> How well do the softwares do?</a></li>
+<li class="chapter" data-level="22.2" data-path="secFace2.html"><a href="secFace2.html"><i class="fa fa-check"></i><b>22.2</b> Are positive predictive values (PPV) a good criterion?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secFace.html"><a href="secFace.html#graphical-takeaways-20"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secFace2.html"><a href="secFace2.html#graphical-takeaways-20"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="23" data-path="secShears.html"><a href="secShears.html"><i class="fa fa-check"></i><b>23</b> Distinguishing shearwaters</a>
 <ul>
-<li class="chapter" data-level="23.1" data-path="secShears.html"><a href="secShears.html#secShears1"><i class="fa fa-check"></i><b>23.1</b> Distinguishing shearwaters and puffins</a></li>
-<li class="chapter" data-level="23.2" data-path="secShears.html"><a href="secShears.html#secShears2"><i class="fa fa-check"></i><b>23.2</b> Comparing two shearwater species (Audubon and Galápagos)</a></li>
-<li class="chapter" data-level="23.3" data-path="secShears.html"><a href="secShears.html#secShears3"><i class="fa fa-check"></i><b>23.3</b> Can the species be clustered?</a>
+<li class="chapter" data-level="23.1" data-path="secShears1.html"><a href="secShears1.html"><i class="fa fa-check"></i><b>23.1</b> Distinguishing shearwaters and puffins</a></li>
+<li class="chapter" data-level="23.2" data-path="secShears2.html"><a href="secShears2.html"><i class="fa fa-check"></i><b>23.2</b> Comparing two shearwater species (Audubon and Galápagos)</a></li>
+<li class="chapter" data-level="23.3" data-path="secShears3.html"><a href="secShears3.html"><i class="fa fa-check"></i><b>23.3</b> Can the species be clustered?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secShears.html"><a href="secShears.html#graphical-takeaways-21"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secShears3.html"><a href="secShears3.html#graphical-takeaways-21"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="24" data-path="secDeer.html"><a href="secDeer.html"><i class="fa fa-check"></i><b>24</b> When do road accidents with deer happen in Bavaria?</a>
 <ul>
-<li class="chapter" data-level="24.1" data-path="secDeer.html"><a href="secDeer.html#secDeer1"><i class="fa fa-check"></i><b>24.1</b> Vehicle accidents involving deer</a></li>
-<li class="chapter" data-level="24.2" data-path="secDeer.html"><a href="secDeer.html#secDeer2"><i class="fa fa-check"></i><b>24.2</b> What about vehicle accidents without deer?</a>
+<li class="chapter" data-level="24.1" data-path="secDeer1.html"><a href="secDeer1.html"><i class="fa fa-check"></i><b>24.1</b> Vehicle accidents involving deer</a></li>
+<li class="chapter" data-level="24.2" data-path="secDeer2.html"><a href="secDeer2.html"><i class="fa fa-check"></i><b>24.2</b> What about vehicle accidents without deer?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secDeer.html"><a href="secDeer.html#graphical-takeaways-22"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secDeer2.html"><a href="secDeer2.html#graphical-takeaways-22"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="25" data-path="secTitan.html"><a href="secTitan.html"><i class="fa fa-check"></i><b>25</b> The Titanic Disaster</a>
 <ul>
-<li class="chapter" data-level="25.1" data-path="secTitan.html"><a href="secTitan.html#secTitan1"><i class="fa fa-check"></i><b>25.1</b> Who travelled on the Titanic?</a></li>
-<li class="chapter" data-level="25.2" data-path="secTitan.html"><a href="secTitan.html#secTitan2"><i class="fa fa-check"></i><b>25.2</b> Which groups had high survival rates?</a>
+<li class="chapter" data-level="25.1" data-path="secTitan1.html"><a href="secTitan1.html"><i class="fa fa-check"></i><b>25.1</b> Who travelled on the Titanic?</a></li>
+<li class="chapter" data-level="25.2" data-path="secTitan2.html"><a href="secTitan2.html"><i class="fa fa-check"></i><b>25.2</b> Which groups had high survival rates?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secTitan.html"><a href="secTitan.html#graphical-takeaways-23"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="secTitan2.html"><a href="secTitan2.html#graphical-takeaways-23"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="26" data-path="secBTwahl.html"><a href="secBTwahl.html"><i class="fa fa-check"></i><b>26</b> German Election 2021—what happened?</a>
 <ul>
-<li class="chapter" data-level="26.1" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl1"><i class="fa fa-check"></i><b>26.1</b> Who won the 2021 election?</a></li>
-<li class="chapter" data-level="26.2" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl2"><i class="fa fa-check"></i><b>26.2</b> Are there geographic patterns?</a></li>
-<li class="chapter" data-level="26.3" data-path="secBTwahl.html"><a href="secBTwahl.html#secBTwahl3"><i class="fa fa-check"></i><b>26.3</b> Who won the first-past-the-post seats?</a></li>
-<li class="chapter" data-level="26.4" data-path="secBTwahl.html"><a href="secBTwahl.html#how-do-first-past-the-post-and-party-votes-compare"><i class="fa fa-check"></i><b>26.4</b> How do first-past-the-post and party votes compare?</a>
+<li class="chapter" data-level="26.1" data-path="secBTwahl1.html"><a href="secBTwahl1.html"><i class="fa fa-check"></i><b>26.1</b> Who won the 2021 election?</a></li>
+<li class="chapter" data-level="26.2" data-path="secBTwahl2.html"><a href="secBTwahl2.html"><i class="fa fa-check"></i><b>26.2</b> Are there geographic patterns?</a></li>
+<li class="chapter" data-level="26.3" data-path="secBTwahl3.html"><a href="secBTwahl3.html"><i class="fa fa-check"></i><b>26.3</b> Who won the first-past-the-post seats?</a></li>
+<li class="chapter" data-level="26.4" data-path="how-do-first-past-the-post-and-party-votes-compare.html"><a href="how-do-first-past-the-post-and-party-votes-compare.html"><i class="fa fa-check"></i><b>26.4</b> How do first-past-the-post and party votes compare?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secBTwahl.html"><a href="secBTwahl.html#graphical-takeaways-24"><i class="fa fa-check"></i>Graphical takeaways</a></li>
+<li class="chapter" data-level="" data-path="how-do-first-past-the-post-and-party-votes-compare.html"><a href="how-do-first-past-the-post-and-party-votes-compare.html#graphical-takeaways-24"><i class="fa fa-check"></i>Graphical takeaways</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Advice on Graphics</b></span></li>
 <li class="chapter" data-level="27" data-path="secProvQ.html"><a href="secProvQ.html"><i class="fa fa-check"></i><b>27</b> Provenance and quality</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="secProvQ.html"><a href="secProvQ.html#what-does-provenance-mean"><i class="fa fa-check"></i><b>27.1</b> What does provenance mean?</a></li>
-<li class="chapter" data-level="27.2" data-path="secProvQ.html"><a href="secProvQ.html#what-problems-arise-with-datasets"><i class="fa fa-check"></i><b>27.2</b> What problems arise with datasets?</a>
+<li class="chapter" data-level="27.1" data-path="what-does-provenance-mean.html"><a href="what-does-provenance-mean.html"><i class="fa fa-check"></i><b>27.1</b> What does provenance mean?</a></li>
+<li class="chapter" data-level="27.2" data-path="what-problems-arise-with-datasets.html"><a href="what-problems-arise-with-datasets.html"><i class="fa fa-check"></i><b>27.2</b> What problems arise with datasets?</a>
 <ul>
-<li class="chapter" data-level="27.2.1" data-path="secProvQ.html"><a href="secProvQ.html#data-definitions"><i class="fa fa-check"></i><b>27.2.1</b> Data definitions</a></li>
-<li class="chapter" data-level="27.2.2" data-path="secProvQ.html"><a href="secProvQ.html#data-collection"><i class="fa fa-check"></i><b>27.2.2</b> Data collection</a></li>
-<li class="chapter" data-level="27.2.3" data-path="secProvQ.html"><a href="secProvQ.html#data-availability"><i class="fa fa-check"></i><b>27.2.3</b> Data availability</a></li>
+<li class="chapter" data-level="27.2.1" data-path="what-problems-arise-with-datasets.html"><a href="what-problems-arise-with-datasets.html#data-definitions"><i class="fa fa-check"></i><b>27.2.1</b> Data definitions</a></li>
+<li class="chapter" data-level="27.2.2" data-path="what-problems-arise-with-datasets.html"><a href="what-problems-arise-with-datasets.html#data-collection"><i class="fa fa-check"></i><b>27.2.2</b> Data collection</a></li>
+<li class="chapter" data-level="27.2.3" data-path="what-problems-arise-with-datasets.html"><a href="what-problems-arise-with-datasets.html#data-availability"><i class="fa fa-check"></i><b>27.2.3</b> Data availability</a></li>
 </ul></li>
-<li class="chapter" data-level="27.3" data-path="secProvQ.html"><a href="secProvQ.html#the-provenance-of-datasets-used-in-the-book"><i class="fa fa-check"></i><b>27.3</b> The provenance of datasets used in the book</a>
+<li class="chapter" data-level="27.3" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html"><i class="fa fa-check"></i><b>27.3</b> The provenance of datasets used in the book</a>
 <ul>
-<li class="chapter" data-level="27.3.1" data-path="secProvQ.html"><a href="secProvQ.html#gapminder-chapter-refsecgapm"><i class="fa fa-check"></i><b>27.3.1</b> Gapminder (Chapter @ref(secGapm))</a></li>
-<li class="chapter" data-level="27.3.2" data-path="secProvQ.html"><a href="secProvQ.html#movies-chapter-refsecmovies"><i class="fa fa-check"></i><b>27.3.2</b> Movies (Chapter @ref(secMovies))</a></li>
-<li class="chapter" data-level="27.3.3" data-path="secProvQ.html"><a href="secProvQ.html#democratic-convention-1912-chapter-refsec1912dem"><i class="fa fa-check"></i><b>27.3.3</b> Democratic Convention 1912 (Chapter @ref(sec1912Dem))</a></li>
-<li class="chapter" data-level="27.3.4" data-path="secProvQ.html"><a href="secProvQ.html#speed-of-light-chapter-refseclights"><i class="fa fa-check"></i><b>27.3.4</b> Speed of light (Chapter @ref(secLightS))</a></li>
-<li class="chapter" data-level="27.3.5" data-path="secProvQ.html"><a href="secProvQ.html#olympic-games-chapter-refsecolymps"><i class="fa fa-check"></i><b>27.3.5</b> Olympic Games (Chapter @ref(secOlymps))</a></li>
-<li class="chapter" data-level="27.3.6" data-path="secProvQ.html"><a href="secProvQ.html#chess-ratings-chapter-refsecchess"><i class="fa fa-check"></i><b>27.3.6</b> Chess ratings (Chapter @ref(secChess))</a></li>
-<li class="chapter" data-level="27.3.7" data-path="secProvQ.html"><a href="secProvQ.html#attitudes-to-same-sex-marriage-chapter-refsecgayr"><i class="fa fa-check"></i><b>27.3.7</b> Attitudes to same-sex marriage (Chapter @ref(secGayR))</a></li>
-<li class="chapter" data-level="27.3.8" data-path="secProvQ.html"><a href="secProvQ.html#human-spaceflights-chapter-refsecastro"><i class="fa fa-check"></i><b>27.3.8</b> Human spaceflights (Chapter @ref(secAstro))</a></li>
-<li class="chapter" data-level="27.3.9" data-path="secProvQ.html"><a href="secProvQ.html#diamonds-chapter-refsecdiam"><i class="fa fa-check"></i><b>27.3.9</b> Diamonds (Chapter @ref(secDiam))</a></li>
-<li class="chapter" data-level="27.3.10" data-path="secProvQ.html"><a href="secProvQ.html#electric-car-charging-chapter-refsecelecc"><i class="fa fa-check"></i><b>27.3.10</b> Electric car charging (Chapter @ref(secElecC))</a></li>
-<li class="chapter" data-level="27.3.11" data-path="secProvQ.html"><a href="secProvQ.html#darwins-finches-chapter-refsecfinches"><i class="fa fa-check"></i><b>27.3.11</b> Darwin’s finches (Chapter @ref(secFinches))</a></li>
-<li class="chapter" data-level="27.3.12" data-path="secProvQ.html"><a href="secProvQ.html#vehicle-fuel-consumption-chapter-refsecvehicles"><i class="fa fa-check"></i><b>27.3.12</b> Vehicle fuel consumption (Chapter @ref(secVehicles))</a></li>
-<li class="chapter" data-level="27.3.13" data-path="secProvQ.html"><a href="secProvQ.html#comrades-marathon-chapter-refseccomm"><i class="fa fa-check"></i><b>27.3.13</b> Comrades Marathon (Chapter @ref(secComM))</a></li>
-<li class="chapter" data-level="27.3.14" data-path="secProvQ.html"><a href="secProvQ.html#shearwaters-chapter-refsecshears"><i class="fa fa-check"></i><b>27.3.14</b> Shearwaters (Chapter @ref(secShears))</a></li>
-<li class="chapter" data-level="27.3.15" data-path="secProvQ.html"><a href="secProvQ.html#titanic-chapter-refsectitan"><i class="fa fa-check"></i><b>27.3.15</b> Titanic (Chapter @ref(secTitan))</a></li>
+<li class="chapter" data-level="27.3.1" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#gapminder-chapter-refsecgapm"><i class="fa fa-check"></i><b>27.3.1</b> Gapminder (Chapter @ref(secGapm))</a></li>
+<li class="chapter" data-level="27.3.2" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#movies-chapter-refsecmovies"><i class="fa fa-check"></i><b>27.3.2</b> Movies (Chapter @ref(secMovies))</a></li>
+<li class="chapter" data-level="27.3.3" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#democratic-convention-1912-chapter-refsec1912dem"><i class="fa fa-check"></i><b>27.3.3</b> Democratic Convention 1912 (Chapter @ref(sec1912Dem))</a></li>
+<li class="chapter" data-level="27.3.4" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#speed-of-light-chapter-refseclights"><i class="fa fa-check"></i><b>27.3.4</b> Speed of light (Chapter @ref(secLightS))</a></li>
+<li class="chapter" data-level="27.3.5" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#olympic-games-chapter-refsecolymps"><i class="fa fa-check"></i><b>27.3.5</b> Olympic Games (Chapter @ref(secOlymps))</a></li>
+<li class="chapter" data-level="27.3.6" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#chess-ratings-chapter-refsecchess"><i class="fa fa-check"></i><b>27.3.6</b> Chess ratings (Chapter @ref(secChess))</a></li>
+<li class="chapter" data-level="27.3.7" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#attitudes-to-same-sex-marriage-chapter-refsecgayr"><i class="fa fa-check"></i><b>27.3.7</b> Attitudes to same-sex marriage (Chapter @ref(secGayR))</a></li>
+<li class="chapter" data-level="27.3.8" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#human-spaceflights-chapter-refsecastro"><i class="fa fa-check"></i><b>27.3.8</b> Human spaceflights (Chapter @ref(secAstro))</a></li>
+<li class="chapter" data-level="27.3.9" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#diamonds-chapter-refsecdiam"><i class="fa fa-check"></i><b>27.3.9</b> Diamonds (Chapter @ref(secDiam))</a></li>
+<li class="chapter" data-level="27.3.10" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#electric-car-charging-chapter-refsecelecc"><i class="fa fa-check"></i><b>27.3.10</b> Electric car charging (Chapter @ref(secElecC))</a></li>
+<li class="chapter" data-level="27.3.11" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#darwins-finches-chapter-refsecfinches"><i class="fa fa-check"></i><b>27.3.11</b> Darwin’s finches (Chapter @ref(secFinches))</a></li>
+<li class="chapter" data-level="27.3.12" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#vehicle-fuel-consumption-chapter-refsecvehicles"><i class="fa fa-check"></i><b>27.3.12</b> Vehicle fuel consumption (Chapter @ref(secVehicles))</a></li>
+<li class="chapter" data-level="27.3.13" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#comrades-marathon-chapter-refseccomm"><i class="fa fa-check"></i><b>27.3.13</b> Comrades Marathon (Chapter @ref(secComM))</a></li>
+<li class="chapter" data-level="27.3.14" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#shearwaters-chapter-refsecshears"><i class="fa fa-check"></i><b>27.3.14</b> Shearwaters (Chapter @ref(secShears))</a></li>
+<li class="chapter" data-level="27.3.15" data-path="the-provenance-of-datasets-used-in-the-book.html"><a href="the-provenance-of-datasets-used-in-the-book.html#titanic-chapter-refsectitan"><i class="fa fa-check"></i><b>27.3.15</b> Titanic (Chapter @ref(secTitan))</a></li>
 </ul></li>
-<li class="chapter" data-level="27.4" data-path="secProvQ.html"><a href="secProvQ.html#how-do-invented-simulated-and-real-datasets-compare"><i class="fa fa-check"></i><b>27.4</b> How do invented, simulated, and real datasets compare?</a>
+<li class="chapter" data-level="27.4" data-path="how-do-invented-simulated-and-real-datasets-compare.html"><a href="how-do-invented-simulated-and-real-datasets-compare.html"><i class="fa fa-check"></i><b>27.4</b> How do invented, simulated, and real datasets compare?</a>
 <ul>
-<li class="chapter" data-level="" data-path="secProvQ.html"><a href="secProvQ.html#main-points"><i class="fa fa-check"></i>Main points</a></li>
+<li class="chapter" data-level="" data-path="how-do-invented-simulated-and-real-datasets-compare.html"><a href="how-do-invented-simulated-and-real-datasets-compare.html#main-points"><i class="fa fa-check"></i>Main points</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="28" data-path="secWrang.html"><a href="secWrang.html"><i class="fa fa-check"></i><b>28</b> Wrangling</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="secWrang.html"><a href="secWrang.html#secWrang1"><i class="fa fa-check"></i><b>28.1</b> Data wrangling: what and why</a></li>
-<li class="chapter" data-level="28.2" data-path="secWrang.html"><a href="secWrang.html#secWrang2"><i class="fa fa-check"></i><b>28.2</b> Data cleaning and transforming</a>
+<li class="chapter" data-level="28.1" data-path="secWrang1.html"><a href="secWrang1.html"><i class="fa fa-check"></i><b>28.1</b> Data wrangling: what and why</a></li>
+<li class="chapter" data-level="28.2" data-path="secWrang2.html"><a href="secWrang2.html"><i class="fa fa-check"></i><b>28.2</b> Data cleaning and transforming</a>
 <ul>
-<li class="chapter" data-level="28.2.1" data-path="secWrang.html"><a href="secWrang.html#errors-typos-outliers-missing-values"><i class="fa fa-check"></i><b>28.2.1</b> Errors, typos, outliers, missing values</a></li>
-<li class="chapter" data-level="28.2.2" data-path="secWrang.html"><a href="secWrang.html#secWrang22"><i class="fa fa-check"></i><b>28.2.2</b> Transforming and combining variables</a></li>
+<li class="chapter" data-level="28.2.1" data-path="secWrang2.html"><a href="secWrang2.html#errors-typos-outliers-missing-values"><i class="fa fa-check"></i><b>28.2.1</b> Errors, typos, outliers, missing values</a></li>
+<li class="chapter" data-level="28.2.2" data-path="secWrang2.html"><a href="secWrang2.html#secWrang22"><i class="fa fa-check"></i><b>28.2.2</b> Transforming and combining variables</a></li>
 </ul></li>
-<li class="chapter" data-level="28.3" data-path="secWrang.html"><a href="secWrang.html#secWrang3"><i class="fa fa-check"></i><b>28.3</b> Restructuring: subsetting, grouping, aggregating</a></li>
-<li class="chapter" data-level="28.4" data-path="secWrang.html"><a href="secWrang.html#naming-renaming-and-reclassifying"><i class="fa fa-check"></i><b>28.4</b> Naming, renaming and reclassifying</a></li>
-<li class="chapter" data-level="28.5" data-path="secWrang.html"><a href="secWrang.html#secWrang4"><i class="fa fa-check"></i><b>28.5</b> Wrangling for layered graphics</a>
+<li class="chapter" data-level="28.3" data-path="secWrang3.html"><a href="secWrang3.html"><i class="fa fa-check"></i><b>28.3</b> Restructuring: subsetting, grouping, aggregating</a></li>
+<li class="chapter" data-level="28.4" data-path="naming-renaming-and-reclassifying.html"><a href="naming-renaming-and-reclassifying.html"><i class="fa fa-check"></i><b>28.4</b> Naming, renaming and reclassifying</a></li>
+<li class="chapter" data-level="28.5" data-path="secWrang4.html"><a href="secWrang4.html"><i class="fa fa-check"></i><b>28.5</b> Wrangling for layered graphics</a>
 <ul>
-<li class="chapter" data-level="28.5.1" data-path="secWrang.html"><a href="secWrang.html#types-of-layers"><i class="fa fa-check"></i><b>28.5.1</b> Types of layers</a></li>
-<li class="chapter" data-level="28.5.2" data-path="secWrang.html"><a href="secWrang.html#the-layers-of-a-league-wormchart"><i class="fa fa-check"></i><b>28.5.2</b> The layers of a league wormchart</a></li>
+<li class="chapter" data-level="28.5.1" data-path="secWrang4.html"><a href="secWrang4.html#types-of-layers"><i class="fa fa-check"></i><b>28.5.1</b> Types of layers</a></li>
+<li class="chapter" data-level="28.5.2" data-path="secWrang4.html"><a href="secWrang4.html#the-layers-of-a-league-wormchart"><i class="fa fa-check"></i><b>28.5.2</b> The layers of a league wormchart</a></li>
 </ul></li>
-<li class="chapter" data-level="28.6" data-path="secWrang.html"><a href="secWrang.html#secWrang5"><i class="fa fa-check"></i><b>28.6</b> Putting datasets together and reproducibility</a>
+<li class="chapter" data-level="28.6" data-path="secWrang5.html"><a href="secWrang5.html"><i class="fa fa-check"></i><b>28.6</b> Putting datasets together and reproducibility</a>
 <ul>
-<li class="chapter" data-level="28.6.1" data-path="secWrang.html"><a href="secWrang.html#reading-in-and-merging-datasets"><i class="fa fa-check"></i><b>28.6.1</b> Reading in and merging datasets</a></li>
-<li class="chapter" data-level="28.6.2" data-path="secWrang.html"><a href="secWrang.html#reproducibility"><i class="fa fa-check"></i><b>28.6.2</b> Reproducibility </a></li>
-<li class="chapter" data-level="" data-path="secWrang.html"><a href="secWrang.html#main-points-1"><i class="fa fa-check"></i>Main points</a></li>
+<li class="chapter" data-level="28.6.1" data-path="secWrang5.html"><a href="secWrang5.html#reading-in-and-merging-datasets"><i class="fa fa-check"></i><b>28.6.1</b> Reading in and merging datasets</a></li>
+<li class="chapter" data-level="28.6.2" data-path="secWrang5.html"><a href="secWrang5.html#reproducibility"><i class="fa fa-check"></i><b>28.6.2</b> Reproducibility </a></li>
+<li class="chapter" data-level="" data-path="secWrang5.html"><a href="secWrang5.html#main-points-1"><i class="fa fa-check"></i>Main points</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="29" data-path="secColour.html"><a href="secColour.html"><i class="fa fa-check"></i><b>29</b> Colour</a>
 <ul>
-<li class="chapter" data-level="29.1" data-path="secColour.html"><a href="secColour.html#secColour1"><i class="fa fa-check"></i><b>29.1</b> Theory and implementation</a></li>
-<li class="chapter" data-level="29.2" data-path="secColour.html"><a href="secColour.html#secColour2"><i class="fa fa-check"></i><b>29.2</b> Perception of colour</a></li>
-<li class="chapter" data-level="29.3" data-path="secColour.html"><a href="secColour.html#secColour3"><i class="fa fa-check"></i><b>29.3</b> Value of colour</a>
+<li class="chapter" data-level="29.1" data-path="secColour1.html"><a href="secColour1.html"><i class="fa fa-check"></i><b>29.1</b> Theory and implementation</a></li>
+<li class="chapter" data-level="29.2" data-path="secColour2.html"><a href="secColour2.html"><i class="fa fa-check"></i><b>29.2</b> Perception of colour</a></li>
+<li class="chapter" data-level="29.3" data-path="secColour3.html"><a href="secColour3.html"><i class="fa fa-check"></i><b>29.3</b> Value of colour</a>
 <ul>
-<li class="chapter" data-level="29.3.1" data-path="secColour.html"><a href="secColour.html#colours-distinguish"><i class="fa fa-check"></i><b>29.3.1</b> Colours distinguish</a></li>
-<li class="chapter" data-level="29.3.2" data-path="secColour.html"><a href="secColour.html#colours-highlight"><i class="fa fa-check"></i><b>29.3.2</b> Colours highlight</a></li>
-<li class="chapter" data-level="29.3.3" data-path="secColour.html"><a href="secColour.html#colours-connect"><i class="fa fa-check"></i><b>29.3.3</b> Colours connect</a></li>
-<li class="chapter" data-level="29.3.4" data-path="secColour.html"><a href="secColour.html#colours-separate"><i class="fa fa-check"></i><b>29.3.4</b> Colours separate</a></li>
-<li class="chapter" data-level="29.3.5" data-path="secColour.html"><a href="secColour.html#colours-signify"><i class="fa fa-check"></i><b>29.3.5</b> Colours signify</a></li>
-<li class="chapter" data-level="29.3.6" data-path="secColour.html"><a href="secColour.html#colours-attract"><i class="fa fa-check"></i><b>29.3.6</b> Colours attract</a></li>
+<li class="chapter" data-level="29.3.1" data-path="secColour3.html"><a href="secColour3.html#colours-distinguish"><i class="fa fa-check"></i><b>29.3.1</b> Colours distinguish</a></li>
+<li class="chapter" data-level="29.3.2" data-path="secColour3.html"><a href="secColour3.html#colours-highlight"><i class="fa fa-check"></i><b>29.3.2</b> Colours highlight</a></li>
+<li class="chapter" data-level="29.3.3" data-path="secColour3.html"><a href="secColour3.html#colours-connect"><i class="fa fa-check"></i><b>29.3.3</b> Colours connect</a></li>
+<li class="chapter" data-level="29.3.4" data-path="secColour3.html"><a href="secColour3.html#colours-separate"><i class="fa fa-check"></i><b>29.3.4</b> Colours separate</a></li>
+<li class="chapter" data-level="29.3.5" data-path="secColour3.html"><a href="secColour3.html#colours-signify"><i class="fa fa-check"></i><b>29.3.5</b> Colours signify</a></li>
+<li class="chapter" data-level="29.3.6" data-path="secColour3.html"><a href="secColour3.html#colours-attract"><i class="fa fa-check"></i><b>29.3.6</b> Colours attract</a></li>
 </ul></li>
-<li class="chapter" data-level="29.4" data-path="secColour.html"><a href="secColour.html#secColour4"><i class="fa fa-check"></i><b>29.4</b> Choice of colour</a>
+<li class="chapter" data-level="29.4" data-path="secColour4.html"><a href="secColour4.html"><i class="fa fa-check"></i><b>29.4</b> Choice of colour</a>
 <ul>
-<li class="chapter" data-level="29.4.1" data-path="secColour.html"><a href="secColour.html#colour-blind-palettes-help"><i class="fa fa-check"></i><b>29.4.1</b> Colour blind palettes help</a></li>
-<li class="chapter" data-level="29.4.2" data-path="secColour.html"><a href="secColour.html#palette-order-counts"><i class="fa fa-check"></i><b>29.4.2</b> Palette order counts</a></li>
-<li class="chapter" data-level="29.4.3" data-path="secColour.html"><a href="secColour.html#there-may-not-be-enough-colours"><i class="fa fa-check"></i><b>29.4.3</b> There may not be enough colours</a></li>
-<li class="chapter" data-level="29.4.4" data-path="secColour.html"><a href="secColour.html#avoid-using-the-same-colours-for-different-datasets"><i class="fa fa-check"></i><b>29.4.4</b> Avoid using the same colours for different datasets</a></li>
-<li class="chapter" data-level="29.4.5" data-path="secColour.html"><a href="secColour.html#avoid-overlapping-colours-use-faceting"><i class="fa fa-check"></i><b>29.4.5</b> Avoid overlapping colours, use faceting</a></li>
-<li class="chapter" data-level="29.4.6" data-path="secColour.html"><a href="secColour.html#backgrounds-matter"><i class="fa fa-check"></i><b>29.4.6</b> Backgrounds matter</a></li>
-<li class="chapter" data-level="" data-path="secColour.html"><a href="secColour.html#main-points-2"><i class="fa fa-check"></i>Main points</a></li>
+<li class="chapter" data-level="29.4.1" data-path="secColour4.html"><a href="secColour4.html#colour-blind-palettes-help"><i class="fa fa-check"></i><b>29.4.1</b> Colour blind palettes help</a></li>
+<li class="chapter" data-level="29.4.2" data-path="secColour4.html"><a href="secColour4.html#palette-order-counts"><i class="fa fa-check"></i><b>29.4.2</b> Palette order counts</a></li>
+<li class="chapter" data-level="29.4.3" data-path="secColour4.html"><a href="secColour4.html#there-may-not-be-enough-colours"><i class="fa fa-check"></i><b>29.4.3</b> There may not be enough colours</a></li>
+<li class="chapter" data-level="29.4.4" data-path="secColour4.html"><a href="secColour4.html#avoid-using-the-same-colours-for-different-datasets"><i class="fa fa-check"></i><b>29.4.4</b> Avoid using the same colours for different datasets</a></li>
+<li class="chapter" data-level="29.4.5" data-path="secColour4.html"><a href="secColour4.html#avoid-overlapping-colours-use-faceting"><i class="fa fa-check"></i><b>29.4.5</b> Avoid overlapping colours, use faceting</a></li>
+<li class="chapter" data-level="29.4.6" data-path="secColour4.html"><a href="secColour4.html#backgrounds-matter"><i class="fa fa-check"></i><b>29.4.6</b> Backgrounds matter</a></li>
+<li class="chapter" data-level="" data-path="secColour4.html"><a href="secColour4.html#main-points-2"><i class="fa fa-check"></i>Main points</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="30" data-path="secScene.html"><a href="secScene.html"><i class="fa fa-check"></i><b>30</b> Setting the scene</a>
 <ul>
-<li class="chapter" data-level="30.1" data-path="secScene.html"><a href="secScene.html#secScene6"><i class="fa fa-check"></i><b>30.1</b> Scaling</a></li>
-<li class="chapter" data-level="30.2" data-path="secScene.html"><a href="secScene.html#secScene4"><i class="fa fa-check"></i><b>30.2</b> Formatting</a>
+<li class="chapter" data-level="30.1" data-path="secScene6.html"><a href="secScene6.html"><i class="fa fa-check"></i><b>30.1</b> Scaling</a></li>
+<li class="chapter" data-level="30.2" data-path="secScene4.html"><a href="secScene4.html"><i class="fa fa-check"></i><b>30.2</b> Formatting</a>
 <ul>
-<li class="chapter" data-level="30.2.1" data-path="secScene.html"><a href="secScene.html#points-areas-lines"><i class="fa fa-check"></i><b>30.2.1</b> Points, areas, lines, …</a></li>
-<li class="chapter" data-level="30.2.2" data-path="secScene.html"><a href="secScene.html#plot"><i class="fa fa-check"></i><b>30.2.2</b> Plot</a></li>
-<li class="chapter" data-level="30.2.3" data-path="secScene.html"><a href="secScene.html#position"><i class="fa fa-check"></i><b>30.2.3</b> Position</a></li>
+<li class="chapter" data-level="30.2.1" data-path="secScene4.html"><a href="secScene4.html#points-areas-lines"><i class="fa fa-check"></i><b>30.2.1</b> Points, areas, lines, …</a></li>
+<li class="chapter" data-level="30.2.2" data-path="secScene4.html"><a href="secScene4.html#plot"><i class="fa fa-check"></i><b>30.2.2</b> Plot</a></li>
+<li class="chapter" data-level="30.2.3" data-path="secScene4.html"><a href="secScene4.html#position"><i class="fa fa-check"></i><b>30.2.3</b> Position</a></li>
 </ul></li>
-<li class="chapter" data-level="30.3" data-path="secScene.html"><a href="secScene.html#secScene3"><i class="fa fa-check"></i><b>30.3</b> Making space</a></li>
-<li class="chapter" data-level="30.4" data-path="secScene.html"><a href="secScene.html#secScene1"><i class="fa fa-check"></i><b>30.4</b> Layout</a></li>
-<li class="chapter" data-level="30.5" data-path="secScene.html"><a href="secScene.html#secScene2"><i class="fa fa-check"></i><b>30.5</b> Comparisons and graphics</a>
+<li class="chapter" data-level="30.3" data-path="secScene3.html"><a href="secScene3.html"><i class="fa fa-check"></i><b>30.3</b> Making space</a></li>
+<li class="chapter" data-level="30.4" data-path="secScene1.html"><a href="secScene1.html"><i class="fa fa-check"></i><b>30.4</b> Layout</a></li>
+<li class="chapter" data-level="30.5" data-path="secScene2.html"><a href="secScene2.html"><i class="fa fa-check"></i><b>30.5</b> Comparisons and graphics</a>
 <ul>
-<li class="chapter" data-level="30.5.1" data-path="secScene.html"><a href="secScene.html#types-of-comparison"><i class="fa fa-check"></i><b>30.5.1</b> Types of comparison</a></li>
-<li class="chapter" data-level="30.5.2" data-path="secScene.html"><a href="secScene.html#superposition-juxtaposition-and-faceting"><i class="fa fa-check"></i><b>30.5.2</b> Superposition, juxtaposition, and faceting</a></li>
-<li class="chapter" data-level="30.5.3" data-path="secScene.html"><a href="secScene.html#advice"><i class="fa fa-check"></i><b>30.5.3</b> Advice</a></li>
+<li class="chapter" data-level="30.5.1" data-path="secScene2.html"><a href="secScene2.html#types-of-comparison"><i class="fa fa-check"></i><b>30.5.1</b> Types of comparison</a></li>
+<li class="chapter" data-level="30.5.2" data-path="secScene2.html"><a href="secScene2.html#superposition-juxtaposition-and-faceting"><i class="fa fa-check"></i><b>30.5.2</b> Superposition, juxtaposition, and faceting</a></li>
+<li class="chapter" data-level="30.5.3" data-path="secScene2.html"><a href="secScene2.html#advice"><i class="fa fa-check"></i><b>30.5.3</b> Advice</a></li>
 </ul></li>
-<li class="chapter" data-level="30.6" data-path="secScene.html"><a href="secScene.html#secScene5"><i class="fa fa-check"></i><b>30.6</b> Defaults</a>
+<li class="chapter" data-level="30.6" data-path="secScene5.html"><a href="secScene5.html"><i class="fa fa-check"></i><b>30.6</b> Defaults</a>
 <ul>
-<li class="chapter" data-level="" data-path="secScene.html"><a href="secScene.html#main-points-3"><i class="fa fa-check"></i>Main points</a></li>
+<li class="chapter" data-level="" data-path="secScene5.html"><a href="secScene5.html#main-points-3"><i class="fa fa-check"></i>Main points</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="31" data-path="secOrder.html"><a href="secOrder.html"><i class="fa fa-check"></i><b>31</b> Ordering, sorting, and arranging</a>
 <ul>
-<li class="chapter" data-level="31.1" data-path="secOrder.html"><a href="secOrder.html#secOrder1"><i class="fa fa-check"></i><b>31.1</b> What gets ordered, sorted, arranged?</a>
+<li class="chapter" data-level="31.1" data-path="secOrder1.html"><a href="secOrder1.html"><i class="fa fa-check"></i><b>31.1</b> What gets ordered, sorted, arranged?</a>
 <ul>
-<li class="chapter" data-level="31.1.1" data-path="secOrder.html"><a href="secOrder.html#cases"><i class="fa fa-check"></i><b>31.1.1</b> Cases</a></li>
-<li class="chapter" data-level="31.1.2" data-path="secOrder.html"><a href="secOrder.html#levels-of-categorical-variables"><i class="fa fa-check"></i><b>31.1.2</b> Levels of categorical variables</a></li>
-<li class="chapter" data-level="31.1.3" data-path="secOrder.html"><a href="secOrder.html#variables"><i class="fa fa-check"></i><b>31.1.3</b> Variables</a></li>
+<li class="chapter" data-level="31.1.1" data-path="secOrder1.html"><a href="secOrder1.html#cases"><i class="fa fa-check"></i><b>31.1.1</b> Cases</a></li>
+<li class="chapter" data-level="31.1.2" data-path="secOrder1.html"><a href="secOrder1.html#levels-of-categorical-variables"><i class="fa fa-check"></i><b>31.1.2</b> Levels of categorical variables</a></li>
+<li class="chapter" data-level="31.1.3" data-path="secOrder1.html"><a href="secOrder1.html#variables"><i class="fa fa-check"></i><b>31.1.3</b> Variables</a></li>
 </ul></li>
-<li class="chapter" data-level="31.2" data-path="secOrder.html"><a href="secOrder.html#secOrder2"><i class="fa fa-check"></i><b>31.2</b> Ordering and sorting within graphics</a>
+<li class="chapter" data-level="31.2" data-path="secOrder2.html"><a href="secOrder2.html"><i class="fa fa-check"></i><b>31.2</b> Ordering and sorting within graphics</a>
 <ul>
-<li class="chapter" data-level="31.2.1" data-path="secOrder.html"><a href="secOrder.html#secBoxes"><i class="fa fa-check"></i><b>31.2.1</b> Boxplots</a></li>
-<li class="chapter" data-level="31.2.2" data-path="secOrder.html"><a href="secOrder.html#sorting-into-groups-and-faceting-plots"><i class="fa fa-check"></i><b>31.2.2</b> Sorting into groups and faceting plots</a></li>
-<li class="chapter" data-level="31.2.3" data-path="secOrder.html"><a href="secOrder.html#secMosps"><i class="fa fa-check"></i><b>31.2.3</b> Mosaicplots</a></li>
-<li class="chapter" data-level="31.2.4" data-path="secOrder.html"><a href="secOrder.html#secPCPs"><i class="fa fa-check"></i><b>31.2.4</b> Parallel coordinate plots</a></li>
+<li class="chapter" data-level="31.2.1" data-path="secOrder2.html"><a href="secOrder2.html#secBoxes"><i class="fa fa-check"></i><b>31.2.1</b> Boxplots</a></li>
+<li class="chapter" data-level="31.2.2" data-path="secOrder2.html"><a href="secOrder2.html#sorting-into-groups-and-faceting-plots"><i class="fa fa-check"></i><b>31.2.2</b> Sorting into groups and faceting plots</a></li>
+<li class="chapter" data-level="31.2.3" data-path="secOrder2.html"><a href="secOrder2.html#secMosps"><i class="fa fa-check"></i><b>31.2.3</b> Mosaicplots</a></li>
+<li class="chapter" data-level="31.2.4" data-path="secOrder2.html"><a href="secOrder2.html#secPCPs"><i class="fa fa-check"></i><b>31.2.4</b> Parallel coordinate plots</a></li>
 </ul></li>
-<li class="chapter" data-level="31.3" data-path="secOrder.html"><a href="secOrder.html#secOrder3"><i class="fa fa-check"></i><b>31.3</b> Numbers of orderings and sortings</a></li>
-<li class="chapter" data-level="31.4" data-path="secOrder.html"><a href="secOrder.html#secOrder4"><i class="fa fa-check"></i><b>31.4</b> Arranging graphics</a>
+<li class="chapter" data-level="31.3" data-path="secOrder3.html"><a href="secOrder3.html"><i class="fa fa-check"></i><b>31.3</b> Numbers of orderings and sortings</a></li>
+<li class="chapter" data-level="31.4" data-path="secOrder4.html"><a href="secOrder4.html"><i class="fa fa-check"></i><b>31.4</b> Arranging graphics</a>
 <ul>
-<li class="chapter" data-level="" data-path="secOrder.html"><a href="secOrder.html#main-points-4"><i class="fa fa-check"></i>Main points</a></li>
+<li class="chapter" data-level="" data-path="secOrder4.html"><a href="secOrder4.html#main-points-4"><i class="fa fa-check"></i>Main points</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="32" data-path="secInterp.html"><a href="secInterp.html"><i class="fa fa-check"></i><b>32</b> What affects interpretation?</a>
 <ul>
-<li class="chapter" data-level="32.1" data-path="secInterp.html"><a href="secInterp.html#secAttention"><i class="fa fa-check"></i><b>32.1</b> Attention</a>
+<li class="chapter" data-level="32.1" data-path="secAttention.html"><a href="secAttention.html"><i class="fa fa-check"></i><b>32.1</b> Attention</a>
 <ul>
-<li class="chapter" data-level="32.1.1" data-path="secInterp.html"><a href="secInterp.html#types-of-attention"><i class="fa fa-check"></i><b>32.1.1</b> Types of attention</a></li>
-<li class="chapter" data-level="32.1.2" data-path="secInterp.html"><a href="secInterp.html#cognitive-load"><i class="fa fa-check"></i><b>32.1.2</b> Cognitive load</a></li>
-<li class="chapter" data-level="32.1.3" data-path="secInterp.html"><a href="secInterp.html#rewards-for-paying-attention"><i class="fa fa-check"></i><b>32.1.3</b> Rewards for paying attention</a></li>
+<li class="chapter" data-level="32.1.1" data-path="secAttention.html"><a href="secAttention.html#types-of-attention"><i class="fa fa-check"></i><b>32.1.1</b> Types of attention</a></li>
+<li class="chapter" data-level="32.1.2" data-path="secAttention.html"><a href="secAttention.html#cognitive-load"><i class="fa fa-check"></i><b>32.1.2</b> Cognitive load</a></li>
+<li class="chapter" data-level="32.1.3" data-path="secAttention.html"><a href="secAttention.html#rewards-for-paying-attention"><i class="fa fa-check"></i><b>32.1.3</b> Rewards for paying attention</a></li>
 </ul></li>
-<li class="chapter" data-level="32.2" data-path="secInterp.html"><a href="secInterp.html#secUnderstand"><i class="fa fa-check"></i><b>32.2</b> Understanding</a>
+<li class="chapter" data-level="32.2" data-path="secUnderstand.html"><a href="secUnderstand.html"><i class="fa fa-check"></i><b>32.2</b> Understanding</a>
 <ul>
-<li class="chapter" data-level="32.2.1" data-path="secInterp.html"><a href="secInterp.html#knowledge"><i class="fa fa-check"></i><b>32.2.1</b> Knowledge</a></li>
-<li class="chapter" data-level="32.2.2" data-path="secInterp.html"><a href="secInterp.html#experience"><i class="fa fa-check"></i><b>32.2.2</b> Experience</a></li>
-<li class="chapter" data-level="32.2.3" data-path="secInterp.html"><a href="secInterp.html#possible-cognitive-biases"><i class="fa fa-check"></i><b>32.2.3</b> Possible cognitive biases</a></li>
+<li class="chapter" data-level="32.2.1" data-path="secUnderstand.html"><a href="secUnderstand.html#knowledge"><i class="fa fa-check"></i><b>32.2.1</b> Knowledge</a></li>
+<li class="chapter" data-level="32.2.2" data-path="secUnderstand.html"><a href="secUnderstand.html#experience"><i class="fa fa-check"></i><b>32.2.2</b> Experience</a></li>
+<li class="chapter" data-level="32.2.3" data-path="secUnderstand.html"><a href="secUnderstand.html#possible-cognitive-biases"><i class="fa fa-check"></i><b>32.2.3</b> Possible cognitive biases</a></li>
 </ul></li>
-<li class="chapter" data-level="32.3" data-path="secInterp.html"><a href="secInterp.html#secCheck"><i class="fa fa-check"></i><b>32.3</b> Checking</a>
+<li class="chapter" data-level="32.3" data-path="secCheck.html"><a href="secCheck.html"><i class="fa fa-check"></i><b>32.3</b> Checking</a>
 <ul>
-<li class="chapter" data-level="32.3.1" data-path="secInterp.html"><a href="secInterp.html#provenance"><i class="fa fa-check"></i><b>32.3.1</b> Provenance</a></li>
-<li class="chapter" data-level="32.3.2" data-path="secInterp.html"><a href="secInterp.html#looking-at-the-numbers"><i class="fa fa-check"></i><b>32.3.2</b> Looking at the numbers</a></li>
-<li class="chapter" data-level="32.3.3" data-path="secInterp.html"><a href="secInterp.html#varying-plots"><i class="fa fa-check"></i><b>32.3.3</b> Varying plots</a></li>
-<li class="chapter" data-level="32.3.4" data-path="secInterp.html"><a href="secInterp.html#varying-plot-forms"><i class="fa fa-check"></i><b>32.3.4</b> Varying plot forms</a></li>
-<li class="chapter" data-level="32.3.5" data-path="secInterp.html"><a href="secInterp.html#statistical-checks"><i class="fa fa-check"></i><b>32.3.5</b> Statistical checks</a></li>
-<li class="chapter" data-level="32.3.6" data-path="secInterp.html"><a href="secInterp.html#checking-consequences"><i class="fa fa-check"></i><b>32.3.6</b> Checking consequences</a></li>
-<li class="chapter" data-level="32.3.7" data-path="secInterp.html"><a href="secInterp.html#context"><i class="fa fa-check"></i><b>32.3.7</b> Context</a></li>
-<li class="chapter" data-level="32.3.8" data-path="secInterp.html"><a href="secInterp.html#discussing-with-others-especially-domain-experts"><i class="fa fa-check"></i><b>32.3.8</b> Discussing with others, especially domain experts</a></li>
-<li class="chapter" data-level="32.3.9" data-path="secInterp.html"><a href="secInterp.html#replicate"><i class="fa fa-check"></i><b>32.3.9</b> Replicate</a></li>
-<li class="chapter" data-level="32.3.10" data-path="secInterp.html"><a href="secInterp.html#example-of-checking"><i class="fa fa-check"></i><b>32.3.10</b> Example of checking</a></li>
-<li class="chapter" data-level="" data-path="secInterp.html"><a href="secInterp.html#main-points-5"><i class="fa fa-check"></i>Main points</a></li>
+<li class="chapter" data-level="32.3.1" data-path="secCheck.html"><a href="secCheck.html#provenance"><i class="fa fa-check"></i><b>32.3.1</b> Provenance</a></li>
+<li class="chapter" data-level="32.3.2" data-path="secCheck.html"><a href="secCheck.html#looking-at-the-numbers"><i class="fa fa-check"></i><b>32.3.2</b> Looking at the numbers</a></li>
+<li class="chapter" data-level="32.3.3" data-path="secCheck.html"><a href="secCheck.html#varying-plots"><i class="fa fa-check"></i><b>32.3.3</b> Varying plots</a></li>
+<li class="chapter" data-level="32.3.4" data-path="secCheck.html"><a href="secCheck.html#varying-plot-forms"><i class="fa fa-check"></i><b>32.3.4</b> Varying plot forms</a></li>
+<li class="chapter" data-level="32.3.5" data-path="secCheck.html"><a href="secCheck.html#statistical-checks"><i class="fa fa-check"></i><b>32.3.5</b> Statistical checks</a></li>
+<li class="chapter" data-level="32.3.6" data-path="secCheck.html"><a href="secCheck.html#checking-consequences"><i class="fa fa-check"></i><b>32.3.6</b> Checking consequences</a></li>
+<li class="chapter" data-level="32.3.7" data-path="secCheck.html"><a href="secCheck.html#context"><i class="fa fa-check"></i><b>32.3.7</b> Context</a></li>
+<li class="chapter" data-level="32.3.8" data-path="secCheck.html"><a href="secCheck.html#discussing-with-others-especially-domain-experts"><i class="fa fa-check"></i><b>32.3.8</b> Discussing with others, especially domain experts</a></li>
+<li class="chapter" data-level="32.3.9" data-path="secCheck.html"><a href="secCheck.html#replicate"><i class="fa fa-check"></i><b>32.3.9</b> Replicate</a></li>
+<li class="chapter" data-level="32.3.10" data-path="secCheck.html"><a href="secCheck.html#example-of-checking"><i class="fa fa-check"></i><b>32.3.10</b> Example of checking</a></li>
+<li class="chapter" data-level="" data-path="secCheck.html"><a href="secCheck.html#main-points-5"><i class="fa fa-check"></i>Main points</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="33" data-path="secPlot.html"><a href="secPlot.html"><i class="fa fa-check"></i><b>33</b> Varieties of plots, developing plots</a>
 <ul>
-<li class="chapter" data-level="33.1" data-path="secPlot.html"><a href="secPlot.html#varying-various-plots"><i class="fa fa-check"></i><b>33.1</b> Varying various plots</a></li>
-<li class="chapter" data-level="33.2" data-path="secPlot.html"><a href="secPlot.html#ensembles-of-plots"><i class="fa fa-check"></i><b>33.2</b> Ensembles of plots</a></li>
-<li class="chapter" data-level="33.3" data-path="secPlot.html"><a href="secPlot.html#differences-between-early-drafts-and-later-graphics"><i class="fa fa-check"></i><b>33.3</b> Differences between early drafts and later graphics</a>
+<li class="chapter" data-level="33.1" data-path="varying-various-plots.html"><a href="varying-various-plots.html"><i class="fa fa-check"></i><b>33.1</b> Varying various plots</a></li>
+<li class="chapter" data-level="33.2" data-path="ensembles-of-plots.html"><a href="ensembles-of-plots.html"><i class="fa fa-check"></i><b>33.2</b> Ensembles of plots</a></li>
+<li class="chapter" data-level="33.3" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html"><i class="fa fa-check"></i><b>33.3</b> Differences between early drafts and later graphics</a>
 <ul>
-<li class="chapter" data-level="33.3.1" data-path="secPlot.html"><a href="secPlot.html#democratic-convention"><i class="fa fa-check"></i><b>33.3.1</b> 1912 Democratic Convention</a></li>
-<li class="chapter" data-level="33.3.2" data-path="secPlot.html"><a href="secPlot.html#gapminder-life-expectancies"><i class="fa fa-check"></i><b>33.3.2</b> Gapminder Life Expectancies</a></li>
-<li class="chapter" data-level="33.3.3" data-path="secPlot.html"><a href="secPlot.html#electric-car-charging"><i class="fa fa-check"></i><b>33.3.3</b> Electric car charging</a></li>
-<li class="chapter" data-level="33.3.4" data-path="secPlot.html"><a href="secPlot.html#gay-rights"><i class="fa fa-check"></i><b>33.3.4</b> Gay rights</a></li>
-<li class="chapter" data-level="33.3.5" data-path="secPlot.html"><a href="secPlot.html#human-space-flight"><i class="fa fa-check"></i><b>33.3.5</b> Human space flight</a></li>
-<li class="chapter" data-level="33.3.6" data-path="secPlot.html"><a href="secPlot.html#euro-2020"><i class="fa fa-check"></i><b>33.3.6</b> Euro 2020</a></li>
-<li class="chapter" data-level="33.3.7" data-path="secPlot.html"><a href="secPlot.html#characteristic-changes"><i class="fa fa-check"></i><b>33.3.7</b> Characteristic changes</a></li>
+<li class="chapter" data-level="33.3.1" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html#democratic-convention"><i class="fa fa-check"></i><b>33.3.1</b> 1912 Democratic Convention</a></li>
+<li class="chapter" data-level="33.3.2" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html#gapminder-life-expectancies"><i class="fa fa-check"></i><b>33.3.2</b> Gapminder Life Expectancies</a></li>
+<li class="chapter" data-level="33.3.3" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html#electric-car-charging"><i class="fa fa-check"></i><b>33.3.3</b> Electric car charging</a></li>
+<li class="chapter" data-level="33.3.4" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html#gay-rights"><i class="fa fa-check"></i><b>33.3.4</b> Gay rights</a></li>
+<li class="chapter" data-level="33.3.5" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html#human-space-flight"><i class="fa fa-check"></i><b>33.3.5</b> Human space flight</a></li>
+<li class="chapter" data-level="33.3.6" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html#euro-2020"><i class="fa fa-check"></i><b>33.3.6</b> Euro 2020</a></li>
+<li class="chapter" data-level="33.3.7" data-path="differences-between-early-drafts-and-later-graphics.html"><a href="differences-between-early-drafts-and-later-graphics.html#characteristic-changes"><i class="fa fa-check"></i><b>33.3.7</b> Characteristic changes</a></li>
 </ul></li>
-<li class="chapter" data-level="33.4" data-path="secPlot.html"><a href="secPlot.html#classifying-graphics"><i class="fa fa-check"></i><b>33.4</b> Classifying graphics</a>
+<li class="chapter" data-level="33.4" data-path="classifying-graphics.html"><a href="classifying-graphics.html"><i class="fa fa-check"></i><b>33.4</b> Classifying graphics</a>
 <ul>
-<li class="chapter" data-level="" data-path="secPlot.html"><a href="secPlot.html#main-points-6"><i class="fa fa-check"></i>Main points</a></li>
+<li class="chapter" data-level="" data-path="classifying-graphics.html"><a href="classifying-graphics.html#main-points-6"><i class="fa fa-check"></i>Main points</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="34" data-path="conclusions-and-recommendations.html"><a href="conclusions-and-recommendations.html"><i class="fa fa-check"></i><b>34</b> Conclusions and recommendations</a></li>
@@ -655,342 +587,14 @@ div.csl-indent {
 </footer>
 </blockquote>
 <p>Interpreting graphics depends on paying attention to the graphics, understanding what is seen, and checking what is seen.</p>
-<div id="secAttention" class="section level2 hasAnchor" number="32.1">
-<h2><span class="header-section-number">32.1</span> Attention<a href="secInterp.html#secAttention" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<blockquote>
-<p>“Can you describe her?”</p>
-</blockquote>
-<blockquote>
-<p>“It's a bit difficult. She was sort of middle-aged and ordinary.”</p>
-</blockquote>
-<blockquote>
-<p>“What was she wearing?”</p>
-</blockquote>
-<blockquote>
-<p>“Tweeds, oatmeal flecked with brown, a three-quarter coat with patch pockets… a scarf, felt hat, brown shoes, a tussle shirt… and a small blue handkerchief in her
-breast pocket. l can't remember any more.”</p>
-</blockquote>
-<blockquote>
-<p>“You couldn't have been paying attention.”</p>
-</blockquote>
-<blockquote>
-<footer>
-— Michael Redgrave questioning Margaret Lockwood in ‘The Lady Vanishes’
-</footer>
-</blockquote>
-<p>Graphics texts generally consider perception and interpretation, including optical illusions, but do not pay as much attention to attention. There is an implicit assumption that viewers who look at a graphic are giving it their full attention. That seems as unrealistic as assuming that all the students attending a lecture are giving it their undivided attention.</p>
-<div style="page-break-after: always;"></div>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb350-1"><a href="secInterp.html#cb350-1" tabindex="-1"></a><span class="fu">data</span>(body, <span class="at">package=</span><span class="st">&quot;gclus&quot;</span>)</span>
-<span id="cb350-2"><a href="secInterp.html#cb350-2" tabindex="-1"></a><span class="fu">ggplot</span>(body, <span class="fu">aes</span>(Biiliac, Biacrom)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">coord_fixed</span>()</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bibi1"></span>
-<img src="_main_files/figure-html/bibi1-1.png" alt="Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults." width="80%" />
-<p class="caption">
-Figure 32.1: Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults.
-</p>
-</div>
-<p>Does Figure <a href="secInterp.html#fig:bibi1">32.1</a> demand attention? Someone might glance at it and decide the scatterplot did not look interesting. Perhaps the measurements did not mean anything to them or perhaps they did, but the topic did not attract them. They might have been distracted by the cup of coffee they had just made, by an email or by a noise in the street. They might have been tired or bored. Or, perhaps, they devoted sustained and concentrated attention to Figure <a href="secInterp.html#fig:bibi1">32.1</a>. Graphics are often discussed objectively and yet there are many subjective factors affecting how they are viewed.</p>
-<p>Biacromial diameter is a technical term for a measurement of the width between the shoulders and Biiliac may be described as “pelvic breadth”. Knowing that might make someone look at the graphic more closely and think that is is surprising the two measurements are not more correlated. Many body measurements are. There are a few Biiliac values that appear lower than the rest. It is curious that the highest pelvic breadth value and two of the three lowest have about the same middling shoulder width.</p>
-<p>A graphic without structure can be interesting because it was expected to have structure and did not or because there is more to it when additional information is included. Figure <a href="secInterp.html#fig:bibi2">32.2</a> colours the points of the plot by sex.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb351-1"><a href="secInterp.html#cb351-1" tabindex="-1"></a><span class="fu">data</span>(body, <span class="at">package=</span><span class="st">&quot;gclus&quot;</span>)</span>
-<span id="cb351-2"><a href="secInterp.html#cb351-2" tabindex="-1"></a><span class="fu">ggplot</span>(body, <span class="fu">aes</span>(Biiliac, Biacrom, <span class="at">colour=</span><span class="fu">factor</span>(Gender))) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;purple2&quot;</span>, <span class="st">&quot;springgreen3&quot;</span>)) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>, <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">coord_fixed</span>()</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bibi2"></span>
-<img src="_main_files/figure-html/bibi2-1.png" alt="Scatterplot of Biacromial diameter (shoulder width) against Biiliac (pelvic breadth for 247 men (in green) and 260 women (in purple)." width="80%" />
-<p class="caption">
-Figure 32.2: Scatterplot of Biacromial diameter (shoulder width) against Biiliac (pelvic breadth for 247 men (in green) and 260 women (in purple).
-</p>
-</div>
-<p>Generally, women have about the same pelvic breath as men but narrower shoulder widths. The displays in Figures <a href="secInterp.html#fig:bibi1">32.1</a> and <a href="secInterp.html#fig:bibi2">32.2</a> use data collected around twenty years ago (<span class="citation">Heinz et al. (<a href="references.html#ref-heinz:2003">2003</a>)</span>). There are not many datasets of multivariate measurements of individuals and in working with this one, the authors’ proviso should be remembered that “the sample is not a representative sample from a well-defined population”. The R help file says it was men and women who were primarily in their twenties and thirties and who all exercised several hours a week, hardly typical of the general population.</p>
-<p>If information is to be gained from a graphic, it has to be paid some attention. How much attention is paid and how that attention is paid are important. A quick scan of a display can suggest the type of graphic and what the overall structure could be. More focused and concentrated attention may be needed to confirm first impressions, to pick out additional features, and to consider what further information might be useful. Background knowledge of what the variables mean and of how the data were collected are needed, as is information about the quality of the data.</p>
-<div style="page-break-after: always;"></div>
-<p>Inspecting a graphic once is rarely sufficient The source should be checked and any text associated with the graphic reviewed. Sometimes a graphic can be compared with related graphics, sometimes there are other questions that need to be investigated before returning to the graphic itself. If a graphic is worth drawing, then it should be worth careful and thorough study. This involves not just the graphic itself, but also any relevant associated information.</p>
-<p>Initial impressions can be deceptive. There may be several features that can be seen in a graphic and rather than fixating on one, it is more effective to consciously look for others. Like brainstorming, it is helpful to generate a number of ideas before being too critical of any of them. As always, varying the shape and size of the display may help.</p>
-<p>Expectations influence what is seen, either negatively or positively. If there are strong expectations of what a graphic will show, viewers may only look for corroborating evidence. On the other hand, if there are no expectations then they may simply accept what they see and lose the capacity to be surprised. It is best to think in advance of what is likely to appear and to look more closely—even if expectations are met.</p>
-<div id="types-of-attention" class="section level3 hasAnchor" number="32.1.1">
-<h3><span class="header-section-number">32.1.1</span> Types of attention<a href="secInterp.html#types-of-attention" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Before paying full attention, there is what is referred to as preattentive processing (although attention does play a role, <span class="citation">Healey &amp; Enns (<a href="references.html#ref-healey:2012">2012</a>)</span>). People can pick out 2 red dots in a cloud of blue dots without even trying. They might then use focused attention to concentrate on those points and their neighbourhoods or they might distribute their attention over the whole display looking for other features.</p>
-<p>Sometimes something may catch a viewer’s eye when they are not looking directly at it, thanks to their peripheral vision. <span class="citation">Potter et al. (<a href="references.html#ref-potter:2014">2014</a>)</span> concludes that in certain circumstances people can see meaning in a photograph within 13 ms. Perhaps that ability encourages them to only glance at graphics, and not try to see more in them. Even if graphics are studied more closely, there is the effect that Barbara Tversky calls the fourth law of cognition (<span class="citation">Tversky (<a href="references.html#ref-tversky:2019">2019</a>)</span>): The mind can override perception. She writes: “We don’t always look, even when the answer is right in front of our eyes. Memory overrides perception.” Both effects contribute to explaining why graphics are often poorly interpreted. The fourth law of cognition may also underlie why some graphics are poorly described by their own authors. They may be writing about what they wanted to present and not what can be seen in the graphic.</p>
-<div style="page-break-after: always;"></div>
-<p>What attention is paid to may be goal-driven (top-down), stimulus-driven (bottom-up) or history-based (depending on the viewer’s experience). The goal of drawing the map of German election results in Figure <a href="secBTwahl.html#fig:btwMapE">26.16</a>, repeated here in Figure <a href="secInterp.html#fig:btwMapEX">32.3</a>, was to see if there were geographical patterns. The main ones for the CDU, CSU, SPD, and AfD stand out (goal-driven). The smaller constituencies where the Greens did well imply that they did well in urban areas and the fact that Die Linke party are in the legend means they must have won seats somewhere (stimulus-driven). Political maps give poor representations of party support because they display areas and not populations (history-based).</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="secInterp.html#cb352-1" tabindex="-1"></a>btwMX</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:btwMapEX"></span>
-<img src="_main_files/figure-html/btwMapEX-1.png" alt="Winners of Erststimmen seats by political party in Germany 2021" width="672" />
-<p class="caption">
-Figure 32.3: Winners of Erststimmen seats by political party in Germany 2021
-</p>
-</div>
-<p><span class="citation">Theeuwes (<a href="references.html#ref-theeuwes:2018">2018</a>)</span> claims that stimulus-driven and history-based attention selection are effortless, while goal-driven requires effort. His research is related to dynamic situations, such as driving, but is still relevant. It is easier to respond to a strong feature or recognise a familiar pattern than to identify a feature that may or may not be associated with a particular goal. Having experience of what types of feature a graphic can show is valuable.</p>
-<div style="page-break-after: always;"></div>
-<p>Studying a graphic display closely may reveal a number of features, yet frequently a later inspection of the same graphic can reveal other features. It is useful to look at graphics afresh, to break the train of thought. A graphic you have drawn yourself or is on the web can be varied by changing the size, the aspect ratio or the position on screen. You can change the colours, the symbols and the scales in your own graphics. You could zoom out to see where the data lie on some grander scale or you could zoom in to investigate a small sector in detail. The more complex the plot, the more options there are. Multivariate displays like parallel coordinate plots and mosaicplots have a particularly large number of alternative options, especially the numbers of possible orderings. Different graphics can be used for the same data, e.g., boxplots or density estimates instead of histograms for single continuous variables. Graphics for related variables in the same dataset can be drawn. The essential principle is to regard graphics as doorways to information, not as static pictures.</p>
-<p>Presentation graphics are sometimes designed to attract attention to make them memorable, sometimes to direct attention to a feature in them. It is easy to make a display memorable by adding an outlandish touch, overly dramatic colours or exotic background pictures. Whether the graphic’s information is then also memorable is another question.</p>
-</div>
-<div id="cognitive-load" class="section level3 hasAnchor" number="32.1.2">
-<h3><span class="header-section-number">32.1.2</span> Cognitive load<a href="secInterp.html#cognitive-load" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Complex graphics can be difficult to study and understand. Sometimes graphics in scientific articles are complex and tightly packed with information because space is limited. Sometimes a complex graphic is just a good summary of complex data, as with Figure <a href="secElecC.html#fig:elecStat2">13.7</a> or Figure <a href="secPalmerPen.html#fig:Palpcp2">18.8</a>, shown again in Figure <a href="secInterp.html#fig:Palpcp2X">32.4</a>.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb353-1"><a href="secInterp.html#cb353-1" tabindex="-1"></a>PalY</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Palpcp2X"></span>
-<img src="_main_files/figure-html/Palpcp2X-1.png" alt="Reordered parallel coordinate plot of the Palmer Penguin data" width="672" />
-<p class="caption">
-Figure 32.4: Reordered parallel coordinate plot of the Palmer Penguin data
-</p>
-</div>
-<p>Muddled graphics can be difficult to understand for other reasons. Anything that increases the cognitive load or mental effort required to look at a graphic should be avoided. Having graphics and accompanying text on different pages demands extra effort. Poor labelling and awkward scales make work. A poorly ordered and positioned legend does not help. Overlapping text and confusing colours need to be disentangled. Data points that are too close to axes or borders can be difficult to distinguish. Comparisons are made more difficult if scales that should be the same are not or if graphics to be compared are not aligned as they should be.</p>
-<div style="page-break-after: always;"></div>
-</div>
-<div id="rewards-for-paying-attention" class="section level3 hasAnchor" number="32.1.3">
-<h3><span class="header-section-number">32.1.3</span> Rewards for paying attention<a href="secInterp.html#rewards-for-paying-attention" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Paying close attention to graphics can reveal much more information. The Gapminder life expectancy graphic of Figure <a href="secGapm.html#fig:LEyr">2.1</a> and Figure <a href="secMovies.html#fig:movieVR">3.9</a> for movie ratings, both shown again in Figure <a href="secInterp.html#fig:gapMovie">32.5</a>, are striking examples. Figure <a href="sec1912Dem.html#fig:candvs2">4.6</a> for the 1912 Democratic choice of candidate is another.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="secInterp.html#cb354-1" tabindex="-1"></a>pgmX <span class="sc">+</span> vr</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gapMovie"></span>
-<img src="_main_files/figure-html/gapMovie-1.png" alt="Gapminder life expectancy data (left) and movie ratings (right)" width="672" />
-<p class="caption">
-Figure 32.5: Gapminder life expectancy data (left) and movie ratings (right)
-</p>
-</div>
-<p>Accepting the title of a graphic or what other accompanying text says may not tell the full story. It is worth paying graphics detailed attention. However, relying on graphics alone will not be sufficient. Graphics have a background and context and need to be understood within that framework. A closer look at the data underlying a graphic is warranted too.</p>
-</div>
-</div>
-<div id="secUnderstand" class="section level2 hasAnchor" number="32.2">
-<h2><span class="header-section-number">32.2</span> Understanding<a href="secInterp.html#secUnderstand" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<blockquote>
-<p>“The more I practise, the luckier I get.”</p>
-</blockquote>
-<blockquote>
-<footer>
-— the golfer Gary Player
-</footer>
-</blockquote>
-<div id="knowledge" class="section level3 hasAnchor" number="32.2.1">
-<h3><span class="header-section-number">32.2.1</span> Knowledge<a href="secInterp.html#knowledge" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Knowledge of what graphic forms represent is necessary to understand what information features might convey. Individual graphics have a general structure with local details that suggest additional information. Combined with other graphics they provide an overall picture of the data whose interpretation will depend on the context and background. Familiarity with what features may arise, and why, makes it easier to understand what is being shown by the graphics for a new dataset.</p>
-<p>Some of the graphics literature is concerned with new, innovative graphics, emphasising novelty over familiarity. The advantage is the novelty itself, the attraction to viewers of something unknown, possibly striking. The disadvantage is viewers’ lack of experience with the form. While new developments are welcome, viewers will see more with graphics they are familiar with.</p>
-<p>Background knowledge is also indispensable, whether your own or that of collaborating domain experts. With data by country over time it was necessary to know how countries have changed (e.g., Chapters <a href="secGapm.html#secGapm">2</a>, <a href="secChess.html#secChess">8</a>, Chapters <a href="secOlymps.html#secOlymps">6</a>, and <a href="secEuros.html#secEuros">15</a>). With swimming, information on the rules for different strokes, on full body swimsuits, and on the introduction of the butterfly was valuable (Chapter <a href="secSwim.html#secSwim">20</a>). Another swimming example, Figure <a href="secSwim.html#fig:relay400">20.11</a>, repeated here as Figure <a href="secInterp.html#fig:relay400X">32.6</a>, concerned the reasons why the best 200 times for individuals and relay teams were so different.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="secInterp.html#cb355-1" tabindex="-1"></a>ir400</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:relay400X"></span>
-<img src="_main_files/figure-html/relay400X-1.png" alt="Best times for the 400 m freestyle events for men and women, individual (red) and relay (blue)" width="672" height="50%" />
-<p class="caption">
-Figure 32.6: Best times for the 400 m freestyle events for men and women, individual (red) and relay (blue)
-</p>
-</div>
-<p>Much can be found out about the Olympics on the web, such as stories surrounding particular events, how times were measured, when rules were changed (Chapter <a href="secOlymps.html#secOlymps">6</a>), but you have to look. The web is not always helpful. Going back to original documentation can be, as with the articles by Michelson and Newcomb on their attempts to measure the speed of light (Chapter <a href="secLightS.html#secLightS">5</a>), and with getting the full survey from Annenberg that included the gay rights questions (Chapter <a href="secGayR.html#secGayR">9</a>). Often dataset owners/maintainers are very helpful as happened with Chapters <a href="secVehicles.html#secVehicles">17</a> and <a href="secComM.html#secComM">21</a>.</p>
-</div>
-<div id="experience" class="section level3 hasAnchor" number="32.2.2">
-<h3><span class="header-section-number">32.2.2</span> Experience<a href="secInterp.html#experience" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>What do people pay attention to when they visit a famous building? Architects will study the building. Historians may study the symbolism, and locals will have their own ideas about what stands out. What can be seen happening during a sporting event? Coaches will view it differently than fans, and with team games, different sets of fans will see the same game very differently (<span class="citation">Hastorf &amp; Cantril (<a href="references.html#ref-hastorf:1954">1954</a>)</span>). In these situations it comes down to motives, interest and background knowledge, education, and experience. The same goes for looking at graphics. Motives may vary between viewers, interest and background knowledge can hopefully be assumed, but education and experience can not. It is helpful to study how to look at graphics and to look at a lot of graphics to learn how to recognise what might be seen in them. Just looking is not enough. Or as Spear put it: “there is quite a difference between simply looking at a chart and seeing it.” (<span class="citation">Spear (<a href="references.html#ref-spear:1969">1969</a>)</span>).</p>
-<p>And what should be looked at in a graphic? If researchers have no experience, it is hard for them to know what to look for. De Groot showed that international master chess players chose better moves than club players because they recognised the structure of positions (<span class="citation">Groot (<a href="references.html#ref-deGroot:1978">1978</a>)</span>, a second edition in English of his Dutch thesis from 1946). The same doubtless applies to viewers studying graphics. If they are familiar with data graphics and understanding and interpreting them, they will find it easier to understand and interpret graphics from a new dataset.</p>
-<div style="page-break-after: always;"></div>
-<p>The peaks in the finishing times for the Comrades marathon in Figure <a href="secComM.html#fig:comTimes">21.9</a>, drawn again in Figure <a href="secInterp.html#fig:comTimesX">32.7</a>, are an example. Others have seen similar patterns in other marathon races (<span class="citation">marastats (<a href="references.html#ref-marastats:2019">2019</a>)</span>).</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="secInterp.html#cb356-1" tabindex="-1"></a>cmvf<span class="sc">/</span>cmvm</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:comTimesX"></span>
-<img src="_main_files/figure-html/comTimesX-1.png" alt="Finishing times in the 2019 race for females (above) and males (below), dotted lines mark limits for awarding medals other than gold" width="70%" />
-<p class="caption">
-Figure 32.7: Finishing times in the 2019 race for females (above) and males (below), dotted lines mark limits for awarding medals other than gold
-</p>
-</div>
-</div>
-<div id="possible-cognitive-biases" class="section level3 hasAnchor" number="32.2.3">
-<h3><span class="header-section-number">32.2.3</span> Possible cognitive biases<a href="secInterp.html#possible-cognitive-biases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Even if you pay proper attention there may be influences hindering your making proper use of what you see. Examples of forms of cognitive bias include</p>
-<ul>
-<li>Confirmation bias: look for information supporting prior beliefs<br />
-</li>
-<li>Hindsight bias: past events seem more likely than they were<br />
-</li>
-<li>Recency bias: recent events are more important than historic ones<br />
-</li>
-<li>Anchoring bias: overemphasise the effect of some reference point. It can mean anchoring any thoughts about a graphic to what is seen first. It is always sensible to look at the data in different ways, developing alternative perspectives.<br />
-</li>
-<li>Availability bias: rely too much on examples to hand. Data are available on the web for Olympic results that were missing in Figure <a href="secOlymps.html#fig:olyAmd">6.8</a>, shown again here as Figure <a href="secInterp.html#fig:olyAmdX">32.8</a>, but discussing the problems is more instructive (and less effort) than solving them in this case.</li>
-</ul>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="secInterp.html#cb357-1" tabindex="-1"></a>AmdX</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:olyAmdX"></span>
-<img src="_main_files/figure-html/olyAmdx-1.png" alt="Athletics field events for men: percentage differences in gold medal performances compared with averages over the last six Games" width="70%" />
-<p class="caption">
-Figure 32.8: Athletics field events for men: percentage differences in gold medal performances compared with averages over the last six Games
-</p>
-</div>
-<ul>
-<li>Representativeness bias: use particular examples without taking account of sample size and base rates. Avoid by using spineplots for comparing rates (e.g., in Figure <a href="secGayR.html#fig:gayGR">9.3</a>) and UpAndDown plots for comparing changes, as in Figure <a href="secBTwahl.html#fig:btw3">26.4</a>, drawn again in Figure <a href="secInterp.html#fig:btw23X">32.9</a>.</li>
-</ul>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="secInterp.html#cb358-1" tabindex="-1"></a>y2b<span class="sc">$</span>uad <span class="sc">+</span> <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>))</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:btw23X"></span>
-<img src="_main_files/figure-html/btw23X-1.png" alt="An UpAndDown plot showing absolute changes in party support between the last two German elections as area and relative changes as height" width="70%" />
-<p class="caption">
-Figure 32.9: An UpAndDown plot showing absolute changes in party support between the last two German elections as area and relative changes as height
-</p>
-</div>
-<ul>
-<li>Perceptual bias: we see what we want to see</li>
-</ul>
-</div>
-</div>
-<div id="secCheck" class="section level2 hasAnchor" number="32.3">
-<h2><span class="header-section-number">32.3</span> Checking<a href="secInterp.html#secCheck" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<blockquote>
-<p>“Aristotle maintained that women have fewer teeth than men; although he was twice married, it never occurred to him to verify this statement by examining his wives’ mouths.”</p>
-</blockquote>
-<blockquote>
-<footer>
-— Bertrand Russell, The Impact of Science on Society
-</footer>
-</blockquote>
-<p>Published graphics may appear polished, attractive, and convincing. Photographs prepared by estate agents for houses they are selling may also be described that way. Many graphics were drawn first and discarded just as many more photographs were taken than are used. Scepticism and thorough checking are called for. Popper’s concept of falsification suggests that it is better to search for evidence to refute your impressions than to look for supporting evidence. As xkcd has pointed out (<span class="citation">xkcd (<a href="references.html#ref-xkcd:2012">2012</a>)</span>), with enough options you have a good chance of finding something that looks significant that is not. Checking develops your own trust in your conclusions and should help to convince others. There are several independent ways of checking features detected in graphics.</p>
-<div id="provenance" class="section level3 hasAnchor" number="32.3.1">
-<h3><span class="header-section-number">32.3.1</span> Provenance<a href="secInterp.html#provenance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Are the data from a reliable source? Is it known how they were collected, edited, and summarised? Are they precise measurements or uncertain estimates? Do the variables mean what you think they do or have they been defined or collected differently? All this and more is discussed in Chapter <a href="secProvQ.html#secProvQ">27</a>.</p>
-</div>
-<div id="looking-at-the-numbers" class="section level3 hasAnchor" number="32.3.2">
-<h3><span class="header-section-number">32.3.2</span> Looking at the numbers<a href="secInterp.html#looking-at-the-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Do the scales look sensible? Perhaps the minima or maxima look too extreme (Figure <a href="secGapm.html#fig:LE2">2.2</a> (left) or Figure <a href="secMovies.html#fig:movieRunB">3.1</a>). Do the data appear to be complete? Perhaps there are gaps in the data (Figures <a href="secMovies.html#fig:movieTT2">3.6</a>, <a href="secOlymps.html#fig:olyAmd">6.8</a> or <a href="secDiam.html#fig:histPrice">11.5</a>) or missing categories (Figures <a href="secOlymps.html#fig:olyEg">6.4</a> to <a href="secOlymps.html#fig:olyEgS">6.6</a>). Categories that are missing altogether can be difficult to spot. Political opinion polls show party support, but not always how many who were asked did not respond. Maybe the data just look wrong, as in Figure <a href="secAstro.html#fig:difs">10.8</a> for differences in spaceflight mission times.</p>
-<p>Sometimes there is heaping at particular values, usually due to rounding (Figure <a href="secMovies.html#fig:movieRunH">3.2</a>), sometimes particular values are never recorded (Figure <a href="secDiam.html#fig:histPrice">11.5</a>). Sometimes all the data have been rounded, so that a continuous measurement appears to be discrete. If you ask people what their height is they will report a rounded, possibly inaccurate number. Better data would be obtained by measuring heights in a uniform way under identical conditions for all (<span class="citation">Student (<a href="references.html#ref-student:1931">1931</a>)</span>).</p>
-</div>
-<div id="varying-plots" class="section level3 hasAnchor" number="32.3.3">
-<h3><span class="header-section-number">32.3.3</span> Varying plots<a href="secInterp.html#varying-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Graphics redrawn in different ways leave different impressions, emphasising different information. Size, aspect ratio, and position can strongly influence what can be seen. Graphics can be resized, moved, and zoomed in or out. Plot options can be changed: maxima and minima of scales, origin location, histogram binwidths, point sizes, colours, …. Whether some variations are better than others is neither here nor there: the important principle is to check several. Figure <a href="secScene.html#fig:gaySCCS">30.12</a> shows an example for the gay rights data. Figure <a href="secInterp.html#fig:movHists">32.10</a> displays a default histogram for the movie runtimes and the one used in the chapter, Figure <a href="secMovies.html#fig:movieRunH">3.2</a>, including only films of 3 hours or under and using a binwidth of 1 minute. Far more graphics were drawn for each case study than are included in the book.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="secInterp.html#cb359-1" tabindex="-1"></a>f22x <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(films22, <span class="fu">aes</span>(runtime)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="cn">NULL</span>)</span>
-<span id="cb359-2"><a href="secInterp.html#cb359-2" tabindex="-1"></a>f22x <span class="sc">+</span> f22s</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:movHists"></span>
-<img src="_main_files/figure-html/movHists-1.png" alt="Histograms of movie runtimes, the default on the left and a varied one on the right (note the different scales)" width="672" />
-<p class="caption">
-Figure 32.10: Histograms of movie runtimes, the default on the left and a varied one on the right (note the different scales)
-</p>
-</div>
-</div>
-<div id="varying-plot-forms" class="section level3 hasAnchor" number="32.3.4">
-<h3><span class="header-section-number">32.3.4</span> Varying plot forms<a href="secInterp.html#varying-plot-forms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Drawing different kinds of plots of the same variable(s) provides new insights: a boxplot or density estimate instead of a histogram (Figures <a href="secLightS.html#fig:histnewcX">5.3</a> to <a href="secLightS.html#fig:densnewcX">5.5</a> or Figures <a href="secChess.html#fig:histElo">8.1</a> and <a href="secChess.html#fig:boxElo">8.2</a>), scatterplots by group (faceting) instead of a single scatterplot (Figures <a href="secGapm.html#fig:LEr4">2.5</a> and <a href="secGapm.html#fig:LEf4">2.6</a>), a doubledecker plot instead of stacked barcharts (Figure <a href="secGayR.html#fig:gayGR">9.3</a>).</p>
-</div>
-<div id="statistical-checks" class="section level3 hasAnchor" number="32.3.5">
-<h3><span class="header-section-number">32.3.5</span> Statistical checks<a href="secInterp.html#statistical-checks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Statistical models and graphics complement and augment one another, although it is an unbalanced relationship. There are almost always graphical ways of visually assessing the results of statistical models, but there are not always statistical models that can evaluate ideas derived from graphics. If there are, they should be used. If it looks as if there is a nonlinear relationship between two variables in a scatterplot, then a spline model could be fit. This was used for modelling trend in Figure <a href="secChess.html#fig:AgeRatingSmooth">8.22</a> for ratings of Chess players and Figure <a href="secFootball.html#fig:socDf">16.2</a> for proportions of draws in different football leagues. Both are drawn here again in Figure <a href="secInterp.html#fig:ChessSocSm">32.11</a>.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="secInterp.html#cb360-1" tabindex="-1"></a>ags1520</span>
-<span id="cb360-2"><a href="secInterp.html#cb360-2" tabindex="-1"></a>drEIS</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ChessSocSm"></span>
-<img src="_main_files/figure-html/ChessSocSm-1.png" alt="Smooths of chess ratings (left) and football league draws (right)" width="45%" /><img src="_main_files/figure-html/ChessSocSm-2.png" alt="Smooths of chess ratings (left) and football league draws (right)" width="45%" />
-<p class="caption">
-Figure 32.11: Smooths of chess ratings (left) and football league draws (right)
-</p>
-</div>
-<p>If a spineplot suggests two categorical variables are not independent, a chi-squared test could be used. More complicated data, such as the survival rates on the Titanic in Figure <a href="secOrder.html#fig:titanBoth">31.7</a>, could be examined using logistic regression.</p>
-<p>Examples where statistical models are not so readily available include assessing possible outliers in a scatterplot and whether there are multiple modes in a histogram.</p>
-</div>
-<div id="checking-consequences" class="section level3 hasAnchor" number="32.3.6">
-<h3><span class="header-section-number">32.3.6</span> Checking consequences<a href="secInterp.html#checking-consequences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Internal checking<br />
-Are patterns across the whole dataset also found in subgroups? The surprising peak in the chess ratings at 2000 shown in Figure <a href="secChess.html#fig:histElo">8.1</a> was explained by comparing ratings for active and inactive players in Figure <a href="secChess.html#fig:hist2Elo">8.3</a>, shown here again as Figure <a href="secInterp.html#fig:histEloX">32.12</a>.</li>
-</ul>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="secInterp.html#cb361-1" tabindex="-1"></a>actInact</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histEloX"></span>
-<img src="_main_files/figure-html/histEloX-1.png" alt="Ratings of active and inactive chess players in 2020" width="672" />
-<p class="caption">
-Figure 32.12: Ratings of active and inactive chess players in 2020
-</p>
-</div>
-<p>The decline in survival rate across the Titanic’s three passenger classes applied to women, but not to men (Figures <a href="secTitan.html#fig:titanCrew">25.8</a> and <a href="secTitan.html#fig:titanPass">25.9</a>). Conclusions might have implications for other variables and it is useful to see if patterns are consistent across a dataset.</p>
-<ul>
-<li>External checking<br />
-If relevant data can be found, compare results with other related datasets (§<a href="sec1912Dem.html#sec1912Dem2">4.2</a>, §<a href="secChess.html#secChess4">8.4</a> or Figure <a href="secBTwahl.html#fig:btwDotV">26.18</a>, drawn again here as Figure <a href="secInterp.html#fig:btwDotVX">32.13</a>).</li>
-</ul>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="secInterp.html#cb362-1" tabindex="-1"></a>eGER <span class="sc">+</span> eUK</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:btwDotVX"></span>
-<img src="_main_files/figure-html/btwDotVX-1.png" alt="Seat-winning percentages by party in Germany 2021 and in the UK 2019" width="672" />
-<p class="caption">
-Figure 32.13: Seat-winning percentages by party in Germany 2021 and in the UK 2019
-</p>
-</div>
-</div>
-<div id="context" class="section level3 hasAnchor" number="32.3.7">
-<h3><span class="header-section-number">32.3.7</span> Context<a href="secInterp.html#context" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Results have to make sense and be interpreted in context. A pattern of points in a scatterplot will be judged in different ways for different datasets or different variables (Figure <a href="secPlot.html#fig:s100mScat">33.1</a>). Errors like negative heights or zero dimensions (Figure <a href="secDiam.html#fig:histLen">11.1</a>) are obvious. Weekly patterns in sightings by birdwatchers or in disease reporting may need to be checked. More birdwatchers may be out and about at weekends and reporting of diseases may be influenced by media attention. Differences in mortality rates between countries or over time may be due to definitions, conditions or treatments as Covid pandemic statistics have illustrated.</p>
-<p>In comparing opinions on same-sex marriage from Figure <a href="secGayR.html#fig:gayB">9.9</a>, redrawn here as Figure <a href="secInterp.html#fig:gayBX">32.14</a>, it is well to remember that the questions were about different situations, that they were framed differently, and that only a third of the sample were asked the state question.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="secInterp.html#cb363-1" tabindex="-1"></a>state1 <span class="sc">+</span> fed1</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gayBX"></span>
-<img src="_main_files/figure-html/gayBX-1.png" alt="Line plots of support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent by males (green) and females (purple)" width="672" />
-<p class="caption">
-Figure 32.14: Line plots of support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent by males (green) and females (purple)
-</p>
-</div>
-</div>
-<div id="discussing-with-others-especially-domain-experts" class="section level3 hasAnchor" number="32.3.8">
-<h3><span class="header-section-number">32.3.8</span> Discussing with others, especially domain experts<a href="secInterp.html#discussing-with-others-especially-domain-experts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>What one person sees when they look at a graphic may not be what another person sees. Combining opinions is more effective than relying on one person’s views—provided that the opinions are independent. Graphics analysts will not have the subject knowledge of experts in the field and they should be consulted. Amongst other topics expertise was sought on chess ratings (Chapter <a href="secChess.html#secChess">8</a>), ornithology (Chapters <a href="secFinches.html#secFinches">14</a>, <a href="secPalmerPen.html#secPalmerPen">18</a>, and <a href="secShears.html#secShears">23</a>), swimming (Chapter <a href="secSwim.html#secSwim">20</a>), and German elections (Chapter <a href="secBTwahl.html#secBTwahl">26</a>). The role of Ausgleichsmandate in making the German parliament much larger than intended was important information gained. This was shown in Figure <a href="secBTwahl.html#fig:ubH">26.1</a>, repeated in Figure <a href="secInterp.html#fig:ubHX">32.15</a>.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="secInterp.html#cb364-1" tabindex="-1"></a>ueP</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ubHX"></span>
-<img src="_main_files/figure-html/ubHX-1.png" alt="Extra seats in German elections since 1949.  Each point marks the date of an election.  The left dashed line marks the first election after reunification in October 1990.  The right dashed line marks the first election with Ausgleichsmandate." width="75%" />
-<p class="caption">
-Figure 32.15: Extra seats in German elections since 1949. Each point marks the date of an election. The left dashed line marks the first election after reunification in October 1990. The right dashed line marks the first election with Ausgleichsmandate.
-</p>
-</div>
-</div>
-<div id="replicate" class="section level3 hasAnchor" number="32.3.9">
-<h3><span class="header-section-number">32.3.9</span> Replicate<a href="secInterp.html#replicate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>All of the checks listed so far can be carried out relatively quickly. The ideal would be to attempt to independently replicate results. Replication should be possible for scientific studies by having different researchers carry out fresh studies in different environments. This may be impractical for reasons of time, organisation, and finance, but is the ideal to aim for. Examples include estimating the speed of light (Chapter <a href="secLightS.html#secLightS">5</a>), evaluating treatment of psoriasis (Chapter <a href="secPsor.html#secPsor">12</a>), and distinguishing shearwaters (Chapter <a href="secShears.html#secShears">23</a>).</p>
-<p>If datasets are large, a partial replication can be achieved by splitting the dataset into independent groups by sampling. This was suggested in connection with fitting a smooth to the chess ratings data in Figure <a href="secChess.html#fig:ratAge15s">8.18</a>.</p>
-<p>Some datasets are regularly updated, e.g., movies (Chapter <a href="secMovies.html#secMovies">3</a>, fuel efficiency (Chapter <a href="secVehicles.html#secVehicles">17</a>, and elections (Chapter <a href="secBTwahl.html#secBTwahl">26</a>. Results can then be checked for consistency over time.</p>
-</div>
-<div id="example-of-checking" class="section level3 hasAnchor" number="32.3.10">
-<h3><span class="header-section-number">32.3.10</span> Example of checking<a href="secInterp.html#example-of-checking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The best times for swimming events were studied in Chapter <a href="secSwim.html#secSwim">20</a>. The form observed in the first plot for the 100 m freestyle for men, Figure <a href="secSwim.html#fig:swM100f">20.1</a>, was checked by looking at other strokes and other distances. The possibility of an overlap in times between female butterfly and freestyle swimmers in Figure <a href="secSwim.html#fig:swM50amf">20.3</a> was checked by drawing a different display, multiple boxplots, in Figure <a href="secSwim.html#fig:sw50af">20.4</a>. This display was also drawn horizontally rather than vertically, to make better use of space and to provide an alternative point of view. The data behind the outlier in Figure <a href="secSwim.html#fig:sw200amf">20.5</a> was checked and a classification error was uncovered: it was a time for that swimmer at that competition, but in a different event.</p>
-<div style="page-break-after: always;"></div>
-<p>The displays for 50 m races and 200 m for men and women, Figures <a href="secSwim.html#fig:swM50amf">20.3</a> and <a href="secSwim.html#fig:sw200amf">20.5</a>, were different in one important respect: the backstroke swimmers caught up on the butterfly swimmers. Checking with swimming experts revealed the reason, the different rules on turning between lengths for the events. The figures are shown again in Figure <a href="secInterp.html#fig:swim50200X">32.16</a>. Note the different vertical scales of the left and right plots.</p>
-<details class=chunk-details><summary class=chunk-summary><span class=chunk-summary-text>Code</span></summary>
-<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="secInterp.html#cb365-1" tabindex="-1"></a>sw50yX <span class="sc">+</span> sw200yX</span></code></pre></div>
-</details>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:swim50200X"></span>
-<img src="_main_files/figure-html/swim50200X-1.png" alt="Best times in seconds for the four 50 m (left) and four 200 m (right) swimming events achieved by men and women in the order breaststroke, backstroke, butterfly, freestyle from the top" width="672" />
-<p class="caption">
-Figure 32.16: Best times in seconds for the four 50 m (left) and four 200 m (right) swimming events achieved by men and women in the order breaststroke, backstroke, butterfly, freestyle from the top
-</p>
-</div>
-</div>
-<div id="main-points-5" class="section level3 unnumbered hasAnchor">
-<h3>Main points<a href="secInterp.html#main-points-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Attention varies depending on goals and conditions. Excessive cognitive load should be avoided.</li>
-<li>Successful understanding depends on knowledge, experience, and avoiding biases.</li>
-<li>There are many ways to check ideas and all should be used.</li>
-</ul>
-
-</div>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="secOrder.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="secPlot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="secOrder4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="secAttention.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1005,42 +609,42 @@ Figure 32.16: Best times in seconds for the four 50 m (left) and four 200 m (rig
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "lunr",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "lunr",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>
