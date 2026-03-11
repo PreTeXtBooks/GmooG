@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-olympics">
   <title>The modern Olympic Games in numbers</title>
 
@@ -42,7 +42,7 @@
       <image source="images/olyASn-1.png"/>
     </figure>
 
-    <p>Figure <xref ref="fig-olyEg"/> has more detail, showing which events took place for men and for women at which games. It was drawn to investigate why there appeared to be so many events listed. Despite the small print, two problems can readily be seen. The long line of dots to the right of each plot and the matching gaps above suggest that there was an issue with how athletics and swimming events were named at Beijing in 2008. The data source for Beijing used "-metres", where the sources for other Olympics used "m". The straggly lines to the left of the two plots for men show that some events only took place at early games. A minor issue is that there are individual gaps that will need to be investigated further.</p>
+    <p>Figure <xref ref="fig-olyEg"/> has more detail, showing which events took place for men and for women at which games. It was drawn to investigate why there appeared to be so many events listed. Despite the small print, two problems can readily be seen. The long line of dots to the right of each plot and the matching gaps above suggest that there was an issue with how athletics and swimming events were named at Beijing in 2008. The data source for Beijing used "-metres", where the sources for other Olympics used "m". The straggly lines to the left of the two plots for men show that some events only took place at early games (e.g. long-jump-standing and underwater-swimming). A minor issue is that there are individual gaps that will need to be investigated further.</p>
 
     <p>Comparing the top two displays for athletic events, it is clear that women did not take part until much later than men. Athletic events for women began at the 1928 Olympics. Comparing the two displays on the right shows that swimming events for women began earlier, at the 1912 Olympics. Why were women allowed to swim before they could run?</p>
 
@@ -58,26 +58,30 @@
       <image source="images/olyEgA-1.png"/>
     </figure>
 
-    <p>Some events were only for men and some only for women. Men compete in the decathlon of ten events, whereas women compete in the heptathlon of seven events. Men run the 110 m hurdles, while women run the 100 m hurdles. Other events that have taken place rarely were also excluded. There were gaps due to events not taking place or medals not being awarded.</p>
+    <p>Some events were only for men and some only for women. Men compete in the decathlon of ten events, whereas women compete in the heptathlon of seven events (and in earlier Games only in the pentathlon of five events). Men run the 110 m hurdles, while women run the 100 m hurdles (and formerly the 80 m hurdles). The women's pentathlon and the women's 80 m hurdles were excluded from further analysis. Other events that have taken place rarely (defined here as less than six times for men or women) were also excluded. There were gaps due to events not taking place or medals not being awarded. The men's 50 km walk took place at all Games from 1932 to 2016 except for 1976. The winner of the men's high jump in 2012 was later disqualified for doping offences and the other medals promoted in 2021. That had not been done at the time the dataset was scraped and so there was no gold medal winner and no data point in Figure <xref ref="fig-olyEgA"/>. For a number of reasons related to doping, no gold medal was awarded for the women's 100 m in 2000.</p>
 
-    <p>The 800 m for women stands out as first taking place at the Amsterdam Games of 1928 and then not again until the Olympics in Rome in 1960. The men in charge of the Olympic Games decided that the event was too strenuous for women and were supported by some highly dubious reporting in the newspapers (@english:2015). According to @robinson:2012, Harold Abrahams said: "The sensational descriptions are much exaggerated I can assure you." Others must have held other opinions.</p>
+    <p>The 800 m for women stands out as first taking place at the Amsterdam Games of 1928 and then not again until the Olympics in Rome in 1960. The men in charge of the Olympic Games decided that the event was too strenuous for women and were supported by some highly dubious reporting in the newspapers (@english:2015). According to @robinson:2012, Harold Abrahams, the famous English runner, Olympic official, and journalist, said "The sensational descriptions are much exaggerated I can assure you." Others must have held other opinions.</p>
 
     <figure xml:id="fig-olyEgS">
       <caption>Swimming events by Olympic year after amendments.</caption>
       <image source="images/olyEgS-1.png"/>
     </figure>
 
-    <p>Since 1996 women have swum the same events as men, with one exception. The men's longest freestyle event was 1500 m, while the women's was 800 m. For the first time at the Tokyo Olympics of 2021, both races are now swum by both sexes.</p>
+    <p>Since 1996 women have swum the same events as men, with one exception. The men's longest freestyle event was 1500 m, while the women's was 800 m. Interestingly, for the first time at the Tokyo Olympics of 2021, both races are now swum by both sexes.</p>
+
+    <p>Two striking gaps are apparent in men's swimming events. Both the 200 m backstroke and freestyle were raced in 1900 in Paris and not again until 1964 (backstroke) and 1968 (freestyle). Results are missing for the men's 400 m freestyle relay in 1976 and 1980, presumably a scraping problem. Results are not included for either men or women for the 200 m individual medley in 1976 and 1980, because the events did not take place at those Games.</p>
   </section>
 
   <section xml:id="secOlymps2">
     <title>How much have performances improved?</title>
 
-    <p>Performances in a few disciplines, such as in swimming and athletics, can be directly compared, although continual improvements in technique, equipment, training, and support, as well as the growing population of athletes, have to be borne in mind. Rule changes can also have significant effects.</p>
+    <p>Performances in a few disciplines, such as in swimming and athletics, can be directly compared, although the continual improvements in technique, equipment, training, and support of all kinds, as well as the growing population of athletes have to be borne in mind. Rule changes can also have significant effects. Most other disciplines such as boxing, gymnastics or sailing are even harder to compare over time.</p>
 
-    <p>Gold Medal performances are sometimes world records, more often not. The best performance in one Olympics may not be as good as the best performances in earlier Olympics. Athletes may miss out because of injury or ill health or because their country boycotts a Games. So Olympic performances are not ideal for studying developments over time. Nevertheless, the Olympic Games offer regular simultaneous checks on performance changes in many sporting events.</p>
+    <p>Gold Medal performances are sometimes world records, more often not. The best performance in one Olympics may not be as good as the best performances in earlier Olympics. Athletes may miss out because of injury or ill health or because their country boycotts a Games (as happened for various reasons at the Games of 1976, 1980, 1984). In the early years travel time and costs limited participation. So Olympic performances are not ideal for studying developments over time. Nevertheless, the Olympic Games offer regular simultaneous checks on performance changes in many sporting events and that has its advantages too.</p>
 
-    <p>There were additional problems with the data: missing values, heptathlon and decathlon values on different scales, and wind-assisted marks. Only events that had taken place at at least six Olympics were included. The solution adopted here is to compare results with the average over the Olympics from 1996 to 2016.</p>
+    <p>There were a number of additional problems with the data. Some values were missing (e.g., several for the pole vault for men). The heptathlon and decathlon results were reported on quite different scales in different years. A few performances at some games were reported with a &#x2018;w&#x2019; at the end signifying wind assistance. This means that there was a tail wind of more than 2 m/s, invalidating record attempts but not the result. It only applies to certain sprint races, the triple jump and long jump. Four 100 m races were affected and one complete long jump competition. Three triple jump gold medal performances were marked as wind-assisted. For jumps, it made no difference once the &#x2018;w&#x2019; was removed. For 100 m races the times were in seconds instead of thousandths of seconds. This included times in Jesse Owens&#x2019; 100 m final at the 1936 Olympics in Berlin. There were other issues that had to be resolved. Only events that had taken place at at least six Olympics were included.</p>
+
+    <p>In the analysis carried out by the scrapers of the dataset the gold medal performances were standardised by calculating how much better or worse they were in percentage terms than the average of the gold medal winners over all the Games at which the event took place. For events that have been included in the Games a long time the overall average then tended to reflect a poorer performance than if results were only included from more recent games. The solution adopted here is to compare results with the average over the Olympics from 1996 to 2016.</p>
 
     <p>Figure <xref ref="fig-olyA"/> shows data for individual athletics events grouped by sex and whether they are field events or track events. The percentage differences between the gold medal performances at each Games and the averages of gold performances over the six Games from 1996 to 2016 are plotted against years to show the overall trends.</p>
 
@@ -86,32 +90,36 @@
       <image source="images/olyA-1.png"/>
     </figure>
 
-    <p>Scales are primarily determined by relatively weak performances at early Games and mostly there is a general improvement. There are no early data for women because female athletics events were first held at the 1928 Games. There are odd peaks and surprising gaps, including many missing data points for field events.</p>
+    <p>Scales are primarily determined by relatively weak performances at early Games and mostly there is a general improvement. Studying the graphics closely, other features are apparent. There are no early data for women, because female athletics events were first held at the 1928 Games in Amsterdam. Some events were introduced later than others. There are some odd peaks and some surprising gaps (in addition to the gaps for the two World Wars). There are many missing data points for the field events, where there should be 8 events for the men and 6 for the women for these data. The averages were calculated ignoring missings, so for three events only one value contributed to the average and for five events only two. A more refined analysis would be more reassuring, but is unlikely to make much difference to the overall impression.</p>
 
     <figure xml:id="fig-olyAmd">
       <caption>Field events for men: percentage differences in gold medal performances compared with averages over the last six Games.</caption>
       <image source="images/olyAmd-1.png"/>
     </figure>
 
+    <p>The four graphics were separately faceted by event for more details. Figures <xref ref="fig-olyAmd"/> and <xref ref="fig-olyAmt"/> show men's track and field events. The graphics for women's events showed similar issues, but fewer and less dramatic ones. For field events a lot of data is missing, for the pole vault and high jump in particular. These problems must have been due to failed data scraping. Early low values dominate, but the values higher than the recent averages are also worth studying. Bob Beamon's famous long jump at Mexico City 1968 is still the Olympic record and the second longest jump of all time. The discus, hammer throw, and javelin could all be checked in more detail.</p>
+
     <figure xml:id="fig-olyAmt">
       <caption>Track events for men: percentage differences in gold medal performances compared with averages over the last six Games, events are ordered by distance.</caption>
       <image source="images/olyAmt-1.png"/>
     </figure>
 
-    <p>The time for the 1904 marathon race in Figure <xref ref="fig-olyAmt"/> is clearly out of line. According to @abbott:2012, "the 1904 marathon was less showstopper than sideshow, a freakish spectacle" and "The outcome was so scandalous that the event was nearly abolished for good." The time for the 3000 m steeplechase in 1932 also looks wrong due to an error in lap counting.</p>
+    <p>The time for the 1904 marathon race in Figure <xref ref="fig-olyAmt"/> is clearly out of line. According to @abbott:2012, "the 1904 marathon was less showstopper than sideshow, a freakish spectacle" and "The outcome was so scandalous that the event was nearly abolished for good." The time for the 3000 m steeplechase in 1932 also looks wrong. Due to an error in lap counting, the runners had to run an extra lap of the track.</p>
 
-    <p>Looking at the swimming results, most events have similar patterns for men and women, but one stands out in each case, the same event, the 100 m freestyle, as Figure <xref ref="fig-olyS100"/> shows.</p>
+    <p>Sometimes particular events stand out. Looking at the swimming results, most have similar patterns for men and women, but one stands out in each case, interestingly the same event, the 100 m freestyle, as Figure <xref ref="fig-olyS100"/> shows:</p>
 
     <figure xml:id="fig-olyS100">
       <caption>Percentage differences in gold medal performances in swimming events for men and women compared with averages over the last six Games since 1920 with the 100 m freestyle highlighted.</caption>
       <image source="images/olyS100-1.png"/>
     </figure>
+    <p>Perhaps strong performances were achieved earlier for the 100 m or there have been greater relative improvements in other events. The men's 100 m freestyle champion in 1924 and 1928 was Johnny Weissmuller who went on to play Tarzan in Hollywood movies. He won five gold medals in all (and had five wives).</p>
+
   </section>
 
   <section xml:id="secOlymps3">
     <title>How many countries and individuals competed?</title>
 
-    <p>The second Olympics dataset covering both Winter and Summer Olympics is available from Kaggle (@griffin:2019). This has also been scraped from the web and aimed to include all participants from the modern Olympic Games, not just finalists, as in the first dataset. It also includes the 1906 Intercalated Games, then considered Olympic Games, but not now and not included here. Medals, if any, are reported, but not the performances.</p>
+    <p>The second Olympics dataset covering both Winter and Summer Olympics is available from Kaggle (@griffin:2019). This has also been scraped from the web and aimed to include all participants from the modern Olympic Games, not just finalists, as in the first dataset. It also includes the 1906 Intercalated Games, then considered Olympic Games, but not now and not included here. Medals, if any, are reported, but not the performances. The events are named differently in various ways in the two datasets, which makes it difficult to merge them. For example, in the first dataset there is the cycling event &#x201C;team-pursuit-4000m-men&#x201D; and in the second one it is called &#x201C;Men's Team Pursuit, 4,000 metres&#x201D;. More surprisingly&#x2014;and unexpectedly&#x2014;the second dataset includes the participants in the Arts Competitions that were held in the Games of 1912 to 1948. This is how the famous painters Max Liebermann and Sir John Lavery were both able to participate in the 1928 Games.</p>
 
     <p>The numbers of countries sending teams for men and women to the Summer Games are shown separately in Figure <xref ref="fig-olyG"/>.</p>
 
@@ -120,21 +128,23 @@
       <image source="images/olyG-1.png"/>
     </figure>
 
-    <p>The number of countries has steadily increased with exceptions due to boycotts and geopolitics. Since the 2000 Games in Sydney the numbers of countries with female teams is almost equal to the number of countries with male teams. A more detailed visualisation of countries taking part is at @nicault:2021.</p>
+    <p>The number of countries has steadily increased with the exception of the 1976 Montreal Games (when 29 countries, mainly African, did not take part because New Zealand had played South Africa at rugby and had not been banned from the Olympics as a consequence) and the 1980 Moscow Games (when over 60 countries did not take part because of the Soviet invasion of Afghanistan). There was also a boycott in 1984 at Los Angeles when 14 countries led by the Soviet Union did not take part. Since the 2000 Games in Sydney the numbers of countries with female teams is almost equal to the number of countries with male teams. (An elegant and more detailed visualisation of the numbers of countries taking part can be found at @nicault:2021.)</p>
 
     <figure xml:id="fig-olyGp">
       <caption>Numbers competing at the Olympic Games over the years.</caption>
       <image source="images/olyGp-1.png"/>
     </figure>
 
-    <p>More males compete as can be seen from Figure <xref ref="fig-olyGp"/>. While the number of female participants has risen relatively steadily, the numbers of male participants declined at Los Angeles in 1932, at Melbourne in 1956, and at Moscow in 1980.</p>
+    <p>More males compete as can be seen from Figure <xref ref="fig-olyGp"/> showing the numbers of participants by sex. While the number of female participants has risen relatively steadily, the numbers of male participants declined at Los Angeles in 1932 (because of the Depression), at Melbourne in 1956 (possibly because the Games were held in November and December, the Australian summer), and at Moscow in 1980 (because many countries did not take part). There was also something of a reduction in numbers of male participants between the peak of 8772 in 1996 at Atlanta and the low of 7105 at London in 2012.</p>
 
     <figure xml:id="fig-olyGhs">
       <caption>Numbers of participants at the Olympics for countries who have hosted the Games (in order of first hosting).</caption>
       <image source="images/olyGhs-1.png"/>
     </figure>
 
-    <p>Looking at the time series for individual countries picks out a feature that is obvious with hindsight: there are more participants from a country when it is the host.</p>
+    <p>Looking at the time series for individual countries picks out a feature that is obvious with hindsight (Figure <xref ref="fig-olyGhs"/>), there are more participants from a country when it is the host. The early peaks of 1900 for France, 1904 for USA, 1908 for Great Britain, 1912 for Sweden, and 1920 for Belgium are unmistakable. Travel time and costs would have influenced the participation of other nations then. Also obvious are the peaks of 1968 for Mexico, 1972 for Germany, 2004 for Greece, 2008 for China, and 2016 for Brazil. Less obvious are 1896 for Greece, 1924 for France, 1936 for Germany, 1948 for Great Britain, 1952 for Finland, 1956 and 2000 for Australia, 1964 for Japan, 1988 for Korea, and 1992 for Spain. Other peaks may be due to (relative) geographic nearness, such as numbers of Korean and Australian participants at Tokyo in 1964.</p>
+
+    <p>The figures for Russia are for Imperial Russia before 1914, for the Soviet Union till 1988, for the Unified team of 12 of the former 15 Soviet Union republics in 1992, and for Russia since 1996. In 1924 no Soviet Union team took part, but three competitors in the Arts Competitions called themselves Russian. Figures for Germany include those from both East and West between 1968 and 1988.</p>
 
     <figure xml:id="fig-olyGh">
       <caption>Percentages of host country participants at the Olympic Games over the years for women (purple) and men (green).</caption>
