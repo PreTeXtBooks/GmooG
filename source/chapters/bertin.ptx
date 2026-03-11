@@ -71,7 +71,7 @@
       <caption>Histograms of the numbers working in the three sectors in 1954.</caption>
     </figure>
 
-    <p>The total numbers of workers in the three sectors are of the same order.  The distributions for both Industry and Commerce are highly skewed due to a handful of big values in both, primarily Paris and Seine.  The distribution of agricultural workers is less skewed.</p>
+    <p>The total numbers of workers in the three sectors are of the same order.  The distributions for both Industry and Commerce are highly skewed due to a handful of big values in both, primarily Paris and Seine.  The distribution of agricultural workers is less skewed. No department has more than the agricultural workers of in the furthest North West of France.</p>
 
     <p>Histograms of percentage shares of the sectors by department or of logged values of the sectors (to counteract the skewness) can provide some additional information, but scatterplots are more informative.  <xref ref="fig-Bertscats"/> shows scatterplots for the three pairs of sector variables.  Each variable has been scaled individually.  In particular, the agricultural numbers are much smaller than the numbers in the other sectors.</p>
 
