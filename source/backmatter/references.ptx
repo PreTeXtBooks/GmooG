@@ -210,9 +210,6 @@
   <!-- ehrenhaft:1910 -->
   <biblio xml:id="ehrenhaft-1910" type="raw">Ehrenhaft, Felix. &#220;ber eine neue Methode zur Messung von Elektrizit&#228;tsmengen, die kleiner zu sein scheinen als die Ladung des einwertigen Wasserstoff-ions oder Elektrons und von dessen Vielfachen abweichen. <em>Physik. Zeitschr.</em>, XI:940&#8211;952, 1910.</biblio>
 
-  <!-- wb:2020 -->
-  <biblio xml:id="wb-2020" type="raw">Worldbank. World Bank Open Data. <url href="https://data.worldbank.org"/>. 2020.</biblio>
-
   <!-- giordani:2020 -->
   <biblio xml:id="giordani-2020" type="raw">Giordani, P., Ferraro, M., and Martella, F. <pubtitle>An Introduction to Clustering with R</pubtitle>. Springer, Singapore, 2020.</biblio>
 
