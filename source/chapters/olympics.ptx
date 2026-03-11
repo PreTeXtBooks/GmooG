@@ -1,5 +1,116 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-olympics">
-  <title>Olympics</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>The modern Olympic Games in numbers</title>
+
+  <introduction>
+    <p><q>Faster, Higher, Stronger.</q> (former Olympic motto)</p>
+    <p><em>Background.</em> The modern Olympic Games have run for more than 120 years, interrupted only by the World Wars, and have grown from a small 1896 event in Athens into a major global institution.</p>
+    <p><em>Questions.</em> How many events have there been? Which events are frequent or rare? How have performances evolved? How have country and participant counts changed?</p>
+    <p><em>Sources.</em> Two scraped datasets, one private and one from Kaggle.</p>
+    <p><em>Structure.</em> One Summer-Olympics dataset includes performance values and medal outcomes; the second includes broader participant coverage for Summer and Winter Olympics with demographic variables but no performance values.</p>
+  </introduction>
+
+  <section xml:id="sec-olympics-data-quality">
+    <title>How good are the data?</title>
+    <p>The performance dataset reveals substantial data quality issues and demonstrates the value of graphics for checking, editing, and restructuring before interpretation.</p>
+
+    <figure xml:id="fig-olye">
+      <caption>Summer Olympic events by total numbers of participants in the Games of 1896 to 2016, ordered lexicographically (the default), based on the first dataset.</caption>
+      <image source="images/olyE-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olyd">
+      <caption>Summer Olympics sporting disciplines by total numbers of participants in the Games of 1896 to 2016, based on the first dataset.</caption>
+      <image source="images/olyD-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olyasn">
+      <caption>Numbers of athletics and swimming events for men and women at the Summer Olympics from 1896 to 2016.</caption>
+      <image source="images/olyASn-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olyeg">
+      <caption>Athletics and swimming events for men and women for which gold medals were awarded by Olympic year, ordered by numbers of gold medals awarded.</caption>
+      <image source="images/olyEg-1.png"/>
+    </figure>
+
+    <p>Event naming inconsistencies (notably Beijing 2008 variants) and legacy early-era events inflate apparent event diversity. After corrections and filtering rare/unusual categories, patterns become more interpretable.</p>
+
+    <figure xml:id="fig-olyega">
+      <caption>Athletic events by Olympic year after amendments.</caption>
+      <image source="images/olyEgA-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olyegs">
+      <caption>Swimming events by Olympic year after amendments.</caption>
+      <image source="images/olyEgS-1.png"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-olympics-performance">
+    <title>How much have performances improved?</title>
+    <p>Gold-medal performances can be compared in selected events, but interpretation must consider changing rules, technology, participation, boycotts, and data quality artifacts. The analysis uses percentage differences relative to averages over 1996-2016.</p>
+
+    <figure xml:id="fig-olya">
+      <caption>Percentage differences in gold medal performances in athletics events compared with averages over the last six Games.</caption>
+      <image source="images/olyA-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olyamd">
+      <caption>Field events for men: percentage differences in gold medal performances compared with averages over the last six Games.</caption>
+      <image source="images/olyAmd-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olyamt">
+      <caption>Track events for men: percentage differences in gold medal performances compared with averages over the last six Games, events are ordered by distance.</caption>
+      <image source="images/olyAmt-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olys100">
+      <caption>Percentage differences in gold medal performances in swimming events for men and women compared with averages over the last six Games since 1920 with the 100 m freestyle highlighted.</caption>
+      <image source="images/olyS100-1.png"/>
+    </figure>
+
+    <p>Overall performance improved strongly from early Games, with more nuanced event-specific patterns in later decades and some clear anomalies tied to historical race conditions and data issues.</p>
+  </section>
+
+  <section xml:id="sec-olympics-countries-participants">
+    <title>How many countries and individuals competed?</title>
+    <p>The broader participant dataset supports country-level and sex-specific participation trends over time, including host-country effects and boycott impacts.</p>
+
+    <figure xml:id="fig-olyg">
+      <caption>Numbers of countries competing at the Olympic Games over the years (male numbers in green above, female in purple below).</caption>
+      <image source="images/olyG-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olygp">
+      <caption>Numbers competing at the Olympic Games over the years.</caption>
+      <image source="images/olyGp-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olyghs">
+      <caption>Numbers of participants at the Olympics for countries who have hosted the Games (in order of first hosting).</caption>
+      <image source="images/olyGhs-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-olygh">
+      <caption>Percentages of host country participants at the Olympic Games over the years for women (purple) and men (green).</caption>
+      <image source="images/olyGh-1.png"/>
+    </figure>
+
+    <p>Participation has expanded substantially, women's participation has approached parity in country coverage, and host nations commonly show pronounced participation peaks.</p>
+  </section>
+
+  <section xml:id="sec-olympics-discussion">
+    <title>Discussion</title>
+    <p><em>Answers.</em> The performance dataset required substantial cleaning but remained highly informative. Gold-medal performance improved markedly from early Games, with weaker recent gains in many events. Country and participant counts increased strongly, and host effects are clear.</p>
+    <p><em>Further questions.</em> How do conclusions change under log-scale performance transforms? Should trends be benchmarked against world records? Is there indirect evidence suggestive of historical doping effects?</p>
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>Good orderings make patterns visible.</p></li>
+      <li><p>After fixing errors and excluding unusual cases, redrawn graphics reveal more information.</p></li>
+      <li><p>When time series overlap, faceting helps reveal individual-series patterns.</p></li>
+      <li><p>Regular time series should make missing data visually explicit; points plus lines are effective.</p></li>
+    </ul>
+  </section>
 </chapter>
