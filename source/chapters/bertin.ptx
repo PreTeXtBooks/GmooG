@@ -2,94 +2,123 @@
 <chapter xml:id="ch-bertin">
   <title>Re-viewing Bertin's main example</title>
 
+  <epigraph>
+    <q>How can you govern a country which has two hundred and forty-six varieties of cheese?</q>
+    <attribution>Charles de Gaulle</attribution>
+  </epigraph>
+
   <introduction>
-    <p><q>How can you govern a country which has two hundred and forty-six varieties of cheese?</q> (Charles de Gaulle)</p>
-    <p><em>Background.</em> Bertin's <em>Semiology of Graphics</em> analyzes a classic dataset on the French workforce by department in 1954.</p>
-    <p><em>Questions.</em> How were workers distributed across departments? Which sector employed most workers? Were there geographic patterns?</p>
-    <p><em>Sources.</em> Bertin's tabulated data, department areas from historical sources and package data, and French administrative maps from the Institut Geographique National.</p>
-    <p><em>Structure.</em> Worker counts in Agriculture, Industry, and Commerce for 89 departments plus Paris (Corsica excluded).</p>
+    <p><em>Background.</em> The famous Semiology of Graphics book (@bertin:2010) includes analysis of a dataset on the structure of the French workforce by administrative region (departement) in 1954.</p>
+    <p><em>Questions.</em> How were the workers distributed across the departments? Which sector of the workforce employed the most? Were there geographic patterns?</p>
+    <p><em>Sources.</em> The table in Bertin's book for the data, areas of the departments from the <em>Guerry</em> package and Wikipedia, and the Institut Geographique National for the map.</p>
+    <p><em>Structure.</em> Numbers of workers in three sectors for each of the then 89 departments of France and Paris.</p>
   </introduction>
 
-  <section xml:id="sec-bertin-classic">
+  <section xml:id="secBertin1">
     <title>Bertin's classic book</title>
-    <p><em>Semiology of Graphics</em> is foundational in graphics theory and practice. Its long chapter on this dataset demonstrates many alternative displays of a single table and seeks general principles for visual representation.</p>
-    <p>The chapter includes many carefully drawn graphics but comparatively few explicit analytical conclusions. Much of the emphasis is on display form and visual method rather than on extracting substantive domain findings.</p>
 
-    <figure xml:id="fig-bertagp">
+    <p>The book <c>Semiology of Graphics</c> (@bertin:2010) is deservedly a classic amongst texts on statistical graphics. Wainer has written that "For technical details [it] is without peer" (@Wainer:1997) and that it "laid the groundwork for modern research in graphics" (@Wainer:2004). Lee Wilkinson has stated (@wilkinson:2005): "It has taken me ten years of programming graphics to understand and appreciate the details in Bertin." Bertin's work is important because he wrote about general principles for drawing graphics and introduced theoretical structure.</p>
+
+    <p>The book includes a whole chapter of 39 pages devoted to the workforce dataset. Most of the data are printed out at the beginning of the chapter: the numbers of people working in the three sectors of Agriculture, Industry, and Commerce in each department, given in thousands. Paris is included as a separate entity and Corsica is excluded.</p>
+
+    <p>Bertin also draws graphics for numbers of workers per square kilometre, based on the areas of the departments. To calculate these here, most department areas were taken from a dataset of France in the 1830s provided in the R package <em>Guerry</em>. For the few newer French departments the data were taken from Wikipedia.</p>
+
+    <p>A shapefile map of the current French departments is available on the website of the Institut Geographique National. Details are given in a French article on cartography with R (@coulmont:2010). To adjust for 1954, the year of Bertin's data, the map was amended accordingly.</p>
+
+    <p>Figure <xref ref="fig-Bertagp"/> shows the 90 departments of France in 1954 with those highlighted in which agricultural workers made up at least 40 percent of the workforce. There is a fairly clear division into East and West, something that is described in French texts under the heading of the Le Havre-Marseille line.</p>
+
+    <figure xml:id="fig-Bertagp">
       <caption>Departments in France in 1954 where agricultural workers made up at least 40% of the workforce.</caption>
       <image source="images/Bertagp-1.png"/>
     </figure>
-
-    <p>A broad east-west contrast is visible, roughly aligned with known French regional narratives around the Le Havre-Marseille line.</p>
   </section>
 
-  <section xml:id="sec-bertin-many-graphics">
+  <section xml:id="secBertin2">
     <title>Bertin's many graphics of the French workforce data</title>
-    <p>Bertin presents around one hundred views of the same data, including many maps plus charts such as bar charts, scatterplots, and histograms. He repeatedly critiques displays that are less effective and emphasizes that different forms do not convey equal analytical value.</p>
-    <p>A recurring substantive conclusion in Bertin's narrative is the positive association between Industry and Commerce across departments.</p>
+
+    <p>There are just over 100 graphics in the chapter, all giving views of the same dataset. About two-thirds of the graphics are maps of France, the rest are barcharts, scatterplots, histograms, and other graphic forms. Many of the graphics are drawn to show that they do not work well. The message that not all graphics are equally good remains relevant.</p>
+
+    <p>Interestingly, the main conclusion Bertin draws from all these graphics is that the data for two sectors are related: Industry and Commerce. He repeats this across many pages. Since the two biggest sectors are highly positively correlated, it is unsurprising that totals correlate with them as well.</p>
   </section>
 
-  <section xml:id="sec-bertin-viewing-today">
+  <section xml:id="secBertin3">
     <title>Viewing the data today</title>
-    <p>Modern statistical graphics make distributional structure and inter-variable association easier to assess directly. Common scales and explicit distribution displays help contextualize department-level values.</p>
 
-    <figure xml:id="fig-berthists">
+    <p>Bertin was concerned with individual values for departments, and that is important, but it does not directly show how individual values relate to full distributions. Sorted barcharts provide ranking information, while histograms are better for studying distributions.</p>
+
+    <figure xml:id="fig-Berthists">
       <caption>Histograms of the numbers working in the three sectors in 1954.</caption>
       <image source="images/Berthists-1.png"/>
     </figure>
 
-    <figure xml:id="fig-bertscats">
+    <p>The total numbers of workers in the three sectors are of the same order. The distributions for Industry and Commerce are highly skewed due to a handful of big values, primarily Paris and Seine. The distribution of agricultural workers is less skewed.</p>
+
+    <p>Scatterplots are more informative than one-variable views for relationships. Figure <xref ref="fig-Bertscats"/> shows the three pairwise plots.</p>
+
+    <figure xml:id="fig-Bertscats">
       <caption>Pairwise scatterplots of the numbers in thousands working in the three sectors in France in 1954.</caption>
       <image source="images/Bertscats-1.png"/>
     </figure>
 
-    <p>The Industry-Commerce relationship is immediately visible in scatterplots, while Agriculture appears comparatively weakly related to either of the other two sectors.</p>
+    <p>Bertin's conclusion that Industry and Commerce values are strongly related is immediately clear, as is the lack of relationship between Agriculture and the other two sectors.</p>
   </section>
 
-  <section xml:id="sec-bertin-geographic-patterns">
+  <section xml:id="secBertin4">
     <title>Are there other geographic patterns?</title>
-    <p>Maps can suggest many possible spatial structures, but pattern-finding should remain cautious because maps make it easy to over-interpret. Still, detected structure can motivate useful follow-up checks.</p>
 
-    <figure xml:id="fig-bertline">
+    <p>There are many possible geographic patterns in mapped data, so any pattern identified should be treated with caution. Nevertheless, discovered patterns may be useful for summarising information and suggesting ideas for further checking.</p>
+
+    <figure xml:id="fig-BertLine">
       <caption>Choropleth map of percentage of agricultural workers in France in 1954.</caption>
       <image source="images/BertLine-1.png"/>
     </figure>
 
-    <figure xml:id="fig-bertcart">
+    <p>In Friendly's revisiting of Guerry's work (@friendly:2007), he refers to a line across France from Saint-Malo to Geneva, dividing France into "France obscure" and "France eclairee". Looking at Figure <xref ref="fig-BertLine"/>, there seems to be some evidence for a similar division in the 1950s.</p>
+
+    <p>There is also the notion of the Blue Banana, a European corridor of urbanisation (@wikip:2020), which would imply lower levels of agricultural workers in parts of the northeast.</p>
+
+    <figure xml:id="fig-BertCart">
       <caption>Cartogram of working population size shaded by the percentage of agricultural workers in France in 1954.</caption>
       <image source="images/BertCart-1.png"/>
     </figure>
 
-    <p>The cartogram emphasizes high-workforce urban and industrial zones, giving a complementary view to the geographic choropleth.</p>
+    <p>The major industrial and commercial areas, where there is little agriculture, dominate the eastern half of the country in the cartogram view.</p>
   </section>
 
-  <section xml:id="sec-bertin-density">
+  <section xml:id="secBertin5">
     <title>Density of the workforce by area</title>
-    <p>Population-density maps are highly sensitive to extreme departments (notably Paris/Seine), so scale choices strongly influence what is visible.</p>
 
-    <figure xml:id="fig-bertdens">
+    <p>Bertin included maps of workforce density by area. Choropleth maps for density of total working population, both including and excluding Paris and Seine, are shown in Figure <xref ref="fig-Bertdens"/>.</p>
+
+    <figure xml:id="fig-Bertdens">
       <caption>Maps of the density of the total working population in thousands per square kilometre in France in 1954, all departments (left), excluding Seine and Paris (right).</caption>
       <image source="images/Bertdens-1.png"/>
     </figure>
 
-    <figure xml:id="fig-bertdensl">
+    <p>The values for Paris and Seine are so high that little variation is visible among other departments on the full-scale map. The reduced-scale map reveals additional structure.</p>
+
+    <figure xml:id="fig-BertdensL">
       <caption>Maps of the log of population density of the total working population in thousands per square kilometre in France in 1954, default scale (left), more detailed scale (right).</caption>
       <image source="images/BertdensL-1.png"/>
     </figure>
 
-    <p>Log scaling can recover structure hidden by extreme values while preserving all regions in a single map view.</p>
+    <p>Using logarithms of density gives a compromise that keeps all departments while still showing structure otherwise hidden by extremes.</p>
   </section>
 
-  <section xml:id="sec-bertin-comments">
+  <section xml:id="secBertin6">
     <title>Comments on Bertin (with hindsight)</title>
-    <p>Bertin's contribution remains central to graphics thinking, especially in theory and visual language. Reworking his examples with contemporary tools highlights both the depth of his insights and the practical value of combining theoretical framing with explicit data-driven conclusions.</p>
-    <p><em>Answers.</em> Sector totals were of similar magnitude; agricultural share was relatively higher in western France; Industry and Commerce were positively related.</p>
-    <p><em>Further questions.</em> How have these sectoral patterns changed since 1954? Which additional sectors matter most in later periods?</p>
+
+    <p>Bertin's <c>Semiology of Graphics</c> contains many important ideas and was an attempt to develop a theory of graphics that could be built on and extended. Reworking his major example today highlights both the strengths of his framework and the value of using graphics directly to derive and communicate findings.</p>
+
+    <p><em>Answers.</em> Each of the three sectors employed between 5 and 7 million. There were relatively more agricultural workers in the West of France. Numbers working in Industry and Commerce were positively related.</p>
+
+    <p><em>Further questions.</em> How have the numbers changed since 1954? Are there other sectors which have become important?</p>
+
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Graphics are best for structure rather than exact lookup of many individual values.</p></li>
-      <li><p>Scatterplots expose bivariate association effectively.</p></li>
-      <li><p>Removing or transforming extreme values can reveal the main structure.</p></li>
+      <li><p>Graphics are for showing structure more than for providing exact individual values. (Figures <xref ref="fig-Bertagp"/> to <xref ref="fig-Bertdens"/>)</p></li>
+      <li><p>Scatterplots show associations between two variables. (Figure <xref ref="fig-Bertscats"/>)</p></li>
+      <li><p>Drawing graphics without outliers or extreme values creates space for showing the main structure of the data. (Figure <xref ref="fig-Bertdens"/>)</p></li>
     </ul>
   </section>
 </chapter>

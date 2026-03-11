@@ -2,73 +2,102 @@
 <chapter xml:id="ch-chess">
   <title>Comparing chess players across the board</title>
 
+  <epigraph>
+    <q>A strong memory, concentration, imagination, and a strong will is required to become a great chess player.</q>
+    <attribution>Bobby Fischer</attribution>
+  </epigraph>
+
   <introduction>
-    <p><q>A strong memory, concentration, imagination, and a strong will is required to become a great chess player.</q> (Bobby Fischer)</p>
-    <p><em>Background.</em> FIDE has used Elo-style ratings since 1970 to compare chess-player strength from rated game outcomes.</p>
-    <p><em>Questions.</em> What is the rating distribution? How does rating vary by age and sex? Which countries have the strongest players? How did ratings change between 2015 and 2020?</p>
-    <p><em>Sources.</em> FIDE monthly rating lists and World Bank population data.</p>
-    <p><em>Structure.</em> December 2020 list contains 362502 players with name, federation, rating, and year of birth (when available).</p>
+    <p><em>Background.</em> FIDE (the International Chess Federation) has used an Elo system since 1970 to rate the relative strengths of chess players based on the results of all official individual games.</p>
+    <p><em>Questions.</em> What is the distribution of ratings? How does rating change with age? How do the ratings of men and women compare? Which countries have the players with the highest ratings?</p>
+    <p><em>Sources.</em> FIDE publishes rating lists every month (@FIDE:2020). Country population data for 2019 was taken from the World Bank website (@wb:2020).</p>
+    <p><em>Structure.</em> The FIDE dataset for December 2020 includes 362502 players with their name, country, rating, and year of birth.</p>
   </introduction>
 
-  <section xml:id="sec-chess-ratings">
+  <section xml:id="secChess1">
     <title>FIDE ratings of chess players</title>
-    <p>December 2020 ratings range from 1001 to 2862. The overall distribution is bounded below, heavily non-normal, and has structure at threshold-like values.</p>
-    <figure xml:id="fig-histelo"><caption>Histogram of ratings of all chess players rated by FIDE in December 2020.</caption><image source="images/histElo-1.png"/></figure>
-    <figure xml:id="fig-boxelo"><caption>Boxplot of ratings of all FIDE rated chess players in December 2020.</caption><image source="images/boxElo-1.png"/></figure>
-    <p>Boxplots make top outliers visible and reveal exceptional elite ratings not visible in coarse histogram bins.</p>
+    <p>FIDE publishes ratings regularly and, like many sporting organisations, uses a system based on Elo's ideas (@elo:1978). Ratings in the December 2020 dataset range from 1001 to 2862.</p>
+
+    <figure xml:id="fig-histElo"><caption>Histogram of ratings of all chess players rated by FIDE in December 2020.</caption><image source="images/histElo-1.png"/></figure>
+
+    <p>There is no sign of a normal distribution in the full population. There is a sharp lower boundary and hints of one-sided peaks at threshold-like values, especially around 2000.</p>
+
+    <figure xml:id="fig-boxElo"><caption>Boxplot of ratings of all FIDE rated chess players in December 2020.</caption><image source="images/boxElo-1.png"/></figure>
+
+    <p>The boxplot makes the exceptional players visible, including outliers above 2750.</p>
   </section>
 
-  <section xml:id="sec-chess-age-sex">
+  <section xml:id="secChess2">
     <title>Comparing chess players by age and sex</title>
-    <p>Inactive players contribute strongly to threshold clustering around 2000. Active/inactive comparisons and age distributions clarify composition effects.</p>
-    <figure xml:id="fig-hist2elo"><caption>Histograms of ratings for active and inactive players.</caption><image source="images/hist2Elo-1.png"/></figure>
-    <figure xml:id="fig-denselo"><caption>Density estimates of distributions of ratings for active and inactive players.</caption><image source="images/densElo-1.png"/></figure>
-    <figure xml:id="fig-densage"><caption>Density estimates of age distributions for active and inactive players.</caption><image source="images/densAge-1.png"/></figure>
-    <figure xml:id="fig-sexrating"><caption>Boxplots of ratings for active players by sex (boxplot widths are proportional to the square roots of the sizes of the groups and outliers are drawn in red).</caption><image source="images/sexRating-1.png"/></figure>
-    <figure xml:id="fig-sexdiff1"><caption>Ratings of the top 1000 male and top 1000 female players in December 2020 with line widths proportional to group sizes.</caption><image source="images/sexDiff1-1.png"/></figure>
-    <figure xml:id="fig-sexdiff2"><caption>Differences between the ratings of the top 1000 male and top 1000 female players in December 2020.</caption><image source="images/sexDiff2-1.png"/></figure>
-    <figure xml:id="fig-sexage"><caption>Density estimates of age distributions of active players (females in purple, line widths proportional to group sizes).</caption><image source="images/sexAge-1.png"/></figure>
-    <figure xml:id="fig-sexagehist"><caption>Age distributions of active players (females in purple).</caption><image source="images/sexAgeHist-1.png"/></figure>
+    <p>The one-sided peak around 2000 is mostly due to inactive players. Comparing active and inactive distributions clarifies this composition effect.</p>
+
+    <figure xml:id="fig-hist2Elo"><caption>Histograms of ratings for active and inactive players.</caption><image source="images/hist2Elo-1.png"/></figure>
+    <figure xml:id="fig-densElo"><caption>Density estimates of distributions of ratings for active and inactive players.</caption><image source="images/densElo-1.png"/></figure>
+    <figure xml:id="fig-densAge"><caption>Density estimates of age distributions for active and inactive players.</caption><image source="images/densAge-1.png"/></figure>
+
+    <p>Far fewer women play chess than men. Figure <xref ref="fig-sexRating"/> compares rating distributions for active male and female players.</p>
+
+    <figure xml:id="fig-sexRating"><caption>Boxplots of ratings for active players by sex (boxplot widths are proportional to the square roots of the sizes of the groups and outliers are drawn in red).</caption><image source="images/sexRating-1.png"/></figure>
+
+    <p>The lower female ratings are largely associated with much smaller numbers of female players. This was analysed in @bila:2009 with similar conclusions.</p>
+
+    <figure xml:id="fig-sexDiff1"><caption>Ratings of the top 1000 male and top 1000 female players in December 2020 with line widths proportional to group sizes.</caption><image source="images/sexDiff1-1.png"/></figure>
+    <figure xml:id="fig-sexDiff2"><caption>Differences between the ratings of the top 1000 male and top 1000 female players in December 2020.</caption><image source="images/sexDiff2-1.png"/></figure>
+
+    <p>The increasing differences down the top-1000 order agree with @bila:2009 and with what order-statistics intuition suggests for very unequal group sizes.</p>
+
+    <figure xml:id="fig-sexAge"><caption>Density estimates of age distributions of active players (females in purple, line widths proportional to group sizes).</caption><image source="images/sexAge-1.png"/></figure>
+    <figure xml:id="fig-sexAgeHist"><caption>Age distributions of active players (females in purple).</caption><image source="images/sexAgeHist-1.png"/></figure>
   </section>
 
-  <section xml:id="sec-chess-nations">
+  <section xml:id="secChess3">
     <title>Which nations have the best chess players?</title>
-    <p>Country comparisons differ depending on whether one emphasizes total active players, grandmaster counts, rating distributions, or population-adjusted metrics.</p>
-    <figure xml:id="fig-nationb"><caption>Numbers of active rated players by country.</caption><image source="images/nationB-1.png"/></figure>
-    <figure xml:id="fig-nationc"><caption>Grandmasters and active rated players per million population, where circle areas are proportional to country population sizes.</caption><image source="images/nationC-1.png"/></figure>
-    <figure xml:id="fig-boxchessr"><caption>Chess ratings of active players for countries with over 3000 active.</caption><image source="images/boxChessR-1.png"/></figure>
+    <p>Country comparisons depend on whether one uses totals of active players, title counts, distributions of ratings, or population-adjusted rates. Regions are based on World Bank groupings (@wb:2020).</p>
+
+    <figure xml:id="fig-nationB"><caption>Numbers of active rated players by country.</caption><image source="images/nationB-1.png"/></figure>
+    <figure xml:id="fig-nationC"><caption>Grandmasters and active rated players per million population, where circle areas are proportional to country population sizes.</caption><image source="images/nationC-1.png"/></figure>
+    <figure xml:id="fig-boxChessR"><caption>Chess ratings of active players for countries with over 3000 active.</caption><image source="images/boxChessR-1.png"/></figure>
   </section>
 
-  <section xml:id="sec-chess-time">
+  <section xml:id="secChess4">
     <title>Ratings change over time</title>
-    <p>Comparing December 2015 and December 2020 shows large composition shifts, including many more rated players and different age structure.</p>
-    <figure xml:id="fig-dens1520elo"><caption>Density estimates of distributions of ratings in December 2015 and December 2020.</caption><image source="images/dens1520Elo-1.png"/></figure>
-    <figure xml:id="fig-agerating"><caption>Density estimates of active players' ages in 2015 and 2020.</caption><image source="images/AgeRating-1.png"/></figure>
-    <figure xml:id="fig-ratage15"><caption>Rating by age for active players in 2015 (an alpha value of 0.05 has been used).</caption><image source="images/ratAge15-1.png"/></figure>
-    <figure xml:id="fig-ratage15alph"><caption>Rating by age for active players in 2015 (players with ratings over 2700 are coloured red and an alpha value of 0.01 has been used for the others).</caption><image source="images/ratAge15alph-1.png"/></figure>
-    <figure xml:id="fig-ratage15s"><caption>Rating by age for a 10% sample of active players in 2015 with a nonlinear smooth and confidence band.</caption><image source="images/ratAge15s-1.png"/></figure>
-    <figure xml:id="fig-ratage15b"><caption>Boxplots of ratings by age for active players in 2015.</caption><image source="images/ratAge15b-1.png"/></figure>
-    <figure xml:id="fig-ratridges"><caption>Ridgeplots of ratings for active players in 2015 for ages from 15 to 65 in 5 year jumps.</caption><image source="images/ratRidges-1.png"/></figure>
-    <figure xml:id="fig-ageratingscat"><caption>Rating by age for active players in 2015 and 2020.</caption><image source="images/AgeRatingScat-1.png"/></figure>
-    <figure xml:id="fig-ageratingsmooth"><caption>Smooths for ratings by age for active players in 2015 and 2020.</caption><image source="images/AgeRatingSmooth-1.png"/></figure>
+    <p>Comparing December 2015 and December 2020, there are many more players in 2020 and a larger inactive share. Rating distributions of active players also differ clearly.</p>
+
+    <figure xml:id="fig-dens1520Elo"><caption>Density estimates of distributions of ratings in December 2015 and December 2020.</caption><image source="images/dens1520Elo-1.png"/></figure>
+    <figure xml:id="fig-AgeRating"><caption>Density estimates of active players' ages in 2015 and 2020.</caption><image source="images/AgeRating-1.png"/></figure>
+
+    <p>Scatterplots of rating by age involve heavy overplotting. Alternatives include selective alpha settings, random sampling, boxplots by age, and ridge plots. Two-dimensional density estimation and hexagonal binning are also relevant approaches (@carr:1987).</p>
+
+    <figure xml:id="fig-ratAge15"><caption>Rating by age for active players in 2015 (an alpha value of 0.05 has been used).</caption><image source="images/ratAge15-1.png"/></figure>
+    <figure xml:id="fig-ratAge15alph"><caption>Rating by age for active players in 2015 (players with ratings over 2700 are coloured red and an alpha value of 0.01 has been used for the others).</caption><image source="images/ratAge15alph-1.png"/></figure>
+    <figure xml:id="fig-ratAge15s"><caption>Rating by age for a 10% sample of active players in 2015 with a nonlinear smooth and confidence band.</caption><image source="images/ratAge15s-1.png"/></figure>
+    <figure xml:id="fig-ratAge15b"><caption>Boxplots of ratings by age for active players in 2015.</caption><image source="images/ratAge15b-1.png"/></figure>
+    <figure xml:id="fig-ratRidges"><caption>Ridgeplots of ratings for active players in 2015 for ages from 15 to 65 in 5 year jumps.</caption><image source="images/ratRidges-1.png"/></figure>
+    <figure xml:id="fig-AgeRatingScat"><caption>Rating by age for active players in 2015 and 2020.</caption><image source="images/AgeRatingScat-1.png"/></figure>
+    <figure xml:id="fig-AgeRatingSmooth"><caption>Smooths for ratings by age for active players in 2015 and 2020.</caption><image source="images/AgeRatingSmooth-1.png"/></figure>
+
+    <p>Smoothed ratings by age for active players were lower in 2020 than in 2015, consistent with composition changes in the rated population.</p>
   </section>
 
-  <section xml:id="sec-chess-titles">
+  <section xml:id="secChess5">
     <title>Grandmasters and Masters</title>
-    <p>Open and women-specific title ladders show large participation imbalances and overlapping rating ranges, with expected shifts by age and title level.</p>
-    <figure xml:id="fig-chesstitle"><caption>Numbers of active titled players and their ratings by age.</caption><image source="images/chessTitle-1.png"/></figure>
+    <p>There are open and women-specific title ladders. Because far fewer women play, numbers in every open title category exceed those in corresponding women categories.</p>
+
+    <figure xml:id="fig-chessTitle"><caption>Numbers of active titled players and their ratings by age.</caption><image source="images/chessTitle-1.png"/></figure>
+
+    <p>Point clouds rise with title level, but overlap remains substantial. There are also notable low and high outliers within title groups.</p>
   </section>
 
   <section xml:id="sec-chess-discussion">
     <title>Discussion</title>
-    <p><em>Answers.</em> Ratings are skewed; younger players are overrepresented; far fewer women than men are rated; Russia leads in grandmasters while other countries can lead in active-player totals.</p>
-    <p><em>Further questions.</em> How do individual trajectories evolve longitudinally? How do federation-level trends change over time? How do Standard, Rapid, and Blitz ratings compare for the same players?</p>
+    <p><em>Answers.</em> Ratings have a skew distribution. More younger players have ratings than older players. Far fewer women play chess than men. Russia has the most grandmasters, while Spain and France had the most active rated players in 2020.</p>
+    <p><em>Further questions.</em> How do individual players' ratings develop over time? How have numbers of active players by country changed over time? How do Standard, Rapid, and Blitz ratings compare?</p>
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Boxplots are effective for outliers in large populations.</p></li>
-      <li><p>Density estimates are effective for comparing distributions.</p></li>
-      <li><p>Line width can encode highly unequal group sizes effectively.</p></li>
-      <li><p>Smooths summarize large-sample scatterplot structure well.</p></li>
+      <li><p>Boxplots are good for extreme outliers in large populations. (Figures <xref ref="fig-boxElo"/>, <xref ref="fig-sexRating"/> and <xref ref="fig-ratAge15b"/>)</p></li>
+      <li><p>Density estimates are effective for comparing distributions. (Figures <xref ref="fig-densElo"/>, <xref ref="fig-densAge"/>, <xref ref="fig-dens1520Elo"/> and <xref ref="fig-AgeRating"/>)</p></li>
+      <li><p>Line widths proportional to group sizes work well when sizes are very different. (Figures <xref ref="fig-sexDiff1"/> and <xref ref="fig-sexAge"/>)</p></li>
+      <li><p>Smooths summarise scatterplot relationships in large datasets. (Figures <xref ref="fig-AgeRatingSmooth"/> and <xref ref="fig-AgeRatingScat"/>)</p></li>
     </ul>
   </section>
 </chapter>

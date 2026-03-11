@@ -14,7 +14,7 @@
     <p><em>Structure.</em> The number of votes received by each candidate from each state in each ballot (3839 observations of 4 variables).</p>
   </introduction>
 
-  <section xml:id="sec-1912-first-look">
+  <section xml:id="sec1912Dem1">
     <title>A first look at the 1912 Democratic Convention</title>
     <p>American political conventions are an important part of the four-year election cycle, when the parties' presidential candidates are nominated.  For many years the winning candidates have been known before the conventions started.  That was not always the case.  In 1912 Woodrow Wilson was only selected on the 46th ballot.</p>
     <p>Wilson is known for his participation at the Paris Peace Conference after World War I and the fourteen points for peace he propounded.  His regressive policy on racial segregation is not so well-known and was not apparent before his election as President either.  W. E. B. Du Bois, the famous black sociologist known for his maps and charts, campaigned for Wilson, but must have been very disappointed by Wilson's actions afterwards.</p>
@@ -30,7 +30,7 @@
     <p>While the default plot in Figure <xref ref="fig-candvs"/> tells the main story, there is other information in the data too.</p>
   </section>
 
-  <section xml:id="sec-1912-usa-compare">
+  <section xml:id="sec1912Dem2">
     <title>The USA in 1912 and 2020</title>
     <p>The USA in 1912 was not the same as the USA in 2020.  There were only 48 states.  Arizona and New Mexico achieved statehood in the early part of 1912, while Alaska and Hawaii did not join the Union until 1959.  These territories had delegates at the Convention as did Washington DC and Puerto Rico.  The numbers of delegates in 1912 were far fewer in total than at the Democratic Convention in 2020.  There were 1088 in 1912 whereas there were 3979 pledged delegates in 2020.  (There were other kinds of delegate in 2020, but the most relevant by state were the pledged delegates.)  Figure <xref ref="fig-delegs"/> compares the numbers of delegates per area for the two Conventions.  The states have been ordered by number of delegates in 1912 and coloured by the four main regions used by the Census Bureau.  California and Florida stand out as having substantially bigger shares of delegates.  Iowa (which had the same number of delegates as California in 1912) and Missouri are amongst the losers.</p>
 
@@ -71,7 +71,7 @@
     </figure>
   </section>
 
-  <section xml:id="sec-1912-unfolded">
+  <section xml:id="sec1912Dem3">
     <title>How the nomination contest unfolded</title>
     <p>In 1912 the Republicans held their convention first and the party was torn apart by the dispute between the supporters of a previous President, Theodore Roosevelt, and the then President, William Howard Taft.  Roosevelt started a new party after the convention and it was expected that splitting the Republican vote would lead to the Democrats' winning the election.  The Republicans and former Republicans together got 7.6 million votes in the election, while the Democrats won only 6.3 million votes, but they won 40 of the 48 states and swept the Electoral College.</p>
     <p>There is a good chapter on the 1912 Democratic convention in the first volume of Link's biography of Woodrow Wilson (<xref ref="link-1947"/>).  The main source for the analysis here is the official report on the convention (<xref ref="woodson-1912"/>) that includes all the counts in detail.</p>
@@ -133,7 +133,7 @@
     <p>Some of these features, possibly the second and definitely the third, would be difficult to identify just from the graphic and without background information.  Graphical analysis benefits from an understanding of what is being represented.  Dramatic features are easy to spot, but still have to be interpreted.  Descriptions of what took place indicate additional places to look in the graphic.  Both approaches are valuable and they complement one another.  Good graphics can provide summarising overviews, while reports flesh out the details.  Neither alone is enough.</p>
   </section>
 
-  <section xml:id="sec-1912-ballot-time">
+  <section xml:id="sec1912Dem4">
     <title>When did the ballots actually take place?</title>
     <p>Using the ballot number as a measure of time is an approximation of what actually happened.  The first ballot took place on the morning of Friday, 28 June, and the last ballot took place on the afternoon of Tuesday, 2 July.  The official report of the convention (<xref ref="woodson-1912"/>) does not record when exactly ballots were taken, but does record to the minute when the convention was adjourned and when it restarted.  Making the assumption that each ballot took about the same time, and adding extra time for special polling of individual states and speeches, gives Figure <xref ref="fig-convt"/>.</p>
 

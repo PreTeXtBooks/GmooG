@@ -3,7 +3,7 @@
   <title>Looking at the movies</title>
 
   <epigraph>
-    <q>The stuff that dreams are made of.</q>
+    <q>The stuff that dreams are made of</q>
     <attribution>Humphrey Bogart as Sam Spade, in <em>The Maltese Falcon</em></attribution>
   </epigraph>
 
@@ -14,7 +14,7 @@
     <p><em>Structure.</em> Two datasets were merged.  One contained basic information on each film or show and the other supplied average user ratings and the numbers of ratings.</p>
   </introduction>
 
-  <section xml:id="sec-movies-trailer">
+  <section xml:id="sec-movies1">
     <title>Trailer</title>
     <p>Many people use IMDb ratings to help them decide what they would like to watch.  The ratings are contributed by users of the site.  This chapter studies the data on films for which ratings are available.  There is a dataset of 58,788 films scraped from IMDb several years ago that is available in the R package <em>ggplot2movies</em>.  Nowadays IMDb makes regularly updated datasets available for download from their website.  The one used here was downloaded in July 2022.  There were 9,033,256 items and 1,251,317 had user ratings or votes.  Excluding items labelled TV or video and restricting the data to movies and shorts that had more than 100 ratings left 124,667 films.</p>
 
@@ -37,7 +37,7 @@
     <p>Many films are recorded as having runtimes of 90 minutes and others runtimes of values of multiples of 10 or, to a lesser extent, 5, a form of data heaping.  The most common runtime for short films is 7 minutes.  IMDb provides information on technical specifications of the various releases of films.  The famous Japanese film <q>The Seven Samurai</q> is reported as having eight different runtimes ranging from 150 minutes to 207 minutes.  The highest value was the one supplied in the dataset.</p>
   </section>
 
-  <section xml:id="sec-movies-over-years">
+  <section xml:id="sec-movies2">
     <title>Movies in IMDb over the years</title>
     <p>Figure <xref ref="fig-movieruny"/> looks at whether movie runtimes changed over time.  Alpha transparency has been used to reduce the effect of overplotting and to show where there is a lot of data.</p>
 
@@ -58,9 +58,11 @@
       </image>
       <caption><p>Movie runtimes in minutes (above), number of movies by year (below) for films of 3 hours or under.</p></caption>
     </figure>
+
+    <p>Figure <xref ref="fig-movieRunYB"/> displays boxplots by year with a histogram of the number of movies in each year below. The runtime distribution has been fairly constant for over 50 years. The slight rise recently may reflect incomplete recording, as the lower plot shows fewer films produced in the latest three years included overall. This is obvious for 2022, for which only the first six months could be covered. The numbers for 2020 and 2021 suggest that it may take time for all films for a year to be added to the database.</p>
   </section>
 
-  <section xml:id="sec-movies-code-numbers">
+  <section xml:id="sec-movies21">
     <title>What might IMDb code numbers mean?</title>
     <p>Every film has been given a code by IMDb, so merging their datasets is straightforward.  As the codes are all of the form <q>tt</q> followed by a number, those numbers were plotted against year to see if there were any patterns.  The resulting scatterplot is shown in Figure <xref ref="fig-moviett"/>.</p>
 
@@ -83,7 +85,7 @@
     </figure>
   </section>
 
-  <section xml:id="sec-movies-ratings">
+  <section xml:id="sec-movies3">
     <title>What ratings do people give films?</title>
     <p>Users can give films a rating from 1 to 10.  IMDb applies an unpublished algorithm to calculate a weighted average rating for every film.  The distribution of average ratings for films is shown in Figure <xref ref="fig-movierh"/>.</p>
 
@@ -124,7 +126,7 @@
     <p>There are no films with a low rating and many votes (the first plot of Figure <xref ref="fig-movievr4"/>).  The relatively few films rated by over a million users all have a high average rating (second plot of Figure <xref ref="fig-movievr4"/>).  However, the highest average ratings are achieved by films with much fewer votes (third plot of Figure <xref ref="fig-movievr4"/>)&#8212;possibly the support of family, friends, and colleagues?  A few films have low average ratings compared with other films receiving the same number of votes (fourth plot of Figure <xref ref="fig-movievr4"/>). <q>Batman &amp; Robin</q> (over 250,000 votes and an average rating of 3.7) and <q>Fifty Shades of Grey</q> (over 300,000 and 4.1) are two examples.</p>
   </section>
 
-  <section xml:id="sec-movies-genres">
+  <section xml:id="sec-movies4">
     <title>Genres from Rom-Com to Film Noir</title>
     <p>Films may be described as being of a type or genre.  There is no uniform way of doing this and IMDb uses descriptions of up to three genres for each film.  When there is more than one genre listed for a film, they are listed alphabetically.  In this dataset of films with more than 100 ratings there are almost 1250 different descriptions, i.e., combinations of up to three genres.</p>
 
@@ -164,7 +166,7 @@
     <p>There are a large number of genres and combinations of genres.  The accuracy or otherwise of the classifications of films may be debatable, but, if nothing else, these kinds of graphics offer much opportunity for entertaining discussion.  Experts in film may be able to offer explanations for some of the features on view.  As always, good graphics can stimulate more involvement with the data than tables or text alone.</p>
   </section>
 
-  <section xml:id="sec-movies-raging-bull-jane-austen">
+  <section xml:id="sec-movies5">
     <title>Comparing Raging Bull with Jane Austen</title>
     <p>Every IMDb webpage for a film includes a barchart of individual ratings received by a film and average ratings and numbers of votes by sex and four age groups.  Around 30% of users do not report their own sex and age.  It is not known how reliable the information from the other 70% might be.</p>
 

@@ -4,92 +4,114 @@
 
   <introduction>
     <p><q>Time flies. You can't. They fly too fast.</q> (Children's word puzzle)</p>
-    <p><em>Background.</em> The speed of light is a central physical constant. Several complex experiments were carried out in the second half of the nineteenth century to measure it, including Michelson's 100 measurements in 1879 and Newcomb's measurements from 1882.</p>
+    <p><em>Background.</em> The speed of light is a central physical constant. Several complex experiments were carried out in the second half of the 19th century to measure it, including Michelson's 100 measurements made in the summer of 1879 (@michelson:1880), and Newcomb's measurements from 1882 (@newcomb:1891).</p>
     <p><em>Questions.</em> Are the estimates close to today's value? How did Michelson's and Newcomb's estimates compare? Can the results be treated as independent random samples?</p>
-    <p><em>Sources.</em> Michelson's 1880 report and Newcomb's 1891 paper.</p>
-    <p><em>Structure.</em> Michelson's 1879 data include date, time of day, temperature, and speed estimate. Newcomb's 1882 data include date, observation weights, observer name, and speed estimate.</p>
+    <p><em>Sources.</em> Michelson's report of 1880 for the U.S. Nautical Almanac Office and Newcomb's paper of 1891.</p>
+    <p><em>Structure.</em> Michelson's results of 100 experiments from 1879 included date, time of day, temperature, and estimate of the speed of light. Newcomb's 66 experiments of 1882 included date, weights grading the observation quality, observer's name, and estimate of the speed of light. Some experimental settings and intermediate measurements listed in the original sources have not been included.</p>
   </introduction>
 
-  <section xml:id="sec-lightspeed-michelson">
+  <section xml:id="secLightS1">
     <title>Michelson, the Master of Light, and his data</title>
-    <p>Michelson's 1879 data are frequently analyzed under simplified assumptions. A common convenience split into five sets of 20 observations does not reflect how measurements were actually scheduled. Dates and times in the original source show irregular spacing and differing day-level workloads.</p>
+
+    <p>@stigler:1977 used Michelson's 1879 data in a study of robust estimators. For reasons of convenience he split the data into five sets of 20 measurements each. Several researchers have since assumed that that was how the experiments were carried out, but Michelson's report makes clear it was not. Researchers have displayed the data as time series, using the order of the experiments as an equally spaced time index. Again, the original paper provides dates and there were some days with no observations and four which had as many as 10. Michelson's detailed description includes a number of factors which varied between his experiments. To treat all the experiments as independent and identically distributed is a useful first approximation, but not an accurate reflection of what took place. @mackay:2000 uses the dataset as a central example for their article on scientific and statistical method. They do respect the order and timing of the data and provide a complete copy of Michelson's table of experimental results.</p>
+
+    <p>Figure <xref ref="fig-ptmich"/> shows Michelson's estimates of the speed of light in air by date and time. Measurements were made on 18 separate days starting on 5 June 1879 and ending on 2 July 1879. Experiments on the same day have been assumed to start at 9 in the morning with one hour gaps in between if recorded as A.M., and at 3 in the afternoon with one hour gaps in between if recorded as P.M. This was done to separate them. The five artificial groupings introduced by Stigler have been coloured, and red dotted lines drawn as boundaries between them.</p>
 
     <figure xml:id="fig-ptmich">
       <caption>Measurements of the speed of light in air by Michelson by date and time with dotted lines drawn to separate Stigler's artificial groupings. There is a limited amount of overplotting due to exact equality of measurements close together in time.</caption>
       <image source="images/ptmich-1.png"/>
     </figure>
 
-    <p>Michelson converted his average estimate from air to vacuum speed by adjustment for temperature and refraction. Relative to a transformed modern reference value in air, nearly all of Michelson's individual measurements are high.</p>
+    <p>Michelson adjusted for temperature and refraction to convert his average estimate of the speed of light in air to the speed of light in a vacuum. Today the speed of light in a vacuum is given as 299792.5 km/s. Converting this to a speed in air using the inverse of Michelson's conversion gives a value close to 299700 km/s. All but 2 of Michelson's 100 results are higher than this.</p>
 
-    <figure xml:id="fig-micht">
+    <p>The temperature for each experiment varied from just under 60 degrees Fahrenheit, around 14.5 degrees Celsius, in the morning to as high as 90 degrees Fahrenheit or 32.2 degrees Celsius in the afternoon. Figure <xref ref="fig-michT"/> shows the estimates of speed of light in air versus temperature. The very first reading was taken at night under electric light, marked black in the figure, but it was regarded by Michelson as unsatisfactory. There is little sign of any effect and this matches the magnitude of Michelson's correction for temperature that amounted to just over 1 km/s for each additional degree Fahrenheit.</p>
+
+    <figure xml:id="fig-michT">
       <caption>Michelson's estimates of the speed of light in air by temperature, coloured by time of day.</caption>
       <image source="images/michT-1.png"/>
     </figure>
-
-    <p>Temperature varied substantially across experiments, but visual evidence suggests only a modest effect, consistent with Michelson's small temperature correction magnitude.</p>
   </section>
 
-  <section xml:id="sec-lightspeed-newcomb">
+  <section xml:id="secLightS2">
     <title>Newcomb, self-educated polymath, and his data</title>
-    <p>Newcomb ran multiple series and argued that his 1882 series should be decisive. The 1882 data include 66 timings over a fixed path length, from which speed estimates can be derived. The distribution shows one extreme and one moderate high-value case often discussed as outliers.</p>
 
-    <figure xml:id="fig-histnewcx">
+    <p>Simon Newcomb carried out three series of experiments from 1880 to 1882 and the results are all in his report (@newcomb:1891). His conclusion there on p. 201 is that "The preceding investigations and discussions seem to show that our results should depend entirely on the measures of 1882 [i.e. the third series]."</p>
+
+    <p>The results from Newcomb's third series of experiments from 1882 have also been used many times, sometimes in the order of the experiments, sometimes not. As the experimental setup and conditions changed over time, it is worth respecting the order and, where possible, the actual dates and times. There were 66 measurements made of the time taken in millionths of a second for light to travel a distance of 7.44242 kilometres in air. Stigler suggested in his article that the true value would have been 24.83302 millionths of a second after taking account of Newcomb's adjustments for mirror curvature and refraction.</p>
+
+    <p>Figure <xref ref="fig-histnewcX"/> shows a histogram of the data suggesting that there are two suspicious values, one at over 300600 km/s that is far away from the rest of the data and one at over 300100 km/s that is moderately away from the rest. Stigler writes that Newcomb excluded the higher of these two, but not the other one.</p>
+
+    <figure xml:id="fig-histnewcX">
       <caption>Histogram of measurements of the speed of light by Newcomb.</caption>
       <image source="images/histnewcX-1.png"/>
     </figure>
 
-    <figure xml:id="fig-boxnewcx">
+    <p>Looking at data in simple graphics directly is an effective way of spotting obvious problems (like the case over 300600) and potential problems (like the case over 300100). Some statisticians may prefer to use a statistical test to see if there are outlying points, but there is not general agreement on which test or tests would be best. A boxplot is one possibility, as in Figure <xref ref="fig-boxnewcX"/>. This suggests that both cases are outliers.</p>
+
+    <figure xml:id="fig-boxnewcX">
       <caption>Boxplot of measurements of the speed of light by Newcomb.</caption>
       <image source="images/boxnewcX-1.png"/>
     </figure>
 
-    <figure xml:id="fig-densnewcx">
+    <p>Figure <xref ref="fig-densnewcX"/> shows a further alternative, a kernel density estimate of the data, excluding the most extreme case. It does look as if the other outlier should be dropped as well.</p>
+
+    <figure xml:id="fig-densnewcX">
       <caption>Density estimate of measurements of the speed of light by Newcomb excluding an outlier.</caption>
       <image source="images/densnewcX-1.png"/>
     </figure>
 
-    <p>Ordering by experiment sequence and then by actual dates adds context not visible in summary displays. Some values that appear isolated in one view are less unusual when embedded in local temporal clusters.</p>
+    <p>Newcomb's paper provides details of each experiment and this information can be used too. Figure <xref ref="fig-newct1X"/> plots the data in the order given in the paper. @stigler:1977 uses Newcomb's order (not all republishers of the dataset do).</p>
 
-    <figure xml:id="fig-newct1x">
+    <figure xml:id="fig-newct1X">
       <caption>Measurements of the speed of light by Newcomb displayed in the order the experiments were carried out.</caption>
       <image source="images/newct1X-1.png"/>
     </figure>
 
-    <figure xml:id="fig-newct2x">
+    <p>Viewing the data this way does make the potential outlier with the value of over 300100 look out of sync with the main part of the dataset. However, there is more information in Newcomb's paper. There are the actual dates and order of the experiments and the names of the observers on those days. More than half of the observations in this series were made by Ensign Holcombe of the U.S. Navy, who joined Newcomb after Michelson became Professor in Cleveland in September 1880.</p>
+
+    <p>Figure <xref ref="fig-newct2X"/> displays the estimates by the date they were made and coloured by who made them.</p>
+
+    <figure xml:id="fig-newct2X">
       <caption>Measurements of the speed of light by Newcomb in 1882 displayed by date, coloured by observer.</caption>
       <image source="images/newct2X-1.png"/>
     </figure>
 
-    <p>Newcomb also assigned quality weights, with one case weighted zero (the extreme outlier) and only one case weighted at the maximum.</p>
+    <p>The second outlier of over 300100 does not look so outlying in the context of the four experiments by Holcomb on 31 July (the four dark blue dots in a vertical line to the left of 1 August). It is notable that the lowest data value was also amongst the four observations that day.</p>
 
-    <figure xml:id="fig-newcwx">
+    <p>Analyses of these data generally assume that the observations can be treated as if they were independent and (mostly) identically distributed. The detailed descriptions in Newcomb's paper of problems with individual experiments and of adjustments to experimental settings as they proceeded suggest this assumption should be looked at more closely. In addition, Newcomb attempted to assess the quality of the observations. He reported three weights for them, two for the quality of the images and one overall weight to be given to an observation (p. 170, @newcomb:1891). Figure <xref ref="fig-newcwX"/> gives the distribution of overall weights.</p>
+
+    <figure xml:id="fig-newcwX">
       <caption>Weights assigned to each observation by Newcomb.</caption>
       <image source="images/newcwX-1.png"/>
     </figure>
+
+    <p>Only one case was assigned a weight of 0 (the extreme outlier) and only one the top weight of 3, the last measurement by Holcombe on 31st July, the second lowest value of the four observations that day. The weights for image quality bear little relationship to the overall weight. Newcomb wrote "Only a small range is assigned to the weights, because from the very nature of the case it is impossible to determine them with actual precision."</p>
   </section>
 
-  <section xml:id="sec-lightspeed-compare">
+  <section xml:id="secLightS3">
     <title>Comparing the data of Michelson and Newcomb</title>
-    <p>Both scientists measured speed in air and converted final averages to vacuum speed using similar corrections. For direct comparison, speeds in air can be contrasted (excluding Newcomb's most extreme outlier).</p>
+
+    <p>Both researchers made measurements of the speed of light in air, averaged their results, and only then converted their final estimate to one for the speed of light in a vacuum. This meant adding 92 km/s for Michelson (@michelson:1880 p. 141) and 94 km/s for Newcomb (@newcomb:1891 p. 201). The main adjustment was to multiply the speed in air by the index of refraction of air at the temperature of the experiments. The technical details (and much more) are in their papers. Given the adjustments are so similar the estimates for the speed in air can be compared. The extreme outlier in the Newcomb data has been excluded for this comparison, so the horizontal scale is different from the scale of the earlier plots.</p>
 
     <figure xml:id="fig-michnew">
       <caption>Boxplots and dotplots of estimates of the speed of light in air by Michelson in 1879 and by Newcomb in 1882 with the transformed value of today marked by a dashed blue line.</caption>
       <image source="images/michnew-1.png"/>
     </figure>
 
-    <p>Newcomb's estimates are generally closer to today's value than Michelson's. Later Michelson work with improved methods moved much closer to the modern accepted constant.</p>
-    <p>Reported uncertainty intervals in historical physical-constant studies often understate total uncertainty because systematic error can exceed random error.</p>
+    <p>Michelson's estimates were higher than Newcomb's and further away from the true value. In 1924, some forty years later, using similar, but improved techniques, Michelson estimated the speed of light in vacuo to be 299796 km/s (@michelson:1927), very close to today's 299792.458 km/s.</p>
+
+    <p>No intervals for the estimates have been given here. As Youden pointed out over 50 years ago (@youden:1972), reported intervals for estimates of the values of physical constants included random error but not systematic error and that was typically larger.</p>
   </section>
 
   <section xml:id="sec-lightspeed-discussion">
     <title>Discussion</title>
-    <p><em>Answers.</em> Newcomb's estimates were closer to today's value than Michelson's. In both studies, treating observations as independent random samples is only an approximation.</p>
-    <p><em>Further questions.</em> How have speed-of-light experiments evolved since Newcomb's era? How have estimates changed over time?</p>
+    <p><em>Answers.</em> Newcomb's estimates were closer to today's value than Michelson's. The individual experiments of each of the two researchers can only approximately be treated as independent random samples.</p>
+    <p><em>Further questions.</em> How have experiments to estimate the speed of light changed since Newcomb's time? How have the estimates themselves changed?</p>
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Going back to original sources can reveal relevant information.</p></li>
-      <li><p>Graphics are useful for identifying outliers.</p></li>
-      <li><p>There is no one best display: different graphics offer alternative views.</p></li>
+      <li><p>Going back to original sources can reveal relevant information. (Figures <xref ref="fig-ptmich"/> and <xref ref="fig-newct2X"/>)</p></li>
+      <li><p>Graphics are useful for identifying outliers. (Figures <xref ref="fig-histnewcX"/> and <xref ref="fig-boxnewcX"/>)</p></li>
+      <li><p>There is no one best display: different graphics offer alternative views. (Figures <xref ref="fig-histnewcX"/> to <xref ref="fig-newct2X"/>)</p></li>
     </ul>
   </section>
 </chapter>

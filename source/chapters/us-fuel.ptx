@@ -7,15 +7,12 @@
       <p>"It's ugly, but it gets you there."</p>
       <p>--- Volkswagen advertisement, 1969, at the time of the first moon landing</p>
     </blockquote>
-    <p>
-      U.S. Department of Energy data on individual car models make it possible to compare fuel efficiency across
-      fuel types, drive types, classes, and years.
-    </p>
+    <p><em>Background.</em> Fuel economy data for individual models of cars and trucks is made available by the US Department of Energy.</p>
     <p>
       <em>Questions.</em> Are cars more fuel efficient than in the past? Which cars use the most fuel and which the
       least? How have available models changed over time? How has fuel efficiency changed for specific models?
     </p>
-    <p><em>Sources.</em> U.S. Environmental Protection Agency fuel-economy data.</p>
+    <p><em>Sources.</em> @epa:2021</p>
     <p>
       <em>Structure.</em> 43,516 cases and 83 variables for vehicles introduced from 1984 to 2021.
     </p>
@@ -24,17 +21,9 @@
   <section xml:id="sec-usfuel-types">
     <title>How efficient are different types of car?</title>
 
-    <p>
-      The dataset includes vehicles over many model years. The numbers refer to models evaluated, not numbers of
-      vehicles on the road, so one Rolls Royce counts the same as one Toyota Corolla. Only cars are considered here,
-      excluding some missing-value cases and specialist small groups.
-    </p>
+    <p>The dataset includes vehicles over many model years. The numbers refer to the numbers of models evaluated, not the numbers of vehicles on the road, so one Rolls Royce counts the same as one Toyota Corolla. Only cars are considered here, also excluding cases with missing values and some specialist small groups. There is information on the individual cars, the fuels used, fuel consumption under different conditions, and car emissions. Only estimated average mpg (miles per gallon) figures have been used in this chapter, but the dataset contains much more detailed information.</p>
 
-    <p>
-      The data include vehicle characteristics, fuel types, fuel-consumption measures under different conditions, and
-      emissions variables. This chapter uses the estimated average mpg values and combines 4-wheel and all-wheel
-      drive types into one all-wheel category.
-    </p>
+    <p>The various types of 4-Wheel and All-Wheel Drive cars have been combined in the All-Wheel category.</p>
 
     <figure xml:id="fig-vehcn">
       <image source="images/vehCn-1.png"/>
@@ -44,15 +33,10 @@
     </figure>
 
     <p>
-      Diesel models are relatively rare in this subset. Front-wheel drive models are mainly regular-gasoline cars,
-      while rear-wheel and all-wheel categories contain more premium-gasoline models.
+      There were relatively few diesel cars in this display. Front-Wheel Drive cars used mainly regular gasoline. Rear-Wheel and All-Wheel Drive cars used mainly premium gasoline.
     </p>
 
-    <p>
-      Americans (and the British) measure fuel efficiency in mpg (miles per gallon), while Europeans often use an
-      inverse measure in litres per 100 kilometres. The data include city and highway estimates plus a combined value
-      based on 55% city driving. The <c>fueleconomy</c> R package provides related data, but only up to 2015.
-    </p>
+    <p>Americans (and the British) measure fuel efficiency in mpg (miles per gallon). Europeans would use an inverse measure, litres per 100 kilometres. The dataset provides two estimates of fuel efficiency, one for city driving and one for highway driving, and these are combined in an overall figure that assumes 55% of driving distance is in city conditions. There is an R package, <c>fueleconomy</c>, that makes the data available but only up to 2015. Figure <xref ref="fig-vehcf"/> uses boxplots to summarise mpg data for the two gasolines. There were some high outliers amongst the Regular Gasoline cars with Front-Wheel Drive, i.e., they use far more fuel than other models in their class.</p>
 
     <figure xml:id="fig-vehcf">
       <image source="images/vehCf-1.png"/>
@@ -61,10 +45,7 @@
       </caption>
     </figure>
 
-    <p>
-      Boxplots reveal substantial variation across class and drive type, including high-use outliers among some
-      regular-gasoline front-wheel-drive cars.
-    </p>
+    <p>Figure <xref ref="fig-vehhyb"/> shows that these were mainly hybrid cars (including plug-in hybrids) and Figure <xref ref="fig-vehyr"/> suggests a few more were cars of model year 1998 or earlier.</p>
 
     <figure xml:id="fig-vehhyb">
       <image source="images/vehHyb-1.png"/>
@@ -80,20 +61,13 @@
       </caption>
     </figure>
 
-    <p>
-      Hybrids tend to achieve better mileage, and the lowest mpg outcomes are concentrated in older model years.
-      Interpretation over long spans should account for changes in testing procedures.
-    </p>
+    <p>Figure <xref ref="fig-vehyr"/> also shows that the worst mpg values were recorded over 15 years ago or more. Testing procedures have changed over time and so like may not be being compared with like over such a long period.</p>
   </section>
 
   <section xml:id="sec-usfuel-luxury">
     <title>Small (?) luxury cars</title>
 
-    <p>
-      Very low-mpg outliers in rear-wheel-drive groups include luxury manufacturers that appear in unexpectedly small
-      EPA classes. Ordering by mpg reveals unexpected classifications: Rolls-Royce, Aston Martin, and Ferrari appear
-      in minicompact and subcompact categories.
-    </p>
+    <p>In Figure <xref ref="fig-vehcf"/> there were some low outliers for Rear-Wheel Drive cars, especially surprising for Minicompact and Subcompact Cars. Ordering the dataset in ascending order of mpg uncovers some unexpected classifications. Who would have thought that Rolls-Royces, Aston Martins, and Ferraris would be classified that way?</p>
 
     <figure xml:id="fig-luxveh">
       <image source="images/luxVeh-1.png"/>
@@ -102,15 +76,9 @@
       </caption>
     </figure>
 
-    <p>
-      Lamborghini are only two-seaters in this data and Ferrari are mainly so. Minicompact, subcompact, and compact
-      models occur commonly across most of the six luxury manufacturers shown.
-    </p>
+    <p>Lamborghini have only Two Seaters in the dataset and Ferrari mainly do. Minicompact, Subcompact, and Compact models were relatively commonly produced by all of the six luxury manufacturers barring Lamborghini.</p>
 
-    <p>
-      EPA classes are based on interior volume (passenger plus luggage), not exterior dimensions or weight. This
-      long-standing system can produce unexpected class assignments.
-    </p>
+    <p>According to the website maintainers: "The EPA classifies cars based on interior volume which is a combination of the passenger volume and luggage volume. The exterior dimensions or vehicle weight are not considered. The system has been in place since the mid-1970s and sometimes those classifications produce unexpected results."</p>
   </section>
 
   <section xml:id="sec-usfuel-model-counts">
@@ -123,10 +91,15 @@
       </caption>
     </figure>
 
-    <p>
-      Long-run patterns include declines in some small-car and wagon categories and growth in larger car and SUV
-      categories.
-    </p>
+    <p>Figure <xref ref="fig-swclass"/> shows a sharp decline in the number of Subcompact Cars, and an increase in the number of Large Cars. The patterns amongst Station Wagons and Sport Utility Vehicles (SUVs) need a closer look.</p>
+
+    <subsection xml:id="sec-usfuel-station-suv">
+      <title>Station wagons and SUVs</title>
+
+      <p>There are three categories for station wagons and six for SUVs. Nobody talks much about station wagons these days and the term SUV is relatively new. Figure <xref ref="fig-swsuv"/> displays barcharts of the numbers of each type for each year.</p>
+
+      <p>The patterns are clear. The "Large" in the category Midsize-Large Station Wagons was dropped after 1998. SUV classifications were introduced in 1999 and further split in 2013. The numbers of station wagon models were declining before SUVs were introduced. After 2007 it appears that mainly small station wagons were produced. Numbers of SUV models for 2WD (two-wheel-drive) and 4WD (four-wheel-drive) followed similar patterns initially. After the split into Small and Standard SUVs, only the number of 4WD ones increased.</p>
+    </subsection>
 
     <figure xml:id="fig-swsuv">
       <image source="images/swSUV-1.png"/>
@@ -137,19 +110,12 @@
       </caption>
     </figure>
 
-    <p>
-      The displays highlight category-definition changes over time, including SUV split refinements and a sustained
-      decline in station wagons before and after SUV expansion.
-    </p>
   </section>
 
   <section xml:id="sec-usfuel-model-trends">
     <title>Comparing fuel efficiency of individual models over time</title>
 
-    <p>
-      Grouping by model characteristics allows comparisons of long-running model lines in manual and automatic
-      versions.
-    </p>
+    <p>Car models do not stay the same for long. Manufacturers continually develop and change their cars. By grouping on the characteristics of each model in the dataset, including number of gears and displacement (engine size in litres), those that have been tested in most years can be selected. Two have been chosen here in both manual and automatic versions, the Toyota Corolla (1993-2016) and the Mazda MX-5 (2006-2021). They are two very successful models in their respective classes. Figure <xref ref="fig-tceff"/> shows the estimated city, highway, and combined mpg figures for the Toyota. Note that the estimates are only reported in rounded integer values. Unrounded values for all models are provided from 2011 on but have not been used here.</p>
 
     <figure xml:id="fig-tceff">
       <image source="images/TCeff-1.png"/>
@@ -160,10 +126,7 @@
       </caption>
     </figure>
 
-    <p>
-      Corolla estimates show city/highway/combined separation, modest transmission differences, and periods of both
-      improvement and decline.
-    </p>
+    <p>As expected, the highway mpg figures are better than the city figures. Manual transmission is generally slightly more efficient than automatic transmission. There were improvements in the first few years, then a level performance and then, surprisingly, a decline. Perhaps the cars became heavier. Unfortunately there is no information on car weights in the dataset. Unsurprisingly, there is some variability in the EPA's estimates. The introduction of new model versions in 1995, 2000, 2006, 2012 does not appear to have had immediate effects. Additional changes may have been introduced in other years.</p>
 
     <figure xml:id="fig-mx5eff">
       <image source="images/MX5eff-1.png"/>
@@ -172,28 +135,21 @@
       </caption>
     </figure>
 
-    <p>
-      MX-5 results are less variable, with a marked step-up linked to a newer model generation.
-    </p>
+    <p>The estimates for the Mazda MX-5 are shown in Figure <xref ref="fig-mx5eff"/>.</p>
+
+    <p>The MX-5 estimates are less variable than the Corolla ones. The large jump in 2016 was due to the introduction of a new model. The manual and automatic transmission models appear to achieve very similar fuel efficiency.</p>
 
     <introduction>
-      <p>
-        <em>Answers.</em> Smaller cars generally achieve higher mileage. Hybrids and newer models tend to outperform
-        others. Classifications can be surprising for luxury manufacturers. SUVs have largely replaced station
-        wagons.
-      </p>
-      <p>
-        <em>Further questions.</em> How do city and highway efficiency differences vary by class and fuel? How
-        strongly does displacement influence efficiency within comparable model groups?
-      </p>
+      <p><em>Answers.</em> Small cars get higher mileage in general. Hybrids and newer cars get better mileage than other cars. Sector classifications give some surprising results for luxury cars. SUVs have mostly replaced station wagons.</p>
+      <p><em>Further questions.</em> How does fuel efficiency vary between city and highway driving? How does displacement influence fuel efficiency?</p>
     </introduction>
 
     <subsection xml:id="sec-usfuel-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Faceted displays support multiple informative orderings.</p></li>
-        <li><p>Small sets of boxplots are often clearer with horizontal orientation.</p></li>
-        <li><p>Angled axis labels can substantially improve readability for long category names.</p></li>
+        <li><p>There are many different orderings in faceted displays. Look for informative ones. (Figures <xref ref="fig-vehcn"/>, <xref ref="fig-vehcf"/>, and <xref ref="fig-swsuv"/>)</p></li>
+        <li><p>Small numbers of boxplots are better horizontally. (Figure <xref ref="fig-vehhyb"/>)</p></li>
+        <li><p>Drawing longer labels at an angle improves readability. (Figures <xref ref="fig-vehcn"/>, <xref ref="fig-vehcf"/>, <xref ref="fig-vehyr"/>, and <xref ref="fig-luxveh"/>)</p></li>
       </ul>
     </subsection>
   </section>

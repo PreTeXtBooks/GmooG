@@ -2,192 +2,124 @@
 <chapter xml:id="ch-electric-cars">
   <title>Charging electric cars</title>
 
+  <epigraph>
+    <q>We all make mistakes, and it is better to make them before we begin.</q>
+    <attribution>Nikola Tesla</attribution>
+  </epigraph>
+
   <introduction>
-    <blockquote>
-      <p>"We all make mistakes, and it is better to make them before we begin."</p>
-      <p>--- Nikola Tesla</p>
-    </blockquote>
-    <p>
-      A 2014-15 study examined how electric-car drivers used workplace charging facilities provided by a firm in the
-      U.S. Department of Energy workplace charging challenge.
-    </p>
-    <p>
-      <em>Questions.</em> How often did users charge? When did they charge? How long for? Which stations were most
-      used? Which incentives controlled station use?
-    </p>
-    <p><em>Sources.</em> Asensio et al. study and companion materials.</p>
-    <p>
-      <em>Structure.</em> 3,395 charging sessions with 24 variables, including user, location, time, charge, and
-      cost.
-    </p>
+    <p><em>Background.</em> A study was carried out in 2014-15 of how electric car drivers used charging facilities provided by a firm participating in the U.S. Department of Energy workplace charging challenge.</p>
+    <p><em>Questions.</em> How often did users charge their cars? When did they charge them? How long did they charge them for? Which charging stations were used most? Which incentives work in controlling use of charging stations?</p>
+    <p><em>Sources.</em> @asensio:2021a and @asensio:2021b</p>
+    <p><em>Structure.</em> 3395 charging sessions with 24 variables were reported, including user, location, time, charge, and cost.</p>
   </introduction>
 
-  <section xml:id="sec-elec-study">
+  <section xml:id="secElecC1">
     <title>How was the study organised?</title>
 
-    <p>
-      The study had a hierarchy of four facility types, multiple locations within each type, and varying numbers of
-      stations per location. Distances driven and alternative charging options were not recorded. Financial and other
-      incentives were used to reduce congestion, but congestion itself was not measured directly.
-    </p>
+    <p>The hierarchical structure of the study was that there were four types of company facility, each with a number of locations, and different numbers of charging stations at the locations. Distances driven and use of other charging options were not recorded. Financial and other incentives were employed to reduce congestion and waiting, though there is no information on what congestion and waiting actually occurred.</p>
 
-    <figure xml:id="fig-elecens">
+    <figure xml:id="fig-elecEns">
+      <caption>Number of chargings carried out by user, by facility type, by location, and by charging station (locations and charging stations are coloured by the type of facility where they were located).</caption>
       <image source="images/elecEns-1.png"/>
-      <caption>
-        <p>
-          Number of chargings by user, facility type, location, and charging station (locations and stations are
-          coloured by facility type).
-        </p>
-      </caption>
     </figure>
 
-    <p>
-      The ensemble shows a few heavy users and many infrequent users. Most locations and stations were at R&amp;D
-      facilities, with large variation in usage across both locations and stations.
-    </p>
+    <p>Figure <xref ref="fig-elecEns"/> is an ensemble of plots summarising some of the data. A few users charged many times and around half charged hardly at all. Most locations were at R&amp;D facilities, as were most stations. One Manufacturing location was used more than any other. One Office station was used far more often than other Office stations. Some stations and even a few locations were hardly used.</p>
 
-    <figure xml:id="fig-eleclocs">
+    <figure xml:id="fig-elecLocs">
+      <caption>Numbers of charging stations by facility type and location.</caption>
       <image source="images/elecLocs-1.png"/>
-      <caption><p>Numbers of charging stations by facility type and location.</p></caption>
     </figure>
 
-    <p>
-      The 25 locations are sorted by facility type and then by number of stations, making capacity differences easy
-      to compare.
-    </p>
+    <p>Figure <xref ref="fig-elecLocs"/> shows the 25 locations by facility type and number of stations. Locations are sorted by facility type and within type by station count.</p>
 
-    <figure xml:id="fig-elecchu">
+    <figure xml:id="fig-elecChU">
+      <caption>Numbers of charges per day with smooth added.</caption>
       <image source="images/elecChU-1.png"/>
-      <caption><p>Numbers of charges per day with smooth added.</p></caption>
     </figure>
 
-    <p>
-      Daily usage over time shows pronounced dips likely corresponding to weekends.
-    </p>
+    <p>The numbers of charges over the period are shown in Figure <xref ref="fig-elecChU"/>. Sharp dips are probably weekends.</p>
 
-    <figure xml:id="fig-elecstatts">
+    <p>The study lasted about a year from mid-November 2014 to early October 2015. The researchers state in their article (@asensio:2021a) that the first three months were a testing period and the remaining nine months were the analysis period. Their code shows testing began on 18 November 2014 and ended on 18 February 2015. Charging stations were installed over time, so not all could be used over the full analysis period.</p>
+
+    <figure xml:id="fig-elecStatts">
+      <caption>Numbers of charging stations by FacilityType over the study.</caption>
       <image source="images/elecStatts-1.png"/>
-      <caption><p>Numbers of charging stations by FacilityType over the study.</p></caption>
     </figure>
 
-    <p>
-      Stations were introduced over time, so facilities were not observed over equal durations. R&amp;D always had
-      the most stations available.
-    </p>
+    <p>Throughout the study there were always more stations available at R&amp;D facilities than elsewhere. Several Office stations were only added late in the study.</p>
 
-    <figure xml:id="fig-elecstat">
+    <figure xml:id="fig-elecStat">
+      <caption>When charging stations were used during the study.</caption>
       <image source="images/elecStat-1.png"/>
-      <caption><p>When charging stations were used during the study.</p></caption>
     </figure>
 
-    <figure xml:id="fig-elecu">
+    <p>Figure <xref ref="fig-elecStat"/> shows when stations were used. The default plot shows little use early on, some lightly used stations, and a group only used late in the study.</p>
+
+    <figure xml:id="fig-elecU">
+      <caption>When users charged their cars, sorted by number of charges.</caption>
       <image source="images/elecU-1.png"/>
-      <caption><p>When users charged their cars, sorted by number of charges.</p></caption>
     </figure>
 
-    <figure xml:id="fig-elecstat2">
+    <p>Patterns of user behaviour can be seen in Figure <xref ref="fig-elecU"/>. Most heavy users charged occasionally first and then more regularly.</p>
+
+    <figure xml:id="fig-elecStat2">
+      <caption>Use of charging stations, coloured by facility type, grouped by location, ordered by first installation at location and by first date of use, with the end of testing marked in red.</caption>
       <image source="images/elecStat2-1.png"/>
-      <caption>
-        <p>
-          Use of charging stations, coloured by facility type, grouped by location, ordered by first installation at
-          location and first date of use, with the end of testing marked in red.
-        </p>
-      </caption>
     </figure>
 
-    <p>
-      The revised display adds location context and highlights imbalance: some locations/stations were barely used,
-      while others were heavily used. The practical analysis period appears shorter than the paper's stated nine
-      months.
-    </p>
+    <p>Figure <xref ref="fig-elecStat2"/> groups stations by location, orders by first use, and marks the end of testing in red. Some locations had few stations and were barely used. One Manufacturing location was heavily used while another was hardly used. Two later R&amp;D locations were hardly used. It would be informative to know why usage varied so much.</p>
+
+    <p>The analysis period appears to be only seven and a half months, not the nine months reported in the paper. Overall, the lack of balance in the study is surprising, and the evolving charging environment likely influenced behaviour.</p>
   </section>
 
-  <section xml:id="sec-elec-duration">
+  <section xml:id="secElecC2">
     <title>How long does charging cars take?</title>
 
-    <p>
-      Charging was free for up to four hours, then $1/hour. Staff were encouraged to keep sessions under two hours.
-      Sessions above 55 hours and zero-charge sessions were excluded in the figure.
-    </p>
+    <p>Charging was free for up to four hours, after that there was a one dollar per hour fee. Staff were recommended not to connect for more than two hours at a time. Figure <xref ref="fig-elecCh"/> shows charging times with two-hour and four-hour limits marked. One outlying charging time over 55 hours is excluded, as are 55 sessions with zero charge.</p>
 
-    <figure xml:id="fig-elecch">
+    <figure xml:id="fig-elecCh">
+      <caption>Distribution of charging time in hours.</caption>
       <image source="images/elecCh-1.png"/>
-      <caption><p>Distribution of charging time in hours.</p></caption>
     </figure>
 
-    <p>
-      Usage is concentrated below four hours with no obvious drop at two hours, and a small number of very short
-      sessions.
-    </p>
+    <p>Either cars were fully charged within four hours or many users avoided paying fees. There appears to be no drop at two hours. There are a few very short times.</p>
 
-    <figure xml:id="fig-eleccht">
+    <p>Plotting charge against charging time gives the surprising pattern in Figure <xref ref="fig-elecChT"/>. For much data there is a rising linear pattern from 0 to 2 hours, which then flattens. There are cases where charging appears highly effective, less effective, or barely effective. The horizontal boundary from two hours onward could indicate cars fully charged but left connected.</p>
+
+    <figure xml:id="fig-elecChT">
+      <caption>Energy charge in kilowatt-hours by charging time in hours.</caption>
       <image source="images/elecChT-1.png"/>
-      <caption><p>Energy charge in kilowatt-hours by charging time in hours.</p></caption>
     </figure>
 
-    <p>
-      Charge versus time reveals a strong increasing pattern up to about two hours, then flattening. Some sessions
-      look highly efficient, some weak, and a few near-zero for long times.
-    </p>
+    <p>Most cases above 10 kWh are due to a small subset of users, as shown in Figure <xref ref="fig-elecChTc"/>.</p>
 
-    <figure xml:id="fig-elecchtc">
+    <figure xml:id="fig-elecChTc">
+      <caption>Energy charge in kilowatt-hours by charging time in hours, where charges higher than 10 kWh have been coloured by the user ID (charges less than 10 kWh for those users have not been coloured).</caption>
       <image source="images/elecChTc-1.png"/>
-      <caption>
-        <p>
-          Energy charge in kilowatt-hours by charging time in hours, with charges above 10 kWh coloured by user ID
-          (lower charges for those users not recoloured).
-        </p>
-      </caption>
     </figure>
-
-    <p>
-      Most very high charges are attributable to a small subset of users, plausibly reflecting different vehicle
-      characteristics.
-    </p>
   </section>
 
-  <section xml:id="sec-elec-week">
+  <section xml:id="secElecC3">
     <title>Charging patterns through the week</title>
 
-    <introduction>
-      <p>
-        Grouping charge-time scatterplots by weekday and facility type shows pronounced weekly structure, excluding
-        sessions above six hours and the small "Other" group.
-      </p>
+    <p>Figure <xref ref="fig-elecScats"/> shows scatterplots of total kilowatt charge by charging time by day of week and facility type, excluding charging times over six hours and sessions at the two Other locations.</p>
 
-      <figure xml:id="fig-elecscats">
-        <image source="images/elecScats-1.png"/>
-        <caption>
-          <p>
-            Energy charge in kilowatt-hours by charging time in hours, grouped by weekday and facility type,
-            excluding charging times over six hours. The barchart shows number of charges by day.
-          </p>
-        </caption>
-      </figure>
+    <figure xml:id="fig-elecScats">
+      <caption>Energy charge in kilowatt-hours by charging time in hours, grouped by day of the week and type of facility, excluding charging times over six hours. The barchart shows the number of charges by day.</caption>
+      <image source="images/elecScats-1.png"/>
+    </figure>
 
-      <p>
-        Weekend charging is sparse. R&amp;D accounts for many sessions and somewhat larger weekday charges. Lower
-        boundaries suggest a minimum time needed for a given charge. The study excluded 55 non-charging sessions even
-        when connection times were non-negligible.
-      </p>
+    <p>There were few charging sessions at weekends. There were more sessions at R&amp;D locations than elsewhere. The scatterplots suggest some limit around 7 kWh, and R&amp;D includes a few bigger weekday charges. A lower boundary suggests at least a certain time is needed for a given charge. The study omitted 55 sessions with zero charging even though charge times were not negligible.</p>
 
-      <p>
-        <em>Answers.</em> About half of users charged rarely or not at all; charging was uncommon on weekends;
-        several locations were lightly used; most sessions stayed under four hours, after which fees began.
-      </p>
-      <p>
-        <em>Further questions.</em> How did patterns evolve over time? When did users start/stop charging during the
-        day? What fraction of time were stations occupied?
-      </p>
-    </introduction>
+    <p><em>Answers.</em> About half the users charged their cars rarely, if at all. Cars were seldom charged at weekends. Some locations were not used much. Users generally charged for less than four hours, after which they had to pay a fee.</p>
+    <p><em>Further questions.</em> Do charging patterns change over time? When did users start and stop charging during the day? What percentage of time were stations occupied?</p>
 
-    <subsection xml:id="sec-elec-takeaways">
-      <title>Graphical takeaways</title>
-      <ul>
-        <li><p>Initial exploratory graphics suggest concrete follow-up questions.</p></li>
-        <li><p>Colour, spacing, and nested ordering are powerful for distinguishing groups.</p></li>
-        <li><p>Ensembles of graphics are effective for combining complementary information.</p></li>
-      </ul>
-    </subsection>
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>Initial exploratory graphics suggest questions to follow up. (Figures <xref ref="fig-elecEns"/> to <xref ref="fig-elecStat"/>)</p></li>
+      <li><p>Colour, separating space, and nested ordering are valuable for distinguishing groups. (Figure <xref ref="fig-elecStat2"/>)</p></li>
+      <li><p>Ensembles of graphics are effective at pulling information together. (Figures <xref ref="fig-elecEns"/> and <xref ref="fig-elecScats"/>)</p></li>
+    </ul>
   </section>
 </chapter>
