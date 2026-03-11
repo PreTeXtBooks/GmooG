@@ -176,7 +176,7 @@
         <image source="images/thmb2-2.png">
           <description>Barchart of population by world region in 2016, styled using the Economist theme. The bars use the Economist's colour palette with its distinctive blue background and typography.</description>
         </image>
-        <caption><p>Barchart of population by region 2016 using four themes, Excel and Google docs (above), Wall Street Journal and Economist (below)</p></caption>
+        <caption><p>Barchart of population by region 2016 using the Economist theme</p></caption>
       </figure>
     </subsection>
 
