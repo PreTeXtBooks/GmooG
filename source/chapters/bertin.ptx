@@ -1,5 +1,95 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-bertin">
-  <title>Bertin</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Re-viewing Bertin's main example</title>
+
+  <introduction>
+    <p><q>How can you govern a country which has two hundred and forty-six varieties of cheese?</q> (Charles de Gaulle)</p>
+    <p><em>Background.</em> Bertin's <em>Semiology of Graphics</em> analyzes a classic dataset on the French workforce by department in 1954.</p>
+    <p><em>Questions.</em> How were workers distributed across departments? Which sector employed most workers? Were there geographic patterns?</p>
+    <p><em>Sources.</em> Bertin's tabulated data, department areas from historical sources and package data, and French administrative maps from the Institut Geographique National.</p>
+    <p><em>Structure.</em> Worker counts in Agriculture, Industry, and Commerce for 89 departments plus Paris (Corsica excluded).</p>
+  </introduction>
+
+  <section xml:id="sec-bertin-classic">
+    <title>Bertin's classic book</title>
+    <p><em>Semiology of Graphics</em> is foundational in graphics theory and practice. Its long chapter on this dataset demonstrates many alternative displays of a single table and seeks general principles for visual representation.</p>
+    <p>The chapter includes many carefully drawn graphics but comparatively few explicit analytical conclusions. Much of the emphasis is on display form and visual method rather than on extracting substantive domain findings.</p>
+
+    <figure xml:id="fig-bertagp">
+      <caption>Departments in France in 1954 where agricultural workers made up at least 40% of the workforce.</caption>
+      <image source="images/Bertagp-1.png"/>
+    </figure>
+
+    <p>A broad east-west contrast is visible, roughly aligned with known French regional narratives around the Le Havre-Marseille line.</p>
+  </section>
+
+  <section xml:id="sec-bertin-many-graphics">
+    <title>Bertin's many graphics of the French workforce data</title>
+    <p>Bertin presents around one hundred views of the same data, including many maps plus charts such as bar charts, scatterplots, and histograms. He repeatedly critiques displays that are less effective and emphasizes that different forms do not convey equal analytical value.</p>
+    <p>A recurring substantive conclusion in Bertin's narrative is the positive association between Industry and Commerce across departments.</p>
+  </section>
+
+  <section xml:id="sec-bertin-viewing-today">
+    <title>Viewing the data today</title>
+    <p>Modern statistical graphics make distributional structure and inter-variable association easier to assess directly. Common scales and explicit distribution displays help contextualize department-level values.</p>
+
+    <figure xml:id="fig-berthists">
+      <caption>Histograms of the numbers working in the three sectors in 1954.</caption>
+      <image source="images/Berthists-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-bertscats">
+      <caption>Pairwise scatterplots of the numbers in thousands working in the three sectors in France in 1954.</caption>
+      <image source="images/Bertscats-1.png"/>
+    </figure>
+
+    <p>The Industry-Commerce relationship is immediately visible in scatterplots, while Agriculture appears comparatively weakly related to either of the other two sectors.</p>
+  </section>
+
+  <section xml:id="sec-bertin-geographic-patterns">
+    <title>Are there other geographic patterns?</title>
+    <p>Maps can suggest many possible spatial structures, but pattern-finding should remain cautious because maps make it easy to over-interpret. Still, detected structure can motivate useful follow-up checks.</p>
+
+    <figure xml:id="fig-bertline">
+      <caption>Choropleth map of percentage of agricultural workers in France in 1954.</caption>
+      <image source="images/BertLine-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-bertcart">
+      <caption>Cartogram of working population size shaded by the percentage of agricultural workers in France in 1954.</caption>
+      <image source="images/BertCart-1.png"/>
+    </figure>
+
+    <p>The cartogram emphasizes high-workforce urban and industrial zones, giving a complementary view to the geographic choropleth.</p>
+  </section>
+
+  <section xml:id="sec-bertin-density">
+    <title>Density of the workforce by area</title>
+    <p>Population-density maps are highly sensitive to extreme departments (notably Paris/Seine), so scale choices strongly influence what is visible.</p>
+
+    <figure xml:id="fig-bertdens">
+      <caption>Maps of the density of the total working population in thousands per square kilometre in France in 1954, all departments (left), excluding Seine and Paris (right).</caption>
+      <image source="images/Bertdens-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-bertdensl">
+      <caption>Maps of the log of population density of the total working population in thousands per square kilometre in France in 1954, default scale (left), more detailed scale (right).</caption>
+      <image source="images/BertdensL-1.png"/>
+    </figure>
+
+    <p>Log scaling can recover structure hidden by extreme values while preserving all regions in a single map view.</p>
+  </section>
+
+  <section xml:id="sec-bertin-comments">
+    <title>Comments on Bertin (with hindsight)</title>
+    <p>Bertin's contribution remains central to graphics thinking, especially in theory and visual language. Reworking his examples with contemporary tools highlights both the depth of his insights and the practical value of combining theoretical framing with explicit data-driven conclusions.</p>
+    <p><em>Answers.</em> Sector totals were of similar magnitude; agricultural share was relatively higher in western France; Industry and Commerce were positively related.</p>
+    <p><em>Further questions.</em> How have these sectoral patterns changed since 1954? Which additional sectors matter most in later periods?</p>
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>Graphics are best for structure rather than exact lookup of many individual values.</p></li>
+      <li><p>Scatterplots expose bivariate association effectively.</p></li>
+      <li><p>Removing or transforming extreme values can reveal the main structure.</p></li>
+    </ul>
+  </section>
 </chapter>
