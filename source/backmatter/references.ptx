@@ -137,4 +137,73 @@
 
   <!-- titanic:2021 -->
   <biblio xml:id="titanic-2021" type="raw">Encyclopedia Titanica. <url href="https://www.encyclopedia-titanica.org"/>. 2021.</biblio>
+
+  <!-- bundesWL:2021 -->
+  <biblio xml:id="bundesWL-2021" type="raw">Statistisches Bundesamt. Der Bundeswahlleiter. <url href="https://www.bundeswahlleiter.de"/>. 2021.</biblio>
+
+  <!-- valentin:2022 -->
+  <biblio xml:id="valentin-2022" type="raw">Valentin, Francois. Valentin Twitter. <url href="https://twitter.com/Valen10Francois/"/>. 2022.</biblio>
+
+  <!-- rosling:2013 -->
+  <biblio xml:id="rosling-2013" type="raw">Rosling, Hans. Gapminder. <url href="http://www.gapminder.org"/>. 2013.</biblio>
+
+  <!-- mpidr:2022 -->
+  <biblio xml:id="mpidr-2022" type="raw">University of California, Berkeley and Max Planck Institute for Demographic Research. Human Mortality Database. <url href="https://www.mortality.org"/>. 2022.</biblio>
+
+  <!-- imdb:2022 -->
+  <biblio xml:id="imdb-2022" type="raw">IMDb. Internet Movie Database. <url href="https://datasets.imdbws.com"/>. 2022.</biblio>
+
+  <!-- wickham:2011 -->
+  <biblio xml:id="wickham-2011" type="raw">Wickham, Hadley, Cook, Di, Hofmann, Heike, and Buja, Andreas. Graphical inference for Infovis. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 16(6):973&#8211;979, 2011.</biblio>
+
+  <!-- stigler:1977 -->
+  <biblio xml:id="stigler-1977" type="raw">Stigler, Stephen. Do Robust Estimators Work with Real Data? <em>Annals of Statistics</em>, 5(6):1055&#8211;1098, 1977.</biblio>
+
+  <!-- stigler:2019 -->
+  <biblio xml:id="stigler-2019" type="raw">Stigler, Stephen. Data Have a Limited Shelf Life. <em>Harvard Data Science Review</em>, 1(2), 2019.</biblio>
+
+  <!-- michelson:1880 -->
+  <biblio xml:id="michelson-1880" type="raw">Michelson, Albert. Experimental Determination of the Velocity of Light made at the U.S. Naval Academy, Annapolis. <em>Astronomical papers</em>, 1:109&#8211;145, 1880. U.S. Nautical Almanac Office.</biblio>
+
+  <!-- meng:2021 -->
+  <biblio xml:id="meng-2021" type="raw">Meng, Xiao-Li. Enhancing (publications on) data quality: Deeper data minding and fuller data confession. <em>JRSS A</em>, 184:1161&#8211;1175, 2021.</biblio>
+
+  <!-- hueb:2020 -->
+  <biblio xml:id="hueb-2020" type="raw">Huebner, Marianne, Vach, Werner, le Cessie, Saskia, Schmidt, Carsten Oliver, and Lusa, Lara. Hidden analyses: a review of reporting practice and recommendations for more transparent reporting of initial data analyses. <em>BMC Medical Research Methodology</em>, 1&#8211;10, 2020.</biblio>
+
+  <!-- gelman:2020 -->
+  <biblio xml:id="gelman-2020" type="raw">Gelman, Andrew, Hill, Jennifer, and Vehtari, Aki. <pubtitle>Regression and Other Stories</pubtitle>. Cambridge University Press, Cambridge, 2020.</biblio>
+
+  <!-- holton:1978 -->
+  <biblio xml:id="holton-1978" type="raw">Holton, Gerald. Subelectrons, Presuppositions, and the Millikan&#8211;Ehrenhaft Dispute. <em>Historical Studies in the Physical Sciences</em>, 9:161&#8211;224, 1978.</biblio>
+
+  <!-- ehrenhaft:1910 -->
+  <biblio xml:id="ehrenhaft-1910" type="raw">Ehrenhaft, Felix. &#220;ber eine neue Methode zur Messung von Elektrizit&#228;tsmengen, die kleiner zu sein scheinen als die Ladung des einwertigen Wasserstoff-ions oder Elektrons und von dessen Vielfachen abweichen. <em>Physik. Zeitschr.</em>, XI:940&#8211;952, 1910.</biblio>
+
+  <!-- wb:2020 -->
+  <biblio xml:id="wb-2020" type="raw">Worldbank. World Bank Open Data. <url href="https://data.worldbank.org"/>. 2020.</biblio>
+
+  <!-- giordani:2020 -->
+  <biblio xml:id="giordani-2020" type="raw">Giordani, P., Ferraro, M., and Martella, F. <pubtitle>An Introduction to Clustering with R</pubtitle>. Springer, Singapore, 2020.</biblio>
+
+  <!-- corlett:2020 -->
+  <biblio xml:id="corlett-2020" type="raw">Corlett, Tatsuya, Stavnichuk, Mariya, and Komarova, Svetlana. Population analysis of space travelers. <em>Life Sciences in Space Research</em>, 27:1&#8211;5, 2020.</biblio>
+
+  <!-- tidyt:2020b -->
+  <biblio xml:id="tidyt-2020b" type="raw">rfordatascience. Astronaut Database. <url href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-07-14"/>. 2020.</biblio>
+
+  <!-- asensio:2021a -->
+  <biblio xml:id="asensio-2021a" type="raw">Asensio, Omar, Apablaza, Camila, Lawson, M. Cade, and Walsh, Sarah. A field experiment on workplace norms and electric vehicle charging etiquette. <em>Journal of Industrial Ecology</em>, 2021.</biblio>
+
+  <!-- sackett:1979 -->
+  <biblio xml:id="sackett-1979" type="raw">Sackett, David and Gent, Michael. Controversy in counting and attributing events in clinical trials. <em>New England Journal of Medicine</em>, 301:1410&#8211;1412, 1979.</biblio>
+
+  <!-- thau:2021 -->
+  <biblio xml:id="thau-2021" type="raw">Thau, Mads, Mikkelsen, Maria Falk, Hjortskov, Morten, and Pedersen, Mogens Jin. Question order bias revisited: A split-ballot experiment on satisfaction with public services among experienced and professional users. <em>Public Administration</em>, 99(1):189&#8211;204, 2021.</biblio>
+
+  <!-- wright:2022 -->
+  <biblio xml:id="wright-2022" type="raw">Wright, Kevin. agridat. R package version 1.21, 2022. <url href="https://CRAN.R-project.org/package=agridat"/></biblio>
+
+  <!-- singervine:2020 -->
+  <biblio xml:id="singervine-2020" type="raw">Singer-Vine, Jeremy. Data is Plural. <url href="https://tinyletter.com/data-is-plural"/>. 2020.</biblio>
 </references>
