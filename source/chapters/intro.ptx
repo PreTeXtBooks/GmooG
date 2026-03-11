@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-intro">
   <title>Introduction</title>
+  <introduction>
   <epigraph>
     <p>It is better to be looked over than overlooked.</p>
     <attribution>Mae West</attribution>
   </epigraph>
-  <introduction>
     <p>Graphics are important: they influence people's opinions and they are memorable. Where do people learn how to interpret and draw graphics? There are many books, there is a lot on the web, there are many examples in the media. Unlike most of the books on graphics this one is about interpreting graphics rather than about drawing them. It is also more about exploratory graphics than presentation graphics.</p>
 
     <p>Presentation graphics, those in published material, in reports, and, of course, in presentations, are for conveying known information, attracting, impressing, and influencing viewers. A single presentation graphic, particularly if it appears on television, may be seen by millions of viewers. These graphics should be carefully designed and reproduced and should convey their message clearly and crisply. Viewers expect to see something immediately in a presentation graphic.</p>
