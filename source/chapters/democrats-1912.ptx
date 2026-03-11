@@ -85,6 +85,8 @@
 
     <p><xref ref="fig-candvs2"/> is a revised version of <xref ref="fig-candvs"/> restricted to the more important candidates.  A horizontal dashed line marking the level of two-thirds support that was needed to win the nomination has been added, as has a horizontal dotted line marking 50% support.  Here are the key developments.</p>
 
+<subsection>
+
     <p>1. On the 10th ballot, New York, with 90 delegates, the largest number of any state, switched allegiance from Harmon to Clark, the front runner.  This gave Clark an overall majority and it might have been expected that other states would follow.  The supporters of Wilson and Underwood&#8212;a third candidate with hopes of being selected if Clark and Wilson deadlocked&#8212;held firm.  They were strengthened by a speech by the three-time Democratic candidate for the Presidency, William Jennings Bryan, just before the 14th ballot.  Bryan criticised Tammany Hall, the corrupt Democratic political machine in New York, and rallied the progressive wing of the party.</p>
 
     <figure xml:id="fig-candvs2a">
@@ -131,7 +133,8 @@
     </figure>
 
     <p>Some of these features, possibly the second and definitely the third, would be difficult to identify just from the graphic and without background information.  Graphical analysis benefits from an understanding of what is being represented.  Dramatic features are easy to spot, but still have to be interpreted.  Descriptions of what took place indicate additional places to look in the graphic.  Both approaches are valuable and they complement one another.  Good graphics can provide summarising overviews, while reports flesh out the details.  Neither alone is enough.</p>
-  </section>
+  </subsection>
+</section>
 
   <section xml:id="sec1912Dem4">
     <title>When did the ballots actually take place?</title>
