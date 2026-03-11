@@ -1,5 +1,173 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-sort-order">
-  <title>Sort Order</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Ordering, sorting, and arranging</title>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "When Laura was here I had the records arranged alphabetically; before that I had them filed in
+        chronological order."
+      </p>
+      <p>--- Nick Hornby, <em>High Fidelity</em></p>
+    </blockquote>
+    <p>
+      Ordering ranks items by a criterion, sorting groups items (often with ordering inside groups), and arranging
+      includes broader layout choices that may include subjective judgement.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-order-what">
+    <title>What gets ordered, sorted, arranged?</title>
+
+    <subsection xml:id="sec-order-cases">
+      <title>Cases</title>
+      <p>
+        Case order influences readability, overlap, and interpretation. Useful orderings include temporal, grouped,
+        and multivariate sorts, with explicit handling of ties and unique IDs for reproducibility.
+      </p>
+
+      <figure xml:id="fig-comnurgx">
+        <image source="images/comNurgX-1.png"/>
+        <caption><p>Nurgalieva twins' marathon performances on two y-scales.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-order-categorical-levels">
+      <title>Levels of categorical variables</title>
+      <p>
+        Default alphabetical order is rarely optimal for interpretation. Reordering categories by chronology, size, or
+        other meaningful criteria often makes patterns much easier to detect.
+      </p>
+
+      <figure xml:id="fig-barboard">
+        <image source="images/barBoard-1.png"/>
+        <caption><p>Titanic boarding ports in default versus journey order.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-reg4xy">
+        <image source="images/reg4XY-1.png"/>
+        <caption><p>Gapminder regions by country count and by population.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-swsuvx-1">
+        <image source="images/swSUVx-1.png"/>
+        <caption><p>Vehicle categories in default order.</p></caption>
+      </figure>
+      <figure xml:id="fig-swsuvx-2">
+        <image source="images/swSUVx-2.png"/>
+        <caption><p>Vehicle categories in revised informative order.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-order-variables">
+      <title>Variables</title>
+      <p>
+        Variable order in datasets and displays affects attention and interpretation. Grouping related variables and
+        placing key identifiers prominently improves workflow and plot decoding.
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-order-within-graphics">
+    <title>Ordering and sorting within graphics</title>
+
+    <subsection xml:id="sec-order-boxplots">
+      <title>Boxplots</title>
+      <p>
+        Boxplot group order can be based on medians, maxima, or external criteria; each supports different
+        comparisons. Changing event order can reveal distributional differences more clearly.
+      </p>
+
+      <figure xml:id="fig-decbox1">
+        <image source="images/decBox1-1.png"/>
+        <caption><p>Decathlon event-point boxplots in event order.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-order-facets">
+      <title>Sorting into groups and faceting plots</title>
+      <p>
+        Faceting combines grouping and arrangement; ordering facet panels and internal bars together can make
+        multilevel structure much more legible.
+      </p>
+
+      <figure xml:id="fig-khlvx">
+        <image source="images/khLVX-1.png"/>
+        <caption><p>Katinka Hosszu event profile with events ordered by stroke and distance.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-order-mosaicplots">
+      <title>Mosaicplots</title>
+      <p>
+        Variable order and level order strongly affect mosaic interpretation. Choosing an ordering that supports the
+        story can convert a difficult display into an informative one.
+      </p>
+
+      <figure xml:id="fig-titanboth">
+        <image source="images/titanBoth-1.png"/>
+        <caption><p>Titanic survival mosaicplots with purposeful ordering choices.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-order-pcp">
+      <title>Parallel coordinate plots</title>
+      <p>
+        PCP readability depends heavily on axis order, category order, case order, and overplot strategy. Reordering
+        can dramatically reduce crossings and reveal structure.
+      </p>
+
+      <figure xml:id="fig-decranks">
+        <image source="images/decRanks-1.png"/>
+        <caption><p>Decathlon event-rank score profiles with events ordered by range.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-pcp1">
+        <image source="images/pcp1-1.png"/>
+        <caption><p>Decathlon competitor PCP with events ordered by median points.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-palpcps-1">
+        <image source="images/palpcps-1.png"/>
+        <caption><p>Palmer penguin PCP before reordering.</p></caption>
+      </figure>
+      <figure xml:id="fig-palpcps-2">
+        <image source="images/palpcps-2.png"/>
+        <caption><p>Palmer penguin PCP after reordering.</p></caption>
+      </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-order-count">
+    <title>Numbers of orderings and sortings</title>
+
+    <p>
+      Even modest categorical structures generate many possible orderings. There is rarely a single best ordering;
+      informative alternatives should be explored.
+    </p>
+  </section>
+
+  <section xml:id="sec-order-arranging-graphics">
+    <title>Arranging graphics</title>
+
+    <p>
+      Arrangement in ensembles and facets is itself an analytical decision. Panel order, axis alignment, and
+      consistent scaling all influence what comparisons are easy to make.
+    </p>
+
+    <figure xml:id="fig-puffmosx">
+      <image source="images/puffmosX-1.png"/>
+      <caption><p>Faceted shearwater barcharts with deliberate facet ordering.</p></caption>
+    </figure>
+
+    <subsection xml:id="sec-order-main-points">
+      <title>Main points</title>
+      <ul>
+        <li><p>Cases, categorical levels, and variables can all be ordered and sorted.</p></li>
+        <li><p>Ordering strongly affects boxplots, facets, mosaicplots, and PCPs.</p></li>
+        <li><p>Meaningful orderings generally outperform default alphabetical order.</p></li>
+        <li><p>No single best ordering exists; alternatives can reveal different information.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

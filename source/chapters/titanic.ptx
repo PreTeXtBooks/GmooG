@@ -1,5 +1,142 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-titanic">
-  <title>Titanic</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>The Titanic Disaster</title>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "I cannot imagine any condition which would cause a ship to founder. I cannot conceive of any vital disaster
+        happening to this vessel. Modern shipbuilding has gone beyond that."
+      </p>
+      <p>--- Captain Smith, speaking in 1907</p>
+    </blockquote>
+    <p>
+      <em>Background.</em> RMS Titanic sank in April 1912 on its maiden voyage with major loss of life, amplified by
+      insufficient lifeboat capacity.
+    </p>
+    <p>
+      <em>Questions.</em> Who travelled on the Titanic? Did women and children have better survival chances? What
+      about the crew? Why did so many die?
+    </p>
+    <p><em>Sources.</em> Encyclopedia Titanica records.</p>
+    <p><em>Structure.</em> 2,208 cases with 16 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-titanic-travellers">
+    <title>Who travelled on the Titanic?</title>
+
+    <p>
+      The route ran Belfast-Southampton-Cherbourg-Queenstown before crossing the Atlantic. Richer modern records
+      include names, ages, sex, class/crew area, and partial fare information.
+    </p>
+
+    <figure xml:id="fig-titanports">
+      <image source="../../pngImages/Tports.png"/>
+      <caption><p>Belfast to Southampton to Cherbourg to Queenstown route map.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-titanboard">
+      <image source="images/titanBoard-1.png"/>
+      <caption><p>Numbers boarding the Titanic by port.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-titanbg">
+      <image source="images/titanBG-1.png"/>
+      <caption><p>Numbers boarding at each port by sex.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-titanbc">
+      <image source="images/titanBC-1.png"/>
+      <caption><p>Numbers boarding by sex and passenger/crew status.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-titanbcla">
+      <image source="images/titanBcla-1.png"/>
+      <caption><p>Passenger boarding patterns by sex and class.</p></caption>
+    </figure>
+
+    <p>
+      Southampton dominated embarkation totals; Queenstown boarding was largely third-class and strongly Irish.
+    </p>
+
+    <figure xml:id="fig-titanbn">
+      <image source="images/titanBn-1.png"/>
+      <caption><p>Passenger nationality by port of boarding.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-titancln">
+      <image source="images/titanCln-1.png"/>
+      <caption><p>Passenger nationality by class.</p></caption>
+    </figure>
+
+    <p>
+      North Americans were concentrated in first class; several smaller nationality groups were concentrated in third
+      class, consistent with migration travel patterns.
+    </p>
+  </section>
+
+  <section xml:id="sec-titanic-survival">
+    <title>Which groups had high survival rates?</title>
+
+    <figure xml:id="fig-titancrew">
+      <image source="images/titanCrew-1.png"/>
+      <caption><p>Survival rates by passenger class and crew department.</p></caption>
+    </figure>
+
+    <p>
+      Deck crew had very high survival, consistent with lifeboat-assignment duties. Restaurant staff had especially
+      low survival.
+    </p>
+
+    <figure xml:id="fig-titanpass">
+      <image source="images/titanPass-1.png"/>
+      <caption><p>Passenger survival rates by sex and class.</p></caption>
+    </figure>
+
+    <p>
+      Female passenger groups outperformed male groups across classes; second-class males had especially low survival.
+    </p>
+
+    <figure xml:id="fig-titanage">
+      <image source="images/titanAge-1.png"/>
+      <caption><p>Age density estimates by class/crew grouping.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-titanasurv">
+      <image source="images/titanASurv-1.png"/>
+      <caption><p>Survival rates by age.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-titanagesc">
+      <image source="images/titanAgeSC-1.png"/>
+      <caption><p>Survival rates by age, sex, and class/crew grouping.</p></caption>
+    </figure>
+
+    <p>
+      Age alone had limited effect apart from higher child survival; sex and class/crew role were much stronger
+      determinants.
+    </p>
+
+    <introduction>
+      <p>
+        <em>Answers.</em> First class was heavily North American; many smaller-nationality groups travelled mainly
+        third class. Survival depended most on class/role and sex. Nearly all first-class women survived, and deck
+        crew had by far the best crew survival, reflecting lifeboat operations.
+      </p>
+      <p>
+        <em>Further questions.</em> How full were lifeboats? How many additional lives were possible with full
+        occupancy? Are comparable datasets available for other maritime disasters?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-titanic-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Horizontal bar charts are essential with many categories and long labels.</p></li>
+        <li><p>Doubledecker plots compare rates effectively across groups of unequal size.</p></li>
+        <li><p>Density estimates work well for grouped distribution comparisons.</p></li>
+        <li><p>Smooths summarize irregular scatter patterns effectively.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

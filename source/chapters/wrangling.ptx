@@ -1,5 +1,166 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-wrangling">
   <title>Wrangling</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "He did not arrive at this conclusion by the decent process of quiet, logical deduction, nor yet by the
+        blinding flash of glorious intuition, but by the shoddy, untidy process halfway between the two by which one
+        usually gets to know things."
+      </p>
+      <p>--- Margery Allingham, <em>Death of a Ghost</em></p>
+    </blockquote>
+  </introduction>
+
+  <section xml:id="sec-wrang-what-why">
+    <title>Data wrangling: what and why</title>
+
+    <p>
+      Data wrangling covers cleaning, organizing, and restructuring data for analysis. Real datasets almost never
+      arrive in analysis-ready form and typically require iterative checking, correction, transformation, and
+      aggregation.
+    </p>
+  </section>
+
+  <section xml:id="sec-wrang-clean-transform">
+    <title>Data cleaning and transforming</title>
+
+    <subsection xml:id="sec-wrang-errors">
+      <title>Errors, typos, outliers, missing values</title>
+      <p>
+        Errors can be obvious, emerge from graphics, or appear only after deeper analysis. Missing values may be coded
+        inconsistently and require explicit recoding before reliable work is possible.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-wrang-transform-combine">
+      <title>Transforming and combining variables</title>
+      <p>
+        Transformations can expose structure and improve comparability; combining variables can reveal relationships
+        not visible in single-variable views. Standardization is especially important for multi-variable displays like
+        parallel coordinate plots.
+      </p>
+
+      <figure xml:id="fig-flighttx">
+        <image source="images/flighttX-1.png"/>
+        <caption><p>Spaceflight mission times on linear and log scales.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-olyaa">
+        <image source="images/olyAA-1.png"/>
+        <caption><p>Percentage differences in Olympic gold-medal performances versus recent baselines.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-newcty">
+        <image source="images/newctY-1.png"/>
+        <caption><p>Newcomb speed-of-light estimates by sequence (left) and by date (right).</p></caption>
+      </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-wrang-restructure">
+    <title>Restructuring: subsetting, grouping, aggregating</title>
+
+    <p>
+      Subsetting, grouping, and aggregation generate different analytical views and summaries. Hierarchical structures
+      are manageable, but multiple cross-cutting factors create many valid aggregation choices.
+    </p>
+
+    <figure xml:id="fig-comcatsx">
+      <image source="images/comCatsX-1.png"/>
+      <caption><p>Comrades Marathon finishers by age group and sex over time.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-wrang-naming">
+    <title>Naming, renaming and reclassifying</title>
+
+    <p>
+      Wrangling creates many intermediate datasets and derived variables. Clear naming, explicit recoding, and careful
+      type handling reduce mistakes and make workflows easier to audit and maintain.
+    </p>
+  </section>
+
+  <section xml:id="sec-wrang-layers">
+    <title>Wrangling for layered graphics</title>
+
+    <p>
+      Layered graphics benefit from explicit data preparation for each layer. Different layers can use full data,
+      subsets, summaries, models, or related datasets, provided scales are aligned.
+    </p>
+
+    <figure xml:id="fig-histlayers">
+      <image source="images/histlayers-1.png"/>
+      <caption><p>Layer-by-layer build-up of a histogram with density overlays.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-histlayers2">
+      <image source="images/histlayers2-1.png"/>
+      <caption><p>Histogram with two superimposed density estimates.</p></caption>
+    </figure>
+
+    <p>
+      Layer order matters: background and guides first, then data and model summaries, then annotations. Transparency,
+      line weight, and ordering all affect interpretability.
+    </p>
+
+    <figure xml:id="fig-socdfx">
+      <image source="images/socDfX-1.png"/>
+      <caption><p>Draw-rate series for top football tiers in England, Spain, and Italy.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-astgy">
+      <image source="images/astgY-1.png"/>
+      <caption><p>Age by mission year with smooths and confidence intervals.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-flightx">
+      <image source="images/flightX-1.png"/>
+      <caption><p>Logged spaceflight mission times by year and nationality.</p></caption>
+    </figure>
+
+    <subsection xml:id="sec-wrang-wormchart-layers">
+      <title>The layers of a league wormchart</title>
+      <figure xml:id="fig-worm54">
+        <image source="images/worm54-1.png"/>
+        <caption><p>Wormchart for the 1954-55 English League Championship season.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-wormlayers">
+        <image source="images/wormlayers-1.png"/>
+        <caption><p>Layer-by-layer construction of the 1954-55 wormchart.</p></caption>
+      </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-wrang-merge-repro">
+    <title>Putting datasets together and reproducibility</title>
+
+    <subsection xml:id="sec-wrang-reading-merging">
+      <title>Reading in and merging datasets</title>
+      <p>
+        Real projects often combine multiple files and formats. Merging requires robust keys, harmonized codes, and
+        consistent definitions across sources.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-wrang-reproducibility">
+      <title>Reproducibility</title>
+      <p>
+        Reproducibility is strongest when both raw data and full wrangling/analysis code are available. Reporting
+        should clearly document reconstruction steps, assumptions, and omissions.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-wrang-main-points">
+      <title>Main points</title>
+      <ul>
+        <li><p>Data cleaning continues throughout an investigation, not just at the start.</p></li>
+        <li><p>Subsetting, grouping, and aggregation create many valid analytical views.</p></li>
+        <li><p>Layered data structures support clear and flexible graphic construction.</p></li>
+        <li><p>Wrangling is an essential foundation for trustworthy graphical analysis.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

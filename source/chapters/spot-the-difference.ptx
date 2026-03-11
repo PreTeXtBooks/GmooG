@@ -1,5 +1,269 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-spot-the-difference">
-  <title>Spot the Difference</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Varieties of plots, developing plots</title>
+
+  <introduction>
+    <blockquote>
+      <p>"I repeat, as long as you have studied the theory hard enough."</p>
+      <p>--- from <em>Harry Potter and the Order of the Phoenix</em></p>
+    </blockquote>
+    <p>
+      There is a wide variety of plot types available (e.g., @holtz:2018 or @schwab:2021). Each plot type can also
+      be drawn in many different ways: varying size, aspect ratio, scales, colour, symbols, styles, whatever. A key
+      message is that drawing a variety of plots, and varying the plots drawn, can provide more insights than
+      searching for a single "optimal" display.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-varying-plots">
+    <title>Varying various plots</title>
+    <p>
+      Approaches vary: some prefer to study one graphic deeply before moving on; others scan many graphics then return
+      to selected ones. Being swamped by too many graphics can be as unsatisfactory as not having enough.
+    </p>
+
+    <p>
+      Not all graphics are the same. There are different plot types, different kinds of displayed data, and different
+      uses for graphics: exploration, explanation, and exposition. Accordingly, the same display may be interpreted in
+      different ways depending on context and on what kind of data it represents.
+    </p>
+
+    <figure xml:id="fig-s100mscat">
+      <image source="images/s100mScat-1.png"/>
+      <caption><p>Four different kinds of scatterplot for Olympic 100 m freestyle gold/silver data.</p></caption>
+    </figure>
+
+    <p>
+      These four views show different aspects of the same data: time series by year, men-versus-women winner
+      comparisons, mean-difference structure for medal gaps, and residual-versus-fitted structure for a simple model.
+      The displays reveal features that would be easy to miss if only one plot were inspected.
+    </p>
+
+    <figure xml:id="fig-finch2box">
+      <image source="images/finch2box-1.png"/>
+      <caption><p>Boxplots of beak measurements (above) and beak height by species (below) on Isabela Island.</p></caption>
+    </figure>
+
+    <p>
+      A set of boxplots in parallel could represent multiple variables or one variable conditioned on a grouping
+      variable. It is important to indicate what kind of plot is being shown. The danger lies in glancing quickly at
+      isolated graphics and not checking what they display.
+    </p>
+  </section>
+
+  <section xml:id="sec-ensembles-of-plots">
+    <title>Ensembles of plots</title>
+    <p>
+      Thanks to trellis plots (@becker:1996), lattice plots (@sarkar:2008), and faceting (@wilkinson:1999 and
+      @wickham:2016), displays of small multiples are well understood. By comparison, ensembles made up of different
+      types of plots have been less discussed. @unwin:2018 suggest that the key element is coherence: having a
+      coherent theme, coherent alignment, coherent look, and consistent scales and formatting.
+    </p>
+
+    <figure xml:id="fig-commfmedx">
+      <image source="images/comMFmedX-1.png"/>
+      <caption><p>Median times for men and women for up/down Comrades races and numbers finishing.</p></caption>
+    </figure>
+
+    <p>
+      In this ensemble, the graphics are aligned horizontally and vertically, as are the scales. Colours above and
+      below refer to different grouping structures.
+    </p>
+
+    <figure xml:id="fig-qlensx">
+      <image source="images/qlEnsX-1.png"/>
+      <caption><p>Complex ensemble comparing dropout rates, initial scores, and quality-of-life question means.</p></caption>
+    </figure>
+
+    <p>
+      This ensemble compares three distinct information sets with different plot forms: dropout proportions,
+      distributional comparisons for initial measurements, and ten-question means over time by group.
+    </p>
+  </section>
+
+  <section xml:id="sec-early-vs-later">
+    <title>Differences between early drafts and later graphics</title>
+    <p>
+      Quickly drawn default graphics can reveal valuable information. Taking time to improve them can make information
+      easier to see and uncover additional structure. It is instructive to compare pairs of initial and better graphics
+      to study what changed and why.
+    </p>
+
+    <p>
+      "Initial" often means after some data cleaning; first graphics frequently reveal further data problems that
+      require additional wrangling. There can be many early and many later graphics. There is no final graphic; there
+      are always potential alternatives.
+    </p>
+
+    <subsection xml:id="sec-early-later-1912">
+      <title>1912 Democratic Convention</title>
+      <figure xml:id="fig-candvsx">
+        <image source="images/candvsX-1.png"/>
+        <caption><p>Initial convention-voting plot.</p></caption>
+      </figure>
+      <figure xml:id="fig-candvsx2">
+        <image source="images/candvsX2-1.png"/>
+        <caption><p>Amended convention-voting plot with focused design choices.</p></caption>
+      </figure>
+      <p>
+        The first plot shows many candidates but only a few serious ones, Clark's early lead, Wilson's steady gain,
+        and a decisive breakthrough. The second plot emphasises key changes and timing around adjournments.
+      </p>
+      <p>Changes include:</p>
+      <ol>
+        <li><p>The simple order of ballots on the horizontal scale was replaced by estimated ballot times.</p></li>
+        <li><p>Only candidates receiving over 35 votes in at least one ballot were included, reducing clutter from minor candidates.</p></li>
+        <li><p>The plot background was coloured white when the convention was in session and grey when it was not.</p></li>
+        <li><p>The aspect ratio was changed to 0.5; time series are generally better wider than tall.</p></li>
+        <li><p>The dataset was expanded to include ballots where candidates received zero votes so lines were drawn correctly.</p></li>
+        <li><p>Vote changes were shown as vertical lines at ballot times rather than sloping lines between ballots.</p></li>
+        <li><p>Points were drawn for each ballot to emphasise when and how often ballots took place.</p></li>
+        <li><p>Horizontal lines were added at two-thirds support and at 50 percent support.</p></li>
+        <li><p>A colour-blind scale was used instead of the default colour scale.</p></li>
+        <li><p>Candidate plotting order and legend order were changed to make overlap and line identification easier.</p></li>
+      </ol>
+    </subsection>
+
+    <subsection xml:id="sec-early-later-gapminder">
+      <title>Gapminder life expectancies</title>
+      <figure xml:id="fig-gaplex-1">
+        <image source="images/gapLEX-1.png"/>
+        <caption><p>All-country life expectancy display.</p></caption>
+      </figure>
+      <figure xml:id="fig-gaplex-2">
+        <image source="images/gapLEX-2.png"/>
+        <caption><p>Faceted regional life expectancy display.</p></caption>
+      </figure>
+      <p>
+        The initial display shows long-run increase and occasional sharp changes. The faceted version reveals stronger
+        regional structure and local outliers.
+      </p>
+      <ol>
+        <li><p>Countries coloured by region.</p></li>
+        <li><p>Regions plotted separately to reveal local differences.</p></li>
+        <li><p>Some small incomplete-country series excluded.</p></li>
+      </ol>
+    </subsection>
+
+    <subsection xml:id="sec-early-later-electric">
+      <title>Electric car charging</title>
+      <figure xml:id="fig-elecstat12">
+        <image source="images/elecStat12-1.png"/>
+        <caption><p>Default and amended displays of charging-station usage over time.</p></caption>
+      </figure>
+      <p>
+        The first plot shows late starts and low-use stations. The second plot highlights phase boundaries and
+        location-level usage differences worth investigating.
+      </p>
+      <ol>
+        <li><p>A high aspect ratio was used for the amended plot to show station-level points more clearly.</p></li>
+        <li><p>Charging stations were sorted by location to compare neighbouring-station use.</p></li>
+        <li><p>Locations were ordered by first use to match study development.</p></li>
+        <li><p>Charging stations were ordered within location to show installation development.</p></li>
+        <li><p>Facility types were coloured to highlight group differences.</p></li>
+        <li><p>A dashed red line marked the switch from test phase to analysis phase.</p></li>
+        <li><p>The vertical axis label and individual station IDs were dropped; location ID labels were added.</p></li>
+        <li><p>Date formatting and labelling were improved for context; the uninformative horizontal-axis label was removed.</p></li>
+      </ol>
+    </subsection>
+
+    <subsection xml:id="sec-early-later-gay-rights">
+      <title>Gay rights</title>
+      <figure xml:id="fig-gaycix">
+        <image source="images/gayCIX-1.png"/>
+        <caption><p>State support with confidence intervals: default and ordered versions.</p></caption>
+      </figure>
+      <p>
+        The amended plot clarifies regional and within-region structure, highlights the 50 percent threshold, and
+        improves comparability.
+      </p>
+      <ol>
+        <li><p>States were sorted by Census Bureau region so local comparisons are easier.</p></li>
+        <li><p>States were ordered by estimate within region to facilitate comparison.</p></li>
+        <li><p>Estimates were coloured by region to differentiate groups.</p></li>
+        <li><p>Points were drawn larger and intervals drawn as straight lines without end bars to reduce clutter.</p></li>
+        <li><p>Horizontal scaling was changed to percentages and limits set to [0,100%], with breakpoints including 50%.</p></li>
+        <li><p>Axis-name labels were dropped to leave more space for the graphic.</p></li>
+      </ol>
+    </subsection>
+
+    <subsection xml:id="sec-early-later-spaceflight">
+      <title>Human space flight</title>
+      <figure xml:id="fig-flighttz">
+        <image source="images/flighttz-1.png"/>
+        <caption><p>Mission time versus year: raw and log-transformed comparison.</p></caption>
+      </figure>
+      <p>
+        The log-scale display reveals structure in short and long missions and clarifies programme-related groupings.
+      </p>
+      <ol>
+        <li><p>Log transformation used to reveal more structure.</p></li>
+        <li><p>Breaks chosen for interpretable time periods.</p></li>
+        <li><p>Space-station programme colouring used for subgroup exploration.</p></li>
+      </ol>
+    </subsection>
+
+    <subsection xml:id="sec-early-later-euro2020">
+      <title>Euro 2020</title>
+      <figure xml:id="fig-uefa20x">
+        <image source="images/uefa20X-1.png"/>
+        <caption><p>Default faceted bar display of players' league countries.</p></caption>
+      </figure>
+      <figure xml:id="fig-uefa20y">
+        <image source="images/uefa20Y-1.png"/>
+        <caption><p>Amended display with ordering, grouping, and simplified guides.</p></caption>
+      </figure>
+      <p>
+        The amended display supports easier team and league pattern identification by ordering and grouping choices.
+      </p>
+      <ol>
+        <li><p>Teams were ordered by the percentage of players in their own national league.</p></li>
+        <li><p>Bars were ordered by total players from each league; leagues with fewer than nine players were grouped as Other.</p></li>
+        <li><p>Colours close to country colours were used instead of defaults.</p></li>
+        <li><p>The legend was dropped, as labels already indicate colour meaning and the legend used too much space.</p></li>
+        <li><p>The number of facet rows was set to four for a better balanced display and more vertical label space.</p></li>
+        <li><p>Axis-title labels were dropped; the horizontal-axis scale was dropped with extra end space added; gridlines removed.</p></li>
+      </ol>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-characteristic-changes">
+    <title>Characteristic changes</title>
+    <ol>
+      <li><p>Grouping information supports understanding by chunking complex structure.</p></li>
+      <li><p>Aspect ratio choices are often critical.</p></li>
+      <li><p>Ordering is an effective way to emphasize patterns.</p></li>
+      <li><p>Colour is powerful and should be chosen deliberately.</p></li>
+      <li><p>Reducing clutter and making space is usually worthwhile.</p></li>
+      <li><p>Scaling and labelling should be sufficient but not excessive.</p></li>
+      <li><p>Time scaling and time labels require care.</p></li>
+      <li><p>Guidelines for critical values can improve interpretation.</p></li>
+    </ol>
+  </section>
+
+  <section xml:id="sec-classifying-graphics">
+    <title>Classifying graphics</title>
+    <p>
+      Graphics may be classified in different ways and a number of terms are used. Data graphics generally refers to
+      displays of raw data. Model graphics implies displays associated with models. Multivariate graphics includes
+      displays showing many variables. Interactive graphics describes displays that can be directly manipulated.
+      Dynamic graphics means displays that can be set in motion. There is overlap between interactive and dynamic
+      graphics, but the emphasis differs.
+    </p>
+
+    <p>
+      Technical properties and data background are not the only determinants of use. Setting matters: specialist
+      publication versus mass-media item, attentive audience versus competing attention, and high versus low assumed
+      domain knowledge.
+    </p>
+
+    <subsection xml:id="sec-spot-main-points">
+      <title>Main points</title>
+      <ul>
+        <li><p>Graphics that look similar can represent different tasks and data contexts.</p></li>
+        <li><p>Ensembles work best when theme, alignment, scales, and formatting are coherent.</p></li>
+        <li><p>Describing why a plot was changed is often more informative than describing how.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

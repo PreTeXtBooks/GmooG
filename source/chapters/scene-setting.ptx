@@ -1,5 +1,167 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-scene-setting">
-  <title>Scene Setting</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Setting the scene</title>
+
+  <introduction>
+    <blockquote>
+      <p>"To find a form that accommodates the mess, that is the task of the artist now."</p>
+      <p>--- Samuel Beckett</p>
+    </blockquote>
+    <p>
+      Scene setting in graphics covers scaling, formatting, space, and layout. Exploration and presentation require
+      different emphases, but both benefit from clear structure and deliberate design choices.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-scene-scaling">
+    <title>Scaling</title>
+
+    <p>
+      Scales map values to visual properties, define displayed limits, and provide interpretive reference through
+      breaks and labels. Good scaling balances readability, context, and comparability.
+    </p>
+
+    <figure xml:id="fig-comscales">
+      <image source="images/comScales-1.png"/>
+      <caption><p>Comrades race speeds and distances with differing y-scale choices.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-olyasnx">
+      <image source="images/olyASnX-1.png"/>
+      <caption><p>Olympic event counts over time with explicit wartime gaps.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-scene-formatting">
+    <title>Formatting</title>
+
+    <p>
+      Formatting affects both data marks and non-data framing. Changes in size, colour, transparency, ordering, text,
+      and guides should be driven by communication goals, not decoration alone.
+    </p>
+
+    <figure xml:id="fig-wtbars">
+      <image source="images/wtBars-1.png"/>
+      <caption><p>Country counts by region versus population-weighted bars.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-difbars">
+      <image source="images/difBars-1.png"/>
+      <caption><p>Population change by region in absolute and percentage terms.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-thmb1-1">
+      <image source="images/thmb1-1.png"/>
+      <caption><p>Theme comparison example 1.</p></caption>
+    </figure>
+    <figure xml:id="fig-thmb1-2">
+      <image source="images/thmb1-2.png"/>
+      <caption><p>Theme comparison example 2.</p></caption>
+    </figure>
+    <figure xml:id="fig-thmb2-1">
+      <image source="images/thmb2-1.png"/>
+      <caption><p>Theme comparison examples 3 and 4.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-scene-space">
+    <title>Making space</title>
+
+    <p>
+      Information is easier to perceive when displays avoid crowding and preserve internal and external whitespace.
+      Space supports feature discrimination, annotation clarity, and comparison.
+    </p>
+
+    <figure xml:id="fig-carattab">
+      <image source="images/caratTab-1.png"/>
+      <caption><p>Diamond carat versus table scatterplot.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-gaygrx">
+      <image source="images/gayGRx-1.png"/>
+      <caption><p>Same-sex marriage support by sex and race (doubledecker spacing example).</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-scene-layout">
+    <title>Layout</title>
+
+    <p>
+      Layout choices include orientation, aspect ratio, alignment, and placement of related graphics. Trying multiple
+      layouts often reveals different structure in the same data.
+    </p>
+
+    <figure xml:id="fig-gbs">
+      <image source="images/gBS-1.png"/>
+      <caption><p>Same data with equal-scale and stretched-scale scatterplot layouts.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-chcbars">
+      <image source="images/ChCbars-1.png"/>
+      <caption><p>Horizontal versus vertical bar-chart orientation comparison.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-finchbox2">
+      <image source="images/finchBox2-1.png"/>
+      <caption><p>Rotated boxplots for improved label readability.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-indag">
+      <image source="images/IndAg-1.png"/>
+      <caption><p>Scatterplot shown in original and transposed orientation.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-gaysccs">
+      <image source="images/gaySCCS-1.png"/>
+      <caption><p>Same scatterplot shown with axes swapped.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-scene-comparisons">
+    <title>Comparisons and graphics</title>
+
+    <p>
+      Comparisons are central to interpretation: within plots, across plots, and against expectations. Effective
+      comparison is supported by common scales, alignment, proximity, and clear grouping structure.
+    </p>
+
+    <figure xml:id="fig-comps">
+      <image source="images/compS-1.png"/>
+      <caption><p>Two comparison displays: diamond clarity and Titanic survival.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-both2elo">
+      <image source="images/both2Elo-1.png"/>
+      <caption><p>Juxtaposed histograms versus superposed density estimates.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-supjux">
+      <image source="images/supjux-1.png"/>
+      <caption><p>Superposition and juxtaposition comparison for delegate shares.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-scales">
+      <image source="images/scaleS-1.png"/>
+      <caption><p>Examples where common scales support interpretation.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-scene-defaults">
+    <title>Defaults</title>
+
+    <p>
+      Default settings strongly shape exploratory workflow. Good defaults reduce friction and allow analysts to focus
+      on content before refining presentation.
+    </p>
+
+    <subsection xml:id="sec-scene-main-points">
+      <title>Main points</title>
+      <ul>
+        <li><p>Scaling, formatting, space, and layout all influence what stands out.</p></li>
+        <li><p>Scales should be meaningful and readable.</p></li>
+        <li><p>Formatting choices should be driven by intended effect.</p></li>
+        <li><p>Comparisons benefit from common scales, alignment, and proximity.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

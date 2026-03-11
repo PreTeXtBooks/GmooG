@@ -1,5 +1,215 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-swimming">
-  <title>Swimming</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Are swimmers swimming faster?</title>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "Swimming could be taught by lecturing the student swimmers in the classroom three times a week on the
+        various kinds of strokes and the principles of buoyancy and so forth. Some might believe that on completing
+        such a course of study, the graduates would all eagerly run down to the pool, jump in, and swim at once. But
+        I think it's much more likely that they would want to stay in the classroom to teach a fresh lot of students
+        all that they had learned."
+      </p>
+      <p>--- George Box</p>
+    </blockquote>
+    <p><em>Background.</em> Comparing swimmers' best times for different strokes and distances.</p>
+    <p>
+      <em>Questions.</em> Which strokes are swum fastest? How much faster are men than women? What effect did full
+      body swimsuits have?
+    </p>
+    <p><em>Sources.</em> International Swimming Federation (FINA) results database.</p>
+    <p><em>Structure.</em> 7,685 observations of 23 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-swim-strokes">
+    <title>Best times for different strokes</title>
+
+    <p>
+      FINA publishes competition results and datasets of swimmers' best times by event. The data used here contain
+      best times for men and women across individual long-course-metre events.
+    </p>
+
+    <figure xml:id="fig-swm100f">
+      <image source="images/swM100f-1.png"/>
+      <caption><p>Best times by male swimmers for the 50 m freestyle.</p></caption>
+    </figure>
+
+    <p>
+      Many top performances are recent. Full-body swimsuits were permitted around 2008 and banned from 1 January
+      2010, producing a visible time-period effect in several events.
+    </p>
+
+    <figure xml:id="fig-swm50a">
+      <image source="images/swM50a-1.png"/>
+      <caption><p>Best times by male swimmers for the four 50 m events.</p></caption>
+    </figure>
+
+    <p>
+      The event-time distributions are mostly separated, with notable outliers and exceptional swims. Breaststroke,
+      butterfly, backstroke, and freestyle also differ in start and turn mechanics, affecting comparisons.
+    </p>
+
+    <figure xml:id="fig-swm50amf">
+      <image source="images/swM50amf-1.png"/>
+      <caption><p>Best times for the four 50 m events achieved by men and women.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-sw50af">
+      <image source="images/sw50af-1.png"/>
+      <caption><p>Boxplots of the best times by women for the four 50 m events.</p></caption>
+    </figure>
+
+    <p>
+      Women are generally slower than men in corresponding events, but distributions can overlap in informative ways.
+      Best-time distributions are typically left-skewed.
+    </p>
+
+    <figure xml:id="fig-sw200amf">
+      <image source="images/sw200amf-1.png"/>
+      <caption><p>Best times for the four 200 m events achieved by men and women.</p></caption>
+    </figure>
+
+    <p>
+      Over longer distances, separations between strokes change, including increased overlap between backstroke and
+      butterfly. Data quality checks also revealed a likely historical event misclassification in one record.
+    </p>
+
+    <figure xml:id="fig-sw100r">
+      <image source="images/sw100r-1.png"/>
+      <caption><p>Time differences between men and women for the four 100 m events by rank.</p></caption>
+    </figure>
+
+    <p>
+      Rank-wise sex differences generally increase down the ranking, with special-event outliers creating visible
+      exceptions.
+    </p>
+  </section>
+
+  <section xml:id="sec-swim-multi">
+    <title>How good are the best swimmers across multiple events?</title>
+
+    <p>
+      A small number of swimmers appear among top times across many events. Their event-by-event strength profiles
+      can be compared against each event's top-200 distribution.
+    </p>
+
+    <figure xml:id="fig-khlv">
+      <image source="images/khLV-1.png"/>
+      <caption><p>Katinka Hosszu's best times by event compared with the top 200 in each event.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-mplv">
+      <image source="images/mpLV-1.png"/>
+      <caption><p>Michael Phelps's best times by event compared with the top 200 in each event.</p></caption>
+    </figure>
+
+    <p>
+      Both swimmers show broad, high-level versatility, especially in medley events, though strengths vary by stroke
+      and distance.
+    </p>
+  </section>
+
+  <section xml:id="sec-swim-compare-events">
+    <title>Comparing events graphically</title>
+
+    <p>
+      Standardizing ranked times by event enables direct shape comparisons across many events in a single parallel
+      coordinate display.
+    </p>
+
+    <figure xml:id="fig-swpcp">
+      <image source="images/swPCP-1.png"/>
+      <caption>
+        <p>
+          Parallel coordinate plot of ranked times standardized by event across individual events.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      The left edge reflects top-ranked performances and the right edge reflects rank-200 performances; variability
+      among very best times is often greater than near rank 200.
+    </p>
+
+    <figure xml:id="fig-swpcpo">
+      <image source="images/swPCPo-1.png"/>
+      <caption>
+        <p>
+          Parallel coordinate plot aligning 100th ranks across events and sorting by relative fastest times.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Alternative alignment and ordering can expose compressed distributions and wave-like patterns linked to unusual
+      best-versus-second-best gaps in specific events.
+    </p>
+  </section>
+
+  <section xml:id="sec-swim-relays">
+    <title>How do relay races compare with individual races?</title>
+
+    <p>
+      Relay best times can outperform individual totals over the same nominal distance because relay teams distribute
+      distance across swimmers and gain multiple dive starts.
+    </p>
+
+    <figure xml:id="fig-relay400">
+      <image source="images/relay400-1.png"/>
+      <caption>
+        <p>Best times for the 400 m freestyle events for men and women, individual and relay.</p>
+      </caption>
+    </figure>
+
+    <p>
+      Relay distributions are more variable because each country contributes at most one best team time per event,
+      producing a different sampling structure from individual-event top lists.
+    </p>
+  </section>
+
+  <section xml:id="sec-swim-countries">
+    <title>How do countries compare?</title>
+
+    <p>
+      Country-level comparisons can be made by plotting female versus male representation among top-200 performers
+      within each event.
+    </p>
+
+    <figure xml:id="fig-mfland">
+      <image source="images/mfLand-1.png"/>
+      <caption>
+        <p>
+          Numbers of female swimmers in the top 200 plotted against numbers of male swimmers in the top 200 for each
+          of 17 events by country (dashed lines indicate equality).
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Some countries show systematically higher women's representation, while others show the opposite pattern across
+      events.
+    </p>
+
+    <introduction>
+      <p>
+        <em>Answers.</em> Freestyle is fastest, followed by butterfly, backstroke, then breaststroke. Backstroke
+        catches up on butterfly at longer distances. The 200th fastest man is faster than the fastest woman in each
+        stroke shown. After full-body suits were banned, several years passed before comparable times reappeared.
+      </p>
+      <p>
+        <em>Further questions.</em> How do individual swimmer trajectories evolve over time? What is the specific
+        effect of turns on performance? How do pool-length differences affect comparisons?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-swim-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Legends should be close to data and aligned with ordering in the display.</p></li>
+        <li><p>Scatterplots and boxplots provide complementary grouped-data views.</p></li>
+        <li><p>Sorting, ordering, and arranging improve interpretability in complex graphics.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

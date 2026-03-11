@@ -1,5 +1,208 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-colour">
   <title>Colour</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "I found I could say things with color and shapes that I couldn't say any other way - things I had no words
+        for."
+      </p>
+      <p>--- Georgia O'Keeffe</p>
+    </blockquote>
+  </introduction>
+
+  <section xml:id="sec-colour-theory">
+    <title>Theory and implementation</title>
+
+    <p>
+      Colour is technically complex and supported by many representation systems and palette families. Modern software
+      offers qualitative, sequential, diverging, and colour-blind-aware palettes, but defaults are not always
+      suitable.
+    </p>
+  </section>
+
+  <section xml:id="sec-colour-perception">
+    <title>Perception of colour</title>
+
+    <p>
+      Colour perception depends on observer differences, ambient conditions, display medium, and neighbouring colours.
+      This variability means colour choices should be robust rather than merely aesthetically pleasing.
+    </p>
+  </section>
+
+  <section xml:id="sec-colour-value">
+    <title>Value of colour</title>
+
+    <subsection xml:id="sec-colour-distinguish">
+      <title>Colours distinguish</title>
+      <figure xml:id="fig-swims4">
+        <image source="images/swims4-1.png"/>
+        <caption><p>Male swimmer best times for four strokes.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-michncol-1">
+        <image source="images/michNcol-1.png"/>
+        <caption><p>Speed-of-light plot 1 with colour coding for one grouping.</p></caption>
+      </figure>
+      <figure xml:id="fig-michncol-2">
+        <image source="images/michNcol-2.png"/>
+        <caption><p>Speed-of-light plot 2 with a different colour coding.</p></caption>
+      </figure>
+      <figure xml:id="fig-michncol-3">
+        <image source="images/michNcol-3.png"/>
+        <caption><p>Speed-of-light plot 3 with a third colour coding.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-highlight">
+      <title>Colours highlight</title>
+      <figure xml:id="fig-boxls">
+        <image source="images/boxLS-1.png"/>
+        <caption><p>Newcomb speed-of-light boxplot with highlighted outliers.</p></caption>
+      </figure>
+      <figure xml:id="fig-boxchess">
+        <image source="images/boxChess-1.png"/>
+        <caption><p>Chess-rating boxplots by age.</p></caption>
+      </figure>
+      <figure xml:id="fig-scatchess">
+        <image source="images/scatChess-1.png"/>
+        <caption><p>Chess ratings by age with high-rated players highlighted.</p></caption>
+      </figure>
+      <figure xml:id="fig-hiloouts">
+        <image source="images/HiLoOuts-1.png"/>
+        <caption><p>Home-away football points ratios with extremes highlighted.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-connect">
+      <title>Colours connect</title>
+      <figure xml:id="fig-finchis-1">
+        <image source="images/finchIs-1.png"/>
+        <caption><p>Darwin finch plot 1 using consistent species colours.</p></caption>
+      </figure>
+      <figure xml:id="fig-finchis-2">
+        <image source="images/finchIs-2.png"/>
+        <caption><p>Darwin finch plot 2 using consistent species colours.</p></caption>
+      </figure>
+      <figure xml:id="fig-finchis-3">
+        <image source="images/finchIs-3.png"/>
+        <caption><p>Darwin finch plot 3 using consistent species colours.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-separate">
+      <title>Colours separate</title>
+      <figure xml:id="fig-palmergs-1">
+        <image source="images/palmerGs-1.png"/>
+        <caption><p>Penguin ensemble with one subgroup highlighted.</p></caption>
+      </figure>
+      <figure xml:id="fig-palmergs-2">
+        <image source="images/palmerGs-2.png"/>
+        <caption><p>Penguin ensemble with a different subgroup highlighted.</p></caption>
+      </figure>
+      <figure xml:id="fig-palmergs-3">
+        <image source="images/palmerGs-3.png"/>
+        <caption><p>Penguin ensemble with a third subgroup highlighted.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-signify">
+      <title>Colours signify</title>
+      <figure xml:id="fig-btwmapem">
+        <image source="images/btwMapEm-1.png"/>
+        <caption><p>German constituency winners using party-associated colours.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-attract">
+      <title>Colours attract</title>
+      <p>
+        Well-chosen colour can improve engagement and retention, but should remain purposeful and restrained to avoid
+        visual clutter.
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-colour-choice">
+    <title>Choice of colour</title>
+
+    <subsection xml:id="sec-colour-blind">
+      <title>Colour blind palettes help</title>
+      <figure xml:id="fig-colblind-1">
+        <image source="images/colBlind-1.png"/>
+        <caption><p>Example 1 using a colour-blind-friendly palette.</p></caption>
+      </figure>
+      <figure xml:id="fig-colblind-2">
+        <image source="images/colBlind-2.png"/>
+        <caption><p>Example 2 using a colour-blind-friendly palette.</p></caption>
+      </figure>
+      <figure xml:id="fig-colblind-3">
+        <image source="images/colBlind-3.png"/>
+        <caption><p>Example 3 using a colour-blind-friendly palette.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-order">
+      <title>Palette order counts</title>
+      <figure xml:id="fig-astro4">
+        <image source="images/astro4-1.png"/>
+        <caption><p>Spaceflight mission times with reordered palette for clarity.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-not-enough">
+      <title>There may not be enough colours</title>
+      <p>
+        When categories are numerous, direct one-colour-per-category mapping fails; aggregation, faceting, or
+        alternative encodings become necessary.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-colour-avoid-reuse">
+      <title>Avoid using the same colours for different datasets</title>
+      <p>
+        Reusing the same palette across unrelated contexts can imply false equivalence. Colour semantics should remain
+        context-specific.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-colour-overlap-faceting">
+      <title>Avoid overlapping colours, use faceting</title>
+      <figure xml:id="fig-finchnine">
+        <image source="images/finchNine-1.png"/>
+        <caption><p>Faceted finch display with ghosted context for readability.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-colour-backgrounds">
+      <title>Backgrounds matter</title>
+      <figure xml:id="fig-backs-1">
+        <image source="images/backs-1.png"/>
+        <caption><p>Graphic example with plain background 1.</p></caption>
+      </figure>
+      <figure xml:id="fig-backs-2">
+        <image source="images/backs-2.png"/>
+        <caption><p>Graphic example with plain background 2.</p></caption>
+      </figure>
+      <figure xml:id="fig-backs-3">
+        <image source="images/backs-3.png"/>
+        <caption><p>Graphic example with plain background 3.</p></caption>
+      </figure>
+      <p>
+        Surrounding design context changes colour perception; background, medium, and display conditions should be
+        considered when finalizing a palette.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-colour-main-points">
+      <title>Main points</title>
+      <ul>
+        <li><p>Colour systems and palettes are numerous; colour choice is nontrivial.</p></li>
+        <li><p>Use colour intentionally: distinguish, highlight, connect, separate, signify.</p></li>
+        <li><p>Effective choices require awareness of perceptual differences and context.</p></li>
+        <li><p>Ghostplotting and faceting are valuable when overlap reduces readability.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

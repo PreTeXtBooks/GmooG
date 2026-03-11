@@ -1,5 +1,194 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-palmer-penguins">
-  <title>Palmer Penguins</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Differences amongst the Palmer penguins</title>
+
+  <introduction>
+    <blockquote>
+      <p>"One can't be angry when one looks at a penguin."</p>
+      <p>--- John Ruskin</p>
+    </blockquote>
+    <p>
+      The Long Term Ecological Research Network (LTER) carries out research at Palmer station, Antarctica, including
+      studies of penguin species on islands in the Palmer Archipelago.
+    </p>
+    <p>
+      <em>Questions.</em> How do the species differ? How do penguin populations on the three studied islands differ?
+    </p>
+    <p><em>Sources.</em> The <c>palmerpenguins</c> data package and associated study documentation.</p>
+    <p><em>Structure.</em> One raw dataset with 344 penguins and 17 variables, plus a cleaned dataset with 8 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-palmer-overview">
+    <title>Getting an overview of the penguin data</title>
+
+    <p>
+      Some of these data are available in the <c>palmerpenguins</c> package, including size measurements and isotopic
+      signature information for Adelie, Chinstrap, and Gentoo penguins. Colour information is not included: Gentoo
+      have a distinctive orange bill and white marking above the eyes, while Chinstrap have a narrow black chinstrap.
+      Attractive drawings of the three species are shown on the package webpage.
+    </p>
+
+    <p>
+      A good example of the underlying LTER research appears in Gorman et al. (2014).
+    </p>
+
+    <p>
+      The Palmer Archipelago lies west of the Antarctic Peninsula, where warming linked to climate change has been
+      rapid. According to Fountain et al. (2022), this is bad for Adelie penguins that do better farther east in the
+      colder Weddell Sea, while Gentoo are less affected.
+    </p>
+
+    <figure xml:id="fig-palens0">
+      <image source="images/PalEns0-1.png"/>
+      <caption><p>Four plots of the Palmer penguin dataset.</p></caption>
+    </figure>
+
+    <p>
+      Chinstrap penguins and Torgersen observations are fewer in number. Body mass is right-skewed overall and
+      flipper length is strongly positively associated with body mass.
+    </p>
+
+    <figure xml:id="fig-palens1">
+      <image source="images/PalEns1-1.png"/>
+      <caption><p>Gentoo penguins highlighted across the ensemble of plots.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-palens2">
+      <image source="images/PalEns2-1.png"/>
+      <caption><p>Dream Island penguins highlighted across the ensemble of plots.</p></caption>
+    </figure>
+
+    <p>
+      Gentoo are only sampled on Biscoe and are generally heavier with longer flippers. Dream includes all
+      Chinstrap plus some Adelie, with generally smaller body mass and flipper length.
+    </p>
+
+    <p>
+      Penguins in this dataset were nesting pairs with at least one egg. The study documentation also provides
+      detailed sampling context (Gorman et al., 2014), and estimated total penguin numbers at Antarctic sites over
+      the years are available via the MAPPPD website described in Humphries et al. (2017).
+    </p>
+
+    <figure xml:id="fig-palens3">
+      <image source="images/PalEns3-1.png"/>
+      <caption><p>Penguins weighing no more than 3 kg highlighted across the same plots.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-palens5">
+      <image source="images/PalEns5-1.png"/>
+      <caption>
+        <p>
+          Penguins weighing no more than 3 kg plotted beside others, comparing bill length and bill depth.
+        </p>
+      </caption>
+    </figure>
+
+    <figure xml:id="fig-palens6">
+      <image source="images/PalEns6-1.png"/>
+      <caption><p>Dream Island penguins plotted beside others for bill length and bill depth.</p></caption>
+    </figure>
+
+    <p>
+      The highlighted subsets show how selection and ghostplot-style layering can expose subgroup structure across
+      multiple linked views in static form.
+    </p>
+
+    <p>
+      In interactive graphics, selecting cases in one view can immediately highlight them in all related views.
+      Static ghostplot variants are less immediate, but follow the same principle: draw the full data in muted form,
+      then overlay the selected subset in stronger colour.
+    </p>
+  </section>
+
+  <section xml:id="sec-palmer-pcp">
+    <title>Looking at several variables in one plot</title>
+
+    <p>
+      Parallel coordinate plots combine categorical and continuous variables and can reveal species separation
+      patterns not obvious in pairwise views.
+    </p>
+
+    <figure xml:id="fig-palpcp1">
+      <image source="images/Palpcp1-1.png"/>
+      <caption><p>Parallel coordinate plot of the Palmer penguin data.</p></caption>
+    </figure>
+
+    <p>
+      Reordering categories and axes, plus reversing bill depth, reduces visual clutter and strengthens separation
+      cues between species.
+    </p>
+
+    <figure xml:id="fig-palpcp2">
+      <image source="images/Palpcp2-1.png"/>
+      <caption><p>Reordered parallel coordinate plot of the Palmer penguin data.</p></caption>
+    </figure>
+
+    <p>
+      The reordered view shows Chinstrap and Adelie as similar on several measurements but different on bill length,
+      while Gentoo separate clearly on multiple variables (with bill depth interpreted as reversed in this display).
+    </p>
+
+    <figure xml:id="fig-palscat3">
+      <image source="images/Palscat3-1.png"/>
+      <caption><p>Scatterplots of bill depth with bill length and flipper length.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-scath">
+      <image source="images/scatH-1.png"/>
+      <caption>
+        <p>
+          Scatterplots of bill length and bill depth by species and island, with all-penguin data ghosted in the
+          background.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Faceted scatterplots confirm species-island structure and clarify within-group versus overall associations.
+    </p>
+  </section>
+
+  <section xml:id="sec-palmer-raw">
+    <title>Using raw data to get more information</title>
+
+    <p>
+      The <c>penguins_raw</c> data include enough detail to pair female and male measurements within nests and compare
+      them directly on equal-scale axes.
+    </p>
+
+    <figure xml:id="fig-scatr">
+      <image source="images/scatR-1.png"/>
+      <caption>
+        <p>
+          Male-versus-female measurements for four variables in each pair; green reference lines indicate equality.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Males are generally larger than their female partners. Combined male-female measurement patterns also reinforce
+      species differences seen in earlier displays.
+    </p>
+
+    <introduction>
+      <p>
+        <em>Answers.</em> Gentoo penguins tend to be heavier, with longer flippers and shallower bills, and in this
+        dataset they appear only on Biscoe. Adelie tend to have shorter bills. Chinstrap appear only on Dream. Males
+        are usually larger than females.
+      </p>
+      <p>
+        <em>Further questions.</em> Do isotope measurements in the raw data differ systematically by species? Are
+        there notable year-to-year differences across the three study years?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-palmer-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Selection and highlighting are powerful for subgroup analysis across plot ensembles.</p></li>
+        <li><p>Ordering choices are crucial for making parallel coordinate plots informative.</p></li>
+        <li><p>When observations are paired, paired scatterplots reveal structure that unpaired views miss.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

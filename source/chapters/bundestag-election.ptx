@@ -1,5 +1,211 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-bundestag-election">
-  <title>Bundestag Election</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>German Election 2021 - what happened?</title>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "Just because you do not take an interest in politics doesn't mean politics won't take an interest in you."
+      </p>
+      <p>--- Pericles</p>
+    </blockquote>
+    <p>
+      <em>Background.</em> After Angela Merkel's long chancellorship, the 2021 election marked a major transition in
+      German politics.
+    </p>
+    <p>
+      <em>Questions.</em> Which parties did well? Are there geographic patterns? Which structural factors are linked
+      to support? How closely do Erststimmen and Zweitstimmen align?
+    </p>
+    <p>
+      <em>Sources.</em> Federal Returning Officer election and demographic data, constituency maps, and related
+      reference materials.
+    </p>
+    <p>
+      <em>Structure.</em> 299 constituencies in 16 states; over 61 million registered voters; many small parties and
+      seven major parties with over two million votes each.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-btw-winner">
+    <title>Who won the 2021 election?</title>
+
+    <p>
+      Germany's two-vote system allocates constituency seats by first-past-the-post (Erststimme) and party-proportional
+      seats by Zweitstimme, with additional balancing seats when required.
+    </p>
+
+    <figure xml:id="fig-ubh">
+      <image source="images/ubH-1.png"/>
+      <caption><p>Extra seats in German elections since 1949.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btw1">
+      <image source="images/btw1-1.png"/>
+      <caption><p>Party percentage support in Zweitstimmen for 2021 and 2017.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btw2">
+      <image source="images/btw2-1.png"/>
+      <caption><p>Changes in party percentage support between 2017 and 2021.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btw3">
+      <image source="images/btw3-1.png"/>
+      <caption><p>Relative changes in support between 2017 and 2021.</p></caption>
+    </figure>
+
+    <p>
+      Absolute and relative change views together show SPD and Greens gains, heavy CDU/CSU and Linke losses, and
+      strong relative gains for the "Other" category.
+    </p>
+
+    <figure xml:id="fig-btw4a">
+      <image source="images/btw4a-1.png"/>
+      <caption><p>Relative party-support changes by region (West, East, Berlin).</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btw4">
+      <image source="images/btw4-1.png"/>
+      <caption><p>Relative party-support changes by Bundesland.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-btw-geo-patterns">
+    <title>Are there geographic patterns?</title>
+
+    <figure xml:id="fig-btwmapg">
+      <image source="images/btwMapG-1.png"/>
+      <caption><p>Green support by constituency in 2017 and 2021.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwgpop">
+      <image source="images/btwGpop-1.png"/>
+      <caption><p>Green support versus log population density.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwgpcp">
+      <image source="images/btwGpcp-1.png"/>
+      <caption><p>Parallel coordinate plot of Green support and structural variables.</p></caption>
+    </figure>
+
+    <p>
+      Greens were stronger in denser, younger, and more education-rich constituencies, especially in western urban
+      areas.
+    </p>
+
+    <figure xml:id="fig-btwmapafd">
+      <image source="images/btwMapAfD-1.png"/>
+      <caption><p>AfD support by constituency in 2017 and 2021.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwafdfor">
+      <image source="images/btwAfDfor-1.png"/>
+      <caption><p>AfD support versus percentage foreigners.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwapcp">
+      <image source="images/btwApcp-1.png"/>
+      <caption><p>Parallel coordinate plot of AfD support and structural variables.</p></caption>
+    </figure>
+
+    <p>
+      AfD was stronger in parts of the East, lower-density areas, and constituencies with lower foreign-national
+      shares.
+    </p>
+
+    <figure xml:id="fig-btwmapc">
+      <image source="images/btwMapC-1.png"/>
+      <caption><p>CDU/CSU support by constituency in 2017 and 2021.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwccar">
+      <image source="images/btwCcar-1.png"/>
+      <caption><p>CDU/CSU support versus cars per 1,000 population.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwcdpcp">
+      <image source="images/btwCDpcp-1.png"/>
+      <caption><p>Parallel coordinate plot of CDU/CSU support and structural variables.</p></caption>
+    </figure>
+
+    <p>
+      CDU/CSU remained structurally stronger in less dense, car-dependent constituencies and in Bavaria (CSU).
+    </p>
+  </section>
+
+  <section xml:id="sec-btw-fptp">
+    <title>Who won the first-past-the-post seats?</title>
+
+    <figure xml:id="fig-btwmape">
+      <image source="images/btwMapE-1.png"/>
+      <caption><p>Erststimmen seat winners by party.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwmapp">
+      <image source="images/btwMapP-1.png"/>
+      <caption><p>Constituencies won on Erststimmen by party, faceted.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwdotv">
+      <image source="../../pngImages/btwDotV-1.png"/>
+      <caption><p>Seat-winning vote percentages in Germany 2021 and UK 2019.</p></caption>
+    </figure>
+
+    <p>
+      In Germany, seat-winning percentages were often far below 50% due to multiparty competition; UK first-past-the-
+      post seats were much more often won above 50%.
+    </p>
+  </section>
+
+  <section xml:id="sec-btw-first-second">
+    <title>How do first-past-the-post and party votes compare?</title>
+
+    <figure xml:id="fig-btwscatv">
+      <image source="images/btwScatV-1.png"/>
+      <caption><p>Erststimmen versus Zweitstimmen for major parties.</p></caption>
+    </figure>
+
+    <p>
+      Agreement between candidate and party vote patterns was stronger than expected in many places, with party-
+      specific exceptions and local candidate effects.
+    </p>
+
+    <figure xml:id="fig-btwmapz">
+      <image source="images/btwMapZ-1.png"/>
+      <caption><p>Party with the highest Zweitstimmen in each constituency.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btwmapd">
+      <image source="images/btwMapD-1.png"/>
+      <caption><p>Constituencies where top Zweitstimmen and top Erststimmen parties differed.</p></caption>
+    </figure>
+
+    <p>
+      Differences between first and second-vote leaders were nontrivial but patterned; CDU/CSU rarely failed to
+      convert Zweitstimmen strength into Erststimmen seats.
+    </p>
+
+    <introduction>
+      <p>
+        <em>Answers.</em> Greens, SPD, and "Other" parties improved relative to 2017. Party support showed strong
+        geographic structure. Greens were stronger in urban areas; AfD strength was concentrated in eastern and lower-
+        foreign-share areas. Most constituency winners in 2021 won with less than 50% of Erststimmen.
+      </p>
+      <p>
+        <em>Further questions.</em> Which structural factors are most predictive? Why did specific seats deviate from
+        nearby constituency patterns?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-btw-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>UpAndDown plots show absolute and relative change simultaneously.</p></li>
+        <li><p>Draw smaller groups last when overplotting and colour overlap are likely.</p></li>
+        <li><p>Scatterplots surface group differences, equal-value clusters, and local outliers.</p></li>
+        <li><p>Highlighted parallel-coordinate plots help identify potential explanatory variables.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

@@ -1,5 +1,64 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-conclusions">
-  <title>Conclusions and Recommendations</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Conclusions and recommendations</title>
+
+  <introduction>
+    <blockquote>
+      <p>"Knowledge is knowing that a tomato is a fruit; wisdom is not putting it in a fruit salad."</p>
+      <p>--- Miles Kington</p>
+    </blockquote>
+  </introduction>
+
+  <p>
+    Studying and thinking with graphics is different. It is about staying flexible, being open to new ideas, drawing
+    many graphics, varying, amending, and adjusting them. Text is read in a given order, a graphic may be viewed in
+    any order. Sometimes information in a graphic is obvious, sometimes it takes more time and effort to see what is
+    there. The graphic has to be grounded, based on a firm foundation of background knowledge. You need time to think
+    and space to view.
+  </p>
+
+  <p>
+    This book has concentrated on exploratory graphics rather than presentation graphics. The difference is not a
+    simple dichotomy. There are raw exploratory graphics, drawn quickly for content and relying on good defaults.
+    There are amended exploratory graphics with adjustments and improvements to emphasise features. Finally there are
+    polished presentation graphics to attract attention and to impress. Some graphics in the examples have been
+    adjusted and amended more than others, often because studying graphics stimulates modifications and improving them
+    supports thinking.
+  </p>
+
+  <p>
+    Where there is a difference between exploratory and presentation graphics is in the workflow. Exploratory graphics
+    are studied to discover information, to look for content, and there may be many different graphics. To get the
+    most value from them, you have to have expectations of what you might see. Presentation graphics are drawn to
+    present information, to improve their look, and while there may be many drafts of related ones, at most a few are
+    shown. To draw an effective presentation graphic, you have to have a picture of what you want others to see.
+  </p>
+
+  <p>
+    There are no piecharts, waffle charts, pictograms, or examples of the many other chart types in this book. This is
+    no reflection on them. Everyone can use charts they find most informative. General advice on layout, colour,
+    ordering, formatting, and so on applies just as well to those chart types. Varying graphics, using many of them,
+    and checking insights is good practice whichever forms are used.
+  </p>
+
+  <p>
+    Several interesting and important topics for graphics deserve more attention. Some, like perception, design, and
+    displaying uncertainty, are more relevant for presentation graphics. Some, like graphics for spatial data, are more
+    specialist. Interactive graphics really deserves a book of its own once suitable software is sufficiently fast,
+    flexible, effective, and integrated with other systems.
+  </p>
+
+  <p>
+    The datasets in the book were chosen because they were interesting and available. There was no attempt to choose
+    datasets to show off particular graphical tools. Graphics reveal more information in some datasets than in others.
+    For every method, whether graphic or model, there is doubtless an Achilles heel dataset that it cannot cope with.
+    Suggestions of such datasets would be welcome.
+  </p>
+
+  <p>
+    Some claim that 10000 hours of deliberate practice is enough to turn a person into an expert. The key word is the
+    undefined "deliberate". Reading case studies, evaluating graphics, and trying alternatives can be a step in the
+    right direction. Check results produced using your own graphics and look for other results by questioning these
+    datasets and studying datasets of your own.
+  </p>
 </chapter>

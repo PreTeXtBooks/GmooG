@@ -1,5 +1,103 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-malaria">
-  <title>Malaria</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Comparing tests for malaria</title>
+
+  <introduction>
+    <blockquote>
+      <p>"There are more people dying of malaria than any specific cancer."</p>
+      <p>--- Bill Gates</p>
+    </blockquote>
+    <p>
+      This chapter examines data from an evaluation of a new magneto-optical malaria test (ROMD) against three
+      established methods (PCR, RDT, LM).
+    </p>
+    <p>
+      <em>Questions.</em> How much do results from the four tests agree, and on which cases do they differ?
+    </p>
+    <p><em>Sources.</em> Arndt et al. malaria testing study data from Papua New Guinea.</p>
+    <p><em>Structure.</em> 956 observations with 24 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-malaria-agreement">
+    <title>How much agreement is there between the four tests?</title>
+
+    <p>
+      Cases with missing values for key tests were excluded before comparing outcomes. The four methods produce
+      different positive rates, with ROMD reporting the highest proportion of positives.
+    </p>
+
+    <figure xml:id="fig-maltest">
+      <image source="images/malTest-1.png"/>
+      <caption><p>Percentages of positives for the four malaria tests.</p></caption>
+    </figure>
+
+    <p>
+      A matrix-style display of result combinations shows all possible four-test positive/negative patterns and how
+      often each occurs.
+    </p>
+
+    <figure xml:id="fig-malvis">
+      <image source="images/malvis-1.png"/>
+      <caption><p>Combinations of individual malaria test results (red rectangles are positives).</p></caption>
+    </figure>
+
+    <p>
+      Paired comparisons confirm that no single test strictly dominates another: disagreements occur in both
+      directions for each pair.
+    </p>
+
+    <figure xml:id="fig-malpcp">
+      <image source="images/malpcp-1.png"/>
+      <caption><p>Paired comparisons of the binary results of the four tests.</p></caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-malaria-additional">
+    <title>Additional analyses</title>
+
+    <p>
+      Treating LM as a reference, the ROMD magneto-optical measurement distribution can be compared for LM-negative
+      and LM-positive groups on a log scale.
+    </p>
+
+    <figure xml:id="fig-mallm">
+      <image source="images/malLM-1.png"/>
+      <caption>
+        <p>Magneto-optical measurements on a log10 scale grouped by corresponding LM test result.</p>
+      </caption>
+    </figure>
+
+    <p>
+      Overlap between groups indicates that cut-off choice affects false-positive and false-negative trade-offs.
+    </p>
+
+    <figure xml:id="fig-malaw">
+      <image source="images/malAW-1.png"/>
+      <caption><p>Weight by age and sex of people tested for malaria.</p></caption>
+    </figure>
+
+    <p>
+      Age-weight scatterplots provide context on the tested population and highlight a few unusual observations.
+    </p>
+
+    <introduction>
+      <p>
+        <em>Answers.</em> The methods agree in many cases but disagree in roughly one third; the proposed ROMD method
+        classifies more cases as positive than the other three tests.
+      </p>
+      <p>
+        <em>Further questions.</em> How sensitive are conclusions to the ROMD cut-off choice? Do additional variables
+        help explain cases where methods disagree?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-malaria-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Matrix displays effectively summarize multivariate categorical outcomes.</p></li>
+        <li><p>Quantitative test distributions make cut-off consequences directly visible.</p></li>
+        <li><p>Scatterplots provide fast context for relationships in supporting variables.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

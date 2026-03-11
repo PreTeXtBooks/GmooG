@@ -1,5 +1,248 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-provenance">
-  <title>Provenance</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Provenance and quality</title>
+
+  <introduction>
+    <blockquote>
+      <p>"Real evidence is usually vague and unsatisfactory. It has to be examined - sifted."</p>
+      <p>--- Agatha Christie, <em>The Mysterious Affair at Styles</em></p>
+    </blockquote>
+    <p>
+      Graphics discover and communicate information, but the quality of that information depends on the quality and
+      provenance of the data. Elegant visual design cannot compensate for weak source data.
+    </p>
+    <p>
+      This chapter emphasizes checking origin, definitions, collection process, transformations, and downstream use so
+      that analyses are credible and reproducible.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-prov-meaning">
+    <title>What does provenance mean?</title>
+
+    <p>
+      Provenance is the documented origin and history of data: where they came from, who handled them, how they were
+      collected, cleaned, transformed, and used. It is central to reproducibility and interpretation.
+    </p>
+
+    <p>
+      Datasets are not born analysis-ready. Editing, coding changes, weighting, exclusions, and derived variables all
+      affect conclusions and need explicit reporting.
+    </p>
+  </section>
+
+  <section xml:id="sec-prov-problems">
+    <title>What problems arise with datasets?</title>
+
+    <p>
+      Common issues include unclear definitions, awkward structure, missing or duplicated records, errors,
+      inconsistencies, and hidden uncertainty. Graphics often help detect these issues, even when they cannot fully
+      resolve them.
+    </p>
+
+    <subsection xml:id="sec-prov-definitions">
+      <title>Data definitions</title>
+      <p>
+        Variable meaning is not always obvious. Definitions differ across countries, institutions, and time, and those
+        differences can invalidate naive comparisons.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-collection">
+      <title>Data collection</title>
+      <p>
+        Even clear definitions do not guarantee accurate measurement. Self-reported values, process drift, collection
+        incentives, and question wording can all bias data.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-availability">
+      <title>Data availability</title>
+      <p>
+        Publicly available data often require major wrangling and restructuring. Keeping raw originals and retaining
+        all cleaning code are essential for auditability and reruns.
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-prov-book-datasets">
+    <title>The provenance of datasets used in the book</title>
+
+    <p>
+      The examples below illustrate why provenance checks matter in practice and how deeper source work can change
+      analysis quality.
+    </p>
+
+    <subsection xml:id="sec-prov-gapminder">
+      <title>Gapminder</title>
+      <p>
+        Gapminder provides extensive source and cleaning notes, but country-year quality is uneven and must still be
+        treated cautiously in comparisons.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-movies">
+      <title>Movies</title>
+      <p>
+        IMDb-derived data are dynamic and heavily filtered before analysis. Genre coding, runtime variants, and user-
+        profile uncertainty all affect interpretation.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-1912">
+      <title>Democratic Convention 1912</title>
+      <p>
+        Adding session-time context (beyond ballot order alone) revealed timing structure and likely influence of
+        informal between-session negotiations.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-lightspeed">
+      <title>Speed of light</title>
+      <p>
+        Classical speed-of-light datasets are often simplified in teaching. Original experiment reports show procedural
+        changes that challenge assumptions such as i.i.d. sampling.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-olympics">
+      <title>Olympic Games</title>
+      <p>
+        Long historical spans introduce changing countries, event naming inconsistencies, and missing values that
+        require explicit harmonization decisions.
+      </p>
+      <figure xml:id="fig-olyamdx">
+        <image source="images/olyAmdx-1.png"/>
+        <caption><p>Athletics field events for men: percentage differences in gold-medal performances.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-prov-chess">
+      <title>Chess ratings</title>
+      <p>
+        Multi-year federation files reveal format changes, coding changes, stale records, and category ambiguities
+        that demand careful cleaning and reconciliation.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-gayrights">
+      <title>Attitudes to same-sex marriage</title>
+      <p>
+        Question wording, answer coding, and subsampling design all influence conclusions; obtaining raw survey details
+        can materially change interpretation.
+      </p>
+      <figure xml:id="fig-gayfss">
+        <image source="images/gayFSs-1.png"/>
+        <caption><p>Responses on same-sex marriage at state level versus federal constitutional ban.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-prov-astronauts">
+      <title>Human spaceflights</title>
+      <p>
+        Scraped datasets can contain inconsistencies and errors from unknown points in the pipeline; interesting data
+        still require rigorous checking.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-diamonds">
+      <title>Diamonds</title>
+      <p>
+        Convenience sampling, impossible values, gaps, and heaping all appear. These issues do not make data useless,
+        but they do constrain inference.
+      </p>
+      <figure xml:id="fig-histcarx">
+        <image source="images/histCarX-1.png"/>
+        <caption><p>Histogram of diamond carats (showing heaping).</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-prov-electric">
+      <title>Electric car charging</title>
+      <p>
+        Timeline structure and staged infrastructure rollout are crucial context; early periods may be unsuitable as
+        stable baselines for behavior.
+      </p>
+      <figure xml:id="fig-elecstat2x">
+        <image source="images/elecStat2x-1.png"/>
+        <caption><p>Use of charging stations grouped by location, with test-period endpoint marked.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-prov-finches">
+      <title>Darwin's finches</title>
+      <p>
+        Historical expeditions may not match modern standards, but can still provide strong species-separation signals
+        when interpreted with proper caveats.
+      </p>
+      <figure xml:id="fig-snodpcpx">
+        <image source="images/snodPCPx-1.png"/>
+        <caption><p>Parallel coordinate plot of Galapagos finch measurements.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-prov-vehicles">
+      <title>Vehicle fuel consumption</title>
+      <p>
+        Class definitions may differ from intuition. Clarifying formal definitions with data providers can explain
+        apparently anomalous category assignments.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-comrades">
+      <title>Comrades Marathon</title>
+      <p>
+        Contextual race-profile information changes interpretation of "up" versus "down" runs and helps explain
+        persistent performance differences.
+      </p>
+      <figure xml:id="fig-comprofx">
+        <image source="images/comProfX-1.png"/>
+        <caption><p>Profile plot for the planned 2020 down race.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-prov-shearwaters">
+      <title>Shearwaters</title>
+      <p>
+        The same dataset appears under different labels and modified codings across packages, creating confusion and
+        highlighting the need for source verification.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-prov-titanic">
+      <title>Titanic</title>
+      <p>
+        Multiple Titanic datasets differ in detail and quality. Modern curated sources provide richer crew and age
+        detail that materially changes subgroup survival analysis.
+      </p>
+      <figure xml:id="fig-titandd">
+        <image source="images/titanDD-1.png"/>
+        <caption><p>Titanic survival by class/crew: older summary dataset versus newer detailed dataset.</p></caption>
+      </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-prov-invented-simulated-real">
+    <title>How do invented, simulated, and real datasets compare?</title>
+
+    <p>
+      Invented and simulated datasets are useful in specific contexts, but real datasets better expose practical
+      issues, support contextual checking, and train defensible analysis habits.
+    </p>
+
+    <p>
+      Real does not mean unquestionable. Datasets can be over-trusted or unfairly dismissed; both mistakes are
+      avoidable with careful provenance work.
+    </p>
+
+    <subsection xml:id="sec-prov-main-points">
+      <title>Main points</title>
+      <ul>
+        <li><p>Dataset provenance - source, edits, and processing history - is essential.</p></li>
+        <li><p>Large real datasets are increasingly available but require extensive checking.</p></li>
+        <li><p>Each dataset has unique issues; no single checklist solves everything.</p></li>
+        <li><p>Real datasets are generally preferable to invented or purely simulated examples for applied work.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

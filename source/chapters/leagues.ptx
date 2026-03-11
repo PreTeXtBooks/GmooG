@@ -1,5 +1,175 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-leagues">
-  <title>Leagues</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Watching soccer---the English leagues</title>
+
+  <introduction>
+    <blockquote>
+      <p>"Football: it's a funny old game."</p>
+      <p>--- Jimmy Greaves</p>
+    </blockquote>
+    <p>
+      The English soccer league, founded in 1888-89, is the oldest in the world and provides a long historical
+      record for studying competition trends.
+    </p>
+    <p>
+      <em>Questions.</em> Have draw rates changed? Has home advantage shifted? Are goals now rarer? How can team
+      histories and within-season progress be shown effectively?
+    </p>
+    <p><em>Sources.</em> The <c>engsoccerdata</c> package.</p>
+    <p><em>Structure.</em> Match results summarized in 12 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-football-history">
+    <title>History of the English football leagues since 1888</title>
+
+    <p>
+      The league evolved from one division to a four-tier structure with multiple reorganizations, including the
+      formation of the Premier League in 1992.
+    </p>
+  </section>
+
+  <section xml:id="sec-football-draws">
+    <title>How have numbers of draws changed?</title>
+
+    <p>
+      In the top tier, draw rates rose early, stabilized for long periods, and then changed modestly after rules
+      awarding three points for a win were introduced.
+    </p>
+
+    <figure xml:id="fig-socd">
+      <image source="images/socD-1.png"/>
+      <caption><p>Rate of draws over the years in the English top tier with a GAM smooth.</p></caption>
+    </figure>
+
+    <p>
+      Comparison with Italy and Spain shows distinct national trajectories and timing differences around points-rule
+      changes.
+    </p>
+
+    <figure xml:id="fig-socdf">
+      <image source="images/socDf-1.png"/>
+      <caption>
+        <p>Smooths of draw rates for top tiers in Italy (dark blue), England (light blue), and Spain (red).</p>
+      </caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-football-home-adv">
+    <title>How big is home advantage?</title>
+
+    <p>
+      Home advantage can be measured as the share of points won at home. A consistent 3-points-for-win convention
+      enables comparisons through time.
+    </p>
+
+    <figure xml:id="fig-socha">
+      <image source="images/socHA-1.png"/>
+      <caption><p>Proportions of points won at home over time in the various tiers of the English league.</p></caption>
+    </figure>
+
+    <p>
+      Lower tiers show long-run decline in home advantage. The 2020-21 top-tier drop aligns with pandemic-era games
+      played without fans.
+    </p>
+
+    <figure xml:id="fig-sochat">
+      <image source="images/socHAt-1.png"/>
+      <caption><p>Proportions of points won at home for every team for every season.</p></caption>
+    </figure>
+
+    <p>
+      Team-level results include striking outliers, including seasons with almost no away success and rare reverse
+      home/away patterns.
+    </p>
+  </section>
+
+  <section xml:id="sec-football-goals">
+    <title>Have the numbers of goals scored gone down?</title>
+
+    <p>
+      Goals per game were much higher in the earliest years, then declined sharply, with historical jumps around
+      rule changes and later stabilization near modern levels.
+    </p>
+
+    <figure xml:id="fig-socg">
+      <image source="images/socG-1.png"/>
+      <caption>
+        <p>The numbers of goals per game for the four tiers (offside-law change marked with a red dashed line).</p>
+      </caption>
+    </figure>
+  </section>
+
+  <section xml:id="sec-football-teams">
+    <title>How well have teams performed over the years?</title>
+
+    <p>
+      Overall season rankings across tiers support long-run team trajectory comparisons. Ghosted backgrounds with
+      highlighted teams help preserve context.
+    </p>
+
+    <figure xml:id="fig-teambps">
+      <image source="images/teamBPS-1.png"/>
+      <caption><p>Comparing the three South Coast teams: Bournemouth, Portsmouth, and Southampton.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-teambpsq">
+      <image source="images/teamBPSq-1.png"/>
+      <caption><p>Comparing Bournemouth, Portsmouth, and Southampton on a square root scale.</p></caption>
+    </figure>
+
+    <p>
+      The square-root rank scale emphasizes differences near the top of the pyramid more strongly than linear ranks.
+    </p>
+  </section>
+
+  <section xml:id="sec-football-wormcharts">
+    <title>Wormcharts show league progress over a season</title>
+
+    <introduction>
+      <p>
+        Wormcharts track cumulative points relative to season averages, revealing how teams separate during a
+        campaign and highlighting decisive phases.
+      </p>
+
+      <figure xml:id="fig-worm15">
+        <image source="images/worm15-1.png"/>
+        <caption><p>Team performances in points above/below average in 2015-16.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-worm82">
+        <image source="images/worm82-1.png"/>
+        <caption><p>Team performances in points above/below average in season 1982-83.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-worm3768">
+        <image source="images/worm3768-1.png"/>
+        <caption>
+          <p>
+            Wormcharts for the two seasons with extreme point ranges for the English 1st Division Championship with
+            22 teams and two points for a win between 1919-20 and 1980-81.
+          </p>
+        </caption>
+      </figure>
+
+      <p>
+        <em>Answers.</em> Draw rates rose from very early low levels but changed little on average over the last
+        forty years. Home advantage has declined, especially in lower tiers. Goals per game have been fairly steady
+        for around fifty years. Wormcharts provide a clear season-level progression view.
+      </p>
+      <p>
+        <em>Further questions.</em> Would pre-1976 goal-difference ranking have changed outcomes? Which teams have
+        longest stays in each tier? Which move between tiers most often?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-football-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Time-series graphics should mark major rule/context changes with guides.</p></li>
+        <li><p>Highlighting specific cases with size, colour, and layering is effective.</p></li>
+        <li><p>Transformations can emphasize different parts of a ranking scale.</p></li>
+        <li><p>Wormcharts are illuminating for league progress through a season.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

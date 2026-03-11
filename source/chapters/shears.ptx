@@ -1,5 +1,144 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-shears">
-  <title>Shears</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Distinguishing shearwaters</title>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "There are approximately ten thousand species of birds on the planet and no single individual has seen them
+        all."
+      </p>
+      <p>--- Bernd Brunner</p>
+    </blockquote>
+    <p><em>Background.</em> Comparison of three species of shearwater.</p>
+    <p>
+      <em>Questions.</em> How can the species be distinguished? If species labels were absent, what clusters might be
+      found?
+    </p>
+    <p><em>Sources.</em> <c>seabirds</c> data in the <c>CoModes</c> package.</p>
+    <p>
+      <em>Structure.</em> A list with a dataset of 153 birds and five variables, plus separate classification labels.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-shears-overview">
+    <title>Distinguishing shearwaters and puffins</title>
+
+    <p>
+      The data contain morphological observations on Audubon's, Galapagos, and Tropical shearwaters. In several
+      packages these birds are labelled as puffins, likely due to the genus name <em>Puffinus</em>.
+    </p>
+
+    <p>
+      Prior publications used subsets of these data for clustering demonstrations, especially for the first two
+      species.
+    </p>
+  </section>
+
+  <section xml:id="sec-shears-two-species">
+    <title>Comparing two shearwater species (Audubon and Galapagos)</title>
+
+    <p>
+      Categorical recoding and ordering support clearer comparison across the two-species subset.
+    </p>
+
+    <figure xml:id="fig-puffbar">
+      <image source="images/puffBar-1.png"/>
+      <caption>
+        <p>
+          Barcharts of five variables comparing two species, with Audubon's in brown and Galapagos in dark blue.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Eyebrows and collar are highly informative for separating species, undertail is mixed, and border contributes
+      little discrimination.
+    </p>
+
+    <figure xml:id="fig-puffpcp1">
+      <image source="images/puffpcp1-1.png"/>
+      <caption>
+        <p>Parallel coordinate plot for Audubon and Galapagos shearwaters using three descriptive variables.</p>
+      </caption>
+    </figure>
+
+    <p>
+      Reversing undertail reduces crossings and highlights near-complete separation, including one unusual Galapagos
+      case.
+    </p>
+
+    <figure xml:id="fig-puffdd">
+      <image source="images/puffDD-1.png"/>
+      <caption>
+        <p>Comparison of Audubon and Galapagos shearwaters using collar bars faceted by eyebrows.</p>
+      </caption>
+    </figure>
+
+    <p>
+      Collar and eyebrows together separate the species except for one Audubon case with no collar and pronounced
+      eyebrows.
+    </p>
+  </section>
+
+  <section xml:id="sec-shears-cluster">
+    <title>Can the species be clustered?</title>
+
+    <p>
+      In unsupervised clustering, species labels are not used. A faceted frequency display of variable combinations
+      reveals dominant combinations that likely define cluster structure.
+    </p>
+
+    <figure xml:id="fig-puffmos">
+      <image source="images/puffmos-1.png"/>
+      <caption>
+        <p>
+          Barcharts of collar faceted by eyebrows, border, and undertail for Audubon and Galapagos shearwaters.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Most clustering methods should recover two groups close to species labels with only a small number of potential
+      mismatches.
+    </p>
+
+    <p>
+      Extending to all three species introduces stronger overlap between Audubon and Tropical shearwaters.
+    </p>
+
+    <figure xml:id="fig-puffmos3">
+      <image source="images/puffmos3-1.png"/>
+      <caption>
+        <p>
+          Barcharts of collar faceted by eyebrows, border, and undertail, coloured by species for all three species.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Galapagos remains partly separated, but overlap among the other species suggests three-way clustering is more
+      difficult.
+    </p>
+
+    <introduction>
+      <p>
+        <em>Answers.</em> Audubon and Galapagos shearwaters can be almost completely distinguished by two morphological
+        variables. Faceted barcharts indicate clustering should align closely with species for those two. With the
+        Tropical species included, separation becomes harder.
+      </p>
+      <p>
+        <em>Further questions.</em> How well can Galapagos shearwaters be separated from Tropical shearwaters alone?
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-shears-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Matched frequency scales across related barcharts improve comparability.</p></li>
+        <li><p>Category ordering and facet arrangement strongly influence readability.</p></li>
+        <li><p>Faceted barcharts are effective for locating cases in multivariate categorical data.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

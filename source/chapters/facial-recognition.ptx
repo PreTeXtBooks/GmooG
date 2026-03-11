@@ -1,5 +1,117 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-facial-recognition">
-  <title>Facial Recognition</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Comparing software for facial recognition</title>
+
+  <introduction>
+    <blockquote>
+      <p>"Here's looking at you, kid."</p>
+      <p>--- Humphrey Bogart to Ingrid Bergman in <em>Casablanca</em></p>
+    </blockquote>
+    <p>
+      <em>Background.</em> A key study evaluated how three facial-recognition systems performed across people with
+      different skin shades.
+    </p>
+    <p>
+      <em>Questions.</em> How do error rates vary by sex and skin colour? Are the patterns similar across the three
+      software systems?
+    </p>
+    <p><em>Sources.</em> Buolamwini and Gebru study data and results.</p>
+    <p>
+      <em>Structure.</em> Prediction counts for three software systems across 1,270 individuals and six skin-shade
+      groups.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-face-software">
+    <title>How well do the softwares do?</title>
+
+    <p>
+      The study dataset was balanced by sex and skin type, and the task was binary sex classification from images.
+      Published results showed much higher error rates for dark-skinned females than for light-skinned males.
+    </p>
+
+    <p>
+      Summary counts were reconstructed from published percentages under integer-count constraints.
+    </p>
+
+    <figure xml:id="fig-facebar">
+      <image source="images/faceBar-1.png"/>
+      <caption><p>Numbers of different skin tones in the dataset for both sexes.</p></caption>
+    </figure>
+
+    <p>
+      Group sizes are broadly similar, though males are more numerous overall, especially in selected skin-tone
+      groups.
+    </p>
+
+    <figure xml:id="fig-faceh">
+      <image source="images/faceh-1.png"/>
+      <caption>
+        <p>
+          Error rates by sex and skin colour for the three software systems, shown side by side.
+        </p>
+      </caption>
+    </figure>
+
+    <figure xml:id="fig-face3">
+      <image source="images/face3-1.png"/>
+      <caption>
+        <p>
+          Error rates by sex and skin colour for each software system, stacked vertically for detailed comparison.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Error rates are generally low for males, higher for females, and rise with darker skin shades. Microsoft tends
+      to perform best of the three, though all systems show substantial weaknesses in the hardest groups.
+    </p>
+  </section>
+
+  <section xml:id="sec-face-ppv">
+    <title>Are positive predictive values (PPV) a good criterion?</title>
+
+    <p>
+      Many binary-performance criteria are possible. Because PPV values are often high, plotting FDR = (1 - PPV) can
+      be more informative.
+    </p>
+
+    <figure xml:id="fig-facefdr">
+      <image source="images/faceFDR-1.png"/>
+      <caption>
+        <p>
+          FDRs by sex and skin colour for three software systems, with males on the left and females on the right.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      The FDR display shows low overall rates but also important structural differences. Prediction totals by sex can
+      differ from study totals, and darker skin groups still show the highest rates.
+    </p>
+
+    <p>
+      Across multiple criteria, the same substantive conclusion remains: the systems perform unevenly and worst on
+      dark-skinned females.
+    </p>
+
+    <introduction>
+      <p>
+        <em>Answers.</em> All three software packages had higher error rates for females than for males, and error
+        rates rose as skin shade darkened.
+      </p>
+      <p>
+        <em>Further questions.</em> With individual-level records, it would be informative to compare system
+        predictions case by case rather than only in grouped summaries.
+      </p>
+    </introduction>
+
+    <subsection xml:id="sec-face-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Graphics communicate overall pattern differences more effectively than percentage tables.</p></li>
+        <li><p>Doubledecker plots show why error-rate comparisons can be clearer than PPV comparisons.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>

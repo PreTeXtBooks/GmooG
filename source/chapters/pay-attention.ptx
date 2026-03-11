@@ -1,5 +1,411 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-pay-attention">
-  <title>Pay Attention</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>What affects interpretation?</title>
+
+  <introduction>
+    <blockquote>
+      <p>
+        "As in most cases when the truth becomes clear you wonder how you could ever have seen things differently."
+      </p>
+      <p>--- Ruth Rendell, <em>Not in the Flesh</em></p>
+    </blockquote>
+    <p>Interpreting graphics depends on paying attention to the graphics, understanding what is seen, and checking what is seen.</p>
+  </introduction>
+
+  <section xml:id="sec-attention">
+    <title>Attention</title>
+
+    <blockquote>
+      <p>"Can you describe her?"</p>
+      <p>"It's a bit difficult. She was sort of middle-aged and ordinary."</p>
+      <p>"What was she wearing?"</p>
+      <p>
+        "Tweeds, oatmeal flecked with brown, a three-quarter coat with patch pockets... a scarf, felt hat, brown
+        shoes, a tussle shirt... and a small blue handkerchief in her breast pocket. I can't remember any more."
+      </p>
+      <p>"You couldn't have been paying attention."</p>
+      <p>--- <em>The Lady Vanishes</em></p>
+    </blockquote>
+
+    <p>
+      Graphics texts generally consider perception and interpretation, including optical illusions, but do not pay as
+      much attention to attention. There is an implicit assumption that viewers who look at a graphic are giving it
+      their full attention. That seems as unrealistic as assuming all students attending a lecture are giving it their
+      undivided attention.
+    </p>
+
+    <figure xml:id="fig-bibi1">
+      <image source="images/bibi1-1.png"/>
+      <caption><p>Scatterplot of Biacromial diameter against pelvic breadth (Biiliac) for 507 adults.</p></caption>
+    </figure>
+
+    <p>
+      Does this display demand attention? Someone might glance at it and decide it does not look interesting. Perhaps
+      the measurements do not mean anything to them, or perhaps they do, but the topic does not attract them. They
+      might be distracted by coffee, email, noise, fatigue, or boredom. Or they might devote sustained and
+      concentrated attention to it. Graphics are often discussed objectively, yet there are many subjective factors
+      affecting how they are viewed.
+    </p>
+
+    <p>
+      Biacromial diameter is a technical term for shoulder width, and Biiliac may be described as pelvic breadth.
+      Knowing that might make someone look more closely and wonder that the two measurements are not more correlated.
+      Many body measurements are. A few Biiliac values appear lower than the rest. It is curious that the highest
+      pelvic breadth value and two of the three lowest have about the same middling shoulder width.
+    </p>
+
+    <figure xml:id="fig-bibi2">
+      <image source="images/bibi2-1.png"/>
+      <caption><p>Scatterplot of shoulder width against pelvic breadth for men and women, coloured by sex.</p></caption>
+    </figure>
+
+    <p>
+      Generally, women have about the same pelvic breadth as men but narrower shoulder widths. These displays use data
+      collected around twenty years ago (@heinz:2003). The authors' proviso should be remembered: the sample is not a
+      representative sample from a well-defined population.
+    </p>
+
+    <p>
+      If information is to be gained from a graphic, it has to be paid some attention. How much attention is paid and
+      how that attention is paid are important. A quick scan can suggest graphic type and broad structure. More focused
+      attention may be needed to confirm first impressions, identify additional features, and decide what further
+      information is useful.
+    </p>
+
+    <p>
+      Inspecting a graphic once is rarely sufficient. The source should be checked and associated text reviewed.
+      Sometimes a graphic should be compared with related graphics; sometimes other questions should be investigated
+      before returning to the graphic itself. If a graphic is worth drawing, it should be worth careful and thorough
+      study.
+    </p>
+
+    <p>
+      Initial impressions can be deceptive. Rather than fixating on one visible feature, it is more effective to
+      consciously look for others. Like brainstorming, it helps to generate several ideas before being too critical of
+      any of them.
+    </p>
+
+    <p>
+      Expectations influence what is seen, either negatively or positively. If expectations are strong, viewers may
+      only seek corroborating evidence. If there are no expectations, viewers may simply accept what they see and lose
+      capacity for surprise. It helps to think in advance about what is likely to appear, then look more closely even
+      if expectations are met.
+    </p>
+
+    <subsection xml:id="sec-attention-types">
+      <title>Types of attention</title>
+      <p>
+        Before paying full attention, there is preattentive processing (although attention still plays a role,
+        @healey:2012). People can pick out two red dots in a cloud of blue dots without trying. They might then use
+        focused attention on those points and their neighbourhoods or distribute attention over the whole display.
+      </p>
+      <p>
+        Something may catch a viewer's eye through peripheral vision. @potter:2014 concludes that in some
+        circumstances people can see meaning in a photograph within 13 ms. Even when graphics are studied more
+        closely, there is Barbara Tversky's fourth law of cognition (@tversky:2019): the mind can override
+        perception. These effects help explain why graphics are often poorly interpreted.
+      </p>
+
+      <figure xml:id="fig-btwmapex">
+        <image source="images/btwMapEX-1.png"/>
+        <caption><p>Winners of Erststimmen seats by political party in Germany 2021.</p></caption>
+      </figure>
+
+      <p>
+        What attention is paid to may be goal-driven, stimulus-driven, or history-based. In this map, main party
+        regions stand out for goal-driven viewing; smaller urban successes and legend implications support
+        stimulus-driven viewing; and prior knowledge reminds us that political maps display area rather than population.
+      </p>
+
+      <p>
+        @theeuwes:2018 argues that stimulus-driven and history-based selection are effortless while goal-driven
+        selection requires effort. It is easier to respond to a strong feature or familiar pattern than to identify a
+        feature that may or may not serve a particular goal.
+      </p>
+
+      <p>
+        Studying a display closely may reveal several features, yet later inspection may reveal others. It is useful to
+        revisit graphics afresh, changing size, aspect ratio, position, colour, symbols, and scales. The essential
+        principle is to regard graphics as doorways to information, not static pictures.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-attention-cognitive-load">
+      <title>Cognitive load</title>
+      <p>
+        Complex graphics can be difficult to study and understand. Sometimes this is because space is limited;
+        sometimes because data are genuinely complex. Anything that increases cognitive load should be avoided.
+      </p>
+
+      <p>
+        Having graphics and accompanying text on different pages demands extra effort. Poor labelling and awkward
+        scales make work. A poorly ordered legend does not help. Overlapping text and confusing colours require
+        disentangling. Comparisons become harder when scales that should match do not, or when graphics are not aligned
+        as they should be.
+      </p>
+
+      <figure xml:id="fig-palpcp2x">
+        <image source="images/Palpcp2X-1.png"/>
+        <caption><p>Reordered parallel coordinate plot of Palmer penguin data.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-attention-rewards">
+      <title>Rewards for paying attention</title>
+      <p>
+        Paying close attention to graphics can reveal much more information. Accepting a title or accompanying text may
+        not tell the full story. Graphics should be studied in context, and a closer look at underlying data is often
+        warranted.
+      </p>
+
+      <figure xml:id="fig-gapmovie">
+        <image source="images/gapMovie-1.png"/>
+        <caption><p>Gapminder life expectancy data (left) and movie ratings (right).</p></caption>
+      </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-understanding">
+    <title>Understanding</title>
+
+    <blockquote>
+      <p>"The more I practise, the luckier I get."</p>
+      <p>--- Gary Player</p>
+    </blockquote>
+
+    <subsection xml:id="sec-understanding-knowledge">
+      <title>Knowledge</title>
+      <p>
+        Knowledge of what graphic forms represent is necessary to understand what features might convey. Individual
+        graphics have a general structure with local details. Combined with other graphics they provide an overall
+        picture whose interpretation depends on context and background.
+      </p>
+
+      <p>
+        Background knowledge is indispensable, whether your own or that of collaborating domain experts. With data by
+        country over time, knowing how countries have changed matters. With swimming, knowledge of rules and equipment
+        changes matters.
+      </p>
+
+      <figure xml:id="fig-relay400x">
+        <image source="images/relay400X-1.png"/>
+        <caption><p>Best times for 400 m freestyle events for men and women, individual and relay.</p></caption>
+      </figure>
+
+      <p>
+        The web can help with context, but not always. Going back to original documentation can be valuable. Dataset
+        owners and maintainers are often very helpful.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-understanding-experience">
+      <title>Experience</title>
+      <p>
+        Experience changes what people notice. Motives, interest, background knowledge, education, and experience all
+        influence interpretation. It helps to study how to look at graphics and to look at many graphics. Just looking
+        is not enough.
+      </p>
+
+      <p>
+        Expertise research suggests that people with more experience recognise meaningful structure better. The same
+        likely applies to graphics: familiarity with forms and interpretation practices makes it easier to understand a
+        new dataset.
+      </p>
+
+      <figure xml:id="fig-comtimesx">
+        <image source="images/comTimesX-1.png"/>
+        <caption><p>Finishing times in the 2019 Comrades race for females and males.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-understanding-biases">
+      <title>Possible cognitive biases</title>
+      <p>
+        Even if proper attention is paid, cognitive biases may hinder proper use of what is seen.
+      </p>
+
+      <ul>
+        <li><p>Confirmation bias: look for information supporting prior beliefs.</p></li>
+        <li><p>Hindsight bias: past events seem more likely than they were.</p></li>
+        <li><p>Recency bias: recent events are weighted more than older ones.</p></li>
+        <li><p>Anchoring bias: overemphasis on a reference point, often what is seen first.</p></li>
+        <li><p>Availability bias: rely too much on examples to hand.</p></li>
+        <li><p>Representativeness bias: ignore base rates and sample size.</p></li>
+        <li><p>Perceptual bias: we see what we want to see.</p></li>
+      </ul>
+
+      <figure xml:id="fig-olyamdx">
+        <image source="images/olyAmdx-1.png"/>
+        <caption><p>Athletics field events for men: percentage differences in gold performances compared with recent Games.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-btw23x">
+        <image source="images/btw23X-1.png"/>
+        <caption><p>UpAndDown plot of absolute and relative changes in party support between two German elections.</p></caption>
+      </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-checking">
+    <title>Checking</title>
+
+    <blockquote>
+      <p>
+        "Aristotle maintained that women have fewer teeth than men ... it never occurred to him to verify this
+        statement by examining his wives' mouths."
+      </p>
+      <p>--- Bertrand Russell</p>
+    </blockquote>
+
+    <p>
+      Published graphics may appear polished, attractive, and convincing. Scepticism and thorough checking are called
+      for. It is often better to search for evidence that could refute impressions than to look only for support.
+      Several independent ways of checking features detected in graphics should be used.
+    </p>
+
+    <subsection xml:id="sec-checking-provenance">
+      <title>Provenance</title>
+      <p>
+        Are data from a reliable source? Is it known how they were collected, edited, and summarised? Are they precise
+        measurements or uncertain estimates? Do variables mean what you think they do?
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-checking-looking">
+      <title>Looking at the numbers</title>
+      <p>
+        Do scales look sensible? Perhaps minima or maxima look too extreme. Do data appear complete? Perhaps there are
+        gaps in time series or missing categories. Categories missing altogether can be difficult to spot. Sometimes
+        there is heaping at particular values due to rounding, sometimes particular values are never recorded, and
+        sometimes all data are rounded so a continuous measurement appears discrete.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-checking-varying-plots">
+      <title>Varying plots</title>
+      <p>
+        Graphics redrawn in different ways leave different impressions, emphasising different information. Size, aspect
+        ratio, and position can strongly influence what can be seen. Graphics can be resized, moved, and zoomed in or
+        out. Plot options can be varied: maxima and minima of scales, origin location, histogram bin widths, point
+        sizes, colours, and more. Whether one variation is "better" than another is less important than checking
+        several.
+      </p>
+
+      <figure xml:id="fig-movhists">
+        <image source="images/movHists-1.png"/>
+        <caption><p>Histograms of movie runtimes, the default on the left and a varied one on the right.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-checking-varying-forms">
+      <title>Varying plot forms</title>
+      <p>
+        Drawing different kinds of plots of the same variable(s) can provide new insights: boxplots or density
+        estimates instead of histograms, scatterplots by group instead of a single scatterplot, or a doubledecker plot
+        instead of stacked barcharts.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-checking-statistical">
+      <title>Statistical checks</title>
+      <p>
+        Statistical models and graphics complement one another. There are often graphical ways to assess model results,
+        but not always statistical models for ideas suggested by graphics. If such models exist, they should be used.
+      </p>
+
+      <figure xml:id="fig-chesssocsm-1">
+        <image source="images/ChessSocSm-1.png"/>
+        <caption><p>Smooth of chess ratings.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-chesssocsm-2">
+        <image source="images/ChessSocSm-2.png"/>
+        <caption><p>Smooth of football-league draw proportions.</p></caption>
+      </figure>
+
+      <p>
+        If a spineplot suggests non-independence, a chi-squared test could be used. More complicated data may need
+        logistic regression or other modelling approaches.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-checking-consequences">
+      <title>Checking consequences</title>
+      <p>
+        Internal checking asks whether patterns found across the whole dataset also occur in subgroups. External
+        checking compares with related datasets where relevant.
+      </p>
+
+      <figure xml:id="fig-histelox">
+        <image source="images/histEloX-1.png"/>
+        <caption><p>Ratings of active and inactive chess players in 2020.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-btwdotvx">
+        <image source="../../pngImages/btwDotV-1.png"/>
+        <caption><p>Seat-winning percentages by party in Germany 2021 and UK 2019.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-gaybx">
+        <image source="images/gayBX-1.png"/>
+        <caption><p>Support and opposition plots for same-sex marriage questions by age and sex.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-ubhx">
+        <image source="images/ubHX-1.png"/>
+        <caption><p>Extra seats in German elections since 1949.</p></caption>
+      </figure>
+
+      <figure xml:id="fig-swim50200x">
+        <image source="images/swim50200X-1.png"/>
+        <caption><p>Best times in seconds for four 50 m events and four 200 m events by sex.</p></caption>
+      </figure>
+    </subsection>
+
+    <subsection xml:id="sec-checking-context">
+      <title>Context</title>
+      <p>
+        Results have to make sense and be interpreted in context. A point pattern in a scatterplot may be judged very
+        differently for different datasets or variables. Weekly reporting patterns, definition changes, and collection
+        conditions can all affect what is seen.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-checking-discussion">
+      <title>Discussing with others, especially domain experts</title>
+      <p>
+        What one person sees in a graphic may not be what another person sees. Combining independent opinions is more
+        effective than relying on one person. Graphics analysts will not have full subject knowledge and should consult
+        domain experts.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-checking-replicate">
+      <title>Replicate</title>
+      <p>
+        The ideal is independent replication. Full replication may be impractical for time, organisational, and
+        financial reasons, but it remains the target. Partial replication can be achieved by splitting large datasets
+        into independent groups or by checking consistency over time in regularly updated datasets.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-checking-example">
+      <title>Example of checking</title>
+      <p>
+        In the swimming examples, initial visual impressions were checked across strokes and distances, alternative
+        displays were drawn, and source records were inspected. This uncovered both substantive explanations and a
+        classification error.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-pay-attention-main-points">
+      <title>Main points</title>
+      <ul>
+        <li><p>Attention varies with goals and conditions; cognitive load should be reduced where possible.</p></li>
+        <li><p>Understanding depends on graphic literacy, domain knowledge, and experience.</p></li>
+        <li><p>Cognitive biases can distort interpretation and must be actively countered.</p></li>
+        <li><p>Checking should combine multiple independent strategies, not just one.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>
