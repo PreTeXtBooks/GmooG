@@ -8,118 +8,156 @@
   </epigraph>
 
   <introduction>
-    <p><em>Background.</em> In 1912 the battle for the Democratic Presidential nomination was particularly fierce. Woodrow Wilson finally won on the 46th ballot.</p>
-    <p><em>Questions.</em> How did support for the various candidates change during voting? When were the crucial moments?</p>
-    <p><em>Sources.</em> Official convention report by Woodson.</p>
-    <p><em>Structure.</em> Votes received by each candidate from each state in each ballot (3839 observations of 4 variables).</p>
+    <p><em>Background.</em> In 1912 the battle for the Democratic Presidential nomination was particularly fierce.  Woodrow Wilson finally won on the 46th ballot.</p>
+    <p><em>Questions.</em> How did the support for the various candidates change during the voting?  When were the crucial moments?</p>
+    <p><em>Sources.</em> <xref ref="woodson-1912"/></p>
+    <p><em>Structure.</em> The number of votes received by each candidate from each state in each ballot (3839 observations of 4 variables).</p>
   </introduction>
 
   <section xml:id="sec-1912-first-look">
     <title>A first look at the 1912 Democratic Convention</title>
-    <p>American political conventions are central to the election cycle, but for many years modern winners were effectively known in advance. In 1912 that was not the case: Woodrow Wilson was selected only on ballot 46.</p>
-    <p>Wilson is well known for the Paris Peace Conference and the Fourteen Points after World War I. His later regressive policy on racial segregation is less often emphasized, and was not apparent before his election.</p>
+    <p>American political conventions are an important part of the four-year election cycle, when the parties' presidential candidates are nominated.  For many years the winning candidates have been known before the conventions started.  That was not always the case.  In 1912 Woodrow Wilson was only selected on the 46th ballot.</p>
+    <p>Wilson is known for his participation at the Paris Peace Conference after World War I and the fourteen points for peace he propounded.  His regressive policy on racial segregation is not so well-known and was not apparent before his election as President either.  W. E. B. Du Bois, the famous black sociologist known for his maps and charts, campaigned for Wilson, but must have been very disappointed by Wilson's actions afterwards.</p>
 
     <figure xml:id="fig-candvs">
-      <caption>Votes for the candidates over the 46 ballots.</caption>
-      <image source="images/candvs-1.png"/>
+      <image source="images/candvs-1.png">
+        <description>Line chart of votes received by each candidate across all 46 ballots of the 1912 Democratic National Convention. Wilson and Clark are the dominant lines; Clark starts ahead, peaks around ballot 10, then declines while Wilson rises steadily and wins on ballot 46. Several minor candidates receive small and eventually diminishing vote counts.</description>
+      </image>
+      <caption><p>Votes for the candidates over the 46 ballots.</p></caption>
     </figure>
 
-    <p>The main story is clear: Clark began ahead, moved further ahead, then Wilson gradually caught up and edged in front before finally winning in the last ballots. Even this default plot already carries useful detail.</p>
+    <p>Figure <xref ref="fig-candvs"/> shows the development of delegate support for the candidates during the convention.  There were two main contenders, Wilson and Clark, with Clark initially ahead and then going even further ahead before Wilson gradually caught up with him and edged in front.  The convention finally turned for Wilson in the last few ballots.</p>
+    <p>While the default plot in Figure <xref ref="fig-candvs"/> tells the main story, there is other information in the data too.</p>
   </section>
 
   <section xml:id="sec-1912-usa-compare">
     <title>The USA in 1912 and 2020</title>
-    <p>The USA of 1912 differed from that of 2020: there were 48 states, while Alaska and Hawaii joined later. Delegates also included territories such as Washington DC and Puerto Rico. Total delegates rose from 1088 (1912) to 3979 pledged delegates (2020).</p>
+    <p>The USA in 1912 was not the same as the USA in 2020.  There were only 48 states.  Arizona and New Mexico achieved statehood in the early part of 1912, while Alaska and Hawaii did not join the Union until 1959.  These territories had delegates at the Convention as did Washington DC and Puerto Rico.  The numbers of delegates in 1912 were far fewer in total than at the Democratic Convention in 2020.  There were 1088 in 1912 whereas there were 3979 pledged delegates in 2020.  (There were other kinds of delegate in 2020, but the most relevant by state were the pledged delegates.)  Figure <xref ref="fig-delegs"/> compares the numbers of delegates per area for the two Conventions.  The states have been ordered by number of delegates in 1912 and coloured by the four main regions used by the Census Bureau.  California and Florida stand out as having substantially bigger shares of delegates.  Iowa (which had the same number of delegates as California in 1912) and Missouri are amongst the losers.</p>
 
     <figure xml:id="fig-delegs">
-      <caption>Numbers of delegates by state and territory at the 1912 and 2020 Democratic conventions (different horizontal scales).</caption>
-      <image source="images/delegs-1.png"/>
+      <image source="images/delegs-1.png">
+        <description>Two side-by-side horizontal bar charts showing the number of delegates per state and territory at the 1912 (left) and 2020 (right) Democratic conventions, with states ordered by their 1912 delegate count and bars coloured by US Census region. The horizontal scales differ between panels. California and Florida have grown substantially relative to other states.</description>
+      </image>
+      <caption><p>Numbers of delegates by state and territory at the 1912 and 2020 Democratic conventions (different horizontal scales).</p></caption>
     </figure>
 
-    <p>Delegate share changes stand out for California and Florida, with other relative gains and losses across states.</p>
+    <p>As the total numbers of delegates have increased almost fourfold, the percentage shares of delegates by state were compared.  Figure <xref ref="fig-delscat"/> is a scatterplot of those shares in 2020 against the shares in 1912.  The points are coloured by region again and the point areas are proportional to the numbers of delegates in 2020.  The five states with the most delegates in 2020 have been labelled.  The big increases for California and Florida stand out again and in this plot Texas does too.  It is interesting to see that California had a bigger share of delegates in 2020 than New York had in 1912.  Puerto Rico, which had relatively few delegates at both conventions, has been left out, as it counts as a territory and is not in one of the four regions.</p>
 
     <figure xml:id="fig-delscat">
-      <caption>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions (point sizes are proportional to the number of delegates in 2020).</caption>
-      <image source="images/delScat-1.png"/>
+      <image source="images/delScat-1.png">
+        <description>Scatterplot of each state's percentage share of convention delegates in 2020 (y-axis) against its share in 1912 (x-axis), with points coloured by US Census region and sized proportional to 2020 delegate count. A dotted diagonal line marks equal share. California, Florida, and Texas lie well above the line; New York and several Midwest and Northeast states lie below it. The five largest 2020 states are labelled.</description>
+      </image>
+      <caption><p>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions (point sizes are proportional to the number of delegates in 2020).</p></caption>
     </figure>
+
+    <p>What happened in the different regions can be more easily assessed using facets.  Figure <xref ref="fig-delfacet"/> shows the scatterplot of Figure <xref ref="fig-delscat"/> faceted by region.  Most of the Western states, but not all, increased their share like California, but by smaller amounts.  Only one MidWest state out of 12 increased its share, albeit slightly.  That turned out to be Michigan.  States in the NorthEast also lost share.</p>
 
     <figure xml:id="fig-delfacet">
-      <caption>Percentage state shares of delegates by region.</caption>
-      <image source="images/delfacet-1.png"/>
+      <image source="images/delfacet-1.png">
+        <description>Four-panel scatterplot (one per US Census region: West, MidWest, South, NorthEast) showing percentage delegate share in 2020 against 1912 for the states in each region, with a dotted diagonal reference line. Western states largely fall above the line; MidWest and NorthEast states mostly fall below it.</description>
+      </image>
+      <caption><p>Percentage state shares of delegates by region.</p></caption>
     </figure>
 
-    <p>Regional faceting makes trends clearer: many Western states increased share, while most MidWest and NorthEast states lost share.</p>
+    <p>There is a further distribution of votes per state to consider, their votes in the Electoral College that actually elects the President.  Figure <xref ref="fig-delev"/> shows scatterplots of the number of delegates per state v. the number of Electoral College votes in 1912 and 2020.  Alaska, Hawaii, Puerto Rico are excluded for 1912 (they had no Electoral College votes then), as is D.C. which first got Electoral College votes in 1964.  Many smaller states had the same number of Electoral College votes, so there is a lot of overplotting.</p>
+    <p>There is a simple linear relationship, shown by the dotted line, that the number of delegates a state had at the Democratic Convention in 1912 was twice the state's number of Electoral College Votes&#8212;with one exception down to the bottom left: New Mexico had 8 delegates, but only 3 Electoral College Votes.</p>
+    <p>The picture in 2020 was more varied.  In this plot the dotted line is a regression on the data with a slope of 7.7.  New York and Pennsylvania had more delegates per electoral vote and Texas fewer.</p>
 
     <figure xml:id="fig-delev">
-      <caption>Delegates and Electoral College votes by state in 1912 (left) and 2020 (right).</caption>
-      <image source="images/delEV-1.png"/>
+      <image source="images/delEV-1.png">
+        <description>Two side-by-side scatterplots of convention delegates (y-axis) against Electoral College votes (x-axis) for each state, one for 1912 (left) and one for 2020 (right). A dotted reference line is shown in each panel: in 1912 it follows the 2:1 rule (delegates = 2 × electoral votes), with New Mexico as the one outlier below; in 2020 it shows a fitted regression with slope 7.7, and New York, Pennsylvania, and Texas are labelled as notable deviations.</description>
+      </image>
+      <caption><p>Delegates and Electoral College votes by state in 1912 (left) and 2020 (right).</p></caption>
     </figure>
-
-    <p>In 1912 there was an almost exact linear rule for convention delegates versus Electoral College votes (with New Mexico as an exception). By 2020 the relationship was less uniform, with notable state-level deviations.</p>
   </section>
 
   <section xml:id="sec-1912-unfolded">
     <title>How the nomination contest unfolded</title>
-    <p>Republican division in 1912 (Taft vs Roosevelt, then Roosevelt's breakaway campaign) shaped expectations that Democrats would win. The official convention report provides ballot-level detail for this analysis.</p>
+    <p>In 1912 the Republicans held their convention first and the party was torn apart by the dispute between the supporters of a previous President, Theodore Roosevelt, and the then President, William Howard Taft.  Roosevelt started a new party after the convention and it was expected that splitting the Republican vote would lead to the Democrats' winning the election.  The Republicans and former Republicans together got 7.6 million votes in the election, while the Democrats won only 6.3 million votes, but they won 40 of the 48 states and swept the Electoral College.</p>
+    <p>There is a good chapter on the 1912 Democratic convention in the first volume of Link's biography of Woodrow Wilson (<xref ref="link-1947"/>).  The main source for the analysis here is the official report on the convention (<xref ref="woodson-1912"/>) that includes all the counts in detail.</p>
 
     <figure xml:id="fig-candvs2">
-      <caption>Votes for the main candidates over the 46 ballots.</caption>
-      <image source="images/candvs2-1.png"/>
+      <image source="images/candvs2-1.png">
+        <description>Step-line chart of votes for the main candidates across all 46 ballots, titled "Wilson won the 1912 Democratic nomination on the 46th ballot". A dashed horizontal line marks the two-thirds threshold needed to win (approximately 725 votes) and a dotted line marks 50%. Clark leads until around ballot 30, then Wilson overtakes him. Underwood and two minor candidates are also shown.</description>
+      </image>
+      <caption><p>Votes for the main candidates over the 46 ballots.</p></caption>
     </figure>
 
-    <p>Adding the two-thirds nomination threshold and a 50% line highlights turning points. Key developments included New York's switch on ballot 10, later gradual erosion of Clark's support, failed compromise-candidate attempts, Wilson's ballot-43 breakthrough, and Underwood's withdrawal before ballot 46.</p>
+    <p>Figure <xref ref="fig-candvs2"/> is a revised version of Figure <xref ref="fig-candvs"/> restricted to the more important candidates.  A horizontal dashed line marking the level of two-thirds support that was needed to win the nomination has been added, as has a horizontal dotted line marking 50% support.  Here are the key developments.</p>
+
+    <p>1. On the 10th ballot, New York, with 90 delegates, the largest number of any state, switched allegiance from Harmon to Clark, the front runner.  This gave Clark an overall majority and it might have been expected that other states would follow.  The supporters of Wilson and Underwood&#8212;a third candidate with hopes of being selected if Clark and Wilson deadlocked&#8212;held firm.  They were strengthened by a speech by the three-time Democratic candidate for the Presidency, William Jennings Bryan, just before the 14th ballot.  Bryan criticised Tammany Hall, the corrupt Democratic political machine in New York, and rallied the progressive wing of the party.</p>
 
     <figure xml:id="fig-candvs2a">
-      <caption>Development 1 highlight window (ballots around 10-14).</caption>
-      <image source="images/candvs2a-1.png"/>
+      <image source="images/candvs2a-1.png">
+        <description>The same candidate vote step-line chart as Figure fig-candvs2, with a yellow highlighted rectangle drawn around ballots 6 to 14 in the vote range 400 to 600, marking the period when New York switched to Clark and Bryan's speech rallied the progressive wing.</description>
+      </image>
+      <caption><p>Development 1: New York switches to Clark (ballots 6&#8211;14, highlighted).</p></caption>
     </figure>
+
+    <p>2. During the steady decline in Clark's support there was a gradual increase for Wilson, with minor jumps in support on the 20th ballot (when the 20 delegates of Kansas moved from Clark to Wilson) and on the 28th ballot (when Marshall of Indiana dropped out and 29 of the state's 30 votes went to Wilson.  Marshall went on to be chosen as the party's Vice-Presidential candidate.)</p>
 
     <figure xml:id="fig-candvs2b">
-      <caption>Development 2 highlight windows (ballots around 20 and 28).</caption>
-      <image source="images/candvs2b-1.png"/>
+      <image source="images/candvs2b-1.png">
+        <description>The candidate vote step-line chart with two yellow highlighted rectangles: one around ballots 18 to 22 marking the Kansas switch on ballot 20, and one around ballots 26 to 30 marking Marshall's withdrawal and Indiana's votes moving to Wilson on ballot 28.</description>
+      </image>
+      <caption><p>Development 2: Kansas and Indiana switches (ballots 18&#8211;22 and 26&#8211;30, highlighted).</p></caption>
     </figure>
+
+    <p>3. The introduction of Foss on the 22nd ballot and the reintroduction of Harmon on the 25th ballot were attempts to find a compromise candidate.  Neither gained ground.</p>
 
     <figure xml:id="fig-candvs2c">
-      <caption>Development 3 highlight window (compromise-candidate phase).</caption>
-      <image source="images/candvs2c-1.png"/>
+      <image source="images/candvs2c-1.png">
+        <description>The candidate vote step-line chart with a yellow highlighted rectangle around ballots 20 to 27 at the bottom of the chart (vote range -15 to 70), marking the brief and unsuccessful emergence of Foss and Harmon as compromise candidates.</description>
+      </image>
+      <caption><p>Development 3: Foss and Harmon compromise attempts (ballots 20&#8211;27, highlighted).</p></caption>
     </figure>
+
+    <p>4. Wilson's breakthrough came on the 43rd ballot, when Illinois with 58 delegates went from Clark to Wilson.  This was the first point at which Wilson had the support of more than half of the delegates.</p>
 
     <figure xml:id="fig-candvs2d">
-      <caption>Development 4 highlight window (Wilson breakthrough).</caption>
-      <image source="images/candvs2d-1.png"/>
+      <image source="images/candvs2d-1.png">
+        <description>The candidate vote step-line chart with a yellow highlighted rectangle around ballots 41 to 45 in the vote range 450 to 625, marking Wilson's breakthrough on ballot 43 when Illinois switched and Wilson first exceeded 50% support.</description>
+      </image>
+      <caption><p>Development 4: Wilson's breakthrough on ballot 43 (highlighted).</p></caption>
     </figure>
+
+    <p>5. Before the 46th ballot began, Underwood (with 97 delegates) withdrew without a recommendation to his supporters and it was clear that Wilson would win.  Missouri, long-time supporters of Clark, insisted on a final ballot.  Their spokesman said: <q>We are going to cast our vote for Clark on the last ballot. We have got to go back to Missouri.</q></p>
 
     <figure xml:id="fig-candvs2e">
-      <caption>Development 5 highlight window (final ballots).</caption>
-      <image source="images/candvs2e-1.png"/>
+      <image source="images/candvs2e-1.png">
+        <description>The candidate vote step-line chart with a yellow highlighted rectangle around ballots 44 to 47 in the vote range 600 to 1010, marking Underwood's withdrawal and Wilson's final victory on ballot 46.</description>
+      </image>
+      <caption><p>Development 5: Underwood withdraws and Wilson wins on ballot 46 (highlighted).</p></caption>
     </figure>
 
-    <p>Some features are visible directly, others require historical context. Graphics and domain narrative complement each other: graphics provide structure, and reports provide causal detail.</p>
+    <p>Some of these features, possibly the second and definitely the third, would be difficult to identify just from the graphic and without background information.  Graphical analysis benefits from an understanding of what is being represented.  Dramatic features are easy to spot, but still have to be interpreted.  Descriptions of what took place indicate additional places to look in the graphic.  Both approaches are valuable and they complement one another.  Good graphics can provide summarising overviews, while reports flesh out the details.  Neither alone is enough.</p>
   </section>
 
   <section xml:id="sec-1912-ballot-time">
     <title>When did the ballots actually take place?</title>
-    <p>Ballot number is only an approximate time index. The first ballot occurred Friday morning (June 28) and the last on Tuesday afternoon (July 2). Using adjournment times and estimated ballot timing yields a more realistic timeline.</p>
+    <p>Using the ballot number as a measure of time is an approximation of what actually happened.  The first ballot took place on the morning of Friday, 28 June, and the last ballot took place on the afternoon of Tuesday, 2 July.  The official report of the convention (<xref ref="woodson-1912"/>) does not record when exactly ballots were taken, but does record to the minute when the convention was adjourned and when it restarted.  Making the assumption that each ballot took about the same time, and adding extra time for special polling of individual states and speeches, gives Figure <xref ref="fig-convt"/>.</p>
 
     <figure xml:id="fig-convt">
-      <caption>Convention voting using estimated ballot times with the date labels at midday and adjournment periods shaded grey.</caption>
-      <image source="images/convt-1.png"/>
+      <image source="images/convt-1.png">
+        <description>Step-line chart of candidate vote counts plotted against estimated real-world date and time (Friday 28 June to Tuesday 2 July 1912), with the same colour scheme as the previous ballot-number plots. Adjournment periods are shaded grey. Date labels appear at midday of each day. The ballots appear in dense clusters separated by long overnight and Sunday breaks; the decisive shift to Wilson occurs after the Monday-to-Tuesday overnight adjournment.</description>
+      </image>
+      <caption><p>Convention voting using estimated ballot times with the date labels at midday and adjournment periods shaded grey.</p></caption>
     </figure>
 
-    <p>The timeline view shows clustered ballots separated by long pauses, especially across Sunday. The decisive shift to Wilson followed an overnight break, underscoring that off-floor negotiations likely mattered.</p>
+    <p>This picture makes a different impression.  Instead of a string of equally spaced events, there are bunches of ballots, separated by a number of breaks in the proceedings, especially that from midnight on the Saturday to 11am on the Monday.  There were no official meetings on the Sunday.  The crucial breakthrough for Wilson took place after the overnight break between Monday and Tuesday.  Discussions must have been taking place all through the convention.  Sometimes more than one plot is necessary to get the full picture.</p>
   </section>
 
   <section xml:id="sec-1912-discussion">
     <title>Discussion</title>
-    <p><em>Answers.</em> Many ballots occurred with little change in support, but a handful of critical points determined the final outcome.</p>
-    <p><em>Further questions.</em> Which states voted as blocs during the convention? In which other years did nomination require many ballots?</p>
+    <p><em>Answers.</em> Many ballots took place without any change in support for the various candidates.  There were up to six critical points that determined the result.</p>
+    <p><em>Further questions.</em> Which states voted as one during the convention?  In which other years were there many ballots to select a candidate?</p>
 
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Guidelines support reading of graphics.</p></li>
-      <li><p>Time series with discrete jumps are better represented with steps.</p></li>
-      <li><p>Precise time scales can be more informative than equally spaced index points.</p></li>
-      <li><p>Interpretation requires domain knowledge.</p></li>
+      <li><p>Guidelines support reading of graphics. (Figures <xref ref="fig-delscat"/> to <xref ref="fig-convt"/>)</p></li>
+      <li><p>Time series with discrete jumps should be represented with steps. (Figure <xref ref="fig-candvs2"/>)</p></li>
+      <li><p>Precise time scales are better than using equal intervals between data points. (Figure <xref ref="fig-convt"/>)</p></li>
+      <li><p>Interpretation requires domain knowledge. (Figures <xref ref="fig-candvs2"/> and <xref ref="fig-convt"/>)</p></li>
     </ul>
   </section>
 </chapter>

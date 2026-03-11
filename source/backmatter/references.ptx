@@ -125,4 +125,10 @@
 
   <!-- imdb:2022 -->
   <biblio xml:id="imdb-2022" type="raw">IMDb. Internet Movie Database. <url href="https://datasets.imdbws.com"/>. 2022. (accessed 01.07.2022)</biblio>
+
+  <!-- woodson:1912 -->
+  <biblio xml:id="woodson-1912" type="raw">Woodson, Urey. <pubtitle>Official Report of the Proceedings of the Democratic National Convention</pubtitle>. Peterson Linotyping Company, Chicago, 1912.</biblio>
+
+  <!-- link:1947 -->
+  <biblio xml:id="link-1947" type="raw">Link, Arthur. <pubtitle>Wilson, Vol I: The Road to the White House</pubtitle>. Princeton University Press, Princeton, New Jersey, 1947.</biblio>
 </references>
