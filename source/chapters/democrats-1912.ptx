@@ -26,13 +26,13 @@
       <caption><p>Votes for the candidates over the 46 ballots.</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-candvs"/> shows the development of delegate support for the candidates during the convention.  There were two main contenders, Wilson and Clark, with Clark initially ahead and then going even further ahead before Wilson gradually caught up with him and edged in front.  The convention finally turned for Wilson in the last few ballots.</p>
-    <p>While the default plot in Figure <xref ref="fig-candvs"/> tells the main story, there is other information in the data too.</p>
+    <p><xref ref="fig-candvs"/> shows the development of delegate support for the candidates during the convention.  There were two main contenders, Wilson and Clark, with Clark initially ahead and then going even further ahead before Wilson gradually caught up with him and edged in front.  The convention finally turned for Wilson in the last few ballots.</p>
+    <p>While the default plot in <xref ref="fig-candvs"/> tells the main story, there is other information in the data too.</p>
   </section>
 
   <section xml:id="sec1912Dem2">
     <title>The USA in 1912 and 2020</title>
-    <p>The USA in 1912 was not the same as the USA in 2020.  There were only 48 states.  Arizona and New Mexico achieved statehood in the early part of 1912, while Alaska and Hawaii did not join the Union until 1959.  These territories had delegates at the Convention as did Washington DC and Puerto Rico.  The numbers of delegates in 1912 were far fewer in total than at the Democratic Convention in 2020.  There were 1088 in 1912 whereas there were 3979 pledged delegates in 2020.  (There were other kinds of delegate in 2020, but the most relevant by state were the pledged delegates.)  Figure <xref ref="fig-delegs"/> compares the numbers of delegates per area for the two Conventions.  The states have been ordered by number of delegates in 1912 and coloured by the four main regions used by the Census Bureau.  California and Florida stand out as having substantially bigger shares of delegates.  Iowa (which had the same number of delegates as California in 1912) and Missouri are amongst the losers.</p>
+    <p>The USA in 1912 was not the same as the USA in 2020.  There were only 48 states.  Arizona and New Mexico achieved statehood in the early part of 1912, while Alaska and Hawaii did not join the Union until 1959.  These territories had delegates at the Convention as did Washington DC and Puerto Rico.  The numbers of delegates in 1912 were far fewer in total than at the Democratic Convention in 2020.  There were 1088 in 1912 whereas there were 3979 pledged delegates in 2020.  (There were other kinds of delegate in 2020, but the most relevant by state were the pledged delegates.)  <xref ref="fig-delegs"/> compares the numbers of delegates per area for the two Conventions.  The states have been ordered by number of delegates in 1912 and coloured by the four main regions used by the Census Bureau.  California and Florida stand out as having substantially bigger shares of delegates.  Iowa (which had the same number of delegates as California in 1912) and Missouri are amongst the losers.</p>
 
     <figure xml:id="fig-delegs">
       <image source="images/delegs-1.png">
@@ -41,7 +41,7 @@
       <caption><p>Numbers of delegates by state and territory at the 1912 and 2020 Democratic conventions (different horizontal scales).</p></caption>
     </figure>
 
-    <p>As the total numbers of delegates have increased almost fourfold, the percentage shares of delegates by state were compared.  Figure <xref ref="fig-delscat"/> is a scatterplot of those shares in 2020 against the shares in 1912.  The points are coloured by region again and the point areas are proportional to the numbers of delegates in 2020.  The five states with the most delegates in 2020 have been labelled.  The big increases for California and Florida stand out again and in this plot Texas does too.  It is interesting to see that California had a bigger share of delegates in 2020 than New York had in 1912.  Puerto Rico, which had relatively few delegates at both conventions, has been left out, as it counts as a territory and is not in one of the four regions.</p>
+    <p>As the total numbers of delegates have increased almost fourfold, the percentage shares of delegates by state were compared.  <xref ref="fig-delscat"/> is a scatterplot of those shares in 2020 against the shares in 1912.  The points are coloured by region again and the point areas are proportional to the numbers of delegates in 2020.  The five states with the most delegates in 2020 have been labelled.  The big increases for California and Florida stand out again and in this plot Texas does too.  It is interesting to see that California had a bigger share of delegates in 2020 than New York had in 1912.  Puerto Rico, which had relatively few delegates at both conventions, has been left out, as it counts as a territory and is not in one of the four regions.</p>
 
     <figure xml:id="fig-delscat">
       <image source="images/delScat-1.png">
@@ -50,7 +50,7 @@
       <caption><p>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions (point sizes are proportional to the number of delegates in 2020).</p></caption>
     </figure>
 
-    <p>What happened in the different regions can be more easily assessed using facets.  Figure <xref ref="fig-delfacet"/> shows the scatterplot of Figure <xref ref="fig-delscat"/> faceted by region.  Most of the Western states, but not all, increased their share like California, but by smaller amounts.  Only one MidWest state out of 12 increased its share, albeit slightly.  That turned out to be Michigan.  States in the NorthEast also lost share.</p>
+    <p>What happened in the different regions can be more easily assessed using facets.  <xref ref="fig-delfacet"/> shows the scatterplot of <xref ref="fig-delscat"/> faceted by region.  Most of the Western states, but not all, increased their share like California, but by smaller amounts.  Only one MidWest state out of 12 increased its share, albeit slightly.  That turned out to be Michigan.  States in the NorthEast also lost share.</p>
 
     <figure xml:id="fig-delfacet">
       <image source="images/delfacet-1.png">
@@ -59,7 +59,7 @@
       <caption><p>Percentage state shares of delegates by region.</p></caption>
     </figure>
 
-    <p>There is a further distribution of votes per state to consider, their votes in the Electoral College that actually elects the President.  Figure <xref ref="fig-delev"/> shows scatterplots of the number of delegates per state v. the number of Electoral College votes in 1912 and 2020.  Alaska, Hawaii, Puerto Rico are excluded for 1912 (they had no Electoral College votes then), as is D.C. which first got Electoral College votes in 1964.  Many smaller states had the same number of Electoral College votes, so there is a lot of overplotting.</p>
+    <p>There is a further distribution of votes per state to consider, their votes in the Electoral College that actually elects the President.  <xref ref="fig-delev"/> shows scatterplots of the number of delegates per state v. the number of Electoral College votes in 1912 and 2020.  Alaska, Hawaii, Puerto Rico are excluded for 1912 (they had no Electoral College votes then), as is D.C. which first got Electoral College votes in 1964.  Many smaller states had the same number of Electoral College votes, so there is a lot of overplotting.</p>
     <p>There is a simple linear relationship, shown by the dotted line, that the number of delegates a state had at the Democratic Convention in 1912 was twice the state's number of Electoral College Votes&#8212;with one exception down to the bottom left: New Mexico had 8 delegates, but only 3 Electoral College Votes.</p>
     <p>The picture in 2020 was more varied.  In this plot the dotted line is a regression on the data with a slope of 7.7.  New York and Pennsylvania had more delegates per electoral vote and Texas fewer.</p>
 
@@ -83,7 +83,7 @@
       <caption><p>Votes for the main candidates over the 46 ballots.</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-candvs2"/> is a revised version of Figure <xref ref="fig-candvs"/> restricted to the more important candidates.  A horizontal dashed line marking the level of two-thirds support that was needed to win the nomination has been added, as has a horizontal dotted line marking 50% support.  Here are the key developments.</p>
+    <p><xref ref="fig-candvs2"/> is a revised version of <xref ref="fig-candvs"/> restricted to the more important candidates.  A horizontal dashed line marking the level of two-thirds support that was needed to win the nomination has been added, as has a horizontal dotted line marking 50% support.  Here are the key developments.</p>
 
     <p>1. On the 10th ballot, New York, with 90 delegates, the largest number of any state, switched allegiance from Harmon to Clark, the front runner.  This gave Clark an overall majority and it might have been expected that other states would follow.  The supporters of Wilson and Underwood&#8212;a third candidate with hopes of being selected if Clark and Wilson deadlocked&#8212;held firm.  They were strengthened by a speech by the three-time Democratic candidate for the Presidency, William Jennings Bryan, just before the 14th ballot.  Bryan criticised Tammany Hall, the corrupt Democratic political machine in New York, and rallied the progressive wing of the party.</p>
 
@@ -135,7 +135,7 @@
 
   <section xml:id="sec1912Dem4">
     <title>When did the ballots actually take place?</title>
-    <p>Using the ballot number as a measure of time is an approximation of what actually happened.  The first ballot took place on the morning of Friday, 28 June, and the last ballot took place on the afternoon of Tuesday, 2 July.  The official report of the convention (<xref ref="woodson-1912"/>) does not record when exactly ballots were taken, but does record to the minute when the convention was adjourned and when it restarted.  Making the assumption that each ballot took about the same time, and adding extra time for special polling of individual states and speeches, gives Figure <xref ref="fig-convt"/>.</p>
+    <p>Using the ballot number as a measure of time is an approximation of what actually happened.  The first ballot took place on the morning of Friday, 28 June, and the last ballot took place on the afternoon of Tuesday, 2 July.  The official report of the convention (<xref ref="woodson-1912"/>) does not record when exactly ballots were taken, but does record to the minute when the convention was adjourned and when it restarted.  Making the assumption that each ballot took about the same time, and adding extra time for special polling of individual states and speeches, gives <xref ref="fig-convt"/>.</p>
 
     <figure xml:id="fig-convt">
       <image source="images/convt-1.png">
@@ -154,10 +154,10 @@
 
     <p><em>Graphical takeaways.</em></p>
     <ul>
-      <li><p>Guidelines support reading of graphics. (Figures <xref ref="fig-delscat"/> to <xref ref="fig-convt"/>)</p></li>
-      <li><p>Time series with discrete jumps should be represented with steps. (Figure <xref ref="fig-candvs2"/>)</p></li>
-      <li><p>Precise time scales are better than using equal intervals between data points. (Figure <xref ref="fig-convt"/>)</p></li>
-      <li><p>Interpretation requires domain knowledge. (Figures <xref ref="fig-candvs2"/> and <xref ref="fig-convt"/>)</p></li>
+      <li><p>Guidelines support reading of graphics. (<xref ref="fig-delscat"/> to <xref ref="fig-convt"/>)</p></li>
+      <li><p>Time series with discrete jumps should be represented with steps. (<xref ref="fig-candvs2"/>)</p></li>
+      <li><p>Precise time scales are better than using equal intervals between data points. (<xref ref="fig-convt"/>)</p></li>
+      <li><p>Interpretation requires domain knowledge. (<xref ref="fig-candvs2"/> and <xref ref="fig-convt"/>)</p></li>
     </ul>
   </section>
 </chapter>
