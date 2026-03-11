@@ -1,5 +1,140 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-darwin-finches">
-  <title>Darwin Finches</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Darwin's Finches</title>
+
+  <introduction>
+    <blockquote>
+      <p>"It is always advisable to perceive clearly our ignorance."</p>
+      <p>--- Charles Darwin</p>
+    </blockquote>
+    <p>
+      Darwin's finches are species living on the Galapagos Islands and are central examples in evolutionary theory.
+    </p>
+    <p>
+      <em>Questions.</em> How do species differ? Do the same species differ across islands? Are there sex
+      differences?
+    </p>
+    <p><em>Sources.</em> Dryad Digital Repository data and a Galapagos map source.</p>
+    <p><em>Structure.</em> 549 birds and 20 variables.</p>
+  </introduction>
+
+  <section xml:id="sec-finch-differences">
+    <title>How do Darwin's finches differ?</title>
+
+    <p>
+      Darwin visited the Galapagos in 1835. The dataset used here comes from the Snodgrass and Heller Stanford
+      expedition of 1898-99 and is available in the <c>hypervolume</c> package as
+      <c>morphSnodgrassHeller</c>.
+    </p>
+    <p>
+      Initial displays focus on Isabela birds from genus <q>Geospiza</q> with at least ten birds and complete
+      measurements.
+    </p>
+
+    <figure xml:id="fig-finchbar">
+      <image source="images/finchBar-1.png"/>
+      <caption><p>Numbers of finch species from Isabela Island with at least ten birds and complete data.</p></caption>
+    </figure>
+
+    <p>
+      One species, <q>Fuliginosa parvula</q>, is much more frequent than the others in this subset.
+    </p>
+
+    <figure xml:id="fig-finchbox">
+      <image source="images/finchBox-1.png"/>
+      <caption><p>Body and wing lengths for the five species from Isabela Island.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-finchscat">
+      <image source="images/finchScat-1.png"/>
+      <caption><p>Scatterplot of wing length and body length for the five species from Isabela Island.</p></caption>
+    </figure>
+
+    <p>
+      Boxplots and scatterplots suggest species differences, but overlaps and overplotting limit certainty.
+    </p>
+
+    <figure xml:id="fig-finchpcp">
+      <image source="images/finchPCP-1.png"/>
+      <caption><p>Parallel coordinate plot of nine measurements of five Galapagos finch species from Isabela Island.</p></caption>
+    </figure>
+
+    <p>
+      Parallel coordinates across all nine measurements reveal stronger separation patterns, especially among beak
+      dimensions.
+    </p>
+
+    <figure xml:id="fig-snodpcp">
+      <image source="images/snodPCP-1.png"/>
+      <caption><p>Parallel coordinate plot of nine measurements of nine Galapagos finch species from Isabela Island.</p></caption>
+    </figure>
+
+    <p>
+      Faceted ghostplotted parallel coordinates show several species with distinctive traits relative to the full
+      Isabela set.
+    </p>
+  </section>
+
+  <section xml:id="sec-finch-islands">
+    <title>Do species vary across the Galapagos islands?</title>
+
+    <p>
+      Isabela is the largest island. The archipelago spans roughly 220 km north-south from Espanola to Darwin.
+    </p>
+
+    <figure xml:id="fig-galapmap">
+      <image source="images/galapMap.png"/>
+      <caption><p>Map of the Galapagos Islands.</p></caption>
+    </figure>
+
+    <p>
+      Many species appear on multiple islands. One commonly observed species, <q>fuliginosa parvula</q>, can be
+      compared across islands with enough observations.
+    </p>
+
+    <figure xml:id="fig-fulig">
+      <image source="images/Fulig-1.png"/>
+      <caption><p><q>fuliginosa parvula</q> finches on four islands.</p></caption>
+    </figure>
+
+    <p>
+      Average profiles are broadly similar across the four islands, with a few notable individual outliers.
+    </p>
+
+    <p>
+      Sex-based size differences are also visible for species with sufficient sample sizes.
+    </p>
+
+    <figure xml:id="fig-wingl">
+      <image source="images/WingL-1.png"/>
+      <caption>
+        <p>
+          Boxplots of wing lengths by sex for four species with jittered points. Species colours are consistent with
+          earlier plots; <q>Fortis-platyrhyncha</q> lacks enough specimens for inclusion.
+        </p>
+      </caption>
+    </figure>
+
+    <p>
+      Males are generally larger than females within species, though exceptions occur even in large groups.
+    </p>
+
+    <p>
+      <em>Answers.</em> The nine Isabela species are mostly distinguishable with the available measurements.
+      Species do not appear to differ strongly between islands. Males are generally larger than females.
+    </p>
+    <p>
+      <em>Further questions.</em> How strongly are measurements correlated? How do these data compare with other
+      finch datasets collected by different researchers?
+    </p>
+
+    <subsection xml:id="sec-finch-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Colour consistency across displays helps readers track categories.</p></li>
+        <li><p>Variable and category ordering in parallel coordinate plots can change interpretability substantially.</p></li>
+        <li><p>Faceted parallel coordinate plots benefit from ghostplotting the full dataset in the background.</p></li>
+      </ul>
+    </subsection>
+  </section>
 </chapter>
