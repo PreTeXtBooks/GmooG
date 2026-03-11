@@ -313,8 +313,17 @@
   <!-- corlett:2020 -->
   <biblio xml:id="corlett-2020" type="raw">Corlett, Tatsuya, Stavnichuk, Mariya, and Komarova, Svetlana. Population analysis of space travelers. <em>Life Sciences in Space Research</em>, 27:1&#8211;5, 2020.</biblio>
 
+  <!-- tidyt:2020a -->
+  <biblio xml:id="tidyt-2020a" type="raw">rfordatascience. Tidy Tuesday. <url href="https://github.com/rfordatascience/tidytuesday"/>. 2020.</biblio>
+
   <!-- tidyt:2020b -->
   <biblio xml:id="tidyt-2020b" type="raw">rfordatascience. Astronaut Database. <url href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-07-14"/>. 2020.</biblio>
+
+  <!-- wikiBN:2020 -->
+  <biblio xml:id="wikiBN-2020" type="raw">Wikipedia. Bill Nelson. <url href="https://en.wikipedia.org/wiki/Bill_Nelson"/>. 2020.</biblio>
+
+  <!-- wikiSp:2020 -->
+  <biblio xml:id="wikiSp-2020" type="raw">Wikipedia. List of human spaceflights. <url href="https://en.wikipedia.org/wiki/List_of_human_spaceflights"/>. 2020.</biblio>
 
   <!-- asensio:2021a -->
   <biblio xml:id="asensio-2021a" type="raw">Asensio, Omar, Apablaza, Camila, Lawson, M. Cade, and Walsh, Sarah. A field experiment on workplace norms and electric vehicle charging etiquette. <em>Journal of Industrial Ecology</em>, 2021.</biblio>
