@@ -1,5 +1,125 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-democrats-1912">
-  <title>Democrats 1912</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Voting 46 times to choose a Presidential candidate</title>
+
+  <epigraph>
+    <q>Don't write so that you can be understood; write so that you can't be misunderstood.</q>
+    <attribution>William H. Taft (U.S. President 1909-1913)</attribution>
+  </epigraph>
+
+  <introduction>
+    <p><em>Background.</em> In 1912 the battle for the Democratic Presidential nomination was particularly fierce. Woodrow Wilson finally won on the 46th ballot.</p>
+    <p><em>Questions.</em> How did support for the various candidates change during voting? When were the crucial moments?</p>
+    <p><em>Sources.</em> Official convention report by Woodson.</p>
+    <p><em>Structure.</em> Votes received by each candidate from each state in each ballot (3839 observations of 4 variables).</p>
+  </introduction>
+
+  <section xml:id="sec-1912-first-look">
+    <title>A first look at the 1912 Democratic Convention</title>
+    <p>American political conventions are central to the election cycle, but for many years modern winners were effectively known in advance. In 1912 that was not the case: Woodrow Wilson was selected only on ballot 46.</p>
+    <p>Wilson is well known for the Paris Peace Conference and the Fourteen Points after World War I. His later regressive policy on racial segregation is less often emphasized, and was not apparent before his election.</p>
+
+    <figure xml:id="fig-candvs">
+      <caption>Votes for the candidates over the 46 ballots.</caption>
+      <image source="images/candvs-1.png"/>
+    </figure>
+
+    <p>The main story is clear: Clark began ahead, moved further ahead, then Wilson gradually caught up and edged in front before finally winning in the last ballots. Even this default plot already carries useful detail.</p>
+  </section>
+
+  <section xml:id="sec-1912-usa-compare">
+    <title>The USA in 1912 and 2020</title>
+    <p>The USA of 1912 differed from that of 2020: there were 48 states, while Alaska and Hawaii joined later. Delegates also included territories such as Washington DC and Puerto Rico. Total delegates rose from 1088 (1912) to 3979 pledged delegates (2020).</p>
+
+    <figure xml:id="fig-delegs">
+      <caption>Numbers of delegates by state and territory at the 1912 and 2020 Democratic conventions (different horizontal scales).</caption>
+      <image source="images/delegs-1.png"/>
+    </figure>
+
+    <p>Delegate share changes stand out for California and Florida, with other relative gains and losses across states.</p>
+
+    <figure xml:id="fig-delscat">
+      <caption>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions (point sizes are proportional to the number of delegates in 2020).</caption>
+      <image source="images/delScat-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-delfacet">
+      <caption>Percentage state shares of delegates by region.</caption>
+      <image source="images/delfacet-1.png"/>
+    </figure>
+
+    <p>Regional faceting makes trends clearer: many Western states increased share, while most MidWest and NorthEast states lost share.</p>
+
+    <figure xml:id="fig-delev">
+      <caption>Delegates and Electoral College votes by state in 1912 (left) and 2020 (right).</caption>
+      <image source="images/delEV-1.png"/>
+    </figure>
+
+    <p>In 1912 there was an almost exact linear rule for convention delegates versus Electoral College votes (with New Mexico as an exception). By 2020 the relationship was less uniform, with notable state-level deviations.</p>
+  </section>
+
+  <section xml:id="sec-1912-unfolded">
+    <title>How the nomination contest unfolded</title>
+    <p>Republican division in 1912 (Taft vs Roosevelt, then Roosevelt's breakaway campaign) shaped expectations that Democrats would win. The official convention report provides ballot-level detail for this analysis.</p>
+
+    <figure xml:id="fig-candvs2">
+      <caption>Votes for the main candidates over the 46 ballots.</caption>
+      <image source="images/candvs2-1.png"/>
+    </figure>
+
+    <p>Adding the two-thirds nomination threshold and a 50% line highlights turning points. Key developments included New York's switch on ballot 10, later gradual erosion of Clark's support, failed compromise-candidate attempts, Wilson's ballot-43 breakthrough, and Underwood's withdrawal before ballot 46.</p>
+
+    <figure xml:id="fig-candvs2a">
+      <caption>Development 1 highlight window (ballots around 10-14).</caption>
+      <image source="images/candvs2a-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-candvs2b">
+      <caption>Development 2 highlight windows (ballots around 20 and 28).</caption>
+      <image source="images/candvs2b-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-candvs2c">
+      <caption>Development 3 highlight window (compromise-candidate phase).</caption>
+      <image source="images/candvs2c-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-candvs2d">
+      <caption>Development 4 highlight window (Wilson breakthrough).</caption>
+      <image source="images/candvs2d-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-candvs2e">
+      <caption>Development 5 highlight window (final ballots).</caption>
+      <image source="images/candvs2e-1.png"/>
+    </figure>
+
+    <p>Some features are visible directly, others require historical context. Graphics and domain narrative complement each other: graphics provide structure, and reports provide causal detail.</p>
+  </section>
+
+  <section xml:id="sec-1912-ballot-time">
+    <title>When did the ballots actually take place?</title>
+    <p>Ballot number is only an approximate time index. The first ballot occurred Friday morning (June 28) and the last on Tuesday afternoon (July 2). Using adjournment times and estimated ballot timing yields a more realistic timeline.</p>
+
+    <figure xml:id="fig-convt">
+      <caption>Convention voting using estimated ballot times with the date labels at midday and adjournment periods shaded grey.</caption>
+      <image source="images/convt-1.png"/>
+    </figure>
+
+    <p>The timeline view shows clustered ballots separated by long pauses, especially across Sunday. The decisive shift to Wilson followed an overnight break, underscoring that off-floor negotiations likely mattered.</p>
+  </section>
+
+  <section xml:id="sec-1912-discussion">
+    <title>Discussion</title>
+    <p><em>Answers.</em> Many ballots occurred with little change in support, but a handful of critical points determined the final outcome.</p>
+    <p><em>Further questions.</em> Which states voted as blocs during the convention? In which other years did nomination require many ballots?</p>
+
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>Guidelines support reading of graphics.</p></li>
+      <li><p>Time series with discrete jumps are better represented with steps.</p></li>
+      <li><p>Precise time scales can be more informative than equally spaced index points.</p></li>
+      <li><p>Interpretation requires domain knowledge.</p></li>
+    </ul>
+  </section>
 </chapter>
