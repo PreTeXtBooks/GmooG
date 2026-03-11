@@ -180,13 +180,12 @@
     </figure>
 
     <p>Host country dominance at the early Olympics is shown in <xref ref="fig-olyGh"/> for both women and men.  In 1904 at St Louis, only 16 women took part and they were all American.  85% of the participants at the 1904 Olympics were American.</p>
-  </section>
+     <p><em>Answers.</em> The dataset including performance data needed a lot of editing, but included much interesting information.  Gold medal performances have improved since the early Games, but not so much lately.  More and more countries take part in the Olympic Games and the number of competitors has increased as well.  Individual countries have had their highest number of participants when they have been host nation.</p>
+    <p><em>Further questions.</em> How do changes in performance over time look when logarithms of results are used instead of actual results?  Might it be useful to compare results to world records over time?  Is there evidence of possible use of doping in earlier Games before more stringent controls were introduced?</p>
+ </section>
 
   <section xml:id="sec-olympics-discussion">
-    <title>Discussion</title>
-    <p><em>Answers.</em> The dataset including performance data needed a lot of editing, but included much interesting information.  Gold medal performances have improved since the early Games, but not so much lately.  More and more countries take part in the Olympic Games and the number of competitors has increased as well.  Individual countries have had their highest number of participants when they have been host nation.</p>
-    <p><em>Further questions.</em> How do changes in performance over time look when logarithms of results are used instead of actual results?  Might it be useful to compare results to world records over time?  Is there evidence of possible use of doping in earlier Games before more stringent controls were introduced?</p>
-    <p><em>Graphical takeaways.</em></p>
+    <title>Graphical takeaways</title>
     <ul>
       <li><p>Good orderings make patterns visible. (<xref ref="fig-olyEg"/>)</p></li>
       <li><p>After fixing errors and excluding unusual cases, redrawn graphics reveal more information. (<xref ref="fig-olyEgA"/> and <xref ref="fig-olyEgS"/>)</p></li>
