@@ -19,18 +19,48 @@
     <p>Many people use IMDb ratings to help decide what to watch. The data studied here are for films with ratings available. A historical scraped dataset in an R package contains about 58,788 films, while a newer IMDb download (July 2022) contained over 9 million items, of which about 1.25 million had user ratings. Restricting to movies and shorts with more than 100 ratings left 124,667 films.</p>
     <p>Runtime boxplots reveal extreme outliers. One film longer than five weeks in duration is <em>Logistics</em>, which documents in reverse the journey of a pedometer from production in China to sale in Sweden.</p>
     <p>When restricting to films under three hours, a one-minute-bin histogram reveals pronounced data heaping, especially at multiples of 10 minutes (and to a lesser extent 5 minutes). The most common short-film runtime is 7 minutes. Since films can have multiple release versions, runtime metadata may contain wide ranges; for example, <em>The Seven Samurai</em> appears with several distinct runtimes.</p>
+
+    <figure xml:id="fig-movierunb">
+      <caption>Movie runtimes in weeks.</caption>
+      <image source="images/movieRunB-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-movierunh">
+      <caption>Distribution of movie runtimes in minutes for films of 3 hours or under.</caption>
+      <image source="images/movieRunH-1.png"/>
+    </figure>
   </section>
 
   <section xml:id="sec-movies-over-years">
     <title>Movies in IMDb over the years</title>
     <p>A scatterplot of runtime versus production year shows early films were short and later decades mix shorts and full-length films. Alpha transparency helps expose high-density regions.</p>
     <p>Year-by-year boxplots with a companion histogram of counts are more informative: runtime distributions have been fairly stable for decades, while lower film counts in the latest years likely reflect incomplete ingestion lag in the database, especially for the most recent year.</p>
+
+    <figure xml:id="fig-movieruny">
+      <caption>Movie runtimes in minutes by year of production for films of 3 hours or under using alpha=0.05.</caption>
+      <image source="images/movieRunY-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-movierunyb">
+      <caption>Movie runtimes in minutes (above), number of movies by year (below) for films of 3 hours or under.</caption>
+      <image source="images/movieRunYB-1.png"/>
+    </figure>
   </section>
 
   <section xml:id="sec-movies-code-numbers">
     <title>What might IMDb code numbers mean?</title>
     <p>IMDb identifiers (tt plus a numeric component) can be plotted against production year. The pattern suggests mostly chronological assignment with later additions, especially among very early films.</p>
     <p>When broadening to all rated items and faceting by title type for low code numbers, additional structure appears, including what looks like a reserved range for TV episodes. Even if operationally minor, such patterns illustrate how graphics can surface non-obvious metadata behaviors and prompt useful domain discussions.</p>
+
+    <figure xml:id="fig-moviett">
+      <caption>IMDb code numbers by year for films and shorts with over 100 votes.</caption>
+      <image source="images/movieTT-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-moviett2">
+      <caption>IMDb code numbers by year for all items with ratings and with code numbers less than 1,000,000.</caption>
+      <image source="images/movieTT2.png"/>
+    </figure>
   </section>
 
   <section xml:id="sec-movies-ratings">
@@ -38,6 +68,26 @@
     <p>IMDb user ratings run from 1 to 10, with IMDb publishing weighted averages via an unpublished algorithm. For films with more than 100 ratings, average ratings cluster toward mid-to-high values.</p>
     <p>The distribution of number of votes is strongly right-skewed: most films receive relatively few ratings and a small number receive very many. A log transform helps visualize this long tail.</p>
     <p>A scatterplot of average rating versus number of votes has a distinctive shape. It highlights that low-rated films with very many votes are uncommon, highly voted films tend to have relatively high averages, and some films have unusually low averages for their vote volume (for example, <em>Batman &amp; Robin</em> and <em>Fifty Shades of Grey</em>).</p>
+
+    <figure xml:id="fig-movierh">
+      <caption>Average user ratings for movies with over 100 ratings.</caption>
+      <image source="images/movieRH-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-movielv">
+      <caption>Numbers of votes for each movie on a log base 10 scale.</caption>
+      <image source="images/movieLV-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-movievr">
+      <caption>Average user rating by number of votes.</caption>
+      <image source="images/movieVR-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-movievr4">
+      <caption>User ratings by number of votes with features marked by boxes.</caption>
+      <image source="images/movieVR4-1.png"/>
+    </figure>
   </section>
 
   <section xml:id="sec-movies-genres">
@@ -47,6 +97,21 @@
     <p>Expanding films to one row per genre descriptor enables grouping by individual genre. Time-series percentages for selected genres show structural shifts: Comedy is prominent in the silent era, Romance peaks around early sound-era adoption, and Drama dominates over long spans.</p>
     <p>Faceted genre-by-year counts with row-specific scales reveal distinct trajectories. Drama and Comedy rise strongly into the modern era; Action, Thriller, Documentary, and Horror show different timing; and genres such as Musical, Western, and War exhibit historically bounded peaks. A vertical marker at 1927 (sound-era transition) is useful for interpretation.</p>
     <p>Growth in recent decades may partly reflect expansion of film industries and partly platform-era effects: IMDb moved to the web in 1993, and newer films may be more likely to accumulate ratings than older films.</p>
+
+    <figure xml:id="fig-moviepar">
+      <caption>Percentage of films by number of combinations of genres, almost 80% of films are covered by the first 100 combinations (dotted line).</caption>
+      <image source="images/moviePar-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-moviegt">
+      <caption>Percentages of films using the genre descriptors Drama, Comedy, Romance.</caption>
+      <image source="images/movieGT-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-moviegf">
+      <caption>Number of films by year from 1901 to 2019, faceted by genre in order of highest number per year, a dotted line marks the introduction of sound in 1927 and vertical scales are different for each row.</caption>
+      <image source="images/movieGF-1.png"/>
+    </figure>
   </section>
 
   <section xml:id="sec-movies-raging-bull-jane-austen">
@@ -54,6 +119,16 @@
     <p>IMDb pages include rating distributions and demographic averages by sex and age groups. Two films with likely different audience profiles are compared: <em>Raging Bull</em> and <em>Sense and Sensibility</em>.</p>
     <p>Their rating histograms are broadly similar in shape (few very low scores, mode around 8), though total vote counts differ substantially.</p>
     <p>A bubble chart of demographic averages (with size proportional to count) shows strong participation imbalance: many more men rated <em>Raging Bull</em>, while <em>Sense and Sensibility</em> is unusual in having more female than male raters. The corresponding average ratings by demographic reflect those audience differences.</p>
+
+    <figure xml:id="fig-rbjab">
+      <caption>User ratings of two films.</caption>
+      <image source="images/RBjaB-1.png"/>
+    </figure>
+
+    <figure xml:id="fig-rbjap">
+      <caption>Average ratings of two films by user age and sex with point size proportional to number of ratings.</caption>
+      <image source="images/RBjaP-1.png"/>
+    </figure>
   </section>
 
   <section xml:id="sec-movies-discussion">
