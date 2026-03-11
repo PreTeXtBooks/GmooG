@@ -62,7 +62,7 @@
 
     <p>
       The majority of passengers and crew joined the ship in Southampton and probably the people starting in Belfast
-      were crew. Figure <xref ref="fig-titanbg"/> shows where males and females boarded. No females joined the
+      were crew. <xref ref="fig-titanbg"/> shows where males and females boarded. No females joined the
       Titanic in Belfast and the numbers of males and females who joined in Cherbourg and Queenstown look about
       equal.
     </p>
@@ -75,7 +75,7 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-titanbc"/> shows the boarding patterns for passengers and crew by sex. The bulk of
+      <xref ref="fig-titanbc"/> shows the boarding patterns for passengers and crew by sex. The bulk of
       the crew joined in Southampton as did many more male passengers than female passengers, unlike at Cherbourg
       and Queenstown. There were even a very few passengers who boarded in Belfast, but, with one exception, these
       were employees of Harland &amp; Wolff, the ship's builders.
@@ -89,7 +89,7 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-titanbcla"/> looks at differences in boarding patterns for passengers by sex and
+      <xref ref="fig-titanbcla"/> looks at differences in boarding patterns for passengers by sex and
       class. Almost all those who boarded in Ireland travelled third class. Of the first class passengers who
       boarded in France there were more females than males.
     </p>
@@ -119,7 +119,7 @@
     </figure>
 
     <p>
-      Nationality and passenger class are related. Figure <xref ref="fig-titancln"/> shows the patterns. North
+      Nationality and passenger class are related. <xref ref="fig-titancln"/> shows the patterns. North
       Americans from the US and Canada travelled mainly first class and made up the majority of passengers in first
       class. A few English travelled first class, but almost half were in second class. Apart from a few French
       people, the rest of first and second class were almost all from "Other" nationalities.
@@ -146,7 +146,7 @@
       than men, that first class passengers had higher survival rates than second class, and that second class rates
       were higher than third class rates. The survival rate for the crew was almost as high as the rate for third
       class and this was assumed to be partly because crew members were assigned to man the lifeboats. This can be
-      confirmed by the more detailed information now available. Figure <xref ref="fig-titancrew"/> is a doubledecker
+      confirmed by the more detailed information now available. <xref ref="fig-titancrew"/> is a doubledecker
       plot of the survival rates for the different groups on board. The width of each bar is proportional to the
       number in that group.
     </p>
@@ -165,7 +165,7 @@
     </p>
 
     <p>
-      Sex was an important factor as Figure <xref ref="fig-titanpass"/> shows. All female passenger groups had
+      Sex was an important factor as <xref ref="fig-titanpass"/> shows. All female passenger groups had
       higher survival rates than all male groups. Second class males had the worst survival rate of all passengers.
     </p>
 
@@ -178,7 +178,7 @@
 
     <p>
       Additional information on the ages of those on board permits study of the possible influence of age. Age
-      distributions by class and crew are shown in Figure <xref ref="fig-titanage"/>. First Class passengers
+      distributions by class and crew are shown in <xref ref="fig-titanage"/>. First Class passengers
       tended to be older and there were few children amongst them. Most children travelled as Third Class
       passengers and the Third Class passengers were generally younger. There were a couple of fourteen year-old
       crew members, but most were aged between 20 and 50. A dotted line has been drawn at 14. This splits the ages
@@ -194,7 +194,7 @@
     </figure>
 
     <p>
-      The survival rates by age are shown in Figure <xref ref="fig-titanasurv"/>. The area of a point is
+      The survival rates by age are shown in <xref ref="fig-titanasurv"/>. The area of a point is
       proportional to the number of that age.
     </p>
 
@@ -208,7 +208,7 @@
     <p>
       Survival rates vary little with age, although the few children have higher survival rates and the small
       number of the very oldest did not survive. Including the effects of sex and class or crew offers an in-depth
-      view, Figure <xref ref="fig-titanagesc"/>.
+      view, <xref ref="fig-titanagesc"/>.
     </p>
 
     <figure xml:id="fig-titanagesc">
@@ -239,10 +239,10 @@
     <subsection xml:id="sec-titanic-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Drawing barcharts horizontally is essential when there are many categories, and for making sure labels are readable. (Figure <xref ref="fig-titanbn"/>)</p></li>
-        <li><p>Doubledecker plots are excellent for comparing rates of groups of different sizes. (Figures <xref ref="fig-titancrew"/> and <xref ref="fig-titanpass"/>)</p></li>
-        <li><p>Density estimates work well for comparing distributions by group. (Figure <xref ref="fig-titanage"/>)</p></li>
-        <li><p>Smooths are valuable for summarising irregular scatterplot patterns. (Figures <xref ref="fig-titanasurv"/> and <xref ref="fig-titanagesc"/>)</p></li>
+        <li><p>Drawing barcharts horizontally is essential when there are many categories, and for making sure labels are readable. (<xref ref="fig-titanbn"/>)</p></li>
+        <li><p>Doubledecker plots are excellent for comparing rates of groups of different sizes. (<xref ref="fig-titancrew"/> and <xref ref="fig-titanpass"/>)</p></li>
+        <li><p>Density estimates work well for comparing distributions by group. (<xref ref="fig-titanage"/>)</p></li>
+        <li><p>Smooths are valuable for summarising irregular scatterplot patterns. (<xref ref="fig-titanasurv"/> and <xref ref="fig-titanagesc"/>)</p></li>
       </ul>
     </subsection>
   </section>
