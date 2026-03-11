@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-bundestag-election">
-  <title>German Election 2021 - what happened?</title>
+  <title>German Election 2021&#8212;what happened?</title>
 
   <introduction>
     <blockquote>
@@ -10,20 +10,24 @@
       <p>--- Pericles</p>
     </blockquote>
     <p>
-      <em>Background.</em> After Angela Merkel's long chancellorship, the 2021 election marked a major transition in
-      German politics.
+      <em>Background.</em> Angela Merkel was Chancellor of Germany from 2005 to 2021. The election in Autumn 2021
+      could be said to be the first of a new era in German politics.
     </p>
     <p>
-      <em>Questions.</em> Which parties did well? Are there geographic patterns? Which structural factors are linked
-      to support? How closely do Erststimmen and Zweitstimmen align?
+      <em>Questions.</em> Which parties did well in the 2021 election? Are there geographical patterns in party
+      support? What structural factors are linked to party support? Are Erststimmen (votes for candidates) and
+      Zweitstimmen (votes for parties) closely related?
     </p>
     <p>
-      <em>Sources.</em> Federal Returning Officer election and demographic data, constituency maps, and related
-      reference materials.
+      <em>Sources.</em> The Bundeswahlleiter (Federal Returning Officer) has a website (@bundesWL:2021) offering
+      detailed election results in various forms, a dataset of demographic and structural data for each
+      constituency, and maps of the constituencies. UK election data is available in the R package
+      <em>parlitools</em>.
     </p>
     <p>
-      <em>Structure.</em> 299 constituencies in 16 states; over 61 million registered voters; many small parties and
-      seven major parties with over two million votes each.
+      <em>Structure.</em> There were 299 constituencies in 16 Bundesl&#228;nder (states), just over 61 million
+      registered voters, almost 200 smaller parties or groups standing in one or more constituencies, and 7 larger
+      parties each getting over 2 million votes.
     </p>
   </introduction>
 
@@ -31,180 +35,386 @@
     <title>Who won the 2021 election?</title>
 
     <p>
-      Germany's two-vote system allocates constituency seats by first-past-the-post (Erststimme) and party-proportional
-      seats by Zweitstimme, with additional balancing seats when required.
+      The two big parties in the pre-election coalition, the conservative grouping of CDU/CSU and the social
+      democratic SPD, were being challenged by the FDP (the traditional liberal party), die Linke (a party on the
+      left), the Greens, and the AfD (a right-wing party).
+    </p>
+
+    <p>
+      Everyone has two votes in an election for the German parliament, a vote for a candidate (Erststimme or first
+      vote) and a vote for a party (Zweitstimme or second vote). There is one seat for each constituency that goes
+      to the candidate with the most Erststimmen. Additionally, about the same total number of seats are allocated
+      to parties based on each party's share of the Zweitstimmen in the respective Bundesland. Needless to say, it
+      is more complicated than that. Extra seats (Ueberhangmandate and Ausgleichsmandate) may be needed to satisfy
+      the election rules. In the early years of the Bundesrepublik there were only &#220;berhangmandate, designed to
+      allow parties to win more individual seats than were due them according to their Zweitstimmen share. The
+      system was declared unconstitutional and changed for the 2013 election. Since then Ausgleichsmandate have
+      been included, additional seats to ensure that the Zweitstimmen shares of the parties are respected. There
+      have been further attempts to amend the rules, not particularly successfully. In 2021 there were 138 extra
+      seats, increasing the intended size of the parliament from 598 to 736. In 2017 there had been only 111 and
+      in 2013 only 33. Figure <xref ref="fig-ubh"/> shows the numbers since the first postwar election in 1949,
+      when the system was introduced. There is optimism that the government elected in 2021 will introduce a system
+      in accordance with the constitution that will strictly limit the total number of seats in the Bundestag.
     </p>
 
     <figure xml:id="fig-ubh">
-      <image source="images/ubH-1.png"/>
-      <caption><p>Extra seats in German elections since 1949.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btw1">
-      <image source="images/btw1-1.png"/>
-      <caption><p>Party percentage support in Zweitstimmen for 2021 and 2017.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btw2">
-      <image source="images/btw2-1.png"/>
-      <caption><p>Changes in party percentage support between 2017 and 2021.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btw3">
-      <image source="images/btw3-1.png"/>
-      <caption><p>Relative changes in support between 2017 and 2021.</p></caption>
+      <image source="images/ubH-1.png">
+        <description>A step plot with points showing the number of extra seats (Ueberhangmandate and Ausgleichsmandate) in German Bundestag elections since 1949. Two dashed vertical lines mark the first election after reunification in 1990 and the first election with Ausgleichsmandate in 2013. The number of extra seats increased dramatically in 2021 to 138.</description>
+      </image>
+      <caption><p>Extra seats in German elections since 1949. Each point marks the date of an election. The left dashed line marks the first election after reunification in October 1990. The right dashed line marks the first election with Ausgleichsmandate.</p></caption>
     </figure>
 
     <p>
-      Absolute and relative change views together show SPD and Greens gains, heavy CDU/CSU and Linke losses, and
-      strong relative gains for the "Other" category.
+      The support for the main parties in the elections of 2021 and 2017 is shown in Figure
+      <xref ref="fig-btw1"/>. Colours associated with the parties have been used. The CDU/CSU lost heavily, while
+      the SPD and Greens gained. Changes in party performance are easier to see in a plot of the gains and losses
+      in percentage points. It is now apparent that the Greens gained more than the SPD and the Linke lost
+      heavily. The relatively big gain for 'Other' parties is also striking.
+    </p>
+
+    <figure xml:id="fig-btw1">
+      <image source="images/btw1-1.png">
+        <description>Paired barcharts showing party percentage support in Zweitstimmen for the 2021 and 2017 German elections. Parties are ordered by 2021 support, with CDU/CSU, SPD, Greens, FDP, AfD, Linke, and Other shown. CDU/CSU had the highest support in 2017 but lost heavily in 2021, while SPD and Greens gained.</description>
+      </image>
+      <caption><p>Party percentage support (in Zweitstimmen) for the last two elections.</p></caption>
+    </figure>
+
+    <figure xml:id="fig-btw2">
+      <image source="images/btw2-1.png">
+        <description>A barchart showing the changes in party percentage support in Zweitstimmen between 2017 and 2021. CDU/CSU and Linke show large negative bars, while SPD, Greens, FDP, and Other show positive bars. The Greens gained more than the SPD and the Linke lost heavily.</description>
+      </image>
+      <caption><p>Changes in party percentage support between the last two elections.</p></caption>
+    </figure>
+
+    <p>
+      Absolute changes can be deceptive. The Greens gained more than the SPD, but from a much lower base. An
+      UpAndDown plot shows the relative changes. The base of each bar is the party support in votes in 2017. The
+      height of each bar is the change in party support as a percentage of their votes in 2017, so the bar areas
+      equal the absolute changes. The strong performance of the Greens (and the even stronger performance of
+      'Other' parties in percentage terms) is more apparent, along with the poor performance of the Linke.
+    </p>
+
+    <figure xml:id="fig-btw3">
+      <image source="images/btw3-1.png">
+        <description>An UpAndDown plot showing relative changes in party support between 2017 and 2021. The base of each bar represents the party's 2017 vote share and the bar height shows the percentage change relative to 2017. The Greens and Other parties show large relative gains, the Linke shows a large relative loss, and CDU/CSU also lost heavily.</description>
+      </image>
+      <caption><p>Relative changes in support between the last two elections.</p></caption>
+    </figure>
+
+    <p>
+      A key advantage of UpAndDown plots is that area is conserved when drilling down. Figure
+      <xref ref="fig-btw4a"/> shows the changes by region (West, East, Berlin) for each party. The SPD and FDP
+      improved most in the East, albeit from low levels at the last election in 2017. 'Other' parties did better
+      in the West than the East.
+    </p>
+
+    <p>
+      More detail can be seen in Figure <xref ref="fig-btw4"/> where the changes are shown for each party by
+      Bundesland with the Bundesl&#228;nder ordered by size. The SPD gained everywhere, but especially in the
+      smaller Bundesl&#228;nder. The CDU/CSU lost everywhere, but more in the smaller Bundesl&#228;nder. The
+      Greens did very well in Nordrhein-Westfalen and well everywhere else, with one exception. In Saarland,
+      thanks to internal party disagreements, they did not fulfill the requirements for receiving Zweitstimmen and
+      got none. The FDP mostly gained, but did badly where the Greens did best in Nordrhein-Westfalen. The AfD
+      lost to different degrees everywhere except in Th&#252;ringen. 'Other' parties as a group had some big
+      percentage gains (which is why the scale is different to that in Figure <xref ref="fig-btw3"/> and still
+      does not include all values). The Linke lost roughly equally in all Bundesl&#228;nder.
     </p>
 
     <figure xml:id="fig-btw4a">
-      <image source="images/btw4a-1.png"/>
-      <caption><p>Relative party-support changes by region (West, East, Berlin).</p></caption>
+      <image source="images/btw4a-1.png">
+        <description>An UpAndDown plot showing relative changes in party support by region (West, East, Berlin) for each party in the 2021 German election compared to 2017. The SPD and FDP improved most in the East, while Other parties did better in the West.</description>
+      </image>
+      <caption><p>Relative changes in support by party and region.</p></caption>
     </figure>
 
     <figure xml:id="fig-btw4">
-      <image source="images/btw4-1.png"/>
-      <caption><p>Relative party-support changes by Bundesland.</p></caption>
+      <image source="images/btw4-1.png">
+        <description>An UpAndDown plot showing relative changes in party support by Bundesland for each party. Bundesl&#228;nder are ordered by size. The SPD gained everywhere, the CDU/CSU lost everywhere, the Greens got zero in Saarland, and the AfD lost everywhere except in Th&#252;ringen.</description>
+      </image>
+      <caption><p>Relative changes in support by party and Bundesland.</p></caption>
     </figure>
   </section>
 
   <section xml:id="sec-btw-geo-patterns">
     <title>Are there geographic patterns?</title>
 
+    <p>
+      There are strong geographic patterns in party support across the constituencies. Figure
+      <xref ref="fig-btwmapg"/> shows support for the Greens in choropleth maps.
+    </p>
+
     <figure xml:id="fig-btwmapg">
-      <image source="images/btwMapG-1.png"/>
-      <caption><p>Green support by constituency in 2017 and 2021.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwgpop">
-      <image source="images/btwGpop-1.png"/>
-      <caption><p>Green support versus log population density.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwgpcp">
-      <image source="images/btwGpcp-1.png"/>
-      <caption><p>Parallel coordinate plot of Green support and structural variables.</p></caption>
+      <image source="images/btwMapG-1.png">
+        <description>Choropleth maps and histograms showing percentage Green support across German constituencies in 2017 (left) and 2021 (right). Bundesland borders are drawn in thick black. The Greens did much better in 2021, predominantly in the West of Germany. Histograms below each map show the distribution of support levels.</description>
+      </image>
+      <caption><p>Percentage Green support across the constituencies in 2017 (left) and 2021 (right). Bundesland borders are drawn in thick black. The colour scale goes from 0 to 60 in intervals of 10 (histograms below).</p></caption>
     </figure>
 
     <p>
-      Greens were stronger in denser, younger, and more education-rich constituencies, especially in western urban
-      areas.
+      The Greens did much better in 2021, predominantly in the West of Germany. They also did better in more
+      densely populated areas, as Figure <xref ref="fig-btwgpop"/> shows using the logarithm of population
+      density as a measure.
+    </p>
+
+    <figure xml:id="fig-btwgpop">
+      <image source="images/btwGpop-1.png">
+        <description>A scatterplot of Green party support (y-axis) versus log of population density (x-axis) for German constituencies. Points are coloured by region (Berlin in blue, East in dark grey, West in pink). There is a roughly linear relationship with the Greens doing worst in rural East constituencies and best in big cities including Berlin. The four Saarland constituencies with zero Green support are visible at the bottom.</description>
+      </image>
+      <caption><p>Green support plotted against log of population density.</p></caption>
+    </figure>
+
+    <p>
+      Aside from the four constituencies of Saarland where the Greens got no party votes, as already mentioned,
+      there is a roughly linear relationship in the plot. The Greens did worst in the rural East and best in big
+      cities including parts of Berlin. There is a little overplotting in Figure <xref ref="fig-btwgpop"/>, so
+      the points representing West were drawn first and the smaller East and Berlin groups on top.
+    </p>
+
+    <p>
+      Associations with other variables can be explored using a parallel coordinate plot (Figure
+      <xref ref="fig-btwgpcp"/>). The Greens did well where there were more younger people and where there were
+      more qualified to go to university.
+    </p>
+
+    <figure xml:id="fig-btwgpcp">
+      <image source="images/btwGpcp-1.png">
+        <description>A parallel coordinate plot of Green party support and structural variables (foreigners, log population density, age groups 18-24 through 75+, cars per person, university qualification rate, unemployment) for German constituencies. Constituencies with over 25% Green party votes are coloured green, others grey. Green-voting constituencies tend to have higher proportions of young people and university-qualified residents.</description>
+      </image>
+      <caption><p>A parallel coordinate plot of Green support and some structural variables (constituencies with over 25% Green party votes are coloured green).</p></caption>
+    </figure>
+
+    <p>
+      The AfD lost ground between the two elections and were weaker in the West.
     </p>
 
     <figure xml:id="fig-btwmapafd">
-      <image source="images/btwMapAfD-1.png"/>
-      <caption><p>AfD support by constituency in 2017 and 2021.</p></caption>
+      <image source="images/btwMapAfD-1.png">
+        <description>Choropleth maps and histograms showing percentage AfD support across German constituencies in 2017 (left) and 2021 (right). The AfD is notably stronger in eastern Germany and weaker in the West. The AfD lost support between the two elections in most areas.</description>
+      </image>
+      <caption><p>Percentage AfD support across the constituencies in 2017 (left) and 2021 (right). Bundesland borders are drawn in thick black. The colour scale goes from 0 to 60 in intervals of 10, as shown in the histograms below.</p></caption>
     </figure>
 
     <figure xml:id="fig-btwafdfor">
-      <image source="images/btwAfDfor-1.png"/>
-      <caption><p>AfD support versus percentage foreigners.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwapcp">
-      <image source="images/btwApcp-1.png"/>
-      <caption><p>Parallel coordinate plot of AfD support and structural variables.</p></caption>
+      <image source="images/btwAfDfor-1.png">
+        <description>A scatterplot of AfD support (y-axis) versus percentage of foreigners (x-axis) for German constituencies, with points coloured by region. AfD support is highest where there are few foreigners and relatively constant for any percentage above about 10%. Berlin constituencies (bottom left) have lower AfD support than the rest of eastern Germany.</description>
+      </image>
+      <caption><p>AfD support plotted against percentage of foreigners.</p></caption>
     </figure>
 
     <p>
-      AfD was stronger in parts of the East, lower-density areas, and constituencies with lower foreign-national
-      shares.
+      Figure <xref ref="fig-btwapcp"/> is a parallel coordinate plot of AfD support and the same structural
+      variables as in Figure <xref ref="fig-btwgpcp"/>. The AfD were strong where there were more older people
+      and low levels of foreigners (people without German nationality). They did not do well in cities, where the
+      population density is higher.
+    </p>
+
+    <p>
+      The scatterplot, Figure <xref ref="fig-btwafdfor"/>, shows more detail of how the AfD vote related to the
+      percentage of foreigners in the constituencies. AfD support is highest where there are few foreigners and
+      relatively constant for any percentage of foreigners a little over 10%. They are generally weaker in the
+      Berlin constituencies than in the rest of the Eastern part of Germany, probably because West Berlin is still
+      different to East Berlin, even over thirty years after reunification. The association may be due to
+      foreigners not voting for the AfD or more due to the party being stronger in the East where there are lower
+      percentages of foreigners.
+    </p>
+
+    <figure xml:id="fig-btwapcp">
+      <image source="images/btwApcp-1.png">
+        <description>A parallel coordinate plot of AfD support and structural variables for German constituencies. Constituencies with over 20% AfD party votes are coloured blue, others grey. The AfD was strong where there were more older people, low levels of foreigners, and lower population density.</description>
+      </image>
+      <caption><p>A parallel coordinate plot of AfD support and some structural variables (constituencies with over 20% AfD party votes are coloured blue).</p></caption>
+    </figure>
+
+    <p>
+      The CDU/CSU have traditionally always been strong in Bavaria, the CSU's part of Germany.
     </p>
 
     <figure xml:id="fig-btwmapc">
-      <image source="images/btwMapC-1.png"/>
-      <caption><p>CDU/CSU support by constituency in 2017 and 2021.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwccar">
-      <image source="images/btwCcar-1.png"/>
-      <caption><p>CDU/CSU support versus cars per 1,000 population.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwcdpcp">
-      <image source="images/btwCDpcp-1.png"/>
-      <caption><p>Parallel coordinate plot of CDU/CSU support and structural variables.</p></caption>
+      <image source="images/btwMapC-1.png">
+        <description>Choropleth maps and histograms showing percentage CDU/CSU support across German constituencies in 2017 (left) and 2021 (right). The CDU/CSU are notably strong in Bavaria (CSU) and in the West of Germany. Support declined noticeably between 2017 and 2021.</description>
+      </image>
+      <caption><p>Percentage CDU and CSU support across the constituencies in 2017 (left) and 2021 (right). The colour scale goes from 0 to 60 in intervals of 10. Bundesland borders are drawn in thick black.</p></caption>
     </figure>
 
     <p>
-      CDU/CSU remained structurally stronger in less dense, car-dependent constituencies and in Bavaria (CSU).
+      It is always possible with a large number of factors to find correlations that may or may not imply some
+      causation. For the CDU/CSU one is car ownership, as Figure <xref ref="fig-btwccar"/> illustrates.
     </p>
+
+    <figure xml:id="fig-btwccar">
+      <image source="images/btwCcar-1.png">
+        <description>A scatterplot of CDU/CSU support (y-axis) versus cars per 1000 population (x-axis) for German constituencies. Points are coloured by region. There is a positive relationship between car density and CDU/CSU support. The 12 Berlin constituencies appear far left with uniform low car values. The outlier to the right with high cars and high CDU/CSU support is Wolfsburg (Volkswagen's main base).</description>
+      </image>
+      <caption><p>CDU and CSU support plotted against numbers of cars per thousand population.</p></caption>
+    </figure>
+
+    <p>
+      As car density increases, so does support for the CDU and CSU. Car density tends to be lower in the East.
+      The points to the far left are the 12 Berlin constituencies. For major cities car registration statistics are
+      only available for the whole city and so all constituencies have the same (in this case, low) value. Cars are
+      not so useful in large cities. The most outlying value to the right is Wolfsburg, Volkswagen's main base, and
+      the other one is Main-Taunus, between Opel's base at R&#252;sselsheim and Frankfurt.
+    </p>
+
+    <p>
+      Drawing a parallel coordinate plot, as for the other two parties, shows that the CDU/CSU additionally did
+      well in areas of lower population density where there were more middle-aged people and fewer unemployed.
+    </p>
+
+    <figure xml:id="fig-btwcdpcp">
+      <image source="images/btwCDpcp-1.png">
+        <description>A parallel coordinate plot of CDU/CSU support and structural variables for German constituencies. Constituencies with over 30% CDU/CSU party votes are coloured black, others grey. The CDU/CSU did well in areas of lower population density, with more middle-aged people, more cars, and fewer unemployed.</description>
+      </image>
+      <caption><p>A parallel coordinate plot of CDU/CSU support and some structural variables (constituencies with over 30% party votes are coloured black).</p></caption>
+    </figure>
   </section>
 
   <section xml:id="sec-btw-fptp">
     <title>Who won the first-past-the-post seats?</title>
 
+    <p>
+      In each constituency there is a first-past-the-post system for the result of Erststimmen. In theory you
+      might expect a few non-party winners, in practice there were none. Figure <xref ref="fig-btwmape"/> shows a
+      map coloured by the winning party.
+    </p>
+
     <figure xml:id="fig-btwmape">
-      <image source="images/btwMapE-1.png"/>
-      <caption><p>Erststimmen seat winners by party.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwmapp">
-      <image source="images/btwMapP-1.png"/>
-      <caption><p>Constituencies won on Erststimmen by party, faceted.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwdotv">
-      <image source="../../pngImages/btwDotV-1.png"/>
-      <caption><p>Seat-winning vote percentages in Germany 2021 and UK 2019.</p></caption>
+      <image source="images/btwMapE-1.png">
+        <description>A choropleth map of Germany coloured by the party that won each constituency's Erststimmen seat. The CSU in light blue won almost all seats in Bavaria, CDU in black won many western seats, AfD in blue won seats in southern East Germany, SPD in red won northern East Germany and industrial areas like the Ruhrgebiet, Greens in green won scattered urban seats, and Linke in violet won seats in Berlin and Leipzig.</description>
+      </image>
+      <caption><p>Winners of Erststimmen seats by political party.</p></caption>
     </figure>
 
     <p>
-      In Germany, seat-winning percentages were often far below 50% due to multiparty competition; UK first-past-the-
-      post seats were much more often won above 50%.
+      There are strong geographic patterns. The CSU in light blue won (almost) all the seats in Bavaria. The CDU
+      did well in the West. The AfD did well in the South of the old East Germany. The SPD won seats in the North
+      of the old East Germany and in former industrial heartlands like the Ruhrgebiet. The Greens won a sprinkling
+      of seats across the country in mainly urban areas. On this map it is hard to see that they won the one seat
+      in Munich that the CSU failed to win in Bavaria (but see the next maps). The Linke won two seats in Berlin
+      and one in Leipzig (again, see the next maps), essential for them to be represented in the Bundestag.
+      Otherwise their failing to achieve 5% of Zweitstimmen would have excluded them. The FDP won no seats with
+      Erststimmen.
+    </p>
+
+    <p>
+      The following set of maps shows where each party won Erststimmen seats. Bundesl&#228;nder borders have been
+      included for orientation.
+    </p>
+
+    <figure xml:id="fig-btwmapp">
+      <image source="images/btwMapP-1.png">
+        <description>A faceted map of Germany showing where each political party won Erststimmen seats, with one panel per party. The Greens' urban seats and Die Linke's seats in Berlin and Leipzig are now clearly visible. The CSU is confined to Bavaria, while SPD won in northern East Germany and the Ruhrgebiet.</description>
+      </image>
+      <caption><p>Where political parties won Erststimmen seats.</p></caption>
+    </figure>
+
+    <p>
+      The seats won by the Greens in cities and by Die Linke in Berlin and Leipzig are now just about visible.
+    </p>
+
+    <p>
+      With a first-past-the-post system it is possible to win a seat with a low percentage of the votes. Figure
+      <xref ref="fig-btwdotv"/> displays dotplots of the winning percentages by party in the 2021 German election
+      and in the 2019 UK election. For the UK the three dotplots to the right are for the 18 seats won by parties
+      based in Northern Ireland, the 4 seats won by Plaid Cymru in Wales, and the 48 seats won by the SNP in
+      Scotland. None of these parties put up candidates in other parts of the UK.
+    </p>
+
+    <figure xml:id="fig-btwdotv">
+      <image source="images/btwDotV-1.png">
+        <description>Dotplots showing seat-winning vote percentages by party in the 2021 German election and the 2019 UK election. In Germany only one seat was won with more than 50% of votes cast, and one was won with less than 20%. In the UK, the majority of seats were won with over 50% of votes, with the lowest winner getting 32.6% in South Down.</description>
+      </image>
+      <caption><p>Seat-winning percentages by party in Germany 2021 and in the UK 2019.</p></caption>
+    </figure>
+
+    <p>
+      It is surprising to see that in Germany only one seat was won with more than 50% of votes cast
+      (Aurich&#8212;Emden) and that one was actually won with less than 20% (Dresden II&#8212;Bautzen II). This
+      is a consequence of having several competing parties. The UK uses a first-past-the-post election for every
+      MP. In 2019, the most recent election, 425 of the 649 MPs elected won more than 50% of the votes cast in
+      their constituency. The lowest percentage winner got 32.6% in South Down, Northern Ireland.
     </p>
   </section>
 
   <section xml:id="sec-btw-first-second">
     <title>How do first-past-the-post and party votes compare?</title>
 
+    <p>
+      Comparing the two votes for the six parties who got the most Zweitstimmen means dropping Die Linke and
+      including the FDP.
+    </p>
+
     <figure xml:id="fig-btwscatv">
-      <image source="images/btwScatV-1.png"/>
-      <caption><p>Erststimmen versus Zweitstimmen for major parties.</p></caption>
+      <image source="images/btwScatV-1.png">
+        <description>Scatterplots comparing Erststimmen (y-axis) and Zweitstimmen (x-axis) for major parties, with one panel per party. Brown diagonal lines mark equality. Points representing won Erststimmen seats are coloured in the party colour. There is more agreement than might have been expected. AfD voters stuck closely to their party. The CDU and CSU candidates generally got more votes than the party. The Greens got zero Zweitstimmen in Saarland.</description>
+      </image>
+      <caption><p>Erststimmen and Zweitstimmen by major parties (brown lines mark equality and seats that were won on Erststimmen are coloured by the party's colour).</p></caption>
     </figure>
 
     <p>
-      Agreement between candidate and party vote patterns was stronger than expected in many places, with party-
-      specific exceptions and local candidate effects.
+      There was more agreement than might have been expected. AfD voters stuck closely to their party, with the
+      exception of six seats where they had no individual candidate and one seat in Th&#252;ringen, where the CDU
+      ran a well-known right-wing candidate (although the SPD candidate still won). The CDU and CSU candidates
+      generally got more votes than the party, possibly from the FDP and smaller parties who had no chances of
+      winning individual seats. The Greens did not qualify for Zweitstimmen in Saarland, as previously discussed.
+      Otherwise there were some seats where individual candidates did particularly well relative to their party.
+      This happened with SPD and CDU candidates too.
+    </p>
+
+    <p>
+      Figure <xref ref="fig-btwmape"/> was plotted using Erststimmen to show which parties won the individual
+      seats. Replotting with Zweitstimmen and colouring by which party had the most votes in each constituency
+      gives Figure <xref ref="fig-btwmapz"/>.
     </p>
 
     <figure xml:id="fig-btwmapz">
-      <image source="images/btwMapZ-1.png"/>
-      <caption><p>Party with the highest Zweitstimmen in each constituency.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-btwmapd">
-      <image source="images/btwMapD-1.png"/>
-      <caption><p>Constituencies where top Zweitstimmen and top Erststimmen parties differed.</p></caption>
+      <image source="images/btwMapZ-1.png">
+        <description>A choropleth map of Germany coloured by the party that got the most Zweitstimmen in each constituency. The SPD won most votes in the area that was Prussia, the AfD won most votes in Saxony, and the CSU most in Bavaria. The pattern is more coherent than the Erststimmen map, reminiscent of how voting in Germany looked over a hundred years ago.</description>
+      </image>
+      <caption><p>Which party got the most Zweitstimmen in each constituency.</p></caption>
     </figure>
 
     <p>
-      Differences between first and second-vote leaders were nontrivial but patterned; CDU/CSU rarely failed to
-      convert Zweitstimmen strength into Erststimmen seats.
+      Figure <xref ref="fig-btwmapz"/> presents a more coherent pattern than Figure <xref ref="fig-btwmape"/>.
+      As has been pointed out on Fran&#231;ois Valentin's Twitter feed (@valentin:2022), the map's form is
+      reminiscent of how voting in Germany looked over a hundred years ago. The SPD won most votes in the area
+      that was Prussia, the AfD won most votes in Saxony, and the CSU most in Bavaria.
     </p>
 
-    <introduction>
-      <p>
-        <em>Answers.</em> Greens, SPD, and "Other" parties improved relative to 2017. Party support showed strong
-        geographic structure. Greens were stronger in urban areas; AfD strength was concentrated in eastern and lower-
-        foreign-share areas. Most constituency winners in 2021 won with less than 50% of Erststimmen.
-      </p>
-      <p>
-        <em>Further questions.</em> Which structural factors are most predictive? Why did specific seats deviate from
-        nearby constituency patterns?
-      </p>
-    </introduction>
+    <figure xml:id="fig-btwmapd">
+      <image source="images/btwMapD-1.png">
+        <description>A choropleth map of Germany showing constituencies where the party that got the most Zweitstimmen did not also get the most Erststimmen, coloured by the party with the most Zweitstimmen. The remaining constituencies appear as "No difference". SPD candidates failed to win Erststimmen seats relatively often when they led in Zweitstimmen, while the CDU and CSU never failed to convert Zweitstimmen strength into Erststimmen seats.</description>
+      </image>
+      <caption><p>Constituencies where the party that got the most Zweitstimmen did not get the most Erststimmen, coloured by the party with the most Zweitstimmen.</p></caption>
+    </figure>
+
+    <p>
+      In many constituencies the party of the candidate that had the most Erststimmen also received the most
+      Zweitstimmen. Restricting the map to the constituencies where one party had the most Erststimmen and another
+      the most Zweitstimmen and colouring by the party with the most Zweitstimmen gives Figure
+      <xref ref="fig-btwmapd"/>. SPD candidates failed to win seats on Erststimmen relatively often, while Green
+      and AfD candidates failed occasionally. Neither the CDU nor the CSU ever failed to win on Erststimmen when
+      they won on Zweitstimmen.
+    </p>
+
+    <p>
+      <em>Answers.</em> The Greens, the SPD, and "Other" parties did well in the 2021 election (compared with the
+      2017 election). There are strong geographical patterns of party support, for instance for the Greens and the
+      AfD. The Greens did better in urban constituencies than in rural ones. Candidates winning individual seats
+      with Erststimmen almost always won less than 50% of the votes in 2021.
+    </p>
+    <p>
+      <em>Further questions.</em> Which structural factors were most important? Why did parties do much better in
+      certain individual seats than in other similar ones?
+    </p>
 
     <subsection xml:id="sec-btw-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>UpAndDown plots show absolute and relative change simultaneously.</p></li>
-        <li><p>Draw smaller groups last when overplotting and colour overlap are likely.</p></li>
-        <li><p>Scatterplots surface group differences, equal-value clusters, and local outliers.</p></li>
-        <li><p>Highlighted parallel-coordinate plots help identify potential explanatory variables.</p></li>
+        <li><p>UpAndDown plots show relative and absolute changes in the same plot. (Figure <xref ref="fig-btw3"/>)</p></li>
+        <li><p>Draw smaller groups last if colour is used and there is overplotting. (Figures <xref ref="fig-btwgpop"/>, <xref ref="fig-btwafdfor"/>, and <xref ref="fig-btwccar"/>)</p></li>
+        <li><p>Scatterplots reveal many kinds of information, e.g., points with equal values (Berlin in Figure <xref ref="fig-btwccar"/>), differences between groups (Berlin compared with the rest of the East of Germany in Figure <xref ref="fig-btwafdfor"/>), unusual cases within highly correlated variables (Figure <xref ref="fig-btwscatv"/>).</p></li>
+        <li><p>Highlighted parallel coordinate plots identify potential explanatory variables. (Figures <xref ref="fig-btwapcp"/>, <xref ref="fig-btwgpcp"/>, and <xref ref="fig-btwcdpcp"/>)</p></li>
       </ul>
     </subsection>
   </section>

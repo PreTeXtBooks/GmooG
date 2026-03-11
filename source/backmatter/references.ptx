@@ -141,6 +141,126 @@
   <!-- wickham:2019 -->
   <biblio xml:id="wickham-2019" type="raw">Wickham, Hadley. <pubtitle>tidyverse: Easily Install and Load the 'Tidyverse'</pubtitle>. R package version 1.3.0, 2019. <url href="https://CRAN.R-project.org/package=tidyverse"/></biblio>
 
+  <!-- buol:2018 -->
+  <biblio xml:id="buol-2018" type="raw">Buolamwini, Joy and Gebru, Timnit. Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification. <em>Proceedings of Machine Learning Research</em>, 81:1&#8211;15, 2018.</biblio>
+
+  <!-- PPV:2021 -->
+  <biblio xml:id="PPV-2021" type="raw">Wikipedia. Positive and negative predicted values. <url href="https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values"/>. 2021.</biblio>
+
+  <!-- marbac:2016 -->
+  <biblio xml:id="marbac-2016" type="raw">Marbac, Matthieu, Biernacki, Christophe, and Vandewalle, Vincent. <pubtitle>CoModes</pubtitle>. R package version 1.0.0, 2016. <url href="https://rdrr.io/rforge/CoModes/man/"/></biblio>
+
+  <!-- lebret:2015 -->
+  <biblio xml:id="lebret-2015" type="raw">Lebret, R&#233;mi, Iovleff, Serge, Langrognet, Florent, Biernacki, Christophe, Celeux, Gilles, and Govaert, G&#233;rard. Rmixmod: The R Package of the Model-Based Unsupervised, Supervised, and Semi-Supervised Classification Mixmod Library. <em>Journal of Statistical Software</em>, 67(6):1&#8211;29, 2015.</biblio>
+
+  <!-- bouveyron:2019 -->
+  <biblio xml:id="bouveyron-2019" type="raw">Bouveyron, Charles, Celeux, Gilles, Murphy, Brendan, and Raftery, Adrian. <pubtitle>Model-Based Clustering and Classification for Data Science: With Applications in R</pubtitle>. Cambridge University Press, 2019.</biblio>
+
+  <!-- ebird:2022 -->
+  <biblio xml:id="ebird-2022" type="raw">Cornell Lab of Ornithology. eBird. <url href="https://ebird.org"/>. 2022.</biblio>
+
+  <!-- hothorn:2015 -->
+  <biblio xml:id="hothorn-2015" type="raw">Hothorn, Torsten, M&#252;ller, J., Held, L., M&#246;st, L., and Mysterud, A. Temporal patterns of deer&#8211;vehicle collisions consistent with deer activity pattern and density increase but not general accident risk. <em>Accident Analysis &amp; Prevention</em>, 81:143&#8211;152, 2015.</biblio>
+
+  <!-- hothorn:2020 -->
+  <biblio xml:id="hothorn-2020" type="raw">Hothorn, Torsten. Most Likely Transformations: The mlt Package. <em>Journal of Statistical Software</em>, 92(1):1&#8211;68, 2020. <url href="https://www.jstatsoft.org/article/view/v092i01"/></biblio>
+
+  <!-- titanic:2021 -->
+  <biblio xml:id="titanic-2021" type="raw">Encyclopedia Titanica. <url href="https://www.encyclopedia-titanica.org"/>. 2021.</biblio>
+
+  <!-- bundesWL:2021 -->
+  <biblio xml:id="bundesWL-2021" type="raw">Statistisches Bundesamt. Der Bundeswahlleiter. <url href="https://www.bundeswahlleiter.de"/>. 2021.</biblio>
+
+  <!-- valentin:2022 -->
+  <biblio xml:id="valentin-2022" type="raw">Valentin, Francois. Valentin Twitter. <url href="https://twitter.com/Valen10Francois/"/>. 2022.</biblio>
+
+  <!-- rosling:2013 -->
+  <biblio xml:id="rosling-2013" type="raw">Rosling, Hans. Gapminder. <url href="http://www.gapminder.org"/>. 2013.</biblio>
+
+  <!-- mpidr:2022 -->
+  <biblio xml:id="mpidr-2022" type="raw">University of California, Berkeley and Max Planck Institute for Demographic Research. Human Mortality Database. <url href="https://www.mortality.org"/>. 2022.</biblio>
+
+  <!-- imdb:2022 -->
+  <biblio xml:id="imdb-2022" type="raw">IMDb. Internet Movie Database. <url href="https://datasets.imdbws.com"/>. 2022.</biblio>
+
+  <!-- wickham:2011 -->
+  <biblio xml:id="wickham-2011" type="raw">Wickham, Hadley, Cook, Di, Hofmann, Heike, and Buja, Andreas. Graphical inference for Infovis. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 16(6):973&#8211;979, 2011.</biblio>
+
+  <!-- stigler:1977 -->
+  <biblio xml:id="stigler-1977" type="raw">Stigler, Stephen. Do Robust Estimators Work with Real Data? <em>Annals of Statistics</em>, 5(6):1055&#8211;1098, 1977.</biblio>
+
+  <!-- stigler:2019 -->
+  <biblio xml:id="stigler-2019" type="raw">Stigler, Stephen. Data Have a Limited Shelf Life. <em>Harvard Data Science Review</em>, 1(2), 2019.</biblio>
+
+  <!-- michelson:1880 -->
+  <biblio xml:id="michelson-1880" type="raw">Michelson, Albert. Experimental Determination of the Velocity of Light made at the U.S. Naval Academy, Annapolis. <em>Astronomical papers</em>, 1:109&#8211;145, 1880. U.S. Nautical Almanac Office.</biblio>
+
+  <!-- meng:2021 -->
+  <biblio xml:id="meng-2021" type="raw">Meng, Xiao-Li. Enhancing (publications on) data quality: Deeper data minding and fuller data confession. <em>JRSS A</em>, 184:1161&#8211;1175, 2021.</biblio>
+
+  <!-- hueb:2020 -->
+  <biblio xml:id="hueb-2020" type="raw">Huebner, Marianne, Vach, Werner, le Cessie, Saskia, Schmidt, Carsten Oliver, and Lusa, Lara. Hidden analyses: a review of reporting practice and recommendations for more transparent reporting of initial data analyses. <em>BMC Medical Research Methodology</em>, 1&#8211;10, 2020.</biblio>
+
+  <!-- gelman:2020 -->
+  <biblio xml:id="gelman-2020" type="raw">Gelman, Andrew, Hill, Jennifer, and Vehtari, Aki. <pubtitle>Regression and Other Stories</pubtitle>. Cambridge University Press, Cambridge, 2020.</biblio>
+
+  <!-- holton:1978 -->
+  <biblio xml:id="holton-1978" type="raw">Holton, Gerald. Subelectrons, Presuppositions, and the Millikan&#8211;Ehrenhaft Dispute. <em>Historical Studies in the Physical Sciences</em>, 9:161&#8211;224, 1978.</biblio>
+
+  <!-- ehrenhaft:1910 -->
+  <biblio xml:id="ehrenhaft-1910" type="raw">Ehrenhaft, Felix. &#220;ber eine neue Methode zur Messung von Elektrizit&#228;tsmengen, die kleiner zu sein scheinen als die Ladung des einwertigen Wasserstoff-ions oder Elektrons und von dessen Vielfachen abweichen. <em>Physik. Zeitschr.</em>, XI:940&#8211;952, 1910.</biblio>
+
+  <!-- giordani:2020 -->
+  <biblio xml:id="giordani-2020" type="raw">Giordani, P., Ferraro, M., and Martella, F. <pubtitle>An Introduction to Clustering with R</pubtitle>. Springer, Singapore, 2020.</biblio>
+
+  <!-- corlett:2020 -->
+  <biblio xml:id="corlett-2020" type="raw">Corlett, Tatsuya, Stavnichuk, Mariya, and Komarova, Svetlana. Population analysis of space travelers. <em>Life Sciences in Space Research</em>, 27:1&#8211;5, 2020.</biblio>
+
+  <!-- tidyt:2020b -->
+  <biblio xml:id="tidyt-2020b" type="raw">rfordatascience. Astronaut Database. <url href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-07-14"/>. 2020.</biblio>
+
+  <!-- asensio:2021a -->
+  <biblio xml:id="asensio-2021a" type="raw">Asensio, Omar, Apablaza, Camila, Lawson, M. Cade, and Walsh, Sarah. A field experiment on workplace norms and electric vehicle charging etiquette. <em>Journal of Industrial Ecology</em>, 2021.</biblio>
+
+  <!-- sackett:1979 -->
+  <biblio xml:id="sackett-1979" type="raw">Sackett, David and Gent, Michael. Controversy in counting and attributing events in clinical trials. <em>New England Journal of Medicine</em>, 301:1410&#8211;1412, 1979.</biblio>
+
+  <!-- thau:2021 -->
+  <biblio xml:id="thau-2021" type="raw">Thau, Mads, Mikkelsen, Maria Falk, Hjortskov, Morten, and Pedersen, Mogens Jin. Question order bias revisited: A split-ballot experiment on satisfaction with public services among experienced and professional users. <em>Public Administration</em>, 99(1):189&#8211;204, 2021.</biblio>
+
+  <!-- wright:2022 -->
+  <biblio xml:id="wright-2022" type="raw">Wright, Kevin. agridat. R package version 1.21, 2022. <url href="https://CRAN.R-project.org/package=agridat"/></biblio>
+
+  <!-- singervine:2020 -->
+  <biblio xml:id="singervine-2020" type="raw">Singer-Vine, Jeremy. Data is Plural. <url href="https://tinyletter.com/data-is-plural"/>. 2020.</biblio>
+
+  <!-- amal:2022 -->
+  <biblio xml:id="amal-2022" type="raw">Amaliah, Dewi, Cook, Dianne, Tanaka, Emi, Hyde, Kate, and Tierney, Nicholas. A Journey from Wild to Textbook Data to Reproducibly Refresh the Wages Data from the National Longitudinal Survey of Youth Database. arXiv, 2022. <url href="https://arxiv.org/abs/2205.06417"/></biblio>
+
+  <!-- zeil:2020 -->
+  <biblio xml:id="zeil-2020" type="raw">Zeileis, Achim, Fisher, Jason, Hornik, Kurt, Ihaka, Ross, McWhite, Claire, Murrell, Paul, Stauffer, Reto, and Wilke, Claus. colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes. <em>Journal of Statistical Software</em>, 96(1), 2020.</biblio>
+
+  <!-- mohammad:2011 -->
+  <biblio xml:id="mohammad-2011" type="raw">Mohammad, Saif. Colourful Language: Measuring Word-Colour Associations. In <em>CMCL@ACL</em>, 2011.</biblio>
+
+  <!-- mccand:2022 -->
+  <biblio xml:id="mccand-2022" type="raw">McCandless, David. Colours in Culture. <url href="https://www.informationisbeautiful.net/visualizations/colours-in-cultures/"/>. 2022.</biblio>
+
+  <!-- stclair:2016 -->
+  <biblio xml:id="stclair-2016" type="raw">St Clair, Kassia. <pubtitle>The Secret Lives of Colour</pubtitle>. John Murray, London, 2016.</biblio>
+
+  <!-- gabelica:2022 -->
+  <biblio xml:id="gabelica-2022" type="raw">Gabelica, Mirko, Bojčić, Ružica, and Puljak, Livia. Many researchers were not compliant with their published data sharing statement: mixed-methods study. <em>Journal of Clinical Epidemiology</em>, 2022.</biblio>
+
+  <!-- newcomb:1891 -->
+  <biblio xml:id="newcomb-1891" type="raw">Newcomb, Simon. Measures of the velocity of light made under the direction of the Secretary of the Navy during the years 1880&#8211;1882. <em>Astronomical Papers</em>, 2:107&#8211;230, 1891.</biblio>
+
+  <!-- bivand:2020 -->
+  <biblio xml:id="bivand-2020" type="raw">Bivand, Roger. Why have CRS, projections and transformations changed? 2020. <url href="https://rgdal.r-forge.r-project.org/articles/CRS_projections_transformations.html"/></biblio>
+
+  <!-- IAAF:2001 -->
+  <biblio xml:id="IAAF-2001" type="raw">IAAF. <pubtitle>Scoring Tables for Combined Events</pubtitle>. IAAF, Monaco, 2001.</biblio>
+
   <!-- heinz:2003 -->
   <biblio xml:id="heinz-2003" type="raw">Heinz, G., Peterson, L., Johnson, R., and Kerk, C. Exploring Relationships in Body Dimensions. <em>Journal of Statistics Education</em>, 11(2), 2003.</biblio>
 
