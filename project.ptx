@@ -1,51 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    This file provides the overall configuration for your PreTeXt
-    project. To edit the content of your document, open `source/main.ptx`
-    (default location).
+  This file contains project-level configuration for the PreTeXt-CLI.
+  It specifies targets for building the book in different formats.
 -->
-<project>
+<project ptx-version="2">
   <targets>
-    <!-- To build this target, run `pretext build web` -->
+    <!-- HTML target for web viewing -->
     <target name="web">
       <format>html</format>
       <source>source/main.ptx</source>
-      <publication>source/publication/publication.ptx</publication>
+      <publication>publication/publication.ptx</publication>
       <output-dir>output/web</output-dir>
+      <stringparam key="html.css.extra" value="custom-styles.css"/>
     </target>
-    <target name="print" pdf-method="xelatex">
+    
+    <!-- PDF target via LaTeX -->
+    <target name="print">
       <format>pdf</format>
       <source>source/main.ptx</source>
-      <publication>source/publication/publication.ptx</publication>
+      <publication>publication/publication.ptx</publication>
       <output-dir>output/print</output-dir>
     </target>
-    <target name="print-latex">
-      <format>latex</format>
+    
+    <!-- EPUB target for e-readers -->
+    <target name="epub">
+      <format>epub</format>
       <source>source/main.ptx</source>
-      <publication>source/publication/publication.ptx</publication>
-      <output-dir>output/print-latex</output-dir>
-    </target>
-    <target name="subset">
-      <!-- Usage: to build starting at XMLID, -->
-      <!-- pretext build subset -x XMLID      -->
-      <!-- or use <xml-root>XMLID</xml-root>  -->
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <publication>source/publication/publication.ptx</publication>
-      <output-dir>output/subset</output-dir>
-      <stringparam key="debug.skip-knowls" value="yes"/>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/epub</output-dir>
     </target>
   </targets>
+  
   <executables>
-    <latex>latex</latex>
-    <pdflatex>pdflatex</pdflatex>
-    <xelatex>xelatex</xelatex>
-    <pdfsvg>pdf2svg</pdfsvg>
-    <asy>asy</asy>
-    <sage>sage</sage>
-    <pdfpng>convert</pdfpng>
-    <pdfeps>pdftops</pdfeps>
-    <node>node</node>
-    <liblouis>file2brl</liblouis>
+    <!-- Specify paths to executables if needed, otherwise use system defaults -->
+    <!-- <latex>latex</latex> -->
+    <!-- <pdflatex>pdflatex</pdflatex> -->
+    <!-- <xelatex>xelatex</xelatex> -->
   </executables>
 </project>
