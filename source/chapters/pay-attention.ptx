@@ -461,6 +461,7 @@
         If a spineplot suggests two categorical variables are not independent, a chi-squared test could be used.
         More complicated data could be examined using logistic regression.
       </p>
+      <p> Examples where statistical models are not so readily available include assessing possible outliers in a scatterplot and whether there are multiple modes in a histogram.</p>
     </subsection>
 
     <subsection xml:id="sec-checking-consequences">
@@ -478,6 +479,8 @@
         <caption><p>Ratings of active and inactive chess players in 2020.</p></caption>
       </figure>
 
+     <p>The decline in survival rate across the Titanic’s three passenger classes applied to women, but not to men (Figures TODO). Conclusions might have implications for other variables and it is useful to see if patterns are consistent across a dataset.</p>
+
       <p>
         External checking compares with related datasets where relevant. If relevant data can be found, compare
         results with other related datasets, as in <xref ref="fig-btwdotvx"/>.
@@ -490,52 +493,35 @@
         <caption><p>Seat-winning percentages by party in Germany 2021 and UK 2019.</p></caption>
       </figure>
 
-      <figure xml:id="fig-gaybx">
-        <image source="images/gayBX-1.png">
-          <description>Line plots showing support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent, with separate lines for males (green) and females (purple).</description>
-        </image>
-        <caption><p>Support and opposition plots for same-sex marriage questions by age and sex.</p></caption>
-      </figure>
-
-      <figure xml:id="fig-ubhx">
-        <image source="images/ubHX-1.png">
-          <description>Time series plot of extra seats (Uberhangmandate and Ausgleichsmandate) in German elections since 1949, with dashed lines marking reunification and the introduction of Ausgleichsmandate.</description>
-        </image>
-        <caption><p>Extra seats in German elections since 1949.</p></caption>
-      </figure>
-
-      <figure xml:id="fig-swim50200x">
-        <image source="images/swim50200X-1.png">
-          <description>Two panel boxplot display of best times in seconds for four 50 m events (left) and four 200 m events (right) by sex, ordered by stroke from top: breaststroke, backstroke, butterfly, freestyle.</description>
-        </image>
-        <caption><p>Best times in seconds for four 50 m events and four 200 m events by sex.</p></caption>
-      </figure>
     </subsection>
 
     <subsection xml:id="sec-checking-context">
       <title>Context</title>
       <p>
-        Results have to make sense and be interpreted in context. A point pattern in a scatterplot may be judged
-        very differently for different datasets or variables. Weekly reporting patterns, definition changes, and
-        collection conditions can all affect what is seen.
+        Results have to make sense and be interpreted in context. A pattern of points in a scatterplot will be judged in different ways for different datasets or different variables (Figure 33.1). Errors like negative heights or zero dimensions (Figure 11.1) are obvious. Weekly patterns in sightings by birdwatchers or in disease reporting may need to be checked. More birdwatchers may be out and about at weekends and reporting of diseases may be influenced by media attention. Differences in mortality rates between countries or over time may be due to definitions, conditions or treatments as Covid pandemic statistics have illustrated.
       </p>
-
-      <p>
-        In comparing opinions on same-sex marriage, redrawn in <xref ref="fig-gaybx"/>, it is well to remember
-        that the questions were about different situations, that they were framed differently, and that only a third
-        of the sample were asked the state question.
+      <p>In comparing opinions on same-sex marriage from Figure 9.9, redrawn here as Figure 32.14, it is well to remember that the questions were about different situations, that they were framed differently, and that only a third of the sample were asked the state question.
       </p>
+      <figure xml:id="fig-gaybx">
+        <image source="images/gayBX-1.png">
+          <description>Line plots showing support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent, with separate lines for males (green) and females (purple).</description>
+        </image>
+        <caption><p> Line plots of support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent by males (green) and females (purple)</p></caption>
+      </figure>
     </subsection>
 
     <subsection xml:id="sec-checking-discussion">
       <title>Discussing with others, especially domain experts</title>
       <p>
-        What one person sees when they look at a graphic may not be what another person sees. Combining opinions is
-        more effective than relying on one person's views---provided that the opinions are independent. Graphics
-        analysts will not have the subject knowledge of experts in the field and they should be consulted. The role
-        of Ausgleichsmandate in making the German parliament much larger than intended was important information
-        gained. This was shown in <xref ref="fig-ubhx"/>.
+        What one person sees when they look at a graphic may not be what another person sees. Combining opinions is more effective than relying on one person’s views—provided that the opinions are independent. Graphics analysts will not have the subject knowledge of experts in the field and they should be consulted. Amongst other topics expertise was sought on chess ratings (Chapter 8), ornithology (Chapters 14, 18, and 23), swimming (Chapter 20), and German elections (Chapter 26). The role of Ausgleichsmandate in making the German parliament much larger than intended was important information gained. This was shown in <xref ref="fig-ubhx"/>.
       </p>
+
+      <figure xml:id="fig-ubhx">
+        <image source="images/ubHX-1.png">
+          <description>Time series plot of extra seats (Uberhangmandate and Ausgleichsmandate) in German elections since 1949, with dashed lines marking reunification and the introduction of Ausgleichsmandate.</description>
+        </image>
+        <caption><p>Extra seats in German elections since 1949. Each point marks the date of an election. The left dashed line marks the first election after reunification in October 1990. The right dashed line marks the first election with Ausgleichsmandate.</p></caption>
+      </figure>
     </subsection>
 
     <subsection xml:id="sec-checking-replicate">
@@ -544,7 +530,7 @@
         All of the checks listed so far can be carried out relatively quickly. The ideal would be to attempt to
         independently replicate results. Replication should be possible for scientific studies by having different
         researchers carry out fresh studies in different environments. This may be impractical for reasons of time,
-        organisation, and finance, but is the ideal to aim for.
+        organisation, and finance, but is the ideal to aim for. Examples include estimating the speed of light (Chapter 5), evaluating treatment of psoriasis (Chapter 12), and distinguishing shearwaters (Chapter 23).
       </p>
 
       <p>
@@ -552,6 +538,8 @@
         groups by sampling. Some datasets are regularly updated; results can then be checked for consistency over
         time.
       </p>
+
+      <p> Some datasets are regularly updated, e.g., movies (Chapter 3), fuel efficiency (Chapter 17), and elections (Chapter 26). Results can then be checked for consistency over time.</p>
     </subsection>
 
     <subsection xml:id="sec-checking-example">
@@ -572,6 +560,13 @@
         the different rules on turning between lengths for the events. The figures are shown again in
         <xref ref="fig-swim50200x"/>. Note the different vertical scales of the left and right plots.
       </p>
+
+      <figure xml:id="fig-swim50200x">
+        <image source="images/swim50200X-1.png">
+          <description>Two panel boxplot display of best times in seconds for four 50 m events (left) and four 200 m events (right) by sex, ordered by stroke from top: breaststroke, backstroke, butterfly, freestyle.</description>
+        </image>
+        <caption><p>Best times in seconds for the four 50 m (left) and four 200 m (right) swimming events achieved by men and women in the order breaststroke, backstroke, butterfly, freestyle from the top.</p></caption>
+      </figure>
     </subsection>
 
     <subsection xml:id="sec-pay-attention-main-points">
