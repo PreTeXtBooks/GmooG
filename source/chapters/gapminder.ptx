@@ -8,99 +8,145 @@
   </blockquote>
 
   <p><em>Background</em> Hans Rosling and his Gapminder team have done excellent work in collecting and presenting data on developments in world health, country by country, over many years.</p>
-  <p><em>Questions</em> How has life expectancy changed over time? How do the patterns differ by countries? How good are the data?</p>
-  <p><em>Sources</em> Gapminder website (@rosling:2013)</p>
-  <p><em>Structure</em> Life expectancy estimates for 187 countries from 1800 to 2016. There are also forecasts up to 2100 giving 301 data points per country in all.</p>
+  <p><em>Questions</em> How has life expectancy changed over time?  How do the patterns differ by countries?  How good are the data?</p>
+  <p><em>Sources</em> Gapminder website (<xref ref="rosling-2013"/>)</p>
+  <p><em>Structure</em> Life expectancy estimates for 187 countries from 1800 to 2016.  There are also forecasts up to 2100 giving 301 data points per country in all.</p>
 
   </introduction>
   <section xml:id="sec-gapm1">
     <title>Gapminder and Hans Rosling</title>
 
-    <p>The Gapminder Foundation that Hans Rosling and colleagues set up continues to collect and monitor global patterns of health. Anyone who has seen a film of one of Rosling's talks (@rosling:2009), or was lucky enough to attend one, will remember his scatterplots animated over time. One he used was of life expectancy at birth plotted against fertility rate. The main patterns he described are clear and informative, emphasising the overall increases in life expectancy across all countries. If life expectancy is examined over time on its own, there are additional features that Rosling did not have time to discuss, including some dramatic sharp drops and rises.</p>
+    <p>The Gapminder Foundation that Hans Rosling and colleagues set up continues to collect and monitor global patterns of health.  Anyone who has seen a film of one of Rosling's talks (<xref ref="rosling-2009"/>), or was lucky enough to attend one, will remember his scatterplots animated over time.  One he used was of life expectancy at birth plotted against fertility rate.  The main patterns he described are clear and informative, emphasising the overall increases in life expectancy across all countries.  If life expectancy is examined over time on its own, there are additional features that Rosling did not have time to discuss, including some dramatic sharp drops and rises.</p>
 
     <figure xml:id="fig-leyr">
-      <image source="images/LEyr-1.png"/>
+      <image source="images/LEyr-1.png">
+        <description>Line plot of life expectancy at birth in years for 187 countries over the years 1800 to 2016, showing an overall upward trend with some sharp drops and flat horizontal lines in the 19th century.</description>
+      </image>
       <caption><p>Life expectancy at birth in years for 187 countries over the years 1800 to 2016.</p></caption>
     </figure>
 
-    <p>The life expectancy data for each country has been plotted against time in Figure @ref(fig-leyr). This is a default plot and could be improved in many ways. Nevertheless much can be seen in it. Two striking features were not mentioned in Rosling's talks: the sharp falls and rises just mentioned, and the unchanging levels (horizontal lines) during the nineteenth century.</p>
+    <p>The life expectancy data for each country has been plotted against time in Figure <xref ref="fig-leyr"/>.  This is a default plot and could be improved in many ways.  Nevertheless much can be seen in it.  Two striking features were not mentioned in Rosling's talks: the sharp falls and rises just mentioned, and the unchanging levels (horizontal lines) during the nineteenth century.  Figure <xref ref="fig-le2"/> picks out these two features.</p>
 
     <figure xml:id="fig-le2">
-      <image source="images/LE2-1.png"/>
+      <image source="images/LE2-1.png">
+        <description>Two-panel plot of life expectancy for 187 countries. The upper panel highlights a red rectangle marking sharp falls and rises at low life expectancy values between 1802 and 2000. The lower panel highlights a yellow rectangle marking flat horizontal lines at higher life expectancy values between 1798 and 1925.</description>
+      </image>
       <caption><p>Life expectancy graphics: some sharp falls and rises marked (above), straight lines marked (below).</p></caption>
     </figure>
 
-    <p>The plot above picks out some of the falls and rises. For certain countries in certain years it is well known that there were population disasters: the famine in Ukraine in 1932-33 and the Irish potato famine in the second half of the 1840s. The Gapminder researchers endeavoured to estimate data for these and other catastrophic years using modelling techniques described in a paper published on their website (@lindgren:2014). It is impressive that they went to so much trouble to deal with this issue, although, as they write themselves, they can only provide guesstimates.</p>
+    <p>The plot above picks out some of the falls and rises.  For certain countries in certain years it is well known that there were population disasters: the famine in Ukraine in 1932-33 and the Irish potato famine in the second half of the 1840s.  The Gapminder researchers endeavoured to estimate data for these and other catastrophic years using modelling techniques described in a paper published on their website (<xref ref="lindgren-2014"/>).  It is impressive that they went to so much trouble to deal with this issue, although, as they write themselves, they can only provide guesstimates.  It is important that they draw attention to catastrophes, it would be wrong to simply ignore them.  European readers may have heard of the Ukrainian famine in 1932-33 and the Irish famine in the late 1840s, but few will know of the plague in Tunisia in 1891 or of the measles epidemic in Fiji in 1875.</p>
 
-    <p>The straight lines highlighted in the lower plot imply that life expectancies for many countries were constant over the period. That is highly unlikely. What has happened is that a single value was estimated to cover many years, where no other information was available.</p>
+    <p>The straight lines highlighted in the lower plot imply that life expectancies for many countries were constant over the period.  That is highly unlikely!  What has happened is that a single value was estimated to cover many years, where no other information was available.  Although Rosling did not talk about this, the information is available in the Gapminder display under a button labelled "Data Doubts" at the foot of the plot to the right.</p>
   </section>
 
   <section xml:id="sec-gapm2">
     <title>What else can be seen in Gapminder's plots?</title>
 
-    <p>Several further features can be noticed. Figure @ref(fig-le3) highlights them. Which countries had higher life expectancy in the 19th century? Which countries had the most dramatic falls most recently? Which country had consistently lower levels in the first half of the 20th century? Which country's data began or continued after a gap around 1970?</p>
+    <p>Several further features can be noticed.  Figure <xref ref="fig-le3"/> highlights them.  Which countries had higher life expectancy in the 19th century (upper left)?   Which countries had the most dramatic falls most recently (upper right)?  Which country had consistently lower levels in the first half of the 20th century (lower left)?  Which country's data began or continued after a gap around 1970 (lower right)?</p>
 
     <figure xml:id="fig-le3">
-      <image source="images/LE3-1.png"/>
+      <image source="images/LE3-1.png">
+        <description>Four-panel plot of life expectancy for 187 countries, each panel highlighting a different region of interest with a coloured rectangle: upper left shows a green rectangle over high life expectancy values in the 19th century; upper right shows an orange rectangle over recent dramatic falls; lower left shows a purple rectangle over a country with consistently lower values in the first half of the 20th century; lower right shows a pink rectangle around a gap in data around 1970.</description>
+      </image>
       <caption><p>Further features in the life expectancy graphic.</p></caption>
     </figure>
 
-    <p>Countries with highest values in the nineteenth century can be found by looking at the maximum values by year. Norway had the highest value for 68 of the hundred years and Sweden came second with the highest value for 11 years.</p>
+    <p>Countries with highest values in the nineteenth century can be found by looking at the maximum values by year.  Norway had the highest value for <m>68</m> of the hundred years and Sweden came second with the highest value for <m>11</m> years.  Norway and Sweden were in a political union for most of the nineteenth century, but they kept their own institutions and presumably reported their own statistics.  At the very beginning of the century Norway was in a union with Denmark.  Figure <xref ref="fig-lensd"/> shows the life expectancy time series of the three countries and they are very similar.  The only noticeable differences are that Denmark was less affected by Spanish Flu at the end of World War I and consistently reported slightly lower levels more recently.</p>
 
     <figure xml:id="fig-lensd">
-      <image source="images/LEnsd-1.png"/>
+      <image source="images/LEnsd-1.png">
+        <description>Line plot of life expectancy for Denmark, Norway, and Sweden from 1800 to 2016, showing three closely tracking series with a common upward trend. Denmark shows a smaller dip around 1918 compared to the other two countries and slightly lower values in more recent decades.</description>
+      </image>
       <caption><p>Life expectancy for Denmark, Norway and Sweden.</p></caption>
     </figure>
 
-    <p>The two countries with recent serious falls were Rwanda in 1994 and Haiti in 2010. The country with lower levels of life expectancy in the first half of the 20th century was Yemen. The country whose data appear to begin around 1970 was Andorra; other sparse small-country series were also excluded.</p>
+    <p>The two countries with recent serious falls (the upper right graphic in Figure <xref ref="fig-le3"/>) were Rwanda in 1994 (the civil war) and Haiti in 2010 (an earthquake).  They can be identified by selecting countries with life expectancies less than <m>40</m> after 1990.</p>
+
+    <p>The country with lower levels of life expectancy in the first half of the 20th century (the lower left graphic in Figure <xref ref="fig-le3"/>) can be found by looking at the data for 1950, when it had the lowest value of all countries, just before it started to improve.  This was Yemen, a country whose recent history of civil war will have made conditions worse again.</p>
+
+    <p>The country whose data appear to begin around 1970 (the lower right plot in Figure <xref ref="fig-le3"/>) can be found from having the highest life expectancy in 1975.  This was Andorra, one of three small countries with values reported only from 1970 on that were excluded from further analyses in this chapter.  Another ten small countries with little data, e.g., the Holy See (Vatican City State), were excluded as well.</p>
+
+    <p>Not all features are equally important and individual ones may be of more interest to some people than to others.  There is much to be seen in graphics and looking closely will prove rewarding.</p>
   </section>
 
   <section xml:id="sec-gapm3">
     <title>Analysis by regions of the world</title>
 
+    <p>Colouring countries by Gapminder's classification of the world into four regions gives Figure <xref ref="fig-ler4"/>.</p>
+
     <figure xml:id="fig-ler4">
-      <image source="images/LEr4-1.png"/>
+      <image source="images/LEr4-1.png">
+        <description>Line plot of life expectancy time series for 187 countries from 1800 to 2016, with each country's line coloured according to its Gapminder four-region classification: red for Asia, green for Americas, blue for Europe, and cyan for Africa. European countries cluster at the top and African countries at the bottom in recent decades, with two prominent dips for European countries in the first half of the 20th century.</description>
+      </image>
       <caption><p>Life expectancy time series coloured by the four regions classification.</p></caption>
     </figure>
 
-    <p>European countries have had the highest life expectancies over the last two hundred years and African countries have had most of the lowest in recent years. There were two sharp falls for European countries in the first half of the 20th century. The first was due to a combination of World War I and the Spanish flu, while the second was due to World War II.</p>
+    <p>European countries have had the highest life expectancies over the last two hundred years and African countries have had most of the lowest in recent years.  There were two sharp falls for European countries in the first half of the 20th century.  The first was due to a combination of World War I and the Spanish flu, while the second was due to World War II.</p>
+
+    <p>It is difficult to see much more and any colour scheme would have problems with overplotting.  A better approach with so many series is to use faceting, splitting the data into subsets and plotting them in a grid.  Figure <xref ref="fig-lef4"/> shows the same series by each region separately.</p>
 
     <figure xml:id="fig-lef4">
-      <image source="images/LEf4-1.png"/>
+      <image source="images/LEf4-1.png">
+        <description>Four-panel faceted plot of life expectancy time series, one panel per Gapminder region (Africa, Americas, Asia, Europe). Each panel shows the individual country series for that region, making within-region variation visible. A few countries in Africa, Americas, and Asia had notably higher life expectancies between 1880 and 1950. One European country shows lower values from 1950 to 1990.</description>
+      </image>
       <caption><p>Life expectancy time series drawn separately for the four regions classification.</p></caption>
     </figure>
 
-    <p>Features now stand out that were not visible before. A few countries in all three regions other than Europe had much higher life expectancies between 1880 and 1950 than most countries in their regions. There is a country in Europe that had lower values from 1950 to 1990 than other European countries.</p>
+    <p>Features now stand out that were not visible before.  A few countries in all three regions other than Europe had much higher life expectancies between 1880 and 1950 than most countries in their regions.  There is a country in Europe that had lower values from 1950 to 1990 than other European countries.</p>
+
+    <p>Finding the countries with the top values in each of the three other regions in 1900 picks out Australia and New Zealand in Asia (so it is not surprising that they have very different patterns), Seychelles in Africa, and, again unsurprisingly, the USA and Canada in the Americas.  The European country with lowest values for many years after 1950 was Turkey.</p>
+
+    <p>It would be useful to know how big and comparable the regions are.  The numbers of countries in each region in 2016 are shown in Figure <xref ref="fig-reg4"/>.</p>
 
     <figure xml:id="fig-reg4">
-      <image source="images/reg4-1.png"/>
+      <image source="images/reg4-1.png">
+        <description>Bar chart showing the number of countries in each of the four Gapminder regions in 2016, ordered by count. Africa has the most countries, followed by Asia, the Americas, and Europe.</description>
+      </image>
       <caption><p>Numbers of countries in each of the four regions, ordered by the numbers.</p></caption>
     </figure>
+
+    <p>The numbers are not too far apart, but population data would provide more information on size.  This is covered next.</p>
 
     <subsection xml:id="sec-gapm3-size">
       <title>Taking account of country size</title>
 
-      <p>Population data are also available from the Gapminder website and these can be merged with the life expectancy data. The sizes of the four regions by total population in 2016 are shown in Figure @ref(fig-reg4pop).</p>
+      <p>Population data are also available from the Gapminder website and these have been downloaded and merged with the life expectancy data.  The sizes of the four regions by total population in 2016 are shown in Figure <xref ref="fig-reg4pop"/>.  The regions are ordered by population.  This paints a different picture.  Asia had more population in 2016 than the other three regions combined.</p>
 
       <figure xml:id="fig-reg4pop">
-        <image source="images/reg4pop-1.png"/>
+        <image source="images/reg4pop-1.png">
+          <description>Bar chart showing total population in millions for each of the four Gapminder regions in 2016, ordered by population. Asia's bar is by far the tallest, exceeding the combined total of Africa, the Americas, and Europe.</description>
+        </image>
         <caption><p>Total populations for each of the four regions.</p></caption>
       </figure>
 
-      <p>Up till now, time-series graphics in this chapter have treated each country equally. Two other approaches are possible: select countries by population size, or aggregate across regions using population by year as weights.</p>
+      <p>Up till now the time series graphics in this chapter have treated each country displayed equally.  Gapminder itself (<xref ref="rosling-2013"/>) makes much use of bubble charts to additionally show the sizes of countries in its scatterplots.  That would not work well for time series, which is why Gapminder uses animation.  Two other approaches are possible.  Countries could be selected by population size or the data could be aggregated across regions using population data by year as weights.</p>
+
+      <p>The first approach is shown in Figure <xref ref="fig-letop6"/>.  Life expectancies for the six countries with a population of over <m>200</m> million in 2016 are shown.</p>
 
       <figure xml:id="fig-letop6">
-        <image source="images/LEtop6-1.png"/>
+        <image source="images/LEtop6-1.png">
+          <description>Line plot of life expectancy time series from 1800 to 2016 for the six most populous countries in 2016 (China, India, United States, Indonesia, Brazil, Pakistan), each line coloured differently and labelled at the right end. The overall upward trend is visible, along with individual dips corresponding to wars and disasters in specific countries.</description>
+        </image>
         <caption><p>Life expectancy time series for the six biggest countries in 2016.</p></caption>
       </figure>
 
+      <p>As with earlier graphics, the overall trend of rising life expectancies can be seen, mainly during the second half of the 20th century, and the effects of wars and other disasters on individual countries.  These would be more visible if each series was drawn separately.  That has the further advantage of being able to use the width of the line to represent the population in 2016 (Figure <xref ref="fig-lefacet6"/>).</p>
+
       <figure xml:id="fig-lefacet6">
-        <image source="images/LEfacet6-1.png"/>
+        <image source="images/LEfacet6-1.png">
+          <description>Six-panel faceted plot of life expectancy time series for the six most populous countries in 2016, arranged in three rows of two panels. Each country's line width is scaled proportionally to its 2016 population, so China and India have notably thicker lines. Individual events such as the Great Leap Forward famine in China and Pakistan's independence in 1947 are visible as dips.</description>
+        </image>
         <caption><p>Life expectancies for the six biggest countries with line widths scaled by their 2016 populations.</p></caption>
       </figure>
 
+      <p>There is a disadvantage of incorporating population size.  China and India are so much bigger that the finer details of their series are lost, although six major falls in Chinese life expectancy stand out.  All six countries suffered from the Spanish flu in 1918, Brazil least of all.  Pakistan suffered dramatically in 1947 after they gained independence from Britain.  Their border conflict with India after partition had a much greater relative effect on them than on India.</p>
+
+      <p>These six countries actually accounted for a large share of the total world population in 2016.  It is interesting to see how that changed over time, cf. Figure <xref ref="fig-letop6p"/>.  If the nineteenth century population figures for China are to be believed, if indeed any of the population figures from that period are to be believed, China used to be relatively far bigger!</p>
+
       <figure xml:id="fig-letop6p">
-        <image source="images/LEtop6p-1.png"/>
+        <image source="images/LEtop6p-1.png">
+          <description>Line plot showing the proportion of the world population from 1800 to 2016 made up by each of the six most populous countries in 2016, with each country's line coloured differently and labelled at the right end. China's share was very large in the 19th century and has gradually declined, while India's share has grown. The other four countries have smaller and relatively stable shares.</description>
+        </image>
         <caption><p>Proportion of the world population over time made up by the six biggest countries in 2016.</p></caption>
       </figure>
     </subsection>
@@ -108,29 +154,29 @@
 
   <section xml:id="sec-gapm4">
     <title>Checking what is in the data</title>
-    <p>The life expectancy at birth data are provided by Gapminder for 187 countries for the years 1800 to 2016. UN forecasts for 2017 to 2100 are also included. Merging files reveals a few country-name and completeness mismatches; North Macedonia naming is one example and several sparse small-country series were excluded from most plots.</p>
+    <p>The life expectancy at birth data are provided by Gapminder for <m>187</m> countries for the years 1800 to 2016.  UN forecasts for the years 2017 to 2100 are also included.  Gapminder offers a separate file of countries by regions with groupings into <m>4</m>, <m>6</m> or <m>8</m> regions.  Merging the two files reveals that there are <m>11</m> countries in the region file with no corresponding life expectancy data.  <m>10</m> of these are small areas (including the Holy See and Tuvalu) and one is Macedonia FYR.  It turned out this is called North Macedonia in the life expectancy file and the name North Macedonia has been used.  Checking for completeness of the data showed that three further small countries (Andorra, Dominica, Marshall Islands) had some life expectancy data, but not for the years 1800 to 1969 and they were excluded from most of the plots.</p>
   </section>
 
   <section xml:id="sec-gapm5">
     <title>The importance of data definitions</title>
-    <p>Gapminder defines life expectancy at birth as the average number of years a newborn child would live if current mortality patterns were to stay the same. Comparing values assumes definitions were applied consistently and that data collection/reporting were standardised. Older data are likely to be less reliable and more uncertain.</p>
-    <p>Comparing countries over time also assumes countries remained the same. This is not true historically, and border changes matter.</p>
+    <p>Gapminder defines life expectancy at birth as the average number of years a newborn child would live if current mortality patterns were to stay the same.  In comparing values for different countries over time, the assumption is made that the estimates for each country for each year have been prepared in the same way, that definitions have been applied consistently, and that data collection and reporting have been standardised.  Older data are likely to be less reliable and more uncertain.  Infant mortality rates have dropped substantially, even in more recent times, having a strong positive effect on life expectancy at birth.</p>
+    <p>Comparing countries over time also assumes that the countries have remained the same.  This is definitely not true, as Gapminder points out.  They make the default assumption that borders have always been as they are now.  (Their webpage includes an instructive video of how borders have changed since 1800.)  Examples of large changes include Germany, the countries in the former Soviet Union, and the Indian subcontinent.</p>
   </section>
 
   <section xml:id="sec-gapm6">
     <title>Discussion</title>
-    <p>Gapminder offers a lot more data than has been studied here. Graphics help bring information out and help present it to others. Analyses can quickly get complicated, showing that graphics can be more difficult to work with than might be expected.</p>
-    <p>In a study reported by @tonnessen:2020, schoolchildren using Gapminder faced several difficulties, mostly because they lacked sufficient knowledge and experience with the software and with that type of graphical display.</p>
-    <p><em>Answers</em> Life expectancy has improved dramatically, with some interruptions, over the last one hundred years, particularly for Western nations. Other countries have caught up a lot, but still lag behind. Data for the 19th century are incomplete and suspiciously constant.</p>
-    <p><em>Further questions</em> Life expectancy is one of hundreds of indicators available from Gapminder, covering health, education, environment, and more.</p>
+    <p>Gapminder offers a lot more data than has been studied here.  Graphics help bring the information out and help present it to others.  The time series plots in this chapter have analysed just one variable, life expectancy at birth.  If scatterplots are drawn, as Hans Rosling often did, and all the options available in the Gapminder software are used, two or more variables can be displayed.  Analyses can quickly get very complicated, which just shows that graphics can be more difficult to work with than might be expected.</p>
+    <p>In a study reported by <xref ref="tonnessen-2020"/>, eighteen-year old schoolchildren were observed using Gapminder to carry out tasks set by their teacher.  The researcher noticed several difficulties the participants faced, mostly because they did not have enough knowledge and experience of the software or with that kind of graphical display.  The assumption that graphics are easy to understand is an easy, if mistaken, one to make.</p>
+    <p><em>Answers</em> Life expectancy has improved dramatically, with some interruptions, over the last one hundred years, particularly for Western nations.  Other countries have caught up a lot, but still lag behind.  Data for the 19th century is incomplete and suspiciously constant.</p>
+    <p><em>Further questions</em> Life expectancy is one of hundreds of indicators available from Gapminder, covering not only health, but education, environment and many other areas.  There is an unlimited number of investigations that could be carried out.</p>
 
     <subsection xml:id="sec-gapm-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>One graphic is not enough. Different versions of the same graphic provide more information.</p></li>
-        <li><p>Graphics show information directly that analytic methods cannot find.</p></li>
-        <li><p>Faceting picks out differences within groups.</p></li>
-        <li><p>Unpolished graphics can still reveal important information.</p></li>
+        <li><p>One graphic is not enough.  Different versions of the same graphic provide more information. (Figures <xref ref="fig-leyr"/> and <xref ref="fig-lef4"/>)</p></li>
+        <li><p>Graphics show information directly that analytic methods cannot find. (Figures <xref ref="fig-le2"/> and <xref ref="fig-le3"/>)</p></li>
+        <li><p>Faceting picks out differences within groups. (Figure <xref ref="fig-lef4"/>)</p></li>
+        <li><p>Unpolished graphics can still reveal important information. (Figure <xref ref="fig-leyr"/>)</p></li>
       </ul>
     </subsection>
   </section>

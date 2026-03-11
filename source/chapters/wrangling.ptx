@@ -9,7 +9,7 @@
         blinding flash of glorious intuition, but by the shoddy, untidy process halfway between the two by which one
         usually gets to know things."
       </p>
-      <p>--- Margery Allingham, <em>Death of a Ghost</em></p>
+      <p>--- Margery Allingham, <pubtitle>Death of a Ghost</pubtitle></p>
     </blockquote>
   </introduction>
 
@@ -17,9 +17,18 @@
     <title>Data wrangling: what and why</title>
 
     <p>
-      Data wrangling covers cleaning, organizing, and restructuring data for analysis. Real datasets almost never
-      arrive in analysis-ready form and typically require iterative checking, correction, transformation, and
-      aggregation.
+      Data wrangling covers all the work put into cleaning, organising, and restructuring data. Few datasets arrive
+      perfectly formed in an ideal shape&#8212;other than datasets found in textbooks. They have to be checked
+      (correcting or excluding cases) and reorganised (reformatting, transforming, and restructuring them). A
+      detailed example is described in @amal:2022. In-depth studies require a range of analyses, involving
+      grouping, subsetting, and aggregating datasets.
+    </p>
+
+    <p>
+      Data wrangling takes time and effort. Every dataset with problems has different problems. Sometimes they are
+      immediately obvious, sometimes they only become apparent during analysis. There are many, many ways of
+      restructuring datasets. Some will be better than others. It will depend on the particular dataset and the
+      reasons for analysing it.
     </p>
   </section>
 
@@ -29,33 +38,137 @@
     <subsection xml:id="sec-wrang-errors">
       <title>Errors, typos, outliers, missing values</title>
       <p>
-        Errors can be obvious, emerge from graphics, or appear only after deeper analysis. Missing values may be coded
-        inconsistently and require explicit recoding before reliable work is possible.
+        Some errors are obvious (e.g., impossible values like diamonds with zero dimensions in the Diamonds
+        chapter), some become visible thanks to graphics displays (such as the diamond outliers observed in a
+        scatterplot), some emerge after analyses. The Olympics dataset had different names for the same event at
+        different Olympic Games, as uncovered by a plot of event names. The human spaceflight dataset recorded
+        different times for people on the same mission and had a few other data issues. Amongst the chess players
+        with FIDE ratings in 2015 there were supposedly born in 1900. These errors were doubtless due to a 00
+        coding used somewhere in the original data submission. The corresponding ages were marked as NA, a
+        standard code for a missing value.
+      </p>
+      <p>
+        Often errors can be corrected. Sometimes they can be discarded as definitely wrong. Ideally there are not
+        many of them. Whether whole cases should be excluded if some data are in error or missing depends on how
+        the data are used. For small datasets it can be important to have exactly the same cases in each plot; for
+        larger datasets this is less critical.
+      </p>
+      <p>
+        Missing values may be recorded with different codings. The Annenberg survey data used "998" for "Don't
+        know" and "999" for "Refused". In the movie dataset, some missing values were recorded as "\N".
       </p>
     </subsection>
 
     <subsection xml:id="sec-wrang-transform-combine">
       <title>Transforming and combining variables</title>
+
       <p>
-        Transformations can expose structure and improve comparability; combining variables can reveal relationships
-        not visible in single-variable views. Standardization is especially important for multi-variable displays like
-        parallel coordinate plots.
+        Variable transformations can help to pick out individual data features. Standardising variables makes
+        distributional comparisons across variables possible. Combining variables can reveal more complex
+        structures.
+      </p>
+
+      <p>
+        Variables may be transformed onto alternative scales or combined with other variables to form new ones.
+        The boxplot of movie runtimes is scaled in weeks instead of minutes to help viewers make sense of the
+        extreme values. Who remembers that 50,000 minutes is around 5 weeks?
+      </p>
+
+      <p>
+        Several transformations were used in the Football Leagues chapter. The main ones were needed to convert
+        game scores into tables of results and league tables. The wrangling was complicated by a number of changes
+        over time: three points for a win instead of two, using goal difference instead of goal average, changes
+        in divisional structure, and, most recently, an incomplete season for two divisions due to Covid. Other
+        transformations included a square root transformation to emphasise higher league positions over lower
+        ones. In the wormcharts of team performances across seasons, cumulative team points were transformed by
+        subtracting the league average at the time to make it easier to compare teams' performances.
+      </p>
+
+      <p>
+        The mission times of individuals on spaceflights were initially plotted on a linear scale, shown again on
+        the left of Figure <xref ref="fig-flighttx"/>. Plotting mission times on a log scale, repeated on the
+        right of Figure <xref ref="fig-flighttx"/>, provided a better view. It also led to adding a more
+        informative vertical scale.
       </p>
 
       <figure xml:id="fig-flighttx">
-        <image source="images/flighttX-1.png"/>
-        <caption><p>Spaceflight mission times on linear and log scales.</p></caption>
+        <image source="images/flighttX-1.png">
+          <description>Two side-by-side plots of individual spaceflight mission times over the years. The left plot uses a linear scale, revealing most missions as a dense band near zero with a few very long missions (the International Space Station era). The right plot uses a log scale, making it much easier to see the structure of mission lengths across all eras.</description>
+        </image>
+        <caption><p>Individual spaceflight mission times over the years, plotted on a linear scale (left) and a logged scale (right).</p></caption>
       </figure>
+
+      <p>
+        Transformations can be used to standardise data to make distributions for different groups or variables
+        more comparable. In the Olympics chapter, performance improvements in athletics events were compared over
+        the years. Figure <xref ref="fig-olyaa"/> shows the percentage changes for track and field events for men
+        and women. Baselines were taken to be the average of gold medal performances at the Olympics from 1996 to
+        2016. For field events gold medal performances tended higher as winning distances became longer and winning
+        heights became higher. For track events gold medal performances tended lower, as winning times got faster.
+        An inverse transformation of the track events data could have been used to make their gold medal
+        performances tend higher too.
+      </p>
 
       <figure xml:id="fig-olyaa">
-        <image source="images/olyAA-1.png"/>
-        <caption><p>Percentage differences in Olympic gold-medal performances versus recent baselines.</p></caption>
+        <image source="images/olyAA-1.png">
+          <description>Plots of percentage differences in gold medal performances in athletics events (track and field) for men and women compared with averages over the last six Games. Field events show mostly positive (upward) trends while track events show negative (downward) trends, reflecting the different direction of improvement for distances vs. times.</description>
+        </image>
+        <caption><p>Percentage differences in gold medal performances in athletics events compared with averages over the last six Games.</p></caption>
       </figure>
 
+      <p>
+        Variables in parallel coordinate plots almost always need to be standardised and there are several ways
+        of doing it. Methods include putting variables individually onto [0,1] scales or normalising them by using
+        the mean and standard deviation or by using robust statistics. There are examples in the Darwin's Finches
+        and Palmer Penguins chapters, where the transformations of the continuous variables are to [0,1] scales.
+      </p>
+
+      <p>
+        The decathlon provides an example where special transformations are used. The current scoring system,
+        introduced in 1984, converts performances in the ten events to points using a different three-parameter
+        formula for each event (@IAAF:2001). As equal points are intended to reflect equal performances, no
+        further standardisation is needed in principle.
+      </p>
+
+      <p>
+        Categorical variables may be reported as numbers instead of text and it is worth making the effort to
+        convert them to meaningful labels. Transforming the order of levels of a categorical variable from a
+        default such as alphabetic is always sensible (and is discussed in the Sort Order chapter). Occasionally
+        numeric variables are assumed by software to be character variables, usually because the data file has a
+        text error, and they have to be converted to numeric after fixing the text error. Software can often make
+        good guesses about data characteristics, but you need to check.
+      </p>
+
+      <p>
+        Date and time information need special handling in software and almost certainly have to be transformed
+        first. Newcomb's estimates of the speed of light are displayed by experimental order and by date. The
+        differences are important for understanding the data. The two plots are shown again in Figure
+        <xref ref="fig-newcty"/> below. The dates taken as text are from Newcomb's paper (@newcomb:1891) and were
+        transformed to a special date format so that the R software could scale them appropriately.
+      </p>
+
       <figure xml:id="fig-newcty">
-        <image source="images/newctY-1.png"/>
-        <caption><p>Newcomb speed-of-light estimates by sequence (left) and by date (right).</p></caption>
+        <image source="images/newctY-1.png">
+          <description>Two side-by-side plots of Newcomb's estimates of the speed of light: the left panel shows measurements plotted in experimental order, while the right panel shows the same data plotted by date. The date-ordered plot reveals temporal structure in the data, including systematic differences between measurement sessions, that is not visible in the order plot.</description>
+        </image>
+        <caption><p>Newcomb's estimates of the speed of light, plotted in order (left) and by date (right).</p></caption>
       </figure>
+
+      <p>
+        In the Deer chapter two datasets of half-hourly data over 10 years were analysed. Investigating patterns
+        across days, months, and years required combining the textual date and time information and converting it
+        into dates and times R could deal with.
+      </p>
+
+      <p>
+        Spatial datasets also require special treatment. They may be reported in any one of a large number of
+        possible coordinate reference systems and it is essential in any study to convert all the spatial data to
+        the same system. Much work has gone into transforming between these systems and the current state of play
+        is summarised in @bivand:2020. One example involved adding city locations to the maps of France. A
+        further complication in the Bertin chapter was converting a modern shape file of the departments of
+        France to one matching the form in 1954. Finally cartograms may be used to take account of differences
+        between areas. The spatial transformations applied require complex iterative methods.
+      </p>
     </subsection>
   </section>
 
@@ -63,22 +176,84 @@
     <title>Restructuring: subsetting, grouping, aggregating</title>
 
     <p>
-      Subsetting, grouping, and aggregation generate different analytical views and summaries. Hierarchical structures
-      are manageable, but multiple cross-cutting factors create many valid aggregation choices.
+      Some subsets are investigated more than others. It depends on the aims of the study. Subsetting involves
+      selecting the relevant variables and cases. Large datasets can be heterogeneous with cases being of many
+      distinct kinds that should be analysed separately. Subsetting overlaps with excluding errors, outliers or
+      other problematic cases.
+    </p>
+
+    <p>
+      In studying how gold medal performances had changed over the years at the Olympics, only the subset of
+      athletics and swimming events were considered. Weightlifting events could have been studied too, but many
+      Olympic disciplines&#8212;e.g., gymnastics, boxing, diving&#8212;are not readily comparable over time.
+    </p>
+
+    <p>
+      Subsetting selects part of a dataset to be analysed. Grouping splits a dataset or subset into groups to be
+      compared. In the Psoriasis chapter results for two groups, those getting a treatment and those receiving a
+      placebo, were compared. In the Darwin's Finches chapter species were compared on one island, and one
+      species was compared across different islands. In the Palmer Penguins chapter three species of penguins
+      were compared. In the Swimming chapter subsets of swimming performances were chosen and then compared by
+      stroke, distance, and swimmer's sex. In the Comrades Marathon dataset the numbers running were grouped by
+      sex and age and compared over time in Figure <xref ref="fig-comcatsx"/>.
     </p>
 
     <figure xml:id="fig-comcatsx">
-      <image source="images/comCatsX-1.png"/>
-      <caption><p>Comrades Marathon finishers by age group and sex over time.</p></caption>
+      <image source="images/comCatsX-1.png">
+        <description>A plot showing numbers of finishers of the Comrades Ultramarathon by age group and sex from 1975 to 2019. Separate lines or areas show different age/sex groups, revealing how participation patterns have changed over the decades, with particularly strong growth in female participation and older age groups.</description>
+      </image>
+      <caption><p>Numbers of finishers of the Comrades Ultramarathon by age group and sex from 1975 to 2019.</p></caption>
     </figure>
+
+    <p>
+      Statistics are summaries based on aggregations. They depend on how data have been subset, grouped or
+      aggregated. In the analysis of the 2021 German election, results could be studied by individual
+      constituency, by Bundesland, by groups of Bundesl&#228;nder (such as the former East and West), or by the
+      whole country. It is relatively easy to keep track of such hierarchical or nested structures. If there are
+      several categorical variables with no hierarchical structure, as in the study of fuel efficiency of cars in
+      the US, there are many possible summarising levels. Just considering two of the classifying variables could
+      lead to statistics for vehicle classes within manufacturer or for manufacturers within vehicle class or for
+      vehicle classes and manufacturers.
+    </p>
+
+    <p>
+      Further flexibility arises when there are variables with many categories. Analyses may be simplified by
+      combining smaller categories, as was done in the Chess, Euros, US Fuel, Titanic, and German Election
+      chapters. Different analysts will have different opinions on how small small should be.
+    </p>
   </section>
 
   <section xml:id="sec-wrang-naming">
     <title>Naming, renaming and reclassifying</title>
 
     <p>
-      Wrangling creates many intermediate datasets and derived variables. Clear naming, explicit recoding, and careful
-      type handling reduce mistakes and make workflows easier to audit and maintain.
+      <em>Datasets</em>
+    </p>
+
+    <p>
+      Merging, subsetting, grouping, aggregating all create new versions of a dataset. Transforming variables and
+      creating new ones do too. It is helpful to name and store these new datasets if they are going to be used
+      more than once. This can lead to a large number of stored objects (the Football Leagues chapter had over
+      thirty), but provides structure for analyses&#8212;assuming supportive naming conventions are used.
+    </p>
+
+    <p>
+      <em>Variables and categories</em>
+    </p>
+
+    <p>
+      Variables may have abbreviated names when informative ones would be more helpful, for instance when
+      software automatically uses names on plots and reports. Ideally, derived variables should be given names
+      that reflect what they represent, so that it is easier to recognise what they measure. Software may
+      classify numeric variables incorrectly if text is found amongst their values (perhaps notes or special codes
+      like currency symbols). Exchanging data files between countries using decimal points and those using decimal
+      commas also requires wrangling. It is common to have to reclassify variables as numeric after text has been
+      replaced or removed.
+    </p>
+
+    <p>
+      Levels of categorical variables may be provided as numbers. It is better they be given meaningful names
+      (which also ensures that the variables are not classified as numeric).
     </p>
   </section>
 
@@ -86,50 +261,188 @@
     <title>Wrangling for layered graphics</title>
 
     <p>
-      Layered graphics benefit from explicit data preparation for each layer. Different layers can use full data,
-      subsets, summaries, models, or related datasets, provided scales are aligned.
+      @wickham:2016 emphasised the advantages of thinking of data graphics as being built up of layers, one on
+      top of the other, an idea that has been used in cartography for a long time. Sometimes the layers are all
+      drawn using the same dataset, sometimes each layer is drawn with a different dataset. In the latter case,
+      the datasets may be subsets, aggregations, or even models derived from one main dataset. Constructing them
+      is part of data wrangling. A simple example plotting the distribution of bill lengths for the Ad&#233;lie
+      penguins shows the idea in Figure <xref ref="fig-histlayers"/>.
     </p>
 
     <figure xml:id="fig-histlayers">
-      <image source="images/histlayers-1.png"/>
-      <caption><p>Layer-by-layer build-up of a histogram with density overlays.</p></caption>
-    </figure>
-
-    <figure xml:id="fig-histlayers2">
-      <image source="images/histlayers2-1.png"/>
-      <caption><p>Histogram with two superimposed density estimates.</p></caption>
+      <image source="images/histlayers-1.png">
+        <description>Six panels showing the layer-by-layer construction of a histogram of Ad&#233;lie penguin bill lengths with two superimposed density estimates. The first layer (top left) is just the background. The second adds axes and an x-axis label. The third adds a histogram with density scaling. The fourth adds a red density curve. The fifth adds a blue density curve. The sixth adds a plot title.</description>
+      </image>
+      <caption><p>Layers building up to a histogram of the bill lengths of Ad&#233;lie penguins with two superimposed density estimates.</p></caption>
     </figure>
 
     <p>
-      Layer order matters: background and guides first, then data and model summaries, then annotations. Transparency,
-      line weight, and ordering all affect interpretability.
+      The advantages of a layered structure are that it is straightforward to add and remove layers to see what
+      impact they have. It is clear where formatting options should be defined (such as binwidths for histograms
+      or colours for points and lines). An additional advantage lies in being able to use different datasets in
+      different layers. You might want to only use a subset in one layer, you might want to use data from a
+      different year in another layer, you might want to use quite different, but related datasets. The only
+      condition is that all fit in the scale limits of the plot. Layered structures offer flexible and explicit
+      support.
+    </p>
+
+    <p>
+      Decoding graphics is easier when layers are clearly and separately defined. You can examine each in turn to
+      study how it might be interpreted and what it contributes to the plot. It might emphasise information
+      already present or add additional information. Reading code for plots made by others is simpler, as the
+      code can be deciphered one layer at a time.
+    </p>
+
+    <p>
+      <em>Types of layers</em>
+    </p>
+
+    <p>
+      A plot's layers are of different types and the order the layers are drawn makes a difference to how a plot
+      looks. Generally, the background layers are drawn first, then the data and summarising layers, and finally
+      the guide and text layers. Filled areas, for instance with a histogram or a boxplot, should be drawn before
+      points and lines to avoid hiding them. Using transparency can help. The effects of drawing colours on top
+      of one another, when objects in one layer are directly above objects in another, has to be checked.
+    </p>
+
+    <p>
+      In Figure <xref ref="fig-histlayers"/> the two density estimates cover up the histogram details in the
+      final plot (which suggests that they are a fairly good fit). Similarly, the second, rougher estimate covers
+      up the first, although the differences can still be seen. A bigger version of the plot would be better, as
+      in Figure <xref ref="fig-histlayers2"/>. Now all the details can be seen. Graphics need to be large enough
+      to display the information in them.
+    </p>
+
+    <figure xml:id="fig-histlayers2">
+      <image source="images/histlayers2-1.png">
+        <description>A larger version of the final layer showing a histogram of Ad&#233;lie penguin bill lengths with two superimposed density estimates (red and blue curves). The larger size allows all details to be seen clearly: the histogram bars, the smoother red density curve, and the rougher blue density curve.</description>
+      </image>
+      <caption><p>Histogram of the bill lengths of Ad&#233;lie penguins with two superimposed density estimates.</p></caption>
+    </figure>
+
+    <p>
+      <em>Background layers</em>
+    </p>
+
+    <p>
+      The background colour of graphics in the past was usually white, as if they were drawn on a blank page.
+      Nowadays background shadings of your own choice can be used or even a mixture by drawing layers on top of
+      one another. Combinations of colours, transparency, and shapes can produce distinctive and unique
+      patterns&#8212;if that is what is wanted. One muted background layer may suffice.
+    </p>
+
+    <p>
+      Axes, scales and gridlines frame the data. Axes and scales are almost always needed for data graphics (the
+      main exception being network displays). When variables are specified, axes and their scales are drawn on
+      top of any background colours and may include major and minor gridlines.
+    </p>
+
+    <p>
+      <em>Data layers</em>
+    </p>
+
+    <p>
+      Data layers are drawn on top of the background layers. They may use points or symbols, lines, bars or
+      other area shapes. There are many variants and any software should offer a wide range. Amongst other options
+      there are horizontal lines, vertical lines, lines connecting points directly, using a step or in a path.
+      There can be multiple layers of data types.
+    </p>
+
+    <p>
+      There can also be multiple layers of data using different datasets. Figure <xref ref="fig-socdfx"/> uses
+      data from three different leagues over three overlapping but different time ranges. The scale limits must
+      be set in the first data layer to ensure that all data are shown.
     </p>
 
     <figure xml:id="fig-socdfx">
-      <image source="images/socDfX-1.png"/>
-      <caption><p>Draw-rate series for top football tiers in England, Spain, and Italy.</p></caption>
+      <image source="images/socDfX-1.png">
+        <description>A line plot showing rates of draws for the top football tiers in Italy (dark blue) since 1934, England (light blue) since 1888, and Spain (red) since 1928. The three series have overlapping but different time ranges and show both common trends and country-specific patterns in draw rates over time.</description>
+      </image>
+      <caption><p>Rates of draws for the top tiers in Italy (dark blue) since 1934, England (light blue) since 1888, and Spain (red) since 1928.</p></caption>
     </figure>
+
+    <p>
+      <em>Summarising, modelling, and uncertainty layers</em>
+    </p>
+
+    <p>
+      Data may be summarised using statistics or models. There could be several layers of such displays. On top
+      of point data there might be a layer of group means and layers for linear fit and smoothed models. Data may
+      be recorded as estimates with measures of variability. The corresponding uncertainty can be represented by
+      error bars. Model uncertainty may be represented in a graphic by ribbons or bands around the model.
+      Examples include chess ratings by age, age by year of mission of astronauts (Figure
+      <xref ref="fig-astgy"/>), and Titanic survival rates.
+    </p>
 
     <figure xml:id="fig-astgy">
-      <image source="images/astgY-1.png"/>
-      <caption><p>Age by mission year with smooths and confidence intervals.</p></caption>
+      <image source="images/astgY-1.png">
+        <description>A scatterplot of astronaut age by year of space flight, coloured by sex (purple for females, green for males), with smooth curves and their confidence intervals for each sex. The plot shows that both male and female astronauts have tended to be older over time, with females consistently younger on average than males in the early decades.</description>
+      </image>
+      <caption><p>Scatterplot of age by year of space flight coloured by sex, with smooths and their confidence intervals.</p></caption>
     </figure>
 
+    <p>
+      Data layers and summarising layers overlap to some extent. Histograms and boxplots summarise data, but are
+      best thought of as data layers.
+    </p>
+
+    <p>
+      <em>Guide and text layers</em>
+    </p>
+
+    <p>
+      Guides can be added in additional layers: boundary lines, borders separating groups, plot areas coloured to
+      differentiate them, arrows to point to particular features. Text layers can be drawn to add titles,
+      legends, annotations, labels for points or lines.
+    </p>
+
+    <p>
+      Layering is effective for faceted data when the whole dataset is drawn in a muted colour in each facet
+      first and each facet's subset is drawn on top in colour, ghostplotting. Figure <xref ref="fig-flightx"/>
+      is such an example:
+    </p>
+
     <figure xml:id="fig-flightx">
-      <image source="images/flightX-1.png"/>
-      <caption><p>Logged spaceflight mission times by year and nationality.</p></caption>
+      <image source="images/flightX-1.png">
+        <description>Faceted plots of logged spaceflight mission times of individuals by year of flight, with one panel per nationality. In each panel the complete dataset is drawn in light grey (ghostplotting) with the focal nationality highlighted in colour. This makes it easy to see each nationality's pattern relative to the overall distribution.</description>
+      </image>
+      <caption><p>Logged spaceflight mission times of individuals by year of flight by nationality.</p></caption>
     </figure>
 
     <subsection xml:id="sec-wrang-wormchart-layers">
       <title>The layers of a league wormchart</title>
+
+      <p>
+        Figure <xref ref="fig-worm54"/> is a wormchart for the English League Championship of 1954&#8211;55,
+        similar to the plots for other seasons in the Football Leagues chapter. There were 22 teams, each playing
+        42 games. There were just 2 points for a win and only two teams were relegated. Chelsea won with the low
+        total of 54 points. At the half-way mark of 21 games, Chelsea were level on points with Cardiff City, who
+        finished 20th. The bottom club, Sheffield Wednesday, had an appalling run in mid-season and would have
+        finished much further adrift had they not surprisingly won three of their last four games.
+      </p>
+
       <figure xml:id="fig-worm54">
-        <image source="images/worm54-1.png"/>
-        <caption><p>Wormchart for the 1954-55 English League Championship season.</p></caption>
+        <image source="images/worm54-1.png">
+          <description>A wormchart for the English League Championship season 1954&#8211;55. Each team's cumulative points minus the league average are plotted across the 42 games of the season. The top four and bottom four teams are highlighted in colour with their names labelled at the right. Chelsea won despite a low total of 54 points; Sheffield Wednesday had a very poor mid-season run.</description>
+        </image>
+        <caption><p>Wormchart for season 1954&#8211;55.</p></caption>
       </figure>
 
+      <p>
+        Figure <xref ref="fig-worm54"/> has eight layers and uses four datasets. Figure
+        <xref ref="fig-wormlayers"/> shows the build-up. There are background layers of colour and axes; a line
+        layer of team performances drawn lightly (using a dataset of all teams); a layer of coloured, thicker
+        lines for the top four and bottom four teams (using the subset of those eight teams); a text layer with
+        the names of all teams (using a subset based on the last day of the season to get the order right); a
+        segment layer connecting each team's name to the end of its line with dots; a coloured text layer for the
+        top four and bottom four teams (using the relevant subset of the previous dataset); a title layer.
+      </p>
+
       <figure xml:id="fig-wormlayers">
-        <image source="images/wormlayers-1.png"/>
-        <caption><p>Layer-by-layer construction of the 1954-55 wormchart.</p></caption>
+        <image source="images/wormlayers-1.png">
+          <description>Eight panels showing the layer-by-layer construction of the 1954&#8211;55 English League Championship wormchart. Starting from an empty background, each panel adds a new layer: axes, faint lines for all teams, coloured thick lines for top and bottom four teams, team name labels, connecting dotted segments, coloured labels for highlighted teams, and finally the title.</description>
+        </image>
+        <caption><p>Layers building up to a wormchart for the 1954&#8211;55 English League Championship.</p></caption>
       </figure>
     </subsection>
   </section>
@@ -140,26 +453,64 @@
     <subsection xml:id="sec-wrang-reading-merging">
       <title>Reading in and merging datasets</title>
       <p>
-        Real projects often combine multiple files and formats. Merging requires robust keys, harmonized codes, and
-        consistent definitions across sources.
+        Datasets come in different shapes, sizes, and formats. Modern software can usually read all of them, but
+        some conversion may be necessary. Spreadsheets offer flexible structures with multiple sheets, and may
+        include background information, annotations, and other non-standard structures. These need special
+        treatment, as with the UN population dataset used in the Chess chapter. Only the first and second sheets
+        were required and the initial lines of the first had to be edited. Spreadsheets can be very useful for
+        initial recording of data because of the notes and background information that can be included. Public
+        organisations often distribute data in spreadsheet format. Journal authors sometimes make their data
+        available in spreadsheets. There are disadvantages. Spreadsheets may include summary data along with case
+        data. Additional text and multi-line headers may be employed. Different versions, subsets, aggregations
+        of a dataset may be provided in individual sheets of a spreadsheet without being linked. In other words,
+        if a data value were to be amended, it would have to be changed separately in each sheet in which it
+        appeared (e.g., the spreadsheet used in the Malaria chapter).
+      </p>
+      <p>
+        If data are needed from more than one dataset, the datasets must usually be merged. The Chess chapter
+        combined the chess ratings dataset with files for country populations, country codings, and regions.
+        The ratings data for two separate years were also merged. Mapped data reveal spatial patterns. Shape
+        files for areas can be merged with data files. This was done in the Bertin, Gay Rights, Titanic, and
+        German Election chapters.
+      </p>
+      <p>
+        In the Democratic Convention 1912 chapter the voting results file was summarised by state and merged with
+        files for the numbers of each state's electoral votes in 1912 and 2020, and with a file for state
+        populations in 2018. The unsummarised data file was also separately merged with a file of estimated
+        times at which the ballots took place.
       </p>
     </subsection>
 
     <subsection xml:id="sec-wrang-reproducibility">
       <title>Reproducibility</title>
       <p>
-        Reproducibility is strongest when both raw data and full wrangling/analysis code are available. Reporting
-        should clearly document reconstruction steps, assumptions, and omissions.
+        For scientific publications it would be ideal to have authors provide code as well as data, both code for
+        their data wrangling and for their analyses. Only base data would have to be made available, as other
+        versions could be reconstructed with the code. This would improve the chances of being able to reproduce
+        study results, providing a record of what had been done. Of course, that record would only be
+        understandable to readers who could follow the coding language.
+      </p>
+      <p>
+        Reproducing published work is easier than it was, but is still not satisfactory, as various surveys in
+        different fields have pointed out (e.g., @gabelica:2022). Two examples arose in this book. In the Facial
+        Recognition chapter numerous tables of percentage success rates of facial recognition software were
+        reported, but the raw data were not made available. Making the reasonable assumption that the underlying
+        results must have been integers, it was possible to reconstruct much of the data from the percentages
+        reported. In the supplementary material to the article on tests for malaria, there was a multi-sheet
+        Excel spreadsheet giving the raw data and the data used in the article's plots and tables. The sheets
+        were not linked and formulae not reported. With a little work the connections could be reconstructed.
+        With other datasets (that were therefore not included in the book) insufficient information was provided
+        or essential details were missing.
       </p>
     </subsection>
 
     <subsection xml:id="sec-wrang-main-points">
       <title>Main points</title>
       <ul>
-        <li><p>Data cleaning continues throughout an investigation, not just at the start.</p></li>
-        <li><p>Subsetting, grouping, and aggregation create many valid analytical views.</p></li>
-        <li><p>Layered data structures support clear and flexible graphic construction.</p></li>
-        <li><p>Wrangling is an essential foundation for trustworthy graphical analysis.</p></li>
+        <li><p>Data cleaning is a continuing process through all of an investigation.</p></li>
+        <li><p>Datasets may be subset, grouped or aggregated in many different ways, providing many different views.</p></li>
+        <li><p>Layers of related data structures are a good way of building graphics.</p></li>
+        <li><p>Wrangling is an essential support for graphical analysis.</p></li>
       </ul>
     </subsection>
   </section>
