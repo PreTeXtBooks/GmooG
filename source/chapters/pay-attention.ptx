@@ -141,7 +141,7 @@
       <p>
         What attention is paid to may be goal-driven (top-down), stimulus-driven (bottom-up) or history-based
         (depending on the viewer's experience). The goal of drawing the map of German election results in
-        <xref ref="fig-btwmapex"/> was to see if there were geographical patterns. The main ones for the CDU, CSU,
+        <xref ref="fig-btwmape"/>, repeated here in <xref ref="fig-btwmapex"/>, was to see if there were geographical patterns. The main ones for the CDU, CSU,
         SPD, and AfD stand out (goal-driven). The smaller constituencies where the Greens did well imply that they
         did well in urban areas and the fact that Die Linke party are in the legend means they must have won seats
         somewhere (stimulus-driven). Political maps give poor representations of party support because they display
@@ -183,7 +183,7 @@
       <p>
         Complex graphics can be difficult to study and understand. Sometimes graphics in scientific articles are
         complex and tightly packed with information because space is limited. Sometimes a complex graphic is just a
-        good summary of complex data, as with <xref ref="fig-palpcp2x"/>.
+        good summary of complex data, as with <xref ref="fig-elecStat2"/> or <xref ref="fig-palpcp2"/>, shown again in <xref ref="fig-palpcp2x"/>.
       </p>
 
       <figure xml:id="fig-palpcp2x">
@@ -207,7 +207,9 @@
       <title>Rewards for paying attention</title>
       <p>
         Paying close attention to graphics can reveal much more information. The Gapminder life expectancy graphic
-        and the movie ratings graphic, both shown in <xref ref="fig-gapmovie"/>, are striking examples.
+        of <xref ref="fig-leyr"/> and <xref ref="fig-movievr"/> for movie ratings, both shown again in
+        <xref ref="fig-gapmovie"/>, are striking examples. <xref ref="fig-candvs2"/> for the 1912 Democratic choice
+        of candidate is another.
       </p>
 
       <figure xml:id="fig-gapmovie">
@@ -253,10 +255,12 @@
 
       <p>
         Background knowledge is also indispensable, whether your own or that of collaborating domain experts. With
-        data by country over time it was necessary to know how countries have changed. With swimming, information on
-        the rules for different strokes, on full body swimsuits, and on the introduction of the butterfly was
-        valuable. Another swimming example, <xref ref="fig-relay400x"/>, concerned the reasons why the best 200
-        times for individuals and relay teams were so different.
+        data by country over time it was necessary to know how countries have changed (e.g.,
+        <xref ref="ch-gapminder"/>, <xref ref="ch-chess"/>, <xref ref="ch-olympics"/>, and
+        <xref ref="ch-euros"/>). With swimming, information on the rules for different strokes, on full body
+        swimsuits, and on the introduction of the butterfly was valuable (<xref ref="ch-swimming"/>). Another
+        swimming example, <xref ref="fig-relay400"/>, repeated here as <xref ref="fig-relay400x"/>, concerned the
+        reasons why the best 200 times for individuals and relay teams were so different.
       </p>
 
       <figure xml:id="fig-relay400x">
@@ -268,10 +272,12 @@
 
       <p>
         Much can be found out about the Olympics on the web, such as stories surrounding particular events, how
-        times were measured, when rules were changed, but you have to look. The web is not always helpful. Going
-        back to original documentation can be, as with the articles by Michelson and Newcomb on their attempts to
-        measure the speed of light, and with getting the full survey from Annenberg that included the gay rights
-        questions. Often dataset owners/maintainers are very helpful.
+        times were measured, when rules were changed (<xref ref="ch-olympics"/>), but you have to look. The web is
+        not always helpful. Going back to original documentation can be, as with the articles by Michelson and
+        Newcomb on their attempts to measure the speed of light (<xref ref="ch-light-speed"/>), and with getting
+        the full survey from Annenberg that included the gay rights questions (<xref ref="ch-gay-rights"/>). Often
+        dataset owners/maintainers are very helpful as happened with <xref ref="ch-us-fuel"/> and
+        <xref ref="ch-comrades-marathon"/>.
       </p>
     </subsection>
 
@@ -300,7 +306,8 @@
       </p>
 
       <p>
-        The peaks in the finishing times for the Comrades marathon in <xref ref="fig-comtimesx"/> are an example.
+        The peaks in the finishing times for the Comrades marathon in <xref ref="fig-comtimes"/>, drawn again in
+        <xref ref="fig-comtimesx"/>, are an example.
         Others have seen similar patterns in other marathon races (<xref ref="marastats-2019"/>).
       </p>
 
@@ -330,12 +337,12 @@
         </li>
         <li>
           <p>Availability bias: rely too much on examples to hand. Data are available on the web for Olympic results
-          that were missing in <xref ref="fig-olyamdx"/>, but discussing the problems is more instructive (and less
-          effort) than solving them in this case.</p>
+          that were missing in <xref ref="fig-olyAmd"/>, shown again here as <xref ref="fig-olyamdx"/>, but
+          discussing the problems is more instructive (and less effort) than solving them in this case.</p>
         </li>
         <li><p>Representativeness bias: use particular examples without taking account of sample size and base rates.
-          Avoid by using spineplots for comparing rates and UpAndDown plots for comparing changes, as in
-          <xref ref="fig-btw23x"/>.</p>
+          Avoid by using spineplots for comparing rates (e.g., in <xref ref="fig-gayGR"/>) and UpAndDown plots for
+          comparing changes, as in <xref ref="fig-btw3"/>, drawn again in <xref ref="fig-btw23x"/>.</p>
         </li>
         <li><p>Perceptual bias: we see what we want to see.</p></li>
       </ul>
@@ -383,23 +390,27 @@
       <p>
         Are the data from a reliable source? Is it known how they were collected, edited, and summarised? Are they
         precise measurements or uncertain estimates? Do the variables mean what you think they do or have they been
-        defined or collected differently?
+        defined or collected differently? All this and more is discussed in <xref ref="ch-provenance"/>.
       </p>
     </subsection>
 
     <subsection xml:id="sec-checking-looking">
       <title>Looking at the numbers</title>
       <p>
-        Do the scales look sensible? Perhaps the minima or maxima look too extreme. Do the data appear to be
-        complete? Perhaps there are gaps in the data or missing categories. Categories that are missing altogether
-        can be difficult to spot. Maybe the data just look wrong.
+        Do the scales look sensible? Perhaps the minima or maxima look too extreme (<xref ref="fig-le2"/> (left) or
+        <xref ref="fig-movierunb"/>). Do the data appear to be complete? Perhaps there are gaps in the data
+        (<xref ref="fig-moviett2"/>, <xref ref="fig-olyAmd"/> or <xref ref="fig-histPrice"/>) or missing
+        categories (<xref ref="fig-olyEg"/> to <xref ref="fig-olyEgS"/>). Categories that are missing altogether
+        can be difficult to spot. Political opinion polls show party support, but not always how many who were asked
+        did not respond. Maybe the data just look wrong, as in <xref ref="fig-difs"/> for differences in spaceflight
+        mission times.
       </p>
       <p>
-        Sometimes there is heaping at particular values, usually due to rounding, sometimes particular values are
-        never recorded. Sometimes all the data have been rounded, so that a continuous measurement appears to be
-        discrete. If you ask people what their height is they will report a rounded, possibly inaccurate number.
-        Better data would be obtained by measuring heights in a uniform way under identical conditions for all
-        (<xref ref="student-1931"/>).
+        Sometimes there is heaping at particular values, usually due to rounding (<xref ref="fig-movierunh"/>),
+        sometimes particular values are never recorded (<xref ref="fig-histPrice"/>). Sometimes all the data have
+        been rounded, so that a continuous measurement appears to be discrete. If you ask people what their height
+        is they will report a rounded, possibly inaccurate number. Better data would be obtained by measuring
+        heights in a uniform way under identical conditions for all (<xref ref="student-1931"/>).
       </p>
     </subsection>
 
@@ -410,10 +421,10 @@
         aspect ratio, and position can strongly influence what can be seen. Graphics can be resized, moved, and
         zoomed in or out. Plot options can be changed: maxima and minima of scales, origin location, histogram
         binwidths, point sizes, colours, and more. Whether some variations are better than others is neither here
-        nor there: the important principle is to check several. <xref ref="fig-movhists"/> displays a default
-        histogram for the movie runtimes and the one used in the chapter, including only films of 3 hours or under
-        and using a binwidth of 1 minute. Far more graphics were drawn for each case study than are included in the
-        book.
+        nor there: the important principle is to check several. <xref ref="fig-gaysccs"/> shows an example for the
+        gay rights data. <xref ref="fig-movhists"/> displays a default histogram for the movie runtimes and the one
+        used in the chapter, <xref ref="fig-movierunh"/>, including only films of 3 hours or under and using a
+        binwidth of 1 minute. Far more graphics were drawn for each case study than are included in the book.
       </p>
 
       <figure xml:id="fig-movhists">
@@ -428,8 +439,10 @@
       <title>Varying plot forms</title>
       <p>
         Drawing different kinds of plots of the same variable(s) provides new insights: a boxplot or density
-        estimate instead of a histogram, scatterplots by group (faceting) instead of a single scatterplot, a
-        doubledecker plot instead of stacked barcharts.
+        estimate instead of a histogram (<xref ref="fig-histnewcX"/> to <xref ref="fig-densnewcX"/> or
+        <xref ref="fig-histElo"/> and <xref ref="fig-boxElo"/>), scatterplots by group (faceting) instead of a
+        single scatterplot (<xref ref="fig-ler4"/> and <xref ref="fig-lef4"/>), a doubledecker plot instead of
+        stacked barcharts (<xref ref="fig-gayGR"/>).
       </p>
     </subsection>
 
@@ -440,7 +453,9 @@
         relationship. There are almost always graphical ways of visually assessing the results of statistical
         models, but there are not always statistical models that can evaluate ideas derived from graphics. If there
         are, they should be used. If it looks as if there is a nonlinear relationship between two variables in a
-        scatterplot, then a spline model could be fit. Both are drawn here again in <xref ref="fig-chesssocsm"/>.
+        scatterplot, then a spline model could be fit. This was used for modelling trend in
+        <xref ref="fig-AgeRatingSmooth"/> for ratings of chess players and <xref ref="fig-socDf"/> for proportions
+        of draws in different football leagues. Both are drawn here again in <xref ref="fig-chesssocsm"/>.
       </p>
 
       <figure xml:id="fig-chesssocsm">
@@ -459,7 +474,8 @@
 
       <p>
         If a spineplot suggests two categorical variables are not independent, a chi-squared test could be used.
-        More complicated data could be examined using logistic regression.
+        More complicated data, such as the survival rates on the Titanic in <xref ref="fig-titanboth"/>, could be
+        examined using logistic regression.
       </p>
       <p> Examples where statistical models are not so readily available include assessing possible outliers in a scatterplot and whether there are multiple modes in a histogram.</p>
     </subsection>
@@ -468,8 +484,9 @@
       <title>Checking consequences</title>
       <p>
         Internal checking asks whether patterns found across the whole dataset also occur in subgroups. The
-        surprising peak in the chess ratings at 2000 was explained by comparing ratings for active and inactive
-        players, shown here again as <xref ref="fig-histelox"/>.
+        surprising peak in the chess ratings at 2000 shown in <xref ref="fig-histElo"/> was explained by comparing
+        ratings for active and inactive players in <xref ref="fig-hist2Elo"/>, shown here again as
+        <xref ref="fig-histelox"/>.
       </p>
 
       <figure xml:id="fig-histelox">
@@ -479,15 +496,16 @@
         <caption><p>Ratings of active and inactive chess players in 2020.</p></caption>
       </figure>
 
-     <p>The decline in survival rate across the Titanic’s three passenger classes applied to women, but not to men (Figures TODO). Conclusions might have implications for other variables and it is useful to see if patterns are consistent across a dataset.</p>
+     <p>The decline in survival rate across the Titanic’s three passenger classes applied to women, but not to men (<xref ref="fig-titancrew"/> and <xref ref="fig-titanpass"/>). Conclusions might have implications for other variables and it is useful to see if patterns are consistent across a dataset.</p>
 
       <p>
         External checking compares with related datasets where relevant. If relevant data can be found, compare
-        results with other related datasets, as in <xref ref="fig-btwdotvx"/>.
+        results with other related datasets (<xref ref="sec1912Dem2"/>, <xref ref="secChess4"/> or
+        <xref ref="fig-btwdotv"/>, drawn again here as <xref ref="fig-btwdotvx"/>).
       </p>
 
       <figure xml:id="fig-btwdotvx">
-        <image source="../../pngImages/btwDotV-1.png">
+        <image source="images/btwDotV-1.png">
           <description>Dot plot comparing seat-winning percentages by party in Germany 2021 and the UK 2019, showing similarities and differences in proportional representation between the two electoral systems.</description>
         </image>
         <caption><p>Seat-winning percentages by party in Germany 2021 and UK 2019.</p></caption>
@@ -498,9 +516,17 @@
     <subsection xml:id="sec-checking-context">
       <title>Context</title>
       <p>
-        Results have to make sense and be interpreted in context. A pattern of points in a scatterplot will be judged in different ways for different datasets or different variables (Figure 33.1). Errors like negative heights or zero dimensions (Figure 11.1) are obvious. Weekly patterns in sightings by birdwatchers or in disease reporting may need to be checked. More birdwatchers may be out and about at weekends and reporting of diseases may be influenced by media attention. Differences in mortality rates between countries or over time may be due to definitions, conditions or treatments as Covid pandemic statistics have illustrated.
+        Results have to make sense and be interpreted in context. A pattern of points in a scatterplot will be
+        judged in different ways for different datasets or different variables (<xref ref="fig-s100mscat"/>).
+        Errors like negative heights or zero dimensions (<xref ref="fig-histLen"/>) are obvious. Weekly patterns
+        in sightings by birdwatchers or in disease reporting may need to be checked. More birdwatchers may be out
+        and about at weekends and reporting of diseases may be influenced by media attention. Differences in
+        mortality rates between countries or over time may be due to definitions, conditions or treatments as Covid
+        pandemic statistics have illustrated.
       </p>
-      <p>In comparing opinions on same-sex marriage from Figure 9.9, redrawn here as Figure 32.14, it is well to remember that the questions were about different situations, that they were framed differently, and that only a third of the sample were asked the state question.
+      <p>In comparing opinions on same-sex marriage from <xref ref="fig-gayB"/>, redrawn here as
+        <xref ref="fig-gaybx"/>, it is well to remember that the questions were about different situations, that
+        they were framed differently, and that only a third of the sample were asked the state question.
       </p>
       <figure xml:id="fig-gaybx">
         <image source="images/gayBX-1.png">
@@ -513,7 +539,14 @@
     <subsection xml:id="sec-checking-discussion">
       <title>Discussing with others, especially domain experts</title>
       <p>
-        What one person sees when they look at a graphic may not be what another person sees. Combining opinions is more effective than relying on one person’s views—provided that the opinions are independent. Graphics analysts will not have the subject knowledge of experts in the field and they should be consulted. Amongst other topics expertise was sought on chess ratings (Chapter 8), ornithology (Chapters 14, 18, and 23), swimming (Chapter 20), and German elections (Chapter 26). The role of Ausgleichsmandate in making the German parliament much larger than intended was important information gained. This was shown in <xref ref="fig-ubhx"/>.
+        What one person sees when they look at a graphic may not be what another person sees. Combining opinions is
+        more effective than relying on one person’s views—provided that the opinions are independent.
+        Graphics analysts will not have the subject knowledge of experts in the field and they should be consulted.
+        Amongst other topics expertise was sought on chess ratings (<xref ref="ch-chess"/>), ornithology
+        (<xref ref="ch-darwin-finches"/>, <xref ref="ch-palmer-penguins"/>, and <xref ref="ch-shears"/>),
+        swimming (<xref ref="ch-swimming"/>), and German elections (<xref ref="ch-bundestag-election"/>). The
+        role of Ausgleichsmandate in making the German parliament much larger than intended was important information
+        gained. This was shown in <xref ref="fig-ubh"/>, repeated in <xref ref="fig-ubhx"/>.
       </p>
 
       <figure xml:id="fig-ubhx">
@@ -530,16 +563,20 @@
         All of the checks listed so far can be carried out relatively quickly. The ideal would be to attempt to
         independently replicate results. Replication should be possible for scientific studies by having different
         researchers carry out fresh studies in different environments. This may be impractical for reasons of time,
-        organisation, and finance, but is the ideal to aim for. Examples include estimating the speed of light (Chapter 5), evaluating treatment of psoriasis (Chapter 12), and distinguishing shearwaters (Chapter 23).
+        organisation, and finance, but is the ideal to aim for. Examples include estimating the speed of light
+        (<xref ref="ch-light-speed"/>), evaluating treatment of psoriasis (<xref ref="ch-psoriasis"/>), and
+        distinguishing shearwaters (<xref ref="ch-shears"/>).
       </p>
 
       <p>
         If datasets are large, a partial replication can be achieved by splitting the dataset into independent
-        groups by sampling. Some datasets are regularly updated; results can then be checked for consistency over
-        time.
+        groups by sampling. This was suggested in connection with fitting a smooth to the chess ratings data in
+        <xref ref="fig-ratAge15s"/>.
       </p>
 
-      <p> Some datasets are regularly updated, e.g., movies (Chapter 3), fuel efficiency (Chapter 17), and elections (Chapter 26). Results can then be checked for consistency over time.</p>
+      <p>Some datasets are regularly updated, e.g., movies (<xref ref="ch-movies"/>), fuel efficiency
+        (<xref ref="ch-us-fuel"/>), and elections (<xref ref="ch-bundestag-election"/>). Results can then be
+        checked for consistency over time.</p>
     </subsection>
 
     <subsection xml:id="sec-checking-example">
