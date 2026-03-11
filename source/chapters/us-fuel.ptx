@@ -9,12 +9,11 @@
     </blockquote>
     <p><em>Background.</em> Fuel economy data for individual models of cars and trucks is made available by the US Department of Energy.</p>
     <p>
-      <em>Questions.</em> Are cars more fuel efficient than in the past? Which cars use the most fuel and which the
-      least? How have available models changed over time? How has fuel efficiency changed for specific models?
+      <em>Questions.</em> Are cars more fuel efficient than in the past? Which cars use the most fuel and which the least? How have the available models changed over time? How has fuel efficiency changed over time for particular models?
     </p>
-    <p><em>Sources.</em> @epa:2021</p>
+    <p><em>Sources.</em> <xref ref="epa-2021"/></p>
     <p>
-      <em>Structure.</em> 43,516 cases and 83 variables for vehicles introduced from 1984 to 2021.
+      <em>Structure.</em> A dataset with 43516 cases and 83 variables covering vehicles introduced in the years from 1984 to 2021.
     </p>
   </introduction>
 
@@ -26,9 +25,11 @@
     <p>The various types of 4-Wheel and All-Wheel Drive cars have been combined in the All-Wheel category.</p>
 
     <figure xml:id="fig-vehcn">
-      <image source="images/vehCn-1.png"/>
+      <image source="images/vehCn-1.png">
+        <description>A faceted barchart showing the number of car models tested by fuel type (Diesel, Premium Gasoline, Regular Gasoline), drive type (Front-Wheel, Rear-Wheel, All-Wheel), and car class (Two Seaters through Large Cars). Front-Wheel Drive cars predominantly use regular gasoline. Rear-Wheel and All-Wheel Drive cars predominantly use premium gasoline. Diesel cars are relatively rare.</description>
+      </image>
       <caption>
-        <p>Numbers of car models tested by fuel, drive type, and class.</p>
+        <p>Numbers of car models tested by the U.S. Environmental Protection Agency by fuel, drive type, and class.</p>
       </caption>
     </figure>
 
@@ -39,7 +40,9 @@
     <p>Americans (and the British) measure fuel efficiency in mpg (miles per gallon). Europeans would use an inverse measure, litres per 100 kilometres. The dataset provides two estimates of fuel efficiency, one for city driving and one for highway driving, and these are combined in an overall figure that assumes 55% of driving distance is in city conditions. There is an R package, <c>fueleconomy</c>, that makes the data available but only up to 2015. Figure <xref ref="fig-vehcf"/> uses boxplots to summarise mpg data for the two gasolines. There were some high outliers amongst the Regular Gasoline cars with Front-Wheel Drive, i.e., they use far more fuel than other models in their class.</p>
 
     <figure xml:id="fig-vehcf">
-      <image source="images/vehCf-1.png"/>
+      <image source="images/vehCf-1.png">
+        <description>A faceted boxplot matrix showing fuel efficiency (mpg combined) for gasoline car models by fuel type (Premium and Regular Gasoline) and drive type (Front-Wheel, Rear-Wheel, All-Wheel), with car class on the x-axis. Regular Gasoline Front-Wheel Drive cars have some notable high outliers (hybrid models). Labels are shown at an angle for readability.</description>
+      </image>
       <caption>
         <p>Fuel efficiency (mpg) of gasoline cars by fuel, drive type, and class.</p>
       </caption>
@@ -48,16 +51,20 @@
     <p>Figure <xref ref="fig-vehhyb"/> shows that these were mainly hybrid cars (including plug-in hybrids) and Figure <xref ref="fig-vehyr"/> suggests a few more were cars of model year 1998 or earlier.</p>
 
     <figure xml:id="fig-vehhyb">
-      <image source="images/vehHyb-1.png"/>
+      <image source="images/vehHyb-1.png">
+        <description>A horizontal boxplot comparing the fuel efficiency (combined mpg) of hybrid cars (Yes) against non-hybrid cars (No). The boxplot widths are proportional to the square roots of group sizes. Hybrid cars have clearly higher fuel efficiency than non-hybrids, with less overlap.</description>
+      </image>
       <caption>
-        <p>Fuel efficiency of hybrid cars compared with non-hybrids.</p>
+        <p>Fuel efficiency of hybrid cars compared with the rest (boxplot widths are proportional to the square roots of the group sizes).</p>
       </caption>
     </figure>
 
     <figure xml:id="fig-vehyr">
-      <image source="images/vehYr-1.png"/>
+      <image source="images/vehYr-1.png">
+        <description>A series of boxplots showing the fuel efficiency (combined mpg) of non-hybrid cars for each model year from 1984 to 2021. Year labels are shown at an angle. The worst mpg values were recorded over 15 years ago. There is a general improvement in recent years, though testing procedure changes complicate comparisons over the full period.</description>
+      </image>
       <caption>
-        <p>Fuel efficiency of non-hybrid cars by model year.</p>
+        <p>Fuel efficiency of non-hybrid cars over the years.</p>
       </caption>
     </figure>
 
@@ -70,9 +77,11 @@
     <p>In Figure <xref ref="fig-vehcf"/> there were some low outliers for Rear-Wheel Drive cars, especially surprising for Minicompact and Subcompact Cars. Ordering the dataset in ascending order of mpg uncovers some unexpected classifications. Who would have thought that Rolls-Royces, Aston Martins, and Ferraris would be classified that way?</p>
 
     <figure xml:id="fig-luxveh">
-      <image source="images/luxVeh-1.png"/>
+      <image source="images/luxVeh-1.png">
+        <description>A faceted barchart showing the number of car models by class (Two Seaters through Compact Cars) for six luxury manufacturers (Aston Martin, Bentley, Ferrari, Lamborghini, Maserati, Rolls-Royce). Lamborghini produces only Two Seaters. Ferrari predominantly makes Two Seaters. The other four manufacturers produce a mix of Minicompact, Subcompact, and Compact models.</description>
+      </image>
       <caption>
-        <p>Numbers of cars by class for six luxury manufacturers.</p>
+        <p>Numbers of cars by class for six car manufacturers.</p>
       </caption>
     </figure>
 
@@ -82,12 +91,14 @@
   </section>
 
   <section xml:id="sec-usfuel-model-counts">
-    <title>How many car models have been evaluated over time?</title>
+    <title>How many car models have been evaluated over the years?</title>
 
     <figure xml:id="fig-swclass">
-      <image source="images/swClass-1.png"/>
+      <image source="images/swClass-1.png">
+        <description>A faceted time-series plot showing the number of car models per year from 1984 to 2021, one facet per car class (Two Seaters, Minicompact, Subcompact, Compact, Midsize, Large Cars, Station Wagons, SUVs). Subcompact cars decline sharply; Large Cars increase. Station wagon models decline before disappearing; SUV models increase markedly after their introduction in 1999.</description>
+      </image>
       <caption>
-        <p>Numbers of models per year across car, station-wagon, and SUV classes.</p>
+        <p>Numbers of models per year.</p>
       </caption>
     </figure>
 
@@ -102,7 +113,9 @@
     </subsection>
 
     <figure xml:id="fig-swsuv">
-      <image source="images/swSUV-1.png"/>
+      <image source="images/swSUV-1.png">
+        <description>A faceted barchart showing the number of station-wagon and SUV car models by year from 1984 to 2021, with separate facets for each category (Small, Midsize, Midsize-Large Station Wagons; SUV 2WD and 4WD; Small and Standard SUV 2WD and 4WD). Station wagon numbers were declining before SUVs arrived in 1999. After the SUV split into Small and Standard in 2013, only 4WD numbers increased.</description>
+      </image>
       <caption>
         <p>
           Numbers of station-wagon and SUV models by year, arranged by category and size.
@@ -118,10 +131,12 @@
     <p>Car models do not stay the same for long. Manufacturers continually develop and change their cars. By grouping on the characteristics of each model in the dataset, including number of gears and displacement (engine size in litres), those that have been tested in most years can be selected. Two have been chosen here in both manual and automatic versions, the Toyota Corolla (1993-2016) and the Mazda MX-5 (2006-2021). They are two very successful models in their respective classes. Figure <xref ref="fig-tceff"/> shows the estimated city, highway, and combined mpg figures for the Toyota. Note that the estimates are only reported in rounded integer values. Unrounded values for all models are provided from 2011 on but have not been used here.</p>
 
     <figure xml:id="fig-tceff">
-      <image source="images/TCeff-1.png"/>
+      <image source="images/TCeff-1.png">
+        <description>A line plot showing the estimated city, highway, and combined mpg for Toyota Corolla models from 1993 to 2016, with manual transmission shown as lines with points and automatic transmission as lines only. Highway mpg is consistently higher than city mpg. Manual is slightly more efficient than automatic. There were improvements in early years, then a plateau, then a surprising decline, possibly due to increased car weight.</description>
+      </image>
       <caption>
         <p>
-          Fuel efficiency of Toyota Corolla models for manual and automatic transmission.
+          Fuel efficiency of Toyota Corolla models for manual transmission (lines with points) and automatic (lines) transmission.
         </p>
       </caption>
     </figure>
@@ -129,9 +144,11 @@
     <p>As expected, the highway mpg figures are better than the city figures. Manual transmission is generally slightly more efficient than automatic transmission. There were improvements in the first few years, then a level performance and then, surprisingly, a decline. Perhaps the cars became heavier. Unfortunately there is no information on car weights in the dataset. Unsurprisingly, there is some variability in the EPA's estimates. The introduction of new model versions in 1995, 2000, 2006, 2012 does not appear to have had immediate effects. Additional changes may have been introduced in other years.</p>
 
     <figure xml:id="fig-mx5eff">
-      <image source="images/MX5eff-1.png"/>
+      <image source="images/MX5eff-1.png">
+        <description>A line plot showing the estimated city, highway, and combined mpg for Mazda MX-5 models from 2006 to 2021, with manual transmission as lines with points and automatic as lines only. The estimates are less variable than the Corolla. There is a notable jump in 2016 when a new model was introduced. Manual and automatic transmission models achieve very similar fuel efficiency.</description>
+      </image>
       <caption>
-        <p>Fuel efficiency of Mazda MX-5 models for manual and automatic transmission.</p>
+        <p>Fuel efficiency of Mazda MX-5 models for manual transmission (lines with points) and automatic (lines) transmission.</p>
       </caption>
     </figure>
 

@@ -140,4 +140,16 @@
 
   <!-- abel:2021 -->
   <biblio xml:id="abel-2021" type="raw">Abel, Guy. uefa-ec. 2021. <url href="https://github.com/guyabel/uefa-ec/"/>. (accessed 07.06.2021)</biblio>
+
+  <!-- curley:2016 -->
+  <biblio xml:id="curley-2016" type="raw">Curley, James. EnglishSoccer. 2016. <url href="http://fivethirtyeight.com/contributors/james-curley/"/>. (accessed 1.2.2022)</biblio>
+
+  <!-- curley:2022 -->
+  <biblio xml:id="curley-2022" type="raw">Curley, James. <pubtitle>engsoccerdata</pubtitle>. R package version 0.1.7, 2022. <url href="https://github.com/jalapic/engsoccerdata"/></biblio>
+
+  <!-- gomez:2022 -->
+  <biblio xml:id="gomez-2022" type="raw">Gómez-Ruano, Miguel, Pollard, Richard, and Lago-Peñas, Carlos. <pubtitle>Home Advantage in Sport</pubtitle>. Routledge, 2022.</biblio>
+
+  <!-- epa:2021 -->
+  <biblio xml:id="epa-2021" type="raw">Environmental Protection Agency. Fuel Economy. 2021. <url href="https://www.fueleconomy.gov"/>. (accessed 05.05.2021)</biblio>
 </references>
