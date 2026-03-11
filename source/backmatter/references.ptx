@@ -122,4 +122,7 @@
 
   <!-- tonnessen:2020 -->
   <biblio xml:id="tonnessen-2020" type="raw">Tonnessen, E. What is visual-numeric literacy, and how does it work? In Engebretsen, M. and Kennedy, H. (eds.), <pubtitle>Data Visualization in Society</pubtitle>, pp. 189&#8211;206. Amsterdam University Press, 2020.</biblio>
+
+  <!-- imdb:2022 -->
+  <biblio xml:id="imdb-2022" type="raw">IMDb. Internet Movie Database. <url href="https://datasets.imdbws.com"/>. 2022. (accessed 01.07.2022)</biblio>
 </references>
