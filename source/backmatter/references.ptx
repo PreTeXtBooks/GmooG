@@ -39,38 +39,8 @@
   <!-- bertin:2010 -->
   <biblio xml:id="bertin-2010" type="raw">Bertin, Jacques. <pubtitle>Semiology of Graphics</pubtitle>. Esri Press, Redlands, California, 2010.</biblio>
 
-  <!-- Wainer:1997 -->
-  <biblio xml:id="Wainer-1997" type="raw">Wainer, Howard. <pubtitle>Visual Revelations</pubtitle>. Springer, New York, 1997.</biblio>
-
-  <!-- Wainer:2004 -->
-  <biblio xml:id="Wainer-2004" type="raw">Wainer, Howard. <pubtitle>Graphic Discovery: A Trout in the Milk and Other Visual Adventures</pubtitle>. Princeton University Press, Princeton, New Jersey, 2004.</biblio>
-
   <!-- wilkinson:2005 -->
   <biblio xml:id="wilkinson-2005" type="raw">Wilkinson, Leland. <pubtitle>The Grammar of Graphics</pubtitle>. 2nd ed. Springer, New York, 2005.</biblio>
-
-  <!-- coulmont:2010 -->
-  <biblio xml:id="coulmont-2010" type="raw">Coulmont, Baptiste. Cartographie avec R. 2010. <url href="http://coulmont.com/cartes/rcarto.pdf"/></biblio>
-
-  <!-- friendly:2007 -->
-  <biblio xml:id="friendly-2007" type="raw">Friendly, Michael. A.-M. Guerry's Moral Statistics of France: Challenges for Multivariable Spatial Analysis. <em>Statistical Science</em>, 22(3):368&#8211;399, 2007.</biblio>
-
-  <!-- wikip:2020 -->
-  <biblio xml:id="wikip-2020" type="raw">Wikipedia. The Blue Banana. 2020. <url href="https://en.wikipedia.org/wiki/Blue_Banana"/></biblio>
-
-  <!-- FIDE:2020 -->
-  <biblio xml:id="FIDE-2020" type="raw">FIDE. International Chess Federation Ratings. 2020. <url href="https://ratings.fide.com"/></biblio>
-
-  <!-- wb:2020 -->
-  <biblio xml:id="wb-2020" type="raw">World Bank. World Bank Open Data. 2020. <url href="https://data.worldbank.org"/></biblio>
-
-  <!-- elo:1978 -->
-  <biblio xml:id="elo-1978" type="raw">Elo, Arpad. <pubtitle>The Rating of Chess Players, Past and Present</pubtitle>. 1st ed. Arco, New York, 1978.</biblio>
-
-  <!-- bila:2009 -->
-  <biblio xml:id="bila-2009" type="raw">Bilalic, M., Smallbone, K., McLeod, P., and Gobet, F. Why are (the best) women so good at chess? Participation rates and gender differences in intellectual domains. <em>Proc. R. Soc. B</em>, 276:1161&#8211;1165, 2009.</biblio>
-
-  <!-- carr:1987 -->
-  <biblio xml:id="carr-1987" type="raw">Carr, Dan, Littlefield, Richard J., Nicholson, Wesley L., and Littlefield, J.S. Scatterplot Matrix Techniques for large N. <em>JASA</em>, 82(398):424&#8211;436, 1987.</biblio>
 
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
@@ -141,6 +111,80 @@
   <!-- wickham:2019 -->
   <biblio xml:id="wickham-2019" type="raw">Wickham, Hadley. <pubtitle>tidyverse: Easily Install and Load the 'Tidyverse'</pubtitle>. R package version 1.3.0, 2019. <url href="https://CRAN.R-project.org/package=tidyverse"/></biblio>
 
+  <!-- rosling:2009 -->
+  <biblio xml:id="rosling-2009" type="raw">Rosling, Hans. The best stats you've ever seen. TED Talk. <url href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen"/>. 2009. (accessed 08.05.2020)</biblio>
+
+  <!-- lindgren:2014 -->
+  <biblio xml:id="lindgren-2014" type="raw">Lindgren, M. Guesstimating life Expectancy for disasters. Gapminder. <url href="https://www.gapminder.org/data/documentation/gd004/"/>. 2014. (accessed 01.06.2022)</biblio>
+
+  <!-- tonnessen:2020 -->
+  <biblio xml:id="tonnessen-2020" type="raw">Tonnessen, E. What is visual-numeric literacy, and how does it work? In Engebretsen, M. and Kennedy, H. (eds.), <pubtitle>Data Visualization in Society</pubtitle>, pp. 189&#8211;206. Amsterdam University Press, 2020.</biblio>
+
+  <!-- woodson:1912 -->
+  <biblio xml:id="woodson-1912" type="raw">Woodson, Urey. <pubtitle>Official Report of the Proceedings of the Democratic National Convention</pubtitle>. Peterson Linotyping Company, Chicago, 1912.</biblio>
+
+  <!-- link:1947 -->
+  <biblio xml:id="link-1947" type="raw">Link, Arthur. <pubtitle>Wilson, Vol I: The Road to the White House</pubtitle>. Princeton University Press, Princeton, New Jersey, 1947.</biblio>
+
+  <!-- michelson:1880 -->
+  <biblio xml:id="michelson-1880" type="raw">Michelson, Albert. Experimental Determination of the Velocity of Light made at the U.S. Naval Academy, Annapolis. <pubtitle>Astronomical Papers</pubtitle>, 1:109&#8211;145. U.S. Nautical Almanac Office, 1880.</biblio>
+
+  <!-- michelson:1927 -->
+  <biblio xml:id="michelson-1927" type="raw">Michelson, Albert. Measurement of the Velocity of Light between Mount Wilson and Mount San Antonio. <pubtitle>Astrophysical Journal</pubtitle>, LXV:1&#8211;22, 1927.</biblio>
+
+  <!-- mackay:2000 -->
+  <biblio xml:id="mackay-2000" type="raw">MacKay, R. Jock and Oldford, Wayne. Scientific Method, Statistical Method and the Speed of Light. <pubtitle>Statistical Science</pubtitle>, 15(3):254&#8211;278, 2000.</biblio>
+
+  <!-- youden:1972 -->
+  <biblio xml:id="youden-1972" type="raw">Youden, William. Enduring Values. <pubtitle>Technometrics</pubtitle>, 14(1):1&#8211;11, 1972.</biblio>
+
+  <!-- olymp:2022 -->
+  <biblio xml:id="olymp-2022" type="raw">IOC. Olympic Games. <url href="https://olympics.com/en/"/>. 2022. (accessed 16.8.2022)</biblio>
+
+  <!-- griffin:2019 -->
+  <biblio xml:id="griffin-2019" type="raw">Griffin, Randi. Olympics. <url href="https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results"/>. 2019. (accessed 01.10.2019)</biblio>
+
+  <!-- english:2015 -->
+  <biblio xml:id="english-2015" type="raw">English, Colleen. &#8220;Not a Very Edifying Spectacle&#8221;: The Controversial Women&#8217;s 800-Meter Race in the 1928 Olympics. <url href="https://ussporthistory.com/2015/10/08/not-a-very-edifying-spectacle-the-controversial-womens-800-meter-race-in-the-1928-olympics/"/>. 2015. (accessed 28.08.2022)</biblio>
+
+  <!-- robinson:2012 -->
+  <biblio xml:id="robinson-2012" type="raw">Robinson, Roger. &#8220;Eleven Wretched Women.&#8221; <url href="https://www.runnersworld.com/advanced/a20802639/eleven-wretched-women/"/>. 2012. (accessed 28.08.2022)</biblio>
+
+  <!-- abbott:2012 -->
+  <biblio xml:id="abbott-2012" type="raw">Abbott, Karen. The 1904 Olympic marathon may have been the strangest ever. <url href="https://www.smithsonianmag.com/history/the-1904-olympic-marathon-may-have-been-the-strangest-ever-14910747/"/>. 2012. (accessed 18.3.2022)</biblio>
+
+  <!-- nicault:2021 -->
+  <biblio xml:id="nicault-2021" type="raw">Nicault, Christophe. History of National Olympic Committees participating in the Olympic Summer Games. <url href="https://www.christophenicault.com/pages/visualizations/"/>. 2021. (accessed 04.04.2022)</biblio>
+
+  <!-- Wainer:1997 -->
+  <biblio xml:id="Wainer-1997" type="raw">Wainer, Howard. <pubtitle>Visual Revelations</pubtitle>. Springer, New York, 1997.</biblio>
+
+  <!-- Wainer:2004 -->
+  <biblio xml:id="Wainer-2004" type="raw">Wainer, Howard. <pubtitle>Graphic Discovery: A Trout in the Milk and Other Visual Adventures</pubtitle>. Princeton University Press, Princeton, New Jersey, 2004.</biblio>
+
+  <!-- coulmont:2010 -->
+  <biblio xml:id="coulmont-2010" type="raw">Coulmont, Baptiste. Cartographie avec R. <url href="http://coulmont.com/cartes/rcarto.pdf"/>. 2010.</biblio>
+
+  <!-- friendly:2007 -->
+  <biblio xml:id="friendly-2007" type="raw">Friendly, Michael. A.-M. Guerry&#8217;s Moral Statistics of France: Challenges for Multivariable Spatial Analysis. <pubtitle>Statistical Science</pubtitle>, 22(3):368&#8211;399, 2007.</biblio>
+
+  <!-- wikip:2020 -->
+  <biblio xml:id="wikip-2020" type="raw">Wikipedia. The Blue Banana. <url href="https://en.wikipedia.org/wiki/Blue_Banana"/>. 2020.</biblio>
+
+  <!-- FIDE:2020 -->
+  <biblio xml:id="FIDE-2020" type="raw">FIDE. International Chess Federation Ratings. <url href="https://ratings.fide.com"/>. 2020. (accessed 28.01.2021)</biblio>
+
+  <!-- wb:2020 -->
+  <biblio xml:id="wb-2020" type="raw">Worldbank. World Bank Open Data. <url href="https://data.worldbank.org"/>. 2020. (accessed 28.01.2021)</biblio>
+
+  <!-- elo:1978 -->
+  <biblio xml:id="elo-1978" type="raw">Elo, Arpad. <pubtitle>The Rating of Chess Players, Past and Present</pubtitle>. 1st ed. Arco, New York, 1978.</biblio>
+
+  <!-- bila:2009 -->
+  <biblio xml:id="bila-2009" type="raw">Bilali&#263;, Merim and Smallbone, Kieran and McLeod, Peter and Gobet, Fernand. Why are (the best) women so good at chess? Participation rates and gender differences in intellectual domains. <pubtitle>Proc. R. Soc. B</pubtitle>, 276:1161&#8211;1165, 2009.</biblio>
+
+  <!-- carr:1987 -->
+  <biblio xml:id="carr-1987" type="raw">Carr, Dan and Littlefield, Richard J. and Nicholson, Wesley L. and Littlefield, J.S. Scatterplot Matrix Techniques for large N. <pubtitle>JASA</pubtitle>, 82(398):424&#8211;436, 1987.</biblio>
   <!-- buol:2018 -->
   <biblio xml:id="buol-2018" type="raw">Buolamwini, Joy and Gebru, Timnit. Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification. <em>Proceedings of Machine Learning Research</em>, 81:1&#8211;15, 2018.</biblio>
 
@@ -191,9 +235,6 @@
 
   <!-- stigler:2019 -->
   <biblio xml:id="stigler-2019" type="raw">Stigler, Stephen. Data Have a Limited Shelf Life. <em>Harvard Data Science Review</em>, 1(2), 2019.</biblio>
-
-  <!-- michelson:1880 -->
-  <biblio xml:id="michelson-1880" type="raw">Michelson, Albert. Experimental Determination of the Velocity of Light made at the U.S. Naval Academy, Annapolis. <em>Astronomical papers</em>, 1:109&#8211;145, 1880. U.S. Nautical Almanac Office.</biblio>
 
   <!-- meng:2021 -->
   <biblio xml:id="meng-2021" type="raw">Meng, Xiao-Li. Enhancing (publications on) data quality: Deeper data minding and fuller data confession. <em>JRSS A</em>, 184:1161&#8211;1175, 2021.</biblio>
