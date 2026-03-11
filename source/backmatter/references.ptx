@@ -42,6 +42,9 @@
   <!-- wilkinson:2005 -->
   <biblio xml:id="wilkinson-2005" type="raw">Wilkinson, Leland. <pubtitle>The Grammar of Graphics</pubtitle>. 2nd ed. Springer, New York, 2005.</biblio>
 
+  <!-- wickham:2007 -->
+  <biblio xml:id="wickham-2007" type="raw">Wickham, Hadley. Diamonds in the rough. <url href="http://www.diamondse.info/"/>. 2007.</biblio>
+
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
 
