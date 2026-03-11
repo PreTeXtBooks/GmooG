@@ -20,7 +20,7 @@
       Data wrangling covers all the work put into cleaning, organising, and restructuring data. Few datasets arrive
       perfectly formed in an ideal shape&#8212;other than datasets found in textbooks. They have to be checked
       (correcting or excluding cases) and reorganised (reformatting, transforming, and restructuring them). A
-      detailed example is described in @amal:2022. In-depth studies require a range of analyses, involving
+      detailed example is described in <xref ref="amal-2022"/>. In-depth studies require a range of analyses, involving
       grouping, subsetting, and aggregating datasets.
     </p>
 
@@ -126,7 +126,7 @@
       <p>
         The decathlon provides an example where special transformations are used. The current scoring system,
         introduced in 1984, converts performances in the ten events to points using a different three-parameter
-        formula for each event (@IAAF:2001). As equal points are intended to reflect equal performances, no
+        formula for each event (<xref ref="IAAF-2001"/>). As equal points are intended to reflect equal performances, no
         further standardisation is needed in principle.
       </p>
 
@@ -143,7 +143,7 @@
         Date and time information need special handling in software and almost certainly have to be transformed
         first. Newcomb's estimates of the speed of light are displayed by experimental order and by date. The
         differences are important for understanding the data. The two plots are shown again in Figure
-        <xref ref="fig-newcty"/> below. The dates taken as text are from Newcomb's paper (@newcomb:1891) and were
+        <xref ref="fig-newcty"/> below. The dates taken as text are from Newcomb's paper (<xref ref="newcomb-1891"/>) and were
         transformed to a special date format so that the R software could scale them appropriately.
       </p>
 
@@ -164,7 +164,7 @@
         Spatial datasets also require special treatment. They may be reported in any one of a large number of
         possible coordinate reference systems and it is essential in any study to convert all the spatial data to
         the same system. Much work has gone into transforming between these systems and the current state of play
-        is summarised in @bivand:2020. One example involved adding city locations to the maps of France. A
+        is summarised in <xref ref="bivand-2020"/>. One example involved adding city locations to the maps of France. A
         further complication in the Bertin chapter was converting a modern shape file of the departments of
         France to one matching the form in 1954. Finally cartograms may be used to take account of differences
         between areas. The spatial transformations applied require complex iterative methods.
@@ -261,7 +261,7 @@
     <title>Wrangling for layered graphics</title>
 
     <p>
-      @wickham:2016 emphasised the advantages of thinking of data graphics as being built up of layers, one on
+      <xref ref="wickham-2016"/> emphasised the advantages of thinking of data graphics as being built up of layers, one on
       top of the other, an idea that has been used in cartography for a long time. Sometimes the layers are all
       drawn using the same dataset, sometimes each layer is drawn with a different dataset. In the latter case,
       the datasets may be subsets, aggregations, or even models derived from one main dataset. Constructing them
@@ -492,7 +492,7 @@
       </p>
       <p>
         Reproducing published work is easier than it was, but is still not satisfactory, as various surveys in
-        different fields have pointed out (e.g., @gabelica:2022). Two examples arose in this book. In the Facial
+        different fields have pointed out (e.g., <xref ref="gabelica-2022"/>). Two examples arose in this book. In the Facial
         Recognition chapter numerous tables of percentage success rates of facial recognition software were
         reported, but the raw data were not made available. Making the reasonable assumption that the underlying
         results must have been integers, it was possible to reconstruct much of the data from the percentages
