@@ -37,7 +37,7 @@
       There were relatively few diesel cars in this display. Front-Wheel Drive cars used mainly regular gasoline. Rear-Wheel and All-Wheel Drive cars used mainly premium gasoline.
     </p>
 
-    <p>Americans (and the British) measure fuel efficiency in mpg (miles per gallon). Europeans would use an inverse measure, litres per 100 kilometres. The dataset provides two estimates of fuel efficiency, one for city driving and one for highway driving, and these are combined in an overall figure that assumes 55% of driving distance is in city conditions. There is an R package, <c>fueleconomy</c>, that makes the data available but only up to 2015. Figure <xref ref="fig-vehcf"/> uses boxplots to summarise mpg data for the two gasolines. There were some high outliers amongst the Regular Gasoline cars with Front-Wheel Drive, i.e., they use far more fuel than other models in their class.</p>
+    <p>Americans (and the British) measure fuel efficiency in mpg (miles per gallon). Europeans would use an inverse measure, litres per 100 kilometres. The dataset provides two estimates of fuel efficiency, one for city driving and one for highway driving, and these are combined in an overall figure that assumes 55% of driving distance is in city conditions. There is an R package, <c>fueleconomy</c>, that makes the data available but only up to 2015. <xref ref="fig-vehcf"/> uses boxplots to summarise mpg data for the two gasolines. There were some high outliers amongst the Regular Gasoline cars with Front-Wheel Drive, i.e., they use far more fuel than other models in their class.</p>
 
     <figure xml:id="fig-vehcf">
       <image source="images/vehCf-1.png">
@@ -48,7 +48,7 @@
       </caption>
     </figure>
 
-    <p>Figure <xref ref="fig-vehhyb"/> shows that these were mainly hybrid cars (including plug-in hybrids) and Figure <xref ref="fig-vehyr"/> suggests a few more were cars of model year 1998 or earlier.</p>
+    <p><xref ref="fig-vehhyb"/> shows that these were mainly hybrid cars (including plug-in hybrids) and <xref ref="fig-vehyr"/> suggests a few more were cars of model year 1998 or earlier.</p>
 
     <figure xml:id="fig-vehhyb">
       <image source="images/vehHyb-1.png">
@@ -68,13 +68,13 @@
       </caption>
     </figure>
 
-    <p>Figure <xref ref="fig-vehyr"/> also shows that the worst mpg values were recorded over 15 years ago or more. Testing procedures have changed over time and so like may not be being compared with like over such a long period.</p>
+    <p><xref ref="fig-vehyr"/> also shows that the worst mpg values were recorded over 15 years ago or more. Testing procedures have changed over time and so like may not be being compared with like over such a long period.</p>
   </section>
 
   <section xml:id="sec-usfuel-luxury">
     <title>Small (?) luxury cars</title>
 
-    <p>In Figure <xref ref="fig-vehcf"/> there were some low outliers for Rear-Wheel Drive cars, especially surprising for Minicompact and Subcompact Cars. Ordering the dataset in ascending order of mpg uncovers some unexpected classifications. Who would have thought that Rolls-Royces, Aston Martins, and Ferraris would be classified that way?</p>
+    <p>In <xref ref="fig-vehcf"/> there were some low outliers for Rear-Wheel Drive cars, especially surprising for Minicompact and Subcompact Cars. Ordering the dataset in ascending order of mpg uncovers some unexpected classifications. Who would have thought that Rolls-Royces, Aston Martins, and Ferraris would be classified that way?</p>
 
     <figure xml:id="fig-luxveh">
       <image source="images/luxVeh-1.png">
@@ -102,12 +102,12 @@
       </caption>
     </figure>
 
-    <p>Figure <xref ref="fig-swclass"/> shows a sharp decline in the number of Subcompact Cars, and an increase in the number of Large Cars. The patterns amongst Station Wagons and Sport Utility Vehicles (SUVs) need a closer look.</p>
+    <p><xref ref="fig-swclass"/> shows a sharp decline in the number of Subcompact Cars, and an increase in the number of Large Cars. The patterns amongst Station Wagons and Sport Utility Vehicles (SUVs) need a closer look.</p>
 
     <subsection xml:id="sec-usfuel-station-suv">
       <title>Station wagons and SUVs</title>
 
-      <p>There are three categories for station wagons and six for SUVs. Nobody talks much about station wagons these days and the term SUV is relatively new. Figure <xref ref="fig-swsuv"/> displays barcharts of the numbers of each type for each year.</p>
+      <p>There are three categories for station wagons and six for SUVs. Nobody talks much about station wagons these days and the term SUV is relatively new. <xref ref="fig-swsuv"/> displays barcharts of the numbers of each type for each year.</p>
 
       <p>The patterns are clear. The "Large" in the category Midsize-Large Station Wagons was dropped after 1998. SUV classifications were introduced in 1999 and further split in 2013. The numbers of station wagon models were declining before SUVs were introduced. After 2007 it appears that mainly small station wagons were produced. Numbers of SUV models for 2WD (two-wheel-drive) and 4WD (four-wheel-drive) followed similar patterns initially. After the split into Small and Standard SUVs, only the number of 4WD ones increased.</p>
     </subsection>
@@ -118,7 +118,7 @@
       </image>
       <caption>
         <p>
-          Numbers of station-wagon and SUV models by year, arranged by category and size.
+          Numbers of station wagon and SUV models by year with categories arranged by station wagons and SUVs and within those groupings by year and size
         </p>
       </caption>
     </figure>
@@ -128,7 +128,7 @@
   <section xml:id="sec-usfuel-model-trends">
     <title>Comparing fuel efficiency of individual models over time</title>
 
-    <p>Car models do not stay the same for long. Manufacturers continually develop and change their cars. By grouping on the characteristics of each model in the dataset, including number of gears and displacement (engine size in litres), those that have been tested in most years can be selected. Two have been chosen here in both manual and automatic versions, the Toyota Corolla (1993-2016) and the Mazda MX-5 (2006-2021). They are two very successful models in their respective classes. Figure <xref ref="fig-tceff"/> shows the estimated city, highway, and combined mpg figures for the Toyota. Note that the estimates are only reported in rounded integer values. Unrounded values for all models are provided from 2011 on but have not been used here.</p>
+    <p>Car models do not stay the same for long. Manufacturers continually develop and change their cars. By grouping on the characteristics of each model in the dataset, including number of gears and displacement (engine size in litres), those that have been tested in most years can be selected. Two have been chosen here in both manual and automatic versions, the Toyota Corolla (1993-2016) and the Mazda MX-5 (2006-2021). They are two very successful models in their respective classes. <xref ref="fig-tceff"/> shows the estimated city, highway, and combined mpg figures for the Toyota. Note that the estimates are only reported in rounded integer values. Unrounded values for all models are provided from 2011 on but have not been used here.</p>
 
     <figure xml:id="fig-tceff">
       <image source="images/TCeff-1.png">
@@ -152,7 +152,7 @@
       </caption>
     </figure>
 
-    <p>The estimates for the Mazda MX-5 are shown in Figure <xref ref="fig-mx5eff"/>.</p>
+    <p>The estimates for the Mazda MX-5 are shown in <xref ref="fig-mx5eff"/>.</p>
 
     <p>The MX-5 estimates are less variable than the Corolla ones. The large jump in 2016 was due to the introduction of a new model. The manual and automatic transmission models appear to achieve very similar fuel efficiency.</p>
 
@@ -164,9 +164,9 @@
     <subsection xml:id="sec-usfuel-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>There are many different orderings in faceted displays. Look for informative ones. (Figures <xref ref="fig-vehcn"/>, <xref ref="fig-vehcf"/>, and <xref ref="fig-swsuv"/>)</p></li>
-        <li><p>Small numbers of boxplots are better horizontally. (Figure <xref ref="fig-vehhyb"/>)</p></li>
-        <li><p>Drawing longer labels at an angle improves readability. (Figures <xref ref="fig-vehcn"/>, <xref ref="fig-vehcf"/>, <xref ref="fig-vehyr"/>, and <xref ref="fig-luxveh"/>)</p></li>
+        <li><p>There are many different orderings in faceted displays. Look for informative ones. (<xref ref="fig-vehcn"/>, <xref ref="fig-vehcf"/>, and <xref ref="fig-swsuv"/>)</p></li>
+        <li><p>Small numbers of boxplots are better horizontally. (<xref ref="fig-vehhyb"/>)</p></li>
+        <li><p>Drawing longer labels at an angle improves readability. (<xref ref="fig-vehcn"/>, <xref ref="fig-vehcf"/>, <xref ref="fig-vehyr"/>, and <xref ref="fig-luxveh"/>)</p></li>
       </ul>
     </subsection>
   </section>
