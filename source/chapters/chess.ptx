@@ -236,6 +236,8 @@
       <caption>Rating by age for active players in 2015 and 2020.</caption>
     </figure>
 
+   <p>The scatterplots look fairly similar in form. A direct comparison of the smooths is shown in <xref ref="fig-AgeRatingSmooth"/>.</p>
+
     <figure xml:id="fig-AgeRatingSmooth">
       <image source="images/AgeRatingSmooth-1.png">
         <description>Overlaid smooths of chess rating versus age for active players in December 2015 (orange) and December 2020 (blue) with confidence bands, showing that the 2020 smoothed ratings are uniformly lower than those in 2015 across all ages.</description>
@@ -244,15 +246,18 @@
     </figure>
 
     <p>Smoothed ratings by age for active players were uniformly lower in 2020 than in 2015. This is likely because there were many more active players in 2020 than in 2015. It is curious that the smooth for 2020 starts at a higher age than the one for 2015. Exploring the data showed that there were fewer very young rated players in 2020. This was probably due to the pandemic leading to few tournaments being played, so that the very youngest players could not get started.</p>
-
-    <p>The changes between December 2015 and December 2020 could be explored further by looking at the three populations of players involved: those who appear in both lists, those who were present in 2015 but not in 2020, and the new ones. Rather than studying population changes between two particular time points, it would be more informative to create a longitudinal dataset by combining all the rating datasets and studying players' career paths over the months and years.</p>
+   <subsection><tite>Individual players</title>
+<p>The changes between December 2015 and December 2020 could be explored further by looking at the three populations of players involved: those who appear in both lists, those who were present in 2015 but not in 2020, and the new ones.
+</p><p>
+Merging the two data files by player ID number reveals that players appear in both lists, players are on the 2015 list, but not on the 2020 list, and players are only on the 2020 list. It seems to be much harder to leave the ratings list than to join it!
+</p><p>
+Rather than studying population changes between two particular time points, it would be more informative to create a longitudinal dataset by combining all the rating datasets and studying players’ career paths over the months and years.</p>    
   </section>
 
   <section xml:id="secChess5">
     <title>Grandmasters and Masters</title>
 
-    <p>There are four titles for chess players: candidate master (CM), FIDE master (FM), international master (IM) and grandmaster (GM). The history of the introduction of titles for players is not fully clear. The GM title started to be used informally just before the first World War and official international regulations for the award of the titles GM and IM were introduced by FIDE in 1950. There are a parallel set of titles for women (WCM to WGM), but the strongest women opt for the open titles. Titles are awarded based on performance as well as rating, and the regulations are relatively complex.</p>
-
+    <p>There are four titles for chess players: candidate master (CM), FIDE master (FM), international master (IM) and grandmaster (GM). The history of the introduction of titles for players is not fully clear. The GM title started to be used informally just before the first World War and official international regulations for the award of the titles GM and IM were introduced by FIDE in 1950. There are a parallel set of titles for women (WCM to WGM), but the strongest women opt for the open titles. Titles are awarded based on performance as well as rating, and the regulations are relatively complex. In the December 2020 ratings there were female grandmasters (GMs) (of whom were inactive) and an additional WGMs ( inactive). By comparison there were male GMs (inactive).</p>
     <p><xref ref="fig-chessTitle"/> includes a barchart of the numbers of active players with different titles and scatterplots of the ratings of those players against their ages.</p>
 
     <figure xml:id="fig-chessTitle">
