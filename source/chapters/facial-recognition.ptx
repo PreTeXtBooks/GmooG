@@ -8,14 +8,14 @@
       <p>--- Humphrey Bogart to Ingrid Bergman in <em>Casablanca</em></p>
     </blockquote>
     <p>
-      <em>Background.</em> @buol:2018 is an important paper studying how well three facial recognition softwares
+      <em>Background.</em> <xref ref="buol-2018"/> is an important paper studying how well three facial recognition softwares
       performed in identifying people with different skin shades.
     </p>
     <p>
       <em>Questions.</em> How do the error rates vary by sex and skin colour? Are the error rates and patterns
       similar for the three softwares?
     </p>
-    <p><em>Sources.</em> @buol:2018</p>
+    <p><em>Sources.</em> <xref ref="buol-2018"/></p>
     <p>
       <em>Structure.</em> Prediction numbers for three software packages predicting for sex across 1270 individuals
       with six different skin shades.
@@ -46,7 +46,7 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-facebar"/> is a barchart of the numbers in each of the 12 groups (6 skin tones for
+      <xref ref="fig-facebar"/> is a barchart of the numbers in each of the 12 groups (6 skin tones for
       each sex). The patterns are similar, but there are more males overall, mainly in the second and sixth skin
       tone groups.
     </p>
@@ -65,7 +65,7 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-faceh"/> shows the error rates by sex and skin shade (see article for details) for
+      <xref ref="fig-faceh"/> shows the error rates by sex and skin shade (see article for details) for
       each of the three software systems tested using doubledecker plots of error rates side by side. Microsoft
       had mostly the lowest error rates---by quite a lot for the group where all software packages performed
       worst, the darker females.
@@ -85,7 +85,7 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-face3"/> draws the doubledecker plots above one another to show more detail and
+      <xref ref="fig-face3"/> draws the doubledecker plots above one another to show more detail and
       provide a better comparison of the distributions of error rates across sex and skin tones. The error rates
       were low for males and high for females, and they also increased as skin tone got darker. Microsoft mostly
       did better than Face++ and did better than IBM across the board. Males were put on the left, so that the
@@ -107,7 +107,7 @@
     <p>
       PPV values tend to be high. The graphics can look more informative if (1-PPV) = FDR (False Discovery Rate)
       is plotted instead. FDRs for each combination of sex and skin shade for each software are shown in Figure
-      <xref ref="fig-facefdr"/>. Whereas the bar widths in Figures <xref ref="fig-face3"/> and
+      <xref ref="fig-facefdr"/>. Whereas the bar widths in <xref ref="fig-face3"/> and
       <xref ref="fig-faceh"/> were the same for each software, being proportional to the number of cases in that
       group, this is no longer true here. The bar widths are proportional to the number of predictions of that
       group and that may be different for the different software systems.
@@ -126,7 +126,7 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-facefdr"/> displays low rates, as in Figure <xref ref="fig-face3"/>, but there are
+      <xref ref="fig-facefdr"/> displays low rates, as in <xref ref="fig-face3"/>, but there are
       important differences. More men are predicted than there are men in the study, in particular by Face++. The
       FDR values are mostly higher for males than females. These two conclusions are related. If you predict more
       males, then you will make fewer mistakes with your predictions of females. The higher FDR rates are for skin
@@ -135,7 +135,7 @@
 
     <p>
       There are a number of other criteria that could be plotted and it is astonishing just how many there are,
-      including TPR, TNR, FPR, FNR, SPC, ACC, FOR, DOR, NPV (@PPV:2021). The ones shown seem quite sufficient
+      including TPR, TNR, FPR, FNR, SPC, ACC, FOR, DOR, NPV (<xref ref="PPV-2021"/>). The ones shown seem quite sufficient
       and the error rates show clearly that the three software systems are not good enough. The analysis also
       shows where their weaknesses lie, with the highest error rates being for dark-skinned females.
     </p>
@@ -152,8 +152,8 @@
     <subsection xml:id="sec-face-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Graphics are better than tables of percentages for displaying overall results. (Figures <xref ref="fig-face3"/> and <xref ref="fig-faceh"/>)</p></li>
-        <li><p>Doubledecker plots underline why error rates can better be compared across softwares than Positive Predictive Values. (Figures <xref ref="fig-face3"/> and <xref ref="fig-facefdr"/>)</p></li>
+        <li><p>Graphics are better than tables of percentages for displaying overall results. (<xref ref="fig-face3"/> and <xref ref="fig-faceh"/>)</p></li>
+        <li><p>Doubledecker plots underline why error rates can better be compared across softwares than Positive Predictive Values. (<xref ref="fig-face3"/> and <xref ref="fig-facefdr"/>)</p></li>
       </ul>
     </subsection>
   </section>

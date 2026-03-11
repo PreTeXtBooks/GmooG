@@ -315,7 +315,7 @@
         <image source="images/comTimesX-1.png">
           <description>Density plots of finishing times in the 2019 Comrades race for females (above) and males (below), showing peaks at medal cut-off times marked by dotted lines.</description>
         </image>
-        <caption><p>Finishing times in the 2019 Comrades race for females and males.</p></caption>
+        <caption><p>Finishing times in the 2019 race for females (above) and males (below), dotted lines mark limits for awarding medals other than gold.</p></caption>
       </figure>
     </subsection>
 
@@ -339,27 +339,27 @@
           <p>Availability bias: rely too much on examples to hand. Data are available on the web for Olympic results
           that were missing in <xref ref="fig-olyAmd"/>, shown again here as <xref ref="fig-olyamdx"/>, but
           discussing the problems is more instructive (and less effort) than solving them in this case.</p>
-        </li>
-        <li><p>Representativeness bias: use particular examples without taking account of sample size and base rates.
-          Avoid by using spineplots for comparing rates (e.g., in <xref ref="fig-gayGR"/>) and UpAndDown plots for
-          comparing changes, as in <xref ref="fig-btw3"/>, drawn again in <xref ref="fig-btw23x"/>.</p>
-        </li>
-        <li><p>Perceptual bias: we see what we want to see.</p></li>
-      </ul>
-
-      <figure xml:id="fig-olyamdx">
+       <figure xml:id="fig-olyamdx">
         <image source="images/olyAmdx-1.png">
           <description>Dot plot of athletics field events for men showing percentage differences in gold medal performances compared with averages over the last six Games, with missing data for some events.</description>
         </image>
         <caption><p>Athletics field events for men: percentage differences in gold performances compared with averages over the last six Games.</p></caption>
       </figure>
-
-      <figure xml:id="fig-btw23x">
+        </li>
+        <li><p>Representativeness bias: use particular examples without taking account of sample size and base rates.
+          Avoid by using spineplots for comparing rates (e.g., in <xref ref="fig-gayGR"/>) and UpAndDown plots for
+          comparing changes, as in <xref ref="fig-btw3"/>, drawn again in <xref ref="fig-btw23x"/>.</p>
+              <figure xml:id="fig-btw23x">
         <image source="images/btw23X-1.png">
           <description>UpAndDown plot showing absolute changes in party support between the last two German elections as area and relative changes as height, with party colours.</description>
         </image>
         <caption><p>UpAndDown plot of absolute and relative changes in party support between two German elections.</p></caption>
       </figure>
+        </li>
+        <li><p>Perceptual bias: we see what we want to see.</p></li>
+      </ul>
+
+
     </subsection>
   </section>
 

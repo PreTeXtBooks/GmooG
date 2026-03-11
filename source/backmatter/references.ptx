@@ -48,6 +48,9 @@
   <!-- wilkinson:2005 -->
   <biblio xml:id="wilkinson-2005" type="raw">Wilkinson, Leland. <pubtitle>The Grammar of Graphics</pubtitle>. 2nd ed. Springer, New York, 2005.</biblio>
 
+  <!-- wickham:2007 -->
+  <biblio xml:id="wickham-2007" type="raw">Wickham, Hadley. Diamonds in the rough. <url href="http://www.diamondse.info/"/>. 2007.</biblio>
+
   <!-- wickham:2016 -->
   <biblio xml:id="wickham-2016" type="raw">Wickham, Hadley. <pubtitle>ggplot2: Elegant Graphics for Data Analysis</pubtitle>. 2nd ed. Springer-Verlag, New York, 2016.</biblio>
 
@@ -331,11 +334,19 @@
   <!-- corlett:2020 -->
   <biblio xml:id="corlett-2020" type="raw">Corlett, Tatsuya, Stavnichuk, Mariya, and Komarova, Svetlana. Population analysis of space travelers. <em>Life Sciences in Space Research</em>, 27:1&#8211;5, 2020.</biblio>
 
+  <!-- tidyt:2020a -->
+  <biblio xml:id="tidyt-2020a" type="raw">rfordatascience. Tidy Tuesday. <url href="https://github.com/rfordatascience/tidytuesday"/>. 2020.</biblio>
+
   <!-- tidyt:2020b -->
   <biblio xml:id="tidyt-2020b" type="raw">rfordatascience. Astronaut Database. <url href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-07-14"/>. 2020.</biblio>
 
   <!-- estDecath:2021 -->
   <biblio xml:id="estDecath-2021" type="raw">WA (World Athletics). Decathlon Top List. <url href="https://www.worldathletics.org/records/toplists/combined/decathlon/outdoor/men/senior/2021"/>. 2021.</biblio>
+  <!-- wikiBN:2020 -->
+  <biblio xml:id="wikiBN-2020" type="raw">Wikipedia. Bill Nelson. <url href="https://en.wikipedia.org/wiki/Bill_Nelson"/>. 2020.</biblio>
+
+  <!-- wikiSp:2020 -->
+  <biblio xml:id="wikiSp-2020" type="raw">Wikipedia. List of human spaceflights. <url href="https://en.wikipedia.org/wiki/List_of_human_spaceflights"/>. 2020.</biblio>
 
   <!-- asensio:2021a -->
   <biblio xml:id="asensio-2021a" type="raw">Asensio, Omar, Apablaza, Camila, Lawson, M. Cade, and Walsh, Sarah. A field experiment on workplace norms and electric vehicle charging etiquette. <em>Journal of Industrial Ecology</em>, 2021.</biblio>
@@ -435,4 +446,15 @@
 
   <!-- bialik:2008 -->
   <biblio xml:id="bialik-2008" type="raw">Bialik, Carl. Starbucks: Counting Beverages. <em>The Wall Street Journal</em>, 2008.</biblio>
+  <!-- fina:2021 -->
+  <biblio xml:id="fina-2021" type="raw">FINA. F&#233;d&#233;ration Internationale de Natation. <url href="https://www.fina.org"/>. 2021. (accessed 24.02.2021)</biblio>
+
+  <!-- spear:2021 -->
+  <biblio xml:id="spear-2021" type="raw">Spearing, Harry, Tawn, Jonathan, Irons, David, Paulden, Tim, and Bennett, Grace. Ranking, and other properties, of elite swimmers using extreme value theory. <em>JRSS A</em>, 184:368&#8211;395, 2021.</biblio>
+
+  <!-- oppenheim:1970 -->
+  <biblio xml:id="oppenheim-1970" type="raw">Oppenheim, F. <pubtitle>The History of Swimming</pubtitle>. Swimming World, North Hollywood, California, 1970.</biblio>
+
+  <!-- hofmann:2017 -->
+  <biblio xml:id="hofmann-2017" type="raw">Hofmann, Heike, Wickham, Hadley, and Kafadar, Karen. Letter-Value Plots: Boxplots for Large Data. <em>Journal of Computational and Graphical Statistics</em>, 26(3):469&#8211;477, 2017.</biblio>
 </references>
