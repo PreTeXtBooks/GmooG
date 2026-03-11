@@ -15,16 +15,23 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: oscarlevin/pretext-full
     permissions:
       contents: read
     steps:
-      - name: Checkout repository
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Build PreTeXt book (web target)
-        uses: PreTeXtBook/pretext-action@v2
+      - name: Install dependencies
+        run: pip install -r requirements.txt --break-system-packages
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          targets: web
+          node-version: '22'
+
+      - name: Build PreTeXt book (web target)
+        run: pretext build web
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
