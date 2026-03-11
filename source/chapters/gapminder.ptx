@@ -1,5 +1,76 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-gapminder">
-  <title>Gapminder</title>
-  <p>Placeholder chapter. Content to be migrated from R Markdown.</p>
+  <title>Graphics and Gapminder</title>
+
+  <epigraph>
+    <q>The world cannot be understood without numbers. But the world cannot be understood with numbers alone.</q>
+    <attribution>Hans Rosling</attribution>
+  </epigraph>
+
+  <introduction>
+    <p><em>Background.</em> Hans Rosling and his Gapminder team have done excellent work in collecting and presenting data on developments in world health, country by country, over many years.</p>
+    <p><em>Questions.</em> How has life expectancy changed over time? How do the patterns differ by countries? How good are the data?</p>
+    <p><em>Sources.</em> Gapminder website.</p>
+    <p><em>Structure.</em> Life expectancy estimates for 187 countries from 1800 to 2016. There are also forecasts up to 2100 giving 301 data points per country in all.</p>
+  </introduction>
+
+  <section xml:id="sec-gapminder-hans-rosling">
+    <title>Gapminder and Hans Rosling</title>
+    <p>The Gapminder Foundation that Hans Rosling and colleagues set up continues to collect and monitor global patterns of health. Anyone who has seen a film of one of Rosling's talks, or was lucky enough to attend one, will remember his scatterplots animated over time. One he used was of life expectancy at birth plotted against fertility rate. The main patterns he described are clear and informative, emphasising the overall increases in life expectancy across all countries. If life expectancy is examined over time on its own, there are additional features that Rosling did not have time to discuss, including some dramatic sharp drops and rises.</p>
+    <p>The life expectancy data for each country can be plotted against time. Two striking features not usually discussed are the sharp falls and rises, and the unchanging levels (horizontal lines) during the nineteenth century.</p>
+    <p>The sharp falls and rises point to known population disasters in certain countries and years: for example, the famine in Ukraine in 1932-33 and the Irish potato famine in the second half of the 1840s. Gapminder researchers estimated data for catastrophic years using modelling techniques; they explicitly note these are guesstimates. It is important to draw attention to catastrophes rather than ignore them.</p>
+    <p>The straight lines imply that life expectancies for many countries were constant over long periods, which is highly unlikely. More plausibly, a single estimated value was extended across many years when no additional information was available. Gapminder documents such limitations through data-quality notes.</p>
+  </section>
+
+  <section xml:id="sec-gapminder-what-else">
+    <title>What else can be seen in Gapminder's plots?</title>
+    <p>Several further features can be noticed: countries with higher life expectancy in the nineteenth century, countries with dramatic recent falls, countries with consistently lower levels in the first half of the twentieth century, and countries with late starts or gaps in reporting.</p>
+    <p>Countries with the highest nineteenth-century values include Norway and Sweden. Denmark, Norway, and Sweden show very similar long-term series, with notable differences around the Spanish Flu period and in more recent levels.</p>
+    <p>Recent serious falls include Rwanda in 1994 and Haiti in 2010. A country with notably low values in the mid twentieth century was Yemen. Some small countries had data beginning around 1970 and were excluded from further analyses, along with other countries with sparse coverage.</p>
+    <p>Not all features are equally important and different viewers may prioritise different details. Looking closely at graphics is often rewarding.</p>
+  </section>
+
+  <section xml:id="sec-gapminder-regions">
+    <title>Analysis by regions of the world</title>
+    <introduction>
+      <p>Colouring countries by Gapminder's four-region world classification highlights broad differences. European countries have had the highest life expectancies over much of the period, while African countries contain most of the lowest values in recent years. Two major European drops in the first half of the twentieth century align with World War I plus Spanish flu, and World War II.</p>
+      <p>With many overplotted series, colour alone is limited. Faceting by region separates the data and reveals features that are otherwise hidden, such as countries that sit well above regional peers and countries that remain below peers for long periods.</p>
+      <p>In these comparisons, countries like Australia and New Zealand (classified in Asia in this setup), Seychelles (Africa), and the USA and Canada (Americas) stand out on the high side, while Turkey appears low for many post-1950 years within Europe.</p>
+      <p>Counts of countries per region are moderately similar, but population totals tell a very different story. Asia's total population is much larger than the other three regions combined.</p>
+    </introduction>
+
+    <subsection xml:id="sec-gapminder-country-size">
+      <title>Taking account of country size</title>
+      <p>Gapminder often uses bubble charts to encode country size in scatterplots, but this does not translate cleanly to time-series displays. Two alternatives are useful: selecting countries by population size, or aggregating by region using population weights over time.</p>
+      <p>Selecting the six countries with populations above 200 million in 2016 shows familiar long-term life expectancy increases, with major interruptions from wars and disasters. Faceting those six series and scaling line width by population gives additional context, though China and India dominate so strongly that finer details can be harder to see.</p>
+      <p>These six countries account for a large fraction of world population, and that fraction changes over time. Historical population shares suggest especially large relative weight for China in the nineteenth century, though uncertainty in early population estimates should be kept in mind.</p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-gapminder-checking-data">
+    <title>Checking what is in the data</title>
+    <p>Gapminder provides life-expectancy-at-birth data for 187 countries over 1800 to 2016, plus forecasts from 2017 to 2100. A separate country-region file can be merged with life expectancy data, which reveals naming mismatches and missing coverage. In this case, Macedonia FYR needed to be aligned with North Macedonia, and several very small countries had little or no early-period data and were excluded from most plots.</p>
+  </section>
+
+  <section xml:id="sec-gapminder-definitions">
+    <title>The importance of data definitions</title>
+    <p>Gapminder defines life expectancy at birth as the average number of years a newborn would live if current mortality patterns remained unchanged. Comparisons over time and across countries assume consistent definitions, collection practices, and reporting standards. Older estimates are generally less reliable, and reductions in infant mortality can have strong effects on this measure.</p>
+    <p>Cross-country comparisons also assume stable country entities, which is not historically true. Gapminder's default treatment uses present-day borders across the historical timeline, and border changes can materially affect interpretation.</p>
+  </section>
+
+  <section xml:id="sec-gapminder-discussion">
+    <title>Discussion</title>
+    <p>Gapminder offers far more data than considered in this chapter. Graphics help reveal and communicate information, but they can become complex quickly, especially when moving from univariate time series to multivariate displays with additional encodings and interactions.</p>
+    <p>Studies of students using Gapminder tools suggest that users may face substantial difficulties without sufficient software familiarity and experience with the relevant graphical forms. Graphics are powerful, but not automatically easy to interpret.</p>
+    <p><em>Answers.</em> Life expectancy has improved dramatically, with interruptions, over the last century, especially in Western nations. Other countries have caught up substantially but still lag in many cases. Nineteenth-century data are incomplete and often suspiciously constant.</p>
+    <p><em>Further questions.</em> Life expectancy is only one of many indicators available in Gapminder. The same data ecosystem supports investigations across health, education, environment, and beyond.</p>
+
+    <p><em>Graphical takeaways.</em></p>
+    <ul>
+      <li><p>One graphic is not enough; different versions of the same graphic provide more information.</p></li>
+      <li><p>Graphics can show information directly that analytic methods may not surface as clearly.</p></li>
+      <li><p>Faceting can reveal within-group differences that are hidden in overplotted displays.</p></li>
+      <li><p>Unpolished graphics can still reveal important information.</p></li>
+    </ul>
+  </section>
 </chapter>
