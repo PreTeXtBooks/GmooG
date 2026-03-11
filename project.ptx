@@ -9,7 +9,7 @@
     <target name="web">
       <format>html</format>
       <source>source/main.ptx</source>
-      <publication>publication.ptx</publication>
+      <publication>source/publication/publication.ptx</publication>
       <output-dir>output/web</output-dir>
       <stringparam key="html.css.extra" value="custom-styles.css"/>
     </target>
@@ -18,7 +18,7 @@
     <target name="print">
       <format>pdf</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>source/publication/publication.ptx</publication>
       <output-dir>output/print</output-dir>
     </target>
     
@@ -26,7 +26,7 @@
     <target name="epub">
       <format>epub</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>source/publication/publication.ptx</publication>
       <output-dir>output/epub</output-dir>
     </target>
   </targets>
