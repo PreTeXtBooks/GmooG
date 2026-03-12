@@ -38,11 +38,11 @@
     <subsection xml:id="sec-wrang-errors">
       <title>Errors, typos, outliers, missing values</title>
       <p>
-        Some errors are obvious (e.g., impossible values like diamonds with zero dimensions in the Diamonds
-        chapter), some become visible thanks to graphics displays (such as the diamond outliers observed in a
-        scatterplot), some emerge after analyses. The Olympics dataset had different names for the same event at
-        different Olympic Games, as uncovered by a plot of event names. The human spaceflight dataset recorded
-        different times for people on the same mission and had a few other data issues. Amongst the chess players
+        Some errors are obvious (e.g., impossible values like diamonds with zero dimensions in <xref ref="secDiam2"/>),
+        some become visible thanks to graphics displays (such as the diamond outliers observed in <xref ref="fig-scatxyz"/>),
+        some emerge after analyses. The Olympics dataset in <xref ref="ch-olympics"/> had different names for the same event at
+        different Olympic Games, as uncovered by <xref ref="fig-olyEg"/>. The human spaceflight dataset in <xref ref="ch-astronauts"/> recorded
+        different times for people on the same mission and had a few other data issues that are discussed in <xref ref="secAstro4"/>. Amongst the chess players
         with FIDE ratings in 2015 there were supposedly born in 1900. These errors were doubtless due to a 00
         coding used somewhere in the original data submission. The corresponding ages were marked as NA, a
         standard code for a missing value.
@@ -54,8 +54,8 @@
         larger datasets this is less critical.
       </p>
       <p>
-        Missing values may be recorded with different codings. The Annenberg survey data used "998" for "Don't
-        know" and "999" for "Refused". In the movie dataset, some missing values were recorded as "\N".
+        Missing values may be recorded with different codings. The Annenberg survey data in <xref ref="ch-gay-rights"/> used "998" for "Don't
+        know" and "999" for "Refused". In the movie dataset in <xref ref="ch-movies"/>, some missing values were recorded as "\N".
       </p>
     </subsection>
 
@@ -70,23 +70,23 @@
 
       <p>
         Variables may be transformed onto alternative scales or combined with other variables to form new ones.
-        The boxplot of movie runtimes is scaled in weeks instead of minutes to help viewers make sense of the
+        The boxplot of movie runtimes, <xref ref="fig-movierunb"/>, is scaled in weeks instead of minutes to help viewers make sense of the
         extreme values. Who remembers that 50,000 minutes is around 5 weeks?
       </p>
 
       <p>
-        Several transformations were used in the Football Leagues chapter. The main ones were needed to convert
+        Several transformations were used in <xref ref="ch-leagues"/> about football leagues. The main ones were needed to convert
         game scores into tables of results and league tables. The wrangling was complicated by a number of changes
         over time: three points for a win instead of two, using goal difference instead of goal average, changes
         in divisional structure, and, most recently, an incomplete season for two divisions due to Covid. Other
-        transformations included a square root transformation to emphasise higher league positions over lower
-        ones. In the wormcharts of team performances across seasons, cumulative team points were transformed by
+        transformations included a square root transformation used in <xref ref="fig-teamBPSq"/> to emphasise higher league positions over lower
+        ones. In the wormcharts of team performances across seasons (<xref ref="fig-worm15"/> to <xref ref="fig-worm3768"/>), cumulative team points were transformed by
         subtracting the league average at the time to make it easier to compare teams' performances.
       </p>
 
       <p>
-        The mission times of individuals on spaceflights were initially plotted on a linear scale, shown again on
-        the left of <xref ref="fig-flighttx"/>. Plotting mission times on a log scale, repeated on the
+        The mission times of individuals on spaceflights were initially plotted on a linear scale in <xref ref="fig-flightt"/>, shown again on
+        the left of <xref ref="fig-flighttx"/>. Plotting mission times on a log scale in <xref ref="fig-flighttl"/>, repeated on the
         right of <xref ref="fig-flighttx"/>, provided a better view. It also led to adding a more
         informative vertical scale.
       </p>
@@ -100,8 +100,8 @@
 
       <p>
         Transformations can be used to standardise data to make distributions for different groups or variables
-        more comparable. In the Olympics chapter, performance improvements in athletics events were compared over
-        the years. <xref ref="fig-olyaa"/> shows the percentage changes for track and field events for men
+        more comparable. In <xref ref="secOlymps2"/>, performance improvements in athletics events at the Olympics were compared over
+        the years. <xref ref="fig-olyA"/>, repeated in <xref ref="fig-olyaa"/>, shows the percentage changes for track and field events for men
         and women. Baselines were taken to be the average of gold medal performances at the Olympics from 1996 to
         2016. For field events gold medal performances tended higher as winning distances became longer and winning
         heights became higher. For track events gold medal performances tended lower, as winning times got faster.
@@ -119,8 +119,8 @@
       <p>
         Variables in parallel coordinate plots almost always need to be standardised and there are several ways
         of doing it. Methods include putting variables individually onto [0,1] scales or normalising them by using
-        the mean and standard deviation or by using robust statistics. There are examples in the Darwin's Finches
-        and Palmer Penguins chapters, where the transformations of the continuous variables are to [0,1] scales.
+        the mean and standard deviation or by using robust statistics. There are examples in <xref ref="ch-darwin-finches"/> for Darwin's finches and in
+        <xref ref="ch-palmer-penguins"/> for the Palmer penguins, where the transformations of the continuous variables are to [0,1] scales.
       </p>
 
       <p>
@@ -133,7 +133,7 @@
       <p>
         Categorical variables may be reported as numbers instead of text and it is worth making the effort to
         convert them to meaningful labels. Transforming the order of levels of a categorical variable from a
-        default such as alphabetic is always sensible (and is discussed in the Sort Order chapter). Occasionally
+        default such as alphabetic is always sensible (and is discussed in <xref ref="ch-sort-order"/>). Occasionally
         numeric variables are assumed by software to be character variables, usually because the data file has a
         text error, and they have to be converted to numeric after fixing the text error. Software can often make
         good guesses about data characteristics, but you need to check.
@@ -141,8 +141,8 @@
 
       <p>
         Date and time information need special handling in software and almost certainly have to be transformed
-        first. Newcomb's estimates of the speed of light are displayed by experimental order and by date. The
-        differences are important for understanding the data. The two plots are shown again in Figure
+        first. Newcomb's estimates of the speed of light are displayed by experimental order in <xref ref="fig-newct1X"/> and by date in
+        <xref ref="fig-newct2X"/>. The differences are important for understanding the data. The two plots are shown again in Figure
         <xref ref="fig-newcty"/> below. The dates taken as text are from Newcomb's paper (<xref ref="newcomb-1891"/>) and were
         transformed to a special date format so that the R software could scale them appropriately.
       </p>
@@ -155,7 +155,7 @@
       </figure>
 
       <p>
-        In the Deer chapter two datasets of half-hourly data over 10 years were analysed. Investigating patterns
+        In <xref ref="ch-deer"/> two datasets of half-hourly data over 10 years were analysed. Investigating patterns
         across days, months, and years required combining the textual date and time information and converting it
         into dates and times R could deal with.
       </p>
@@ -164,10 +164,10 @@
         Spatial datasets also require special treatment. They may be reported in any one of a large number of
         possible coordinate reference systems and it is essential in any study to convert all the spatial data to
         the same system. Much work has gone into transforming between these systems and the current state of play
-        is summarised in <xref ref="bivand-2020"/>. One example involved adding city locations to the maps of France. A
-        further complication in the Bertin chapter was converting a modern shape file of the departments of
+        is summarised in <xref ref="bivand-2020"/>. One example here involved adding city locations to the maps of France in <xref ref="fig-Bertagp"/> and <xref ref="fig-BertLine"/>. A
+        further complication in <xref ref="ch-bertin"/> was converting a modern shape file of the departments of
         France to one matching the form in 1954. Finally cartograms may be used to take account of differences
-        between areas. The spatial transformations applied require complex iterative methods.
+        between areas as in <xref ref="fig-BertCart"/> and <xref ref="fig-gayMapC"/>. The spatial transformations applied require complex iterative methods.
       </p>
     </subsection>
   </section>
@@ -190,12 +190,12 @@
 
     <p>
       Subsetting selects part of a dataset to be analysed. Grouping splits a dataset or subset into groups to be
-      compared. In the Psoriasis chapter results for two groups, those getting a treatment and those receiving a
-      placebo, were compared. In the Darwin's Finches chapter species were compared on one island, and one
-      species was compared across different islands. In the Palmer Penguins chapter three species of penguins
-      were compared. In the Swimming chapter subsets of swimming performances were chosen and then compared by
+      compared. In <xref ref="ch-psoriasis"/> results for two groups, those getting a treatment for their psoriasis and those receiving a
+      placebo, were compared. In <xref ref="ch-darwin-finches"/> species of Darwin's finches were compared on one island, and one
+      species was compared across different islands. In <xref ref="ch-palmer-penguins"/> three species of Penguins were
+      compared. In <xref ref="ch-swimming"/> subsets of swimming performances were chosen and then compared by
       stroke, distance, and swimmer's sex. In the Comrades Marathon dataset the numbers running were grouped by
-      sex and age and compared over time in <xref ref="fig-comcatsx"/>.
+      sex and age and compared over time in <xref ref="fig-comcats"/>, shown here in reduced size as <xref ref="fig-comcatsx"/>.
     </p>
 
     <figure xml:id="fig-comcatsx">
@@ -207,19 +207,18 @@
 
     <p>
       Statistics are summaries based on aggregations. They depend on how data have been subset, grouped or
-      aggregated. In the analysis of the 2021 German election, results could be studied by individual
+      aggregated. In the analysis of the 2021 German election in <xref ref="ch-bundestag-election"/>, results could be studied by individual
       constituency, by Bundesland, by groups of Bundesl&#228;nder (such as the former East and West), or by the
       whole country. It is relatively easy to keep track of such hierarchical or nested structures. If there are
       several categorical variables with no hierarchical structure, as in the study of fuel efficiency of cars in
-      the US, there are many possible summarising levels. Just considering two of the classifying variables could
+      the US in <xref ref="ch-us-fuel"/>, there are many possible summarising levels. Just considering two of the classifying variables could
       lead to statistics for vehicle classes within manufacturer or for manufacturers within vehicle class or for
       vehicle classes and manufacturers.
     </p>
 
     <p>
       Further flexibility arises when there are variables with many categories. Analyses may be simplified by
-      combining smaller categories, as was done in the Chess, Euros, US Fuel, Titanic, and German Election
-      chapters. Different analysts will have different opinions on how small small should be.
+      combining smaller categories, as was done in <xref ref="ch-chess"/>, <xref ref="ch-euros"/>, <xref ref="ch-us-fuel"/>, <xref ref="ch-titanic"/>, and <xref ref="ch-bundestag-election"/>. Different analysts will have different opinions on how small small should be.
     </p>
   </section>
 
@@ -233,7 +232,7 @@
     <p>
       Merging, subsetting, grouping, aggregating all create new versions of a dataset. Transforming variables and
       creating new ones do too. It is helpful to name and store these new datasets if they are going to be used
-      more than once. This can lead to a large number of stored objects (the Football Leagues chapter had over
+      more than once. This can lead to a large number of stored objects (<xref ref="ch-leagues"/> had over
       thirty), but provides structure for analyses&#8212;assuming supportive naming conventions are used.
     </p>
 
@@ -370,8 +369,8 @@
       of point data there might be a layer of group means and layers for linear fit and smoothed models. Data may
       be recorded as estimates with measures of variability. The corresponding uncertainty can be represented by
       error bars. Model uncertainty may be represented in a graphic by ribbons or bands around the model.
-      Examples include chess ratings by age, age by year of mission of astronauts (Figure
-      <xref ref="fig-astgy"/>), and Titanic survival rates.
+      Examples include chess ratings by age (<xref ref="fig-AgeRatingScat"/>), age by year of mission of astronauts (<xref ref="fig-astg"/>,
+      redrawn here as <xref ref="fig-astgy"/>), and Titanic survival rates (<xref ref="fig-titanagesc"/>).
     </p>
 
     <figure xml:id="fig-astgy">
@@ -414,7 +413,7 @@
 
       <p>
         <xref ref="fig-worm54"/> is a wormchart for the English League Championship of 1954&#8211;55,
-        similar to the plots for other seasons in the Football Leagues chapter. There were 22 teams, each playing
+        similar to the plots for other seasons in <xref ref="secFootball6"/>. There were 22 teams, each playing
         42 games. There were just 2 points for a win and only two teams were relegated. Chelsea won with the low
         total of 54 points. At the half-way mark of 21 games, Chelsea were level on points with Cardiff City, who
         finished 20th. The bottom club, Sheffield Wednesday, had an appalling run in mid-season and would have
@@ -456,7 +455,7 @@
         Datasets come in different shapes, sizes, and formats. Modern software can usually read all of them, but
         some conversion may be necessary. Spreadsheets offer flexible structures with multiple sheets, and may
         include background information, annotations, and other non-standard structures. These need special
-        treatment, as with the UN population dataset used in the Chess chapter. Only the first and second sheets
+        treatment, as with the UN population dataset used in <xref ref="ch-chess"/>. Only the first and second sheets
         were required and the initial lines of the first had to be edited. Spreadsheets can be very useful for
         initial recording of data because of the notes and background information that can be included. Public
         organisations often distribute data in spreadsheet format. Journal authors sometimes make their data
@@ -464,17 +463,17 @@
         data. Additional text and multi-line headers may be employed. Different versions, subsets, aggregations
         of a dataset may be provided in individual sheets of a spreadsheet without being linked. In other words,
         if a data value were to be amended, it would have to be changed separately in each sheet in which it
-        appeared (e.g., the spreadsheet used in the Malaria chapter).
+        appeared (e.g., the spreadsheet used in <xref ref="ch-malaria"/>).
       </p>
       <p>
-        If data are needed from more than one dataset, the datasets must usually be merged. The Chess chapter
+        If data are needed from more than one dataset, the datasets must usually be merged. <xref ref="ch-chess"/>
         combined the chess ratings dataset with files for country populations, country codings, and regions.
         The ratings data for two separate years were also merged. Mapped data reveal spatial patterns. Shape
-        files for areas can be merged with data files. This was done in the Bertin, Gay Rights, Titanic, and
-        German Election chapters.
+        files for areas can be merged with data files. This was done in <xref ref="ch-bertin"/> (Bertin's French workforce data), <xref ref="ch-gay-rights"/> (Gay Rights survey), <xref ref="ch-titanic"/> (Titanic), and
+        <xref ref="ch-bundestag-election"/> (German election 2021).
       </p>
       <p>
-        In the Democratic Convention 1912 chapter the voting results file was summarised by state and merged with
+        In <xref ref="ch-democrats-1912"/> the voting results file for the 1912 Democratic Primary was summarised by state and merged with
         files for the numbers of each state's electoral votes in 1912 and 2020, and with a file for state
         populations in 2018. The unsummarised data file was also separately merged with a file of estimated
         times at which the ballots took place.
@@ -492,11 +491,10 @@
       </p>
       <p>
         Reproducing published work is easier than it was, but is still not satisfactory, as various surveys in
-        different fields have pointed out (e.g., <xref ref="gabelica-2022"/>). Two examples arose in this book. In the Facial
-        Recognition chapter numerous tables of percentage success rates of facial recognition software were
+        different fields have pointed out (e.g., <xref ref="gabelica-2022"/>). Two examples arose in this book. In <xref ref="ch-facial-recognition"/> numerous tables of percentage success rates of facial recognition software were
         reported, but the raw data were not made available. Making the reasonable assumption that the underlying
         results must have been integers, it was possible to reconstruct much of the data from the percentages
-        reported. In the supplementary material to the article on tests for malaria, there was a multi-sheet
+        reported. In the supplementary material to the article on tests for malaria discussed in <xref ref="ch-malaria"/>, there was a multi-sheet
         Excel spreadsheet giving the raw data and the data used in the article's plots and tables. The sheets
         were not linked and formulae not reported. With a little work the connections could be reconstructed.
         With other datasets (that were therefore not included in the book) insufficient information was provided
