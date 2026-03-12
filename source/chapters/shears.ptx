@@ -41,7 +41,7 @@
     <title>Comparing two shearwater species (Audubon and Gal&#225;pagos)</title>
 
     <p>
-      Figure <xref ref="fig-puffbar"/> is an overview comparing two species on each of five variables. Numeric codes
+      <xref ref="fig-puffbar"/> is an overview comparing two species on each of five variables. Numeric codes
       have been replaced with text labels and variable categories ordered for better interpretation. Vertical scales
       are the same, aiding comparison across graphics as well as within.
     </p>
@@ -105,7 +105,7 @@
 
     <p>
       If a clustering analysis of the data for the two species were carried out, the species information would not
-      be used. Figure <xref ref="fig-puffmos"/> displays all combinations of the four descriptive variables (i.e.,
+      be used. <xref ref="fig-puffmos"/> displays all combinations of the four descriptive variables (i.e.,
       excluding <c>sex</c>) by the numbers of birds for each combination. There are barcharts of <c>collar</c>
       faceted by <c>eyebrows</c> in the columns and by <c>border</c> and <c>undertail</c> in the rows. Six of the
       twelve combinations of the latter two variables do not occur for the two species, so there are only six rows.
@@ -152,7 +152,7 @@
 
     <p>
       The single misclassified bird is then an Audubon's shearwater with pronounced eyebrows, no collar, white
-      undertail, and no border, also remarked on in Figure <xref ref="fig-puffdd"/>. Most clustering methods should
+      undertail, and no border, also remarked on in <xref ref="fig-puffdd"/>. Most clustering methods should
       be able to separate the two species almost completely.
     </p>
 
@@ -164,7 +164,7 @@
     <p>
       The full version of the dataset includes an additional species, 84 Tropical shearwaters. There is an extra
       collar category for two of the Tropical shearwaters, but with no description given. Figure
-      <xref ref="fig-puffmos3"/> shows the data in the style of Figure <xref ref="fig-puffmos"/>, but with the
+      <xref ref="fig-puffmos3"/> shows the data in the style of <xref ref="fig-puffmos"/>, but with the
       bars coloured by species.
     </p>
 
@@ -198,9 +198,9 @@
     <subsection xml:id="sec-shears-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Barcharts for the same dataset should have the same frequency scale for ease of comparison. (Figure <xref ref="fig-puffbar"/>)</p></li>
-        <li><p>Ordering of categories in categorical variables and arrangement of faceting variables strongly influence how easy it is to read a plot. (Figures <xref ref="fig-puffdd"/> and <xref ref="fig-puffmos"/>)</p></li>
-        <li><p>Faceted barcharts show where cases are in multivariate categorical data. (Figures <xref ref="fig-puffmos"/> and <xref ref="fig-puffmos3"/>)</p></li>
+        <li><p>Barcharts for the same dataset should have the same frequency scale for ease of comparison. (<xref ref="fig-puffbar"/>)</p></li>
+        <li><p>Ordering of categories in categorical variables and arrangement of faceting variables strongly influence how easy it is to read a plot. (<xref ref="fig-puffdd"/> and <xref ref="fig-puffmos"/>)</p></li>
+        <li><p>Faceted barcharts show where cases are in multivariate categorical data. (<xref ref="fig-puffmos"/> and <xref ref="fig-puffmos3"/>)</p></li>
       </ul>
     </subsection>
   </section>
