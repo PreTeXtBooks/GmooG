@@ -246,13 +246,14 @@
     </figure>
 
     <p>Smoothed ratings by age for active players were uniformly lower in 2020 than in 2015. This is likely because there were many more active players in 2020 than in 2015. It is curious that the smooth for 2020 starts at a higher age than the one for 2015. Exploring the data showed that there were fewer very young rated players in 2020. This was probably due to the pandemic leading to few tournaments being played, so that the very youngest players could not get started.</p>
-   <subsection><tite>Individual players</title>
+   <subsection>
+<title>Individual players</title>
 <p>The changes between December 2015 and December 2020 could be explored further by looking at the three populations of players involved: those who appear in both lists, those who were present in 2015 but not in 2020, and the new ones.
 </p><p>
 Merging the two data files by player ID number reveals that players appear in both lists, players are on the 2015 list, but not on the 2020 list, and players are only on the 2020 list. It seems to be much harder to leave the ratings list than to join it!
 </p><p>
 Rather than studying population changes between two particular time points, it would be more informative to create a longitudinal dataset by combining all the rating datasets and studying players’ career paths over the months and years.</p>    
-  </section>
+ </subsection> </section>
 
   <section xml:id="secChess5">
     <title>Grandmasters and Masters</title>

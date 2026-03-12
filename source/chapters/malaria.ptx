@@ -25,7 +25,7 @@
       <caption><p>Percentages of positives for the four tests.</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-maltest"/> summarises the results for the remaining cases. The tests found different percentages of positives, with the new test reporting the most positives. The authors believe that the new method may detect previous as well as current infections. Figure <xref ref="fig-malvis"/> displays how often the different combinations of test results arose.</p>
+    <p><xref ref="fig-maltest"/> summarises the results for the remaining cases. The tests found different percentages of positives, with the new test reporting the most positives. The authors believe that the new method may detect previous as well as current infections. <xref ref="fig-malvis"/> displays how often the different combinations of test results arose.</p>
 
     <figure xml:id="fig-malvis">
       <image source="images/malvis-1.png">
@@ -34,7 +34,7 @@
       <caption><p>Combinations of individual malaria test results (red rectangles are positives).</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-malvis"/> displays how often the different combinations of test results arose. The first column shows the cases in which all tests gave negative results for malaria and the second column all cases with positive results. The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in <xref ref="arndt-2021"/>. There was disagreement at one level or another for a substantial share of the cases. All 16 possible combinations of results are in evidence.</p>
+    <p><xref ref="fig-malvis"/> displays how often the different combinations of test results arose. The first column shows the cases in which all tests gave negative results for malaria and the second column all cases with positive results. The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in <xref ref="arndt-2021"/>. There was disagreement at one level or another for a substantial share of the cases. All 16 possible combinations of results are in evidence.</p>
 
     <p>The next display shows that no one test dominates another. The main diagonal elements in each subdisplay show the numbers of disagreements between those two tests. In each case there are disagreements of both kinds, positive-negative and negative-positive. Serious cases are presumably recognised by all methods. Borderline cases may be recognised by some but not by others.</p>
 
@@ -49,7 +49,7 @@
   <section xml:id="sec-malaria-additional">
     <title>Additional analyses</title>
 
-    <p>According to the paper, the LM test is the gold standard and it can be seen how the distribution of the new ROMD measurement differs according to cases testing negatively and positively on LM in Figure <xref ref="fig-mallm"/>.</p>
+    <p>According to the paper, the LM test is the gold standard and it can be seen how the distribution of the new ROMD measurement differs according to cases testing negatively and positively on LM in <xref ref="fig-mallm"/>.</p>
 
     <figure xml:id="fig-mallm">
       <image source="images/malLM-1.png">
@@ -60,7 +60,7 @@
 
     <p>Dashed lines have been drawn at the magneto-optical test cut-off. The log(MO) values are higher for the positive LM group, although there are some small values too. The same applies in reverse for the negative LM group. The choice of cut-off will depend on the numbers of errors and on the relative importance assigned to false negatives and false positives.</p>
 
-    <p>Some other information was available in the dataset, including the age, weight, and sex of those tested. Figure <xref ref="fig-malaw"/> plots weight by age for females and males separately.</p>
+    <p>Some other information was available in the dataset, including the age, weight, and sex of those tested. <xref ref="fig-malaw"/> plots weight by age for females and males separately.</p>
 
     <figure xml:id="fig-malaw">
       <image source="images/malAW-1.png">
@@ -79,9 +79,9 @@
     <subsection xml:id="sec-malaria-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Matrix plots display multivariate categorical data, treating each variable equally. (Figure <xref ref="fig-malvis"/>)</p></li>
-        <li><p>If test results are quantitative, graphics show the effect of cut-off points. (Figure <xref ref="fig-mallm"/>)</p></li>
-        <li><p>Scatterplots summarise the association between two variables better than analytic methods. (Figure <xref ref="fig-malaw"/>)</p></li>
+        <li><p>Matrix plots display multivariate categorical data, treating each variable equally. (<xref ref="fig-malvis"/>)</p></li>
+        <li><p>If test results are quantitative, graphics show the effect of cut-off points. (<xref ref="fig-mallm"/>)</p></li>
+        <li><p>Scatterplots summarise the association between two variables better than analytic methods. (<xref ref="fig-malaw"/>)</p></li>
       </ul>
     </subsection>
   </section>

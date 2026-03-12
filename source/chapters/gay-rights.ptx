@@ -21,21 +21,27 @@
 
     <figure xml:id="fig-gayS">
       <caption>Support for same-sex marriage at state level by respondent age. A red dotted line marks 50% support. Cases with any values missing have been excluded and data for ages over 80 combined into one value at 81. Point areas are proportional to the number of respondents of that age.</caption>
-      <image source="images/gayS-1.png"/>
+      <image source="images/gayS-1.png">
+        <description>Bubble chart of percentage support for same-sex marriage at state level by respondent age, ranging from about 18 to 81. Support starts above 50% for the youngest respondents and declines with age, showing a step-function pattern with similar levels between ages 40–55 and again between ages 62–77. A red dotted line marks 50% support. Bubble sizes reflect the number of respondents at each age.</description>
+      </image>
     </figure>
 
-    <p>There is a fairly steady decline in support by age, starting with a few young ages with majority support for same-sex marriage amongst those expressing an opinion, where those responding Don't know or refusing to answer have been treated as missing. With increasing age it looks like a step function with about the same level of support between ages 40 and 55 and similarly between ages 62 and 77. This was discussed in @gelman:2020 where they suggested and compared several nonlinear models.</p>
+    <p>There is a fairly steady decline in support by age, starting with a few young ages with majority support for same-sex marriage amongst those expressing an opinion, where those responding Don't know or refusing to answer have been treated as missing. With increasing age it looks like a step function with about the same level of support between ages 40 and 55 and similarly between ages 62 and 77. This was discussed in <xref ref="gelman-2020"/> where they suggested and compared several nonlinear models.</p>
 
     <p>The dataset is large enough to look at opinions by age and sex together. Figure <xref ref="fig-gaySg"/> shows that females are more in favour than males at almost every age. The effect on these opinions of sex and race together can also be investigated. Figure <xref ref="fig-gayGR"/> shows a doubledecker plot for this. The patterns of support by race are the same for males and females, with female rates being higher. Rates for blacks are lowest.</p>
 
     <figure xml:id="fig-gaySg">
       <caption>Support for same-sex marriage at state level by age of respondent for females (purple) and males (green).</caption>
-      <image source="images/gaySg-1.png"/>
+      <image source="images/gaySg-1.png">
+        <description>Bubble chart of percentage support for same-sex marriage at state level by respondent age, with separate series for females (purple) and males (green). Females show higher support than males at almost every age. Both series decline with increasing age.</description>
+      </image>
     </figure>
 
     <figure xml:id="fig-gayGR">
       <caption>Support for same-sex marriage at state level by sex and race.</caption>
-      <image source="images/gayGR-1.png"/>
+      <image source="images/gayGR-1.png">
+        <description>Doubledecker plot showing support for same-sex marriage at state level broken down by sex (female, male) and race (White, Hispanic, Black, Other). Females show higher support than males across all racial groups. Support rates for Black respondents are lowest in both sexes, while the patterns across races are similar for males and females.</description>
+      </image>
     </figure>
   </section>
 
@@ -46,26 +52,34 @@
 
     <figure xml:id="fig-gayMap">
       <caption>Support for same-sex marriage at state level on a continuous colour scale from 10% to 70%.</caption>
-      <image source="images/gayMap-1.png"/>
+      <image source="images/gayMap-1.png">
+        <description>Choropleth map of the 48 continental United States and Washington D.C. showing support for same-sex marriage at state level on a continuous colour scale from 10% to 70%. New England and West Coast states appear in darker colours indicating higher support, while many Southern and Midwestern states show lower support. Alaska and Hawaii are not shown.</description>
+      </image>
     </figure>
 
     <p>Some regional patterns are apparent, such as higher support in New England and on the West Coast. As always with choropleth maps, area does not reflect population. There are several larger states with small populations and smaller states with larger populations. This is also reflected in the numbers asked in each state. Figure <xref ref="fig-gayCIs"/> shows the estimates of proportions supporting a same-sex marriage law with 95% confidence intervals. The longest interval is for Washington, DC, with only 31 asked and the shortest interval is for California with 1891 asked. The states have been grouped by Census Bureau regions and ordered within region by percentage in favour. The NorthEast states split into two groups with Pennsylvania and Maine having much lower levels of support. The South also splits into two groups with Florida and the three small most northerly states having higher levels of support. The MidWest states have fairly similar values. Overall, very few states show a majority for same-sex marriage.</p>
 
     <figure xml:id="fig-gayCIs">
       <caption>Support for same-sex marriage by state with 95% confidence intervals, states grouped by region and ordered within region by estimated population proportion in favour.</caption>
-      <image source="images/gayCIs-1.png"/>
+      <image source="images/gayCIs-1.png">
+        <description>Dot plot with 95% confidence intervals showing the estimated proportion supporting a same-sex marriage law for each US state, grouped by Census Bureau region (NorthEast, South, MidWest, West) and ordered within each region by percentage in favour. Washington D.C. has the widest interval (only 31 surveyed) and California has the narrowest (1891 surveyed). Very few states show a majority in favour.</description>
+      </image>
     </figure>
 
     <p>Figure <xref ref="fig-mapReg"/> shows a map of the regions.</p>
 
     <figure xml:id="fig-mapReg">
       <caption>The four US regions defined by the Census Bureau.</caption>
-      <image source="images/mapReg-1.png"/>
+      <image source="images/mapReg-1.png">
+        <description>Choropleth map of the continental United States with states coloured by one of four Census Bureau regions: NorthEast, South, MidWest, and West.</description>
+      </image>
     </figure>
 
     <figure xml:id="fig-gayMapC">
       <caption>Support for same-sex marriage at state level using a population cartogram.</caption>
-      <image source="images/gayMapC-1.png"/>
+      <image source="images/gayMapC-1.png">
+        <description>Population cartogram of the United States where each state's area is proportional to the number of survey respondents rather than geographic area. States are coloured by level of support for same-sex marriage. The cartogram emphasises the three main groups: Eastern states, Western states, and central states.</description>
+      </image>
     </figure>
 
     <p>Cartograms can be effective in getting round the population issue and Figure <xref ref="fig-gayMapC"/> uses the number of respondents as a substitute for the state population. It suggests the states separate into three main groups, the East, the West, and the centre.</p>
@@ -78,7 +92,9 @@
 
     <figure xml:id="fig-gayF">
       <caption>Scatterplot of opposition to a Constitutional Amendment making same-sex marriage illegal by age of respondent. Cases with any values missing have been excluded and data for ages above 80 have been combined into one value at 81. Point areas are proportional to the number of respondents of that age.</caption>
-      <image source="images/gayF-1.png"/>
+      <image source="images/gayF-1.png">
+        <description>Bubble chart of percentage opposition to a Constitutional Amendment making same-sex marriage illegal by respondent age, ranging from about 18 to 81. A majority oppose the Amendment at almost every age, and there is little variation in opposition across age groups. Bubble sizes reflect the number of respondents at each age.</description>
+      </image>
     </figure>
 
     <p>While there was a majority against same-sex marriage at state level for most ages except the youngest, there is a majority against a Constitutional Amendment at almost every age. There is also little difference in opinion across the ages concerning a Constitutional Amendment.</p>
@@ -87,7 +103,9 @@
 
     <figure xml:id="fig-gayB">
       <caption>Line plots of support for same-sex marriage at federal level (left) and opposition to a Constitutional Amendment (right) by age of respondent by males (green) and females (purple).</caption>
-      <image source="images/gayB-1.png"/>
+      <image source="images/gayB-1.png">
+        <description>Two side-by-side line plots by respondent age. The left plot shows support for a same-sex marriage law at state level and the right plot shows opposition to a Constitutional Amendment banning same-sex marriage, each with separate lines for males (green) and females (purple). Females show higher rates than males in both plots. The left plot has greater variability because only one third of respondents were asked the state question.</description>
+      </image>
     </figure>
 
     <p>The differences between the graphics depend on the exact form of the questions asked. There were two versions of the state question asked at different times in the 2004 survey and five versions of the federal question. The differences within each group were slight, but there were major differences between the two groups. For the state question, in favour meant in favour of same-sex marriage. For the federal question, in favour meant in favour of a Constitutional Amendment banning same-sex marriage. Respondents to this question were offered an additional possible answer of Neither favor nor oppose.</p>
@@ -96,7 +114,9 @@
 
     <figure xml:id="fig-gayFSbars">
       <caption>Barcharts of the full responses to the two questions.</caption>
-      <image source="images/gayFSbars-1.png"/>
+      <image source="images/gayFSbars-1.png">
+        <description>Two barcharts side by side showing the full distribution of responses to the state-level same-sex marriage question (left) and the Constitutional Amendment question (right). Response categories include Strongly favor, Favor, Oppose, Strongly oppose, with additional categories for Don't know, Refused, and Neither. The vertical scales differ because only one third of respondents were asked the state question. Most respondents express strong opinions.</description>
+      </image>
     </figure>
 
     <p>There were small numbers of Don't know and Refused, as well as some who were neither for nor against the Constitutional Amendment question. Those who did not express opinions one way or the other have been coloured grey. The vertical scales are quite different, as only one third were asked the state question.</p>
@@ -105,7 +125,9 @@
 
     <figure xml:id="fig-gayFS">
       <caption>Multiple barcharts of the responses to supporting same-sex marriage at state level by the responses to supporting a Constitutional Amendment banning it.</caption>
-      <image source="images/gayFS-1.png"/>
+      <image source="images/gayFS-1.png">
+        <description>Multiple barcharts showing the distribution of responses to the state-level same-sex marriage question, faceted by respondents' answers to the Constitutional Amendment question. The most notable feature is the large group who strongly oppose a state same-sex marriage law while also strongly opposing a Constitutional Amendment banning same-sex marriage.</description>
+      </image>
     </figure>
 
     <p>The most interesting feature is the combination of strongly opposing a same-sex marriage law for your own state while also strongly opposing a Constitutional Amendment banning same-sex marriage. This group is the main reason for the difference between the two graphics in Figure <xref ref="fig-gayB"/>.</p>
@@ -114,7 +136,9 @@
 
     <figure xml:id="fig-gayByState">
       <caption>Scatterplot of responses to the two same-sex marriage questions by state (point areas are proportional to the number of respondents in that state).</caption>
-      <image source="images/gayByState-1.png"/>
+      <image source="images/gayByState-1.png">
+        <description>Scatterplot with one point per US state comparing the proportion supporting a state same-sex marriage law (x-axis) against the proportion opposing a Constitutional Amendment banning same-sex marriage (y-axis). Circle sizes are proportional to the number of respondents in each state. Opposition to the Amendment is consistently higher than support for the state law across all states, and the two measures are strongly correlated with a slope greater than one.</description>
+      </image>
     </figure>
 
     <p>Opposition to the Constitutional Amendment making same-sex marriage illegal was much stronger than support for a state law permitting same-sex marriage in all states. The two responses were highly correlated across the states with a slope greater than one, so as the federal variable rate increased, the state rate increased more. Opinions on gay rights are a complicated matter and there were several other related questions asked in the Annenberg survey. Much more analysis could be done. That survey was carried out almost twenty years ago and more recent surveys suggest that the US population has become more favourably disposed towards same-sex marriage.</p>

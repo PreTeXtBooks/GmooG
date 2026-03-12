@@ -20,7 +20,7 @@
 
     <p>The Palmer Archipelago lies to the West of the Antarctic Peninsula, where warming linked to climate change has occurred very fast. According to <xref ref="fountain-2022"/> this is bad for Adélie penguins that do better to the East in the Weddell Sea where it is still cold. Gentoo penguins are not so affected.</p>
 
-    <p>Figure <xref ref="fig-palens0"/> shows four plots of the dataset. There are barcharts for the three species and the three islands, a histogram of penguin body mass, and a scatterplot of flipper length against body mass.</p>
+    <p><xref ref="fig-palens0"/> shows four plots of the dataset. There are barcharts for the three species and the three islands, a histogram of penguin body mass, and a scatterplot of flipper length against body mass.</p>
 
     <figure xml:id="fig-palens0">
       <image source="images/PalEns0-1.png">
@@ -31,7 +31,7 @@
 
     <p>There are fewer Chinstrap penguins and fewer penguins from Torgersen Island. The distribution of body mass may have that skewed shape because it is a mixture of the body mass distributions of three separate species. Flipper length and body mass are highly positively correlated.</p>
 
-    <p>Different subsets can be selected and highlighted to look for patterns. Figures <xref ref="fig-palens1"/> and <xref ref="fig-palens2"/> show examples of selecting a species or an island across these plots. Gentoo penguins were only sampled on Biscoe Island, and they are generally heavier with longer flippers than the other two species. Dream Island has all the Chinstrap penguins and some Adélie penguins. The penguins on Dream Island have smaller body mass and flipper length.</p>
+    <p>Different subsets can be selected and highlighted to look for patterns. <xref ref="fig-palens1"/> and <xref ref="fig-palens2"/> show examples of selecting a species or an island across these plots. Gentoo penguins were only sampled on Biscoe Island, and they are generally heavier with longer flippers than the other two species. Dream Island has all the Chinstrap penguins and some Adélie penguins. The penguins on Dream Island have smaller body mass and flipper length.</p>
 
     <p>The penguins in this dataset were nesting pairs that had at least one egg. The sampling procedure is described in <xref ref="gorman-2014"/>. Detailed information on estimated total penguin numbers at Antarctic sites over the years is available on the MAPPPD website described in <xref ref="humphries-2017"/>.</p>
 
@@ -49,7 +49,7 @@
       <caption><p>Dream Island penguins highlighted in all plots.</p></caption>
     </figure>
 
-    <p>Groups of cases defined in other ways could also be highlighted. Figure <xref ref="fig-palens3"/> highlights the penguins weighing no more than 3 kg. As was already known from Figure <xref ref="fig-palens1"/>, the penguins are either Adelie or Chinstrap. Interestingly, there are examples of the lightest penguins on all three islands.</p>
+    <p>Groups of cases defined in other ways could also be highlighted. <xref ref="fig-palens3"/> highlights the penguins weighing no more than 3 kg. As was already known from <xref ref="fig-palens1"/>, the penguins are either Adelie or Chinstrap. Interestingly, there are examples of the lightest penguins on all three islands.</p>
 
     <figure xml:id="fig-palens3">
       <image source="images/PalEns3-1.png">
@@ -58,7 +58,7 @@
       <caption><p>Penguins weighing no more than 3 kg highlighted in all plots.</p></caption>
     </figure>
 
-    <p>At this stage, it could be worth investigating what values these subsets have for other variables. This could be done by drawing the additional plots with the appropriate subset layer. Figure <xref ref="fig-palens5"/> shows boxplots for bill length and depth with the lightest penguins drawn in separate boxplots in brown beside boxplots for the rest of the data. With two exceptions, the light penguins have shorter bills than most other penguins. Their bill depths are about the same.</p>
+    <p>At this stage, it could be worth investigating what values these subsets have for other variables. This could be done by drawing the additional plots with the appropriate subset layer. <xref ref="fig-palens5"/> shows boxplots for bill length and depth with the lightest penguins drawn in separate boxplots in brown beside boxplots for the rest of the data. With two exceptions, the light penguins have shorter bills than most other penguins. Their bill depths are about the same.</p>
 
     <figure xml:id="fig-palens5">
       <image source="images/PalEns5-1.png">
@@ -82,7 +82,7 @@
   <section xml:id="sec-palmer-pcp">
     <title>Looking at several variables in one plot</title>
 
-    <p>Examining all variables together can be helpful in determining which differentiate between the species. Figure <xref ref="fig-palpcp1"/> is a parallel coordinate plot of the data with the cases coloured by species.</p>
+    <p>Examining all variables together can be helpful in determining which differentiate between the species. <xref ref="fig-palpcp1"/> is a parallel coordinate plot of the data with the cases coloured by species.</p>
 
     <figure xml:id="fig-palpcp1">
       <image source="images/Palpcp1-1.png">
@@ -91,9 +91,9 @@
       <caption><p>Parallel coordinate plot of the Palmer Penguin data.</p></caption>
     </figure>
 
-    <p>The first two axes show the information already seen in Figures <xref ref="fig-palens1"/> and <xref ref="fig-palens2"/> that Gentoo penguins are only to be found on Biscoe and Chinstrap penguins only on Dream. Other features can be seen too, such as the different patterns between bill length and bill depth for the species.</p>
+    <p>The first two axes show the information already seen in <xref ref="fig-palens1"/> and <xref ref="fig-palens2"/> that Gentoo penguins are only to be found on Biscoe and Chinstrap penguins only on Dream. Other features can be seen too, such as the different patterns between bill length and bill depth for the species.</p>
 
-    <p>Further features may be separated out better in a parallel coordinate plot by reordering categories and variables. Chinstrap are only on Dream Island, so those categories should be at the top or bottom, and Gentoo are only on Biscoe Island, so they should be at the other end. It also seems better to place island before species. Most measurements have higher values for Gentoo penguins, but bill depth has lower values, so it could be reversed to reduce the numbers of line crossings. Finally, bill length has a different pattern to the other measurement variables and so might be moved to the far right. Figure <xref ref="fig-palpcp2"/> shows the data with the species and islands reordered, with bill depth reversed, and variables reordered.</p>
+    <p>Further features may be separated out better in a parallel coordinate plot by reordering categories and variables. Chinstrap are only on Dream Island, so those categories should be at the top or bottom, and Gentoo are only on Biscoe Island, so they should be at the other end. It also seems better to place island before species. Most measurements have higher values for Gentoo penguins, but bill depth has lower values, so it could be reversed to reduce the numbers of line crossings. Finally, bill length has a different pattern to the other measurement variables and so might be moved to the far right. <xref ref="fig-palpcp2"/> shows the data with the species and islands reordered, with bill depth reversed, and variables reordered.</p>
 
     <figure xml:id="fig-palpcp2">
       <image source="images/Palpcp2-1.png">
@@ -102,11 +102,11 @@
       <caption><p>Reordered parallel coordinate plot of the Palmer Penguin data.</p></caption>
     </figure>
 
-    <p>In this display Chinstrap and Adélie penguins have similar measurement distributions, apart from bill length: Chinstrap penguins have longer bills. Gentoo penguins have higher values on several variables, except for bill depth&#8212;remember that this variable has been reversed in Figure <xref ref="fig-palpcp2"/>. The fact that all blue (Gentoo) crossings between reversed bill depth and flipper length are above all other crossings between the two variables means that together they separate Gentoo from the other species.</p>
+    <p>In this display Chinstrap and Adélie penguins have similar measurement distributions, apart from bill length: Chinstrap penguins have longer bills. Gentoo penguins have higher values on several variables, except for bill depth&#8212;remember that this variable has been reversed in <xref ref="fig-palpcp2"/>. The fact that all blue (Gentoo) crossings between reversed bill depth and flipper length are above all other crossings between the two variables means that together they separate Gentoo from the other species.</p>
 
-    <p>There may be a more effective reordering of the categories and variables. Minimising the total number of line crossings could be a goal or, given the aim of distinguishing between the species, minimising the number of line crossings of different species, but how would a search through the myriad options be carried out? There are 6!=720 orderings of the six variables, 3!=6 orderings of the islands, 3!=6 orderings of the species, and 2^4=16 ways of mapping the variables (each one can be plotted as is or inverted). Some of these are equivalent (a reverse ordering of the variables will give the same result as an unreversed ordering), but there does not appear to be an obvious search procedure.</p>
+    <p>There may be a more effective reordering of the categories and variables. Minimising the total number of line crossings could be a goal or, given the aim of distinguishing between the species, minimising the number of line crossings of different species, but how would a search through the myriad options be carried out? There are <m>6!=720</m> orderings of the six variables, <m>3!=6</m> orderings of the islands, 3!=6 orderings of the species, and <m>2^4=16</m> ways of mapping the variables (each one can be plotted as is or inverted). Some of these are equivalent (a reverse ordering of the variables will give the same result as an unreversed ordering), but there does not appear to be an obvious search procedure.</p>
 
-    <p>Bivariate associations seen in parallel coordinate plots can be examined more closely with scatterplots. Figure <xref ref="fig-palscat3"/> confirms how bill length and bill depth combined separate the species (left) and how bill depth and flipper length combined separate Adelie penguins from the other two species (right).</p>
+    <p>Bivariate associations seen in parallel coordinate plots can be examined more closely with scatterplots. <xref ref="fig-palscat3"/> confirms how bill length and bill depth combined separate the species (left) and how bill depth and flipper length combined separate Adelie penguins from the other two species (right).</p>
 
     <figure xml:id="fig-palscat3">
       <image source="images/Palscat3-1.png">
@@ -115,7 +115,7 @@
       <caption><p>Scatterplots of bill depth with bill length and flipper length.</p></caption>
     </figure>
 
-    <p>Another way of exploring groups is to use facets. Figure <xref ref="fig-scath"/> shows bill lengths and depths for each combination of species and island. To aid comparisons, the plot for all the penguins has been drawn in the background.</p>
+    <p>Another way of exploring groups is to use facets. <xref ref="fig-scath"/> shows bill lengths and depths for each combination of species and island. To aid comparisons, the plot for all the penguins has been drawn in the background.</p>
 
     <figure xml:id="fig-scath">
       <image source="images/scatH-1.png">
@@ -124,7 +124,7 @@
       <caption><p>Scatterplots of bill lengths and depths of penguins by the three species and three islands.</p></caption>
     </figure>
 
-    <p>Whichever graphics or tables are drawn to investigate this dataset, it is quickly clear that the Chinstrap penguins are only found on Dream Island and that the Gentoo penguins are only found on Biscoe Island. Figure <xref ref="fig-scath"/> shows that the association between bill length and depth is positive for all species on any island they are found on. It also suggests, if you look at the subplots with no highlighted cases, that the association between bill length and depth for all penguins together is negative. The calculated correlation for the whole dataset is negative, while the correlations for the highlighted groups in the individual facets are all positive.</p>
+    <p>Whichever graphics or tables are drawn to investigate this dataset, it is quickly clear that the Chinstrap penguins are only found on Dream Island and that the Gentoo penguins are only found on Biscoe Island. <xref ref="fig-scath"/> shows that the association between bill length and depth is positive for all species on any island they are found on. It also suggests, if you look at the subplots with no highlighted cases, that the association between bill length and depth for all penguins together is negative. The calculated correlation for the whole dataset is negative, while the correlations for the highlighted groups in the individual facets are all positive.</p>
   </section>
 
   <section xml:id="sec-palmer-raw">
@@ -149,9 +149,9 @@
     <subsection xml:id="sec-palmer-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Selection and highlighting are instructive for studying groups of cases across ensembles of graphics. (Figures <xref ref="fig-palens1"/> to <xref ref="fig-palens3"/>)</p></li>
-        <li><p>Orderings of many kinds are crucial for getting the most out of parallel coordinate plots. (Figure <xref ref="fig-palpcp2"/>)</p></li>
-        <li><p>If data are paired, plotting the pairs in scatterplots provides more information. (Figure <xref ref="fig-scatr"/>)</p></li>
+        <li><p>Selection and highlighting are instructive for studying groups of cases across ensembles of graphics. (<xref ref="fig-palens1"/> to <xref ref="fig-palens3"/>)</p></li>
+        <li><p>Orderings of many kinds are crucial for getting the most out of parallel coordinate plots. (<xref ref="fig-palpcp2"/>)</p></li>
+        <li><p>If data are paired, plotting the pairs in scatterplots provides more information. (<xref ref="fig-scatr"/>)</p></li>
       </ul>
     </subsection>
   </section>
