@@ -110,21 +110,18 @@
       &#8216;down&#8217; races, while the colours below refer to the sex of the runners.
     </p>
 
+<p>
+A more complex ensemble is shown in <xref ref = "fig-qlEns"/> reproduced here as <xref ref = "fig-qlensx""/>. Three separate pieces of information are compared for the two groups with three different sets of graphics: proportions of dropouts in a barchart, two initial measurements in scatterplots, ten life quality index question means with line charts. There is no need for common scaling as the variable scales all differ. The groups are coloured alike in the scatterplots and the line charts, but not in the barchart, where the dropouts are coloured to emphasise how few there were and how similar the proportions were. The lines are drawn differently according to whether the responses were at the start or end of the study.
+</p>
+
     <figure xml:id="fig-qlensx">
       <image source="images/qlEnsX-1.png">
         <description>Complex three-part ensemble for a psoriasis quality-of-life study. Top left: spineplot showing the treatment group was much bigger than the placebo group with similarly small dropout rates for both. Top right: two scatterplots of PASI and DLQI scores at the start of the study, showing similar initial distributions for both groups. Bottom: line chart of average scores on ten quality-of-life questions at start and end of the 16-week study, showing large reductions for the treatment group and minimal changes for the placebo group.</description>
       </image>
-      <caption><p>Complex ensemble comparing dropout rates, initial scores, and quality-of-life question means.</p></caption>
+      <caption><p>
+The spineplot top left shows that the treatment group was much bigger than the placebo group and that the dropout rate was small, about the same for both groups. The scatterplots of PASI scores and DLQI scores at the start of the study top right show that the two groups had similar initial distributions. The bottom plot shows that the average initial scores on each of the 10 questions were similar for the two groups (solid lines) and mostly slightly lower for the placebo group after 16 weeks (blue dashed line). For the treatment group the average scores were substantially less on all questions (dark orange dashed line)
+      </p></caption>
     </figure>
-
-    <p>
-      Three separate pieces of information are compared for the two groups with three different sets of graphics:
-      proportions of dropouts in a barchart, two initial measurements in scatterplots, ten life quality index question
-      means with line charts. There is no need for common scaling as the variable scales all differ. The groups are
-      coloured alike in the scatterplots and the line charts, but not in the barchart, where the dropouts are coloured
-      to emphasise how few there were and how similar the proportions were. The lines are drawn differently according
-      to whether the responses were at the start or end of the study.
-    </p>
   </section>
 
   <section xml:id="sec-early-vs-later">
@@ -215,6 +212,7 @@
         that the overall patterns, if not the levels, were similar in all four regions, and that there were countries
         whose life expectancy graphs differed strikingly from others in their region.
       </p>
+      <p>Changes include:</p>
       <ol>
         <li><p>The countries have been coloured by region to provide some information on geographic location.</p></li>
         <li><p>Each region has been plotted separately so that regional differences and local outliers can be seen.</p></li>
@@ -233,7 +231,7 @@
         <image source="images/elecStat12-1.png">
           <description>Side-by-side dotplot display of electric car charging station usage. Left panel (default): shows each charging station as a row with dots marking dates of use, revealing that some stations started being used late in the study and some were used relatively little. Right panel (amended): stations sorted by location and ordered within location, with facility types colour-coded and a dashed red line marking the switch from test phase to analysis phase; location ID labels are added on the right.</description>
         </image>
-        <caption><p>Default and amended displays of charging-station usage over time.</p></caption>
+        <caption><p>When charging stations were used</p></caption>
       </figure>
       <p>
         From the first plot it is apparent that a number of charging stations only started to be used late on in the
@@ -311,6 +309,7 @@
         several months as part of space station programmes, that there were some low mission times that required
         further investigation.
       </p>
+      <p>Changes include:</p>
       <ol>
         <li><p>The logarithms of mission times have been used instead of the mission times as the plot then shows more structure. (<xref ref="fig-flighttc"/> revealed that it primarily splits the missions into whether they were to a space station or not.)</p></li>
         <li><p>The breaks on the vertical axis scale were not set equally but chosen to reflect familiar time periods to make the times readily understandable.</p></li>
@@ -329,13 +328,13 @@
         <image source="images/uefa20X-1.png">
           <description>Default faceted bar chart of Euro 2020 squad players by league country for each national team. Each of 24 panels shows one national team with bars coloured by league country in default colours. Bars are in alphabetical order, making cross-team comparison of league patterns difficult.</description>
         </image>
-        <caption><p>Default faceted bar display of players&#8217; league countries.</p></caption>
+        <caption><p>Default plot of numbers of Euro 2020 players of each team playing in other countries' leagues</p></caption>
       </figure>
       <figure xml:id="fig-uefa20y">
         <image source="images/uefa20Y-1.png">
           <description>Amended faceted bar chart of Euro 2020 squad players by league country for each national team. Teams are ordered by percentage of players in their own national league. Bars are ordered by total number of players from each league, with leagues having fewer than nine players grouped as Other. Country colours are used instead of defaults. The legend is removed, labels are added to the bars, and gridlines are removed for clarity.</description>
         </image>
-        <caption><p>Amended display with ordering, grouping, and simplified guides.</p></caption>
+        <caption><p>Amended plot of numbers of Euro 2020 players of each team playing in other countries' leagues.</p></caption>
       </figure>
       <p>
         The first plot shows that some teams&#8217; players are from only a few countries&#8217; leagues and some from several. In
@@ -353,9 +352,8 @@
         <li><p>Gridlines have been removed to reduce clutter.</p></li>
       </ol>
     </subsection>
-  </section>
 
-  <section xml:id="sec-characteristic-changes">
+  <subsection xml:id="sec-characteristic-changes">
     <title>Characteristic changes</title>
     <ol>
       <li><p>Grouping information supports understanding. It is easier to work with chunks of information than with all the individual components. Grouping may be achieved by spatial separation (<xref ref="fig-elecstat12"/>), by faceting (<xref ref="fig-gaplex-1"/> and <xref ref="fig-gaycix"/>), by colour (<xref ref="fig-elecstat12"/> and <xref ref="fig-flighttz"/>).</p></li>
@@ -367,6 +365,7 @@
       <li><p>Time scaling and labelling should be chosen carefully (<xref ref="fig-candvsx2"/> and <xref ref="fig-flighttz"/>).</p></li>
       <li><p>Adding guidelines for critical values is useful (<xref ref="fig-candvsx2"/> and <xref ref="fig-elecstat12"/>).</p></li>
     </ol>
+  </subsection>
   </section>
 
   <section xml:id="sec-classifying-graphics">
