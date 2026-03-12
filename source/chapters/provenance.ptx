@@ -291,8 +291,8 @@
       </figure>
       <p>
         The first dataset had been scraped from the web. Some issues arose concerning the consistency of the names
-        used for events (cf. Figure <xref ref="fig-olyEg"/>) and there were some unexpected missing values. Figure
-        <xref ref="fig-olyAmd"/>, redrawn here as Figure <xref ref="fig-olyamdx-prov"/>, shows gaps (i.e. missing
+        used for events (cf. <xref ref="fig-olyEg"/>) and there were some unexpected missing values. Figure
+        <xref ref="fig-olyAmd"/>, redrawn here as <xref ref="fig-olyamdx-prov"/>, shows gaps (i.e. missing
         values) in the gold medal performances for some men's field events. The temporary decline in shot put
         performances at a time the results are missing for other events is suggestive.
       </p>
@@ -368,7 +368,7 @@
         overall effect was small, as respondents tended to have strong views one way or the other, so the
         difference in responses would have been mainly due to the difference between a state law and a
         constitutional change. A comparison of the responses of those who were asked and answered both questions
-        is shown in Figure <xref ref="fig-gayfss"/>, a redrawing of Figure <xref ref="fig-gayFS"/>. The key feature is the
+        is shown in <xref ref="fig-gayfss"/>, a redrawing of <xref ref="fig-gayFS"/>. The key feature is the
         bar lower right representing the group who strongly opposed a same-sex marriage law for their own state
         while also strongly opposing a Constitutional Amendment banning same-sex marriage.
       </p>
@@ -404,9 +404,9 @@
         be zero, a gap in the price data, some outliers that are obvious errors, and a likely upper limit on
         price. There is clear evidence of heaping on rounded carat values that also affects the distribution
         pattern of other variables. Some of these properties will affect analyses, some will not, they all
-        contribute to a better understanding of the dataset. Figure <xref ref="fig-histcarx"/>, a reproduction of
-        Figure <xref ref="fig-histCar"/>, shows the heaping. Other examples of heaping can be seen in Figure
-        <xref ref="fig-movierunh"/> for movie runtimes and in Figure <xref ref="fig-comtimes"/> for finishing
+        contribute to a better understanding of the dataset. <xref ref="fig-histcarx"/>, a reproduction of
+        <xref ref="fig-histCar"/>, shows the heaping. Other examples of heaping can be seen in Figure
+        <xref ref="fig-movierunh"/> for movie runtimes and in <xref ref="fig-comtimes"/> for finishing
         times in the Comrades Marathon.
       </p>
       <figure xml:id="fig-histcarx">
@@ -423,7 +423,7 @@
         There is much interest in electric cars and how people use charging stations. The researchers wrote that
         they had an initial period of three months for testing before analysis (<xref ref="asensio-2021a"/>). This would be
         partly to let drivers acclimatise themselves to the new possibilities. However, as Figure
-        <xref ref="fig-elecStat2"/> shows, redrawn as Figure <xref ref="fig-elecstat2x"/> here, over half the
+        <xref ref="fig-elecStat2"/> shows, redrawn as <xref ref="fig-elecstat2x"/> here, over half the
         locations had no charging stations in the test period and there had been little use of some of the others
         by then.
       </p>
@@ -447,7 +447,7 @@
         public domain. The dataset used comes from the 1898&#8211;99 expedition and was chosen because it and the
         expedition report were readily available. Whether the selection of birds and measurement methods would
         match modern research standards is questionable. Nevertheless, the data still provide strong evidence for
-        species differences as Figure <xref ref="fig-snodPCP"/> showed, redrawn here as Figure <xref ref="fig-snodpcpx"/>.
+        species differences as <xref ref="fig-snodPCP"/> showed, redrawn here as <xref ref="fig-snodpcpx"/>.
       </p>
       <figure xml:id="fig-snodpcpx">
         <image source="images/snodPCPx-1.png">
@@ -474,7 +474,7 @@
       <p>
         The data for this race over the years make a good impression. A key feature is that the direction of the
         race generally alternates between 'up' and 'down'. How much difference that makes can be seen in the
-        righthand plot of Figure <xref ref="fig-comdist"/>, shown again here as Figure <xref ref="fig-comprofx"/>. The difference in how much a runner would have to go 'up' and 'down' is striking.
+        righthand plot of <xref ref="fig-comdist"/>, shown again here as <xref ref="fig-comprofx"/>. The difference in how much a runner would have to go 'up' and 'down' is striking.
       </p>
       <figure xml:id="fig-comprofx">
         <image source="images/comProfX-1.png">
@@ -524,7 +524,7 @@
         <xref ref="fig-titanagesc"/>).
       </p>
       <p>
-        Figure <xref ref="fig-titandd"/> shows doubledecker plots of the survival rates by class and crew for
+        <xref ref="fig-titandd"/> shows doubledecker plots of the survival rates by class and crew for
         the dataset in R's <em>datasets</em> package and for the newer dataset used in the Titanic chapter. The
         total numbers are only slightly different and so the class bars are pretty much identical. The big
         difference is apparent from the detailed breakdown for the crew. Deck crew, who manned the lifeboats,
@@ -543,10 +543,7 @@
     <title>How do invented, simulated, and real datasets compare?</title>
 
     <p>
-      Datasets can be invented, simulated or real. Invented datasets were very common in older textbooks before
-      many had access to computers. The datasets had to be small and the calculations simple, so that everything
-      could be done by hand or perhaps with the help of a calculator. Some researchers claimed this was a good
-      thing as students were closer to their data.
+Datasets can be invented, simulated or real. Invented datasets were very common in older textbooks before many had access to computers. The datasets had to be small and the calculations simple, so that everything could be done by hand or perhaps with the help of a calculator. Some researchers claimed this was a good thing as students were closer to their data. Shayle Searle reminisced to me that in his Statistics course at Cambridge in the early 1950s this was the reason Dennis Lindley gave for not allowing students to use the old hand calculators that were then available. Times change.
     </p>
 
     <p>
