@@ -55,7 +55,7 @@
       </p>
       <p>
         The Comrades Marathon chapter includes two plots of the performances of the Nurgalieva twins over the
-        years, Figure <xref ref="fig-comnurgx"/>. Elena ran every year from 2003 to 2015, while Olesya did not
+        years, <xref ref="fig-comnurgx"/>. Elena ran every year from 2003 to 2015, while Olesya did not
         run in 2006 and 2012. In the plots, the line for Olesya is drawn on top. This works if it is remembered
         that Elena ran every year. If the line for Elena had been drawn on top, that would not have worked, even
         for the zoomed plot on the right.
@@ -87,7 +87,7 @@
       </p>
       <p>
         One example is the barchart of the numbers of passengers and crew who boarded the Titanic at the four
-        different ports. Figure <xref ref="fig-barboard"/> shows a plot with the default alphabetic ordering on
+        different ports. <xref ref="fig-barboard"/> shows a plot with the default alphabetic ordering on
         the left and the plot used in the Titanic chapter on the right, using the order the ship called at the
         ports. The great majority, including many crew, joined in Southampton.
       </p>
@@ -105,7 +105,7 @@
       <p>
         In the Gapminder analysis, there are two barcharts of the four regions, one for the number of countries
         in each region and one for the total population, both ordered by bar heights. The two are shown again here
-        in Figure <xref ref="fig-reg4xy"/>. The first shows that Africa and Asia have more countries than Europe
+        in <xref ref="fig-reg4xy"/>. The first shows that Africa and Asia have more countries than Europe
         or the Americas, while the second shows that Asia has more of the world's population than the other three
         regions put together.
       </p>
@@ -123,8 +123,8 @@
       <p>
         A common reason for reordering categories is to produce a recognisable and memorable pattern, for instance
         steadily increasing or decreasing. A plot shows sales of station wagons and SUVs by year. The original
-        plot is on the right of Figure <xref ref="fig-swsuvx-2"/> and a plot using a default lexicographic
-        ordering of the vehicle types is on the left in Figure <xref ref="fig-swsuvx-1"/>.
+        plot is on the right of <xref ref="fig-swsuvx-2"/> and a plot using a default lexicographic
+        ordering of the vehicle types is on the left in <xref ref="fig-swsuvx-1"/>.
       </p>
 
       <figure xml:id="fig-swsuvx-1">
@@ -185,7 +185,7 @@
       <p>
         Boxplots are handy for summarising decathlon data. Each competitor competes in ten track and field events.
         The results are converted to a points system to make them comparable and the winner is the person with the
-        most points. Figure <xref ref="fig-decbox1"/> shows the points scores for the 116 top-ranked decathletes
+        most points. <xref ref="fig-decbox1"/> shows the points scores for the 116 top-ranked decathletes
         in April 2021 (<xref ref="estDecath-2021"/>).
       </p>
 
@@ -269,7 +269,7 @@
         (<xref ref="hofmann-2008"/>).
       </p>
       <p>
-        There are two mosaicplots in the Titanic chapter, shown again in Figure <xref ref="fig-titanboth"/>. In
+        There are two mosaicplots in the Titanic chapter, shown again in <xref ref="fig-titanboth"/>. In
         the plot on the left the passenger classes have been drawn first in the natural order of first, second,
         third (alphabetic in English, but not in all languages), followed by the crew departments ordered by
         survival rates. This shows that survival rates declined by class and that the rates were lowest for the
@@ -313,7 +313,7 @@
       <p>
         Returning to the effect of decathlon events not being scored comparably, consider the differences in
         scores between competitors. Giving each competitor 50 points more in an event will not change overall
-        rankings at all. Figure <xref ref="fig-decranks"/> is a parallel coordinate plot of points given to the
+        rankings at all. <xref ref="fig-decranks"/> is a parallel coordinate plot of points given to the
         top 79 ranked performances in the individual events with points for the 40th highest subtracted. Here the
         ranked values are joined by lines, not the individual competitors.
       </p>
@@ -334,7 +334,7 @@
         from the points score for each event makes the levels comparable while keeping the differences on the
         same scale. The zero line equivalent to the 40th best performance has been coloured brown. There is bigger
         variability above than below as the distributions are, of course, skewed. The events are not in the same
-        order as in Figure <xref ref="fig-decbox1"/>. They have been ordered by increasing range. The lines are
+        order as in <xref ref="fig-decbox1"/>. They have been ordered by increasing range. The lines are
         close to parallel for the first few events, implying similar distributions, including for the long jump
         and the 1500 metres, the two most different events in terms of points awarded. The javelin has greater
         variability, as observed already. The discrete nature of the high jump and pole vault points is because
@@ -343,7 +343,7 @@
       <p>
         Parallel coordinates are excellent for studying the data from individual decathlon performances too. Now
         the polylines link performances of the same individual. The scales of the vertical axes are the same for
-        each event and the same as in Figure <xref ref="fig-decbox1"/>. The difference in Figure
+        each event and the same as in <xref ref="fig-decbox1"/>. The difference in Figure
         <xref ref="fig-pcp1"/> is that the events are ordered by increasing median event points.
       </p>
 
@@ -382,7 +382,7 @@
         cases across the display.
       </p>
       <p>
-        Figure <xref ref="fig-palpcps-1"/> and Figure <xref ref="fig-palpcps-2"/> show the Palmer Penguin
+        <xref ref="fig-palpcps-1"/> and <xref ref="fig-palpcps-2"/> show the Palmer Penguin
         parallel coordinate plots. The reordered version on the right is easier to decode.
       </p>
 
@@ -447,7 +447,7 @@
     <p>
       The arrangement of graphics in a faceted display is determined by the faceting variables chosen for the
       rows and columns, their ordering within rows and within columns, and the ordering of their category levels.
-      This is apparent in Figure <xref ref="fig-puffmosx"/>, showing groups across four shearwater measurements.
+      This is apparent in <xref ref="fig-puffmosx"/>, showing groups across four shearwater measurements.
       The rows are arranged first by <c>border</c> and then by <c>undertail</c>, the columns are ordered by
       <c>eyebrows</c>, and the order of each of those three variables has been specifically chosen. Other
       orderings would have made it more difficult to interpret the structure.
