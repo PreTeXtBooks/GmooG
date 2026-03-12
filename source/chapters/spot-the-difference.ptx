@@ -1,229 +1,356 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-spot-the-difference">
   <title>Varieties of plots, developing plots</title>
 
   <introduction>
     <blockquote>
-      <p>"I repeat, as long as you have studied the theory hard enough."</p>
-      <p>"And what good's theory going to be in the real world?" said Harry loudly, his fist in the air again.</p>
-      <p>--- <em>Professor Dolores Umbridge and Harry Potter in "Harry Potter and the Order of the Phoenix"</em></p>
+      <p>&#8216;I repeat, as long as you have studied the theory hard enough&#8217;</p>
+      <p>&#8216;And what good&#8217;s theory going to be in the real world?&#8217; said Harry loudly, his fist in the air again.</p>
+      <p>&#8212; <em>Professor Dolores Umbridge and Harry Potter in &#8216;Harry Potter and the Order of the Phoenix&#8217;</em></p>
     </blockquote>
   </introduction>
 
   <section xml:id="sec-varying-plots">
     <title>Varying various plots</title>
     <p>
-      There is a wide variety of plot types available (e.g., @holtz:2018 or @schwab:2021). Each plot type can also
+      There is a wide variety of plot types available (e.g., see <xref ref="holtz-2018"/> or <xref ref="schwab-2021"/>). Each plot type can also
       be drawn in many different ways: varying size, aspect ratio, scales, colour, symbols, styles, whatever. A key
-      message is that drawing a variety of plots, and varying the plots drawn, can provide more insights than
-      searching for a single "optimal" display.
+      message of this book is that drawing a variety of plots, and varying the plots drawn, can provide more insights than
+      searching for a single &#8216;optimal&#8217; display. Just as taking many photographs of a complicated object can help people
+      appreciate its structure, so can drawing many graphics help viewers grasp the structure of a dataset.
     </p>
     <p>
-      Approaches vary: some prefer to study one graphic deeply before moving on; others scan many graphics then return
-      to selected ones. Being swamped by too many graphics can be as unsatisfactory as not having enough.
+      Approaches vary too. Some like to study individual graphics thoroughly before moving on to other ones. Some like to
+      flick through lots of graphics and then return to particular ones for a closer look. Being swamped by too many
+      graphics can be as unsatisfactory as not having enough. As yet there is little guidance available on how to explore
+      large datasets effectively.
     </p>
 
     <p>
-      Not all graphics are the same. There are different plot types, different kinds of displayed data, and different
-      uses for graphics: exploration, explanation, and exposition. Accordingly, the same display may be interpreted in
-      different ways depending on context and on what kind of data it represents.
+      Not all graphics are the same. There are different types of graphics&#8212;histograms, barcharts, scatterplots, and so on,
+      there are different types of data displayed in graphics&#8212;individual cases, aggregates, statistics, parameter estimates,
+      residuals, and so on, and there are different uses for graphics&#8212;exploration, explanation, and exposition (or
+      presentation). Accordingly, the same display may be interpreted in different ways depending on its context and on what
+      kind of data it represents.
+    </p>
+
+    <p>
+      For illustration, consider the 100 m freestyle swimming event, one which has been swum by both men and women at all
+      Olympics since 1912. <xref ref="fig-s100mscat"/> shows four scatterplots of the data. Top left is a scatterplot of
+      the times in seconds for the male and female gold and silver medal winners by Olympic year. Times improved
+      relatively steadily after initial high values. It is likely that the females are the group of higher points and the
+      males the group of lower ones (which could be confirmed by using colour). Differences in gold and silver
+      performances at later Games can barely be seen. Top right is a scatterplot of gold medal times of women against
+      those of men. The winning times are strongly correlated. Lower left is a Tukey mean-difference plot for the
+      differences between gold and silver times for men. There are two extreme values, one to the right for the
+      (relatively) slow times of 1896 and one up high in 1924 when Johnny Weissmuller won by a very large margin.
+      Interestingly that hardly shows in the first plot. The most surprising point is the negative value&#8212;from 1960 at
+      Rome. After much discussion Lance Larson was awarded the silver medal by the judges although the handtiming then
+      used gave him a faster time than John Devitt to whom the judges awarded the gold medal. Lower right is a residual
+      against fitted plot for a simple linear model of women&#8217;s gold medal times as a function of men&#8217;s gold medal times.
+      The gold medal for women has been shared twice (in 1984 and 2016), so it was necessary to remove one gold medal
+      record for each of those years. The plot shows that a curvilinear model would give a better fit.
     </p>
 
     <figure xml:id="fig-s100mscat">
-      <image source="images/s100mScat-1.png"/>
+      <image source="images/s100mScat-1.png">
+        <description>Four-panel scatterplot layout of Olympic 100m freestyle swimming data. Top left: times in seconds by year for male and female gold and silver medalists, showing a steady decrease over time. Top right: women&#8217;s gold medal times against men&#8217;s gold medal times, showing a strong positive correlation. Lower left: Tukey mean-difference plot of gold and silver times for men, showing two extreme values at 1896 and 1924 and one negative value at 1960. Lower right: residual versus fitted values for a linear model of women&#8217;s times as a function of men&#8217;s times, suggesting a curvilinear relationship.</description>
+      </image>
       <caption><p>Four different kinds of scatterplot for Olympic 100 m freestyle gold/silver data.</p></caption>
     </figure>
 
     <p>
-      These four views show different aspects of the same data: time series by year, men-versus-women winner
-      comparisons, mean-difference structure for medal gaps, and residual-versus-fitted structure for a simple model.
-      The displays reveal features that would be easy to miss if only one plot were inspected.
+      A set of boxplots in parallel could be plots of individual variables or plots of one variable conditioned on
+      another. <xref ref="fig-finch2box"/> displays two groups of boxplots. Above, there are boxplots of the five beak
+      measurements for Darwin&#8217;s finches in the Isabela Island dataset (<xref ref="ch-darwin-finches"/>). All are skewed
+      to the right, especially beak height and width, doubtless due to the mix of species. Below, there are boxplots of
+      beak height for the five species on Isabela Island. Two have clearly bigger beak heights than the other three. It
+      is important to indicate what kind of plot each is. Titles and colour can help (intentionally left out here), as
+      can using boxplot widths to show group sizes. Barring missing values (there are none here) the boxplots are based
+      on equal numbers of cases in the first plot. In the second the numbers vary from 11 <em>Fortis platyrhyncha</em> to 81
+      <em>Fuliginosa parvula</em>.
     </p>
 
     <figure xml:id="fig-finch2box">
-      <image source="images/finch2box-1.png"/>
+      <image source="images/finch2box-1.png">
+        <description>Two-panel boxplot display. Upper panel: horizontal boxplots of five beak measurements for Darwin&#8217;s finches on Isabela Island, all showing right skew, especially beak height and width. Lower panel: horizontal boxplots of beak height for five finch species on Isabela Island, with two species showing clearly larger beak heights than the other three.</description>
+      </image>
       <caption><p>Boxplots of beak measurements (above) and beak height by species (below) on Isabela Island.</p></caption>
     </figure>
 
     <p>
-      A set of boxplots in parallel could represent multiple variables or one variable conditioned on a grouping
-      variable. It is important to indicate what kind of plot is being shown. The danger lies in glancing quickly at
-      isolated graphics and not checking what they display.
+      The individual graphics of <xref ref="fig-s100mscat"/> and <xref ref="fig-finch2box"/> have purposely been drawn
+      similarly. In practice groups of graphics like this would be drawn distinctly. For instance, whatever else one
+      might think of them, the four graphics standardly produced by plotting a model in R are. The danger lies more in
+      glancing quickly at isolated, individual graphics and not checking what they display.
     </p>
   </section>
 
   <section xml:id="sec-ensembles-of-plots">
     <title>Ensembles of plots</title>
     <p>
-      Thanks to trellis plots (@becker:1996), lattice plots (@sarkar:2008), and faceting (@wilkinson:1999 and
-      @wickham:2016), displays of small multiples are well understood. By comparison, ensembles made up of different
-      types of plots have been less discussed. @unwin:2018 suggest that the key element is coherence: having a
-      coherent theme, coherent alignment, coherent look, and consistent scales and formatting.
+      Thanks to trellis plots (<xref ref="becker-1996"/>), lattice plots (<xref ref="sarkar-2008"/>), and faceting (<xref ref="wilkinson-1999"/> and
+      <xref ref="wickham-2016"/>), displays of small multiples are well understood. Each of the component plots is of
+      the same type and is conditioned on other dataset variables. By comparison, ensembles made up of different
+      types of plots have been less discussed. <xref ref="unwin-2018a"/> suggest that the key element is coherence: having a
+      coherent theme, a coherent alignment, coherent look, consistent scales and formatting. Examples include
+      <xref ref="fig-movierunyb"/> and <xref ref="fig-uefaTQ"/>, and the set of four <xref ref="fig-palens0"/> to
+      <xref ref="fig-palens3"/>. Another example is <xref ref="fig-commfmed"/>, repeated here as <xref ref="fig-commfmedx"/>.
     </p>
 
     <figure xml:id="fig-commfmedx">
-      <image source="images/comMFmedX-1.png"/>
+      <image source="images/comMFmedX-1.png">
+        <description>Two-panel time series display for the Comrades Marathon. Upper panel: line plot of median finish times for men and women in up races (orange) and down races (black) from 1980, with two series per race direction. Lower panel: bar chart of numbers of finishers by sex for each year, with men and women coloured differently, aligned below the time series on the same horizontal axis.</description>
+      </image>
       <caption><p>Median times for men and women for up/down Comrades races and numbers finishing.</p></caption>
     </figure>
 
     <p>
-      In this ensemble, the graphics are aligned horizontally and vertically, as are the scales. Colours above and
-      below refer to different grouping structures.
+      The graphics are aligned horizontally and vertically, as are the scales. The colours above refer to the &#8216;up&#8217; and
+      &#8216;down&#8217; races, while the colours below refer to the sex of the runners.
     </p>
 
     <figure xml:id="fig-qlensx">
-      <image source="images/qlEnsX-1.png"/>
+      <image source="images/qlEnsX-1.png">
+        <description>Complex three-part ensemble for a psoriasis quality-of-life study. Top left: spineplot showing the treatment group was much bigger than the placebo group with similarly small dropout rates for both. Top right: two scatterplots of PASI and DLQI scores at the start of the study, showing similar initial distributions for both groups. Bottom: line chart of average scores on ten quality-of-life questions at start and end of the 16-week study, showing large reductions for the treatment group and minimal changes for the placebo group.</description>
+      </image>
       <caption><p>Complex ensemble comparing dropout rates, initial scores, and quality-of-life question means.</p></caption>
     </figure>
 
     <p>
-      This ensemble compares three distinct information sets with different plot forms: dropout proportions,
-      distributional comparisons for initial measurements, and ten-question means over time by group.
+      Three separate pieces of information are compared for the two groups with three different sets of graphics:
+      proportions of dropouts in a barchart, two initial measurements in scatterplots, ten life quality index question
+      means with line charts. There is no need for common scaling as the variable scales all differ. The groups are
+      coloured alike in the scatterplots and the line charts, but not in the barchart, where the dropouts are coloured
+      to emphasise how few there were and how similar the proportions were. The lines are drawn differently according
+      to whether the responses were at the start or end of the study.
     </p>
   </section>
 
   <section xml:id="sec-early-vs-later">
     <title>Differences between early drafts and later graphics</title>
     <p>
-      Quickly drawn default graphics can reveal valuable information. Taking time to improve them can make information
-      easier to see and uncover additional structure. It is instructive to compare pairs of initial and better graphics
-      to study what changed and why.
+      Quickly drawn default graphics can reveal valuable information. Taking the time to improve them can make it easier
+      to see this information by making it stand out and can uncover further information. It is instructive to compare
+      pairs of initial and better graphics to study what changes might be made and how effective they are. Readers will
+      have different opinions on what might be done and how. They are welcome to experiment with the data themselves.
     </p>
 
     <p>
-      "Initial" often means after some data cleaning; first graphics frequently reveal further data problems that
-      require additional wrangling. There can be many early and many later graphics. There is no final graphic; there
-      are always potential alternatives.
+      The term &#8220;initial&#8221; here usually means that the graphic has been drawn after some data cleaning. Quite often the
+      first graphics drawn indicate further data problems of one kind or another that require data wrangling to fix. So
+      there can be many early graphics, just as there can be many later graphics that are amended in a range of ways.
+      What there cannot be is a final graphic; there are always potential alternatives. And whatever improvements can
+      be made to individual graphics, most information will be gathered by looking at more than one data
+      display&#8212;however good an individual graphic is.
     </p>
 
     <subsection xml:id="sec-early-later-1912">
       <title>1912 Democratic Convention</title>
+      <p>
+        <xref ref="ch-democrats-1912"/> studied the selection of the Democratic candidate for President at the 1912
+        Convention. The voting was initially shown in <xref ref="fig-candvs"/> and later, with changes, in
+        <xref ref="fig-candvs2"/>. The two plots are shown here in <xref ref="fig-candvsx"/> and
+        <xref ref="fig-candvsx2"/>. The changes made are listed below.
+      </p>
       <figure xml:id="fig-candvsx">
-        <image source="images/candvsX-1.png"/>
-        <caption><p>Initial convention-voting plot.</p></caption>
+        <image source="images/candvsX-1.png">
+          <description>Line plot of vote totals for multiple Democratic candidates across ballots at the 1912 convention. The horizontal axis shows ballot number and the vertical axis shows vote counts. Clark leads for the first 30 or so ballots, after which Wilson overtakes and eventually reaches a decisive majority around the 46th ballot. Multiple other candidates are shown with much lower and mostly declining vote totals.</description>
+        </image>
+        <caption><p>Voting at the 1912 Democratic convention shown in the initial plot.</p></caption>
       </figure>
       <figure xml:id="fig-candvsx2">
-        <image source="images/candvsX2-1.png"/>
-        <caption><p>Amended convention-voting plot with focused design choices.</p></caption>
+        <image source="images/candvsX2-1.png">
+          <description>Amended line plot of vote totals for the five main Democratic candidates at the 1912 convention. The horizontal axis uses estimated ballot times, with convention sessions shown on a white background and adjournment periods on a grey background. Clark leads until Wilson overtakes him around the time of the last adjournment, ultimately crossing the two-thirds threshold needed to win the nomination. Points mark each ballot; horizontal dashed lines indicate two-thirds and 50 percent support levels.</description>
+        </image>
+        <caption><p>Voting at the 1912 Democratic convention shown in the final plot.</p></caption>
       </figure>
       <p>
-        The first plot shows many candidates but only a few serious ones, Clark's early lead, Wilson's steady gain,
-        and a decisive breakthrough. The second plot emphasises key changes and timing around adjournments.
+        The main features seen in the first plot were that there were many candidates, but only a few serious ones;
+        that Clark was ahead initially, particularly after the 10th ballot; that Wilson gained steadily and made the
+        decisive breakthrough around the 43rd ballot. The second plot emphasises the key changes and shows that the
+        breakthrough for Wilson took place on the ballot after the last adjournment.
       </p>
       <p>Changes include:</p>
       <ol>
-        <li><p>The simple order of ballots on the horizontal scale was replaced by estimated ballot times.</p></li>
-        <li><p>Only candidates receiving over 35 votes in at least one ballot were included, reducing clutter from minor candidates.</p></li>
-        <li><p>The plot background was coloured white when the convention was in session and grey when it was not.</p></li>
-        <li><p>The aspect ratio was changed to 0.5; time series are generally better wider than tall.</p></li>
-        <li><p>The dataset was expanded to include ballots where candidates received zero votes so lines were drawn correctly.</p></li>
-        <li><p>Vote changes were shown as vertical lines at ballot times rather than sloping lines between ballots.</p></li>
-        <li><p>Points were drawn for each ballot to emphasise when and how often ballots took place.</p></li>
-        <li><p>Horizontal lines were added at two-thirds support and at 50 percent support.</p></li>
-        <li><p>A colour-blind scale was used instead of the default colour scale.</p></li>
-        <li><p>Candidate plotting order and legend order were changed to make overlap and line identification easier.</p></li>
+        <li><p>The simple order of ballots on the horizontal scale has been replaced by estimated ballot times.</p></li>
+        <li><p>Only candidates who received over 35 votes in at least one ballot have been included. This was to concentrate on the main candidates and reduce the clutter due to minor candidates who never had much support. The legend in <xref ref="fig-candvsx"/> listed 13 candidates and the category &#8220;Notvoting&#8221;. <xref ref="fig-candvsx2"/> displays the voting for only 5 candidates.</p></li>
+        <li><p>The plot background has been coloured white when the convention was in session and grey when it was not.</p></li>
+        <li><p>The aspect ratio of the plot has been changed to 0.5. Time series are generally better wider than tall, not square or taller than wide.</p></li>
+        <li><p>The dataset has been expanded to include ballots in which the candidates got zero votes. Otherwise the lines for candidates who withdrew were left hanging and the connecting lines for candidates who had no support for some intermediate ballots were not correctly drawn (as happened in <xref ref="fig-candvsx"/> for Harmon).</p></li>
+        <li><p>Vote changes have been shown by vertical lines when the ballot occurred, not as a sloping line between consecutive ballots. This reflects what actually happened. A disadvantage is where lines are drawn on top of one another, as at the last ballot.</p></li>
+        <li><p>Points have been drawn for each ballot to emphasise when and how often they took place, especially when very little changed between ballots.</p></li>
+        <li><p>Horizontal lines have been added at two-thirds support (needed to win the nomination) and at 50% support. Both levels played important parts in the convention. (At the Republican convention a simple majority sufficed.)</p></li>
+        <li><p>A colour blind scale has been used instead of the default colour scale. Colour blind scales assist in distinguishing the candidates.</p></li>
+        <li><p>Candidates have been plotted in reverse order of their votes in the penultimate ballot so that if two candidates overlap the colour of the candidate with more votes is on top.</p></li>
+        <li><p>The legend order has been changed to match the order in the last few ballots. This makes it easier to identify the lines for each candidate.</p></li>
+        <li><p>The legend title and the vertical axis label have been removed. These texts are not necessary and take up space and attention.</p></li>
       </ol>
     </subsection>
 
     <subsection xml:id="sec-early-later-gapminder">
-      <title>Gapminder life expectancies</title>
+      <title>Gapminder Life Expectancies</title>
+      <p>
+        The first plot in <xref ref="ch-gapminder"/>, <xref ref="fig-leyr"/> showed how life expectancy changed for
+        many countries round the world over the past 200 years. Several insights could be derived, but the display was
+        overcrowded and there might have been more information in the data. <xref ref="fig-lef4"/> was an alternative
+        version with the countries faceted and coloured by region. <xref ref="fig-gaplex-1"/> displays both figures.
+      </p>
       <figure xml:id="fig-gaplex-1">
-        <image source="images/gapLEX-1.png"/>
+        <image source="images/gapLEX-1.png">
+          <description>Line plot of life expectancy for all countries from 1800 to 2016, showing overall upward trends with occasional sharp falls and rises. The lines for all countries are overlaid, making individual country identification difficult but overall patterns visible.</description>
+        </image>
         <caption><p>All-country life expectancy display.</p></caption>
       </figure>
       <figure xml:id="fig-gaplex-2">
-        <image source="images/gapLEX-2.png"/>
+        <image source="images/gapLEX-2.png">
+          <description>Four-panel faceted line plot of life expectancy from 1800 to 2016, one panel per Gapminder region (Africa, Americas, Asia, Europe). Countries are coloured by region. Within-region variation and local outliers are visible in each panel, and Europe shows higher life expectancies than other regions throughout the 19th century.</description>
+        </image>
         <caption><p>Faceted regional life expectancy display.</p></caption>
       </figure>
       <p>
-        The initial display shows long-run increase and occasional sharp changes. The faceted version reveals stronger
-        regional structure and local outliers.
+        The initial plot shows the steady increase in life expectancy in the 20th century, the surprisingly constant
+        values for many countries in the 19th century, and occasional sharp falls and rises for individual countries.
+        The later plot shows that life expectancy was generally higher in Europe than elsewhere in the 19th century,
+        that the overall patterns, if not the levels, were similar in all four regions, and that there were countries
+        whose life expectancy graphs differed strikingly from others in their region.
       </p>
       <ol>
-        <li><p>Countries coloured by region.</p></li>
-        <li><p>Regions plotted separately to reveal local differences.</p></li>
-        <li><p>Some small incomplete-country series excluded.</p></li>
+        <li><p>The countries have been coloured by region to provide some information on geographic location.</p></li>
+        <li><p>Each region has been plotted separately so that regional differences and local outliers can be seen.</p></li>
+        <li><p>Some 13 small countries with incomplete data were excluded as they provided little information.</p></li>
       </ol>
     </subsection>
 
     <subsection xml:id="sec-early-later-electric">
       <title>Electric car charging</title>
+      <p>
+        <xref ref="ch-electric-cars"/> included two graphics of the use of charging stations over time,
+        <xref ref="fig-elecStat"/> and <xref ref="fig-elecStat2"/>. They are drawn here side by side in smaller form
+        in <xref ref="fig-elecstat12"/>.
+      </p>
       <figure xml:id="fig-elecstat12">
-        <image source="images/elecStat12-1.png"/>
+        <image source="images/elecStat12-1.png">
+          <description>Side-by-side dotplot display of electric car charging station usage. Left panel (default): shows each charging station as a row with dots marking dates of use, revealing that some stations started being used late in the study and some were used relatively little. Right panel (amended): stations sorted by location and ordered within location, with facility types colour-coded and a dashed red line marking the switch from test phase to analysis phase; location ID labels are added on the right.</description>
+        </image>
         <caption><p>Default and amended displays of charging-station usage over time.</p></caption>
       </figure>
       <p>
-        The first plot shows late starts and low-use stations. The second plot highlights phase boundaries and
-        location-level usage differences worth investigating.
+        From the first plot it is apparent that a number of charging stations only started to be used late on in the
+        study, and that some charging stations were used relatively little. The second plot highlights when the testing
+        phase stopped. It shows that some charging locations were little used, that office locations came later than
+        R&amp;D locations, that there were differences worth investigating further in patterns of use of charging
+        stations at the same location.
       </p>
       <ol>
-        <li><p>A high aspect ratio was used for the amended plot to show station-level points more clearly.</p></li>
-        <li><p>Charging stations were sorted by location to compare neighbouring-station use.</p></li>
-        <li><p>Locations were ordered by first use to match study development.</p></li>
-        <li><p>Charging stations were ordered within location to show installation development.</p></li>
-        <li><p>Facility types were coloured to highlight group differences.</p></li>
-        <li><p>A dashed red line marked the switch from test phase to analysis phase.</p></li>
-        <li><p>The vertical axis label and individual station IDs were dropped; location ID labels were added.</p></li>
-        <li><p>Date formatting and labelling were improved for context; the uninformative horizontal-axis label was removed.</p></li>
+        <li><p>Using a high aspect ratio for the amended plot in <xref ref="fig-elecStat2"/> to show the points for the individual charging stations better.</p></li>
+        <li><p>Sorting charging stations by location to be able to see how usage of neighbouring stations compares.</p></li>
+        <li><p>Ordering locations by first use to put them in an order matching the development of the study.</p></li>
+        <li><p>Ordering charging stations within location to show how the installations developed.</p></li>
+        <li><p>Colouring facility types to highlight group differences.</p></li>
+        <li><p>Drawing a dashed red line at the time the study switched from the test phase to the analysis phase. This emphasises how many locations were not used (not available?) during the test phase.</p></li>
+        <li><p>Dropping the vertical axis label and the individual Station IDs. The caption makes clear what is shown vertically and the Station IDs are just codes that provide little information.</p></li>
+        <li><p>Adding Location ID labels. Although the labels are uninterpretable codes, they do emphasise that the locations are different. Should someone have access to which locations those codes relate to, they could look up the details.</p></li>
+        <li><p>The date formatting in the default plot does not include the year and does not explain where in a month the month&#8217;s name is placed. Detailed dates provide better context. The horizontal axis label was dropped as the name was uninformative and it is obvious from the more detailed labelling that time is being plotted.</p></li>
       </ol>
     </subsection>
 
     <subsection xml:id="sec-early-later-gay-rights">
       <title>Gay rights</title>
+      <p>
+        The choropleth map in <xref ref="ch-gay-rights"/>, <xref ref="fig-gayMap"/> gave an overview of the
+        geographic distribution of support for same-sex marriage at state level. Individual states have very different
+        population sizes and the survey design reflected that. A default plot of confidence intervals for the state
+        estimates is shown here with the amended plot drawn in the chapter, <xref ref="fig-gayCIs"/>, in
+        <xref ref="fig-gaycix"/>.
+      </p>
       <figure xml:id="fig-gaycix">
-        <image source="images/gayCIX-1.png"/>
+        <image source="images/gayCIX-1.png">
+          <description>Two side-by-side plots of support for same-sex marriage by US state with 95% confidence intervals. Left panel (default): states in alphabetical order with point estimates and error bars, showing varying rates and interval widths. Right panel (amended): states sorted by Census Bureau region and ordered by estimate within region, with estimates coloured by region, larger points, straight interval lines without end bars, percentage scale from 0 to 100%, and a 50% guideline.</description>
+        </image>
         <caption><p>State support with confidence intervals: default and ordered versions.</p></caption>
       </figure>
       <p>
-        The amended plot clarifies regional and within-region structure, highlights the 50 percent threshold, and
-        improves comparability.
+        The first plot shows that states have different rates and different confidence interval lengths. Many pairs of
+        confidence intervals do not overlap. The second plot shows that: the few states with over 50% support are in
+        the North East; Washington DC and Delaware have rates more like the North East than the South; MidWest states
+        have similar rates to each other; the Dakotas have broader intervals (i.e. smaller survey samples matching
+        smaller populations).
       </p>
       <ol>
-        <li><p>States were sorted by Census Bureau region so local comparisons are easier.</p></li>
-        <li><p>States were ordered by estimate within region to facilitate comparison.</p></li>
-        <li><p>Estimates were coloured by region to differentiate groups.</p></li>
-        <li><p>Points were drawn larger and intervals drawn as straight lines without end bars to reduce clutter.</p></li>
-        <li><p>Horizontal scaling was changed to percentages and limits set to [0,100%], with breakpoints including 50%.</p></li>
-        <li><p>Axis-name labels were dropped to leave more space for the graphic.</p></li>
+        <li><p>The states have been sorted by Census Bureau region so that local comparisons are easier.</p></li>
+        <li><p>States have been ordered by estimate within region, again to facilitate comparisons.</p></li>
+        <li><p>Estimates have been coloured by region to differentiate the groups.</p></li>
+        <li><p>Points have been drawn bigger to make the estimates themselves stand out more.</p></li>
+        <li><p>Intervals have been drawn as straight lines without end bars to reduce clutter and give less emphasis to the smaller states.</p></li>
+        <li><p>Horizontal scaling has been changed to percentages instead of proportions to better match the data.</p></li>
+        <li><p>Horizontal limits have been set to [0,100%] to avoid false impressions of the amount of support.</p></li>
+        <li><p>Breakpoints on the horizontal axis have been chosen to include the critical 50% value, so that it is easy to see which intervals do not even reach majority support.</p></li>
+        <li><p>Axis name labels have been dropped to leave more space for the graphic.</p></li>
       </ol>
     </subsection>
 
     <subsection xml:id="sec-early-later-spaceflight">
       <title>Human space flight</title>
+      <p>
+        <xref ref="fig-flightt"/> in <xref ref="ch-astronauts"/> shows the mission time of space flights by year of
+        flight. If the flights went to a space station, they were coloured accordingly in <xref ref="fig-flighttc"/>.
+        The final version after taking logarithms was given in <xref ref="fig-flighttl"/>. <xref ref="fig-flightt"/>
+        and <xref ref="fig-flighttl"/> are redrawn here as <xref ref="fig-flighttz"/>.
+      </p>
       <figure xml:id="fig-flighttz">
-        <image source="images/flighttz-1.png"/>
+        <image source="images/flighttz-1.png">
+          <description>Two side-by-side scatterplots of human spaceflight mission duration by year. Left panel: mission time in minutes by year on a linear scale, showing most missions as short with a few very long ones and a cluster at 4000&#8211;5000 minutes. Right panel: log-transformed mission times by year, coloured by space station programme, revealing a clear split between short missions of about a week and longer missions of several months associated with space station programmes.</description>
+        </image>
         <caption><p>Mission time versus year: raw and log-transformed comparison.</p></caption>
       </figure>
       <p>
-        The log-scale display reveals structure in short and long missions and clarifies programme-related groupings.
+        The plot on the left shows that most mission times were short, especially before 1980, that there were a few
+        very long missions, and that there was a group of missions between about 4000 and 5000 minutes. The plot on
+        the right shows that mostly the missions split into short ones of a week or so, that there were longer ones of
+        several months as part of space station programmes, that there were some low mission times that required
+        further investigation.
       </p>
       <ol>
-        <li><p>Log transformation used to reveal more structure.</p></li>
-        <li><p>Breaks chosen for interpretable time periods.</p></li>
-        <li><p>Space-station programme colouring used for subgroup exploration.</p></li>
+        <li><p>The logarithms of mission times have been used instead of the mission times as the plot then shows more structure. (<xref ref="fig-flighttc"/> revealed that it primarily splits the missions into whether they were to a space station or not.)</p></li>
+        <li><p>The breaks on the vertical axis scale were not set equally but chosen to reflect familiar time periods to make the times readily understandable.</p></li>
+        <li><p>The display was coloured by space station programme to explore the differences between the shorter and longer missions.</p></li>
       </ol>
     </subsection>
 
     <subsection xml:id="sec-early-later-euro2020">
       <title>Euro 2020</title>
+      <p>
+        For each team taking part in the Euro 2020 soccer competition, <xref ref="fig-uefa20"/> showed in which
+        countries the players in the squad played. A default plot for this example is shown in
+        <xref ref="fig-uefa20x"/>. The figure from <xref ref="ch-euros"/> is replotted below.
+      </p>
       <figure xml:id="fig-uefa20x">
-        <image source="images/uefa20X-1.png"/>
-        <caption><p>Default faceted bar display of players' league countries.</p></caption>
+        <image source="images/uefa20X-1.png">
+          <description>Default faceted bar chart of Euro 2020 squad players by league country for each national team. Each of 24 panels shows one national team with bars coloured by league country in default colours. Bars are in alphabetical order, making cross-team comparison of league patterns difficult.</description>
+        </image>
+        <caption><p>Default faceted bar display of players&#8217; league countries.</p></caption>
       </figure>
       <figure xml:id="fig-uefa20y">
-        <image source="images/uefa20Y-1.png"/>
+        <image source="images/uefa20Y-1.png">
+          <description>Amended faceted bar chart of Euro 2020 squad players by league country for each national team. Teams are ordered by percentage of players in their own national league. Bars are ordered by total number of players from each league, with leagues having fewer than nine players grouped as Other. Country colours are used instead of defaults. The legend is removed, labels are added to the bars, and gridlines are removed for clarity.</description>
+        </image>
         <caption><p>Amended display with ordering, grouping, and simplified guides.</p></caption>
       </figure>
       <p>
-        The amended display supports easier team and league pattern identification by ordering and grouping choices.
+        The first plot shows that some teams&#8217; players are from only a few countries&#8217; leagues and some from several. In
+        the second plot the teams and leagues can be seen and individual patterns identified (e.g., England, Italy,
+        Russia, Spain, Austria, Wales).
       </p>
       <ol>
-        <li><p>Teams were ordered by the percentage of players in their own national league.</p></li>
-        <li><p>Bars were ordered by total players from each league; leagues with fewer than nine players were grouped as Other.</p></li>
-        <li><p>Colours close to country colours were used instead of defaults.</p></li>
-        <li><p>The legend was dropped, as labels already indicate colour meaning and the legend used too much space.</p></li>
-        <li><p>The number of facet rows was set to four for a better balanced display and more vertical label space.</p></li>
-        <li><p>Axis-title labels were dropped; the horizontal-axis scale was dropped with extra end space added; gridlines removed.</p></li>
+        <li><p>The teams have been ordered by the percentage of players playing in their own national league.</p></li>
+        <li><p>The bars have been ordered by the total number of players from that league playing in Euro 2020. Countries with less than 9 players have been grouped into &#8220;Other&#8221;. This emphasises the more important leagues and makes the labels readable.</p></li>
+        <li><p>Colours close to country colours have been used instead of default colours.</p></li>
+        <li><p>The legend has been dropped as it takes up a lot of room (even with fewer countries) and the labels show what the colours mean.</p></li>
+        <li><p>The number of rows has been set to 4 to get a better balanced display and give more vertical space for the country labels of the leagues.</p></li>
+        <li><p>Axis title labels have been dropped leaving more space for the display.</p></li>
+        <li><p>The horizontal axis scale has been dropped as exact counts are not important. Extra space has been added to the ends of the scale to improve readability.</p></li>
+        <li><p>Gridlines have been removed to reduce clutter.</p></li>
       </ol>
     </subsection>
   </section>
@@ -231,14 +358,14 @@
   <section xml:id="sec-characteristic-changes">
     <title>Characteristic changes</title>
     <ol>
-      <li><p>Grouping information supports understanding by chunking complex structure.</p></li>
-      <li><p>Aspect ratio choices are often critical.</p></li>
-      <li><p>Ordering is an effective way to emphasize patterns.</p></li>
-      <li><p>Colour is powerful and should be chosen deliberately.</p></li>
-      <li><p>Reducing clutter and making space is usually worthwhile.</p></li>
-      <li><p>Scaling and labelling should be sufficient but not excessive.</p></li>
-      <li><p>Time scaling and time labels require care.</p></li>
-      <li><p>Guidelines for critical values can improve interpretation.</p></li>
+      <li><p>Grouping information supports understanding. It is easier to work with chunks of information than with all the individual components. Grouping may be achieved by spatial separation (<xref ref="fig-elecstat12"/>), by faceting (<xref ref="fig-gaplex-1"/> and <xref ref="fig-gaycix"/>), by colour (<xref ref="fig-elecstat12"/> and <xref ref="fig-flighttz"/>).</p></li>
+      <li><p>Plot aspect ratios are important (<xref ref="fig-candvsx2"/> and <xref ref="fig-elecstat12"/>).</p></li>
+      <li><p>Ordering is an effective way of emphasising patterns (<xref ref="fig-gaycix"/> and <xref ref="fig-uefa20y"/>).</p></li>
+      <li><p>Colour is a powerful tool and should be chosen with care (<xref ref="fig-candvsx2"/>, <xref ref="fig-gaplex-2"/>, and <xref ref="fig-flighttz"/>).</p></li>
+      <li><p>Reducing clutter and making space by reformatting or by excluding less important cases is always worth considering (<xref ref="fig-gaplex-1"/> and <xref ref="fig-uefa20y"/>).</p></li>
+      <li><p>Scaling and labelling should be sufficient but not excessive (<xref ref="fig-gaycix"/> and <xref ref="fig-uefa20y"/>).</p></li>
+      <li><p>Time scaling and labelling should be chosen carefully (<xref ref="fig-candvsx2"/> and <xref ref="fig-flighttz"/>).</p></li>
+      <li><p>Adding guidelines for critical values is useful (<xref ref="fig-candvsx2"/> and <xref ref="fig-elecstat12"/>).</p></li>
     </ol>
   </section>
 
@@ -246,24 +373,31 @@
     <title>Classifying graphics</title>
     <p>
       Graphics may be classified in different ways and a number of terms are used. Data graphics generally refers to
-      displays of raw data. Model graphics implies displays associated with models. Multivariate graphics includes
-      displays showing many variables. Interactive graphics describes displays that can be directly manipulated.
-      Dynamic graphics means displays that can be set in motion. There is overlap between interactive and dynamic
-      graphics, but the emphasis differs.
+      displays of raw data. Model graphics implies displays associated with models, such as plots of predictions or
+      residuals, plots of parameter estimates or of statistics for comparing models. Multivariate graphics includes
+      displays showing many variables such as parallel coordinate plots and mosaicplots, small multiples including
+      facetings, and dimension reduction displays such as biplots and multidimensional scaling plots. Interactive
+      graphics describes displays which can be directly manipulated: queried, sorted, reformatted, linked across
+      multiple displays. Dynamic graphics means displays which can be set in motion, such as rotating plots and
+      animated plots. There is some overlap between interactive and dynamic graphics, but the emphasis with the
+      former is on interaction and the emphasis with the latter is on dynamics. And there are further terms mentioned
+      in the literature.
     </p>
 
     <p>
-      Technical properties and data background are not the only determinants of use. Setting matters: specialist
-      publication versus mass-media item, attentive audience versus competing attention, and high versus low assumed
-      domain knowledge.
+      It is not just the technical aspects and the data background that affect the use of graphics. The setting is
+      important. This can range from a publication of a research project in a specialist field to an item on the
+      television news about the progress of an epidemic. In some circumstances a graphic may be paid close attention,
+      in others the graphic may be competing for attention. Sometimes much must be explained, sometimes it is safe to
+      assume substantive knowledge on the part of the graphic&#8217;s viewers. Graphics are not an easy matter.
     </p>
 
     <subsection xml:id="sec-spot-main-points">
       <title>Main points</title>
       <ul>
-        <li><p>Graphics that look similar can represent different tasks and data contexts.</p></li>
-        <li><p>Ensembles work best when theme, alignment, scales, and formatting are coherent.</p></li>
-        <li><p>Describing why a plot was changed is often more informative than describing how.</p></li>
+        <li><p>Not all graphics that look the same are the same. Context matters.</p></li>
+        <li><p>Ensembles of plots require coherence of look, theme, alignment, scales, and formatting.</p></li>
+        <li><p>Graphics can be changed in many ways and describing why a change has been made is more enlightening than describing how it has been made.</p></li>
       </ul>
     </subsection>
   </section>
