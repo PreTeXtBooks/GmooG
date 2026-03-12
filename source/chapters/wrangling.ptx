@@ -86,8 +86,8 @@
 
       <p>
         The mission times of individuals on spaceflights were initially plotted on a linear scale, shown again on
-        the left of Figure <xref ref="fig-flighttx"/>. Plotting mission times on a log scale, repeated on the
-        right of Figure <xref ref="fig-flighttx"/>, provided a better view. It also led to adding a more
+        the left of <xref ref="fig-flighttx"/>. Plotting mission times on a log scale, repeated on the
+        right of <xref ref="fig-flighttx"/>, provided a better view. It also led to adding a more
         informative vertical scale.
       </p>
 
@@ -101,7 +101,7 @@
       <p>
         Transformations can be used to standardise data to make distributions for different groups or variables
         more comparable. In the Olympics chapter, performance improvements in athletics events were compared over
-        the years. Figure <xref ref="fig-olyaa"/> shows the percentage changes for track and field events for men
+        the years. <xref ref="fig-olyaa"/> shows the percentage changes for track and field events for men
         and women. Baselines were taken to be the average of gold medal performances at the Olympics from 1996 to
         2016. For field events gold medal performances tended higher as winning distances became longer and winning
         heights became higher. For track events gold medal performances tended lower, as winning times got faster.
@@ -195,7 +195,7 @@
       species was compared across different islands. In the Palmer Penguins chapter three species of penguins
       were compared. In the Swimming chapter subsets of swimming performances were chosen and then compared by
       stroke, distance, and swimmer's sex. In the Comrades Marathon dataset the numbers running were grouped by
-      sex and age and compared over time in Figure <xref ref="fig-comcatsx"/>.
+      sex and age and compared over time in <xref ref="fig-comcatsx"/>.
     </p>
 
     <figure xml:id="fig-comcatsx">
@@ -266,7 +266,7 @@
       drawn using the same dataset, sometimes each layer is drawn with a different dataset. In the latter case,
       the datasets may be subsets, aggregations, or even models derived from one main dataset. Constructing them
       is part of data wrangling. A simple example plotting the distribution of bill lengths for the Ad&#233;lie
-      penguins shows the idea in Figure <xref ref="fig-histlayers"/>.
+      penguins shows the idea in <xref ref="fig-histlayers"/>.
     </p>
 
     <figure xml:id="fig-histlayers">
@@ -306,10 +306,10 @@
     </p>
 
     <p>
-      In Figure <xref ref="fig-histlayers"/> the two density estimates cover up the histogram details in the
+      In <xref ref="fig-histlayers"/> the two density estimates cover up the histogram details in the
       final plot (which suggests that they are a fairly good fit). Similarly, the second, rougher estimate covers
       up the first, although the differences can still be seen. A bigger version of the plot would be better, as
-      in Figure <xref ref="fig-histlayers2"/>. Now all the details can be seen. Graphics need to be large enough
+      in <xref ref="fig-histlayers2"/>. Now all the details can be seen. Graphics need to be large enough
       to display the information in them.
     </p>
 
@@ -349,7 +349,7 @@
     </p>
 
     <p>
-      There can also be multiple layers of data using different datasets. Figure <xref ref="fig-socdfx"/> uses
+      There can also be multiple layers of data using different datasets. <xref ref="fig-socdfx"/> uses
       data from three different leagues over three overlapping but different time ranges. The scale limits must
       be set in the first data layer to ensure that all data are shown.
     </p>
@@ -398,7 +398,7 @@
 
     <p>
       Layering is effective for faceted data when the whole dataset is drawn in a muted colour in each facet
-      first and each facet's subset is drawn on top in colour, ghostplotting. Figure <xref ref="fig-flightx"/>
+      first and each facet's subset is drawn on top in colour, ghostplotting. <xref ref="fig-flightx"/>
       is such an example:
     </p>
 
@@ -413,7 +413,7 @@
       <title>The layers of a league wormchart</title>
 
       <p>
-        Figure <xref ref="fig-worm54"/> is a wormchart for the English League Championship of 1954&#8211;55,
+        <xref ref="fig-worm54"/> is a wormchart for the English League Championship of 1954&#8211;55,
         similar to the plots for other seasons in the Football Leagues chapter. There were 22 teams, each playing
         42 games. There were just 2 points for a win and only two teams were relegated. Chelsea won with the low
         total of 54 points. At the half-way mark of 21 games, Chelsea were level on points with Cardiff City, who
@@ -429,7 +429,7 @@
       </figure>
 
       <p>
-        Figure <xref ref="fig-worm54"/> has eight layers and uses four datasets. Figure
+        <xref ref="fig-worm54"/> has eight layers and uses four datasets. Figure
         <xref ref="fig-wormlayers"/> shows the build-up. There are background layers of colour and axes; a line
         layer of team performances drawn lightly (using a dataset of all teams); a layer of coloured, thicker
         lines for the top four and bottom four teams (using the subset of those eight teams); a text layer with
