@@ -46,16 +46,16 @@
       </p>
       <p>
         The ordering of cases can affect printing if cases or lines overlap, as the dataset is printed in order.
-        The lines for the three football teams in a football chart were drawn in alphabetic order, first
+        The lines for the three football teams in <xref ref="fig-teamBPS"/> were drawn in alphabetic order, first
         Bournemouth, then Portsmouth, then Southampton, as can be seen by looking at where the lines cross. (The
         lines for the other teams in the leagues, drawn in light grey in the background, were drawn in a background
-        layer first.) A plot compares calculated values of diamond depth with the values given in the dataset. The
+        layer first.) <xref ref="fig-bothDep"/> compares calculated values of diamond depth with the values given in the dataset. The
         data were ordered by the size of the absolute difference, so that the bigger differences, coloured red,
         were plotted last and hence on top.
       </p>
       <p>
-        The Comrades Marathon chapter includes two plots of the performances of the Nurgalieva twins over the
-        years, Figure <xref ref="fig-comnurgx"/>. Elena ran every year from 2003 to 2015, while Olesya did not
+        <xref ref="ch-comrades-marathon"/> on the Comrades Marathon includes two plots of the performances of the Nurgalieva twins over the
+        years, <xref ref="fig-comnurg"/>, redrawn here as <xref ref="fig-comnurgx"/>. Elena ran every year from 2003 to 2015, while Olesya did not
         run in 2006 and 2012. In the plots, the line for Olesya is drawn on top. This works if it is remembered
         that Elena ran every year. If the line for Elena had been drawn on top, that would not have worked, even
         for the zoomed plot on the right.
@@ -88,7 +88,7 @@
       <p>
         One example is the barchart of the numbers of passengers and crew who boarded the Titanic at the four
         different ports. Figure <xref ref="fig-barboard"/> shows a plot with the default alphabetic ordering on
-        the left and the plot used in the Titanic chapter on the right, using the order the ship called at the
+        the left and the plot used in <xref ref="sec-titanic-travellers"/> on the right, using the order the ship called at the
         ports. The great majority, including many crew, joined in Southampton.
       </p>
 
@@ -103,8 +103,8 @@
       </figure>
 
       <p>
-        In the Gapminder analysis, there are two barcharts of the four regions, one for the number of countries
-        in each region and one for the total population, both ordered by bar heights. The two are shown again here
+        In the Gapminder analysis, <xref ref="sec-gapm3"/>, there are two barcharts of the four regions, one for the number of countries
+        in each region (<xref ref="fig-reg4"/>) and one for the total population (<xref ref="fig-reg4pop"/>), both ordered by bar heights. The two are shown again here
         in Figure <xref ref="fig-reg4xy"/>. The first shows that Africa and Asia have more countries than Europe
         or the Americas, while the second shows that Asia has more of the world's population than the other three
         regions put together.
@@ -122,7 +122,7 @@
 
       <p>
         A common reason for reordering categories is to produce a recognisable and memorable pattern, for instance
-        steadily increasing or decreasing. A plot shows sales of station wagons and SUVs by year. The original
+        steadily increasing or decreasing. <xref ref="fig-swsuv"/> shows sales of station wagons and SUVs by year. The original
         plot is on the right of Figure <xref ref="fig-swsuvx-2"/> and a plot using a default lexicographic
         ordering of the vehicle types is on the left in Figure <xref ref="fig-swsuvx-1"/>.
       </p>
@@ -174,9 +174,9 @@
       <title>Boxplots</title>
       <p>
         Boxplots by group are a space-efficient way of comparing distributions. The group ordering is sometimes
-        given (e.g., in a plot of carat by clarity from the <em>diamonds</em> dataset). If not, it is useful to
+        given (e.g., in <xref ref="fig-clarityCarat"/> of carat by clarity from the <em>diamonds</em> dataset). If not, it is useful to
         look at different orderings, possibly by a statistic of the individual boxplots (e.g., median or maximum)
-        or by using another dataset statistic associated with the group variable. In the Chess chapter the
+        or by using another dataset statistic associated with the group variable. In <xref ref="fig-boxChessR"/> the
         rankings of chess players were displayed in boxplots for the countries with the most rated players, and
         the countries were ordered by their median player rating. As with bars in barcharts, the ordering of the
         boxplots will facilitate some paired comparisons more than others. The median ordering makes comparison of
@@ -213,22 +213,20 @@
     <subsection xml:id="sec-order-facets">
       <title>Sorting into groups and faceting plots</title>
       <p>
-        Faceting displays data subgroups in the same graphical form. The subgroups are defined by combinations of
+        Faceting displays data subgroups in the same graphical form, e.g., <xref ref="fig-moviett2"/> and <xref ref="fig-olyEg"/>. The subgroups are defined by combinations of
         variables. If the graphical form can be internally ordered (e.g., the bars in a barchart, the boxplots in
-        a group of boxplots or the dotplots in a dotplot figure) then you have what might be called zero order
+        a group of boxplots or the dotplots in <xref ref="fig-olyEg"/>) then you have what might be called zero order
         faceting.
       </p>
       <p>
-        Sorting cases into groups is often carried out to display statistics, as was done in a plot grouping cases
-        by states (and grouping the states by region), or to draw summary plots as in a car efficiency plot
-        grouping cars by class, drive type, and petrol.
+        Sorting cases into groups is often carried out to display statistics, as was done in <xref ref="fig-gayCIs"/> grouping cases
+        by states (and grouping the states by region), or to draw summary plots as in <xref ref="fig-vehcn"/> grouping cars by class, drive type, and petrol.
       </p>
       <p>
-        Sorting into groups was used in the Gapminder chapter to draw countries in the same region together, in
-        the Electric Cars chapter to keep charging stations at the same location together and to colour locations
-        by type, in the US Fuel chapter to put what were thought to be similarly sized cars together, in Figure
-        <xref ref="fig-khlvx"/>, to place events for the same swimming stroke together, and in the German
-        Election chapter to keep constituencies in the same Bundesland together and to display the spatial
+        Sorting into groups was used in <xref ref="ch-gapminder"/> to draw countries in the same region together (<xref ref="fig-ler4"/>), in
+        <xref ref="ch-electric-cars"/> to keep charging stations at the same location together and to colour locations
+        by type, in <xref ref="ch-us-fuel"/> to put what were thought to be similarly sized cars together, in Figure
+        <xref ref="fig-khlv"/>, shown again here as Figure <xref ref="fig-khlvx"/>, to place events for the same swimming stroke together, and in <xref ref="ch-bundestag-election"/> to keep constituencies in the same Bundesland together and to display the spatial
         distributions of seat wins for the individual parties.
       </p>
 
@@ -242,14 +240,14 @@
       </figure>
 
       <p>
-        A UEFA EURO 2020 plot displays 24 barcharts, each with 17 bars. The facets are ordered by the percentage
+        <xref ref="fig-uefa20"/> displays 24 barcharts, each with 17 bars. The facets are ordered by the percentage
         of squad players playing in their own country. The bars themselves are ordered by the numbers of players
         from a country's league playing in EURO2020, except for the &#8216;Other&#8217; category, which has been
         placed last. The aims are to put countries close together that are similar in home percentage value and to
         put leagues close together that have similar numbers at the tournament.
       </p>
       <p>
-        Another example of arranging facets is shown in an Olympic Games plot where the countries are put in order
+        Another example of arranging facets is shown in <xref ref="fig-olyGhs"/> where the countries are put in order
         of the first time they hosted the Olympic Games. This matches the aim of the graphic better than a default
         alphabetic order.
       </p>
@@ -269,7 +267,7 @@
         (<xref ref="hofmann-2008"/>).
       </p>
       <p>
-        There are two mosaicplots in the Titanic chapter, shown again in Figure <xref ref="fig-titanboth"/>. In
+        There are two mosaicplots in <xref ref="ch-titanic"/> about the sinking of the Titanic, <xref ref="fig-titancrew"/> and <xref ref="fig-titanpass"/>, shown again in Figure <xref ref="fig-titanboth"/>. In
         the plot on the left the passenger classes have been drawn first in the natural order of first, second,
         third (alphabetic in English, but not in all languages), followed by the crew departments ordered by
         survival rates. This shows that survival rates declined by class and that the rates were lowest for the
@@ -298,7 +296,7 @@
       </figure>
 
       <p>
-        In the analysis of software for facial recognition the plots are all drawn with males first and then
+        In the analysis of software for facial recognition in <xref ref="ch-facial-recognition"/> the plots are all drawn with males first and then
         females to emphasise the general error increase from left to right.
       </p>
     </subsection>
@@ -366,7 +364,7 @@
       </p>
       <p>
         So ordering is not only relevant for the variables in a parallel coordinate plot, it is advantageous for
-        ordering the cases when they are coloured by groups. The cases of most interest should always be drawn
+        ordering the cases when they are coloured by groups (cf. <xref ref="fig-pcp1"/>). The cases of most interest should always be drawn
         last, so that their polylines appear on top of the others. There are many other options influencing how
         parallel coordinate displays are drawn and all have to be considered together to get effective displays.
         Using more displays reveals more information.
@@ -382,8 +380,7 @@
         cases across the display.
       </p>
       <p>
-        Figure <xref ref="fig-palpcps-1"/> and Figure <xref ref="fig-palpcps-2"/> show the Palmer Penguin
-        parallel coordinate plots. The reordered version on the right is easier to decode.
+        Figure <xref ref="fig-palpcps-1"/> and Figure <xref ref="fig-palpcps-2"/> show <xref ref="fig-palpcp1"/> and <xref ref="fig-palpcp2"/> from <xref ref="sec-palmer-pcp"/>. The reordered version on the right is easier to decode.
       </p>
 
       <figure xml:id="fig-palpcps-1">
@@ -431,15 +428,15 @@
     <title>Arranging graphics</title>
 
     <p>
-      Ensembles of graphics are affected by how the individual graphics are arranged. Other arrangements might not
+      Ensembles of graphics are affected by how the individual graphics are arranged, as in <xref ref="fig-elecEns"/> and <xref ref="fig-qlEns"/>. Other arrangements might not
       have fitted together as well or given a different impression. It is worth trying more than one, however
       informative a first arrangement appears.
     </p>
     <p>
       Small multiples, named and popularised in <xref ref="Tufte-2001ip"/>, are displays of many graphics of the
-      same type and may have a natural order. The boxplots of chess rankings by age in a chess figure are one
+      same type and may have a natural order. The boxplots of chess rankings by age in <xref ref="fig-ratAge15b"/> are one
       example. Often there will be no such natural order, for instance in ordering variables in a scatterplot
-      matrix. Grouping variables by type may be effective, as in the Diamonds chapter, where two scatterplot
+      matrix. Grouping variables by type may be effective, as in <xref ref="secDiam2"/>, where two scatterplot
       matrices are drawn. The first one is for the three dimensions and carat and the second for carat and the
       remaining three continuous variables. Ordering by statistics of various kinds can be informative, the best
       strategy is to consider more than one ordering.
@@ -465,7 +462,7 @@
     </figure>
 
     <p>
-      The 22 facets of a film genre figure, showing numbers of films of different genres over the years, could
+      The 22 facets of <xref ref="fig-moviegf"/>, showing numbers of films of different genres over the years, could
       have been drawn all with the same vertical scale or all with individual vertical scales. It seems more
       helpful to display them in rows with different vertical scales, but with the same scale across each row.
     </p>
