@@ -79,7 +79,7 @@
       <title>Colours distinguish</title>
 
       <p>
-        The colour scheme in Figure <xref ref="fig-swm50a"/>, repeated here in a smaller form as Figure
+        The colour scheme in <xref ref="fig-swm50a"/>, repeated here in a smaller form as Figure
         <xref ref="fig-swims4"/>, emphasises the four different strokes in swimming. The colours work because
         there is no overlapping. If there was overlapping, facets with ghostplotting could be used.
       </p>
@@ -92,8 +92,8 @@
       </figure>
 
       <p>
-        In Chapter <xref ref="ch-light-speed"/> there are three separate scatterplots using colour, each with different
-        aims, each coloured differently. Figure <xref ref="fig-michncol-1"/>, <xref ref="fig-michncol-2"/>,
+        In <xref ref="ch-light-speed"/> there are three separate scatterplots using colour, each with different
+        aims, each coloured differently. <xref ref="fig-michncol-1"/>, <xref ref="fig-michncol-2"/>,
         <xref ref="fig-michncol-3"/> shows them: Stigler's division of Michelson's data into five groups (Figure
         <xref ref="fig-ptmich"/>); Michelson's grouping the data by three times of day (Figure
         <xref ref="fig-michT"/>); Newcomb's data including the responsible observers (Figure
@@ -130,7 +130,7 @@
       <p>
         Colouring individual outlying points draws more attention to them, whether they are boxplot outliers or
         unusual values in scatterplots. The boxplot of Newcomb's measurements of the speed of light in
-        <xref ref="sec-lightspeed-discussion"/> is one example of highlighting outliers (Figure <xref ref="fig-boxls"/>).
+        <xref ref="sec-lightspeed-discussion"/> is one example of highlighting outliers (<xref ref="fig-boxls"/>).
       </p>
 
       <figure xml:id="fig-boxls">
@@ -142,7 +142,7 @@
 
       <p>
         The boxplots of chess players' ratings by age in <xref ref="sec-chess-discussion"/> is another example, (Figure
-        <xref ref="fig-ratAge15b"/> repeated as Figure <xref ref="fig-boxchess"/>).
+        <xref ref="fig-ratAge15b"/> repeated as <xref ref="fig-boxchess"/>).
       </p>
 
       <figure xml:id="fig-boxchess">
@@ -153,7 +153,7 @@
       </figure>
 
       <p>
-        The scatterplot of chess ratings by age in Figure <xref ref="fig-ratAge15alph"/>, repeated as Figure <xref ref="fig-scatchess"/>, uses red to pick out the
+        The scatterplot of chess ratings by age in <xref ref="fig-ratAge15alph"/>, repeated as <xref ref="fig-scatchess"/>, uses red to pick out the
         players with the highest ratings and alpha transparency to downplay the others.
       </p>
 
@@ -165,7 +165,7 @@
       </figure>
 
       <p>
-        In Figure <xref ref="fig-socHAt"/>, redrawn in Figure <xref ref="fig-hiloouts"/>, colour is used to pick out English football teams with extreme
+        In <xref ref="fig-socHAt"/>, redrawn in <xref ref="fig-hiloouts"/>, colour is used to pick out English football teams with extreme
         proportions of points won at home in their leagues. Those points are
         also drawn slightly bigger than the other points.
       </p>
@@ -180,7 +180,7 @@
       <p>
         Highlighting some aspects can be achieved by playing down others. Some faceted plots have been drawn in
         the book with the complete dataset in the background of each facet drawn in a discreet grey rather than a
-        default black, ghostplotting, to give context. Examples include Figures <xref ref="fig-flightn"/>,
+        default black, ghostplotting, to give context. Examples include <xref ref="fig-flightn"/>,
         <xref ref="fig-snodPCP"/>, and <xref ref="fig-scath"/>.
       </p>
     </subsection>
@@ -266,8 +266,8 @@
       </p>
 
       <p>
-        In Chapter <xref ref="ch-bundestag-election"/> the German political parties have been represented by their own colours,
-        as in Figure <xref ref="fig-btwmape"/>, shown here as Figure <xref ref="fig-btwmapem"/>.
+        In <xref ref="ch-bundestag-election"/> the German political parties have been represented by their own colours,
+        as in <xref ref="fig-btwmape"/>, shown here as <xref ref="fig-btwmapem"/>.
       </p>
 
       <figure xml:id="fig-btwmapem">
@@ -279,8 +279,8 @@
 
       <p>
         Whether this is effective or not may depend on the type of plot. The Gapminder dataset discussed in
-        Chapter <xref ref="ch-gapminder"/> splits the world into four regions and colours those regions consistently. Using that
-        colour scheme for the time series in Figure <xref ref="fig-ler4"/> is not effective, although it is fine for the associated faceted plot
+        <xref ref="ch-gapminder"/> splits the world into four regions and colours those regions consistently. Using that
+        colour scheme for the time series in <xref ref="fig-ler4"/> is not effective, although it is fine for the associated faceted plot
         and barcharts.
       </p>
 
@@ -339,8 +339,8 @@
       <p>
         The same colour blind palette has been used in several figures in the book for datasets as diverse as a
         gay rights survey, electric car charging, penguin species, swimmers' nationalities, and groups of
-        marathon runners. Three examples, Figures <xref ref="fig-gayFS"/>, <xref ref="fig-palpcp2"/>, and
-        <xref ref="fig-comcats"/>, are shown together in Figure <xref ref="fig-colblind-1"/>, <xref ref="fig-colblind-2"/>,
+        marathon runners. Three examples, <xref ref="fig-gayFS"/>, <xref ref="fig-palpcp2"/>, and
+        <xref ref="fig-comcats"/>, are shown together in <xref ref="fig-colblind-1"/>, <xref ref="fig-colblind-2"/>,
         <xref ref="fig-colblind-3"/>.
       </p>
 
@@ -368,8 +368,8 @@
       <title>Palette order counts</title>
 
       <p>
-        In Chapter <xref ref="ch-astronauts"/> spaceflights are coloured by the space station program they joined, if any
-        (Figure <xref ref="fig-flighttc"/>, redrawn as Figure <xref ref="fig-astro4"/>). The default ordering of the colour blind palette from the R package
+        In <xref ref="ch-astronauts"/> spaceflights are coloured by the space station program they joined, if any
+        (<xref ref="fig-flighttc"/>, redrawn as <xref ref="fig-astro4"/>). The default ordering of the colour blind palette from the R package
         <em>ggthemes</em> was changed to make the Skylab station that was only used briefly in 1973&#8211;4
         more visible and to keep similar colours apart.
       </p>
@@ -403,7 +403,7 @@
 
       <p>
         Colour schemes stand out. If the same palettes are used for different examples, readers may mistakenly
-        assume they are looking at the same dataset. Figure <xref ref="fig-michncol-1"/>,
+        assume they are looking at the same dataset. <xref ref="fig-michncol-1"/>,
         <xref ref="fig-michncol-2"/>, <xref ref="fig-michncol-3"/> shows an example.
       </p>
     </subsection>
@@ -415,7 +415,7 @@
         A display with several groups or time series may be hard to disentangle and decode. An alternative is to
         plot each subset individually in its own facet, together with the rest of the data underneath in a light
         grey (ghostplotting). At the end of <xref ref="ch-darwin-finches"/> there is a faceted parallel coordinate
-        plot, Figure <xref ref="fig-snodPCP"/>, redrawn here as Figure <xref ref="fig-finchnine"/>. If it was drawn as a single plot with all 9
+        plot, <xref ref="fig-snodPCP"/>, redrawn here as <xref ref="fig-finchnine"/>. If it was drawn as a single plot with all 9
         species, it would be much more difficult to read.
       </p>
 
@@ -439,7 +439,7 @@
       <p>
         In this book the default <em>ggplot2</em> background has often been used. This does not work well for
         maps, mosaicplots, and parallel coordinate plots, where scales and gridlines are not appropriate.
-        Figures <xref ref="fig-Bertagp"/>, <xref ref="fig-titancrew"/>, and <xref ref="fig-finchPCP"/> have been drawn
+        <xref ref="fig-Bertagp"/>, <xref ref="fig-titancrew"/>, and <xref ref="fig-finchPCP"/> have been drawn
         with plain backgrounds. Other plots might benefit from a change of background too.
       </p>
 
