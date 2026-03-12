@@ -92,7 +92,7 @@
       Thanks to trellis plots (<xref ref="becker-1996"/>), lattice plots (<xref ref="sarkar-2008"/>), and faceting (<xref ref="wilkinson-1999"/> and
       <xref ref="wickham-2016"/>), displays of small multiples are well understood. Each of the component plots is of
       the same type and is conditioned on other dataset variables. By comparison, ensembles made up of different
-      types of plots have been less discussed. <xref ref="unwin-2018"/> suggest that the key element is coherence: having a
+      types of plots have been less discussed. <xref ref="unwin-2018a"/> suggest that the key element is coherence: having a
       coherent theme, a coherent alignment, coherent look, consistent scales and formatting. Examples include
       <xref ref="fig-movierunyb"/> and <xref ref="fig-uefaTQ"/>, and the set of four <xref ref="fig-palens0"/> to
       <xref ref="fig-palens3"/>. Another example is <xref ref="fig-commfmed"/>, repeated here as <xref ref="fig-commfmedx"/>.
