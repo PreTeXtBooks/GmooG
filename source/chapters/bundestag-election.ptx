@@ -52,7 +52,7 @@
       been included, additional seats to ensure that the Zweitstimmen shares of the parties are respected. There
       have been further attempts to amend the rules, not particularly successfully. In 2021 there were 138 extra
       seats, increasing the intended size of the parliament from 598 to 736. In 2017 there had been only 111 and
-      in 2013 only 33. Figure <xref ref="fig-ubh"/> shows the numbers since the first postwar election in 1949,
+      in 2013 only 33. <xref ref="fig-ubh"/> shows the numbers since the first postwar election in 1949,
       when the system was introduced. There is optimism that the government elected in 2021 will introduce a system
       in accordance with the constitution that will strictly limit the total number of seats in the Bundestag.
     </p>
@@ -109,14 +109,14 @@
     </p>
 
     <p>
-      More detail can be seen in Figure <xref ref="fig-btw4"/> where the changes are shown for each party by
+      More detail can be seen in <xref ref="fig-btw4"/> where the changes are shown for each party by
       Bundesland with the Bundesl&#228;nder ordered by size. The SPD gained everywhere, but especially in the
       smaller Bundesl&#228;nder. The CDU/CSU lost everywhere, but more in the smaller Bundesl&#228;nder. The
       Greens did very well in Nordrhein-Westfalen and well everywhere else, with one exception. In Saarland,
       thanks to internal party disagreements, they did not fulfill the requirements for receiving Zweitstimmen and
       got none. The FDP mostly gained, but did badly where the Greens did best in Nordrhein-Westfalen. The AfD
       lost to different degrees everywhere except in Th&#252;ringen. 'Other' parties as a group had some big
-      percentage gains (which is why the scale is different to that in Figure <xref ref="fig-btw3"/> and still
+      percentage gains (which is why the scale is different to that in <xref ref="fig-btw3"/> and still
       does not include all values). The Linke lost roughly equally in all Bundesl&#228;nder.
     </p>
 
@@ -152,7 +152,7 @@
 
     <p>
       The Greens did much better in 2021, predominantly in the West of Germany. They also did better in more
-      densely populated areas, as Figure <xref ref="fig-btwgpop"/> shows using the logarithm of population
+      densely populated areas, as <xref ref="fig-btwgpop"/> shows using the logarithm of population
       density as a measure.
     </p>
 
@@ -166,7 +166,7 @@
     <p>
       Aside from the four constituencies of Saarland where the Greens got no party votes, as already mentioned,
       there is a roughly linear relationship in the plot. The Greens did worst in the rural East and best in big
-      cities including parts of Berlin. There is a little overplotting in Figure <xref ref="fig-btwgpop"/>, so
+      cities including parts of Berlin. There is a little overplotting in <xref ref="fig-btwgpop"/>, so
       the points representing West were drawn first and the smaller East and Berlin groups on top.
     </p>
 
@@ -202,14 +202,14 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-btwapcp"/> is a parallel coordinate plot of AfD support and the same structural
-      variables as in Figure <xref ref="fig-btwgpcp"/>. The AfD were strong where there were more older people
+      <xref ref="fig-btwapcp"/> is a parallel coordinate plot of AfD support and the same structural
+      variables as in <xref ref="fig-btwgpcp"/>. The AfD were strong where there were more older people
       and low levels of foreigners (people without German nationality). They did not do well in cities, where the
       population density is higher.
     </p>
 
     <p>
-      The scatterplot, Figure <xref ref="fig-btwafdfor"/>, shows more detail of how the AfD vote related to the
+      The scatterplot, <xref ref="fig-btwafdfor"/>, shows more detail of how the AfD vote related to the
       percentage of foreigners in the constituencies. AfD support is highest where there are few foreigners and
       relatively constant for any percentage of foreigners a little over 10%. They are generally weaker in the
       Berlin constituencies than in the rest of the Eastern part of Germany, probably because West Berlin is still
@@ -238,7 +238,7 @@
 
     <p>
       It is always possible with a large number of factors to find correlations that may or may not imply some
-      causation. For the CDU/CSU one is car ownership, as Figure <xref ref="fig-btwccar"/> illustrates.
+      causation. For the CDU/CSU one is car ownership, as <xref ref="fig-btwccar"/> illustrates.
     </p>
 
     <figure xml:id="fig-btwccar">
@@ -274,7 +274,7 @@
 
     <p>
       In each constituency there is a first-past-the-post system for the result of Erststimmen. In theory you
-      might expect a few non-party winners, in practice there were none. Figure <xref ref="fig-btwmape"/> shows a
+      might expect a few non-party winners, in practice there were none. <xref ref="fig-btwmape"/> shows a
       map coloured by the winning party.
     </p>
 
@@ -362,9 +362,9 @@
     </p>
 
     <p>
-      Figure <xref ref="fig-btwmape"/> was plotted using Erststimmen to show which parties won the individual
+      <xref ref="fig-btwmape"/> was plotted using Erststimmen to show which parties won the individual
       seats. Replotting with Zweitstimmen and colouring by which party had the most votes in each constituency
-      gives Figure <xref ref="fig-btwmapz"/>.
+      gives <xref ref="fig-btwmapz"/>.
     </p>
 
     <figure xml:id="fig-btwmapz">
@@ -375,7 +375,7 @@
     </figure>
 
     <p>
-      Figure <xref ref="fig-btwmapz"/> presents a more coherent pattern than Figure <xref ref="fig-btwmape"/>.
+      <xref ref="fig-btwmapz"/> presents a more coherent pattern than <xref ref="fig-btwmape"/>.
       As has been pointed out on Francois Valentin's Twitter feed (<xref ref="valentin-2022"/>), the map's form is
       reminiscent of how voting in Germany looked over a hundred years ago. The SPD won most votes in the area
       that was Prussia, the AfD won most votes in Saxony, and the CSU most in Bavaria.
@@ -411,10 +411,10 @@
     <subsection xml:id="sec-btw-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>UpAndDown plots show relative and absolute changes in the same plot. (Figure <xref ref="fig-btw3"/>)</p></li>
-        <li><p>Draw smaller groups last if colour is used and there is overplotting. (Figures <xref ref="fig-btwgpop"/>, <xref ref="fig-btwafdfor"/>, and <xref ref="fig-btwccar"/>)</p></li>
-        <li><p>Scatterplots reveal many kinds of information, e.g., points with equal values (Berlin in Figure <xref ref="fig-btwccar"/>), differences between groups (Berlin compared with the rest of the East of Germany in Figure <xref ref="fig-btwafdfor"/>), unusual cases within highly correlated variables (Figure <xref ref="fig-btwscatv"/>).</p></li>
-        <li><p>Highlighted parallel coordinate plots identify potential explanatory variables. (Figures <xref ref="fig-btwapcp"/>, <xref ref="fig-btwgpcp"/>, and <xref ref="fig-btwcdpcp"/>)</p></li>
+        <li><p>UpAndDown plots show relative and absolute changes in the same plot. (<xref ref="fig-btw3"/>)</p></li>
+        <li><p>Draw smaller groups last if colour is used and there is overplotting. (<xref ref="fig-btwgpop"/>, <xref ref="fig-btwafdfor"/>, and <xref ref="fig-btwccar"/>)</p></li>
+        <li><p>Scatterplots reveal many kinds of information, e.g., points with equal values (Berlin in <xref ref="fig-btwccar"/>), differences between groups (Berlin compared with the rest of the East of Germany in <xref ref="fig-btwafdfor"/>), unusual cases within highly correlated variables (<xref ref="fig-btwscatv"/>).</p></li>
+        <li><p>Highlighted parallel coordinate plots identify potential explanatory variables. (<xref ref="fig-btwapcp"/>, <xref ref="fig-btwgpcp"/>, and <xref ref="fig-btwcdpcp"/>)</p></li>
       </ul>
     </subsection>
   </section>
