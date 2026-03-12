@@ -25,9 +25,9 @@
       <caption><p>Best times by male swimmers for the 50 m freestyle.</p></caption>
     </figure>
 
-    <p>Figure <xref ref="fig-swm100f"/> is a display of best times by date for an event, in this case the 50 m freestyle for men. Most of the best times have been achieved recently, partly because training methods have improved, partly because there are more swimmers, and partly because more competitions are included on the FINA website. There are a few impressive older performances. It looks like there is an upper limit of just over 22.2 seconds and this must have been the 200th best performance. The very best times were achieved after the introduction of full body swimsuits in 2008 that were permitted at the Beijing Olympics. The suits were banned from 1st January 2010 (marked by a red vertical line).</p>
+    <p><xref ref="fig-swm100f"/> is a display of best times by date for an event, in this case the 50 m freestyle for men. Most of the best times have been achieved recently, partly because training methods have improved, partly because there are more swimmers, and partly because more competitions are included on the FINA website. There are a few impressive older performances. It looks like there is an upper limit of just over 22.2 seconds and this must have been the 200th best performance. The very best times were achieved after the introduction of full body swimsuits in 2008 that were permitted at the Beijing Olympics. The suits were banned from 1st January 2010 (marked by a red vertical line).</p>
 
-    <p>There are four different events over 50 m: freestyle, breaststroke, butterfly, and backstroke. Plotting the sets of 200 best times for men all in the same display presents a striking picture (Figure <xref ref="fig-swm50a"/>).</p>
+    <p>There are four different events over 50 m: freestyle, breaststroke, butterfly, and backstroke. Plotting the sets of 200 best times for men all in the same display presents a striking picture (<xref ref="fig-swm50a"/>).</p>
 
     <figure xml:id="fig-swm50a">
       <image source="images/swM50a-1.png">
@@ -36,11 +36,11 @@
       <caption><p>Best times by male swimmers for the four 50 m events.</p></caption>
     </figure>
 
-    <p>The times for the events are almost completely separated. There is a possible overlap between the fastest butterfly time and the slowest freestyle times. In fact the best time for the butterfly was seconds and the two-hundredth best time for the freestyle was seconds. Three of the four plots have the same patterns seen in Figure <xref ref="fig-swm100f"/>, a few fine older performances, a string of best times with full body swimsuits in 2009, and a gradual improvement over the past 10 years from the slower times recorded in 2010. There are two exceptions. One is the 50 m backstroke time of Camille Lacourt in 2010. The other is the extraordinary time of Adam Peaty in the 50 m breaststroke in 2017. Unlike in the other events, several breaststroke swimmers have beaten the best full body swimsuit time. Was it of less benefit to breaststroke swimmers?</p>
+    <p>The times for the events are almost completely separated. There is a possible overlap between the fastest butterfly time and the slowest freestyle times. In fact the best time for the butterfly was seconds and the two-hundredth best time for the freestyle was seconds. Three of the four plots have the same patterns seen in <xref ref="fig-swm100f"/>, a few fine older performances, a string of best times with full body swimsuits in 2009, and a gradual improvement over the past 10 years from the slower times recorded in 2010. There are two exceptions. One is the 50 m backstroke time of Camille Lacourt in 2010. The other is the extraordinary time of Adam Peaty in the 50 m breaststroke in 2017. Unlike in the other events, several breaststroke swimmers have beaten the best full body swimsuit time. Was it of less benefit to breaststroke swimmers?</p>
 
     <p>The ordering of the events is hardly surprising to swimmers. Backstroke swimmers start in the water, while swimmers in the other three events have the advantage of diving in and swimming briefly underwater at the start. The butterfly is a relatively new stroke in official terms. It was introduced before the Second World War and was later used by swimmers in breaststroke competitions. In the early 1950s the best breaststroke times were swum by butterfly swimmers and the butterfly was declared a separate stroke in 1953 (<xref ref="oppenheim-1970"/>). This is why the breaststroke world record times increased then, as afterwards breaststroke swimmers had to actually swim breaststroke!</p>
 
-    <p>The same patterns hold for the women for the 50 m events with one notable exception. Figure <xref ref="fig-swm50amf"/> shows that the women are in general slower than the men (although the best women swimming freestyle would beat the best male breaststroke swimmers and probably the best male backstroke swimmers too).</p>
+    <p>The same patterns hold for the women for the 50 m events with one notable exception. <xref ref="fig-swm50amf"/> shows that the women are in general slower than the men (although the best women swimming freestyle would beat the best male breaststroke swimmers and probably the best male backstroke swimmers too).</p>
 
     <figure xml:id="fig-swm50amf">
       <image source="images/swM50amf-1.png">
@@ -49,7 +49,7 @@
       <caption><p>Best times for the four 50 m events achieved by men and women.</p></caption>
     </figure>
 
-    <p>The graphic suggests an overlap between female butterfly and freestyle swimmers that was suspected but not confirmed amongst the males. Drawing only the times for women as boxplots in Figure <xref ref="fig-sw50af"/> provides confirmation. Sarah Sjöström swam an incredible time for the butterfly of 24.43 seconds in the 2014 Swedish Championships. The asymmetric pattern of the boxplots is to be expected, distributions of best times are skewed to the left.</p>
+    <p>The graphic suggests an overlap between female butterfly and freestyle swimmers that was suspected but not confirmed amongst the males. Drawing only the times for women as boxplots in <xref ref="fig-sw50af"/> provides confirmation. Sarah Sjöström swam an incredible time for the butterfly of 24.43 seconds in the 2014 Swedish Championships. The asymmetric pattern of the boxplots is to be expected, distributions of best times are skewed to the left.</p>
 
     <figure xml:id="fig-sw50af">
       <image source="images/sw50af-1.png">
@@ -58,7 +58,7 @@
       <caption><p>Boxplots of the best times by women for the four 50 m events.</p></caption>
     </figure>
 
-    <p>Do the same patterns apply for the longer standard distances of 100 m and 200 m? It turns out that the separations between the four strokes increase for both sexes, except for backstroke and butterfly where there is increasing overlap. Figure <xref ref="fig-sw200amf"/> shows this for the 200 m events.</p>
+    <p>Do the same patterns apply for the longer standard distances of 100 m and 200 m? It turns out that the separations between the four strokes increase for both sexes, except for backstroke and butterfly where there is increasing overlap. <xref ref="fig-sw200amf"/> shows this for the 200 m events.</p>
 
     <figure xml:id="fig-sw200amf">
       <image source="images/sw200amf-1.png">
@@ -69,9 +69,9 @@
 
     <p>The 200 m LCM races include three turns and the turn rules are different for the four strokes. In particular, breaststroke and butterfly swimmers must touch the end with both hands at the same time, while freestyle and backstroke swimmers can touch the end with any part of their body. This explains at least partly why backstroke times catch up on butterfly times.</p>
 
-    <p>One point stands out in Figure <xref ref="fig-sw200amf"/>, the superb pre-1980 time in the women's 200 m breaststroke. Checking with the results for the 1971 6th Pan American games on the web revealed that Lynn Colella won both the 200 m breaststroke and the 200 m butterfly, but the FINA database recorded her butterfly time as a breaststroke time. Looking at the differences between the butterfly and breaststroke times overall, it is clear that there would be no traditional breaststroke swimmers in competitions any more had the butterfly not been declared a separate stroke.</p>
+    <p>One point stands out in <xref ref="fig-sw200amf"/>, the superb pre-1980 time in the women's 200 m breaststroke. Checking with the results for the 1971 6th Pan American games on the web revealed that Lynn Colella won both the 200 m breaststroke and the 200 m butterfly, but the FINA database recorded her butterfly time as a breaststroke time. Looking at the differences between the butterfly and breaststroke times overall, it is clear that there would be no traditional breaststroke swimmers in competitions any more had the butterfly not been declared a separate stroke.</p>
 
-    <p>The performances of men and women can be compared by plotting the time differences between the swimmers of the same rank order for an event. Figure <xref ref="fig-sw100r"/> shows this for the four 100 m events.</p>
+    <p>The performances of men and women can be compared by plotting the time differences between the swimmers of the same rank order for an event. <xref ref="fig-sw100r"/> shows this for the four 100 m events.</p>
 
     <figure xml:id="fig-sw100r">
       <image source="images/sw100r-1.png">
@@ -88,7 +88,7 @@
   <section xml:id="sec-swim-multi">
     <title>How good are the best swimmers across multiple events?</title>
 
-    <p>A few swimmers compete at the top level in more than one event. The outstanding example in this dataset is Katinka Hosszu, whose best time is amongst the top 200 in 14 events. Figure <xref ref="fig-khlv"/> shows her results as purple dots on top of letter-value boxplots (<xref ref="hofmann-2017"/>) for the 200 best times in the 17 events for women. The events have been sorted by stroke and ordered by distance. Each plot has its own time scale.</p>
+    <p>A few swimmers compete at the top level in more than one event. The outstanding example in this dataset is Katinka Hosszu, whose best time is amongst the top 200 in 14 events. <xref ref="fig-khlv"/> shows her results as purple dots on top of letter-value boxplots (<xref ref="hofmann-2017"/>) for the 200 best times in the 17 events for women. The events have been sorted by stroke and ordered by distance. Each plot has its own time scale.</p>
 
     <figure xml:id="fig-khlv">
       <image source="images/khLV-1.png">
@@ -99,7 +99,7 @@
 
     <p>Given that she is good at so many events, it is perhaps not surprising that she is the best overall in the two medley events. Her 'weakest' stroke is the breaststroke, the only events where she is not in the top 200.</p>
 
-    <p>The most versatile male swimmer in the dataset, Michael Phelps, is also strong in the two medley events, as can be seen in Figure <xref ref="fig-mplv"/>. He is amongst the best in 10 of the 17 individual events for men.</p>
+    <p>The most versatile male swimmer in the dataset, Michael Phelps, is also strong in the two medley events, as can be seen in <xref ref="fig-mplv"/>. He is amongst the best in 10 of the 17 individual events for men.</p>
 
     <figure xml:id="fig-mplv">
       <image source="images/mpLV-1.png">
@@ -112,7 +112,7 @@
   <section xml:id="sec-swim-compare-events">
     <title>Comparing events graphically</title>
 
-    <p>Another way of comparing events is to plot the times standardised by event by rank in a parallel coordinate plot. Figure <xref ref="fig-swpcp"/> shows this for the 34 individual events, where the 200 times for each event have been standardised on a [0,1] scale.</p>
+    <p>Another way of comparing events is to plot the times standardised by event by rank in a parallel coordinate plot. <xref ref="fig-swpcp"/> shows this for the 34 individual events, where the 200 times for each event have been standardised on a [0,1] scale.</p>
 
     <figure xml:id="fig-swpcp">
       <image source="images/swPCP-1.png">
@@ -132,7 +132,7 @@
       <caption><p>A parallel coordinate plot of the ranked times aligning the 100th ranks (the red line) across the individual events, sorted by relative fastest times.</p></caption>
     </figure>
 
-    <p>Another approach tried was to align the 100th rank performances for all events, scaling accordingly (the 200th rank performances remain aligned), and sorting events by the relative fastest times. This is shown in Figure <xref ref="fig-swpcpo"/>. The 200 m breaststroke for men stands out as the relatively most compressed of the event time distributions. Wave-like patterns are apparent around events where the (relatively) biggest differences between the best and second-best times occur. A good example is the 100 m breaststroke for men, due to Adam Peaty's performance, the third from the bottom of the plot. It is almost as far away from the 200 m breaststroke for men as it could be.</p>
+    <p>Another approach tried was to align the 100th rank performances for all events, scaling accordingly (the 200th rank performances remain aligned), and sorting events by the relative fastest times. This is shown in <xref ref="fig-swpcpo"/>. The 200 m breaststroke for men stands out as the relatively most compressed of the event time distributions. Wave-like patterns are apparent around events where the (relatively) biggest differences between the best and second-best times occur. A good example is the 100 m breaststroke for men, due to Adam Peaty's performance, the third from the bottom of the plot. It is almost as far away from the 200 m breaststroke for men as it could be.</p>
   </section>
 
   <section xml:id="sec-swim-relays">
@@ -155,7 +155,7 @@
   <section xml:id="sec-swim-countries">
     <title>How do countries compare?</title>
 
-    <p>The USA is currently the strongest swimming nation and that can be measured in a variety of ways. Instead of looking at that, consider the strengths of nations across the same events for men and women. Figure <xref ref="fig-mfland"/> plots the number of female swimmers of a country in the top 200 for an event against the number of male swimmers of that country in the same event. The graphs are shown for the nine countries with the most swimmers in all amongst the 200 best times for the 17 events for men and women.</p>
+    <p>The USA is currently the strongest swimming nation and that can be measured in a variety of ways. Instead of looking at that, consider the strengths of nations across the same events for men and women. <xref ref="fig-mfland"/> plots the number of female swimmers of a country in the top 200 for an event against the number of male swimmers of that country in the same event. The graphs are shown for the nine countries with the most swimmers in all amongst the 200 best times for the 17 events for men and women.</p>
 
     <figure xml:id="fig-mfland">
       <image source="images/mfLand-1.png">
@@ -174,9 +174,9 @@
     <subsection xml:id="sec-swim-takeaways">
       <title>Graphical takeaways</title>
       <ul>
-        <li><p>Legends should be close to the data and in the same order. (Figure <xref ref="fig-swm50a"/>)</p></li>
-        <li><p>Scatterplots and boxplots offer complementary views of the same grouped data. (Figure <xref ref="fig-swm50amf"/> right and Figure <xref ref="fig-sw50af"/>)</p></li>
-        <li><p>Sorting, ordering, and arranging make finding information in graphics easier. (Figures <xref ref="fig-khlv"/> and <xref ref="fig-mplv"/>)</p></li>
+        <li><p>Legends should be close to the data and in the same order. (<xref ref="fig-swm50a"/>)</p></li>
+        <li><p>Scatterplots and boxplots offer complementary views of the same grouped data. (<xref ref="fig-swm50amf"/> right and <xref ref="fig-sw50af"/>)</p></li>
+        <li><p>Sorting, ordering, and arranging make finding information in graphics easier. (<xref ref="fig-khlv"/> and <xref ref="fig-mplv"/>)</p></li>
       </ul>
     </subsection>
   </section>
