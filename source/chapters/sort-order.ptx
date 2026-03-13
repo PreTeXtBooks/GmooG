@@ -98,8 +98,7 @@
           at each port. The left chart uses default alphabetic ordering of ports; the right chart orders ports
           by the ship's actual itinerary, with Southampton having by far the largest bar.</description>
         </image>
-        <caption><p>Barcharts of Titanic boarding numbers by port. Left: default alphabetic ordering. Right:
-        ports ordered by the ship's itinerary.</p></caption>
+        <caption><p>Barcharts using the default alphabetic ordering and the order in which the Titanic visited the ports.</p></caption>
       </figure>
 
       <p>
@@ -235,8 +234,7 @@
           <description>A plot of Katinka Hossz&#250;'s swimming performances with events grouped by stroke
           and ordered by distance within each stroke group.</description>
         </image>
-        <caption><p>Katinka Hossz&#250;'s swimming event performances with events placed in groups by stroke
-        and ordered by distance within each group.</p></caption>
+        <caption><p>Katinka Hossz&#250;'s best times by event (in purple) compared with the 200 best in each event, with events sorted by stroke and distance.</p></caption>
       </figure>
 
       <p>
