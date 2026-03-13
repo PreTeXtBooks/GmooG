@@ -111,7 +111,7 @@
     </p>
 
 <p>
-A more complex ensemble is shown in <xref ref = "fig-qlEns"/> reproduced here as <xref ref = "fig-qlensx""/>. Three separate pieces of information are compared for the two groups with three different sets of graphics: proportions of dropouts in a barchart, two initial measurements in scatterplots, ten life quality index question means with line charts. There is no need for common scaling as the variable scales all differ. The groups are coloured alike in the scatterplots and the line charts, but not in the barchart, where the dropouts are coloured to emphasise how few there were and how similar the proportions were. The lines are drawn differently according to whether the responses were at the start or end of the study.
+A more complex ensemble is shown in <xref ref = "fig-qlEns"/> reproduced here as <xref ref="fig-qlensx"/>. Three separate pieces of information are compared for the two groups with three different sets of graphics: proportions of dropouts in a barchart, two initial measurements in scatterplots, ten life quality index question means with line charts. There is no need for common scaling as the variable scales all differ. The groups are coloured alike in the scatterplots and the line charts, but not in the barchart, where the dropouts are coloured to emphasise how few there were and how similar the proportions were. The lines are drawn differently according to whether the responses were at the start or end of the study.
 </p>
 
     <figure xml:id="fig-qlensx">
