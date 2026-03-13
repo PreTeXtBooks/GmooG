@@ -275,6 +275,10 @@
       <caption><p>Layers building up to a histogram of the bill lengths of Ad&#233;lie penguins with two superimposed density estimates.</p></caption>
     </figure>
 
+   <p>
+     The first layer top left is the background colour. The second adds a scale and x-axis label for the variable to be plotted. A histogram layer is added top right with the corresponding vertical axis scale (a density, not a count, so estimates can be overlaid). The first two plots of the lower row add a first and then a second density estimate. The final plot adds the plot title.
+   </p>
+
     <p>
       The advantages of a layered structure are that it is straightforward to add and remove layers to see what
       impact they have. It is clear where formatting options should be defined (such as binwidths for histograms
@@ -468,16 +472,20 @@
       <p>
         If data are needed from more than one dataset, the datasets must usually be merged. <xref ref="ch-chess"/>
         combined the chess ratings dataset with files for country populations, country codings, and regions.
-        The ratings data for two separate years were also merged. Mapped data reveal spatial patterns. Shape
-        files for areas can be merged with data files. This was done in <xref ref="ch-bertin"/> (Bertin's French workforce data), <xref ref="ch-gay-rights"/> (Gay Rights survey), <xref ref="ch-titanic"/> (Titanic), and
-        <xref ref="ch-bundestag-election"/> (German election 2021).
-      </p>
+This increased the number of variables from , although many were unused and could have been dropped. The number of players included in this merged dataset dropped from , as only active players were considered. Finally the ratings data for two separate years were merged. The 2020 dataset had players and variables, while the 2015 dataset had players and variables. The merged dataset that included all players from both years had players.
+</p>
       <p>
         In <xref ref="ch-democrats-1912"/> the voting results file for the 1912 Democratic Primary was summarised by state and merged with
         files for the numbers of each state's electoral votes in 1912 and 2020, and with a file for state
         populations in 2018. The unsummarised data file was also separately merged with a file of estimated
         times at which the ballots took place.
       </p>
+<p>
+        Mapped data reveal spatial patterns. Shape
+        files for areas can be merged with data files. This was done in <xref ref="ch-bertin"/> (Bertin's French workforce data), <xref ref="ch-gay-rights"/> (Gay Rights survey), <xref ref="ch-titanic"/> (Titanic), and
+        <xref ref="ch-bundestag-election"/> (German election 2021).
+      </p>
+
     </subsection>
 
     <subsection xml:id="sec-wrang-reproducibility">
