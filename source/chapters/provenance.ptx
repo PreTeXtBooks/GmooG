@@ -66,7 +66,7 @@
       demographic data by country available on the Human Mortality database (<xref ref="mpidr-2022"/>). Data are provided for
       many countries for many years, there are comments on the likely quality of the data for particular
       country-year combinations and corresponding advice to use with care. The Gapminder Foundation provides
-      extensive data on many different countries over the years. For the life expectancy data used in Chapter 1
+      extensive data on many different countries over the years. For the life expectancy data used in <xref ref="ch-gapminder"/>
       they provide accompanying information on how they estimated values for isolated calamitous years.
     </p>
   </section>
@@ -202,7 +202,7 @@
     </p>
 
     <subsection xml:id="sec-prov-gapminder">
-      <title>Gapminder</title>
+      <title>Gapminder (<xref ref="ch-gapminder"/>)</title>
       <p>
         The Gapminder website (<xref ref="rosling-2013"/>) provides substantial amounts of data on countries around the world
         and gives extensive information on the sources of the data and on what data cleaning has been carried out.
@@ -212,7 +212,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-movies">
-      <title>Movies</title>
+      <title>Movies (<xref ref="ch-movies"/>)</title>
       <p>
         The movies dataset was downloaded from the IMDb website (<xref ref="imdb-2022"/>). Two of the files, one with runtimes
         and one with average viewer ratings, were merged. Only the categories "movie" and "short" were kept and
@@ -240,7 +240,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-1912">
-      <title>Democratic Convention 1912</title>
+      <title>Democratic Convention 1912 (<xref ref="ch-democrats-1912"/>)</title>
       <p>
         Initial analyses of the 46 ballots that took place at the 1912 Democratic Convention plotted results by
         ballot number. Checking the official report of the Convention more closely supplied opening and closing
@@ -252,7 +252,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-lightspeed">
-      <title>Speed of light</title>
+      <title>Speed of light (<xref ref="ch-light-speed"/>)</title>
       <p>
         Elaborate experiments to determine the speed of light were carried out in the late nineteenth century.
         They generally involved timing the passage of light between mirrors a large distance apart. Individual
@@ -274,7 +274,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-olympics">
-      <title>Olympic Games</title>
+      <title>Olympic Games (<xref ref="ch-olympics"/>)</title>
       <p>
         The two datasets cover the modern Olympics from 1896 to 2016 and countries have changed over that period.
         Germany split for many years and was reunited. Imperial Russia became the Soviet Union and then Russia
@@ -299,7 +299,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-chess">
-      <title>Chess ratings</title>
+      <title>Chess ratings (<xref ref="ch-chess"/>)</title>
       <p>
         FIDE used to provide their annual datasets in the old fixed width format that has no separators between
         values. This required a bit of work to read (and care with format changes between datasets, often because
@@ -352,7 +352,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-gayrights">
-      <title>Attitudes to same-sex marriage</title>
+      <title>Attitudes to same-sex marriage (<xref ref="ch-gay-rights"/>)</title>
       <p>
         One of the datasets analysed in <xref ref="gelman-2020"/> concerns how people in the United States responded to
         questions on same-sex marriage. The book only looked at the issue of support for a law at state level, but
@@ -386,7 +386,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-astronauts">
-      <title>Human spaceflights</title>
+      <title>Human spaceflights (<xref ref="ch-astronauts"/>)</title>
       <p>
         This is an intriguing dataset with plenty of striking information. It was scraped from a number of sites
         on the web as part of a study of data available on the health of space travellers (<xref ref="corlett-2020"/>). Others
@@ -397,7 +397,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-diamonds">
-      <title>Diamonds</title>
+      <title>Diamonds (<xref ref="ch-diamonds"/>)</title>
       <p>
         The diamonds dataset was scraped from a website selling diamonds. This makes it a convenience sample and
         so any conclusions drawn should be treated cautiously. It contains missing values, zero values that cannot
@@ -418,7 +418,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-electric">
-      <title>Electric car charging</title>
+      <title>Electric car charging (<xref ref="ch-electric-cars"/>)</title>
       <p>
         There is much interest in electric cars and how people use charging stations. The researchers wrote that
         they had an initial period of three months for testing before analysis (<xref ref="asensio-2021a"/>). This would be
@@ -440,7 +440,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-finches">
-      <title>Darwin's finches</title>
+      <title>Darwin's finches (<xref ref="ch-darwin-finches"/>)</title>
       <p>
         Darwin's visit to the Gal&#225;pagos Islands as part of his voyage on the Beagle was short, but influential
         on his thinking. Other researchers have visited the islands since, and a number of datasets are in the
@@ -458,7 +458,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-vehicles">
-      <title>Vehicle fuel consumption</title>
+      <title>Vehicle fuel consumption (<xref ref="ch-us-fuel"/>)</title>
       <p>
         The U.S. Department of Energy's dataset on fuel consumption revealed that some compact and subcompact cars
         performed very badly. The brands of cars involved were all from exclusive producers, such as Rolls Royce,
@@ -470,7 +470,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-comrades">
-      <title>Comrades Marathon</title>
+      <title>Comrades Marathon (<xref ref="ch-comrades-marathon"/>)</title>
       <p>
         The data for this race over the years make a good impression. A key feature is that the direction of the
         race generally alternates between 'up' and 'down'. How much difference that makes can be seen in the
@@ -485,7 +485,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-shearwaters">
-      <title>Shearwaters</title>
+      <title>Shearwaters (<xref ref="ch-shears"/>)</title>
       <p>
         This dataset was used in <xref ref="bouveyron-2019"/> to illustrate model-based clustering. The description says it
         concerns two types of puffin, <em>Puffinus lherminieri</em> and <em>Puffinus subalaris</em>. However,
@@ -511,7 +511,7 @@
     </subsection>
 
     <subsection xml:id="sec-prov-titanic">
-      <title>Titanic</title>
+      <title>Titanic (<xref ref="ch-titanic"/>)</title>
       <p>
         Data on the survival of passengers and crew from the sinking of the Titanic in 1912 have been analysed
         and visualised very often. The dataset is included in many R packages under different names. Some of these
@@ -525,7 +525,7 @@
       </p>
       <p>
         <xref ref="fig-titandd"/> shows doubledecker plots of the survival rates by class and crew for
-        the dataset in R's <em>datasets</em> package and for the newer dataset used in the Titanic chapter. The
+        the dataset in R's <em>datasets</em> package and for the newer dataset used in <xref ref="ch-titanic"/>. The
         total numbers are only slightly different and so the class bars are pretty much identical. The big
         difference is apparent from the detailed breakdown for the crew. Deck crew, who manned the lifeboats,
         had a high survival rate. Other crew groups had lower survival rates, especially the restaurant crew.

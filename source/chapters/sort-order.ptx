@@ -185,7 +185,7 @@
       <p>
         Boxplots are handy for summarising decathlon data. Each competitor competes in ten track and field events.
         The results are converted to a points system to make them comparable and the winner is the person with the
-        most points. Figure <xref ref="fig-decbox1"/> shows the points scores for the 116 top-ranked decathletes
+        most points. <xref ref="fig-decbox1"/> shows the points scores for the 116 top-ranked decathletes
         in April 2021 (<xref ref="estDecath-2021"/>).
       </p>
 
@@ -311,7 +311,7 @@
       <p>
         Returning to the effect of decathlon events not being scored comparably, consider the differences in
         scores between competitors. Giving each competitor 50 points more in an event will not change overall
-        rankings at all. Figure <xref ref="fig-decranks"/> is a parallel coordinate plot of points given to the
+        rankings at all. <xref ref="fig-decranks"/> is a parallel coordinate plot of points given to the
         top 79 ranked performances in the individual events with points for the 40th highest subtracted. Here the
         ranked values are joined by lines, not the individual competitors.
       </p>
@@ -332,7 +332,7 @@
         from the points score for each event makes the levels comparable while keeping the differences on the
         same scale. The zero line equivalent to the 40th best performance has been coloured brown. There is bigger
         variability above than below as the distributions are, of course, skewed. The events are not in the same
-        order as in Figure <xref ref="fig-decbox1"/>. They have been ordered by increasing range. The lines are
+        order as in <xref ref="fig-decbox1"/>. They have been ordered by increasing range. The lines are
         close to parallel for the first few events, implying similar distributions, including for the long jump
         and the 1500 metres, the two most different events in terms of points awarded. The javelin has greater
         variability, as observed already. The discrete nature of the high jump and pole vault points is because
@@ -341,7 +341,7 @@
       <p>
         Parallel coordinates are excellent for studying the data from individual decathlon performances too. Now
         the polylines link performances of the same individual. The scales of the vertical axes are the same for
-        each event and the same as in Figure <xref ref="fig-decbox1"/>. The difference in Figure
+        each event and the same as in <xref ref="fig-decbox1"/>. The difference in Figure
         <xref ref="fig-pcp1"/> is that the events are ordered by increasing median event points.
       </p>
 
@@ -444,7 +444,7 @@
     <p>
       The arrangement of graphics in a faceted display is determined by the faceting variables chosen for the
       rows and columns, their ordering within rows and within columns, and the ordering of their category levels.
-      This is apparent in Figure <xref ref="fig-puffmosx"/>, showing groups across four shearwater measurements.
+      This is apparent in <xref ref="fig-puffmosx"/>, showing groups across four shearwater measurements.
       The rows are arranged first by <c>border</c> and then by <c>undertail</c>, the columns are ordered by
       <c>eyebrows</c>, and the order of each of those three variables has been specifically chosen. Other
       orderings would have made it more difficult to interpret the structure.
