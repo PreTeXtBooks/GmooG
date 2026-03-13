@@ -33,7 +33,7 @@
 
     <p>Scaling is a mapping from a variable's values to how they are represented in a display.  The variable to be scaled may be part of the dataset or a statistic calculated from the data, perhaps a count or subgroup means.  The mapping is a function for converting the values to the visual properties of the plot, including the limits of the range of data that will be included.  The resulting scale is annotated with breaks (tickmarks) and labels to make it more readable.  A variable can be transformed and then plotted or the variable can be plotted on a transformed scale.</p>
 
-    <p>Scaling sets the limits of a display.  Anything outside the limits is not shown.  One example is a histogram of movie lengths of up to 3 hours that excludes the films with longer runtimes.  Or limits cover a wider range than the data to provide more space or to include particular standard values.  A plot is drawn with a scale from 0 to 100% although the maximum upper limit of the confidence intervals is only just over 75%.  The reason is to emphasise the full range of possible values and to make clear that most states opposed the measure.  It is sometimes suggested that 0 should always be included on count and other scales.  This is generally sound advice and is followed in some plots where the intention is to show that the down race is slightly longer than the upper race and that there is variation in the distances up and down over the years, but that these differences are small compared to the overall race length.  Using 0 as a baseline would not be as sensible in many of the other plots in the comparisons chapter.  Displays of race times and of race speeds are designed to point out the differences in times and speeds, not the overall levels.  Two such plots are shown again in <xref ref="fig-comscales"/>.</p>
+    <p>Scaling sets the limits of a display.  Anything outside the limits is not shown.  One example is <xref ref="fig-movierunh"/>, which is a histogram of movie lengths of up to 3 hours that excludes the films with longer runtimes.  Or limits cover a wider range than the data to provide more space or to include particular standard values.  <xref ref="fig-gayCIs"/> is drawn with a scale from 0 to 100% although the maximum upper limit of the confidence intervals is only just over 75%.  The reason is to emphasise the full range of possible values and to make clear that most states opposed the measure.  It is sometimes suggested that 0 should always be included on count and other scales.  This is generally sound advice and is followed, for instance, in the first plot of <xref ref="fig-comdist"/>.  There the intention is to show that the down race is slightly longer than the upper race and that there is variation in the distances up and down over the years, but that these differences are small compared to the overall race length.  Using 0 as a baseline would not be as sensible in many of the other plots in <xref ref="ch-comrades-marathon"/>.  Displays of race times (such as <xref ref="fig-commf"/> and <xref ref="fig-commany"/>) and of race speeds (<xref ref="fig-comudp"/>) are designed to point out the differences in times and speeds, not the overall levels.  <xref ref="fig-comudp"/> and the left plot of <xref ref="fig-comdist"/> are shown again in <xref ref="fig-comscales"/>.</p>
 
     <figure xml:id="fig-comscales">
       <image source="images/comScales-1.png">
@@ -42,23 +42,23 @@
       <caption><p>Average speed of the fastest runners (above) and median runners (below) in km/hr for the up (dark orange) and down (black) races, and distances in km for the up and down races, all since 1970</p></caption>
     </figure>
 
-    <p>Outliers are a problem for scales.  A single extreme outlier can stretch the limits and compress the rest of the data into a single, uninformative block.  It will also affect boxplots, scatterplots, and parallel coordinate plots.  This only applies to cases that are outliers on individual dimensions.  Higher dimensional outliers do not affect graphics in this way.</p>
+    <p>Outliers are a problem for scales.  A single extreme outlier can stretch the limits and compress the rest of the data into a single, uninformative block (cf. the left plot in <xref ref="fig-movhists"/>).  It will also affect boxplots, scatterplots, and parallel coordinate plots.  This only applies to cases that are outliers on individual dimensions.  Higher dimensional outliers (for instance, some of the cases revealed in <xref ref="fig-scatxyz"/>) do not affect graphics in this way.</p>
 
-    <p>Scales are for guidance not precision.  Graphics are unsuitable for reading off individual values, although it is useful to know roughly what values apply.  This is why the choice of units for scale labels is worth thinking about.  Converting a scale into recognisable units makes the plot more understandable.  Similarly, a log scale for mission times benefits from labels for recognisable lengths of time (hour, day, week) rather than marks equally spaced on the log scale.</p>
+    <p>Scales are for guidance not precision.  Graphics are unsuitable for reading off individual values, although it is useful to know roughly what values apply.  This is why the choice of units for scale labels is worth thinking about.  The data displayed in <xref ref="fig-movierunb"/> are recorded in minutes up to , not a number that makes sense to most readers.  Converting the scale into weeks makes the plot more understandable with the maximum being just over 5 weeks.  Similarly, <xref ref="fig-flighttl"/> uses a log scale for mission times and adds labels for recognisable lengths of time (hour, day, week) rather than marks equally spaced on the log scale.</p>
 
     <p>Labelled breaks in scales aid understanding and offer points of reference.  Too many can lead to crowding or even overplotting and too few do not offer enough assistance.  The overall size chosen for a graphic has an influence and it can be curious to see what happens to scale labels when graphics are shrunk.</p>
 
-    <p>There are several ways a variable can contribute to a display including horizontal position (x-axis), vertical position (y-axis), pointsize, linewidth, colour, and alpha transparency.  Some are easier to assess than others.  As <xref ref="cleveland-1987"/> and other research since have pointed out, lengths along a common scale are best for comparison.  Pointsize and linewidth are useful for showing large differences, but not for finer differentiation.</p>
+    <p>There are several ways a variable can contribute to a display including horizontal position (x-axis), vertical position (y-axis), pointsize, linewidth, colour, and alpha transparency.  Some are easier to assess than others.  As <xref ref="cleveland-1987"/> and other research since have pointed out, lengths along a common scale are best for comparison.  Pointsize and linewidth are useful for showing large differences, as in <xref ref="fig-gayByState"/> and <xref ref="fig-titanagesc"/> (pointsize), and <xref ref="fig-lefacet6"/> and <xref ref="fig-sexAge"/> (linewidth), but not for finer differentiation.</p>
 
-    <p>Some attributes have continuous scales, some are categorical, such as shape or linetype.  Colour can be continuous or discrete or categorical.  Alpha transparency is a valuable adjunct to colour for emphasising or de-emphasising particular features.  The main use of colour is for categorical variables and is the subject of the colour chapter.</p>
+    <p>Some attributes have continuous scales, some are categorical, such as shape or linetype.  Colour can be continuous (as in <xref ref="fig-gayMap"/>) or discrete (<xref ref="fig-btwmapg"/>) or categorical (<xref ref="fig-delegs"/>).  Alpha transparency is a valuable adjunct to colour for emphasising or de-emphasising particular features (e.g., <xref ref="fig-ratAge15alph"/>).  The main use of colour is for categorical variables and is the subject of <xref ref="ch-colour"/>.</p>
 
-    <p>There were publications in the past suggesting methods for producing 'optimal' continuous scales.  These usually produced exact numbers to several decimal places rather than interpretable round numbers.  The term 'pretty' scales has emerged to describe the latter.  There is no such research for categorical scales, although ordering of these scales makes a great deal of difference.  When there are too many categories, some kind of aggregation is helpful.</p>
+    <p>There were publications in the past suggesting methods for producing 'optimal' continuous scales.  These usually produced exact numbers to several decimal places rather than interpretable round numbers.  The term 'pretty' scales has emerged to describe the latter.  There is no such research for categorical scales, although, as covered in <xref ref="ch-sort-order"/>, ordering of these scales makes a great deal of difference.  When there are too many categories, some kind of aggregation is helpful.  This was done in <xref ref="fig-uefa20f"/> and <xref ref="fig-uefa20"/> collecting the smallest groups into "Other".  Something similar was done in <xref ref="fig-gayS"/>, combining the oldest age groups into one of over 80.</p>
 
-    <p>There can be several scales in the same plot.  A plot can use two transformed variables (active chess players and grandmasters per million population), a regional colour coding, and pointsize proportional to population.</p>
+    <p>There can be several scales in the same plot.  <xref ref="fig-nationC"/> uses two transformed variables (active chess players and grandmasters per million population), a regional colour coding, and pointsize proportional to population.</p>
 
-    <p>Context is important for specifying limits and breaks.  In the chapter on fuel efficiency of car models sold in the US, the values are reported in miles per gallon, so those have been used.  Most other countries use litres per 100 kilometres.  'Pretty' scales would differ for the different units with the same data.</p>
+    <p>Context is important for specifying limits and breaks.  In <xref ref="ch-us-fuel"/> on fuel efficiency of car models sold in the US, the values are reported in miles per gallon, so those have been used.  Most other countries use litres per 100 kilometres.  'Pretty' scales would differ for the different units with the same data.</p>
 
-    <p>Variables representing dates and times bring their own issues.  Months are of different lengths (even years are not always the same length).  Should scales include Saturdays and Sundays if no data is recorded on those days?  Conversely, for the Olympics athletics and swimming plot, redrawn as <xref ref="fig-olyasnx"/>, missing values were added to the dataset for the Olympic Games that did not take place because of the World Wars.  This was to ensure that gaps appeared in the time series to signify what had happened.</p>
+    <p>Variables representing dates and times bring their own issues.  Months are of different lengths (even years are not always the same length).  Should scales include Saturdays and Sundays if no data is recorded on those days?  Conversely, for <xref ref="fig-olyASn"/>, redrawn as <xref ref="fig-olyasnx"/>, missing values were added to the dataset for the Olympic Games that did not take place because of the World Wars.  This was to ensure that gaps appeared in the time series to signify what had happened.</p>
 
     <figure xml:id="fig-olyasnx">
       <image source="images/olyASnX-1.png">
@@ -67,13 +67,13 @@
       <caption><p>Numbers of athletics and swimming events for men and women at the Summer Olympics from 1896 to 2016</p></caption>
     </figure>
 
-    <p>If scales are labelled by months, should the label be at the beginning of the month or the middle of the month?  Again, much will depend on context.  The level of detail of the labelling of time scales is problematic.  The timing of the ballots at the Democratic Convention in 1912 was important.  The times can be read from the dataset.  Adding them to the graphic would overload the display and would add information that barely contributes more to what can be seen already.</p>
+    <p>If scales are labelled by months, should the label be at the beginning of the month or the middle of the month?  Again, much will depend on context.  The level of detail of the labelling of time scales is problematic.  The timing of the ballots at the Democratic Convention in 1912 was important, as can be seen in <xref ref="fig-convt"/>.  The times can be read from the dataset.  Adding them to the graphic would overload the display and would add information that barely contributes more to what can be seen already.</p>
 
-    <p>Scales for spatial data are a quite separate matter.  Maps can be drawn using any number of different projections.  This does not affect most of Europe much, but has a big effect near the poles.  Consider drawing a map of the Palmer Archipelago where the data used in the Palmer Penguins chapter were studied.</p>
+    <p>Scales for spatial data are a quite separate matter.  Maps can be drawn using any number of different projections.  This does not affect most of Europe much, but has a big effect near the poles.  Consider drawing a map of the Palmer Archipelago where the data used in <xref ref="ch-palmer-penguins"/> were studied.</p>
 
-    <p>Default scales drawn by software will usually be good for exploratory purposes for individual graphics.  They will usually not be as good for comparing graphics.  Then common scaling (i.e. using the same scale for comparable axes) will be more suitable.  Some plots use common scaling for histograms to emphasise the differences in the ranges of numbers of workers. Default scales may be used for studying the associations between sectors.  It is often useful to put vertical count axes on the same scale where numbers may be compared across graphics as well as within since the graphics are all of the same dataset.  Finally, if related variables are plotted together it makes sense to use a common scale.  The default for drawing faceted graphics is common scaling, even if occasionally this is not what is wanted.  Graphics are like that, there are always exceptions to any rule.</p>
+    <p>Default scales drawn by software will usually be good for exploratory purposes for individual graphics.  They will usually not be as good for comparing graphics.  Then common scaling (i.e. using the same scale for comparable axes) will be more suitable.  <xref ref="fig-Berthists"/> is an example where common scaling has been used for three histograms to emphasise the differences in the ranges of numbers of workers. In <xref ref="fig-Bertscats"/> default scales have been used for studying the associations, if any, between the sectors.  It is often useful to put vertical count axes on the same scale, as in <xref ref="fig-puffbar"/> where numbers may be compared across graphics as well as within since the graphics are all of the same dataset.  Finally, if related variables are plotted together it makes sense to use a common scale (e.g., for the x and y axes of each plot in <xref ref="fig-scatr"/>).  The default for drawing faceted graphics is common scaling, even if occasionally this is not what is wanted.  Graphics are like that, there are always exceptions to any rule.</p>
 
-    <p>Common scaling has been used above to refer to using the same scale.  It is better to think of it more generally as designing scales that support comparing variables.  The transformations used to convert individual event performances in the Decathlon into points are an example.  Transformations for the axes of parallel coordinate plots are another, although it is more to do with treating variables equally than comparing them: variables can be transformed to [0,1], to z scores, to robust equivalents of z scores, to ranks.</p>
+    <p>Common scaling has been used above to refer to using the same scale.  It is better to think of it more generally as designing scales that support comparing variables.  The transformations used to convert individual event performances in the Decathlon into points are an example (even if they do not work as well as desired, cf. <xref ref="fig-decbox1"/>).  Transformations for the axes of parallel coordinate plots are another, although it is more to do with treating variables equally than comparing them: variables can be transformed to [0,1], to z scores, to robust equivalents of z scores, to ranks.</p>
 
     <p>Scales are needed immediately for drawing graphics.  They may be amended after seeing the data.  Reasons include making more space around the data, including special values, excluding outliers, and supporting comparisons.  Overlaying graphical layers may require changes in limits if the range of the initial layer is not wide enough.</p>
   </section>
@@ -90,7 +90,7 @@
 
     <p>Objects are made bigger to draw attention and made smaller to be less obvious.  The overall effect depends on which objects are resized and by how much.  Enlarging too much can lead to objects overlapping with loss of clarity.  Shrinking too much can make some objects almost invisible.  Space is increased between objects to make them more distinct.</p>
 
-    <p>Objects are coloured for several reasons.  Highlighting, colouring one group strongly, emphasises that group against the rest of the dataset.  Alpha transparency plays down the impact of objects as in ghostplotting.  It is also helpful for displaying point density in scatterplots of large datasets. Using colour and size consistently emphasises links and connections across displays.  Common scaling, using the same scale for a variable in all plots in which it appears, ensures consistency of displays.  Alignment of axes aids comparisons.</p>
+    <p>Objects are coloured for several reasons (<xref ref="sec-colour-value"/>).  Highlighting, colouring one group strongly, emphasises that group against the rest of the dataset.  Alpha transparency plays down the impact of objects as in ghostplotting.  It is also helpful for displaying point density in scatterplots of large datasets. Using colour and size consistently emphasises links and connections across displays.  Common scaling, using the same scale for a variable in all plots in which it appears, ensures consistency of displays.  Alignment of axes aids comparisons.</p>
 
     <p>Text plays a major role in presentation graphics.  There may be a caption, a title, a subtitle, variable labels, axis labels, legends, annotations (including case labels, line labels, numeric values).  All these may be formatted, spaced, and positioned in a variety of ways.  Few are needed for exploratory graphics and any formatting would be discreet and low-key.</p>
 
@@ -107,7 +107,7 @@
 
       <p>The type of graphic chosen will determine how values are shown.  Each case may be represented by a point in a scatterplot, by an area in a bar, by some other form of area, by a time series curve in a plot over time, by a polyline in a parallel coordinate plot, by a multivariate glyph.  A variable may be weighted by another (numeric) variable.</p>
 
-      <p>The regions plotted could be weighted by population, as in <xref ref="fig-wtbars"/>.  The rankings are quite different.  Africa has the most countries, while Asia has the biggest population by far.</p>
+      <p>The regions in <xref ref="fig-reg4"/> could be weighted by population, as in <xref ref="fig-reg4pop"/>.  Both plots are shown again in <xref ref="fig-wtbars"/>.  The rankings are quite different.  Africa has the most countries, while Asia has the biggest population by far.</p>
 
       <figure xml:id="fig-wtbars">
         <image source="images/wtBars-1.png">
@@ -129,7 +129,7 @@
         <caption><p>Barcharts of population changes by region between 1956 and 2016, absolute numbers in millions on the left, percentages on the right.</p></caption>
       </figure>
 
-      <p>With point plots there can be multiple cases with the same values for the plot variables causing overplotting.  This can occur with lines in a parallel coordinate plot or with multiple time series too.  The order in which the cases (or lines) are plotted will affect how the display looks.  Faceting can counteract overplotting.</p>
+      <p>With point plots there can be multiple cases with the same values for the plot variables causing overplotting.  This can occur with lines in a parallel coordinate plot or with multiple time series too.  The order in which the cases (or lines) are plotted will affect how the display looks.  Faceting can counteract overplotting, as in <xref ref="fig-lef4"/>.</p>
 
       <p>The formatting alternatives in this section are predominantly about content and are relevant to both exploration and presentation.</p>
     </subsection>
@@ -143,7 +143,7 @@
 
       <p>If bars or rectangles are drawn for categorical variables as in barcharts and mosaicplots, then their width, their individual aspect ratios, and the space between them matter.  For mosaicplots it is common practice to increase the space from the lowest level to the highest.</p>
 
-      <p>If a plot is composed of different layers, then the order in which the layers are drawn will affect how the graphic looks.  Alternative views can be offered by including or not including particular layers.</p>
+      <p>If a plot is composed of different layers, as described in <xref ref="sec-wrang-layers"/>, then the order in which the layers are drawn will affect how the graphic looks.  Alternative views can be offered by including or not including particular layers.</p>
 
       <p>Individual plots can be given titles and subtitles. If colours, shapes, or sizes vary, then legends are necessary to describe the options shown.  Special features in a plot can be annotated.  All these texts should be in the same typeface, but the font and size may differ to reflect the importance of the texts.  Too much text may divert attention from the graphics themselves.  Legends, labels, annotations can be like subtitles in a film: having them can be helpful, reading them may be distracting.</p>
 
@@ -187,7 +187,7 @@
 
       <p>HTML versions on electronic devices do not have an issue with paging.  Instead the problem is more that different devices may have quite different screen sizes and shapes.  Just because a plot looks good at one size says little about how good it may look at another size.  Associated material, text or graphics, may or may not be visible.</p>
 
-      <p>When several graphics are drawn together in an ensemble it is necessary to arrange them and set the sizes of the individual graphics so that the information in them can be seen and the graphics fit together.  This is automatically carried out for a group of graphics of the same size and shape by software offering faceting.  Displaying a number of differently sized graphics is not unlike hanging paintings: horizontal and vertical axes should generally be aligned.  Variables appearing in more than one graphic should have axes with identical scales (common scaling), as in several ensemble examples in the book.  This eases cognitive load when a viewer's gaze moves from one graphic to another.</p>
+      <p>When several graphics are drawn together in an ensemble it is necessary to arrange them and set the sizes of the individual graphics so that the information in them can be seen and the graphics fit together.  This is automatically carried out for a group of graphics of the same size and shape by software offering faceting.  Displaying a number of differently sized graphics is not unlike hanging paintings: horizontal and vertical axes should generally be aligned.  Variables appearing in more than one graphic should have axes with identical scales (common scaling), as in <xref ref="fig-palens0"/> to <xref ref="fig-palens3"/>.  This eases cognitive load when a viewer's gaze moves from one graphic to another.</p>
     </subsection>
   </section>
 
@@ -199,9 +199,9 @@
       <attribution>Artur Schnabel</attribution>
     </blockquote>
 
-    <p>It is easier to pick out features if a display is uncluttered, with plenty of space around so that there are few distractions.  As mentioned at the end of the colour chapter, pictures in art galleries and exhibitions were often hung closely together in the past, so that as many as possible could be shown.  That made it awkward to inspect individual pictures, depending on how high or low they were hung, while neighbouring pictures would distract and interfere with the artist's intentions.  There is a story that Manet submitted pictures to the Salon, the premier art exhibition in Paris in the 19th century, that would stand out and be noticed under these conditions.  Nowadays pictures are usually hung individually in their own space in galleries.  It is similar for graphics, unless they are part of a coordinated ensemble.  It is better that there is space around them, not just space around the overall graphic but space within the graphic around the main content as well.</p>
+    <p>It is easier to pick out features if a display is uncluttered, with plenty of space around so that there are few distractions.  As mentioned at the end of <xref ref="ch-colour"/>, pictures in art galleries and exhibitions were often hung closely together in the past, so that as many as possible could be shown.  That made it awkward to inspect individual pictures, depending on how high or low they were hung, while neighbouring pictures would distract and interfere with the artist's intentions.  There is a story that Manet submitted pictures to the Salon, the premier art exhibition in Paris in the 19th century, that would stand out and be noticed under these conditions.  Nowadays pictures are usually hung individually in their own space in galleries.  It is similar for graphics, unless they are part of a coordinated ensemble.  It is better that there is space around them, not just space around the overall graphic but space within the graphic around the main content as well.</p>
 
-    <p>A scatterplot matrix gives an overview of associations between several variables.  If one of the scatterplots looks interesting, it is useful to be able to zoom in and check.  In a scatterplot matrix of diamond measurements several of the plots could be worth more attention, for instance the scatterplot of <c>table</c> and <c>carat</c> shown enlarged in <xref ref="fig-carattab"/>.  Two features already noted in other plots are visible here.  Most of the table values are integers and there is heaping in the carat distribution that consequently has a slight sawtooth pattern (which is easier to see in the earlier histogram).  Additionally, there are a few outliers that are probably errors, and there is no relationship between the two variables.</p>
+    <p>A scatterplot matrix gives an overview of associations between several variables.  If one of the scatterplots looks interesting, it is useful to be able to zoom in and check.  In <xref ref="fig-scatFour"/> of diamond measurements several of the plots could be worth more attention, for instance the scatterplot <c>table</c> and <c>carat</c> shown enlarged in <xref ref="fig-carattab"/>.  Two features already noted in other plots are visible here.  Most of the table values are integers and there is heaping in the carat distribution that consequently has a slight sawtooth pattern (which is easier to see in the earlier histogram).  Additionally, there are a few outliers that are probably errors, and there is no relationship between the two variables.</p>
 
     <figure xml:id="fig-carattab">
       <image source="images/caratTab-1.png">
@@ -210,7 +210,7 @@
       <caption><p>A scatterplot from the diamonds dataset of carat and table</p></caption>
     </figure>
 
-    <p>Space is needed for distinguishing shapes and forms, and for studying features in combination.  Empty space surrounding content is needed to discern what is there.  There are trade-offs.  Shrinking space around the point cloud can make more space between the points.</p>
+    <p>Space is needed for distinguishing shapes and forms, and for studying features in combination.  Empty space surrounding content is needed to discern what is there.  There are trade-offs.  The plot on the right of <xref ref="fig-gbs"/> shrinks space around the point cloud to make more space between the points.</p>
 
     <p>More space is needed for exploration than for presentation just as more space is needed for making a jigsaw than for displaying the finished picture.  Jigsaw pieces need to be moved around, sorted, compared with others.  Using graphics to explore data is similar (if without the certainty that a complete picture involving all the pieces will be possible).</p>
 
@@ -218,7 +218,7 @@
 
     <p>Values drawn above bars can have the effect of artificially lengthening them, hindering proper comparisons.  Borders may be drawn around graphics to separate them from text.  This can also have the effect of appearing to constrain them.  If a vertical axis is drawn at the left of a plot then a border to the right may be interpreted as a boundary of some kind.</p>
 
-    <p>An example of using internal spacing can be seen in doubledecker plots such as those in the chapter on checking Facial Recognition software.  Another example from the chapter on Gay Rights is redrawn here as <xref ref="fig-gaygrx"/>.</p>
+    <p>An example of using internal spacing can be seen in doubledecker plots such as <xref ref="fig-face3"/> and <xref ref="fig-facefdr"/> in <xref ref="ch-facial-recognition"/> on checking Facial Recognition software.  Another example from <xref ref="ch-gay-rights"/>, <xref ref="fig-gayGR"/>, is redrawn here as <xref ref="fig-gaygrx"/>.</p>
 
     <figure xml:id="fig-gaygrx">
       <image source="images/gayGRx-1.png">
@@ -240,7 +240,7 @@
 
     <p>Layout of graphics is essential for presentation and important for exploration.  Drawing a graphic includes choosing the size and aspect ratio and deciding where to place it in text or in relation to other graphics.  In Exploratory Data Analysis graphics need to be resized and moved around to get a better look at them.  Varying graphics changes the point of view, giving fresh impressions and drawing attention to other features.  Single, fixed points of view are limiting.  There are sound recommendations for drawing graphics, but other views suggest additional insights.</p>
 
-    <p>If two variables are measured the same way with the same limits, then scatterplots should be square.  A scatterplot comparing percentage support for two statements on Gay Rights is an example.  If default scales are used and the plot is drawn wider but less tall, then more individual states can be picked out.  One state, which turned out to be Maine, had a relatively low support at state level given its level of opposition to a constitutional amendment.  The two plots are shown together in <xref ref="fig-gbs"/>.  The square plot on the left with equally scaled axes shows the different levels of support for the two opinions and the close association between them.  The plot on the right emphasises individual states more and the overall structure less.</p>
+    <p>If two variables are measured the same way with the same limits, then scatterplots should be square.  <xref ref="fig-gayByState"/> comparing percentage support for two statements on Gay Rights is an example.  If default scales are used and the plot is drawn wider but less tall, then more individual states can be picked out.  One state, which turned out to be Maine, had a relatively low support at state level given its level of opposition to a constitutional amendment.  The two plots are shown together in <xref ref="fig-gbs"/>.  The square plot on the left with equally scaled axes shows the different levels of support for the two opinions and the close association between them.  The plot on the right emphasises individual states more and the overall structure less.</p>
 
     <figure xml:id="fig-gbs">
       <image source="images/gBS-1.png">
@@ -249,11 +249,11 @@
       <caption><p>Scatterplot of responses to the two same-sex marriage questions by state with equal and default scales (point areas are proportional to the number of respondents in that state)</p></caption>
     </figure>
 
-    <p>The plots in <xref ref="fig-gbs"/> could be drawn with the variables switched and this would give another view of the data.  When one of the two variables in a scatterplot is dependent on the other, then the convention is to put it on the vertical axis.</p>
+    <p>The plots in <xref ref="fig-gbs"/> could be drawn with the variables switched and this would give another view of the data.  When one of the two variables in a scatterplot is dependent on the other, then the convention is to put it on the vertical axis.  Examples can be found in <xref ref="fig-michT"/>, <xref ref="fig-ratAge15alph"/>, and <xref ref="fig-btwgpop"/>.</p>
 
-    <p>If two bars in a chart are close in height or if a bar is barely visible, then it helps to stretch the graphic to see which bar is bigger or how big the barely visible bar is.  The same applies to histograms, particularly with possibly empty bins in the middle.  Empty ranges near the extremes can be checked with boxplots.</p>
+    <p>If two bars in a chart are close in height or if a bar is barely visible, then it helps to stretch the graphic to see which bar is bigger or how big the barely visible bar is (as in <xref ref="fig-astb"/>).  The same applies to histograms, particularly with possibly empty bins in the middle (as in <xref ref="fig-histPrice"/>).  Empty ranges near the extremes can be checked with boxplots (as in <xref ref="fig-boxLen"/> following <xref ref="fig-histLen"/>).</p>
 
-    <p>Barcharts are often better horizontally, making use of page width and allowing longer text labels for the bars.  <xref ref="fig-chcbars"/> compares the horizontal version with a vertical version.  The left barchart emphasises the countries with most registered chess players.  The right barchart emphasises how many players there are in countries not in the top thirty.</p>
+    <p>Barcharts are often better horizontally, making use of page width and allowing longer text labels for the bars.  <xref ref="fig-chcbars"/> compares the horizontal version in <xref ref="fig-nationB"/> with a vertical version.  The left barchart emphasises the countries with most registered chess players.  The right barchart emphasises how many players there are in countries not in the top thirty.</p>
 
     <figure xml:id="fig-chcbars">
       <image source="images/ChCbars-1.png">
@@ -262,7 +262,7 @@
       <caption><p>Barchart of numbers of chess players by country and region plotted horizontally and vertically</p></caption>
     </figure>
 
-    <p>Boxplots and scatterplots can be transposed to give alternative views.  In <xref ref="fig-finchbox2"/>, the boxplots were rotated to make the labels more legible and to ensure only one set of labels was needed.</p>
+    <p>Boxplots and scatterplots can be transposed to give alternative views.  Boxplot examples include <xref ref="fig-movierunb"/>, <xref ref="fig-boxElo"/>, <xref ref="fig-sexRating"/>, <xref ref="fig-difs"/>, <xref ref="fig-vehhyb"/>, and <xref ref="fig-sw50af"/>.  In <xref ref="fig-finchBox"/>, repeated here as <xref ref="fig-finchbox2"/>, the boxplots were rotated to make the labels more legible and to ensure only one set of labels was needed.</p>
 
     <figure xml:id="fig-finchbox2">
       <image source="images/finchBox2-1.png">
@@ -271,7 +271,7 @@
       <caption><p>Body and wing lengths for the five species from Isabela Island</p></caption>
     </figure>
 
-    <p>The scatterplots of associations between the numbers in the three sectors of the French workforce could be looked at the other way round.  <xref ref="fig-indag"/> shows one scatterplot on the left and a transposed version on the right.  The first plot may emphasise the relatively low levels of the Industry numbers in most departments more, while the second may emphasise the two extreme Industry values more.</p>
+    <p>The scatterplots of associations between the numbers in the three sectors of the French workforce in <xref ref="ch-bertin"/> could be looked at the other way round.  <xref ref="fig-indag"/> shows the first plot from <xref ref="fig-Bertscats"/> on the left and a transposed version on the right.  The first plot may emphasise the relatively low levels of the Industry numbers in most departments more, while the second may emphasise the two extreme Industry values more.</p>
 
     <figure xml:id="fig-indag">
       <image source="images/IndAg-1.png">
@@ -280,7 +280,7 @@
       <caption><p>Scatterplot of numbers of Agriculture and Industry workers in France in 1954 plotted two ways</p></caption>
     </figure>
 
-    <p>Another example can be seen in <xref ref="fig-gaysccs"/> which shows a scatterplot of Gay Rights survey responses on the left and a transposed version on the right.  The greater support in all states for opposing a Constitutional Amendment looks more obvious in the plot on the right.  Different people may respond to different shapes of features.  There is no display that will be optimal for all.  Best practice is to look at more than one.</p>
+    <p>Another example can be seen in <xref ref="fig-gaysccs"/> which shows <xref ref="fig-gayByState"/> on the left and a transposed version on the right.  The greater support in all states for opposing a Constitutional Amendment looks more obvious in the plot on the right.  Different people may respond to different shapes of features.  There is no display that will be optimal for all.  Best practice is to look at more than one.</p>
 
     <figure xml:id="fig-gaysccs">
       <image source="images/gaySCCS-1.png">
@@ -305,9 +305,9 @@
     <subsection xml:id="sec-scene-types-of-comparison">
       <title>Types of comparison</title>
 
-      <p>Comparisons may be made between different variables for the same individual cases.  They could be different measures or the same measure taken at different times.  The comparisons may be improved by looking at differences or ratios as well as the measures themselves.</p>
+      <p>Comparisons may be made between different variables for the same individual cases.  They could be different measures (e.g., <xref ref="fig-finchPCP"/> and the top plot of <xref ref="fig-finch2box"/>) or the same measure taken at different times (e.g., top right of <xref ref="fig-qlEns"/>).  The comparisons may be improved by looking at differences or ratios as well as the measures themselves.</p>
 
-      <p>Comparisons can be made between different subsets or groups, between one selection and the rest of the dataset, between a selection and the whole dataset.  These comparisons may be made by distributional forms, by features or by statistics, as in <xref ref="fig-comps-1"/> and <xref ref="fig-comps-2"/>.</p>
+      <p>Comparisons can be made between different subsets or groups, between one selection and the rest of the dataset, between a selection and the whole dataset.  These comparisons may be made by distributional forms (<xref ref="fig-sexAge"/> and <xref ref="fig-dens1520Elo"/>), by features (<xref ref="fig-flightn"/>) or by statistics (e.g., <xref ref="fig-clarityCarat"/>, and <xref ref="fig-titancrew"/>, shown again in <xref ref="fig-comps-1"/> and <xref ref="fig-comps-2"/>).</p>
 
       <figure xml:id="fig-comps-1">
         <image source="images/compS-1.png">
@@ -323,17 +323,17 @@
         <caption><p>Titanic survival rates for passengers and crew</p></caption>
       </figure>
 
-      <p>In statistical analysis it is common to specify a particular comparison, for example whether two means can be taken to be equal or not.  In exploratory analysis many comparisons are made, some explicit that are of interest in advance and some that arise because they stand out.  There may be a large number of groups that could be compared in a large number of ways, as with the fuel efficiency data in the vehicles chapter.</p>
+      <p>In statistical analysis it is common to specify a particular comparison, for example whether two means can be taken to be equal or not.  In exploratory analysis many comparisons are made, some explicit that are of interest in advance and some that arise because they stand out.  There may be a large number of groups that could be compared in a large number of ways, as with the fuel efficiency data in <xref ref="ch-us-fuel"/>.</p>
 
-      <p>Comparisons may be made with a variety of graphics, some perhaps more informative than others, but all contributing.  In the chapter on the Bundestag election the votes for parties in two German elections were initially compared by barcharts, then by a barchart of percentage changes between the elections, then by an UpAndDown plot of relative and absolute changes.</p>
+      <p>Comparisons may be made with a variety of graphics, some perhaps more informative than others, but all contributing.  In <xref ref="ch-bundestag-election"/> the votes for parties in two German elections were initially compared by barcharts, then by a barchart of percentage changes between the elections, then by an UpAndDown plot of relative and absolute changes.</p>
 
-      <p>Comparisons must be made precise, both in the definitions of the groups being compared and in the features or statistics used to compare them, and they must be checked thoroughly.</p>
+      <p>Comparisons must be made precise, both in the definitions of the groups being compared and in the features or statistics used to compare them, and they must be checked thoroughly (cf. <xref ref="sec-checking"/>).</p>
     </subsection>
 
     <subsection xml:id="sec-scene-superposition">
       <title>Superposition, juxtaposition, and faceting</title>
 
-      <p>Graphics can be compared by putting them on top of one another (superposition) or by putting them beside or above one another (juxtaposition).  Juxtaposed histograms of chess ratings for active and inactive players pick out the peak at 2000 well.  Superposed density estimates of the same data show the overall difference in distributions better, but the peak is harder to see.  The plots are redrawn in <xref ref="fig-both2elo"/>.</p>
+      <p>Graphics can be compared by putting them on top of one another (superposition) or by putting them beside or above one another (juxtaposition).  <xref ref="fig-hist2Elo"/> juxtaposes histograms of chess ratings for active and inactive players picking out the peak at 2000 well.  <xref ref="fig-densElo"/> superposes density estimates of the same data showing the overall difference in distributions better, but the peak is harder to see.  The plots are redrawn in <xref ref="fig-both2elo"/>.</p>
 
       <figure xml:id="fig-both2elo">
         <image source="images/both2Elo-1.png">
@@ -342,11 +342,11 @@
         <caption><p>Juxtaposed histograms (left) and superposed density estimates (right) of ratings for active and inactive chess players</p></caption>
       </figure>
 
-      <p>Colour (occasionally shape or form) can be used to distinguish the parts of superposed graphics.  The order of drawing is crucial as the last group drawn will be on top.  For comparisons of many groups, faceting by placing them on a grid is a practical alternative.  Much depends on how separated the groups are.</p>
+      <p>Colour (occasionally shape or form) can be used to distinguish the parts of superposed graphics.  The order of drawing is crucial as the last group drawn will be on top (e.g., <xref ref="fig-astg"/> and <xref ref="fig-comnurg"/>).  For comparisons of many groups, faceting by placing them on a grid is a practical alternative.  Much depends on how separated the groups are.</p>
 
-      <p>Superposition is good for comparing time series that look similar, for comparing density estimates of different groups, and for scatterplots in which groups are separated.  It is not effective when overlapping occurs, as with histograms or barcharts where juxtaposition is better.</p>
+      <p>Superposition is good for comparing time series that look similar (e.g., <xref ref="fig-lensd"/> and <xref ref="fig-veh4"/>), for comparing density estimates of different groups (e.g., <xref ref="fig-AgeRating"/>), and for scatterplots in which groups are separated (e.g., <xref ref="fig-palscat3"/>).  It is not effective when overlapping occurs, as with histograms or barcharts where juxtaposition is better (e.g., <xref ref="fig-Berthists"/> and <xref ref="fig-rbjab"/>).</p>
 
-      <p>Juxtaposition can be better for crowded scatterplots.  <xref ref="fig-supjux-1"/> and <xref ref="fig-supjux-2"/> show the delegates data both ways, with the slight change that the plot on the right now includes ghostplotting to provide context for the individual regions.  The disadvantage of juxtaposition is the extra amount of space needed if all plots are full size.</p>
+      <p>Juxtaposition can be better for crowded scatterplots (e.g., <xref ref="fig-delfacet"/> rather than <xref ref="fig-delscat"/>, both shown again in <xref ref="fig-supjux-1"/> and <xref ref="fig-supjux-2"/> with the slight change that the plot on the right now includes ghostplotting to provide context for the individual regions).  The disadvantage of juxtaposition is the extra amount of space needed if all plots are full size.</p>
 
       <figure xml:id="fig-supjux-1">
         <image source="images/supjux-1.png">
@@ -362,15 +362,15 @@
         <caption><p>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions by region</p></caption>
       </figure>
 
-      <p>Grids in faceting are constructed using conditioning.  Order the conditioning variables and categories to place groups of interest together.  Ghostplotting works well for faceted scatterplots by including comparisons of each individual group with the rest of the data.</p>
+      <p>Grids in faceting are constructed using conditioning.  Order the conditioning variables and categories to place groups of interest together (<xref ref="fig-puffmos"/>).  Ghostplotting works well for faceted scatterplots by including comparisons of each individual group with the rest of the data.</p>
 
-      <p>These approaches are not mutually exclusive.  Ghostplotting is often useful with faceting. Superposition and juxtaposition can be used together.  Some plots use superposition, ghostplotting, and juxtaposition together.</p>
+      <p>These approaches are not mutually exclusive.  Ghostplotting is often useful with faceting (e.g., <xref ref="fig-scath"/>). Superposition and juxtaposition were used together in <xref ref="fig-gayB"/>.  <xref ref="fig-olyS100"/> and <xref ref="fig-worm3768"/> use superposition, ghostplotting, and juxtaposition.</p>
     </subsection>
 
     <subsection xml:id="sec-scene-advice">
       <title>Advice</title>
 
-      <p>Whichever objects are to be compared should generally be on the same scales, carefully aligned, and close together.  Scales can be the same because they are measured in the same units, when differences in levels are emphasised (as in <xref ref="fig-scales-1"/> and <xref ref="fig-scales-2"/>), or because they have been standardised to a common scale, when distributional shapes are compared.  There are many possible standardisations.</p>
+      <p>Whichever objects are to be compared should generally be on the same scales, carefully aligned, and close together.  Scales can be the same because they are measured in the same units, when differences in levels are emphasised (e.g., <xref ref="fig-sexAgeHist"/> and <xref ref="fig-astb"/>, drawn again in <xref ref="fig-scales-1"/> and <xref ref="fig-scales-2"/>), or because they have been standardised to a common scale, when distributional shapes are compared (e.g., <xref ref="fig-moviegf"/> and <xref ref="fig-comtimes"/>).  There are many possible standardisations (cf. <xref ref="sec-wrang-transform-combine"/>).</p>
 
       <figure xml:id="fig-scales-1">
         <image source="images/scaleS-1.png">
@@ -386,7 +386,7 @@
         <caption><p>Numbers of spaceflight participants by decade and by sex</p></caption>
       </figure>
 
-      <p>Alignment of axes and placing objects together makes comparisons easier.  The doubledecker plot of Titanic survival rates by passenger class and crew department shows the higher survival rate of passengers over crew, the decline in survival rate by passenger class, and the relatively high rate of survival of the deck crew (because they manned the lifeboats).</p>
+      <p>Alignment of axes and placing objects together makes comparisons easier.  The doubledecker plot of Titanic survival rates by passenger class and crew department in <xref ref="fig-titancrew"/> shows the higher survival rate of passengers over crew, the decline in survival rate by passenger class, and the relatively high rate of survival of the deck crew (because they manned the lifeboats).</p>
     </subsection>
   </section>
 
