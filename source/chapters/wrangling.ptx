@@ -91,11 +91,18 @@
         informative vertical scale.
       </p>
 
+      <figure xml:id="fig-flighttxa">
+        <image source="images/flighttX-1a.png">
+          <description>Plot of individual spaceflight mission times over the years on a linear scale, revealing most missions as a dense band near zero with a few very long missions (the International Space Station era).</description>
+        </image>
+        <caption><p>Individual spaceflight mission times over the years, plotted on a linear scale.</p></caption>
+      </figure>
+
       <figure xml:id="fig-flighttx">
         <image source="images/flighttX-1.png">
-          <description>Two side-by-side plots of individual spaceflight mission times over the years. The left plot uses a linear scale, revealing most missions as a dense band near zero with a few very long missions (the International Space Station era). The right plot uses a log scale, making it much easier to see the structure of mission lengths across all eras.</description>
+          <description>Plot of individual spaceflight mission times over the yearson a log scale, making it much easier to see the structure of mission lengths across all eras compared to the linear scale plot.</description>
         </image>
-        <caption><p>Individual spaceflight mission times over the years, plotted on a linear scale (left) and a logged scale (right).</p></caption>
+        <caption><p>Individual spaceflight mission times over the years, plotted on a logged scale.</p></caption>
       </figure>
 
       <p>
