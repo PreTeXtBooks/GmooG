@@ -148,11 +148,13 @@
 
     <p><em>Answers.</em> Each of the three sectors employed between 5 and 7 million.  There were relatively more agricultural workers in the West of France.  Numbers working in Industry and Commerce were positively related.</p>
     <p><em>Further questions.</em> How have the numbers changed since 1954?  Are there other sectors which have become important?</p>
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Graphics are for showing structure more than for providing exact individual values. (<xref ref="fig-Bertagp"/> to <xref ref="fig-Bertdens"/>)</p></li>
-      <li><p>Scatterplots show associations between two variables. (<xref ref="fig-Bertscats"/>)</p></li>
-      <li><p>Drawing graphics without outliers or extreme values creates space for showing the main structure of the data. (<xref ref="fig-Bertdens"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-bertin-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Graphics are for showing structure more than for providing exact individual values. (<xref ref="fig-Bertagp"/> to <xref ref="fig-Bertdens"/>)</p></li>
+        <li><p>Scatterplots show associations between two variables. (<xref ref="fig-Bertscats"/>)</p></li>
+        <li><p>Drawing graphics without outliers or extreme values creates space for showing the main structure of the data. (<xref ref="fig-Bertdens"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

@@ -146,11 +146,13 @@
     <p><em>Answers.</em> Older people were more against a same-sex marriage law in their state. Women were more in favour than men at all ages. There was a majority at all ages against a Constitutional Amendment banning same-sex marriage.</p>
     <p><em>Further questions.</em> Respondents were asked additional related questions: How did their responses to those relate to their responses on same-sex marriage? What results do more recent surveys show? How do people's opinions vary on other contentious issues in the survey?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Bubble charts show how much evidence underlies a particular point. (Figures <xref ref="fig-gayS"/>, <xref ref="fig-gayF"/>, and <xref ref="fig-gayByState"/>)</p></li>
-      <li><p>Doubledecker plots show both group rates and group sizes. (Figure <xref ref="fig-gayGR"/>)</p></li>
-      <li><p>For large numbers of categories it is helpful to sort them into groups first and then order them by value. (Figure <xref ref="fig-gayCIs"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-gay-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Bubble charts show how much evidence underlies a particular point. (Figures <xref ref="fig-gayS"/>, <xref ref="fig-gayF"/>, and <xref ref="fig-gayByState"/>)</p></li>
+        <li><p>Doubledecker plots show both group rates and group sizes. (Figure <xref ref="fig-gayGR"/>)</p></li>
+        <li><p>For large numbers of categories it is helpful to sort them into groups first and then order them by value. (Figure <xref ref="fig-gayCIs"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

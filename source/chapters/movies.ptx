@@ -222,15 +222,14 @@
     <p>The number of films produced in the last 20 years has increased sharply for most genres, at least for the films in the IMDb database.  War films, Westerns, and Musicals have not.</p>
     <p><em>Further questions.</em> How do ratings and numbers of votes change over time?  How do ratings vary by age and sex?  Are films from different countries rated differently?</p>
 
-  </section>
-
-  <section xml:id="sec-movies-discussion">
-    <title>Graphical takeaways</title>
-    <ul>
-      <li><p>Data heaping is visible in histograms when the binwidth is equal to the data resolution. (<xref ref="fig-movierunh"/>)</p></li>
-      <li><p>Alpha transparency shows where the data are in scatterplots. (<xref ref="fig-movieruny"/>)</p></li>
-      <li><p>Faceting emphasises distinctive features of groups. (<xref ref="fig-moviett2"/> and <xref ref="fig-moviegf"/>)</p></li>
-      <li><p>Scatterplots can display many different kinds of information. (<xref ref="fig-movievr"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-movies-discussion">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Data heaping is visible in histograms when the binwidth is equal to the data resolution. (<xref ref="fig-movierunh"/>)</p></li>
+        <li><p>Alpha transparency shows where the data are in scatterplots. (<xref ref="fig-movieruny"/>)</p></li>
+        <li><p>Faceting emphasises distinctive features of groups. (<xref ref="fig-moviett2"/> and <xref ref="fig-moviegf"/>)</p></li>
+        <li><p>Scatterplots can display many different kinds of information. (<xref ref="fig-movievr"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

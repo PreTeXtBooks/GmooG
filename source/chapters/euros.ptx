@@ -115,11 +115,13 @@
     <p><em>Answers.</em> More and more international players play their football abroad. Just over half of the players of the 24 teams at Euro 2020 played in England, Germany, or Italy.</p>
     <p><em>Further questions.</em> Which team had the biggest variability of home player percentage across the years? Are their similar patterns for teams competing in the World Cup? Is there data available on the composition of club teams by nationality?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Alignment of identical axes supports viewing ensembles of graphics. (<xref ref="fig-uefaTQ"/>)</p></li>
-      <li><p>Smooths are effective for discrete datasets too. (<xref ref="fig-uefaPerc"/>)</p></li>
-      <li><p>Faceting works for plots with many groups. (<xref ref="fig-uefa20"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-euros-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Alignment of identical axes supports viewing ensembles of graphics. (<xref ref="fig-uefaTQ"/>)</p></li>
+        <li><p>Smooths are effective for discrete datasets too. (<xref ref="fig-uefaPerc"/>)</p></li>
+        <li><p>Faceting works for plots with many groups. (<xref ref="fig-uefa20"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>
