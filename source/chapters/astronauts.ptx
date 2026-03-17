@@ -120,13 +120,15 @@
     <p><em>Answers.</em> Many more men than women have gone up in space and the men have been older. Initial flights were short. Since the space station programmes began, people have stayed much longer in space. Most have been Russians or Americans, but this is changing.</p>
     <p><em>Further questions.</em> How many spaceflights have individuals made? Are there differences between U.S.S.R./Russians and Americans?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Graphics uncover problems in datasets, be they typos, errors or more serious issues. (<xref ref="secAstro1a"/> and <xref ref="secAstro4"/>)</p></li>
-      <li><p>Scatterplots are excellent, but it is well to check for duplicate pairs of values and draw additional complementary plots. (<xref ref="fig-astg"/>)</p></li>
-      <li><p>Colours should be used consistently for the same categories; different palettes should be used for other groupings to avoid confusion. (<xref ref="fig-astg"/> and <xref ref="fig-astb"/> versus <xref ref="fig-flighttc"/> or <xref ref="fig-flightn"/>)</p></li>
-      <li><p>Log transformations are effective for skewed distributions, especially with interpretable scaling. (<xref ref="fig-flighttl"/>)</p></li>
-      <li><p>Faceting disentangles overlapping groups in scatterplots. (<xref ref="fig-flightn"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-astro-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Graphics uncover problems in datasets, be they typos, errors or more serious issues. (<xref ref="secAstro1a"/> and <xref ref="secAstro4"/>)</p></li>
+        <li><p>Scatterplots are excellent, but it is well to check for duplicate pairs of values and draw additional complementary plots. (<xref ref="fig-astg"/>)</p></li>
+        <li><p>Colours should be used consistently for the same categories; different palettes should be used for other groupings to avoid confusion. (<xref ref="fig-astg"/> and <xref ref="fig-astb"/> versus <xref ref="fig-flighttc"/> or <xref ref="fig-flightn"/>)</p></li>
+        <li><p>Log transformations are effective for skewed distributions, especially with interpretable scaling. (<xref ref="fig-flighttl"/>)</p></li>
+        <li><p>Faceting disentangles overlapping groups in scatterplots. (<xref ref="fig-flightn"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

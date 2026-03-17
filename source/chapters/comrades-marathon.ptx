@@ -209,12 +209,14 @@
     <p><em>Answers.</em> Numbers of participants have increased enormously since the early years. Since the race has been made open to all, many women now run. The proportion of older runners has increased. International participation has also grown. The fastest time to complete the race has dropped, but not noticeably so in the last 20 years. Median times have tended to increase as more runners participate. Men's best times are quicker than women's best times, but there are far more male runners. The difference is currently about 45 minutes. Overall the best times for the "up" race are generally slightly higher than the best times for the "down" race.</p>
     <p><em>Further questions.</em> Birthyears of runners are available on the Marathon's website, but were not scraped. How are age and performance related? Other marathons are newer and shorter. Do the results for them differ substantially from what has been found for the Comrades Marathon?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Boxplots by year provide a great deal of information. (<xref ref="fig-combox"/>)</p></li>
-      <li><p>Scales do not always have to start at 0. (e.g., <xref ref="fig-commf"/>, <xref ref="fig-comudp"/>, and <xref ref="fig-commany"/>)</p></li>
-      <li><p>Combining a time series of statistics with a barchart of numbers over time works well when the time scales are aligned. (<xref ref="fig-comstat"/> and <xref ref="fig-commfmed"/>)</p></li>
-      <li><p>Scaling of related data may vary across plots to get the most information from them. (<xref ref="fig-comtimes"/> and <xref ref="fig-comnurg"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-comm-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Boxplots by year provide a great deal of information. (<xref ref="fig-combox"/>)</p></li>
+        <li><p>Scales do not always have to start at 0. (e.g., <xref ref="fig-commf"/>, <xref ref="fig-comudp"/>, and <xref ref="fig-commany"/>)</p></li>
+        <li><p>Combining a time series of statistics with a barchart of numbers over time works well when the time scales are aligned. (<xref ref="fig-comstat"/> and <xref ref="fig-commfmed"/>)</p></li>
+        <li><p>Scaling of related data may vary across plots to get the most information from them. (<xref ref="fig-comtimes"/> and <xref ref="fig-comnurg"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

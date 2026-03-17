@@ -122,14 +122,14 @@
   
     <p><em>Answers.</em> Newcomb&#8217;s estimates were closer to today&#8217;s value than Michelson&#8217;s.  The individual experiments of each of the two researchers can only approximately be treated as independent random samples.</p>
     <p><em>Further questions.</em> How have experiments to estimate the speed of light changed since Newcomb&#8217;s time?  How have the estimates themselves changed?</p>
-</section>
 
-  <section xml:id="sec-lightspeed-discussion">
-    <title>Graphical takeaways</title>
-    <ul>
-      <li><p>Going back to original sources can reveal relevant information.  (<xref ref="fig-ptmich"/> and <xref ref="fig-newct2X"/>)</p></li>
-      <li><p>Graphics are useful for identifying outliers.  (<xref ref="fig-histnewcX"/> and <xref ref="fig-boxnewcX"/>)</p></li>
-      <li><p>There is no one best display: different graphics offer alternative views.  (<xref ref="fig-histnewcX"/> to <xref ref="fig-newct2X"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-lightspeed-discussion">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Going back to original sources can reveal relevant information.  (<xref ref="fig-ptmich"/> and <xref ref="fig-newct2X"/>)</p></li>
+        <li><p>Graphics are useful for identifying outliers.  (<xref ref="fig-histnewcX"/> and <xref ref="fig-boxnewcX"/>)</p></li>
+        <li><p>There is no one best display: different graphics offer alternative views.  (<xref ref="fig-histnewcX"/> to <xref ref="fig-newct2X"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

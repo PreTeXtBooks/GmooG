@@ -199,12 +199,14 @@ The teams with the worst relative home record (proportions less than 0.35) have 
     <p><em>Answers.</em> The proportion of drawn games has increased from the low initial rates, but not changed much on average over the past 40 years. Home advantage has declined, particularly for the lower tiers of the league. The numbers of goals scored has remained steady for the last 50 years. Wormcharts give an overview of how teams' league positions change over a season.</p>
     <p><em>Further questions.</em> Would using goal difference rather than goal average before 1976 ever have made a difference (and vice versa)? Which teams have spent the longest in each tier? Which teams have moved between tiers most often?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Graphics of time series should mark when the rules or context changes. Guidelines help. (<xref ref="fig-socD"/>, <xref ref="fig-socDf"/>, and <xref ref="fig-socG"/>)</p></li>
-      <li><p>Drawing cases of interest bigger, in colour, and on top of other points makes for effective highlighting. (<xref ref="fig-socHAt"/>)</p></li>
-      <li><p>Transformations can be used to emphasise different parts of a scale. (<xref ref="fig-teamBPSq"/>)</p></li>
-      <li><p>Wormcharts are an illuminating way of displaying how a league progresses over a season. (<xref ref="fig-worm15"/> to <xref ref="fig-worm3768"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-football-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Graphics of time series should mark when the rules or context changes. Guidelines help. (<xref ref="fig-socD"/>, <xref ref="fig-socDf"/>, and <xref ref="fig-socG"/>)</p></li>
+        <li><p>Drawing cases of interest bigger, in colour, and on top of other points makes for effective highlighting. (<xref ref="fig-socHAt"/>)</p></li>
+        <li><p>Transformations can be used to emphasise different parts of a scale. (<xref ref="fig-teamBPSq"/>)</p></li>
+        <li><p>Wormcharts are an illuminating way of displaying how a league progresses over a season. (<xref ref="fig-worm15"/> to <xref ref="fig-worm3768"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

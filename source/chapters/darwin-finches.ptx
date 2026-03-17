@@ -110,11 +110,13 @@
     <p><em>Answers.</em> The nine species on Isabela can almost all be distinguished from one other with the measurements provided. Species do not appear to differ between islands. Males are generally bigger than females of the same species.</p>
     <p><em>Further questions.</em> Are the different bird measurements correlated with each other? How do the data on the finches of the Galápagos Islands collected by other researchers compare with the data studied here?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Colour consistency across displays helps readers. (<xref ref="fig-finchBar"/> to <xref ref="fig-snodPCP"/> and <xref ref="fig-WingL"/>)</p></li>
-      <li><p>The orderings of variables and categories in parallel coordinate plots make a big difference to what can be seen. (<xref ref="fig-snodPCP"/>)</p></li>
-      <li><p>Faceted parallel coordinate plots distinguish species better when the complete dataset is plotted in the background (ghostplotting). (<xref ref="fig-snodPCP"/> and <xref ref="fig-Fulig"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-finches-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Colour consistency across displays helps readers. (<xref ref="fig-finchBar"/> to <xref ref="fig-snodPCP"/> and <xref ref="fig-WingL"/>)</p></li>
+        <li><p>The orderings of variables and categories in parallel coordinate plots make a big difference to what can be seen. (<xref ref="fig-snodPCP"/>)</p></li>
+        <li><p>Faceted parallel coordinate plots distinguish species better when the complete dataset is plotted in the background (ghostplotting). (<xref ref="fig-snodPCP"/> and <xref ref="fig-Fulig"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

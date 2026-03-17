@@ -139,11 +139,13 @@
     <p><em>Answers.</em> About half the users in the study charged their cars rarely, if at all. Cars were seldom charged at weekends. Some charging locations were not used much at all. Users generally charged for less than 4 hours, at which point they had to start paying a fee.</p>
     <p><em>Further questions.</em> Do charging patterns change over time? When did users start and stop using chargers during the day? What percentage of time had stations got cars connected to them?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Initial exploratory graphics suggest questions to follow up. (<xref ref="fig-elecEns"/> to <xref ref="fig-elecStat"/>)</p></li>
-      <li><p>Colour, separating space, and nested ordering are valuable for distinguishing groups. (<xref ref="fig-elecStat2"/>)</p></li>
-      <li><p>Ensembles of graphics are effective at pulling information together. (<xref ref="fig-elecEns"/> and <xref ref="fig-elecScats"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-elec-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Initial exploratory graphics suggest questions to follow up. (<xref ref="fig-elecEns"/> to <xref ref="fig-elecStat"/>)</p></li>
+        <li><p>Colour, separating space, and nested ordering are valuable for distinguishing groups. (<xref ref="fig-elecStat2"/>)</p></li>
+        <li><p>Ensembles of graphics are effective at pulling information together. (<xref ref="fig-elecEns"/> and <xref ref="fig-elecScats"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

@@ -147,12 +147,14 @@
     <p><em>Answers.</em> There are a number of data cleaning issues such as impossible zero values, outliers, and missing price data. The distribution of carat values with one-sided peaks at rounded numbers is an unusual feature. The apparent upper limit on price will affect modelling.</p>
     <p><em>Further questions.</em> What are the distributions of colour, cut, and clarity? What influence do colour and cut have on price?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>For large datasets choosing the narrowest histogram binwidth can reveal otherwise hidden information. (<xref ref="fig-histCar"/> and <xref ref="fig-histPrice"/>)</p></li>
-      <li><p>Individual outliers on one dimension affect higher-dimensional plots as well, so it is worth redrawing without them. (<xref ref="fig-scatxyz"/>, <xref ref="fig-scatFour"/>, and <xref ref="fig-bothDep"/>)</p></li>
-      <li><p>Surprising plot shapes usually mean there is structure to uncover. (<xref ref="fig-scatFour"/>)</p></li>
-      <li><p>Parallel boxplots are a quick and informative way of comparing groups. (<xref ref="fig-clarityCarat"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-diam-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>For large datasets choosing the narrowest histogram binwidth can reveal otherwise hidden information. (<xref ref="fig-histCar"/> and <xref ref="fig-histPrice"/>)</p></li>
+        <li><p>Individual outliers on one dimension affect higher-dimensional plots as well, so it is worth redrawing without them. (<xref ref="fig-scatxyz"/>, <xref ref="fig-scatFour"/>, and <xref ref="fig-bothDep"/>)</p></li>
+        <li><p>Surprising plot shapes usually mean there is structure to uncover. (<xref ref="fig-scatFour"/>)</p></li>
+        <li><p>Parallel boxplots are a quick and informative way of comparing groups. (<xref ref="fig-clarityCarat"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>

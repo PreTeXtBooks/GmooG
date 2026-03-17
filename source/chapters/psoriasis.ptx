@@ -57,10 +57,12 @@
     <p><em>Answers.</em> The treatment group reported better quality of life on all criteria on average. Deeper analysis of question 1 showed that most individuals reported improvements in their quality of life.</p>
     <p><em>Further questions.</em> Do the answers to the other questions display similar patterns to the answers to question 1?</p>
 
-    <p><em>Graphical takeaways.</em></p>
-    <ul>
-      <li><p>Ensembles of graphics can summarise the main features of a study succinctly. (<xref ref="fig-qlEns"/>)</p></li>
-      <li><p>Plotting individual scores is more informative than plotting totals. (<xref ref="fig-qlEns"/>)</p></li>
-    </ul>
+    <subsection xml:id="sec-psor-takeaways">
+      <title>Graphical takeaways</title>
+      <ul>
+        <li><p>Ensembles of graphics can summarise the main features of a study succinctly. (<xref ref="fig-qlEns"/>)</p></li>
+        <li><p>Plotting individual scores is more informative than plotting totals. (<xref ref="fig-qlEns"/>)</p></li>
+      </ul>
+    </subsection>
   </section>
 </chapter>
