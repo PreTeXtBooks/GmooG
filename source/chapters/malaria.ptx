@@ -25,7 +25,7 @@
       <caption><p>Percentages of positives for the four tests.</p></caption>
     </figure>
 
-    <p><xref ref="fig-maltest"/> summarises the results for the remaining cases. The tests found different percentages of positives, with the new test reporting the most positives. The authors believe that the new method may detect previous as well as current infections. <xref ref="fig-malvis"/> displays how often the different combinations of test results arose.</p>
+    <p><xref ref="fig-maltest"/> summarises the results for the remaining cases. The tests found different percentages of positives, with the new test reporting the most positives. The authors believe that the new method may detect previous as well as current infections.</p>
 
     <figure xml:id="fig-malvis">
       <image source="images/malvis-1.png">
