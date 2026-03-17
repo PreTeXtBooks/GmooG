@@ -148,9 +148,7 @@
     <p><em>Further questions.</em> Which states voted as one during the convention?  In which other years were there many ballots to select a candidate?</p>
 </section>
 
-  <section xml:id="sec-1912-discussion">
-    <title>Graphical takeaways</title>
-
+    <p><em>Graphical takeaways</em></p>
     <ul>
       <li><p>Guidelines support reading of graphics. (<xref ref="fig-delscat"/> to <xref ref="fig-convt"/>)</p></li>
       <li><p>Time series with discrete jumps should be represented with steps. (<xref ref="fig-candvs2"/>)</p></li>
