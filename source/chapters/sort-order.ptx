@@ -448,9 +448,7 @@
         by undertail, and columns ordered by eyebrows. The deliberate facet ordering reveals structure in the
         data that other orderings would obscure.</description>
       </image>
-      <caption><p>Faceted barcharts of shearwater measurements. Rows are arranged by <c>border</c> and then
-      <c>undertail</c>; columns are ordered by <c>eyebrows</c>. The orderings were specifically chosen to
-      reveal structure.</p></caption>
+      <caption><p>Barcharts of collar faceted by eyebrows, border, and undertail for the Audubon and Galápagos shearwaters.</p></caption>
     </figure>
 
     <p>
