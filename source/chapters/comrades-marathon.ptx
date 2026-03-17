@@ -9,14 +9,14 @@
     </blockquote>
     <p><em>Background.</em> The Comrades Marathon in South Africa between Durban and Pietermaritzburg has been run over 90 times since 1921.</p>
     <p><em>Questions.</em> How many people take part? Who takes part and how has that changed over the years? How long do the best runners take and how long do most runners take? Are men much faster than women? Is there a difference in times between the "down" runs starting in Pietermaritzburg and the "up" runs starting in Durban?</p>
-    <p><em>Sources.</em> Data from <xref ref="stratton-2019"/>, race profile information from <xref ref="east-2022"/>.</p>
+    <p><em>Sources.</em> Data from <xref ref="stratton-2019" text="custom">Stratton (2019)</xref>, race profile information from <xref ref="east-2022" text="custom">28East (2022)</xref>.</p>
     <p><em>Structure.</em> Information on 445129 participants' runs in 12 variables.</p>
   </introduction>
 
   <section xml:id="sec-comm-entries">
     <title>How many run in the Comrades (Ultra)Marathon?</title>
 
-    <p>The data were scraped from the Marathon's website (<xref ref="CMA-2022"/>) and made available on Kaggle. More detailed data, including runners' ages and split times for the 2019 race, have been analysed elsewhere (<xref ref="collier-2019"/>).</p>
+    <p>The data were scraped from the Marathon's website (<xref ref="CMA-2022" text="custom">Comrades Marathon Association (2022)</xref>) and made available on Kaggle. More detailed data, including runners' ages and split times for the 2019 race, have been analysed elsewhere (<xref ref="collier-2019" text="custom">Collier (2019)</xref>).</p>
 
     <p>The race was run for the first time in 1921 from Durban to Pietermaritzburg ("down"), with 16 runners finishing. In 1922 the race was run in the other direction ("up"). Mostly the directions alternated in successive years, but on three occasions they did not.</p>
 
@@ -29,7 +29,7 @@
       <caption><p>Numbers of finishers of the Comrades Marathon and the race direction by year (dark orange is up, black is down).</p></caption>
     </figure>
 
-    <p>Numbers remained low until the 1960s and rose sharply in the 1970s and 1980s (<xref ref="fig-comdir"/>). No races took place from 1941 to 1945 during the Second World War. There was a sharp peak in the year 2000 when just over 20,000 finished, almost twice as many as in the surrounding years. There were two reasons. First, it was the 75th running of the race and there was much publicity, so many more entered. Second, the limit on finishing time was extended from 11 hours to 12 hours for that year. In 2019 there were 25,000 entrants (not all started) and over 16,000 finished. Detailed information can be found on the website for the race (<xref ref="CMA-2022"/>) and some summary information on its Wikipedia page (<xref ref="ComradesM-2022"/>).</p>
+    <p>Numbers remained low until the 1960s and rose sharply in the 1970s and 1980s (<xref ref="fig-comdir"/>). No races took place from 1941 to 1945 during the Second World War. There was a sharp peak in the year 2000 when just over 20,000 finished, almost twice as many as in the surrounding years. There were two reasons. First, it was the 75th running of the race and there was much publicity, so many more entered. Second, the limit on finishing time was extended from 11 hours to 12 hours for that year. In 2019 there were 25,000 entrants (not all started) and over 16,000 finished. Detailed information can be found on the website for the race (<xref ref="CMA-2022" text="custom">Comrades Marathon Association (2022)</xref>) and some summary information on its Wikipedia page (<xref ref="ComradesM-2022" text="custom">Wikipedia (2022)</xref>).</p>
   </section>
 
   <section xml:id="sec-comm-age-sex">
@@ -48,7 +48,7 @@
 
     <p>The male seniors group dominated the race until 2000, apart from a few years in the 1980s when entrants with no birth years recorded could not be assigned to any age category. In recent years the number of male veterans has become larger and almost the same as the number of seniors. The other smaller groups follow a common pattern of a general increase with peaks in 2000 and 2010.</p>
 
-    <p>The first foreign entrants were a group of four top runners from England in 1962 (<xref ref="ComradesM-2022"/>). All four finished in the top five with one of them, John Smith, winning the race. <xref ref="fig-wfnos"/> shows how the numbers of female and foreign finishers have developed since 1975.</p>
+    <p>The first foreign entrants were a group of four top runners from England in 1962 (<xref ref="ComradesM-2022" text="custom">Wikipedia (2022)</xref>). All four finished in the top five with one of them, John Smith, winning the race. <xref ref="fig-wfnos"/> shows how the numbers of female and foreign finishers have developed since 1975.</p>
 
     <figure xml:id="fig-wfnos">
       <image source="images/wfNos-1.png">
@@ -65,7 +65,7 @@
 
     <p>The race was limited to 12 hours in the first few years until 1927. From 1928 to 2002 the limit was 11 hours, apart from the 75th race in 2000 when it was extended to 12 hours. Since 2003 the limit has been 12 hours again. In recent years qualifying as a finisher required runners to additionally reach up to six cut-off points along the way within specified times.</p>
 
-    <p>Detailed time comparisons across years are difficult because of the different numbers running, the different weather conditions, the different directions of the run ("down" and "up"), and the different distances run. <xref ref="CMA-2022"/> gives the distances of the four Comrades Marathons from 2016 to 2019 as 89.2 km, 86.7 km, 90.2 km, and 86.8 km.</p>
+    <p>Detailed time comparisons across years are difficult because of the different numbers running, the different weather conditions, the different directions of the run ("down" and "up"), and the different distances run. <xref ref="CMA-2022" text="custom">Comrades Marathon Association (2022)</xref> gives the distances of the four Comrades Marathons from 2016 to 2019 as 89.2 km, 86.7 km, 90.2 km, and 86.8 km.</p>
 
     <p>Boxplots of the times in hours for each year are displayed in <xref ref="fig-combox"/>. The few times of over 12 hours listed in the dataset have been removed.</p>
 
@@ -147,7 +147,7 @@
       <caption><p>Finishing times in the 2019 race for females (above) and males (below), dotted lines mark limits for awarding medals other than gold.</p></caption>
     </figure>
 
-    <p>The vertical scales of the plots differ, as fewer women took part. The same intermediate boundary effects can be seen in both histograms. Some runners clearly wish to finish within certain target times. Dotted lines have been drawn to mark times governing the awarding of medals other than gold. The top 10 of each sex get gold medals. Men finishing under 6 hours but not in the top 10 get a Wally Hayward medal and women finishing under 7.5 hours but not in the top 10 get an Isavel Roche-Kelly medal. Every finisher gets a medal, and details of all the medals can be found in <xref ref="ComradesM-2022"/>.</p>
+    <p>The vertical scales of the plots differ, as fewer women took part. The same intermediate boundary effects can be seen in both histograms. Some runners clearly wish to finish within certain target times. Dotted lines have been drawn to mark times governing the awarding of medals other than gold. The top 10 of each sex get gold medals. Men finishing under 6 hours but not in the top 10 get a Wally Hayward medal and women finishing under 7.5 hours but not in the top 10 get an Isavel Roche-Kelly medal. Every finisher gets a medal, and details of all the medals can be found in <xref ref="ComradesM-2022" text="custom">Wikipedia (2022)</xref>.</p>
   </section>
 
   <section xml:id="sec-comm-up-down">
@@ -178,7 +178,7 @@
       <caption><p>Distances in km for the up (dark orange) and down (black) races since 1970 and a profile plot for the down race from Pietermaritzburg to Durban that was planned for 2020.</p></caption>
     </figure>
 
-    <p>The "down" race is not all downhill and the "up" race is not all uphill, but overall there is a difference of around 700 m in elevation between Pietermaritzburg and Durban as the profile plot for the planned, but cancelled, 2020 Comrades Marathon shows (<xref ref="east-2022"/>).</p>
+    <p>The "down" race is not all downhill and the "up" race is not all uphill, but overall there is a difference of around 700 m in elevation between Pietermaritzburg and Durban as the profile plot for the planned, but cancelled, 2020 Comrades Marathon shows (<xref ref="east-2022" text="custom">28East (2022)</xref>).</p>
   </section>
 
   <section xml:id="sec-comm-individuals">

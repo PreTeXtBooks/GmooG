@@ -74,7 +74,7 @@
     <p>
       Generally, women have about the same pelvic breadth as men but narrower shoulder widths. The displays in
       <xref ref="fig-bibi1"/> and <xref ref="fig-bibi2"/> use data collected around twenty years ago
-      (<xref ref="heinz-2003"/>). There are not many datasets of multivariate measurements of individuals and in
+      (<xref ref="heinz-2003" text="custom">Heinz et al. (2003)</xref>). There are not many datasets of multivariate measurements of individuals and in
       working with this one, the authors' proviso should be remembered that "the sample is not a representative
       sample from a well-defined population". The R help file says it was men and women who were primarily in their
       twenties and thirties and who all exercised several hours a week, hardly typical of the general population.
@@ -115,16 +115,16 @@
       <title>Types of attention</title>
       <p>
         Before paying full attention, there is what is referred to as preattentive processing (although attention
-        does play a role, <xref ref="healey-2012"/>). People can pick out 2 red dots in a cloud of blue dots
+        does play a role, <xref ref="healey-2012" text="custom">Healey and Enns (2012)</xref>). People can pick out 2 red dots in a cloud of blue dots
         without even trying. They might then use focused attention to concentrate on those points and their
         neighbourhoods or they might distribute their attention over the whole display looking for other features.
       </p>
       <p>
         Sometimes something may catch a viewer's eye when they are not looking directly at it, thanks to their
-        peripheral vision. <xref ref="potter-2014"/> concludes that in certain circumstances people can see meaning
+        peripheral vision. <xref ref="potter-2014" text="custom">Potter et al. (2014)</xref> concludes that in certain circumstances people can see meaning
         in a photograph within 13 ms. Perhaps that ability encourages them to only glance at graphics, and not try
         to see more in them. Even if graphics are studied more closely, there is the effect that Barbara Tversky
-        calls the fourth law of cognition (<xref ref="tversky-2019"/>): The mind can override perception. She
+        calls the fourth law of cognition (<xref ref="tversky-2019" text="custom">Tversky (2019)</xref>): The mind can override perception. She
         writes: "We don't always look, even when the answer is right in front of our eyes. Memory overrides
         perception." Both effects contribute to explaining why graphics are often poorly interpreted. The fourth law
         of cognition may also underlie why some graphics are poorly described by their own authors. They may be
@@ -149,7 +149,7 @@
       </p>
 
       <p>
-        <xref ref="theeuwes-2018"/> claims that stimulus-driven and history-based attention selection are
+        <xref ref="theeuwes-2018" text="custom">Theeuwes (2018)</xref> claims that stimulus-driven and history-based attention selection are
         effortless, while goal-driven requires effort. His research is related to dynamic situations, such as
         driving, but is still relevant. It is easier to respond to a strong feature or recognise a familiar pattern
         than to identify a feature that may or may not be associated with a particular goal. Having experience of
@@ -287,19 +287,19 @@
         What do people pay attention to when they visit a famous building? Architects will study the building.
         Historians may study the symbolism, and locals will have their own ideas about what stands out. What can be
         seen happening during a sporting event? Coaches will view it differently than fans, and with team games,
-        different sets of fans will see the same game very differently (<xref ref="hastorf-1954"/>). In these
+        different sets of fans will see the same game very differently (<xref ref="hastorf-1954" text="custom">Hastorf and Cantril (1954)</xref>). In these
         situations it comes down to motives, interest and background knowledge, education, and experience. The same
         goes for looking at graphics. Motives may vary between viewers, interest and background knowledge can
         hopefully be assumed, but education and experience can not. It is helpful to study how to look at graphics
         and to look at a lot of graphics to learn how to recognise what might be seen in them. Just looking is not
         enough. Or as Spear put it: "there is quite a difference between simply looking at a chart and seeing it."
-        (<xref ref="spear-1969"/>).
+        (<xref ref="spear-1969" text="custom">Spear (1969)</xref>).
       </p>
 
       <p>
         And what should be looked at in a graphic? If researchers have no experience, it is hard for them to know
         what to look for. De Groot showed that international master chess players chose better moves than club
-        players because they recognised the structure of positions (<xref ref="deGroot-1978"/>, a second edition in
+        players because they recognised the structure of positions (<xref ref="deGroot-1978" text="custom">de Groot (1978)</xref>, a second edition in
         English of his Dutch thesis from 1946). The same doubtless applies to viewers studying graphics. If they
         are familiar with data graphics and understanding and interpreting them, they will find it easier to
         understand and interpret graphics from a new dataset.
@@ -308,7 +308,7 @@
       <p>
         The peaks in the finishing times for the Comrades marathon in <xref ref="fig-comtimes"/>, drawn again in
         <xref ref="fig-comtimesx"/>, are an example.
-        Others have seen similar patterns in other marathon races (<xref ref="marastats-2019"/>).
+        Others have seen similar patterns in other marathon races (<xref ref="marastats-2019" text="custom">marastats (2019)</xref>).
       </p>
 
       <figure xml:id="fig-comtimesx">
@@ -379,7 +379,7 @@
       houses they are selling may also be described that way. Many graphics were drawn first and discarded just as
       many more photographs were taken than are used. Scepticism and thorough checking are called for. Popper's
       concept of falsification suggests that it is better to search for evidence to refute your impressions than to
-      look for supporting evidence. As xkcd has pointed out (<xref ref="xkcd-2012"/>), with enough options you have
+      look for supporting evidence. As xkcd has pointed out (<xref ref="xkcd-2012" text="custom">xkcd (2012)</xref>), with enough options you have
       a good chance of finding something that looks significant that is not. Checking develops your own trust in
       your conclusions and should help to convince others. There are several independent ways of checking features
       detected in graphics.
@@ -410,7 +410,7 @@
         sometimes particular values are never recorded (<xref ref="fig-histPrice"/>). Sometimes all the data have
         been rounded, so that a continuous measurement appears to be discrete. If you ask people what their height
         is they will report a rounded, possibly inaccurate number. Better data would be obtained by measuring
-        heights in a uniform way under identical conditions for all (<xref ref="student-1931"/>).
+        heights in a uniform way under identical conditions for all (<xref ref="student-1931" text="custom">Student (1931)</xref>).
       </p>
     </subsection>
 

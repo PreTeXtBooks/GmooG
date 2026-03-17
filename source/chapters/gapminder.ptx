@@ -9,14 +9,14 @@
 
   <p><em>Background</em> Hans Rosling and his Gapminder team have done excellent work in collecting and presenting data on developments in world health, country by country, over many years.</p>
   <p><em>Questions</em> How has life expectancy changed over time?  How do the patterns differ by countries?  How good are the data?</p>
-  <p><em>Sources</em> Gapminder website (<xref ref="rosling-2013"/>)</p>
+  <p><em>Sources</em> Gapminder website (<xref ref="rosling-2013" text="custom">Rosling (2013)</xref>)</p>
   <p><em>Structure</em> Life expectancy estimates for 187 countries from 1800 to 2016.  There are also forecasts up to 2100 giving 301 data points per country in all.</p>
 
   </introduction>
   <section xml:id="sec-gapm1">
     <title>Gapminder and Hans Rosling</title>
 
-    <p>The Gapminder Foundation that Hans Rosling and colleagues set up continues to collect and monitor global patterns of health.  Anyone who has seen a film of one of Rosling's talks (<xref ref="rosling-2009"/>), or was lucky enough to attend one, will remember his scatterplots animated over time.  One he used was of life expectancy at birth plotted against fertility rate.  The main patterns he described are clear and informative, emphasising the overall increases in life expectancy across all countries.  If life expectancy is examined over time on its own, there are additional features that Rosling did not have time to discuss, including some dramatic sharp drops and rises.</p>
+    <p>The Gapminder Foundation that Hans Rosling and colleagues set up continues to collect and monitor global patterns of health.  Anyone who has seen a film of one of Rosling's talks (<xref ref="rosling-2009" text="custom">Rosling (2009)</xref>), or was lucky enough to attend one, will remember his scatterplots animated over time.  One he used was of life expectancy at birth plotted against fertility rate.  The main patterns he described are clear and informative, emphasising the overall increases in life expectancy across all countries.  If life expectancy is examined over time on its own, there are additional features that Rosling did not have time to discuss, including some dramatic sharp drops and rises.</p>
 
     <figure xml:id="fig-leyr">
       <image source="images/LEyr-1.png">
@@ -34,7 +34,7 @@
       <caption><p>Life expectancy graphics: some sharp falls and rises marked (above), straight lines marked (below).</p></caption>
     </figure>
 
-    <p>The plot above picks out some of the falls and rises.  For certain countries in certain years it is well known that there were population disasters: the famine in Ukraine in 1932-33 and the Irish potato famine in the second half of the 1840s.  The Gapminder researchers endeavoured to estimate data for these and other catastrophic years using modelling techniques described in a paper published on their website (<xref ref="lindgren-2014"/>).  It is impressive that they went to so much trouble to deal with this issue, although, as they write themselves, they can only provide guesstimates.  It is important that they draw attention to catastrophes, it would be wrong to simply ignore them.  European readers may have heard of the Ukrainian famine in 1932-33 and the Irish famine in the late 1840s, but few will know of the plague in Tunisia in 1891 or of the measles epidemic in Fiji in 1875.</p>
+    <p>The plot above picks out some of the falls and rises.  For certain countries in certain years it is well known that there were population disasters: the famine in Ukraine in 1932-33 and the Irish potato famine in the second half of the 1840s.  The Gapminder researchers endeavoured to estimate data for these and other catastrophic years using modelling techniques described in a paper published on their website (<xref ref="lindgren-2014" text="custom">Lindgren (2014)</xref>).  It is impressive that they went to so much trouble to deal with this issue, although, as they write themselves, they can only provide guesstimates.  It is important that they draw attention to catastrophes, it would be wrong to simply ignore them.  European readers may have heard of the Ukrainian famine in 1932-33 and the Irish famine in the late 1840s, but few will know of the plague in Tunisia in 1891 or of the measles epidemic in Fiji in 1875.</p>
 
     <p>The straight lines highlighted in the lower plot imply that life expectancies for many countries were constant over the period.  That is highly unlikely!  What has happened is that a single value was estimated to cover many years, where no other information was available.  Although Rosling did not talk about this, the information is available in the Gapminder display under a button labelled "Data Doubts" at the foot of the plot to the right.</p>
   </section>
@@ -119,7 +119,7 @@
         <caption><p>Total populations for each of the four regions.</p></caption>
       </figure>
 
-      <p>Up till now the time series graphics in this chapter have treated each country displayed equally.  Gapminder itself (<xref ref="rosling-2013"/>) makes much use of bubble charts to additionally show the sizes of countries in its scatterplots.  That would not work well for time series, which is why Gapminder uses animation.  Two other approaches are possible.  Countries could be selected by population size or the data could be aggregated across regions using population data by year as weights.</p>
+      <p>Up till now the time series graphics in this chapter have treated each country displayed equally.  Gapminder itself (<xref ref="rosling-2013" text="custom">Rosling (2013)</xref>) makes much use of bubble charts to additionally show the sizes of countries in its scatterplots.  That would not work well for time series, which is why Gapminder uses animation.  Two other approaches are possible.  Countries could be selected by population size or the data could be aggregated across regions using population data by year as weights.</p>
 
       <p>The first approach is shown in <xref ref="fig-letop6"/>.  Life expectancies for the six countries with a population of over <m>200</m> million in 2016 are shown.</p>
 
@@ -166,7 +166,7 @@
   <section xml:id="sec-gapm6">
     <title>Discussion</title>
     <p>Gapminder offers a lot more data than has been studied here.  Graphics help bring the information out and help present it to others.  The time series plots in this chapter have analysed just one variable, life expectancy at birth.  If scatterplots are drawn, as Hans Rosling often did, and all the options available in the Gapminder software are used, two or more variables can be displayed.  Analyses can quickly get very complicated, which just shows that graphics can be more difficult to work with than might be expected.</p>
-    <p>In a study reported by <xref ref="tonnessen-2020"/>, eighteen-year old schoolchildren were observed using Gapminder to carry out tasks set by their teacher.  The researcher noticed several difficulties the participants faced, mostly because they did not have enough knowledge and experience of the software or with that kind of graphical display.  The assumption that graphics are easy to understand is an easy, if mistaken, one to make.</p>
+    <p>In a study reported by <xref ref="tonnessen-2020" text="custom">Tønnessen et al. (2020)</xref>, eighteen-year old schoolchildren were observed using Gapminder to carry out tasks set by their teacher.  The researcher noticed several difficulties the participants faced, mostly because they did not have enough knowledge and experience of the software or with that kind of graphical display.  The assumption that graphics are easy to understand is an easy, if mistaken, one to make.</p>
     <p><em>Answers</em> Life expectancy has improved dramatically, with some interruptions, over the last one hundred years, particularly for Western nations.  Other countries have caught up a lot, but still lag behind.  Data for the 19th century is incomplete and suspiciously constant.</p>
     <p><em>Further questions</em> Life expectancy is one of hundreds of indicators available from Gapminder, covering not only health, but education, environment and many other areas.  There is an unlimited number of investigations that could be carried out.</p>
 

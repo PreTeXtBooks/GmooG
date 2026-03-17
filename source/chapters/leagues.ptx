@@ -10,7 +10,7 @@
 
     <p><em>Background.</em> The English soccer league is the oldest in the world, the first season being 1888-89.</p>
     <p><em>Questions.</em> Are there more draws now than before? Has home advantage always been the same? Do teams score fewer goals now? Can we display team histories over years? How do teams perform over a season?</p>
-    <p><em>Sources.</em> The <em>engsoccerdata</em> package contains results for all English soccer games in the top four tiers from the 1888-89 season to the 2021-22 season (<xref ref="curley-2022"/>).</p>
+    <p><em>Sources.</em> The <em>engsoccerdata</em> package contains results for all English soccer games in the top four tiers from the 1888-89 season to the 2021-22 season (<xref ref="curley-2022" text="custom">Curley (2022)</xref>).</p>
     <p><em>Structure.</em> Results of games summarised in 12 variables.</p>
   </introduction>
 
@@ -19,7 +19,7 @@
 
     <p>The English league started out with one division of 12 teams in 1888 and quickly added another in 1892. After the First World War a third division started and this was doubled and split into North and South divisions one year later. In 1958 the two third divisions were combined and split into national third and fourth divisions. In 1992 the old first division became the Premier League and the other divisions also changed their names (and again later). For simplicity's sake this report, like the dataset, refers to the different levels as the four tiers. Seasons are denoted by the year they began, so 2021-22 is referred to as 2021.</p>
 
-    <p>Much information on the intricate details of football history can be found on the Wikipedia sites for individual league seasons. These have been very helpful for explaining how the league developed and for understanding various initially surprising features. The maintainer of the package, James Curley, has published several insightful articles on the 538 website using the dataset (<xref ref="curley-2016"/>).</p>
+    <p>Much information on the intricate details of football history can be found on the Wikipedia sites for individual league seasons. These have been very helpful for explaining how the league developed and for understanding various initially surprising features. The maintainer of the package, James Curley, has published several insightful articles on the 538 website using the dataset (<xref ref="curley-2016" text="custom">Curley (2016)</xref>).</p>
   </section>
 
   <section xml:id="secFootball2">
@@ -47,7 +47,7 @@
   <section xml:id="secFootball3">
     <title>How big is home advantage?</title>
 
-    <p>Home advantage is a common feature of team sports (<xref ref="gomez-2022"/>). One way to measure it is to consider the proportion of a team's points won at home. As the number of points awarded for a win was increased in 1981 from 2 to 3, the proportions before and after 1981 would not be comparable. <xref ref="fig-socHA"/> assumes that a win was always worth 3 points.</p>
+    <p>Home advantage is a common feature of team sports (<xref ref="gomez-2022" text="custom">Gómez-Ruano et al. (2022)</xref>). One way to measure it is to consider the proportion of a team's points won at home. As the number of points awarded for a win was increased in 1981 from 2 to 3, the proportions before and after 1981 would not be comparable. <xref ref="fig-socHA"/> assumes that a win was always worth 3 points.</p>
 
     <figure xml:id="fig-socHA">
       <caption>Proportions of points won at home over time in the various tiers of the English league.</caption>

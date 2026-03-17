@@ -9,7 +9,7 @@
 
     <p><em>Background.</em> The <em>diamonds</em> dataset from the R package <em>ggplot2</em> provides data on each of almost 54000 round diamonds that were offered for sale.</p>
     <p><em>Questions.</em> Do the data need cleaning? How are the individual variables distributed? Are there any special features?</p>
-    <p><em>Sources.</em> The data were originally scraped from the web in 2007 by Hadley Wickham (<xref ref="wickham-2007"/>) and he made them available in his R package <em>ggplot2</em>. Many of the results in this chapter were found and written up by him then in an article that was rejected by a journal that should have known better.</p>
+    <p><em>Sources.</em> The data were originally scraped from the web in 2007 by Hadley Wickham (<xref ref="wickham-2007" text="custom">Wickham (2007)</xref>) and he made them available in his R package <em>ggplot2</em>. Many of the results in this chapter were found and written up by him then in an article that was rejected by a journal that should have known better.</p>
     <p><em>Structure.</em> The dataset covers 53940 round diamonds with information on price, dimensions, and quality.</p>
   </introduction>
 

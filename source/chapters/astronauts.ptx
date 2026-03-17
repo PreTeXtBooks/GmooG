@@ -6,14 +6,14 @@
     <p><q>The sky's the limit.</q> (Idiom)</p>
     <p><em>Background.</em> Human space travel has captured the world's attention since the first spaceflight by Yuri Gagarin in April 1961.</p>
     <p><em>Questions.</em> How many men and women have gone up in space? How long were they in space? Which countries did they come from?</p>
-    <p><em>Sources.</em> <xref ref="tidyt-2020b"/></p>
+    <p><em>Sources.</em> <xref ref="tidyt-2020b" text="custom">rfordatascience (2020b)</xref></p>
     <p><em>Structure.</em> 1277 records each of 24 variables.</p>
   </introduction>
 
   <section xml:id="secAstro1">
     <title>What human spaceflights have there been?</title>
 
-    <p>The Tidytuesday project includes a collection of interesting datasets, adding a new one each week (<xref ref="tidyt-2020a"/>). The one uploaded in July 2020 (<xref ref="tidyt-2020b"/>) contained information on manned spaceflights up to the end of 2019. Each flight by each person is a separate record, making 1277 in all. Several flew more than once and there are 565 different people in the dataset. Two Americans, Jerry Ross and Franklin Chiang-Diaz, each flew seven times. There is demographic information on the individuals (sex, year of birth, nationality) and some information on the missions (title, year, spacecraft used, length of mission).</p>
+    <p>The Tidytuesday project includes a collection of interesting datasets, adding a new one each week (<xref ref="tidyt-2020a" text="custom">rfordatascience (2020a)</xref>). The one uploaded in July 2020 (<xref ref="tidyt-2020b" text="custom">rfordatascience (2020b)</xref>) contained information on manned spaceflights up to the end of 2019. Each flight by each person is a separate record, making 1277 in all. Several flew more than once and there are 565 different people in the dataset. Two Americans, Jerry Ross and Franklin Chiang-Diaz, each flew seven times. There is demographic information on the individuals (sex, year of birth, nationality) and some information on the missions (title, year, spacecraft used, length of mission).</p>
 
     <p>Human spaceflight may be defined as a human reaching outer space by going beyond 100 km from the earth. The Challenger mission of 1986 that ended in disaster did not get that far, but is included in the dataset. The non-fatal Soyuz mission of September 1983 when the launch vehicle caught fire before launching is not included.</p>
 
@@ -88,7 +88,7 @@
 
     <p>Sadly, Challenger was not the only disaster. The Space Shuttle Columbia disintegrated on re-entering the atmosphere in early 2003. The dataset ascribes (almost) the same time to the seven on board, but the variable <c>in_orbit</c> is recorded as &#x201c;Exploded&#x201d; for only three of them.</p>
 
-    <p>The other lowish value in 1986 was for Bill Nelson, who was on Columbia's STS-61-C mission. He was given a time of 6.03 hours, whereas five other crew members were given times of 146 hours, and one of 74 hours. Bill Nelson's Wikipedia page (<xref ref="wikiBN-2020"/>) said he was in space for 6d 02h 03m, so perhaps the error was a result of inaccurate webscraping. There are also three lowish values in 2005 and 2008. These were the first Chinese flights. Wikipedia records the first as having taken place in 2003.</p>
+    <p>The other lowish value in 1986 was for Bill Nelson, who was on Columbia's STS-61-C mission. He was given a time of 6.03 hours, whereas five other crew members were given times of 146 hours, and one of 74 hours. Bill Nelson's Wikipedia page (<xref ref="wikiBN-2020" text="custom">Wikipedia (2020b)</xref>) said he was in space for 6d 02h 03m, so perhaps the error was a result of inaccurate webscraping. There are also three lowish values in 2005 and 2008. These were the first Chinese flights. Wikipedia records the first as having taken place in 2003.</p>
 
     <p>Nationality is another factor to consider. Forty nationalities are included in all, but U.S. and U.S.S.R./Russia nationalities account for most of the participants, so a new variable has been created for these two with the rest categorised as &#x2018;Other&#x2019;. Plotting all the cases coloured by the new variable leads to some overplotting, so faceting has been used in <xref ref="fig-flightn"/>. The whole dataset has been plotted first in grey and the groups coloured and plotted on top (ghostplotting). The Russians were first with longer flights, while the Americans took part in many more shorter flights in the 1980s and 1990s. Other nationalities flew for the first time at the tail end of the 1970s and had more short flights.</p>
 
@@ -115,7 +115,7 @@
 
     <p>Ideally, all typos and errors should be corrected. The very first line of the dataset raises concern. Yuri Gagarin, who went up in space in April 1961, cannot have gone up in Vostock 1, been in orbit in Vostock 2, and come down in Vostock 3! It is said of John Hartigan, that when he discussed datasets at Yale seminars, he might take 20 minutes to examine the first line. This dataset is an example of why that approach can be valuable.</p>
 
-    <p>It would be informative to use exact flight dates, not just the years, and the dates are available on the Wikipedia page for human spaceflights (<xref ref="wikiSp-2020"/>). The dataset illustrates some of the issues that can arise with datasets that are made publicly available and how graphics can help to identify and deal with them. It also shows that even when there may be individual data problems, a dataset can still reveal much interesting information.</p>
+    <p>It would be informative to use exact flight dates, not just the years, and the dates are available on the Wikipedia page for human spaceflights (<xref ref="wikiSp-2020" text="custom">Wikipedia (2020c)</xref>). The dataset illustrates some of the issues that can arise with datasets that are made publicly available and how graphics can help to identify and deal with them. It also shows that even when there may be individual data problems, a dataset can still reveal much interesting information.</p>
 
     <p><em>Answers.</em> Many more men than women have gone up in space and the men have been older. Initial flights were short. Since the space station programmes began, people have stayed much longer in space. Most have been Russians or Americans, but this is changing.</p>
     <p><em>Further questions.</em> How many spaceflights have individuals made? Are there differences between U.S.S.R./Russians and Americans?</p>

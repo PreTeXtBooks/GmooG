@@ -7,18 +7,18 @@
       <p>"One can't be angry when one looks at a penguin."</p>
       <p>--- John Ruskin</p>
     </blockquote>
-    <p><em>Background.</em> The Long Term Ecological Research Network (LTER) (<xref ref="ltern-2022"/>) carries out research at Palmer station, Antarctica. Their work includes studying different species of penguins on islands in the Palmer Archipelago.</p>
+    <p><em>Background.</em> The Long Term Ecological Research Network (LTER) (<xref ref="ltern-2022" text="custom">National Science Foundation (2022)</xref>) carries out research at Palmer station, Antarctica. Their work includes studying different species of penguins on islands in the Palmer Archipelago.</p>
     <p><em>Questions.</em> How do the species differ? How do the penguin populations on the three islands studied differ?</p>
-    <p><em>Sources.</em> <xref ref="horst-2020"/></p>
+    <p><em>Sources.</em> <xref ref="horst-2020" text="custom">Horst et al. (2020)</xref></p>
     <p><em>Structure.</em> One raw dataset of 344 penguins with 17 variables and one cleaned dataset with 8 variables.</p>
   </introduction>
 
   <section xml:id="sec-palmer-overview">
     <title>Getting an overview of the penguin data</title>
 
-    <p>A good example of the LTER research can be found in <xref ref="gorman-2014"/>. Some of the data have been made available in the <c>palmerpenguins</c> R package, primarily size measurements and isotopic signature information for three species of penguin: Adélie, Chinstrap, and Gentoo. Colour information is not included, but Gentoo penguins have a distinctive orange bill and white marking above the eyes, while Chinstrap penguins have a narrow black chinstrap. Attractive drawings of the three species are shown on the <c>palmerpenguins</c> package webpage.</p>
+    <p>A good example of the LTER research can be found in <xref ref="gorman-2014" text="custom">Gorman et al. (2014)</xref>. Some of the data have been made available in the <c>palmerpenguins</c> R package, primarily size measurements and isotopic signature information for three species of penguin: Adélie, Chinstrap, and Gentoo. Colour information is not included, but Gentoo penguins have a distinctive orange bill and white marking above the eyes, while Chinstrap penguins have a narrow black chinstrap. Attractive drawings of the three species are shown on the <c>palmerpenguins</c> package webpage.</p>
 
-    <p>The Palmer Archipelago lies to the West of the Antarctic Peninsula, where warming linked to climate change has occurred very fast. According to <xref ref="fountain-2022"/> this is bad for Adélie penguins that do better to the East in the Weddell Sea where it is still cold. Gentoo penguins are not so affected.</p>
+    <p>The Palmer Archipelago lies to the West of the Antarctic Peninsula, where warming linked to climate change has occurred very fast. According to <xref ref="fountain-2022" text="custom">Fountain (2022)</xref> this is bad for Adélie penguins that do better to the East in the Weddell Sea where it is still cold. Gentoo penguins are not so affected.</p>
 
     <p><xref ref="fig-palens0"/> shows four plots of the dataset. There are barcharts for the three species and the three islands, a histogram of penguin body mass, and a scatterplot of flipper length against body mass.</p>
 
@@ -33,7 +33,7 @@
 
     <p>Different subsets can be selected and highlighted to look for patterns. <xref ref="fig-palens1"/> and <xref ref="fig-palens2"/> show examples of selecting a species or an island across these plots. Gentoo penguins were only sampled on Biscoe Island, and they are generally heavier with longer flippers than the other two species. Dream Island has all the Chinstrap penguins and some Adélie penguins. The penguins on Dream Island have smaller body mass and flipper length.</p>
 
-    <p>The penguins in this dataset were nesting pairs that had at least one egg. The sampling procedure is described in <xref ref="gorman-2014"/>. Detailed information on estimated total penguin numbers at Antarctic sites over the years is available on the MAPPPD website described in <xref ref="humphries-2017"/>.</p>
+    <p>The penguins in this dataset were nesting pairs that had at least one egg. The sampling procedure is described in <xref ref="gorman-2014" text="custom">Gorman et al. (2014)</xref>. Detailed information on estimated total penguin numbers at Antarctic sites over the years is available on the MAPPPD website described in <xref ref="humphries-2017" text="custom">Humphries et al. (2017)</xref>.</p>
 
     <figure xml:id="fig-palens1">
       <image source="images/PalEns1-1.png">

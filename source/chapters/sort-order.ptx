@@ -27,7 +27,7 @@
       <title>Cases</title>
       <p>
         Datasets can be sorted and ordered in many ways. The cases in the <em>astronauts</em> dataset on space
-        travel (<xref ref="tidyt-2020b"/>) could be sorted into groups by nationality or sex. They could be
+        travel (<xref ref="tidyt-2020b" text="custom">rfordatascience (2020b)</xref>) could be sorted into groups by nationality or sex. They could be
         ordered by year of mission or by year of birth. They could be sorted and ordered by combinations of these
         variables, for instance, by year of birth within nationality. Grouping and ordering datasets often reveals
         structures that default orders&#8212;whether lexicographic, temporal or random&#8212;may not. Ordering and
@@ -78,7 +78,7 @@
         default. This has its advantages (it is easy to find a category in the table) and its disadvantages
         (categories with names early in the alphabet get more attention, categories you would like to compare may
         be far apart). Wainer calls this the &#8220;Alabama first&#8221; issue, as Alabama comes first
-        alphabetically amongst the US States (<xref ref="Wainer-1997"/>). Categories may be ordered by counts, by
+        alphabetically amongst the US States (<xref ref="Wainer-1997" text="custom">Wainer (1997)</xref>). Categories may be ordered by counts, by
         weights, by proportions, by summary statistics on other variables. Comparisons for whatever statistic you
         order by become easier. Bars far apart must be different and you can tell which bars that are close
         together have higher or lower values by the order. More complex sortings, say countries within continents,
@@ -183,7 +183,7 @@
         Boxplots are handy for summarising decathlon data. Each competitor competes in ten track and field events.
         The results are converted to a points system to make them comparable and the winner is the person with the
         most points. <xref ref="fig-decbox1"/> shows the points scores for the 116 top-ranked decathletes
-        in April 2021 (<xref ref="estDecath-2021"/>).
+        in April 2021 (<xref ref="estDecath-2021" text="custom">WA (2021)</xref>).
       </p>
 
       <figure xml:id="fig-decbox1">
@@ -260,7 +260,7 @@
         Mosaicplots offer a variety of ways of displaying multivariate categorical data. Both the order of the
         variables and the orders of the levels of the individual variables can have a big influence, as can the
         choice of mosaicplot form and whether variables are plotted horizontally or vertically
-        (<xref ref="hofmann-2008"/>).
+        (<xref ref="hofmann-2008" text="custom">Hofmann et al. (2008)</xref>).
       </p>
       <p>
         There are two mosaicplots in <xref ref="ch-titanic"/> about the sinking of the Titanic, <xref ref="fig-titancrew"/> and <xref ref="fig-titanpass"/>, shown again in <xref ref="fig-titanboth"/>. In
@@ -367,7 +367,7 @@
         variables, are affected by several orderings: the order of the variable axes across the plot, the orders
         of the levels of categorical variables, the orders of the cases within category levels, and the order of
         the cases in the dataset (as this determines the order the lines are drawn). The ggpcp package offers
-        tools for including categorical variables in parallel coordinate plots (<xref ref="hofmann-2022"/>). Its
+        tools for including categorical variables in parallel coordinate plots (<xref ref="hofmann-2022" text="custom">Hofmann et al. (2022)</xref>). Its
         key innovations are to draw each case individually and to order the cases within categories. These reduce
         the numbers of line crossings, make the display more readable, and make it possible to follow individual
         cases across the display.
@@ -425,7 +425,7 @@
       informative a first arrangement appears.
     </p>
     <p>
-      Small multiples, named and popularised in <xref ref="Tufte-2001ip"/>, are displays of many graphics of the
+      Small multiples, named and popularised in <xref ref="Tufte-2001ip" text="custom">Tufte (2001)</xref>, are displays of many graphics of the
       same type and may have a natural order. The boxplots of chess rankings by age in <xref ref="fig-ratAge15b"/> are one
       example. Often there will be no such natural order, for instance in ordering variables in a scatterplot
       matrix. Grouping variables by type may be effective, as in <xref ref="secDiam2"/>, where two scatterplot

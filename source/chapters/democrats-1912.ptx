@@ -10,7 +10,7 @@
 
     <p><em>Background.</em> In 1912 the battle for the Democratic Presidential nomination was particularly fierce.  Woodrow Wilson finally won on the 46th ballot.</p>
     <p><em>Questions.</em> How did the support for the various candidates change during the voting?  When were the crucial moments?</p>
-    <p><em>Sources.</em> <xref ref="woodson-1912"/></p>
+    <p><em>Sources.</em> <xref ref="woodson-1912" text="custom">Woodson (1912)</xref></p>
     <p><em>Structure.</em> The number of votes received by each candidate from each state in each ballot (3839 observations of 4 variables).</p>
   </introduction>
 
@@ -74,7 +74,7 @@
   <section xml:id="sec1912Dem3">
     <title>How the nomination contest unfolded</title>
     <p>In 1912 the Republicans held their convention first and the party was torn apart by the dispute between the supporters of a previous President, Theodore Roosevelt, and the then President, William Howard Taft.  Roosevelt started a new party after the convention and it was expected that splitting the Republican vote would lead to the Democrats' winning the election.  The Republicans and former Republicans together got 7.6 million votes in the election, while the Democrats won only 6.3 million votes, but they won 40 of the 48 states and swept the Electoral College.</p>
-    <p>There is a good chapter on the 1912 Democratic convention in the first volume of Link's biography of Woodrow Wilson (<xref ref="link-1947"/>).  The main source for the analysis here is the official report on the convention (<xref ref="woodson-1912"/>) that includes all the counts in detail.</p>
+    <p>There is a good chapter on the 1912 Democratic convention in the first volume of Link's biography of Woodrow Wilson (<xref ref="link-1947" text="custom">Link (1947)</xref>).  The main source for the analysis here is the official report on the convention (<xref ref="woodson-1912" text="custom">Woodson (1912)</xref>) that includes all the counts in detail.</p>
 
     <figure xml:id="fig-candvs2">
       <image source="images/candvs2-1.png">
@@ -133,7 +133,7 @@
 
   <section xml:id="sec1912Dem4">
     <title>When did the ballots actually take place?</title>
-    <p>Using the ballot number as a measure of time is an approximation of what actually happened.  The first ballot took place on the morning of Friday, 28 June, and the last ballot took place on the afternoon of Tuesday, 2 July.  The official report of the convention (<xref ref="woodson-1912"/>) does not record when exactly ballots were taken, but does record to the minute when the convention was adjourned and when it restarted.  Making the assumption that each ballot took about the same time, and adding extra time for special polling of individual states and speeches, gives <xref ref="fig-convt"/>.</p>
+    <p>Using the ballot number as a measure of time is an approximation of what actually happened.  The first ballot took place on the morning of Friday, 28 June, and the last ballot took place on the afternoon of Tuesday, 2 July.  The official report of the convention (<xref ref="woodson-1912" text="custom">Woodson (1912)</xref>) does not record when exactly ballots were taken, but does record to the minute when the convention was adjourned and when it restarted.  Making the assumption that each ballot took about the same time, and adding extra time for special polling of individual states and speeches, gives <xref ref="fig-convt"/>.</p>
 
     <figure xml:id="fig-convt">
       <image source="images/convt-1.png">

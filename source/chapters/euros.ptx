@@ -9,7 +9,7 @@
 
     <p><em>Background.</em> The European Football Championship takes place every four years and has gradually grown in importance since 1960, when only four teams reached the finals.</p>
     <p><em>Questions.</em> Do European international football players play their league football in their own country? How has this changed over the years?</p>
-    <p><em>Sources.</em> <xref ref="abel-2021"/></p>
+    <p><em>Sources.</em> <xref ref="abel-2021" text="custom">Abel (2021)</xref></p>
     <p><em>Structure.</em> There are 4012 players included with 21 variables.</p>
   </introduction>
 
@@ -53,7 +53,7 @@
       </image>
     </figure>
 
-    <p>The 2020 competition was delayed until 2021 because of the Covid pandemic. <xref ref="abel-2021"/> constructed a website of all the players who ever took part and drew chord diagrams to show the relationships between the nationalities of the players and the countries they played in at club level. Here barcharts are drawn to display the data for Euro 2020.</p>
+    <p>The 2020 competition was delayed until 2021 because of the Covid pandemic. <xref ref="abel-2021" text="custom">Abel (2021)</xref> constructed a website of all the players who ever took part and drew chord diagrams to show the relationships between the nationalities of the players and the countries they played in at club level. Here barcharts are drawn to display the data for Euro 2020.</p>
 
     <figure xml:id="fig-uefa20L">
       <caption>Numbers of Euro 2020 players playing in the different European leagues.</caption>

@@ -11,7 +11,7 @@
     <p>
       <em>Questions.</em> Are cars more fuel efficient than in the past? Which cars use the most fuel and which the least? How have the available models changed over time? How has fuel efficiency changed over time for particular models?
     </p>
-    <p><em>Sources.</em> <xref ref="epa-2021"/></p>
+    <p><em>Sources.</em> <xref ref="epa-2021" text="custom">Environmental Protection Agency (2021)</xref></p>
     <p>
       <em>Structure.</em> A dataset with 43516 cases and 83 variables covering vehicles introduced in the years from 1984 to 2021.
     </p>

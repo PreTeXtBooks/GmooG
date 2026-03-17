@@ -8,14 +8,14 @@
       <p>--- Humphrey Bogart to Ingrid Bergman in <em>Casablanca</em></p>
     </blockquote>
     <p>
-      <em>Background.</em> <xref ref="buol-2018"/> is an important paper studying how well three facial recognition softwares
+      <em>Background.</em> <xref ref="buol-2018" text="custom">Buolamwini and Gebru (2018)</xref> is an important paper studying how well three facial recognition softwares
       performed in identifying people with different skin shades.
     </p>
     <p>
       <em>Questions.</em> How do the error rates vary by sex and skin colour? Are the error rates and patterns
       similar for the three softwares?
     </p>
-    <p><em>Sources.</em> <xref ref="buol-2018"/></p>
+    <p><em>Sources.</em> <xref ref="buol-2018" text="custom">Buolamwini and Gebru (2018)</xref></p>
     <p>
       <em>Structure.</em> Prediction numbers for three software packages predicting for sex across 1270 individuals
       with six different skin shades.
@@ -135,7 +135,7 @@
 
     <p>
       There are a number of other criteria that could be plotted and it is astonishing just how many there are,
-      including TPR, TNR, FPR, FNR, SPC, ACC, FOR, DOR, NPV (<xref ref="PPV-2021"/>). The ones shown seem quite sufficient
+      including TPR, TNR, FPR, FNR, SPC, ACC, FOR, DOR, NPV (<xref ref="PPV-2021" text="custom">Wikipedia (2021)</xref>). The ones shown seem quite sufficient
       and the error rates show clearly that the three software systems are not good enough. The analysis also
       shows where their weaknesses lie, with the highest error rates being for dark-skinned females.
     </p>

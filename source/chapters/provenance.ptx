@@ -25,7 +25,7 @@
       its origins and history having been fully authenticated&#8212;whether anyone likes it or not. Other subject
       areas have taken over the term and the provenance of datasets is talked about now too: their origin and
       source, the people and organisations involved, how the data were collected, their reliability and quality,
-      and how they have been processed and used (cf. <xref ref="meng-2021"/>). This has become more important as the ease with
+      and how they have been processed and used (cf. <xref ref="meng-2021" text="custom">Meng (2021)</xref>). This has become more important as the ease with
       which data can be shared has increased. Lee Wilkinson told me that he included Anderson's iris dataset with
       his Systat software in the early 1980s by copying it in by hand. Forty years on, hugely larger datasets can
       be transferred across the web with a single click.
@@ -35,7 +35,7 @@
       Provenance is about establishing a dataset's credibility and is an essential support for being able to
       reproduce results of others. Datasets do not emerge fully formed as they are collected. Checks are carried
       out, corrections made, various weightings and transformations are applied, some data and variables may be
-      dropped and derived variables added. <xref ref="hueb-2020"/> describes a review of how Initial Data Analysis (IDA) was
+      dropped and derived variables added. <xref ref="hueb-2020" text="custom">Huebner et al. (2020)</xref> describes a review of how Initial Data Analysis (IDA) was
       reported in 25 observational medical studies published by five medical journals in 2018. Their conclusion
       was that reporting of IDA was sparse and unsystematic. The PISA studies comparing the performance of school
       children in different countries are a different example. Complex weighting schemes are used to reflect the
@@ -53,7 +53,7 @@
     </p>
 
     <p>
-      <xref ref="stigler-2019"/> discusses the importance of investigating the source and processing of classical datasets. A
+      <xref ref="stigler-2019" text="custom">Stigler (2019)</xref> discusses the importance of investigating the source and processing of classical datasets. A
       classical dataset in his definition is one that "has been collected for some scientific or commercial purpose,
       and has been employed for instruction or exposition by several people". There are a few used in this book and
       the pre-checking carried out is described below. For around half the book's datasets users can download newer
@@ -63,7 +63,7 @@
 
     <p>
       As an example of datasets collated and offered by public institutions, there is a valuable collection of
-      demographic data by country available on the Human Mortality database (<xref ref="mpidr-2022"/>). Data are provided for
+      demographic data by country available on the Human Mortality database (<xref ref="mpidr-2022" text="custom">University of California et al. (2022)</xref>). Data are provided for
       many countries for many years, there are comments on the likely quality of the data for particular
       country-year combinations and corresponding advice to use with care. The Gapminder Foundation provides
       extensive data on many different countries over the years. For the life expectancy data used in <xref ref="ch-gapminder"/>
@@ -141,11 +141,11 @@
         actual estimate up to speeds of 100 km/hr and 3% is subtracted from higher speeds.
       </p>
       <p>
-        Results in clinical trials can be complicated by unexpected events (<xref ref="sackett-1979"/>). If someone in the
+        Results in clinical trials can be complicated by unexpected events (<xref ref="sackett-1979" text="custom">Sackett and Gent (1979)</xref>). If someone in the
         treatment arm of a trial for heart disease is run over by a bus, is that anything to do with the trial?
       </p>
       <p>
-        How questions are asked can influence answers to surveys (e.g., <xref ref="thau-2021"/> and several of the papers cited
+        How questions are asked can influence answers to surveys (e.g., <xref ref="thau-2021" text="custom">Thau et al. (2021)</xref> and several of the papers cited
         in it). In one of the episodes of the BBC comedy programme "Yes, Prime Minister", the civil servant, Sir
         Humphrey Appleby gave an example of how opinion poll questions and their order may affect results (and can
         be found on YouTube by searching for "yes prime minister opinion polls").
@@ -182,8 +182,8 @@
       <p>
         Knowing why, how, and by whom datasets were collected is a key part of their value. Sources and contexts
         should be included in supporting information and reviewed. Standards have become better in general in this
-        regard with Kevin Wright's R package <em>agridat</em> (<xref ref="wright-2022"/>) and Jeremy Singer-Vine's Data is
-        Plural collection (<xref ref="singervine-2020"/>) being positive examples. Yet there is always room for improvement.
+        regard with Kevin Wright's R package <em>agridat</em> (<xref ref="wright-2022" text="custom">Wright (2022)</xref>) and Jeremy Singer-Vine's Data is
+        Plural collection (<xref ref="singervine-2020" text="custom">Singer-Vine (2020)</xref>) being positive examples. Yet there is always room for improvement.
       </p>
     </subsection>
   </section>
@@ -204,7 +204,7 @@
     <subsection xml:id="sec-prov-gapminder">
       <title>Gapminder (<xref ref="ch-gapminder"/>)</title>
       <p>
-        The Gapminder website (<xref ref="rosling-2013"/>) provides substantial amounts of data on countries around the world
+        The Gapminder website (<xref ref="rosling-2013" text="custom">Rosling (2013)</xref>) provides substantial amounts of data on countries around the world
         and gives extensive information on the sources of the data and on what data cleaning has been carried out.
         Standards of data collection vary by country and over time and this has to be kept in mind in any
         comparison of countries.
@@ -214,7 +214,7 @@
     <subsection xml:id="sec-prov-movies">
       <title>Movies (<xref ref="ch-movies"/>)</title>
       <p>
-        The movies dataset was downloaded from the IMDb website (<xref ref="imdb-2022"/>). Two of the files, one with runtimes
+        The movies dataset was downloaded from the IMDb website (<xref ref="imdb-2022" text="custom">IMDb (2022)</xref>). Two of the files, one with runtimes
         and one with average viewer ratings, were merged. Only the categories "movie" and "short" were kept and
         only items which had over 100 ratings. As of the beginning of July 2022 these measures reduced the total
         number of items in the dataset from just over 9 million to just under 125,000. The database is continually
@@ -258,10 +258,10 @@
         They generally involved timing the passage of light between mirrors a large distance apart. Individual
         readings were made a number of times over several days. One set of 100 readings reported by Michelson has
         frequently been used as an example in Statistics since Stigler included the data in his 1977 paper on
-        robustness (<xref ref="stigler-1977"/>). The data are usually assumed to have been collected under similar conditions
+        robustness (<xref ref="stigler-1977" text="custom">Stigler (1977)</xref>). The data are usually assumed to have been collected under similar conditions
         and are described as being five sets of 20 readings. In fact, the splitting into five was an artefact
         introduced by Stigler for testing purposes, as his article clearly states. Michelson's original paper
-        (<xref ref="michelson-1880"/>) gives an exhaustive description of his procedures and lists a number of changes and
+        (<xref ref="michelson-1880" text="custom">Michelson (1880)</xref>) gives an exhaustive description of his procedures and lists a number of changes and
         alterations to the experiment that were made over the 100 experiments. Amongst other things he records
         when the readings were taken and by whom. Treating the data as i.i.d. is statistically attractive, but
         inappropriate in practice.
@@ -342,7 +342,7 @@
         as numeric.
       </p>
       <p>
-        Country population data for 2019 was taken from the World Bank (<xref ref="wb-2020"/>). Unfortunately, the three
+        Country population data for 2019 was taken from the World Bank (<xref ref="wb-2020" text="custom">Worldbank (2020)</xref>). Unfortunately, the three
         letter country codes used by FIDE and the World Bank are not always the same. After joining the datasets
         by code and then, for the rest, by name, little further editing was needed. For some sporting purposes,
         including chess, the United Kingdom splits into three countries (England, Scotland, Wales) and Northern
@@ -354,7 +354,7 @@
     <subsection xml:id="sec-prov-gayrights">
       <title>Attitudes to same-sex marriage (<xref ref="ch-gay-rights"/>)</title>
       <p>
-        One of the datasets analysed in <xref ref="gelman-2020"/> concerns how people in the United States responded to
+        One of the datasets analysed in <xref ref="gelman-2020" text="custom">Gelman et al. (2020)</xref> concerns how people in the United States responded to
         questions on same-sex marriage. The book only looked at the issue of support for a law at state level, but
         a question was also asked in the survey on whether a constitutional ban at federal level should be
         introduced. The answers were different. One explanation could have been that the questions were asked in
@@ -362,7 +362,7 @@
         more information. Only one third of the sample were asked the state question and there were slightly
         different versions of both questions asked at different periods during the survey. More relevantly, the
         state question was phrased so that "Strongly favor" meant for same-sex marriage, while the federal
-        question was the other way round. This had a curious side effect. The authors of <xref ref="gelman-2020"/> simplified
+        question was the other way round. This had a curious side effect. The authors of <xref ref="gelman-2020" text="custom">Gelman et al. (2020)</xref> simplified
         the responses to "yes" (in favour) or "no" (against), and classified those who responded otherwise as
         "no". This had different implications for the questions at federal and state levels. Fortunately, the
         overall effect was small, as respondents tended to have strong views one way or the other, so the
@@ -389,8 +389,8 @@
       <title>Human spaceflights (<xref ref="ch-astronauts"/>)</title>
       <p>
         This is an intriguing dataset with plenty of striking information. It was scraped from a number of sites
-        on the web as part of a study of data available on the health of space travellers (<xref ref="corlett-2020"/>). Others
-        then made a version of it available on the Tidy Tuesday project (<xref ref="tidyt-2020b"/>). There are a number of
+        on the web as part of a study of data available on the health of space travellers (<xref ref="corlett-2020" text="custom">Corlett et al. (2020)</xref>). Others
+        then made a version of it available on the Tidy Tuesday project (<xref ref="tidyt-2020b" text="custom">rfordatascience (2020b)</xref>). There are a number of
         inconsistencies and errors in this version and it is not obvious where they arose. There is plenty of
         interesting information, but careful checking is needed, as described in the chapter.
       </p>
@@ -421,7 +421,7 @@
       <title>Electric car charging (<xref ref="ch-electric-cars"/>)</title>
       <p>
         There is much interest in electric cars and how people use charging stations. The researchers wrote that
-        they had an initial period of three months for testing before analysis (<xref ref="asensio-2021a"/>). This would be
+        they had an initial period of three months for testing before analysis (<xref ref="asensio-2021a" text="custom">Asensio et al. (2021a)</xref>). This would be
         partly to let drivers acclimatise themselves to the new possibilities. However, as Figure
         <xref ref="fig-elecStat2"/> shows, redrawn as <xref ref="fig-elecstat2x"/> here, over half the
         locations had no charging stations in the test period and there had been little use of some of the others
@@ -487,15 +487,15 @@
     <subsection xml:id="sec-prov-shearwaters">
       <title>Shearwaters (<xref ref="ch-shears"/>)</title>
       <p>
-        This dataset was used in <xref ref="bouveyron-2019"/> to illustrate model-based clustering. The description says it
+        This dataset was used in <xref ref="bouveyron-2019" text="custom">Bouveyron et al. (2019)</xref> to illustrate model-based clustering. The description says it
         concerns two types of puffin, <em>Puffinus lherminieri</em> and <em>Puffinus subalaris</em>. However,
         these are both types of shearwater, a quite different bird from a puffin. The first is known as Audubon's
-        shearwater and the second as the Gal&#225;pagos shearwater. Surprisingly, <xref ref="bouveyron-2019"/> labelled the
+        shearwater and the second as the Gal&#225;pagos shearwater. Surprisingly, <xref ref="bouveyron-2019" text="custom">Bouveyron et al. (2019)</xref> labelled the
         birds as <em>Borealis</em> and <em>Diomedea</em> in one of their graphics, i.e. Cory's shearwater and
         Scopoli's shearwater.
       </p>
       <p>
-        The dataset has also been used as an example in <xref ref="giordani-2020"/>. It uses a version of the dataset called
+        The dataset has also been used as an example in <xref ref="giordani-2020" text="custom">Giordani et al. (2020)</xref>. It uses a version of the dataset called
         <em>birds</em>, published in the R package <em>Rmixmod</em>, in which all values of <c>collar</c> that
         are not equal to "none" are given the value "dotted". The class variable is missing but the authors
         assume, correctly as it turns out, that the <em>Puffinus lherminieri</em> cases all come first. There is
@@ -517,7 +517,7 @@
         and visualised very often. The dataset is included in many R packages under different names. Some of these
         datasets have more data, some less, and many provide insufficient information about the origin of their
         data, although most are probably based on the report of the British Board of Trade in 1912. The best
-        modern source appears to be <xref ref="titanic-2021"/>. It has coordinated the efforts of many individuals and has
+        modern source appears to be <xref ref="titanic-2021" text="custom">Encyclopedia Titanica (2021)</xref>. It has coordinated the efforts of many individuals and has
         steadily added to the information available on the sad fate of the Titanic. In particular, the knowledge
         of which departments individual crew members belonged to has improved (leading to Figure
         <xref ref="fig-titancrew"/>), as has knowledge of the ages of the crew and passengers (leading to Figure
@@ -559,7 +559,7 @@ Datasets can be invented, simulated or real. Invented datasets were very common 
       datasets, be they missing values, outliers, inconsistencies, errors or whatever. More importantly, there is
       no way to use context or additional data to check features discovered in simulated data. Simulated datasets
       are used in graphical inference to produce line-ups for checking whether a particular graphic display from a
-      real dataset could reasonably be said to have the feature identified (<xref ref="wickham-2011"/>). This is an interesting
+      real dataset could reasonably be said to have the feature identified (<xref ref="wickham-2011" text="custom">Wickham et al. (2011)</xref>). This is an interesting
       theoretical approach, requiring users to compare groups of similar graphics looking for one that may be
       different.
     </p>
@@ -586,8 +586,8 @@ Datasets can be invented, simulated or real. Invented datasets were very common 
       One of the most famous experiments in physics was Millikan's oil drop experiment to determine the charge on
       an electron. Millikan carried out his experiments before the First World War and according to his notebooks
       did not report all his results, excluding those where he believed the experiments to have been flawed in
-      some way (<xref ref="holton-1978"/>). At around the same time, Ehrenhaft carried out experiments with the same aim and,
-      in contrast to Millikan, found a broad range of electron charges (<xref ref="ehrenhaft-1910"/>). Ehrenhaft apparently
+      some way (<xref ref="holton-1978" text="custom">Holton (1978)</xref>). At around the same time, Ehrenhaft carried out experiments with the same aim and,
+      in contrast to Millikan, found a broad range of electron charges (<xref ref="ehrenhaft-1910" text="custom">Ehrenhaft (1910)</xref>). Ehrenhaft apparently
       reported all his experimental results, but scientific opinion sided with Millikan. Not all data are equal
       and you cannot treat all data equally.
     </p>
