@@ -408,7 +408,8 @@
       certain individual seats than in other similar ones?
     </p>
 
-    <p><em>Graphical takeaways</em></p>
+    <subsection>
+     <title>Graphical takeaways</title>
       <ul>
         <li><p>UpAndDown plots show relative and absolute changes in the same plot. (<xref ref="fig-btw3"/>)</p></li>
         <li><p>Draw smaller groups last if colour is used and there is overplotting. (<xref ref="fig-btwgpop"/>, <xref ref="fig-btwafdfor"/>, and <xref ref="fig-btwccar"/>)</p></li>
