@@ -146,14 +146,15 @@
   
     <p><em>Answers.</em> Many ballots took place without any change in support for the various candidates.  There were up to six critical points that determined the result.</p>
     <p><em>Further questions.</em> Which states voted as one during the convention?  In which other years were there many ballots to select a candidate?</p>
-</section>
 
-    <p><em>Graphical takeaways</em></p>
+    <subsection>
+     <title>Graphical takeaways</title>
     <ul>
       <li><p>Guidelines support reading of graphics. (<xref ref="fig-delscat"/> to <xref ref="fig-convt"/>)</p></li>
       <li><p>Time series with discrete jumps should be represented with steps. (<xref ref="fig-candvs2"/>)</p></li>
       <li><p>Precise time scales are better than using equal intervals between data points. (<xref ref="fig-convt"/>)</p></li>
       <li><p>Interpretation requires domain knowledge. (<xref ref="fig-candvs2"/> and <xref ref="fig-convt"/>)</p></li>
     </ul>
+  </subsection>
   </section>
 </chapter>
