@@ -66,8 +66,7 @@
           <description>Two line plots of the Nurgalieva twins' Comrades Marathon performances over the years,
           shown at two different y-axis scales. The line for Olesya is drawn on top of the line for Elena.</description>
         </image>
-        <caption><p>Two plots of the Nurgalieva twins' performances in the Comrades Marathon. The plot on the
-        right is zoomed in. The line for Olesya is drawn on top.</p></caption>
+        <caption><p>Performances of the Nurgalieva identical twins in the Comrades Marathon races (same data, different vertical scales).</p></caption>
       </figure>
     </subsection>
 
@@ -115,8 +114,7 @@
           countries, with Africa and Asia having the most. The right chart shows total population, with Asia
           having more than the other three regions combined.</description>
         </image>
-        <caption><p>Barcharts of the four Gapminder regions ordered by bar height. Left: number of countries in
-        each region. Right: total population of each region.</p></caption>
+        <caption><p>Numbers of countries and total populations in the four Gapminder regions.</p></caption>
       </figure>
 
       <p>
@@ -289,8 +287,7 @@
           drawn first and class ordered within sex, showing a general decline in survival from left to
           right.</description>
         </image>
-        <caption><p>Two mosaicplots of Titanic survival with purposefully chosen orderings of variables and
-        category levels.</p></caption>
+        <caption><p>Mosaicplots of Titanic survival rates.</p></caption>
       </figure>
 
       <p>
@@ -321,8 +318,7 @@
           range. A brown horizontal line marks the zero level. There is greater variability above than below
           the line.</description>
         </image>
-        <caption><p>Parallel coordinate plot of the top 79 ranked performances in decathlon events, with the
-        40th highest score subtracted from each event. Events are ordered by increasing range.</p></caption>
+        <caption><p>Parallel coordinate plot of the top 79 ranked scores for each decathlon event in April 2021.</p></caption>
       </figure>
 
       <p>
@@ -349,8 +345,7 @@
           ordered by increasing median points. Four top decathletes are highlighted in different colours and
           drawn on top of the other lines.</description>
         </image>
-        <caption><p>Parallel coordinate plot of decathlon competitors' performance profiles with events ordered
-        by increasing median event points. The four best decathletes are highlighted.</p></caption>
+        <caption><p>Parallel coordinate plot of the 10 decathlon events.</p></caption>
       </figure>
 
       <p>
@@ -394,8 +389,7 @@
           <description>A parallel coordinate plot of the Palmer Penguins dataset after reordering of categorical
           levels, with fewer line crossings and a clearer structure that is easier to decode.</description>
         </image>
-        <caption><p>Palmer Penguin parallel coordinate plot after reordering of categorical levels, which is
-        easier to decode.</p></caption>
+        <caption><p>Palmer Penguin parallel coordinate plot after reordering of categorical levels.</p></caption>
       </figure>
     </subsection>
   </section>
