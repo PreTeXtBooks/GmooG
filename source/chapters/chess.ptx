@@ -277,8 +277,7 @@ Rather than studying population changes between two particular time points, it w
     <p><em>Further questions.</em> How do the ratings of individual players develop over time? How have numbers of active players by country changed over time? FIDE now publishes ratings for Rapid and Blitz chess as well as Standard ratings. How do the three types of rating compare for the players?</p>
 </section>
 
-  <section xml:id="sec-chess-discussion">
-    <title>Graphical takeaways</title>
+    <p><em>Graphical takeaways</em></p>
     <ul>
       <li><p>Boxplots are good for extreme outliers in large populations. (<xref ref="fig-boxElo"/>, <xref ref="fig-sexRating"/> and <xref ref="fig-ratAge15b"/>)</p></li>
       <li><p>Density estimates are effective for comparing distributions. (<xref ref="fig-densElo"/>, <xref ref="fig-densAge"/>, <xref ref="fig-dens1520Elo"/> and <xref ref="fig-AgeRating"/>)</p></li>
