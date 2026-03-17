@@ -168,14 +168,14 @@
       <image source="images/comUDp-1.png">
         <description>Line chart of average speeds in km/hr for the fastest runners and the median runners in Comrades Marathon "up" (dark orange) and "down" (black) races since 1970. Down races show higher speeds for both fastest and median runners. There are two sets of lines: an upper set for fastest runners around 15 km/hr and a lower set for median runners around 8 to 9 km/hr.</description>
       </image>
-      <caption><p>Average speed of the fastest runners and of the median runners in km/hr for up and down races since 1970.</p></caption>
+      <caption><p>Average speed of the fastest runners (above) and of the median runners (below) in km/hr for the up (dark orange) and down (black) races since 1970.</p></caption>
     </figure>
 
     <figure xml:id="fig-comdist">
       <image source="images/comDist-1.png">
         <description>Two-panel plot. The left panel shows race distances in km for up (dark orange) and down (black) Comrades Marathons from 1970 to 2019, with both series fluctuating around 87 to 90 km. The right panel shows an elevation profile of the down race planned for 2020, with the route from Pietermaritzburg to Durban showing significant undulations and an overall downward elevation trend of approximately 700 m.</description>
       </image>
-      <caption><p>Distances in km for the up and down races since 1970 and a profile plot for the down race planned for 2020.</p></caption>
+      <caption><p>Distances in km for the up (dark orange) and down (black) races since 1970 and a profile plot for the down race from Pietermaritzburg to Durban that was planned for 2020.</p></caption>
     </figure>
 
     <p>The "down" race is not all downhill and the "up" race is not all uphill, but overall there is a difference of around 700 m in elevation between Pietermaritzburg and Durban as the profile plot for the planned, but cancelled, 2020 Comrades Marathon shows (<xref ref="east-2022"/>).</p>
