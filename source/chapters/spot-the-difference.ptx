@@ -56,7 +56,7 @@
       <image source="images/s100mScat-1.png">
         <description>Four-panel scatterplot layout of Olympic 100m freestyle swimming data. Top left: times in seconds by year for male and female gold and silver medalists, showing a steady decrease over time. Top right: women&#8217;s gold medal times against men&#8217;s gold medal times, showing a strong positive correlation. Lower left: Tukey mean-difference plot of gold and silver times for men, showing two extreme values at 1896 and 1924 and one negative value at 1960. Lower right: residual versus fitted values for a linear model of women&#8217;s times as a function of men&#8217;s times, suggesting a curvilinear relationship.</description>
       </image>
-      <caption><p>Four different kinds of scatterplot for Olympic 100 m freestyle gold/silver data.</p></caption>
+      <caption><p>Four different kinds of scatterplot of data for gold and silver medal performances by men and women in the Olympic freestyle 100 m.</p></caption>
     </figure>
 
     <p>
@@ -102,7 +102,7 @@
       <image source="images/comMFmedX-1.png">
         <description>Two-panel time series display for the Comrades Marathon. Upper panel: line plot of median finish times for men and women in up races (orange) and down races (black) from 1980, with two series per race direction. Lower panel: bar chart of numbers of finishers by sex for each year, with men and women coloured differently, aligned below the time series on the same horizontal axis.</description>
       </image>
-      <caption><p>Median times for men and women for up/down Comrades races and numbers finishing.</p></caption>
+      <caption><p>Median times for men and women for up (orange) and down (black) races of the Comrades Marathon since 1980 and the numbers finishing.</p></caption>
     </figure>
 
     <p>
@@ -197,13 +197,13 @@ The spineplot top left shows that the treatment group was much bigger than the p
         <image source="images/gapLEX-1.png">
           <description>Line plot of life expectancy for all countries from 1800 to 2016, showing overall upward trends with occasional sharp falls and rises. The lines for all countries are overlaid, making individual country identification difficult but overall patterns visible.</description>
         </image>
-        <caption><p>All-country life expectancy display.</p></caption>
+        <caption><p>Gapminder life expectancy data drawn for all countries.</p></caption>
       </figure>
       <figure xml:id="fig-gaplex-2">
         <image source="images/gapLEX-2.png">
           <description>Four-panel faceted line plot of life expectancy from 1800 to 2016, one panel per Gapminder region (Africa, Americas, Asia, Europe). Countries are coloured by region. Within-region variation and local outliers are visible in each panel, and Europe shows higher life expectancies than other regions throughout the 19th century.</description>
         </image>
-        <caption><p>Faceted regional life expectancy display.</p></caption>
+        <caption><p>Gapminder life expectancy data drawn with countries grouped by region.</p></caption>
       </figure>
       <p>
         The initial plot shows the steady increase in life expectancy in the 20th century, the surprisingly constant
@@ -266,7 +266,7 @@ The spineplot top left shows that the treatment group was much bigger than the p
         <image source="images/gayCIX-1.png">
           <description>Two side-by-side plots of support for same-sex marriage by US state with 95% confidence intervals. Left panel (default): states in alphabetical order with point estimates and error bars, showing varying rates and interval widths. Right panel (amended): states sorted by Census Bureau region and ordered by estimate within region, with estimates coloured by region, larger points, straight interval lines without end bars, percentage scale from 0 to 100%, and a 50% guideline.</description>
         </image>
-        <caption><p>State support with confidence intervals: default and ordered versions.</p></caption>
+        <caption><p>Support for same-sex marriage by state with 95% confidence intervals.</p></caption>
       </figure>
       <p>
         The first plot shows that states have different rates and different confidence interval lengths. Many pairs of
@@ -300,7 +300,7 @@ The spineplot top left shows that the treatment group was much bigger than the p
         <image source="images/flighttz-1.png">
           <description>Two side-by-side scatterplots of human spaceflight mission duration by year. Left panel: mission time in minutes by year on a linear scale, showing most missions as short with a few very long ones and a cluster at 4000&#8211;5000 minutes. Right panel: log-transformed mission times by year, coloured by space station programme, revealing a clear split between short missions of about a week and longer missions of several months associated with space station programmes.</description>
         </image>
-        <caption><p>Mission time versus year: raw and log-transformed comparison.</p></caption>
+        <caption><p>Mission times by year (left) and log mission times by year coloured by space station programme (right).</p></caption>
       </figure>
       <p>
         The plot on the left shows that most mission times were short, especially before 1980, that there were a few
