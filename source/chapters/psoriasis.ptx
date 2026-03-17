@@ -10,14 +10,14 @@
 
     <p><em>Background.</em> Psoriasis is an unpleasant skin condition and there is no known cure. The research data discussed here come from a phase 3 clinical trial of a possible treatment.</p>
     <p><em>Questions.</em> Is the treatment better than the placebo? Does it show better results on all criteria?</p>
-    <p><em>Sources.</em> <xref ref="PSI-2021a"/></p>
+    <p><em>Sources.</em> <xref ref="PSI-2021a" text="custom">PSI (2021)</xref></p>
     <p><em>Structure.</em> Each of the 450 patients involved has two records, one for their quality of life assessment at the beginning of the study and one for the same assessment at the end of the study.</p>
   </introduction>
 
   <section xml:id="secPsor1">
     <title>Comparing treatment and placebo groups</title>
 
-    <p>As part of their Wonderful Wednesdays project (<xref ref="PSI-2021b"/>), the Statisticians in the Pharmaceutical Industry group made available a dataset of a treatment for psoriasis (<xref ref="PSI-2021a"/>). There was a treatment group of 300 patients and a placebo group of 150. The PASI score (Psoriasis Area and Severity Index) was assessed for each person at the start of the study. The DLQI questionnaire (Dermatology Life Quality Index) was administered to every patient at the start and to almost all patients after 16 weeks&#8212;a few must have dropped out. The questionnaire has ten questions, each to be answered on a discrete scale of 0, 1, 2, 3, with 0 meaning no impact on quality of life and 3 meaning maximum impact. <xref ref="fig-qlEns"/> is a display of three plots summarising the study.</p>
+    <p>As part of their Wonderful Wednesdays project (<xref ref="PSI-2021b" text="custom">PSI (2021)</xref>), the Statisticians in the Pharmaceutical Industry group made available a dataset of a treatment for psoriasis (<xref ref="PSI-2021a" text="custom">PSI (2021)</xref>). There was a treatment group of 300 patients and a placebo group of 150. The PASI score (Psoriasis Area and Severity Index) was assessed for each person at the start of the study. The DLQI questionnaire (Dermatology Life Quality Index) was administered to every patient at the start and to almost all patients after 16 weeks&#8212;a few must have dropped out. The questionnaire has ten questions, each to be answered on a discrete scale of 0, 1, 2, 3, with 0 meaning no impact on quality of life and 3 meaning maximum impact. <xref ref="fig-qlEns"/> is a display of three plots summarising the study.</p>
 
     <figure xml:id="fig-qlEns">
       <caption>The spineplot top left shows the treatment group was much bigger than the placebo group and the dropout rate was small for both groups. The scatterplots of PASI and DLQI scores at the start of the study top right show the two groups had similar initial distributions. The bottom plot shows that average initial scores on the 10 questions were similar for the groups (solid lines) and mostly slightly lower for the placebo group after 16 weeks (blue dashed line). For the treatment group average scores were substantially less on all questions after 16 weeks (dark orange dashed line).</caption>

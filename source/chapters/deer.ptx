@@ -19,7 +19,7 @@
       <em>Questions.</em> How many accidents with deer are there? Is it roughly the same across the year? At what
       times of day is the risk greatest?
     </p>
-    <p><em>Sources.</em> <xref ref="hothorn-2020"/></p>
+    <p><em>Sources.</em> <xref ref="hothorn-2020" text="custom">Hothorn (2020)</xref></p>
     <p>
       <em>Structure.</em> Two data frames, each of 172596 observations, giving the numbers of vehicle accidents
       every half hour in Bavaria, one for accidents involving deer and one for other accidents.
@@ -31,7 +31,7 @@
 
     <p>
       Bavarian data of the numbers of vehicle accidents involving deer over the full ten years from 2002 to 2011
-      have been modelled in depth in <xref ref="hothorn-2015"/>. The data were also used in <xref ref="hothorn-2020"/> and are available in
+      have been modelled in depth in <xref ref="hothorn-2015" text="custom">Hothorn et al. (2015)</xref>. The data were also used in <xref ref="hothorn-2020" text="custom">Hothorn (2020)</xref> and are available in
       the supplementary material on the publishing journal's website.
     </p>
 
@@ -119,7 +119,7 @@
       across years by month. Unsurprisingly there are differences in the patterns by years, as the data are
       shifted for the individual months. This is easier to see in <xref ref="fig-deer7"/>, where the two
       peaks are further apart for the summer months and closer together for the winter months. According to
-      <xref ref="hothorn-2015"/> the deer are on the move more around sunrise and after sunset, which explains these peaks
+      <xref ref="hothorn-2015" text="custom">Hothorn et al. (2015)</xref> the deer are on the move more around sunrise and after sunset, which explains these peaks
       and their pattern across the year. In that paper, heat maps were used to display the daily data.
     </p>
 

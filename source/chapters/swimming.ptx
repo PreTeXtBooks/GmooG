@@ -9,14 +9,14 @@
     </blockquote>
     <p><em>Background.</em> Comparing swimmers' best times for different strokes and distances.</p>
     <p><em>Questions.</em> Which strokes are swum fastest? How much faster are men than women? What effect did full body swimsuits have?</p>
-    <p><em>Sources.</em> Website of the International Swimming Federation (<xref ref="fina-2021"/>)</p>
+    <p><em>Sources.</em> Website of the International Swimming Federation (<xref ref="fina-2021" text="custom">FINA (2021)</xref>)</p>
     <p><em>Structure.</em> 7685 observations of 23 variables.</p>
   </introduction>
 
   <section xml:id="sec-swim-strokes">
     <title>Best times for different strokes</title>
 
-    <p>The website of the International Swimming Federation (<xref ref="fina-2021"/>) publishes results of competitions and datasets containing swimmers' best times for different strokes and distances. <xref ref="spear-2021"/> used some of this data to compare the performances of swimmers over time and across events using a model based on extreme value theory. They also assessed which world records were most likely to be broken next. As the data are best times for individual swimmers, each swimmer can only appear once in the list for an event. The data used here include the 200 best times for men and women over each of 17 events for individuals, with fewer best times for three relay events. All times are in seconds and have been rounded to two decimal places. Only races in 50 metre pools (long course metres or LCM events) are considered here.</p>
+    <p>The website of the International Swimming Federation (<xref ref="fina-2021" text="custom">FINA (2021)</xref>) publishes results of competitions and datasets containing swimmers' best times for different strokes and distances. <xref ref="spear-2021" text="custom">Spearing et al. (2021)</xref> used some of this data to compare the performances of swimmers over time and across events using a model based on extreme value theory. They also assessed which world records were most likely to be broken next. As the data are best times for individual swimmers, each swimmer can only appear once in the list for an event. The data used here include the 200 best times for men and women over each of 17 events for individuals, with fewer best times for three relay events. All times are in seconds and have been rounded to two decimal places. Only races in 50 metre pools (long course metres or LCM events) are considered here.</p>
 
     <figure xml:id="fig-swm100f">
       <image source="images/swM100f-1.png">
@@ -38,7 +38,7 @@
 
     <p>The times for the events are almost completely separated. There is a possible overlap between the fastest butterfly time and the slowest freestyle times. In fact the best time for the butterfly was seconds and the two-hundredth best time for the freestyle was seconds. Three of the four plots have the same patterns seen in <xref ref="fig-swm100f"/>, a few fine older performances, a string of best times with full body swimsuits in 2009, and a gradual improvement over the past 10 years from the slower times recorded in 2010. There are two exceptions. One is the 50 m backstroke time of Camille Lacourt in 2010. The other is the extraordinary time of Adam Peaty in the 50 m breaststroke in 2017. Unlike in the other events, several breaststroke swimmers have beaten the best full body swimsuit time. Was it of less benefit to breaststroke swimmers?</p>
 
-    <p>The ordering of the events is hardly surprising to swimmers. Backstroke swimmers start in the water, while swimmers in the other three events have the advantage of diving in and swimming briefly underwater at the start. The butterfly is a relatively new stroke in official terms. It was introduced before the Second World War and was later used by swimmers in breaststroke competitions. In the early 1950s the best breaststroke times were swum by butterfly swimmers and the butterfly was declared a separate stroke in 1953 (<xref ref="oppenheim-1970"/>). This is why the breaststroke world record times increased then, as afterwards breaststroke swimmers had to actually swim breaststroke!</p>
+    <p>The ordering of the events is hardly surprising to swimmers. Backstroke swimmers start in the water, while swimmers in the other three events have the advantage of diving in and swimming briefly underwater at the start. The butterfly is a relatively new stroke in official terms. It was introduced before the Second World War and was later used by swimmers in breaststroke competitions. In the early 1950s the best breaststroke times were swum by butterfly swimmers and the butterfly was declared a separate stroke in 1953 (<xref ref="oppenheim-1970" text="custom">Oppenheim (1970)</xref>). This is why the breaststroke world record times increased then, as afterwards breaststroke swimmers had to actually swim breaststroke!</p>
 
     <p>The same patterns hold for the women for the 50 m events with one notable exception. <xref ref="fig-swm50amf"/> shows that the women are in general slower than the men (although the best women swimming freestyle would beat the best male breaststroke swimmers and probably the best male backstroke swimmers too).</p>
 
@@ -82,13 +82,13 @@
 
     <p>The display suggests that the very best women are a bit closer to the very best men in time and that the difference between the sexes increases as ranking increases. The big exception to this is the breaststroke, due to Adam Peaty's 2019 world record of 56.88 seconds. In general, differences between equal ranks increase if one group is bigger than the other.</p>
 
-    <p>Differences in times between events are affected by the popularity of the events amongst the swimmers. This can be seen, for instance, in the numbers of swimmers taking part in the heats for the events at the 2019 World Championships (<xref ref="fina-2021"/>). There were 41 in the men's 4x100 m medley and 134 in the men's 50 m freestyle. The corresponding numbers for the women were 26 and 106.</p>
+    <p>Differences in times between events are affected by the popularity of the events amongst the swimmers. This can be seen, for instance, in the numbers of swimmers taking part in the heats for the events at the 2019 World Championships (<xref ref="fina-2021" text="custom">FINA (2021)</xref>). There were 41 in the men's 4x100 m medley and 134 in the men's 50 m freestyle. The corresponding numbers for the women were 26 and 106.</p>
   </section>
 
   <section xml:id="sec-swim-multi">
     <title>How good are the best swimmers across multiple events?</title>
 
-    <p>A few swimmers compete at the top level in more than one event. The outstanding example in this dataset is Katinka Hosszu, whose best time is amongst the top 200 in 14 events. <xref ref="fig-khlv"/> shows her results as purple dots on top of letter-value boxplots (<xref ref="hofmann-2017"/>) for the 200 best times in the 17 events for women. The events have been sorted by stroke and ordered by distance. Each plot has its own time scale.</p>
+    <p>A few swimmers compete at the top level in more than one event. The outstanding example in this dataset is Katinka Hosszu, whose best time is amongst the top 200 in 14 events. <xref ref="fig-khlv"/> shows her results as purple dots on top of letter-value boxplots (<xref ref="hofmann-2017" text="custom">Hofmann et al. (2017)</xref>) for the 200 best times in the 17 events for women. The events have been sorted by stroke and ordered by distance. Each plot has its own time scale.</p>
 
     <figure xml:id="fig-khlv">
       <image source="images/khLV-1.png">

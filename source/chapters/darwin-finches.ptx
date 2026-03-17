@@ -10,16 +10,16 @@
 
     <p><em>Background.</em> Darwin's finches are species that live on the Galapagos Islands. They are an important example in the Theory of Evolution.</p>
     <p><em>Questions.</em> How do the species differ? Are there differences between the same species on different islands? Are there differences between the sexes?</p>
-    <p><em>Sources.</em> Dryad Digital Repository (<xref ref="snodgrass-2008"/>) for the data and https://biogeo.ucdavis.edu for the map.</p>
+    <p><em>Sources.</em> Dryad Digital Repository (<xref ref="snodgrass-2008" text="custom">Snodgrass and Heller (2008)</xref>) for the data and https://biogeo.ucdavis.edu for the map.</p>
     <p><em>Structure.</em> 549 birds and 20 variables.</p>
   </introduction>
 
   <section xml:id="secFinches1">
     <title>How do Darwin's finches differ?</title>
 
-    <p>Darwin visited the Galápagos Islands in 1835 as part of his voyage on HMS Beagle. He collected many specimens, including birds he described as species of finches. Later researchers decided they are passerine birds belonging to the tanager family. Although Darwin collected finches, he only decided how important they might be a few years later. There is much written on Darwin's finches and anyone with a deeper interest should read the book by Peter and Rosemary Grant (<xref ref="grant-2014"/>), describing their forty years of detailed investigations on one small island. There is also an earlier populist book about the Grants' work (<xref ref="weiner-1994"/>).</p>
+    <p>Darwin visited the Galápagos Islands in 1835 as part of his voyage on HMS Beagle. He collected many specimens, including birds he described as species of finches. Later researchers decided they are passerine birds belonging to the tanager family. Although Darwin collected finches, he only decided how important they might be a few years later. There is much written on Darwin's finches and anyone with a deeper interest should read the book by Peter and Rosemary Grant (<xref ref="grant-2014" text="custom">Grant and Grant (2014)</xref>), describing their forty years of detailed investigations on one small island. There is also an earlier populist book about the Grants' work (<xref ref="weiner-1994" text="custom">Weiner (1994)</xref>).</p>
 
-    <p>The Galápagos Islands are fairly isolated from the rest of the world and relatively similar to one another, so Darwin was surprised at the numbers of different species of finch he identified. Classifying the species and investigating how they evolved is still part of ongoing research. A crucial feature is the size and shape of the beaks of the birds. Several datasets of measurements are available from the Dryad Digital Repository. Some have more information, some less. In this chapter morphological data from the Snodgrass and Heller Stanford expedition of 1898-99 to the Galápagos Islands are investigated (<xref ref="snodgrass-1904"/>, and <xref ref="snodgrass-2008"/> for the data), as more features were measured and there were fewer missing values. The dataset is in the R package <em>hypervolume</em> (<xref ref="blonder-2019"/>) called <em>morphSnodgrassHeller</em>.</p>
+    <p>The Galápagos Islands are fairly isolated from the rest of the world and relatively similar to one another, so Darwin was surprised at the numbers of different species of finch he identified. Classifying the species and investigating how they evolved is still part of ongoing research. A crucial feature is the size and shape of the beaks of the birds. Several datasets of measurements are available from the Dryad Digital Repository. Some have more information, some less. In this chapter morphological data from the Snodgrass and Heller Stanford expedition of 1898-99 to the Galápagos Islands are investigated (<xref ref="snodgrass-1904" text="custom">Snodgrass and Heller (1904)</xref>, and <xref ref="snodgrass-2008" text="custom">Snodgrass and Heller (2008)</xref> for the data), as more features were measured and there were fewer missing values. The dataset is in the R package <em>hypervolume</em> (<xref ref="blonder-2019" text="custom">Blonder (2019)</xref>) called <em>morphSnodgrassHeller</em>.</p>
 
     <p>The first few plots display finches from the biggest island, Isabela, showing only species of the genus <em>Geospiza</em> with at least 10 birds (four species are excluded). Only birds with complete sets of measurements are included (so sixteen are not). <xref ref="fig-finchBar"/> shows the numbers of the five species in the subset. There are more specimens of <em>Fuliginosa parvula</em> than of the other four species combined.</p>
 
@@ -79,7 +79,7 @@
       </image>
     </figure>
 
-    <p>The Daphne islands, where the Grants did a lot of their work (<xref ref="grant-2014"/>), are a little to the North of Santa Cruz and too small to appear here. Daphne Major, the bigger of the two, is less than half a square kilometre in size.</p>
+    <p>The Daphne islands, where the Grants did a lot of their work (<xref ref="grant-2014" text="custom">Grant and Grant (2014)</xref>), are a little to the North of Santa Cruz and too small to appear here. Daphne Major, the bigger of the two, is less than half a square kilometre in size.</p>
 
     <p>Several species live on more than one island. Snodgrass and Heller's dataset covering 15 islands ranges from Isabela with 195 birds from 9 species to Santa Cruz with 9 birds from 2 species. Looking at the data the other way round, they reported 32 species in all, ranging from the 15 they found each only on 1 island to <em>Fulginosa parvula</em> which they found on 9 islands. These data refer to the numbers of birds they collected and measured; there must have been many more.</p>
 
@@ -105,7 +105,7 @@
 
     <p>Two species, <em>Fortis fortis</em> and <em>Heliobates</em>, have longer wing lengths than the other two species. It is curious that for the species with most birds, <em>Fulginosa parvula</em> with 62 females and 99 males, the birds with the two longest wing lengths are both females.</p>
 
-    <p>Twice as many males as females were measured by Snodgrass and Heller. The research by the Grants (<xref ref="weiner-1994"/>) revealed that weather variation over the years can have dramatic effects on the sex ratio of the finches, with droughts leading to more females dying, particularly the smaller ones. Perhaps 1898-99 was shortly after such a period.</p>
+    <p>Twice as many males as females were measured by Snodgrass and Heller. The research by the Grants (<xref ref="weiner-1994" text="custom">Weiner (1994)</xref>) revealed that weather variation over the years can have dramatic effects on the sex ratio of the finches, with droughts leading to more females dying, particularly the smaller ones. Perhaps 1898-99 was shortly after such a period.</p>
 
     <p><em>Answers.</em> The nine species on Isabela can almost all be distinguished from one other with the measurements provided. Species do not appear to differ between islands. Males are generally bigger than females of the same species.</p>
     <p><em>Further questions.</em> Are the different bird measurements correlated with each other? How do the data on the finches of the Galápagos Islands collected by other researchers compare with the data studied here?</p>

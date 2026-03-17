@@ -10,7 +10,7 @@
   <introduction>
     <p><em>Background.</em> The Internet Movie Database (IMDb) collects information on a huge number of films and TV shows including ratings provided by users.</p>
     <p><em>Questions.</em> How long are film runtimes?  What ratings do films get?  How many users rate them?  How have the numbers of films of different genres developed?</p>
-    <p><em>Sources.</em> IMDb website (<xref ref="imdb-2022"/>)</p>
+    <p><em>Sources.</em> IMDb website (<xref ref="imdb-2022" text="custom">IMDb (2022)</xref>)</p>
     <p><em>Structure.</em> Two datasets were merged.  One contained basic information on each film or show and the other supplied average user ratings and the numbers of ratings.</p>
   </introduction>
 

@@ -13,7 +13,7 @@
   <section xml:id="sec-varying-plots">
     <title>Varying various plots</title>
     <p>
-      There is a wide variety of plot types available (e.g., see <xref ref="holtz-2018"/> or <xref ref="schwab-2021"/>). Each plot type can also
+      There is a wide variety of plot types available (e.g., see <xref ref="holtz-2018" text="custom">Holtz (2018)</xref> or <xref ref="schwab-2021" text="custom">Schwabish (2021)</xref>). Each plot type can also
       be drawn in many different ways: varying size, aspect ratio, scales, colour, symbols, styles, whatever. A key
       message of this book is that drawing a variety of plots, and varying the plots drawn, can provide more insights than
       searching for a single &#8216;optimal&#8217; display. Just as taking many photographs of a complicated object can help people
@@ -89,10 +89,10 @@
   <section xml:id="sec-ensembles-of-plots">
     <title>Ensembles of plots</title>
     <p>
-      Thanks to trellis plots (<xref ref="becker-1996"/>), lattice plots (<xref ref="sarkar-2008"/>), and faceting (<xref ref="wilkinson-1999"/> and
-      <xref ref="wickham-2016"/>), displays of small multiples are well understood. Each of the component plots is of
+      Thanks to trellis plots (<xref ref="becker-1996" text="custom">Becker et al. (1996)</xref>), lattice plots (<xref ref="sarkar-2008" text="custom">Sarkar (2008)</xref>), and faceting (<xref ref="wilkinson-1999" text="custom">Wilkinson (1999)</xref> and
+      <xref ref="wickham-2016" text="custom">Wickham (2016)</xref>), displays of small multiples are well understood. Each of the component plots is of
       the same type and is conditioned on other dataset variables. By comparison, ensembles made up of different
-      types of plots have been less discussed. <xref ref="unwin-2018a"/> suggest that the key element is coherence: having a
+      types of plots have been less discussed. <xref ref="unwin-2018a" text="custom">Unwin and Valero-Mora (2018)</xref> suggest that the key element is coherence: having a
       coherent theme, a coherent alignment, coherent look, consistent scales and formatting. Examples include
       <xref ref="fig-movierunyb"/> and <xref ref="fig-uefaTQ"/>, and the set of four <xref ref="fig-palens0"/> to
       <xref ref="fig-palens3"/>. Another example is <xref ref="fig-commfmed"/>, repeated here as <xref ref="fig-commfmedx"/>.

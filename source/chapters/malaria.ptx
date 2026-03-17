@@ -9,14 +9,14 @@
     </blockquote>
     <p><em>Background.</em> The data come from an investigation of a new magneto-optical method, ROMD, of testing for malaria. It could offer a swifter and cheaper approach than three other tests (PCR, RDT, LM).</p>
     <p><em>Questions.</em> Do the results of the four tests agree? On which cases do they differ?</p>
-    <p><em>Sources.</em> <xref ref="arndt-2021"/></p>
+    <p><em>Sources.</em> <xref ref="arndt-2021" text="custom">Arndt et al. (2021)</xref></p>
     <p><em>Structure.</em> A dataset of 956 observations and 24 variables.</p>
   </introduction>
 
   <section xml:id="sec-malaria-agreement">
     <title>How much agreement is there between the four tests?</title>
 
-    <p>Malaria is endemic in Papua New Guinea. The authors of <xref ref="arndt-2021"/> have made available the raw data of their study there, involving individuals checked with four different tests, so that the methods could be compared. Each test uses a different measure of the disease. Eleven cases were excluded where there were missing values for two of the tests.</p>
+    <p>Malaria is endemic in Papua New Guinea. The authors of <xref ref="arndt-2021" text="custom">Arndt et al. (2021)</xref> have made available the raw data of their study there, involving individuals checked with four different tests, so that the methods could be compared. Each test uses a different measure of the disease. Eleven cases were excluded where there were missing values for two of the tests.</p>
 
     <figure xml:id="fig-maltest">
       <image source="images/malTest-1.png">
@@ -34,7 +34,7 @@
       <caption><p>Combinations of individual malaria test results (red rectangles are positives).</p></caption>
     </figure>
 
-    <p><xref ref="fig-malvis"/> displays how often the different combinations of test results arose. The first column shows the cases in which all tests gave negative results for malaria and the second column all cases with positive results. The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in <xref ref="arndt-2021"/>. There was disagreement at one level or another for a substantial share of the cases. All 16 possible combinations of results are in evidence.</p>
+    <p><xref ref="fig-malvis"/> displays how often the different combinations of test results arose. The first column shows the cases in which all tests gave negative results for malaria and the second column all cases with positive results. The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in <xref ref="arndt-2021" text="custom">Arndt et al. (2021)</xref>. There was disagreement at one level or another for a substantial share of the cases. All 16 possible combinations of results are in evidence.</p>
 
     <p>The next display shows that no one test dominates another. The main diagonal elements in each subdisplay show the numbers of disagreements between those two tests. In each case there are disagreements of both kinds, positive-negative and negative-positive. Serious cases are presumably recognised by all methods. Borderline cases may be recognised by some but not by others.</p>
 

@@ -18,7 +18,7 @@
     <p>
       Colour is a complex topic. There has been considerable progress made in our understanding of representing
       colour, even if that has led to a plethora of systems, be it HCL, HLS, HSV, LAB, LUV, RGB, XYZ or
-      whatever. A valuable reference is <xref ref="zeil-2020"/> and the accompanying R package <em>colorspace</em>.
+      whatever. A valuable reference is <xref ref="zeil-2020" text="custom">Zeileis et al. (2020)</xref> and the accompanying R package <em>colorspace</em>.
     </p>
 
     <p>
@@ -48,7 +48,7 @@
       seeing different shades where men see a single colour. Some people have strong associations with particular
       colours. The scene in <pubtitle>The Devil Wears Prada</pubtitle> where Meryl Streep takes Anne Hathaway to
       task for saying two belts look the same is a good example (and can be found on YouTube as the cerulean
-      scene). A more academic reference is <xref ref="mohammad-2011"/>.
+      scene). A more academic reference is <xref ref="mohammad-2011" text="custom">Mohammad (2011)</xref>.
     </p>
 
     <p>
@@ -294,9 +294,9 @@
       <p>
         Different countries have different associations with different colours, as can be seen in the Colours in
         Culture poster that looks at colour associations for 84 concepts in 10 populations around the world
-        (<xref ref="mccand-2022"/>). It is too difficult to cope with all possible associations in an international context,
+        (<xref ref="mccand-2022" text="custom">McCandless (2022)</xref>). It is too difficult to cope with all possible associations in an international context,
         but it is worth bearing in mind. There are many stories and traditions linked to colours, as is
-        entertainingly described in <xref ref="stclair-2016"/>. Amongst other thought-provoking comments, she points out that
+        entertainingly described in <xref ref="stclair-2016" text="custom">St Clair (2016)</xref>. Amongst other thought-provoking comments, she points out that
         the colours pink for a girl and blue for a boy are a mid twentieth-century development. Formerly, it was
         common to associate pink with boys and blue with girls.
       </p>
@@ -309,7 +309,7 @@
         Well chosen colours can turn a mundane, grey graphic into an attractive and pleasing picture that is a
         pleasure to work with. Studying a succession of similar, dry graphics can be disheartening and
         discouraging. A restrained use of colour is an advantage. Not all plots of the same type have to look
-        the same. As Bertin writes of colour (<xref ref="bertin-2010"/> Chapter II.C.2): "It captures and holds attention,
+        the same. As Bertin writes of colour (<xref ref="bertin-2010" text="custom">Bertin (2010)</xref> Chapter II.C.2): "It captures and holds attention,
         multiplies the number of readers, assures better retention of the information, and, in short, increases
         the scope of the message."
       </p>

@@ -26,7 +26,7 @@
       </image>
     </figure>
 
-    <p>There is a fairly steady decline in support by age, starting with a few young ages with majority support for same-sex marriage amongst those expressing an opinion, where those responding Don't know or refusing to answer have been treated as missing. With increasing age it looks like a step function with about the same level of support between ages 40 and 55 and similarly between ages 62 and 77. This was discussed in <xref ref="gelman-2020"/> where they suggested and compared several nonlinear models.</p>
+    <p>There is a fairly steady decline in support by age, starting with a few young ages with majority support for same-sex marriage amongst those expressing an opinion, where those responding Don't know or refusing to answer have been treated as missing. With increasing age it looks like a step function with about the same level of support between ages 40 and 55 and similarly between ages 62 and 77. This was discussed in <xref ref="gelman-2020" text="custom">Gelman et al. (2020)</xref> where they suggested and compared several nonlinear models.</p>
 
     <p>The dataset is large enough to look at opinions by age and sex together. Figure <xref ref="fig-gaySg"/> shows that females are more in favour than males at almost every age. The effect on these opinions of sex and race together can also be investigated. Figure <xref ref="fig-gayGR"/> shows a doubledecker plot for this. The patterns of support by race are the same for males and females, with female rates being higher. Rates for blacks are lowest.</p>
 

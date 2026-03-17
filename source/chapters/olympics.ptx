@@ -10,14 +10,14 @@
 
     <p><em>Background.</em> The modern Olympic Games have taken place every four years for over 120 years&#8212;barring the years of the two World Wars.  They started small in 1896 in Athens and have expanded enormously to become one of the biggest global events.</p>
     <p><em>Questions.</em> How many Olympic events have there been?  Which events have taken place at many Games and which rarely?  How have performances improved over the years?  How have the numbers of countries and participants developed?</p>
-    <p><em>Sources.</em> Two datasets scraped from websites reporting Olympic results, one from a private source and one from Kaggle (<xref ref="griffin-2019"/>).</p>
+    <p><em>Sources.</em> Two datasets scraped from websites reporting Olympic results, one from a private source and one from Kaggle (<xref ref="griffin-2019" text="custom">Griffin (2019)</xref>).</p>
     <p><em>Structure.</em> One dataset included 108789 competitors, reporting whether they won medals or not and, where available, their performance, just for Summer Olympics.  The other dataset included all 222522 competitors with medals, age, height, weight and sex, but not performance data, and covered Summer and Winter Olympics.</p>
   </introduction>
 
   <section xml:id="secOlymps1">
     <title>How good are the data?</title>
 
-    <p>There is much data on the changing events at the Olympic Games (<xref ref="olymp-2022"/>), the new countries taking part, and especially on the improved performances of the participants over the years.  Two datasets are studied for the Summer Olympics, one with performance data and one with no performance data but a more complete list of competitors.</p>
+    <p>There is much data on the changing events at the Olympic Games (<xref ref="olymp-2022" text="custom">IOC (2022)</xref>), the new countries taking part, and especially on the improved performances of the participants over the years.  Two datasets are studied for the Summer Olympics, one with performance data and one with no performance data but a more complete list of competitors.</p>
 
     <p>The performance dataset for the Summer Olympics from 1896 to 2016 was scraped from the web in advance of the 2020 games that took place in 2021 because of the Covid pandemic.  The data were used for commenting on the shape of the trend in improvement and not for any detailed analysis and were made available on request.  A closer look uncovered a number of problems and illustrates how graphics can be used to support checking, editing, and restructuring data, as well as for exploring and displaying results.</p>
 
@@ -70,7 +70,7 @@
 
     <p>Some events were only for men and some only for women.  Men compete in the decathlon of ten events, whereas women compete in the heptathlon of seven events (and in earlier Games only in the pentathlon of five events).  Men run the 110 m hurdles, while women run the 100 m hurdles (and formerly the 80 m hurdles).  The women&#8217;s pentathlon and the women&#8217;s 80 m hurdles were excluded from further analysis.  Other events that have taken place rarely (defined here as less than six times for men or women) were also excluded.  There were gaps due to events not taking place or medals not being awarded.  The men&#8217;s 50 km walk took place at all Games from 1932 to 2016 except for 1976.  The winner of the men&#8217;s high jump in 2012 was later disqualified for doping offences and the other medals promoted in 2021.  That had not been done at the time the dataset was scraped and so there was no gold medal winner and no data point in <xref ref="fig-olyEgA"/>.  For a number of reasons related to doping, no gold medal was awarded for the women&#8217;s 100 m in 2000.</p>
 
-    <p>The 800 m for women stands out as first taking place at the Amsterdam Games of 1928 and then not again until the Olympics in Rome in 1960.  The men in charge of the Olympic Games decided that the event was too strenuous for women and were supported by some highly dubious reporting in the newspapers (<xref ref="english-2015"/>).  According to <xref ref="robinson-2012"/>, Harold Abrahams, the famous English runner, Olympic official, and journalist, said &#8220;The sensational descriptions are much exaggerated I can assure you.&#8221;  Others must have held other opinions.</p>
+    <p>The 800 m for women stands out as first taking place at the Amsterdam Games of 1928 and then not again until the Olympics in Rome in 1960.  The men in charge of the Olympic Games decided that the event was too strenuous for women and were supported by some highly dubious reporting in the newspapers (<xref ref="english-2015" text="custom">English (2015)</xref>).  According to <xref ref="robinson-2012" text="custom">Robinson (2012)</xref>, Harold Abrahams, the famous English runner, Olympic official, and journalist, said &#8220;The sensational descriptions are much exaggerated I can assure you.&#8221;  Others must have held other opinions.</p>
 
     <figure xml:id="fig-olyEgS">
       <caption>Swimming events by Olympic year after amendments.</caption>
@@ -122,7 +122,7 @@
       </image>
     </figure>
 
-    <p>The time for the 1904 marathon race in <xref ref="fig-olyAmt"/> is clearly out of line.  According to <xref ref="abbott-2012"/>, &#8220;the 1904 marathon was less showstopper than sideshow, a freakish spectacle&#8221; and &#8220;The outcome was so scandalous that the event was nearly abolished for good.&#8221;  The time for the 3000 m steeplechase in 1932 also looks wrong.  Due to an error in lap counting, the runners had to run an extra lap of the track.</p>
+    <p>The time for the 1904 marathon race in <xref ref="fig-olyAmt"/> is clearly out of line.  According to <xref ref="abbott-2012" text="custom">Abbott (2012)</xref>, &#8220;the 1904 marathon was less showstopper than sideshow, a freakish spectacle&#8221; and &#8220;The outcome was so scandalous that the event was nearly abolished for good.&#8221;  The time for the 3000 m steeplechase in 1932 also looks wrong.  Due to an error in lap counting, the runners had to run an extra lap of the track.</p>
 
     <p>Sometimes particular events stand out.  Looking at the swimming results, most have similar patterns for men and women, but one stands out in each case, interestingly the same event, the 100 m freestyle, as <xref ref="fig-olyS100"/> shows:</p>
 
@@ -139,7 +139,7 @@
   <section xml:id="secOlymps3">
     <title>How many countries and individuals competed?</title>
 
-    <p>The second Olympics dataset covering both Winter and Summer Olympics is available from Kaggle (<xref ref="griffin-2019"/>).  This has also been scraped from the web and aimed to include all participants from the modern Olympic Games, not just finalists, as in the first dataset.  It also includes the 1906 Intercalated Games, then considered Olympic Games, but not now and not included here.  Medals, if any, are reported, but not the performances.  The events are named differently in various ways in the two datasets, which makes it difficult to merge them.  For example, in the first dataset there is the cycling event &#8220;team-pursuit-4000m-men&#8221; and in the second one it is called &#8220;Men&#8217;s Team Pursuit, 4,000 metres&#8221;.  More surprisingly&#8212;and unexpectedly&#8212;the second dataset includes the participants in the Arts Competitions that were held in the Games of 1912 to 1948.  This is how the famous painters Max Liebermann and Sir John Lavery were both able to participate in the 1928 Games.</p>
+    <p>The second Olympics dataset covering both Winter and Summer Olympics is available from Kaggle (<xref ref="griffin-2019" text="custom">Griffin (2019)</xref>).  This has also been scraped from the web and aimed to include all participants from the modern Olympic Games, not just finalists, as in the first dataset.  It also includes the 1906 Intercalated Games, then considered Olympic Games, but not now and not included here.  Medals, if any, are reported, but not the performances.  The events are named differently in various ways in the two datasets, which makes it difficult to merge them.  For example, in the first dataset there is the cycling event &#8220;team-pursuit-4000m-men&#8221; and in the second one it is called &#8220;Men&#8217;s Team Pursuit, 4,000 metres&#8221;.  More surprisingly&#8212;and unexpectedly&#8212;the second dataset includes the participants in the Arts Competitions that were held in the Games of 1912 to 1948.  This is how the famous painters Max Liebermann and Sir John Lavery were both able to participate in the 1928 Games.</p>
 
     <p>The numbers of countries sending teams for men and women to the Summer Games are shown separately in <xref ref="fig-olyG"/>.</p>
 
@@ -150,7 +150,7 @@
       </image>
     </figure>
 
-    <p>The number of countries has steadily increased with the exception of the 1976 Montreal Games (when 29 countries, mainly African, did not take part because New Zealand had played South Africa at rugby and had not been banned from the Olympics as a consequence) and the 1980 Moscow Games (when over 60 countries did not take part because of the Soviet invasion of Afghanistan).  There was also a boycott in 1984 at Los Angeles when 14 countries led by the Soviet Union did not take part.  Since the 2000 Games in Sydney the numbers of countries with female teams is almost equal to the number of countries with male teams.  (An elegant and more detailed visualisation of the numbers of countries taking part can be found at <xref ref="nicault-2021"/>.)</p>
+    <p>The number of countries has steadily increased with the exception of the 1976 Montreal Games (when 29 countries, mainly African, did not take part because New Zealand had played South Africa at rugby and had not been banned from the Olympics as a consequence) and the 1980 Moscow Games (when over 60 countries did not take part because of the Soviet invasion of Afghanistan).  There was also a boycott in 1984 at Los Angeles when 14 countries led by the Soviet Union did not take part.  Since the 2000 Games in Sydney the numbers of countries with female teams is almost equal to the number of countries with male teams.  (An elegant and more detailed visualisation of the numbers of countries taking part can be found at <xref ref="nicault-2021" text="custom">Nicault (2021)</xref>.)</p>
 
     <figure xml:id="fig-olyGp">
       <caption>Numbers competing at the Olympic Games over the years.</caption>

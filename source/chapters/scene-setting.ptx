@@ -48,7 +48,7 @@
 
     <p>Labelled breaks in scales aid understanding and offer points of reference.  Too many can lead to crowding or even overplotting and too few do not offer enough assistance.  The overall size chosen for a graphic has an influence and it can be curious to see what happens to scale labels when graphics are shrunk.</p>
 
-    <p>There are several ways a variable can contribute to a display including horizontal position (x-axis), vertical position (y-axis), pointsize, linewidth, colour, and alpha transparency.  Some are easier to assess than others.  As <xref ref="cleveland-1987"/> and other research since have pointed out, lengths along a common scale are best for comparison.  Pointsize and linewidth are useful for showing large differences, as in <xref ref="fig-gayByState"/> and <xref ref="fig-titanagesc"/> (pointsize), and <xref ref="fig-lefacet6"/> and <xref ref="fig-sexAge"/> (linewidth), but not for finer differentiation.</p>
+    <p>There are several ways a variable can contribute to a display including horizontal position (x-axis), vertical position (y-axis), pointsize, linewidth, colour, and alpha transparency.  Some are easier to assess than others.  As <xref ref="cleveland-1987" text="custom">Cleveland and McGill (1987)</xref> and other research since have pointed out, lengths along a common scale are best for comparison.  Pointsize and linewidth are useful for showing large differences, as in <xref ref="fig-gayByState"/> and <xref ref="fig-titanagesc"/> (pointsize), and <xref ref="fig-lefacet6"/> and <xref ref="fig-sexAge"/> (linewidth), but not for finer differentiation.</p>
 
     <p>Some attributes have continuous scales, some are categorical, such as shape or linetype.  Colour can be continuous (as in <xref ref="fig-gayMap"/>) or discrete (<xref ref="fig-btwmapg"/>) or categorical (<xref ref="fig-delegs"/>).  Alpha transparency is a valuable adjunct to colour for emphasising or de-emphasising particular features (e.g., <xref ref="fig-ratAge15alph"/>).  The main use of colour is for categorical variables and is the subject of <xref ref="ch-colour"/>.</p>
 
@@ -86,7 +86,7 @@
       <attribution>A.E. Housman</attribution>
     </blockquote>
 
-    <p>There are many formatting tools.  Some affect content directly, some indirectly by changing the scene.  It is easy enough to find advice on how to achieve particular effects, it is more relevant to think about why they are wanted.  As <xref ref="wilson-2014"/> recommend in "Best Practices for Scientific Computing": Document design and purpose, not mechanics.</p>
+    <p>There are many formatting tools.  Some affect content directly, some indirectly by changing the scene.  It is easy enough to find advice on how to achieve particular effects, it is more relevant to think about why they are wanted.  As <xref ref="wilson-2014" text="custom">Wilson et al. (2014)</xref> recommend in "Best Practices for Scientific Computing": Document design and purpose, not mechanics.</p>
 
     <p>Objects are made bigger to draw attention and made smaller to be less obvious.  The overall effect depends on which objects are resized and by how much.  Enlarging too much can lead to objects overlapping with loss of clarity.  Shrinking too much can make some objects almost invisible.  Space is increased between objects to make them more distinct.</p>
 
@@ -94,9 +94,9 @@
 
     <p>Text plays a major role in presentation graphics.  There may be a caption, a title, a subtitle, variable labels, axis labels, legends, annotations (including case labels, line labels, numeric values).  All these may be formatted, spaced, and positioned in a variety of ways.  Few are needed for exploratory graphics and any formatting would be discreet and low-key.</p>
 
-    <p>There are so many formatting options for graphics that it can be difficult to see the wood for the trees.  In 2006 the coffee chain Starbucks claimed that, including all variations, it offered 87,000 different drinks (this has not been independently verified (<xref ref="bialik-2008"/>)).  Looking through long lists of graphics options that you have to decide on is not dissimilar.  It is more important to know the effect you want to achieve and how the options are structured.</p>
+    <p>There are so many formatting options for graphics that it can be difficult to see the wood for the trees.  In 2006 the coffee chain Starbucks claimed that, including all variations, it offered 87,000 different drinks (this has not been independently verified (<xref ref="bialik-2008" text="custom">Bialik (2008)</xref>)).  Looking through long lists of graphics options that you have to decide on is not dissimilar.  It is more important to know the effect you want to achieve and how the options are structured.</p>
 
-    <p>Objects representing the content of a graphic, like points or bars, and components that are part of the setting of a graphic, like axes or legends, can both be reformatted.  Rather than content and setting, <xref ref="wickham-2023g"/> uses the terms data and non-data parts of a plot.  Formatting can be structured in a number of ways.  The approach described here works up from details of data to an overall view: Points, Plot, Position.  Colour and ordering are especially important and are treated in detail in separate chapters.</p>
+    <p>Objects representing the content of a graphic, like points or bars, and components that are part of the setting of a graphic, like axes or legends, can both be reformatted.  Rather than content and setting, <xref ref="wickham-2023g" text="custom">Wickham (2023)</xref> uses the terms data and non-data parts of a plot.  Formatting can be structured in a number of ways.  The approach described here works up from details of data to an overall view: Points, Plot, Position.  Colour and ordering are especially important and are treated in detail in separate chapters.</p>
 
     <subsection xml:id="sec-scene-formatting-points">
       <title>Points, areas, lines, ...</title>
@@ -183,7 +183,7 @@
     <subsection xml:id="sec-scene-formatting-position">
       <title>Position</title>
 
-      <p>A graphic or group of graphics can be placed at the top of a page, at the foot of a page, in the middle of text.  A helpful rule for printed graphics is that the display is on the same page or on the facing page of the text accompanying it.  Flicking between pages requires extra effort, increasing the cognitive load on readers (<xref ref="ware-2020"/> and <xref ref="munzner-2014"/>).  They have to recall what was in the text when they look at the graphic, and remember what was in the graphic when they read the text.</p>
+      <p>A graphic or group of graphics can be placed at the top of a page, at the foot of a page, in the middle of text.  A helpful rule for printed graphics is that the display is on the same page or on the facing page of the text accompanying it.  Flicking between pages requires extra effort, increasing the cognitive load on readers (<xref ref="ware-2020" text="custom">Ware (2020)</xref> and <xref ref="munzner-2014" text="custom">Munzner (2014)</xref>).  They have to recall what was in the text when they look at the graphic, and remember what was in the graphic when they read the text.</p>
 
       <p>HTML versions on electronic devices do not have an issue with paging.  Instead the problem is more that different devices may have quite different screen sizes and shapes.  Just because a plot looks good at one size says little about how good it may look at another size.  Associated material, text or graphics, may or may not be visible.</p>
 
@@ -289,7 +289,7 @@
       <caption><p>Scatterplot of responses to the two same-sex marriage questions by state plotted two ways (point areas are proportional to the number of respondents in that state)</p></caption>
     </figure>
 
-    <p>Trying different layouts for single graphics is simple.  Laying out several differently shaped graphics in an ensemble for presentation is harder (<xref ref="unwin-2018"/>).  Optimal sizes for individual plots may not be optimal for the ensemble as a whole.  Other factors include aligning axes and using common scaling.</p>
+    <p>Trying different layouts for single graphics is simple.  Laying out several differently shaped graphics in an ensemble for presentation is harder (<xref ref="unwin-2018" text="custom">Unwin (2018)</xref>).  Optimal sizes for individual plots may not be optimal for the ensemble as a whole.  Other factors include aligning axes and using common scaling.</p>
   </section>
 
   <section xml:id="sec-scene-comparisons">

@@ -9,14 +9,14 @@
 
     <p><em>Background.</em> FIDE (the International Chess Federation) has used an Elo system since 1970 to rate the relative strengths of chess players based on the results of all official individual games.</p>
     <p><em>Questions.</em> What is the distribution of ratings? How does rating change with age? How do the ratings of men and women compare? Which countries have the players with the highest ratings?</p>
-    <p><em>Sources.</em> FIDE (the International Chess Federation) publishes rating lists of players every month (<xref ref="FIDE-2020"/>). Country population data for 2019 was taken from the World Bank website (<xref ref="wb-2020"/>).</p>
+    <p><em>Sources.</em> FIDE (the International Chess Federation) publishes rating lists of players every month (<xref ref="FIDE-2020" text="custom">FIDE (2020)</xref>). Country population data for 2019 was taken from the World Bank website (<xref ref="wb-2020" text="custom">Worldbank (2020)</xref>).</p>
     <p><em>Structure.</em> The FIDE dataset for December 2020 includes 362502 players with their name, country, rating, and year of birth.</p>
   </introduction>
 
   <section xml:id="secChess1">
     <title>FIDE ratings of chess players</title>
 
-    <p>FIDE (the International Chess Federation) publishes ratings of chess players regularly and these are the ratings that will be discussed here. Like many sporting organisations they use a system based on Elo's ideas (<xref ref="elo-1978"/>). The main assumption is that the performance of a player is normally distributed about the player's current strength. A further assumption is that players' performances in a game are independent of one another. Ratings are updated based on game results. Ratings in the December 2020 dataset range from 1001 to 2862 (the then world champion, Magnus Carlsen).</p>
+    <p>FIDE (the International Chess Federation) publishes ratings of chess players regularly and these are the ratings that will be discussed here. Like many sporting organisations they use a system based on Elo's ideas (<xref ref="elo-1978" text="custom">Elo (1978)</xref>). The main assumption is that the performance of a player is normally distributed about the player's current strength. A further assumption is that players' performances in a game are independent of one another. Ratings are updated based on game results. Ratings in the December 2020 dataset range from 1001 to 2862 (the then world champion, Magnus Carlsen).</p>
 
     <p><xref ref="fig-histElo"/> gives one view of the distribution of player ratings.</p>
 
@@ -79,7 +79,7 @@
       <caption>Boxplots of ratings for active players by sex (boxplot widths are proportional to the square roots of the sizes of the groups and outliers are drawn in red).</caption>
     </figure>
 
-    <p>The female ratings are lower than the male ratings, mainly because far fewer females play. This was analysed in <xref ref="bila-2009"/> using only German ratings from 2008. The authors concluded that the difference in numbers playing explained about 96% of the rating differences between the sexes for the top 100 players of each sex.</p>
+    <p>The female ratings are lower than the male ratings, mainly because far fewer females play. This was analysed in <xref ref="bila-2009" text="custom">Bilalić et al. (2009)</xref> using only German ratings from 2008. The authors concluded that the difference in numbers playing explained about 96% of the rating differences between the sexes for the top 100 players of each sex.</p>
 
     <p><xref ref="fig-sexDiff1"/> shows the data for the December 2020 FIDE ratings for the top 1000 active players of each sex. The male ratings are higher. At the very top the differences are smaller and then they get steadily bigger.</p>
 
@@ -90,7 +90,7 @@
       <caption>Ratings of the top 1000 male and top 1000 female players in December 2020 with line widths proportional to group sizes.</caption>
     </figure>
 
-    <p>The increasing differences can be seen directly in <xref ref="fig-sexDiff2"/>. This agrees with what <xref ref="bila-2009"/> found with their data and also with the theoretical expected values they calculated assuming underlying normal distributions of ratings. The FIDE ratings are not normally distributed, but the increasing differences between male and female ratings at these top levels is likely to be true in general for order statistics for groups of such different sizes.</p>
+    <p>The increasing differences can be seen directly in <xref ref="fig-sexDiff2"/>. This agrees with what <xref ref="bila-2009" text="custom">Bilalić et al. (2009)</xref> found with their data and also with the theoretical expected values they calculated assuming underlying normal distributions of ratings. The FIDE ratings are not normally distributed, but the increasing differences between male and female ratings at these top levels is likely to be true in general for order statistics for groups of such different sizes.</p>
 
     <figure xml:id="fig-sexDiff2">
       <image source="images/sexDiff2-1.png">
@@ -121,7 +121,7 @@
   <section xml:id="secChess3">
     <title>Which nations have the best chess players?</title>
 
-    <p>For much of the twentieth century, the USSR was the strongest chess nation. Over the last thirty years the game has become popular in other nations and it is surprising which were the largest chess playing nations in December 2020, measured by the number of active rated players. <xref ref="fig-nationB"/> shows the 30 chess federations with the highest numbers. The rest are combined into the group 'Other'. Countries are coloured by region, using the classification and colours of the World Bank (<xref ref="wb-2020"/>).</p>
+    <p>For much of the twentieth century, the USSR was the strongest chess nation. Over the last thirty years the game has become popular in other nations and it is surprising which were the largest chess playing nations in December 2020, measured by the number of active rated players. <xref ref="fig-nationB"/> shows the 30 chess federations with the highest numbers. The rest are combined into the group 'Other'. Countries are coloured by region, using the classification and colours of the World Bank (<xref ref="wb-2020" text="custom">Worldbank (2020)</xref>).</p>
 
     <figure xml:id="fig-nationB">
       <image source="images/nationB-1.png">
@@ -189,7 +189,7 @@
 
     <p>The bulk of the players form a shape like a short-necked bird with a long head, perhaps a brent goose. The discreteness of the age data is noticeable due to the striping effect of the gaps. It would not arise with exact ages. The points could be made bigger, but then there would just be one big black blob.</p>
 
-    <p>One approach would be a form of two-dimensional density estimation or hexagonal binning (<xref ref="carr-1987"/>), possibly including jittering of the age values. Since the dataset is a December one it can be safely assumed that almost all players are at least the calculated age, so that if jittering is carried out it should be by adding a jitter term from [0,1).</p>
+    <p>One approach would be a form of two-dimensional density estimation or hexagonal binning (<xref ref="carr-1987" text="custom">Carr et al. (1987)</xref>), possibly including jittering of the age values. Since the dataset is a December one it can be safely assumed that almost all players are at least the calculated age, so that if jittering is carried out it should be by adding a jitter term from [0,1).</p>
 
     <p>A way to both show the densest parts of the data and pick out the top-rated players would be to colour the points for those top players and use different alpha values for the two groups. <xref ref="fig-ratAge15alph"/> uses an alpha of 0.01 for most of the data and an alpha of 1 for the players coloured red with ratings over 2700.</p>
 
