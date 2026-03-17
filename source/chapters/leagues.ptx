@@ -26,7 +26,7 @@
     <title>How have numbers of draws changed?</title>
 
     <figure xml:id="fig-socD">
-      <caption>Rate of draws over the years in the English league's top tier with a gam smooth.</caption>
+      <caption>Rate of draws over the years in the English league’s top tier with a gam (general additive model) smooth.</caption>
       <image source="images/socD-1.png">
         <description>A dot plot showing the rate of drawn games in the English league's top tier from 1888 to 2021, with a blue GAM smooth curve and a vertical dashed blue line marking 1981 when three points for a win was introduced. The draw rate climbed until the First World War, remained fairly constant, rose again in the 1960s, and dipped slightly after 1981.</description>
       </image>
@@ -137,9 +137,6 @@ The teams with the worst relative home record (proportions less than 0.35) have 
         <description>The same time-series plot as fig-teamBPS but with the y-axis (overall league ranking) on a square root scale. This stretches the top of the table and compresses the bottom, making differences among the leading teams more visible. Southampton's second-place finish in 1983 (without ever winning the league) is now clearly apparent.</description>
       </image>
     </figure>
-
-    <p>Using square-root transformed ranks emphasizes top-end differences more than linear ranks.</p>
-
   </section>
 
   <section xml:id="secFootball6">
