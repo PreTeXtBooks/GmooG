@@ -86,7 +86,7 @@
     <p>The species <em>Fuliginosa parvula</em> may be used for comparing one species living on different islands. <xref ref="fig-Fulig"/> displays parallel coordinate plots with ghostplotting for <em>Fuliginosa parvula</em> on four islands where at least 9 birds were recorded. The full dataset for all four islands is drawn in the background in each plot.</p>
 
     <figure xml:id="fig-Fulig">
-      <caption><em>fuliginosa parvula</em> finches on four islands.</caption>
+      <caption>Finches on four islands.</caption>
       <image source="images/Fulig-1.png">
         <description>Four faceted parallel coordinate plots of nine measurements for Fuliginosa parvula finches, one facet per island (Baltra, Fernandina, Isabela, San Cristobal), with the full dataset for all four islands ghostplotted in transparent black in each panel. The measurements appear broadly similar across islands with a few outliers.</description>
       </image>
@@ -97,7 +97,7 @@
     <p>It is frequently the case that the males of a species are generally bigger than the females. This is to some extent true here, for instance for the wing length measurements compared in <xref ref="fig-WingL"/>. Four species for which there were data for at least ten examples of each sex are shown.</p>
 
     <figure xml:id="fig-WingL">
-      <caption>Boxplots of wing lengths by sex for 4 different species with jittered dotplots drawn on top. Species colours are the same as used earlier. There are not enough specimens of <em>Fortis-platyrhyncha</em> for the species to be included.</caption>
+      <caption>Boxplots of wing lengths by sex for 4 different species with jittered dotplots drawn on top. Species colours are the same as used earlier. There are not enough specimens of for the species to be included.</caption>
       <image source="images/WingL-1.png">
         <description>Boxplots of wing lengths by sex (Female/Male) for four Geospiza species that had at least ten specimens of each sex, with jittered individual data points drawn on top. Each species is shown in a different colour consistent with earlier figures. Two species (Fortis fortis and Heliobates) have longer wings than the other two. For Fuliginosa parvula, the two longest wing lengths are both females despite males being more numerous.</description>
       </image>
