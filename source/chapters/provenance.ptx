@@ -390,7 +390,7 @@
       <p>
         This is an intriguing dataset with plenty of striking information. It was scraped from a number of sites
         on the web as part of a study of data available on the health of space travellers (<xref ref="corlett-2020" text="custom">Corlett et al. (2020)</xref>). Others
-        then made a version of it available on the Tidy Tuesday project (<xref ref="tidyt-2020b" text="custom">rfordatascience (2020)</xref>). There are a number of
+        then made a version of it available on the Tidy Tuesday project (<xref ref="tidyt-2020b" text="custom">rfordatascience (2020b)</xref>). There are a number of
         inconsistencies and errors in this version and it is not obvious where they arose. There is plenty of
         interesting information, but careful checking is needed, as described in the chapter.
       </p>
@@ -421,7 +421,7 @@
       <title>Electric car charging (<xref ref="ch-electric-cars"/>)</title>
       <p>
         There is much interest in electric cars and how people use charging stations. The researchers wrote that
-        they had an initial period of three months for testing before analysis (<xref ref="asensio-2021a" text="custom">Asensio et al. (2021)</xref>). This would be
+        they had an initial period of three months for testing before analysis (<xref ref="asensio-2021a" text="custom">Asensio et al. (2021a)</xref>). This would be
         partly to let drivers acclimatise themselves to the new possibilities. However, as Figure
         <xref ref="fig-elecStat2"/> shows, redrawn as <xref ref="fig-elecstat2x"/> here, over half the
         locations had no charging stations in the test period and there had been little use of some of the others

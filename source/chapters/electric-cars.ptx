@@ -10,7 +10,7 @@
 
     <p><em>Background.</em> A study was carried out in 2014-15 of how electric car drivers used charging facilities provided by a firm participating in the U.S. Department of Energy workplace charging challenge.</p>
     <p><em>Questions.</em> How often did users charge their cars? When did they charge them? How long did they charge them for? Which charging stations were used most? Which incentives work in controlling use of charging stations?</p>
-    <p><em>Sources.</em> <xref ref="asensio-2021a" text="custom">Asensio et al. (2021)</xref> and <xref ref="asensio-2021b" text="custom">Asensio et al. (2021)</xref></p>
+    <p><em>Sources.</em> <xref ref="asensio-2021a" text="custom">Asensio et al. (2021a)</xref> and <xref ref="asensio-2021b" text="custom">Asensio et al. (2021b)</xref></p>
     <p><em>Structure.</em> 3395 charging sessions with 24 variables were reported, including user, location, time, charge, and cost.</p>
   </introduction>
 
@@ -48,7 +48,7 @@
 
     <p>The numbers of charges over the period of the study are shown in <xref ref="fig-elecChU"/>. The sharp dips are probably at weekends (as will be confirmed by <xref ref="fig-elecScats"/> later).</p>
 
-    <p>The study lasted for a year from mid-November 2014 to early October 2015. The researchers state in their article (<xref ref="asensio-2021a" text="custom">Asensio et al. (2021)</xref>) that the first three months were a testing period and that the remaining nine months were the analysis period. Their code (which they provide on the web along with their dataset) shows that the testing period began on 18 November 2014, when the first charging was recorded, and ended on 18 February 2015. Charging facilities were introduced at different locations over time (<q>The charging stations were installed at a rate of approximately 2 per week</q>), so not all could be used over the full analysis period. <xref ref="fig-elecStatts"/> displays the cumulative number of charging stations available for each facility type based on the date of first use.</p>
+    <p>The study lasted for a year from mid-November 2014 to early October 2015. The researchers state in their article (<xref ref="asensio-2021a" text="custom">Asensio et al. (2021a)</xref>) that the first three months were a testing period and that the remaining nine months were the analysis period. Their code (which they provide on the web along with their dataset) shows that the testing period began on 18 November 2014, when the first charging was recorded, and ended on 18 February 2015. Charging facilities were introduced at different locations over time (<q>The charging stations were installed at a rate of approximately 2 per week</q>), so not all could be used over the full analysis period. <xref ref="fig-elecStatts"/> displays the cumulative number of charging stations available for each facility type based on the date of first use.</p>
 
     <figure xml:id="fig-elecStatts">
       <caption>Numbers of charging stations by FacilityType over the study.</caption>

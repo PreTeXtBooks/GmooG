@@ -27,7 +27,7 @@
       <title>Cases</title>
       <p>
         Datasets can be sorted and ordered in many ways. The cases in the <em>astronauts</em> dataset on space
-        travel (<xref ref="tidyt-2020b" text="custom">rfordatascience (2020)</xref>) could be sorted into groups by nationality or sex. They could be
+        travel (<xref ref="tidyt-2020b" text="custom">rfordatascience (2020b)</xref>) could be sorted into groups by nationality or sex. They could be
         ordered by year of mission or by year of birth. They could be sorted and ordered by combinations of these
         variables, for instance, by year of birth within nationality. Grouping and ordering datasets often reveals
         structures that default orders&#8212;whether lexicographic, temporal or random&#8212;may not. Ordering and
