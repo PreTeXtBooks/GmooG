@@ -228,7 +228,8 @@
       <em>Further questions.</em> Can reasons for the daily patterns in non-deer vehicle accidents be found?
     </p>
 
-    <p><em>Graphical takeaways</em></p>
+    <subsection>
+     <title>Graphical takeaways</title>
       <ul>
         <li><p>Axis labels for time series can be placed in different positions for the same data. Whatever is done should be stated. (<xref ref="fig-deer1"/>)</p></li>
         <li><p>Smoothing picks out trends in time series. (<xref ref="fig-deer3"/>)</p></li>
