@@ -353,7 +353,7 @@
         <image source="images/btw23X-1.png">
           <description>UpAndDown plot showing absolute changes in party support between the last two German elections as area and relative changes as height, with party colours.</description>
         </image>
-        <caption><p>UpAndDown plot of absolute and relative changes in party support between two German elections.</p></caption>
+        <caption><p>An UpAndDown plot showing absolute changes in party support between the last two German elections as area and relative changes as height.</p></caption>
       </figure>
         </li>
         <li><p>Perceptual bias: we see what we want to see.</p></li>
@@ -431,7 +431,7 @@
         <image source="images/movHists-1.png">
           <description>Two histograms of movie runtimes side by side: the default histogram on the left with a wide range and large bins, and a varied one on the right showing only films up to 3 hours with 1-minute bins, revealing more detail.</description>
         </image>
-        <caption><p>Histograms of movie runtimes, the default on the left and a varied one on the right.</p></caption>
+        <caption><p>Histograms of movie runtimes, the default on the left and a varied one on the right (note the different scales).</p></caption>
       </figure>
     </subsection>
 
