@@ -69,8 +69,8 @@
     <p>
       There is an overall rise in each monthly series with some, occasionally dramatic, variation, and a possible
       seasonal pattern. Summarising over months is a bit of an approximation, as the months are not all the same
-      length. An alternative is to fit another smooth across the data, rougher than the one in Figure
-      <xref ref="fig-deer1"/>, and overlay the resulting individual annual series. This has been done in Figure
+      length. An alternative is to fit another smooth across the data, rougher than the one in
+      <xref ref="fig-deer1"/>, and overlay the resulting individual annual series. This has been done in
       <xref ref="fig-deer3"/>. An adaptive smooth has been used.
     </p>
 
@@ -167,11 +167,11 @@
 
     <p>
       There is little change over the ten years in non-deer vehicle accidents, with a decline of around 5%. The
-      overall level is over twice the level of accidents involving deer. Graphics similar to Figures
+      overall level is over twice the level of accidents involving deer. Graphics similar to
       <xref ref="fig-deer2"/> and <xref ref="fig-deer3"/> can be drawn to show that there is a little seasonality
-      in the data, but not nearly so much as in the deer-vehicle accident data. A graphic like Figure
+      in the data, but not nearly so much as in the deer-vehicle accident data. A graphic like
       <xref ref="fig-deer4"/> would show that there is not much variation through the week either, apart from
-      fewer accidents on a Sunday. The daily pattern of non-deer accidents is shown in Figure
+      fewer accidents on a Sunday. The daily pattern of non-deer accidents is shown in
       <xref ref="fig-veh2"/>.
     </p>
 
@@ -184,7 +184,7 @@
 
     <p>
       Instead of morning and evening peaks, there are higher levels through the day and lower levels in the
-      middle of the night. Interestingly, the vertical scale is the same as that of Figure
+      middle of the night. Interestingly, the vertical scale is the same as that of
       <xref ref="fig-deer7"/>. In fact the half-hours with the highest average rates for deer accidents have
       slightly higher values than the half-hours with the highest average rates for accidents not involving deer,
       despite there being over twice as many non-deer accidents overall.
