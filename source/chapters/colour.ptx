@@ -79,7 +79,7 @@
       <title>Colours distinguish</title>
 
       <p>
-        The colour scheme in <xref ref="fig-swm50a"/>, repeated here in a smaller form as Figure
+        The colour scheme in <xref ref="fig-swm50a"/>, repeated here in a smaller form as
         <xref ref="fig-swims4"/>, emphasises the four different strokes in swimming. The colours work because
         there is no overlapping. If there was overlapping, facets with ghostplotting could be used.
       </p>
@@ -94,10 +94,10 @@
       <p>
         In <xref ref="ch-light-speed"/> there are three separate scatterplots using colour, each with different
         aims, each coloured differently. <xref ref="fig-michncol-1"/>, <xref ref="fig-michncol-2"/>,
-        <xref ref="fig-michncol-3"/> shows them: Stigler's division of Michelson's data into five groups (Figure
-        <xref ref="fig-ptmich"/>); Michelson's grouping the data by three times of day (Figure
-        <xref ref="fig-michT"/>); Newcomb's data including the responsible observers (Figure
-        <xref ref="fig-newct2X"/>). In the first
+        <xref ref="fig-michncol-3"/> shows them: Stigler's division of Michelson's data into five groups
+        (<xref ref="fig-ptmich"/>); Michelson's grouping the data by three times of day
+        (<xref ref="fig-michT"/>); Newcomb's data including the responsible observers
+        (<xref ref="fig-newct2X"/>). In the first
         plot the colours show the arbitrariness of the division into groups. In the second plot the morning and
         afternoon cases are obvious, but the single night-time observation is not (the legend was ordered to help
         with this). Colour is effective in the third plot, because Holcombe and Newcomb observed on different days.
@@ -141,8 +141,8 @@
       </figure>
 
       <p>
-        The boxplots of chess players' ratings by age in <xref ref="sec-chess-discussion"/> is another example, (Figure
-        <xref ref="fig-ratAge15b"/> repeated as <xref ref="fig-boxchess"/>).
+        The boxplots of chess players' ratings by age in <xref ref="sec-chess-discussion"/> is another example,
+        (<xref ref="fig-ratAge15b"/> repeated as <xref ref="fig-boxchess"/>).
       </p>
 
       <figure xml:id="fig-boxchess">
@@ -192,8 +192,8 @@
         Using the same colours consistently for the same dataset underscores connections. If there are several
         displays involving the same data, then colouring by a grouping should be the same for all. In
         <xref ref="ch-darwin-finches"/> five species are displayed in a barchart, two boxplots, a scatterplot, and a
-        parallel coordinate plot. The first four plots are redrawn in miniature here (Figure
-        <xref ref="fig-finchis-1"/>, <xref ref="fig-finchis-2"/>, <xref ref="fig-finchis-3"/>).
+        parallel coordinate plot. The first four plots are redrawn in miniature here
+        (<xref ref="fig-finchis-1"/>, <xref ref="fig-finchis-2"/>, <xref ref="fig-finchis-3"/>).
       </p>
 
       <figure xml:id="fig-finchis-1">
@@ -227,8 +227,8 @@
 
       <p>
         Different groupings should use different colours. In <xref ref="sec-palmer-pcp"/> three plot ensembles
-        have the same form, but with different subgroups selected, so different colours are employed (Figure
-        <xref ref="fig-palmergs-1"/>, <xref ref="fig-palmergs-2"/>, <xref ref="fig-palmergs-3"/>).
+        have the same form, but with different subgroups selected, so different colours are employed
+        (<xref ref="fig-palmergs-1"/>, <xref ref="fig-palmergs-2"/>, <xref ref="fig-palmergs-3"/>).
       </p>
 
       <figure xml:id="fig-palmergs-1">
