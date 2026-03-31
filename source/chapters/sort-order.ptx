@@ -222,7 +222,7 @@
       <p>
         Sorting into groups was used in <xref ref="ch-gapminder"/> to draw countries in the same region together (<xref ref="fig-ler4"/>), in
         <xref ref="ch-electric-cars"/> to keep charging stations at the same location together and to colour locations
-        by type, in <xref ref="ch-us-fuel"/> to put what were thought to be similarly sized cars together, in Figure
+        by type, in <xref ref="ch-us-fuel"/> to put what were thought to be similarly sized cars together, in
         <xref ref="fig-khlv"/>, shown again here as <xref ref="fig-khlvx"/>, to place events for the same swimming stroke together, and in <xref ref="ch-bundestag-election"/> to keep constituencies in the same Bundesland together and to display the spatial
         distributions of seat wins for the individual parties.
       </p>
@@ -335,7 +335,7 @@
       <p>
         Parallel coordinates are excellent for studying the data from individual decathlon performances too. Now
         the polylines link performances of the same individual. The scales of the vertical axes are the same for
-        each event and the same as in <xref ref="fig-decbox1"/>. The difference in Figure
+        each event and the same as in <xref ref="fig-decbox1"/>. The difference in
         <xref ref="fig-pcp1"/> is that the events are ordered by increasing median event points.
       </p>
 
