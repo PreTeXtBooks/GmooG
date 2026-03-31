@@ -65,7 +65,7 @@
     </figure>
 
     <p>
-      The support for the main parties in the elections of 2021 and 2017 is shown in Figure
+      The support for the main parties in the elections of 2021 and 2017 is shown in
       <xref ref="fig-btw1"/>. Colours associated with the parties have been used. The CDU/CSU lost heavily, while
       the SPD and Greens gained. Changes in party performance are easier to see in a plot of the gains and losses
       in percentage points. It is now apparent that the Greens gained more than the SPD and the Linke lost
@@ -102,7 +102,7 @@
     </figure>
 
     <p>
-      A key advantage of UpAndDown plots is that area is conserved when drilling down. Figure
+      A key advantage of UpAndDown plots is that area is conserved when drilling down.
       <xref ref="fig-btw4a"/> shows the changes by region (West, East, Berlin) for each party. The SPD and FDP
       improved most in the East, albeit from low levels at the last election in 2017. 'Other' parties did better
       in the West than the East.
@@ -139,7 +139,7 @@
     <title>Are there geographic patterns?</title>
 
     <p>
-      There are strong geographic patterns in party support across the constituencies. Figure
+      There are strong geographic patterns in party support across the constituencies.
       <xref ref="fig-btwmapg"/> shows support for the Greens in choropleth maps.
     </p>
 
@@ -171,8 +171,8 @@
     </p>
 
     <p>
-      Associations with other variables can be explored using a parallel coordinate plot (Figure
-      <xref ref="fig-btwgpcp"/>). The Greens did well where there were more younger people and where there were
+      Associations with other variables can be explored using a parallel coordinate plot
+      (<xref ref="fig-btwgpcp"/>). The Greens did well where there were more younger people and where there were
       more qualified to go to university.
     </p>
 
@@ -313,7 +313,7 @@
     </p>
 
     <p>
-      With a first-past-the-post system it is possible to win a seat with a low percentage of the votes. Figure
+      With a first-past-the-post system it is possible to win a seat with a low percentage of the votes.
       <xref ref="fig-btwdotv"/> displays dotplots of the winning percentages by party in the 2021 German election
       and in the 2019 UK election. For the UK the three dotplots to the right are for the 18 seats won by parties
       based in Northern Ireland, the 4 seats won by Plaid Cymru in Wales, and the 48 seats won by the SNP in
@@ -391,7 +391,7 @@
     <p>
       In many constituencies the party of the candidate that had the most Erststimmen also received the most
       Zweitstimmen. Restricting the map to the constituencies where one party had the most Erststimmen and another
-      the most Zweitstimmen and colouring by the party with the most Zweitstimmen gives Figure
+      the most Zweitstimmen and colouring by the party with the most Zweitstimmen gives
       <xref ref="fig-btwmapd"/>. SPD candidates failed to win seats on Erststimmen relatively often, while Green
       and AfD candidates failed occasionally. Neither the CDU nor the CSU ever failed to win on Erststimmen when
       they won on Zweitstimmen.
