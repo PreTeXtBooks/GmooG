@@ -291,7 +291,7 @@
       </figure>
       <p>
         The first dataset had been scraped from the web. Some issues arose concerning the consistency of the names
-        used for events (cf. <xref ref="fig-olyEg"/>) and there were some unexpected missing values. Figure
+        used for events (cf. <xref ref="fig-olyEg"/>) and there were some unexpected missing values.
         <xref ref="fig-olyAmd"/>, redrawn here as <xref ref="fig-olyamdx-prov"/>, shows gaps (i.e. missing
         values) in the gold medal performances for some men's field events. The temporary decline in shot put
         performances at a time the results are missing for other events is suggestive.
@@ -405,7 +405,7 @@
         price. There is clear evidence of heaping on rounded carat values that also affects the distribution
         pattern of other variables. Some of these properties will affect analyses, some will not, they all
         contribute to a better understanding of the dataset. <xref ref="fig-histcarx"/>, a reproduction of
-        <xref ref="fig-histCar"/>, shows the heaping. Other examples of heaping can be seen in Figure
+        <xref ref="fig-histCar"/>, shows the heaping. Other examples of heaping can be seen in
         <xref ref="fig-movierunh"/> for movie runtimes and in <xref ref="fig-comtimes"/> for finishing
         times in the Comrades Marathon.
       </p>
@@ -422,7 +422,7 @@
       <p>
         There is much interest in electric cars and how people use charging stations. The researchers wrote that
         they had an initial period of three months for testing before analysis (<xref ref="asensio-2021a" text="custom">Asensio et al. (2021a)</xref>). This would be
-        partly to let drivers acclimatise themselves to the new possibilities. However, as Figure
+        partly to let drivers acclimatise themselves to the new possibilities. However, as
         <xref ref="fig-elecStat2"/> shows, redrawn as <xref ref="fig-elecstat2x"/> here, over half the
         locations had no charging stations in the test period and there had been little use of some of the others
         by then.
@@ -519,8 +519,8 @@
         data, although most are probably based on the report of the British Board of Trade in 1912. The best
         modern source appears to be <xref ref="titanic-2021" text="custom">Encyclopedia Titanica (2021)</xref>. It has coordinated the efforts of many individuals and has
         steadily added to the information available on the sad fate of the Titanic. In particular, the knowledge
-        of which departments individual crew members belonged to has improved (leading to Figure
-        <xref ref="fig-titancrew"/>), as has knowledge of the ages of the crew and passengers (leading to Figure
+        of which departments individual crew members belonged to has improved (leading to
+        <xref ref="fig-titancrew"/>), as has knowledge of the ages of the crew and passengers (leading to
         <xref ref="fig-titanagesc"/>).
       </p>
       <p>
