@@ -36,7 +36,7 @@
 
     <p><xref ref="fig-malvis"/> displays how often the different combinations of test results arose. The first column shows the cases in which all tests gave negative results for malaria and the second column all cases with positive results. The barchart at the foot of the plot shows how often each combination of test results was observed. Rules for the four tests are given in <xref ref="arndt-2021" text="custom">Arndt et al. (2021)</xref>. There was disagreement at one level or another for a substantial share of the cases. All 16 possible combinations of results are in evidence.</p>
 
-    <p>The next display shows that no one test dominates another. The main diagonal elements in each subdisplay show the numbers of disagreements between those two tests. In each case there are disagreements of both kinds, positive-negative and negative-positive. Serious cases are presumably recognised by all methods. Borderline cases may be recognised by some but not by others.</p>
+    <p>The next display shows that no one test dominates another. The off-diagonal elements in each subdisplay show the numbers of disagreements between those two tests. In each case there are disagreements of both kinds, positive-negative and negative-positive. Serious cases are presumably recognised by all methods. Borderline cases may be recognised by some but not by others.</p>
 
     <figure xml:id="fig-malpcp">
       <image source="images/malpcp-1.png">
