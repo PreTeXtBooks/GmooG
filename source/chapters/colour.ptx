@@ -104,23 +104,28 @@
         Different colour schemes were used to discourage viewers assuming colours meant the same thing in all plots.
       </p>
 
-      <figure xml:id="fig-michncol-1">
-        <image source="images/michNcol-1.png">
-          <description>A scatterplot of Michelson's speed of light data with points coloured by Stigler's arbitrary division into five groups. The colouring reveals the arbitrariness of the division as there is no obvious pattern corresponding to the groups.</description>
-        </image>
-        <caption><p>Speed of light plot showing Stigler's division of Michelson's data into five groups.</p></caption>
-      </figure>
-      <figure xml:id="fig-michncol-2">
-        <image source="images/michNcol-2.png">
-          <description>A scatterplot of Michelson's speed of light data with points coloured by time of day (morning, afternoon, night). Morning and afternoon observations are clearly visible as two groups, while the single night-time observation is harder to spot.</description>
-        </image>
-        <caption><p>Speed of light plot with Michelson's data coloured by time of day.</p></caption>
-      </figure>
-      <figure xml:id="fig-michncol-3">
-        <image source="images/michNcol-3.png">
-          <description>A scatterplot of Newcomb's speed of light data with points coloured by observer (Newcomb vs Holcombe). The colour clearly separates the two observers who measured on different days, revealing systematic differences between their measurements.</description>
-        </image>
-        <caption><p>Speed of light plot with Newcomb's data coloured by observer.</p></caption>
+      <figure xml:id="fig-michncol">
+        <sidebyside widths="30% 30% 30%" margins="5%">
+          <figure xml:id="fig-michncol-1">
+            <image source="images/michNcol-1.png">
+              <description>A scatterplot of Michelson's speed of light data with points coloured by Stigler's arbitrary division into five groups. The colouring reveals the arbitrariness of the division as there is no obvious pattern corresponding to the groups.</description>
+            </image>
+            <caption><p>Stigler's division into five groups.</p></caption>
+          </figure>
+          <figure xml:id="fig-michncol-2">
+            <image source="images/michNcol-2.png">
+              <description>A scatterplot of Michelson's speed of light data with points coloured by time of day (morning, afternoon, night). Morning and afternoon observations are clearly visible as two groups, while the single night-time observation is harder to spot.</description>
+            </image>
+            <caption><p>Michelson's data coloured by time of day.</p></caption>
+          </figure>
+          <figure xml:id="fig-michncol-3">
+            <image source="images/michNcol-3.png">
+              <description>A scatterplot of Newcomb's speed of light data with points coloured by observer (Newcomb vs Holcombe). The colour clearly separates the two observers who measured on different days, revealing systematic differences between their measurements.</description>
+            </image>
+            <caption><p>Newcomb's data coloured by observer.</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Three speed of light plots with three different colour schemes because they represent three different situations.</p></caption>
       </figure>
     </subsection>
 
@@ -196,23 +201,28 @@
         (<xref ref="fig-finchis-1"/>, <xref ref="fig-finchis-2"/>, <xref ref="fig-finchis-3"/>).
       </p>
 
-      <figure xml:id="fig-finchis-1">
-        <image source="images/finchIs-1.png">
-          <description>A barchart of five species of Darwin's finches using consistent species colours. Each species has a unique colour that is used consistently across all plots in the series.</description>
-        </image>
-        <caption><p>Barchart of five species of Darwin's finches.</p></caption>
-      </figure>
-      <figure xml:id="fig-finchis-2">
-        <image source="images/finchIs-2.png">
-          <description>Boxplots for five species of Darwin's finches using the same consistent species colours as the barchart. The same colour for each species reinforces the connection across the different plot types.</description>
-        </image>
-        <caption><p>Boxplots of Darwin's finch measurements by species.</p></caption>
-      </figure>
-      <figure xml:id="fig-finchis-3">
-        <image source="images/finchIs-3.png">
-          <description>A scatterplot or parallel coordinate plot for five species of Darwin's finches using the same consistent species colours as the other plots. The consistent colouring makes it easy to track each species across different visualisation types.</description>
-        </image>
-        <caption><p>Further plot of Darwin's finch measurements by species.</p></caption>
+      <figure xml:id="fig-finchis">
+        <sidebyside widths="30% 30% 30%" margins="5%">
+          <figure xml:id="fig-finchis-1">
+            <image source="images/finchIs-1.png">
+              <description>A barchart of five species of Darwin's finches using consistent species colours. Each species has a unique colour that is used consistently across all plots in the series.</description>
+            </image>
+            <caption><p>Barchart of five species.</p></caption>
+          </figure>
+          <figure xml:id="fig-finchis-2">
+            <image source="images/finchIs-2.png">
+              <description>Boxplots for five species of Darwin's finches using the same consistent species colours as the barchart. The same colour for each species reinforces the connection across the different plot types.</description>
+            </image>
+            <caption><p>Boxplots by species.</p></caption>
+          </figure>
+          <figure xml:id="fig-finchis-3">
+            <image source="images/finchIs-3.png">
+              <description>A scatterplot or parallel coordinate plot for five species of Darwin's finches using the same consistent species colours as the other plots. The consistent colouring makes it easy to track each species across different visualisation types.</description>
+            </image>
+            <caption><p>Further plot by species.</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Plots of five species of Darwin's finches using consistent species colours.</p></caption>
       </figure>
 
       <p>
@@ -231,23 +241,28 @@
         (<xref ref="fig-palmergs-1"/>, <xref ref="fig-palmergs-2"/>, <xref ref="fig-palmergs-3"/>).
       </p>
 
-      <figure xml:id="fig-palmergs-1">
-        <image source="images/palmerGs-1.png">
-          <description>A plot ensemble for one group of Palmer penguins with that subgroup highlighted in a distinctive colour while the rest are shown in grey. The specific colour chosen for this selection differs from those used for other subgroup selections in the series.</description>
-        </image>
-        <caption><p>Plot ensemble for one group of penguins (using different colours for the selections).</p></caption>
-      </figure>
-      <figure xml:id="fig-palmergs-2">
-        <image source="images/palmerGs-2.png">
-          <description>A plot ensemble for a second group of Palmer penguins with that subgroup highlighted in a different distinctive colour from the first plot in the series, while the rest appear in grey.</description>
-        </image>
-        <caption><p>Plot ensemble for a second group of penguins (using different colours for the selections).</p></caption>
-      </figure>
-      <figure xml:id="fig-palmergs-3">
-        <image source="images/palmerGs-3.png">
-          <description>A plot ensemble for a third group of Palmer penguins with that subgroup highlighted in yet another distinctive colour, different from those in the first two plots, while the rest appear in grey.</description>
-        </image>
-        <caption><p>Plot ensemble for a third group of penguins (using different colours for the selections).</p></caption>
+      <figure xml:id="fig-palmergs">
+        <sidebyside widths="30% 30% 30%" margins="5%">
+          <figure xml:id="fig-palmergs-1">
+            <image source="images/palmerGs-1.png">
+              <description>A plot ensemble for one group of Palmer penguins with that subgroup highlighted in a distinctive colour while the rest are shown in grey. The specific colour chosen for this selection differs from those used for other subgroup selections in the series.</description>
+            </image>
+            <caption><p>Plot ensemble for one group.</p></caption>
+          </figure>
+          <figure xml:id="fig-palmergs-2">
+            <image source="images/palmerGs-2.png">
+              <description>A plot ensemble for a second group of Palmer penguins with that subgroup highlighted in a different distinctive colour from the first plot in the series, while the rest appear in grey.</description>
+            </image>
+            <caption><p>Plot ensemble for a second group.</p></caption>
+          </figure>
+          <figure xml:id="fig-palmergs-3">
+            <image source="images/palmerGs-3.png">
+              <description>A plot ensemble for a third group of Palmer penguins with that subgroup highlighted in yet another distinctive colour, different from those in the first two plots, while the rest appear in grey.</description>
+            </image>
+            <caption><p>Plot ensemble for a third group.</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Plot ensembles for different groups of penguins (using different colours for the selections).</p></caption>
       </figure>
 
       <p>
@@ -344,23 +359,28 @@
         <xref ref="fig-colblind-3"/>.
       </p>
 
-      <figure xml:id="fig-colblind-1">
-        <image source="images/colBlind-1.png">
-          <description>A graphic from the Gay Rights chapter using a colour blind friendly palette. The colours are distinguishable even under different types of colour blindness.</description>
-        </image>
-        <caption><p>Gay rights survey plot using a colour blind palette.</p></caption>
-      </figure>
-      <figure xml:id="fig-colblind-2">
-        <image source="images/colBlind-2.png">
-          <description>A graphic from the Palmer Penguins chapter using the same colour blind friendly palette as the other examples in this group. The consistency of palette use across very different datasets illustrates how a single good palette can serve diverse needs.</description>
-        </image>
-        <caption><p>Penguin plot using a colour blind palette.</p></caption>
-      </figure>
-      <figure xml:id="fig-colblind-3">
-        <image source="images/colBlind-3.png">
-          <description>A graphic from the Comrades Marathon chapter using the same colour blind friendly palette. The three examples together demonstrate how the same palette can work effectively across very different types of data and visualisation.</description>
-        </image>
-        <caption><p>Comrades Marathon plot using a colour blind palette.</p></caption>
+      <figure xml:id="fig-colblind">
+        <sidebyside widths="30% 30% 30%" margins="5%">
+          <figure xml:id="fig-colblind-1">
+            <image source="images/colBlind-1.png">
+              <description>A graphic from the Gay Rights chapter using a colour blind friendly palette. The colours are distinguishable even under different types of colour blindness.</description>
+            </image>
+            <caption><p>Gay rights survey.</p></caption>
+          </figure>
+          <figure xml:id="fig-colblind-2">
+            <image source="images/colBlind-2.png">
+              <description>A graphic from the Palmer Penguins chapter using the same colour blind friendly palette as the other examples in this group. The consistency of palette use across very different datasets illustrates how a single good palette can serve diverse needs.</description>
+            </image>
+            <caption><p>Penguin plot.</p></caption>
+          </figure>
+          <figure xml:id="fig-colblind-3">
+            <image source="images/colBlind-3.png">
+              <description>A graphic from the Comrades Marathon chapter using the same colour blind friendly palette. The three examples together demonstrate how the same palette can work effectively across very different types of data and visualisation.</description>
+            </image>
+            <caption><p>Comrades Marathon.</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Three uses of a colour blind palette: gay rights survey, penguin plot, and Comrades Marathon.</p></caption>
       </figure>
     </subsection>
 
@@ -443,23 +463,28 @@
         with plain backgrounds. Other plots might benefit from a change of background too.
       </p>
 
-      <figure xml:id="fig-backs-1">
-        <image source="images/backs-1.png">
-          <description>A map of Bertin's French workforce data drawn with a plain (white) background. The absence of gridlines and the ggplot2 grey background makes the geographic patterns in the data clearer.</description>
-        </image>
-        <caption><p>Bertin's French workforce map with a plain background.</p></caption>
-      </figure>
-      <figure xml:id="fig-backs-2">
-        <image source="images/backs-2.png">
-          <description>A doubledecker plot of Titanic survival rates drawn with a plain background. The mosaic-style plot benefits from a clean white background as the coloured tiles provide all the visual structure needed.</description>
-        </image>
-        <caption><p>Titanic doubledecker plot with a plain background.</p></caption>
-      </figure>
-      <figure xml:id="fig-backs-3">
-        <image source="images/backs-3.png">
-          <description>A parallel coordinate plot of Darwin's finch measurements drawn with a plain background. Without the default grey background and gridlines, the coloured species lines are more clearly visible against the white background.</description>
-        </image>
-        <caption><p>Darwin's finches parallel coordinate plot with a plain background.</p></caption>
+      <figure xml:id="fig-backs">
+        <sidebyside widths="30% 30% 30%" margins="5%">
+          <figure xml:id="fig-backs-1">
+            <image source="images/backs-1.png">
+              <description>A map of Bertin's French workforce data drawn with a plain (white) background. The absence of gridlines and the ggplot2 grey background makes the geographic patterns in the data clearer.</description>
+            </image>
+            <caption><p>Bertin's map with a plain background.</p></caption>
+          </figure>
+          <figure xml:id="fig-backs-2">
+            <image source="images/backs-2.png">
+              <description>A doubledecker plot of Titanic survival rates drawn with a plain background. The mosaic-style plot benefits from a clean white background as the coloured tiles provide all the visual structure needed.</description>
+            </image>
+            <caption><p>Titanic doubledecker with a plain background.</p></caption>
+          </figure>
+          <figure xml:id="fig-backs-3">
+            <image source="images/backs-3.png">
+              <description>A parallel coordinate plot of Darwin's finch measurements drawn with a plain background. Without the default grey background and gridlines, the coloured species lines are more clearly visible against the white background.</description>
+            </image>
+            <caption><p>Darwin's finches PCP with a plain background.</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Graphics drawn with plain backgrounds.</p></caption>
       </figure>
 
       <p>

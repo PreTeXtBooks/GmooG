@@ -124,22 +124,24 @@
         ordering of the vehicle types is on the left in <xref ref="fig-swsuvx-1"/>.
       </p>
 
-      <figure xml:id="fig-swsuvx-1">
-        <image source="images/swSUVx-1.png">
-          <description>A plot of station wagon and SUV sales by year with vehicle types in default lexicographic
-          order, making trends harder to follow.</description>
-        </image>
-        <caption><p>Station wagon and SUV sales by year with vehicle types in default lexicographic
-        ordering.</p></caption>
-      </figure>
-
-      <figure xml:id="fig-swsuvx-2">
-        <image source="images/swSUVx-2.png">
-          <description>A plot of station wagon and SUV sales by year with vehicle types in a purposeful order:
-          station wagons by increasing size first, then SUVs by type and drive, revealing clear trends.</description>
-        </image>
-        <caption><p>Station wagon and SUV sales by year with vehicle types in a purposeful ordering: station
-        wagons first by increasing size, then SUVs by type and drive.</p></caption>
+      <figure xml:id="fig-swsuvx">
+        <sidebyside widths="45% 45%" margins="5%">
+          <figure xml:id="fig-swsuvx-1">
+            <image source="images/swSUVx-1.png">
+              <description>A plot of station wagon and SUV sales by year with vehicle types in default lexicographic
+              order, making trends harder to follow.</description>
+            </image>
+            <caption><p>Default lexicographic ordering.</p></caption>
+          </figure>
+          <figure xml:id="fig-swsuvx-2">
+            <image source="images/swSUVx-2.png">
+              <description>A plot of station wagon and SUV sales by year with vehicle types in a purposeful order:
+              station wagons by increasing size first, then SUVs by type and drive, revealing clear trends.</description>
+            </image>
+            <caption><p>Purposeful ordering: station wagons then SUVs.</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Annual sales of station wagons and SUVs in default ordering (left) and revised ordering (right).</p></caption>
       </figure>
 
       <p>
@@ -376,20 +378,24 @@
         <xref ref="fig-palpcps-1"/> and <xref ref="fig-palpcps-2"/> show <xref ref="fig-palpcp1"/> and <xref ref="fig-palpcp2"/> from <xref ref="sec-palmer-pcp"/>. The reordered version on the right is easier to decode.
       </p>
 
-      <figure xml:id="fig-palpcps-1">
-        <image source="images/palpcps-1.png">
-          <description>A parallel coordinate plot of the Palmer Penguins dataset before reordering of
-          categorical levels, showing many crossing lines that are difficult to interpret.</description>
-        </image>
-        <caption><p>Palmer Penguin parallel coordinate plot before reordering of categorical levels.</p></caption>
-      </figure>
-
-      <figure xml:id="fig-palpcps-2">
-        <image source="images/palpcps-2.png">
-          <description>A parallel coordinate plot of the Palmer Penguins dataset after reordering of categorical
-          levels, with fewer line crossings and a clearer structure that is easier to decode.</description>
-        </image>
-        <caption><p>Palmer Penguin parallel coordinate plot after reordering of categorical levels.</p></caption>
+      <figure xml:id="fig-palpcps">
+        <sidebyside widths="45% 45%" margins="5%">
+          <figure xml:id="fig-palpcps-1">
+            <image source="images/palpcps-1.png">
+              <description>A parallel coordinate plot of the Palmer Penguins dataset before reordering of
+              categorical levels, showing many crossing lines that are difficult to interpret.</description>
+            </image>
+            <caption><p>Before reordering of categorical levels.</p></caption>
+          </figure>
+          <figure xml:id="fig-palpcps-2">
+            <image source="images/palpcps-2.png">
+              <description>A parallel coordinate plot of the Palmer Penguins dataset after reordering of categorical
+              levels, with fewer line crossings and a clearer structure that is easier to decode.</description>
+            </image>
+            <caption><p>After reordering of categorical levels.</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Palmer Penguin parallel coordinate plots before (left) and after (right) reordering of categorical levels.</p></caption>
       </figure>
     </subsection>
   </section>
