@@ -37,7 +37,7 @@
       There were relatively few diesel cars in this display. Front-Wheel Drive cars used mainly regular gasoline. Rear-Wheel and All-Wheel Drive cars used mainly premium gasoline.
     </p>
 
-    <p>Americans (and the British) measure fuel efficiency in mpg (miles per gallon). Europeans would use an inverse measure, litres per 100 kilometres. The dataset provides two estimates of fuel efficiency, one for city driving and one for highway driving, and these are combined in an overall figure that assumes 55% of driving distance is in city conditions. There is an R package, <c>fueleconomy</c>, that makes the data available but only up to 2015. <xref ref="fig-vehcf"/> uses boxplots to summarise mpg data for the two gasolines. There were some high outliers amongst the Regular Gasoline cars with Front-Wheel Drive, i.e., they use far more fuel than other models in their class.</p>
+    <p>Americans (and the British) measure fuel efficiency in mpg (miles per gallon). Europeans would use an inverse measure, litres per 100 kilometres. The dataset provides two estimates of fuel efficiency, one for city driving and one for highway driving, and these are combined in an overall figure that assumes 55% of driving distance is in city conditions. There is an R package, <c>fueleconomy</c>, that makes the data available but only up to 2015. <xref ref="fig-vehcf"/> uses boxplots to summarise mpg data for the two gasolines. There were some high outliers amongst the Regular Gasoline cars with Front-Wheel Drive, i.e., they use far less fuel than other models in their class.</p>
 
     <figure xml:id="fig-vehcf">
       <image source="images/vehCf-1.png">
@@ -68,7 +68,7 @@
       </caption>
     </figure>
 
-    <p><xref ref="fig-vehyr"/> also shows that the worst mpg values were recorded over 15 years ago or more. Testing procedures have changed over time and so like may not be being compared with like over such a long period.</p>
+    <p><xref ref="fig-vehyr"/> also shows that the best mpg values were recorded over 15 years ago or more. Testing procedures have changed over time and so like may not be being compared with like over such a long period.</p>
   </section>
 
   <section xml:id="sec-usfuel-luxury">
