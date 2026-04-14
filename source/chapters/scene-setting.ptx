@@ -151,32 +151,38 @@
 
       <p>Four examples of well-known themes are shown in the next figure.  They are distinctive and different, imitations of actual styles offered in the <em>ggthemes</em> R package.  Corresponding default colour palettes from the same package have been used.  Experts from the organisations whose themes have been imitated would produce better displays using their own software.</p>
 
-      <figure xml:id="fig-thmb1-1">
-        <image source="images/thmb1-1.png">
-          <description>Barchart of population by world region in 2016, styled using the Excel theme. The bars are coloured with Excel's default colour palette and the background and gridlines follow Excel's visual style.</description>
-        </image>
-        <caption><p>Barchart of population by region 2016 using the Excel theme</p></caption>
-      </figure>
-
-      <figure xml:id="fig-thmb1-2">
-        <image source="images/thmb1-2.png">
-          <description>Barchart of population by world region in 2016, styled using the Google Docs theme. The bars use Google Docs' default colour palette with its characteristic clean background and gridline style.</description>
-        </image>
-        <caption><p>Barchart of population by region 2016 using the Google Docs theme</p></caption>
-      </figure>
-
-      <figure xml:id="fig-thmb2-1">
-        <image source="images/thmb2-1.png">
-          <description>Barchart of population by world region in 2016, styled using the Wall Street Journal theme. The bars use WSJ's characteristic colour palette with its distinct typographic and layout style.</description>
-        </image>
-        <caption><p>Barchart of population by region 2016 using the Wall Street Journal theme</p></caption>
-      </figure>
-
-      <figure xml:id="fig-thmb2-2">
-        <image source="images/thmb2-2.png">
-          <description>Barchart of population by world region in 2016, styled using the Economist theme. The bars use the Economist's colour palette with its distinctive blue background and typography.</description>
-        </image>
-        <caption><p>Barchart of population by region 2016 using the Economist theme</p></caption>
+      <figure xml:id="fig-thmb">
+        <sbsgroup>
+          <sidebyside widths="45% 45%" margins="5%">
+            <figure xml:id="fig-thmb1-1">
+              <image source="images/thmb1-1.png">
+                <description>Barchart of population by world region in 2016, styled using the Excel theme. The bars are coloured with Excel's default colour palette and the background and gridlines follow Excel's visual style.</description>
+              </image>
+              <caption><p>Excel theme</p></caption>
+            </figure>
+            <figure xml:id="fig-thmb1-2">
+              <image source="images/thmb1-2.png">
+                <description>Barchart of population by world region in 2016, styled using the Google Docs theme. The bars use Google Docs' default colour palette with its characteristic clean background and gridline style.</description>
+              </image>
+              <caption><p>Google Docs theme</p></caption>
+            </figure>
+          </sidebyside>
+          <sidebyside widths="45% 45%" margins="5%">
+            <figure xml:id="fig-thmb2-1">
+              <image source="images/thmb2-1.png">
+                <description>Barchart of population by world region in 2016, styled using the Wall Street Journal theme. The bars use WSJ's characteristic colour palette with its distinct typographic and layout style.</description>
+              </image>
+              <caption><p>Wall Street Journal theme</p></caption>
+            </figure>
+            <figure xml:id="fig-thmb2-2">
+              <image source="images/thmb2-2.png">
+                <description>Barchart of population by world region in 2016, styled using the Economist theme. The bars use the Economist's colour palette with its distinctive blue background and typography.</description>
+              </image>
+              <caption><p>Economist theme</p></caption>
+            </figure>
+          </sidebyside>
+        </sbsgroup>
+        <caption><p>Barchart of population by region 2016 using four themes: Excel and Google Docs (above), Wall Street Journal and Economist (below).</p></caption>
       </figure>
     </subsection>
 
@@ -309,18 +315,22 @@
 
       <p>Comparisons can be made between different subsets or groups, between one selection and the rest of the dataset, between a selection and the whole dataset.  These comparisons may be made by distributional forms (<xref ref="fig-sexAge"/> and <xref ref="fig-dens1520Elo"/>), by features (<xref ref="fig-flightn"/>) or by statistics (e.g., <xref ref="fig-clarityCarat"/>, and <xref ref="fig-titancrew"/>, shown again in <xref ref="fig-comps-1"/> and <xref ref="fig-comps-2"/>).</p>
 
-      <figure xml:id="fig-comps-1">
-        <image source="images/compS-1.png">
-          <description>Boxplot of diamond carat values grouped by clarity category. The boxes show the distribution of carat values for each clarity grade, allowing comparison of how carat size varies across clarity levels.</description>
-        </image>
-        <caption><p>Diamond carats by clarity</p></caption>
-      </figure>
-
-      <figure xml:id="fig-comps-2">
-        <image source="images/compS-2.png">
-          <description>Bar chart or mosaic plot showing Titanic survival rates for passengers and crew. The display compares survival rates across passenger classes and crew, highlighting differences between groups.</description>
-        </image>
-        <caption><p>Titanic survival rates for passengers and crew</p></caption>
+      <figure xml:id="fig-comps">
+        <sidebyside widths="45% 45%" margins="5%">
+          <figure xml:id="fig-comps-1">
+            <image source="images/compS-1.png">
+              <description>Boxplot of diamond carat values grouped by clarity category. The boxes show the distribution of carat values for each clarity grade, allowing comparison of how carat size varies across clarity levels.</description>
+            </image>
+            <caption><p>Diamond carats by clarity</p></caption>
+          </figure>
+          <figure xml:id="fig-comps-2">
+            <image source="images/compS-2.png">
+              <description>Bar chart or mosaic plot showing Titanic survival rates for passengers and crew. The display compares survival rates across passenger classes and crew, highlighting differences between groups.</description>
+            </image>
+            <caption><p>Titanic survival rates</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Diamond carats by clarity (left) and Titanic survival rates for passengers and crew (right).</p></caption>
       </figure>
 
       <p>In statistical analysis it is common to specify a particular comparison, for example whether two means can be taken to be equal or not.  In exploratory analysis many comparisons are made, some explicit that are of interest in advance and some that arise because they stand out.  There may be a large number of groups that could be compared in a large number of ways, as with the fuel efficiency data in <xref ref="ch-us-fuel"/>.</p>
@@ -348,18 +358,22 @@
 
       <p>Juxtaposition can be better for crowded scatterplots (e.g., <xref ref="fig-delfacet"/> rather than <xref ref="fig-delscat"/>, both shown again in <xref ref="fig-supjux-1"/> and <xref ref="fig-supjux-2"/> with the slight change that the plot on the right now includes ghostplotting to provide context for the individual regions).  The disadvantage of juxtaposition is the extra amount of space needed if all plots are full size.</p>
 
-      <figure xml:id="fig-supjux-1">
-        <image source="images/supjux-1.png">
-          <description>Scatterplot showing percentage state shares of delegates at the 1912 and 2020 Democratic conventions. All states are shown together in a single plot, making it difficult to distinguish individual regional groups due to crowding.</description>
-        </image>
-        <caption><p>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions</p></caption>
-      </figure>
-
-      <figure xml:id="fig-supjux-2">
-        <image source="images/supjux-2.png">
-          <description>Faceted scatterplot showing percentage state shares of delegates at the 1912 and 2020 Democratic conventions, broken down by region. Each region is shown in a separate panel with ghostplotted background points showing the full dataset for context, making regional patterns easier to identify.</description>
-        </image>
-        <caption><p>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions by region</p></caption>
+      <figure xml:id="fig-supjux">
+        <sidebyside widths="45% 45%" margins="5%">
+          <figure xml:id="fig-supjux-1">
+            <image source="images/supjux-1.png">
+              <description>Scatterplot showing percentage state shares of delegates at the 1912 and 2020 Democratic conventions. All states are shown together in a single plot, making it difficult to distinguish individual regional groups due to crowding.</description>
+            </image>
+            <caption><p>All states together</p></caption>
+          </figure>
+          <figure xml:id="fig-supjux-2">
+            <image source="images/supjux-2.png">
+              <description>Faceted scatterplot showing percentage state shares of delegates at the 1912 and 2020 Democratic conventions, broken down by region. Each region is shown in a separate panel with ghostplotted background points showing the full dataset for context, making regional patterns easier to identify.</description>
+            </image>
+            <caption><p>States faceted by region</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions (left) and by region (right).</p></caption>
       </figure>
 
       <p>Grids in faceting are constructed using conditioning.  Order the conditioning variables and categories to place groups of interest together (<xref ref="fig-puffmos"/>).  Ghostplotting works well for faceted scatterplots by including comparisons of each individual group with the rest of the data.</p>
@@ -372,18 +386,22 @@
 
       <p>Whichever objects are to be compared should generally be on the same scales, carefully aligned, and close together.  Scales can be the same because they are measured in the same units, when differences in levels are emphasised (e.g., <xref ref="fig-sexAgeHist"/> and <xref ref="fig-astb"/>, drawn again in <xref ref="fig-scales-1"/> and <xref ref="fig-scales-2"/>), or because they have been standardised to a common scale, when distributional shapes are compared (e.g., <xref ref="fig-moviegf"/> and <xref ref="fig-comtimes"/>).  There are many possible standardisations (cf. <xref ref="sec-wrang-transform-combine"/>).</p>
 
-      <figure xml:id="fig-scales-1">
-        <image source="images/scaleS-1.png">
-          <description>Histogram or density plot showing the age distribution of active chess players broken down by sex. The shared scale allows direct comparison of the age distributions for male and female players.</description>
-        </image>
-        <caption><p>Age distribution of active players by sex</p></caption>
-      </figure>
-
-      <figure xml:id="fig-scales-2">
-        <image source="images/scaleS-2.png">
-          <description>Bar chart showing numbers of spaceflight participants broken down by decade and by sex. The common scale enables comparison of participation levels across decades and between male and female participants.</description>
-        </image>
-        <caption><p>Numbers of spaceflight participants by decade and by sex</p></caption>
+      <figure xml:id="fig-scales">
+        <sidebyside widths="45% 45%" margins="5%">
+          <figure xml:id="fig-scales-1">
+            <image source="images/scaleS-1.png">
+              <description>Histogram or density plot showing the age distribution of active chess players broken down by sex. The shared scale allows direct comparison of the age distributions for male and female players.</description>
+            </image>
+            <caption><p>Age distribution of active players by sex</p></caption>
+          </figure>
+          <figure xml:id="fig-scales-2">
+            <image source="images/scaleS-2.png">
+              <description>Bar chart showing numbers of spaceflight participants broken down by decade and by sex. The common scale enables comparison of participation levels across decades and between male and female participants.</description>
+            </image>
+            <caption><p>Spaceflight participants by decade and sex</p></caption>
+          </figure>
+        </sidebyside>
+        <caption><p>Age distribution of active players by sex (left) and numbers of spaceflight participants by decade and by sex (right).</p></caption>
       </figure>
 
       <p>Alignment of axes and placing objects together makes comparisons easier.  The doubledecker plot of Titanic survival rates by passenger class and crew department in <xref ref="fig-titancrew"/> shows the higher survival rate of passengers over crew, the decline in survival rate by passenger class, and the relatively high rate of survival of the deck crew (because they manned the lifeboats).</p>
