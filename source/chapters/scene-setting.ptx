@@ -158,13 +158,11 @@
               <image source="images/thmb1-1.png">
                 <description>Barchart of population by world region in 2016, styled using the Excel theme. The bars are coloured with Excel's default colour palette and the background and gridlines follow Excel's visual style.</description>
               </image>
-              <caption><p>Excel theme</p></caption>
             </figure>
             <figure xml:id="fig-thmb1-2">
               <image source="images/thmb1-2.png">
                 <description>Barchart of population by world region in 2016, styled using the Google Docs theme. The bars use Google Docs' default colour palette with its characteristic clean background and gridline style.</description>
               </image>
-              <caption><p>Google Docs theme</p></caption>
             </figure>
           </sidebyside>
           <sidebyside widths="45% 45%" margins="5%">
@@ -172,17 +170,15 @@
               <image source="images/thmb2-1.png">
                 <description>Barchart of population by world region in 2016, styled using the Wall Street Journal theme. The bars use WSJ's characteristic colour palette with its distinct typographic and layout style.</description>
               </image>
-              <caption><p>Wall Street Journal theme</p></caption>
             </figure>
             <figure xml:id="fig-thmb2-2">
               <image source="images/thmb2-2.png">
                 <description>Barchart of population by world region in 2016, styled using the Economist theme. The bars use the Economist's colour palette with its distinctive blue background and typography.</description>
               </image>
-              <caption><p>Economist theme</p></caption>
             </figure>
           </sidebyside>
         </sbsgroup>
-        <caption><p>Barchart of population by region 2016 using four themes: Excel and Google Docs (above), Wall Street Journal and Economist (below).</p></caption>
+        <caption><p>Barchart of population by region 2016 using four themes, Excel and Google docs (above), Wall Street Journal and Economist (below).</p></caption>
       </figure>
     </subsection>
 
@@ -321,13 +317,11 @@
             <image source="images/compS-1.png">
               <description>Boxplot of diamond carat values grouped by clarity category. The boxes show the distribution of carat values for each clarity grade, allowing comparison of how carat size varies across clarity levels.</description>
             </image>
-            <caption><p>Diamond carats by clarity</p></caption>
           </figure>
           <figure xml:id="fig-comps-2">
             <image source="images/compS-2.png">
               <description>Bar chart or mosaic plot showing Titanic survival rates for passengers and crew. The display compares survival rates across passenger classes and crew, highlighting differences between groups.</description>
             </image>
-            <caption><p>Titanic survival rates</p></caption>
           </figure>
         </sidebyside>
         <caption><p>Diamond carats by clarity (left) and Titanic survival rates for passengers and crew (right).</p></caption>
@@ -364,13 +358,11 @@
             <image source="images/supjux-1.png">
               <description>Scatterplot showing percentage state shares of delegates at the 1912 and 2020 Democratic conventions. All states are shown together in a single plot, making it difficult to distinguish individual regional groups due to crowding.</description>
             </image>
-            <caption><p>All states together</p></caption>
           </figure>
           <figure xml:id="fig-supjux-2">
             <image source="images/supjux-2.png">
               <description>Faceted scatterplot showing percentage state shares of delegates at the 1912 and 2020 Democratic conventions, broken down by region. Each region is shown in a separate panel with ghostplotted background points showing the full dataset for context, making regional patterns easier to identify.</description>
             </image>
-            <caption><p>States faceted by region</p></caption>
           </figure>
         </sidebyside>
         <caption><p>Percentage state shares of delegates at the 1912 and 2020 Democratic conventions (left) and by region (right).</p></caption>
@@ -392,13 +384,11 @@
             <image source="images/scaleS-1.png">
               <description>Histogram or density plot showing the age distribution of active chess players broken down by sex. The shared scale allows direct comparison of the age distributions for male and female players.</description>
             </image>
-            <caption><p>Age distribution of active players by sex</p></caption>
           </figure>
           <figure xml:id="fig-scales-2">
             <image source="images/scaleS-2.png">
               <description>Bar chart showing numbers of spaceflight participants broken down by decade and by sex. The common scale enables comparison of participation levels across decades and between male and female participants.</description>
             </image>
-            <caption><p>Spaceflight participants by decade and sex</p></caption>
           </figure>
         </sidebyside>
         <caption><p>Age distribution of active players by sex (left) and numbers of spaceflight participants by decade and by sex (right).</p></caption>
