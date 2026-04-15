@@ -199,13 +199,11 @@ The spineplot top left shows that the treatment group was much bigger than the p
             <image source="images/gapLEX-1.png">
               <description>Line plot of life expectancy for all countries from 1800 to 2016, showing overall upward trends with occasional sharp falls and rises. The lines for all countries are overlaid, making individual country identification difficult but overall patterns visible.</description>
             </image>
-            <caption><p>All countries.</p></caption>
           </figure>
           <figure xml:id="fig-gaplex-2">
             <image source="images/gapLEX-2.png">
               <description>Four-panel faceted line plot of life expectancy from 1800 to 2016, one panel per Gapminder region (Africa, Americas, Asia, Europe). Countries are coloured by region. Within-region variation and local outliers are visible in each panel, and Europe shows higher life expectancies than other regions throughout the 19th century.</description>
             </image>
-            <caption><p>Countries grouped by region.</p></caption>
           </figure>
         </sidebyside>
         <caption><p>Gapminder life expectancy data drawn for all countries (left) and with countries grouped by region (right).</p></caption>
